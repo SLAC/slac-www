@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slac migrate article-news feature.
+ */
+
+include_once 'slac_migrate_article_news.features.inc';
