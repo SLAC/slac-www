@@ -73,7 +73,7 @@ function slac_migrate_article_news_feeds_importer_default() {
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
         'expire' => '-1',
-        'author' => 0,
+        'author' => '1',
         'authorize' => 1,
         'mappings' => array(
           0 => array(
@@ -124,7 +124,7 @@ function slac_migrate_article_news_feeds_importer_default() {
             'autocreate' => 1,
           ),
         ),
-        'update_existing' => '2',
+        'update_existing' => '0',
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'news_article',
