@@ -39,4 +39,5 @@ features[field_instance][] = node-news_article-field_tags
 features[node][] = news_article
 features[taxonomy][] = article_type
 features[taxonomy][] = news_article_source
+features[taxonomy][] = page_keywords
 features[taxonomy][] = tags
