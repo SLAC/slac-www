@@ -23,6 +23,7 @@ features[feeds_tamper][] = news_article_importer-xpathparser_6-explode_2
 features[feeds_tamper][] = news_article_importer-xpathparser_6-find_replace
 features[feeds_tamper][] = news_article_importer-xpathparser_6-trim
 features[feeds_tamper][] = news_article_importer-xpathparser_6-unique
+features[feeds_tamper][] = news_article_importer-xpathparser_9-default_value
 features[field_base][] = body
 features[field_base][] = field_article_type
 features[field_base][] = field_image
