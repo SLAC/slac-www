@@ -38,6 +38,8 @@ function slac_migrate_article_news_feeds_importer_default() {
           'xpathparser:6' => 'page-metadata/page-keywords',
           'xpathparser:7' => 'news-article-media/main-graphic-video/news-article-graphic/image-description',
           'xpathparser:8' => 'page-metadata/article-type',
+          'xpathparser:9' => 'news-article-media/main-graphic-video/news-article-graphic/fullsize-image-location',
+          'xpathparser:10' => 'news-article-media/main-graphic-video/news-article-graphic/image-description',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -49,6 +51,8 @@ function slac_migrate_article_news_feeds_importer_default() {
           'xpathparser:6' => 0,
           'xpathparser:7' => 0,
           'xpathparser:8' => 0,
+          'xpathparser:9' => 0,
+          'xpathparser:10' => 0,
         ),
         'context' => '//root',
         'exp' => array(
@@ -64,6 +68,8 @@ function slac_migrate_article_news_feeds_importer_default() {
             'xpathparser:6' => 0,
             'xpathparser:7' => 0,
             'xpathparser:8' => 0,
+            'xpathparser:9' => 0,
+            'xpathparser:10' => 0,
           ),
         ),
         'allow_override' => 1,
@@ -122,6 +128,11 @@ function slac_migrate_article_news_feeds_importer_default() {
             'target' => 'field_article_type',
             'term_search' => '0',
             'autocreate' => 1,
+          ),
+          9 => array(
+            'source' => 'Blank source 1',
+            'target' => 'field_source',
+            'unique' => FALSE,
           ),
         ),
         'update_existing' => '0',
