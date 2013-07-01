@@ -1,6 +1,7 @@
 name = Slac migrate pages
 core = 7.x
 package = SLAC
+php = 5.2.4
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = feeds
@@ -48,4 +49,4 @@ features[field_instance][] = node-page-field_image
 features[field_instance][] = node-page-field_page_description
 features[field_instance][] = node-page-field_page_keywords
 features[node][] = page
-features[taxonomy][] = page_keywords
+features_exclude[taxonomy][page_keywords] = page_keywords
