@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_ctools_plugin_dierctory()
+ */
+function slac_frontpage_slideshow_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function slac_frontpage_slideshow_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'slac_frontpage_slideshow') . '/plugins/views',
+  );
+}
