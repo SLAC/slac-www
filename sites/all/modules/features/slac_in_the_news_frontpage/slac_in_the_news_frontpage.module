@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC in the news Frontpage feature.
+ */
+
+include_once 'slac_in_the_news_frontpage.features.inc';
