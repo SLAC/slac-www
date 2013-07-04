@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Multimedia frontpage feature.
+ */
+
+include_once 'multimedia_frontpage.features.inc';
