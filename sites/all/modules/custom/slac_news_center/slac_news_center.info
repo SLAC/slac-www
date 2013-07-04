@@ -1,4 +1,4 @@
-name = News Centre blocks
+name = News Center blocks
 description = "Provides blocks with links to news archives."
 package = SLAC
 core = 7.x
