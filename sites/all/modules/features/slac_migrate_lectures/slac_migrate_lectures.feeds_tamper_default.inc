@@ -18,7 +18,7 @@ function slac_migrate_lectures_feeds_tamper_default() {
   $feeds_tamper->source = 'artFileName';
   $feeds_tamper->plugin_id = 'rewrite';
   $feeds_tamper->settings = array(
-    'text' => 'public://lectures/[artfilename].jpg',
+    'text' => 'http://www2.slac.stanford.edu/lectures/images/posters/[artfilename]_lg.jpg',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Rewrite';
