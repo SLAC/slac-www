@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slac Migrate Lectures feature.
+ */
+
+include_once 'slac_migrate_lectures.features.inc';
