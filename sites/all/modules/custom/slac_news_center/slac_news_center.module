@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slac_news_center_ctools_plugin_directory($module, $plugin) {
+  if ($module === 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function slac_news_center_ctools_plugin_api($module, $api) {
+  if ($module == 'page_manager') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implements hook_init().
+ */
+function slac_news_center_init() {
+  $path = $_GET['q'];
+  $arguments = explode('/', $path);
+
+  if ($arguments['0'] == 'news'
+    && (substr($arguments['1'], 0, -5) == 'news-feature-archive'
+    || substr($arguments['1'], 0, -5) == 'press-release-archive')) {
+    menu_tree_set_path('menu-top-nav-menu','news/news-center');
+  }
+}
+
+
+/**
+ * Implements hook_views_pre_build().
+ */
+function slac_news_center_views_pre_build(&$view) {
+  $path = $_GET['q'];
+  $arguments = explode('/', $path);
+
+  if ($arguments['0'] != 'news' || !isset($arguments['1']) || $view->name != 'news_center') {
+    return;
+  }
+
+  $archive_type = substr($arguments['1'], 0, -5);
+  $year = substr($arguments['1'], -4);
+
+  if ($archive_type == 'news-feature-archive' && is_numeric($year)) {
+    $title = $year . ' ' . t('News Feature Archive');
+    drupal_set_title($title);
+  }
+  elseif ($archive_type == 'press-release-archive' && is_numeric($year)) {
+    $title = $year . ' ' . t('News Feature Archive');
+    drupal_set_title($title);
+  }
+}
