@@ -22,7 +22,7 @@ function slac_news_center_ctools_plugin_api($module, $api) {
  * Implements hook_init().
  */
 function slac_news_center_init() {
-  $path =  current_path();
+  $path = current_path();
   $arguments = explode('/', $path);
 
   if ($arguments['0'] == 'news'
@@ -37,7 +37,7 @@ function slac_news_center_init() {
  * Implements hook_views_pre_build().
  */
 function slac_news_center_views_pre_build(&$view) {
-  $path =  current_path();
+  $path = current_path();
   $arguments = explode('/', $path);
 
   if ($arguments['0'] != 'news' || !isset($arguments['1']) || $view->name != 'news_center') {
