@@ -244,7 +244,7 @@ function slac_news_center_feature_views_default_views() {
   $handler->display->display_options['arguments']['field_article_type_tid']['field'] = 'field_article_type_tid';
   $handler->display->display_options['arguments']['field_article_type_tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['field_article_type_tid']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['field_article_type_tid']['default_argument_options']['code'] = '$path = $_GET[\'q\'];
+  $handler->display->display_options['arguments']['field_article_type_tid']['default_argument_options']['code'] = '$path =  current_path();
 $arguments = explode(\'/\', $path);
 
 if (isset($arguments[\'1\'])) {
@@ -266,7 +266,7 @@ return \'17\';
   $handler->display->display_options['arguments']['created_year']['field'] = 'created_year';
   $handler->display->display_options['arguments']['created_year']['default_action'] = 'default';
   $handler->display->display_options['arguments']['created_year']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['created_year']['default_argument_options']['code'] = '$path = $_GET[\'q\'];
+  $handler->display->display_options['arguments']['created_year']['default_argument_options']['code'] = '$path =  current_path();
 $arguments = explode(\'/\', $path);
 
 if (isset($arguments[\'1\'])) {
