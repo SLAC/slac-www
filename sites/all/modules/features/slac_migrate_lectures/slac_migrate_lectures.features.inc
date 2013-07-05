@@ -16,6 +16,10 @@ function slac_migrate_lectures_ctools_plugin_api() {
   if ($module == "feeds_tamper" && $api == "feeds_tamper_default") {
     return array("version" => "2");
   }
+  list($module, $api) = func_get_args();
+  if ($module == "jw_player" && $api == "jw_player_presets") {
+    return array("version" => "1");
+  }
 }
 
 /**
