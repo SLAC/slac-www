@@ -24,6 +24,13 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -69,11 +76,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 7,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -109,11 +117,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -151,11 +160,15 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'image',
         'weight' => 8,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -204,11 +217,18 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 3,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -252,11 +272,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 5,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -292,11 +313,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -326,16 +348,21 @@ function slac_migrate_lectures_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'module' => 'jw_player',
+        'settings' => array(
+          'jwplayer_preset' => '528x400',
+        ),
+        'type' => 'jw_player',
         'weight' => 6,
       ),
-      'teaser' => array(
+      'full' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'module' => 'jw_player',
+        'settings' => array(
+          'jwplayer_preset' => '528x400',
+        ),
+        'type' => 'jw_player',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -344,7 +371,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => '',
+      'file_directory' => 'video',
       'file_extensions' => 'mov m4v mp4 mpeg avi',
       'max_filesize' => '',
       'user_register_form' => FALSE,
@@ -364,11 +391,11 @@ function slac_migrate_lectures_field_default_field_instances() {
           'video' => 'video',
         ),
         'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
           'media_internet' => 'media_internet',
           'upload' => 'upload',
-          'youtube' => 'youtube',
+          'youtube' => 0,
         ),
         'progress_indicator' => 'throbber',
       ),

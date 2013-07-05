@@ -83,6 +83,11 @@ function slac_migrate_lectures_feeds_importer_default() {
             'unique' => FALSE,
           ),
           8 => array(
+            'source' => 'EventID',
+            'target' => 'field_video:uri',
+            'unique' => FALSE,
+          ),
+          9 => array(
             'source' => 'artFileName',
             'target' => 'field_image:uri',
             'unique' => FALSE,

@@ -9,6 +9,7 @@ dependencies[] = feeds
 dependencies[] = feeds_tamper
 dependencies[] = file
 dependencies[] = image
+dependencies[] = jw_player
 dependencies[] = media
 dependencies[] = slac_migrate_article_news
 dependencies[] = text
