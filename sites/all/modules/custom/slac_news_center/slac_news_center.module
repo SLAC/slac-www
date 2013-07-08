@@ -47,16 +47,12 @@ function slac_news_center_views_pre_build(&$view) {
   $archive_type = substr($arguments['1'], 0, -5);
   $year = substr($arguments['1'], -4);
 
-  if (!is_numeric($year)) {
-    return;
-  }
-
-  if ($archive_type == 'news-feature-archive') {
+  if ($archive_type == 'news-feature-archive' && is_numeric($year)) {
     $title = $year . ' ' . t('News Feature Archive');
     drupal_set_title($title);
   }
-  elseif ($archive_type == 'press-release-archive') {
-    $title = $year . ' ' . t('News Feature Archive');
+  elseif ($archive_type == 'press-release-archive' && is_numeric($year)) {
+    $title = $year . ' ' . t('Press Release Archive');
     drupal_set_title($title);
   }
 }
