@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Grid Lightbox Gallery feature.
+ */
+
+include_once 'grid_lightbox_gallery.features.inc';
