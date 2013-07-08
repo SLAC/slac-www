@@ -19,21 +19,6 @@ function slac_news_center_ctools_plugin_api($module, $api) {
 }
 
 /**
- * Implements hook_init().
- */
-function slac_news_center_init() {
-  $path = current_path();
-  $arguments = explode('/', $path);
-
-  if ($arguments['0'] == 'news'
-    && (substr($arguments['1'], 0, -5) == 'news-feature-archive'
-    || substr($arguments['1'], 0, -5) == 'press-release-archive')) {
-    menu_tree_set_path('menu-top-nav-menu', 'news/news-center');
-  }
-}
-
-
-/**
  * Implements hook_views_pre_build().
  */
 function slac_news_center_views_pre_build(&$view) {
