@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Past Lectures feature.
+ */
+
+include_once 'slac_past_lectures.features.inc';
