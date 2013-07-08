@@ -167,6 +167,7 @@ function slac_past_lectures_views_default_views() {
   $handler->display->display_options['filters']['combine']['exposed'] = TRUE;
   $handler->display->display_options['filters']['combine']['expose']['operator_id'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['label'] = 'Search Term:';
+  $handler->display->display_options['filters']['combine']['expose']['description'] = 'Search by title, abstract or presenter.';
   $handler->display->display_options['filters']['combine']['expose']['operator'] = 'combine_op';
   $handler->display->display_options['filters']['combine']['expose']['identifier'] = 'term';
   $handler->display->display_options['filters']['combine']['expose']['remember_roles'] = array(
