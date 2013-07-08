@@ -7,7 +7,6 @@ function panels_menu_active_trail_panels_pre_render($panel_display, $renderer) {
   if (!isset($panel_display->cache_key)) {
     return;
   }
-  list(, $task_name, $hander_name) = explode(':', $panel_display->cache_key);
 
   $current_page = page_manager_get_current_page();
   $handler = $current_page['handler'];
