@@ -165,7 +165,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
-      'file_directory' => 'lectures',
+      'file_directory' => 'lectures_files',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -346,7 +346,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => 'videos',
+      'file_directory' => 'lectures_files',
       'file_extensions' => 'mov m4v mp4 mpeg avi',
       'max_filesize' => '',
       'user_register_form' => FALSE,
