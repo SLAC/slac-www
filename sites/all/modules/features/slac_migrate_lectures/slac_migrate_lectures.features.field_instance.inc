@@ -357,7 +357,7 @@ function slac_migrate_lectures_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
-          'youtube' => 'youtube',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
@@ -366,11 +366,11 @@ function slac_migrate_lectures_field_default_field_instances() {
           'video' => 'video',
         ),
         'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
           'media_internet' => 'media_internet',
           'upload' => 'upload',
-          'youtube' => 'youtube',
+          'youtube' => 0,
         ),
         'progress_indicator' => 'throbber',
       ),
