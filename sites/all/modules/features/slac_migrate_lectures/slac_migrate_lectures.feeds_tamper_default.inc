@@ -32,7 +32,7 @@ function slac_migrate_lectures_feeds_tamper_default() {
   $feeds_tamper->source = 'EventID';
   $feeds_tamper->plugin_id = 'rewrite';
   $feeds_tamper->settings = array(
-    'text' => 'http://media.slac.stanford.edu/PublicLectures/video[eventid].mp4',
+    'text' => 'public://videos/video[eventid].mp4',
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Rewrite';
