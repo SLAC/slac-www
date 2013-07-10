@@ -110,9 +110,9 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'SLAC Public Lecture Series',
-      'body' => 'Ever wonder what goes on at the SLAC National Accelerator Laboratory? Here is your chance to find out! Every other month, SLAC opens its doors to the local community for a series of evening lectures highlighting the cutting-edge science underway at the laboratory. Past lectures have featured diamonds, dark energy, the making of molecular movies, and the hunt for the Higgs.',
-      'format' => 'filtered_html',
+      'title' => '<none>',
+      'body' => '<a href="/publicLecturesRSS" class="rss-link">Subscribe via RSS</a>',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
@@ -127,6 +127,30 @@ function lectures_frontpage_default_page_manager_pages() {
     $display->panels['right'][0] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'SLAC Public Lecture Series',
+      'body' => 'Ever wonder what goes on at the SLAC National Accelerator Laboratory? Here is your chance to find out! Every other month, SLAC opens its doors to the local community for a series of evening lectures highlighting the cutting-edge science underway at the laboratory. Past lectures have featured diamonds, dark energy, the making of molecular movies, and the hunt for the Higgs.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['right'][1] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'next_lecture';
@@ -154,12 +178,12 @@ function lectures_frontpage_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][1] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][2] = 'new-5';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-4';
+  $display->title_pane = 'new-5';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['lectures_frontpage'] = $page;

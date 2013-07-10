@@ -1,7 +1,8 @@
 name = Lectures frontpage
 core = 7.x
 package = SLAC
-version = 7.x-1.0
+php = 5.2.4
+version = 7.x-1.1
 project = lectures_frontpage
 dependencies[] = menu
 dependencies[] = page_manager
@@ -12,6 +13,7 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[menu_custom][] = menu-slac-public-lecture-series
 features[page_manager_pages][] = lectures_frontpage
+features[views_view][] = lectures_list
 features[views_view][] = next_lecture
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
