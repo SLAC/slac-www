@@ -4,5 +4,4 @@ package = Propeople
 core = 7.x
 
 dependencies[] = file_entity
-dependencies[] = media
 dependencies[] = media_youtube
