@@ -39,76 +39,75 @@ function media_youtube_customization_field_formatter_info() {
  */
 function media_youtube_customization_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $element = array();
-  switch ($display['type']) {
-    case 'media_youtube_video_popup':
-      // Spoof the file_rendered formatter.
-      $display['type'] = 'file_rendered';
-      foreach ($items as $delta => $item) {
-        if ($item['type'] == 'video') {
-          // Transform the stream wrapper into a path.
-          $path = drupal_realpath($item['uri']);
+  if ($display['type'] != 'media_youtube_video_popup') {
+    return $element;
+  }    
+  // Spoof the file_rendered formatter.
+  $display['type'] = 'file_rendered';
+  foreach ($items as $delta => $item) {
+    if ($item['type'] == 'video') {
+      // Transform the stream wrapper into a path.
+      $path = drupal_realpath($item['uri']);
 
-          // Parse the URL into parts, in order to make it an embed URL.
-          // Make sure the correct include file is loaded
-          module_load_include('inc', 'media_youtube', '/includes/media_youtube.formatters.inc');
+      // Parse the URL into parts, in order to make it an embed URL.
+      // Make sure the correct include file is loaded
+      module_load_include('inc', 'media_youtube', '/includes/media_youtube.formatters.inc');
 
-          // Load the file
-          $file = file_load($item['fid']);
+      // Load the file
+      $file = file_load($item['fid']);
 
-          // Set up the settings array with your image style
-          $display['settings'] = array('image_style' => 'medium');
+      // Set up the settings array with your image style
+      $display['settings'] = array('image_style' => 'medium');
 
-          // Get the render array for the thumbnail image
-          $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
+      // Get the render array for the thumbnail image
+      $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
 
-          // Wrap the image in a link to trigger lightbox.
-          $render_video = array(
-            '#type' => 'link',
-            '#title' => render($image_render_array),
-            '#href' => $path,
-            '#options' => array(
-              'html' => TRUE,
-              'attributes' => array(
-                'class' => array(
-                  'lightbox',
-                  'youtube-thumbnail'
-                ),
-                'rel' => array('lightvideo'),
-              ),
-            ),
-          );
-          // Wrap the title in a link to trigger lightbox.
-          $title = array(
-            '#type' => 'link',
-            '#title' => $item['field_title'][LANGUAGE_NONE][0]['value'],
-            '#href' => $path,
-            '#options' => array(
-              'html' => TRUE,
-              'attributes' => array(
-                'class' => array(
-                  'lightbox',
-                  'youtube-title'
-                ),
-                'rel' => array('lightvideo'),
-              ),
-            ),
-          );
-        }
-
-        $render_element['video'] = $render_video;
-        $render_element['title'] = $title;
-
-        $element[$delta] = array(
-          '#type' => 'container',
-          '#attributes' => array(
+      // Wrap the image in a link to trigger lightbox.
+      $render_video = array(
+        '#type' => 'link',
+        '#title' => render($image_render_array),
+        '#href' => $path,
+        '#options' => array(
+          'html' => TRUE,
+          'attributes' => array(
             'class' => array(
-              'youtube-video-popup',
+              'lightbox',
+              'youtube-thumbnail'
             ),
+            'rel' => array('lightvideo'),
           ),
-          'item' => $render_element,
-        );
-      }
-      break;
+        ),
+      );
+      // Wrap the title in a link to trigger lightbox.
+      $title = array(
+        '#type' => 'link',
+        '#title' => $item['field_title'][LANGUAGE_NONE][0]['value'],
+        '#href' => $path,
+        '#options' => array(
+          'html' => TRUE,
+          'attributes' => array(
+            'class' => array(
+              'lightbox',
+              'youtube-title'
+            ),
+            'rel' => array('lightvideo'),
+          ),
+        ),
+      );
+    }
+
+    $render_element['video'] = $render_video;
+    $render_element['title'] = $title;
+
+    $element[$delta] = array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => array(
+          'youtube-video-popup',
+        ),
+      ),
+      'item' => $render_element,
+    );
   }
 
   return $element;
