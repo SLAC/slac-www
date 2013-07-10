@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Lectures frontpage feature.
+ */
+
+include_once 'lectures_frontpage.features.inc';
