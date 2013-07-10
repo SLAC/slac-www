@@ -29,13 +29,12 @@ function slac_frontpage_slideshow_preprocess_views_view_field(&$vars, $hook) {
   if ($vars['field']->view->name == 'frontpage_slideshow' && $vars['field']->real_field == 'nothing') {
     $style = explode(PHP_EOL, $vars['view']->display['panel_slideshow_pane_1']->display_options['pane_conf']['slideshow_configuration']);
     $slide_count = &drupal_static(__FUNCTION__ . ':slide_count', 0);
+    $current_style = '';
     if (isset($style[$slide_count])) {
       list($position, $color) = explode(',', $style[$slide_count]);
-      $vars['output'] = '<div class="slide-text-side" style="' . (($color) ? 'background-color:' . $color . ';' : '') . ' ' . (($position) ? 'float: ' . $position : '') . '">' . $vars['output'] . '</div>';
+      $current_style = 'style="' . (($color) ? 'background-color:' . $color . ';' : '') . ' ' . (($position) ? 'float: ' . $position : '') . '"';
     }
-    else {
-      $vars['output'] = '<div class="slide-text-side" >' . $vars['output'] . '</div>';
-    }
+    $vars['output'] = '<div class="slide-text-side" ' . $current_style . ' >' . $vars['output'] . '</div>';
     $slide_count++;
   }
 }
