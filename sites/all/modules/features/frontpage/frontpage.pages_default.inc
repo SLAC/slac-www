@@ -15,7 +15,7 @@ function frontpage_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Frontpage';
   $page->admin_description = '';
-  $page->path = 'homr';
+  $page->path = 'home';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -43,8 +43,165 @@ function frontpage_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'threecol_25_50_25_stacked';
-  $display->layout_settings = array();
+  $display->layout = 'flexible';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 1,
+          1 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 4,
+          1 => 2,
+          2 => 5,
+        ),
+        'parent' => 'main',
+        'class' => '',
+      ),
+      1 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'slideshow',
+        ),
+        'parent' => 'main',
+        'class' => '',
+      ),
+      'slideshow' => array(
+        'type' => 'region',
+        'title' => 'Slideshow',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '1',
+        'class' => '',
+      ),
+      2 => array(
+        'type' => 'column',
+        'width' => '47.9811340922452',
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'children' => array(
+          0 => 8,
+          1 => 3,
+        ),
+        'class' => '',
+      ),
+      3 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+          1 => 'in_the_news',
+        ),
+        'parent' => '2',
+        'class' => '',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'center',
+        'width' => '54.160927456382',
+        'width_type' => '%',
+        'parent' => '3',
+        'class' => '',
+      ),
+      4 => array(
+        'type' => 'column',
+        'width' => '27.018865907754797',
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'children' => array(
+          0 => 6,
+        ),
+        'class' => '',
+      ),
+      5 => array(
+        'type' => 'column',
+        'width' => 25,
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'children' => array(
+          0 => 7,
+        ),
+        'class' => '',
+      ),
+      6 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'left_side',
+        ),
+        'parent' => '4',
+        'class' => '',
+      ),
+      'left_side' => array(
+        'type' => 'region',
+        'title' => 'Left side',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '6',
+        'class' => '',
+      ),
+      7 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'right_side',
+        ),
+        'parent' => '5',
+        'class' => '',
+      ),
+      'right_side' => array(
+        'type' => 'region',
+        'title' => 'Right side',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '7',
+        'class' => '',
+      ),
+      8 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'headline',
+        ),
+        'parent' => '2',
+        'class' => '',
+      ),
+      'headline' => array(
+        'type' => 'region',
+        'title' => 'Headline',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '8',
+        'class' => '',
+      ),
+      'in_the_news' => array(
+        'type' => 'region',
+        'title' => 'In the news',
+        'width' => '45.839072543618',
+        'width_type' => '%',
+        'parent' => '3',
+        'class' => '',
+      ),
+    ),
+  );
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
@@ -54,6 +211,15 @@ function frontpage_default_page_manager_pages() {
       'middle' => NULL,
       'right' => NULL,
       'bottom' => NULL,
+      'right_side_region' => NULL,
+      'left_side_content' => NULL,
+      'slac_in_the_news' => NULL,
+      'headlines_next_2' => NULL,
+      'slideshow' => NULL,
+      'left_side' => NULL,
+      'right_side' => NULL,
+      'headline' => NULL,
+      'in_the_news' => NULL,
     ),
   );
   $display->cache = array();
@@ -62,15 +228,12 @@ function frontpage_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'block-1';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'last_story-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => 'Events',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -80,10 +243,10 @@ function frontpage_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $display->panels['center'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'middle';
+    $pane->panel = 'headline';
     $pane->type = 'views_panes';
     $pane->subtype = 'last_story-panel_pane_1';
     $pane->shown = TRUE;
@@ -98,28 +261,10 @@ function frontpage_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['middle'][0] = 'new-2';
+    $display->panels['headline'][0] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'last_story-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][1] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'middle';
+    $pane->panel = 'in_the_news';
     $pane->type = 'views_panes';
     $pane->subtype = 'slac_in_the_news-panel_pane_1';
     $pane->shown = TRUE;
@@ -131,13 +276,54 @@ function frontpage_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['in_the_news'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'left_side';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['middle'][2] = 'new-4';
+    $display->panels['left_side'][0] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'right';
+    $pane->panel = 'left_side';
+    $pane->type = 'block';
+    $pane->subtype = 'block-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => 'Events',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['left_side'][1] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'right_side';
     $pane->type = 'block';
     $pane->subtype = 'block-2';
     $pane->shown = TRUE;
@@ -154,11 +340,11 @@ function frontpage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['right_side'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'right';
+    $pane->pid = 'new-7';
+    $pane->panel = 'right_side';
     $pane->type = 'block';
     $pane->subtype = 'block-3';
     $pane->shown = TRUE;
@@ -175,32 +361,22 @@ function frontpage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['right'][1] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['right_side'][1] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'top';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'frontpage_slideshow-panel_pane_1';
+    $pane->pid = 'new-8';
+    $pane->panel = 'slideshow';
+    $pane->type = 'views_slideshow_panes';
+    $pane->subtype = 'frontpage_slideshow-panel_slideshow_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'link_to_view' => 0,
-      'more_link' => 0,
-      'use_pager' => 0,
-      'pager_id' => '0',
-      'items_per_page' => '4',
-      'offset' => '0',
-      'path' => '',
-      'fields_override' => array(
-        'field_image' => 1,
-        'title' => 1,
-        'body' => 1,
-        'nothing' => 1,
-        'counter' => 1,
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
+      'slideshow_configuration' => 'left,green
+right,green
+left,blue
+right,magenta',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -210,10 +386,10 @@ function frontpage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['top'][0] = 'new-7';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['slideshow'][0] = 'new-8';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['frontpage'] = $page;
