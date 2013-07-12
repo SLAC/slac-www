@@ -57,7 +57,7 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
       $file = file_load($item['fid']);
 
       // Set up the settings array with your image style
-      $display['settings'] = array('image_style' => 'medium');
+      $display['settings'] = array('image_style' => 'frontpage-media');
 
       // Get the render array for the thumbnail image
       $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);

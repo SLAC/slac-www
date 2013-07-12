@@ -21,13 +21,13 @@ function multimedia_frontpage_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'preview' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -39,7 +39,7 @@ function multimedia_frontpage_field_default_field_instances() {
     'entity_type' => 'file',
     'field_name' => 'field_title',
     'label' => 'Title',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
