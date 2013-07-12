@@ -14,7 +14,7 @@ function slac_panels_everywhere_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panels_everywhere_provide_sample';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['panels_everywhere_provide_sample'] = $strongarm;
 
   $strongarm = new stdClass();
