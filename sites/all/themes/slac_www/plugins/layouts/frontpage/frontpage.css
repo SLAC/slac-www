@@ -1,0 +1,38 @@
+
+.panel-3col { 
+/*  overflow: hidden;  */
+}
+
+
+.frontpage-left{
+  float: left;
+  width: 66%;
+  margin-right:  3%;
+}
+
+.frontpage-right-col{
+  float: right;
+  width: 31%;
+}
+
+.frontpage-middle-col{
+  float: right;
+  width:  61%;
+}
+
+.frontpage-left-col{
+  float: left;
+  width: 35%;
+  margin-right: 4%;
+}
+
+.frontpage-help-market{
+  float:left;
+  width: 47%;
+  margin-right: 6%;
+}
+
+.frontpage-security-contacts{
+  float:right;
+  width: 47%;
+}
