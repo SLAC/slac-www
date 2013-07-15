@@ -9,20 +9,23 @@ function panels_menu_active_trail_panels_pre_render($panel_display, $renderer) {
   }
 
   $current_page = page_manager_get_current_page();
-  $handler = $current_page['handler'];
 
-  $active_path = '';
-  if (isset($handler->conf['panels_menu_active_trail']) && $handler->conf['panels_menu_active_trail']) {
-    list($menu_name, $mlid) = explode(':', $handler->conf['panels_menu_active_trail']);
-    $menu_link = menu_link_load($mlid);
-    $active_path = $menu_link['link_path'];
-  }
+  if (isset($current_page['handler'])) {
+    $handler = $current_page['handler'];
 
-  if (!empty($active_path)) {
-    $original_path = &drupal_static(__FUNCTION__, array());
-    $original_path[$panel_display->cache_key] = current_path();
+    $active_path = '';
+    if (isset($handler->conf['panels_menu_active_trail']) && $handler->conf['panels_menu_active_trail']) {
+      list($menu_name, $mlid) = explode(':', $handler->conf['panels_menu_active_trail']);
+      $menu_link = menu_link_load($mlid);
+      $active_path = $menu_link['link_path'];
+    }
 
-    menu_tree_set_path($menu_name, $active_path);
+    if (!empty($active_path)) {
+      $original_path = &drupal_static(__FUNCTION__, array());
+      $original_path[$panel_display->cache_key] = current_path();
+
+      menu_tree_set_path($menu_name, $active_path);
+    }
   }
 }
 
