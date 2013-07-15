@@ -927,6 +927,8 @@ Lightbox = {
     $("#lightbox2-overlay").fadeOut();
     Lightbox.isPaused = true;
     Lightbox.inprogress = false;
+    Lightbox.imageArray = [];
+    Lightbox.imageNum = 0;
     // Replaces calls to showSelectBoxes() and showFlash() in original
     // lightbox2.
     Lightbox.toggleSelectsFlash('visible');
@@ -1161,7 +1163,7 @@ Lightbox = {
   filterXSS: function(str, allowed_tags) {
     var output = "";
     $.ajax({
-      url: Drupal.settings.basePath + 'system/lightbox2/filter-xss',
+      url: Drupal.settings.basePath + '?q=system/lightbox2/filter-xss',
       data: {
         'string' : str,
         'allowed_tags' : allowed_tags
