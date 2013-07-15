@@ -90,7 +90,8 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
         'html' => TRUE,
         'attributes' => array(
           'class' => array(),
-          'rel' => array('lightbox'),
+          'rel' => 'lightbox',
+          'title' => $image_element['#title'],
         ),
       ),
     );
