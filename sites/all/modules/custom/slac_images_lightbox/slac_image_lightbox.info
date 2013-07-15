@@ -1,0 +1,6 @@
+name = SLAC Images Lightbox
+description = "Display mode to dispay images in content in a lightbox."
+package = SLAC
+dependencies[] = file_entity
+dependencies[] = lightbox2
+core = 7.x

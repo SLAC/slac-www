@@ -1,0 +1,100 @@
+<?php
+
+/**
+* Implements hook_entity_info_alter().
+*/
+function slac_image_lightbox_entity_info_alter(&$entity_info) {
+  $entity_info['file']['view modes']['epsa_crop_mode'] = array(
+    'label' => t('EPSA Crop Mode'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_file_formatter_info().
+ */
+function slac_image_lightbox_file_formatter_info() {
+  $formatters = array();
+
+  // Add a simple file formatter for displaying an image in a chosen style.
+  if (module_exists('image')) {
+    $formatters['slac_image_lightbox'] = array(
+      'label' => t('SLAC Image Lightbox'),
+      'description' => t('Displays image files in content in a popup lightbox'),
+      'default settings' => array(
+        'image_style' => '', 
+        'alt' => '', 
+        'title' => '',
+      ), 
+      'view callback' => 'slac_image_lightbox_file_formatter_view', 
+      'settings callback' => 'file_entity_file_formatter_file_image_settings',
+    );
+    // Provide default token values.
+    if (module_exists('token')) {
+      $formatters['slac_image_lightbox']['default settings']['alt'] = '[file:field_file_image_alt_text]';
+      $formatters['slac_image_lightbox']['default settings']['title'] = '[file:field_file_image_title_text]';
+    }
+    elseif (module_exists('entity_token')) {
+      $formatters['slac_image_lightbox']['default settings']['alt'] = '[file:field-file-image-alt-text]';
+      $formatters['slac_image_lightbox']['default settings']['title'] = '[file:field-file-image-title-text]';
+    }
+  }
+
+  return $formatters;
+}
+
+function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
+  // Prevent PHP notices when trying to read empty files.
+  if (!$file->filesize) {
+    return;
+  }
+
+  // Do not bother proceeding if this file does not have an image mime type.
+  if (strpos($file->filemime, 'image/') !== 0) {
+    return;
+  }
+
+  if (file_entity_file_is_readable($file) && isset($file->image_dimensions)) {
+    $replace_options = array(
+      'clear' => 1, 
+      'sanitize' => 0,
+    );
+
+    if (!empty($display['settings']['image_style'])) {
+      $image_element = array(
+        '#theme' => 'image_style', 
+        '#style_name' => $display['settings']['image_style'], 
+        '#path' => $file->uri, 
+        '#width' => $file->image_dimensions['width'], 
+        '#height' => $file->image_dimensions['height'], 
+        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options), 
+        '#title' => token_replace($display['settings']['title'], array('file' => $file), $replace_options),
+      );
+    }
+    else {
+      $image_element = array(
+        '#theme' => 'image', 
+        '#path' => $file->uri, 
+        '#width' => $file->image_dimensions['width'], 
+        '#height' => $file->image_dimensions['height'], 
+        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options), 
+        '#title' => token_replace($display['settings']['title'], array('file' => $file), $replace_options),
+      );
+    }
+
+    $element = array(
+      '#type' => 'link',
+      '#title' => render($image_element),
+      '#href' => str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri),
+      '#options' => array(
+        'html' => TRUE,
+        'attributes' => array(
+          'class' => array(),
+          'rel' => array('lightbox'),
+        ),
+      ),
+    );
+
+    return $element;
+  }
+}
