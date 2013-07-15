@@ -1,5 +1,5 @@
 name = SLAC Images Lightbox
-description = "Display mode to dispay images in content in a lightbox."
+description = "Display mode to dispay images in a lightbox."
 package = SLAC
 dependencies[] = file_entity
 dependencies[] = lightbox2
