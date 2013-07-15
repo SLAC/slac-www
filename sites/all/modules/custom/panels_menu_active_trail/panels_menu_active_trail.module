@@ -34,6 +34,10 @@ function panels_menu_active_trail_panels_post_render($panel_display, $renderer) 
     return;
   }
 
+  if (!isset($current_page['handler'])) {
+    return;
+  }
+  
   $current_page = page_manager_get_current_page();
   $handler = $current_page['handler'];
   if (isset($handler->conf['panels_menu_active_trail']) && $handler->conf['panels_menu_active_trail']) {
