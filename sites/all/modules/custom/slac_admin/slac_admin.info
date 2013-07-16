@@ -1,0 +1,6 @@
+name = SLAC Admin
+description = "SLAC configuration pages."
+package = SLAC
+core = 7.x
+
+configure = admin/config/slac

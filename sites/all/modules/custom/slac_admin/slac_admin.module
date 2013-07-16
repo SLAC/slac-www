@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_permission().
+ */
+function slac_admin_permission() {
+  return array(
+    'administer dispaly resolution' =>  array(
+      'title' => t('Administer SLAC settings'),
+      'description' => t('Allow a user to configure various settings related to SLAC.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function slac_admin_menu() {
+  $items = array();
+
+  $items['admin/config/slac/mobile-resolution'] = array(
+    'title' => 'Set mobile resolution',
+    'description' => 'Set minimum display resolution to activate lightbox.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slac_admin_resolution_settings'),
+    'access arguments' => array('administer dispaly resolution'),
+    'file' =>  'slac_admin.admin.inc',
+  );
+
+  return $items;
+}
+
+function slac_admin_js_alter(&$javascript) {
+  $file = drupal_get_path('module', 'slac_admin') . '/js/slac_admin.js';
+  $javascript[$file] = drupal_js_defaults($file);
+
+  drupal_add_js(array('slac_admin' => array(
+        'width' => variable_get('slac_image_lightbox_width', 0),
+        'height' => variable_get('slac_image_lightbox_height', 0))),
+        array('type' => 'setting')
+  );
+}
