@@ -82,6 +82,16 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
       );
     }
 
+    if (isset($file->field_description['und'][0]['value']) && !empty($image_element['#title'])) {
+      $caption =  $image_element['#title'] . '<br><br>' .  $file->field_description['und'][0]['value'];
+    }
+    elseif (isset($file->field_description['und'][0]['value']) && empty($image_element['#title'])) {
+      $caption = $file->field_description['und'][0]['value'];
+    }
+    else {
+      $caption = $image_element['#title'];
+    }
+
     $element = array(
       '#type' => 'link',
       '#title' => render($image_element),
@@ -90,8 +100,7 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
         'html' => TRUE,
         'attributes' => array(
           'class' => array(),
-          'rel' => 'lightbox',
-          'title' => $image_element['#title'],
+          'rel' => 'lightbox[][' . $caption . ']',
         ),
       ),
     );
