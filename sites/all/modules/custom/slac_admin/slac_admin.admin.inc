@@ -27,3 +27,19 @@ function slac_admin_resolution_settings($form, &$form_state) {
 
   return system_settings_form($form);
 }
+
+function slac_admin_resolution_settings_validate($form, &$form_state) {
+  if (!is_numeric($form_state['values']['slac_image_lightbox_width'])) {
+    form_set_error('slac_image_lightbox_width', t('Value for With should be a number.'));
+  }
+  elseif ($form_state['values']['slac_image_lightbox_width'] < 0) {
+    form_set_error('slac_image_lightbox_width', t('Value for With should be a positive number.'));
+  }
+
+  if (!is_numeric($form_state['values']['slac_image_lightbox_height'])) {
+    form_set_error('slac_image_lightbox_height', t('Value for Height should be a number.'));
+  }
+  elseif ($form_state['values']['slac_image_lightbox_height'] < 0) {
+    form_set_error('slac_image_lightbox_height', t('Value for Height should be a positive number.'));
+  }
+}
