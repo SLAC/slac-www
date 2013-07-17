@@ -1,0 +1,6 @@
+name = SLAC Forms Alter
+description = Used for add custom form alter 
+package = Propeople
+core = 7.x
+
+dependencies[] = webform

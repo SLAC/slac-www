@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_form_alter
+ * @param type $form
+ * @param type $form_state
+ * @param type $form_id 
+ */
+function slac_forms_alter_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'webform_client_form_1308') {
+    $form['actions']['submit']['#value'] = t('» send feedback');
+  }
+}
+
+/**
+ * Implements template_preprocess_node
+ * @param array $variables 
+ */
+function slac_forms_alter_preprocess_node(&$variables) {
+  if (isset($variables['content']) && $variables['content']['webform'] && $variables['content']['webform']['#form']['submitted']['topic_of_your_feedback___question']) {
+    $variables['content']['webform']['#form']['submitted']['topic_of_your_feedback___question']['#options'][''] = t('Please make a selection');
+  }
+}
