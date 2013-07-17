@@ -8,8 +8,7 @@
  */
 function slac_forms_alter_form_alter(&$form, &$form_state, $form_id) {
   if (strpos($form_id, 'webform_client_form') !== false) {
-    dsm($form);
-    if ($form['#node']->field_form_page[LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
+    if (isset($form['#node']->field_form_page) && !empty($form['#node']->field_form_page) && $form['#node']->field_form_page[LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
       $form['actions']['submit']['#value'] = t('» send feedback');
     }
   }
@@ -20,7 +19,7 @@ function slac_forms_alter_form_alter(&$form, &$form_state, $form_id) {
  * @param array $variables 
  */
 function slac_forms_alter_preprocess_node(&$variables) {
-  if (isset($variables['field_form_page']) && $variables['field_form_page'][LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
+  if (isset($variables['field_form_page']) && !empty($variables['field_form_page']) && $variables['field_form_page'][LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
     $variables['content']['webform']['#form']['submitted']['topic_of_your_feedback___question']['#options'][''] = t('Please make a selection');
   }
 }
