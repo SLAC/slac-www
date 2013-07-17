@@ -22,11 +22,11 @@ function slac_image_lightbox_file_formatter_info() {
       'label' => t('SLAC Image Lightbox'),
       'description' => t('Displays image files in content in a popup lightbox'),
       'default settings' => array(
-        'image_style' => '', 
-        'alt' => '', 
+        'image_style' => '',
+        'alt' => '',
         'title' => '',
-      ), 
-      'view callback' => 'slac_image_lightbox_file_formatter_view', 
+      ),
+      'view callback' => 'slac_image_lightbox_file_formatter_view',
       'settings callback' => 'file_entity_file_formatter_file_image_settings',
     );
     // Provide default token values.
@@ -56,37 +56,37 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
 
   if (file_entity_file_is_readable($file) && isset($file->image_dimensions)) {
     $replace_options = array(
-      'clear' => 1, 
+      'clear' => 1,
       'sanitize' => 0,
     );
 
     if (!empty($display['settings']['image_style'])) {
       $image_element = array(
-        '#theme' => 'image_style', 
-        '#style_name' => $display['settings']['image_style'], 
-        '#path' => $file->uri, 
-        '#width' => $file->image_dimensions['width'], 
-        '#height' => $file->image_dimensions['height'], 
-        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options), 
+        '#theme' => 'image_style',
+        '#style_name' => $display['settings']['image_style'],
+        '#path' => $file->uri,
+        '#width' => $file->image_dimensions['width'],
+        '#height' => $file->image_dimensions['height'],
+        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options),
         '#title' => token_replace($display['settings']['title'], array('file' => $file), $replace_options),
       );
     }
     else {
       $image_element = array(
-        '#theme' => 'image', 
-        '#path' => $file->uri, 
-        '#width' => $file->image_dimensions['width'], 
-        '#height' => $file->image_dimensions['height'], 
-        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options), 
+        '#theme' => 'image',
+        '#path' => $file->uri,
+        '#width' => $file->image_dimensions['width'],
+        '#height' => $file->image_dimensions['height'],
+        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options),
         '#title' => token_replace($display['settings']['title'], array('file' => $file), $replace_options),
       );
     }
 
-    if (isset($file->field_description['und'][0]['value']) && !empty($image_element['#title'])) {
-      $caption =  $image_element['#title'] . '<br><br>' .  $file->field_description['und'][0]['value'];
+    if (isset($file->field_description[LANGUAGE_NONE][0]['value']) && !empty($image_element['#title'])) {
+      $caption =  $image_element['#title'] . '<br><br>' .  $file->field_description[LANGUAGE_NONE][0]['value'];
     }
-    elseif (isset($file->field_description['und'][0]['value']) && empty($image_element['#title'])) {
-      $caption = $file->field_description['und'][0]['value'];
+    elseif (isset($file->field_description[LANGUAGE_NONE][0]['value']) && empty($image_element['#title'])) {
+      $caption = $file->field_description[LANGUAGE_NONE][0]['value'];
     }
     else {
       $caption = $image_element['#title'];
