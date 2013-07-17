@@ -8,6 +8,7 @@
  */
 function slac_forms_alter_form_alter(&$form, &$form_state, $form_id) {
   if (strpos($form_id, 'webform_client_form') !== false) {
+    dsm($form);
     if ($form['#node']->field_form_page[LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
       $form['actions']['submit']['#value'] = t('» send feedback');
     }
