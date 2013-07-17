@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC related Links feature.
+ */
+
+include_once 'slac_related_links_features.features.inc';
