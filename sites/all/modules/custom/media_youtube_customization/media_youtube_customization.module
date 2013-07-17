@@ -41,7 +41,7 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
   $element = array();
   if ($display['type'] != 'media_youtube_video_popup') {
     return $element;
-  }    
+  }
   // Spoof the file_rendered formatter.
   $display['type'] = 'file_rendered';
   foreach ($items as $delta => $item) {
@@ -78,10 +78,16 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
           ),
         ),
       );
+
+      $video_title = '';
+      if (isset($item['field_title'][LANGUAGE_NONE][0]['value'])) {
+        $video_title = $item['field_title'][LANGUAGE_NONE][0]['value'];
+      }
+
       // Wrap the title in a link to trigger lightbox.
       $title = array(
         '#type' => 'link',
-        '#title' => $item['field_title'][LANGUAGE_NONE][0]['value'],
+        '#title' => $video_title,
         '#href' => $path,
         '#options' => array(
           'html' => TRUE,
