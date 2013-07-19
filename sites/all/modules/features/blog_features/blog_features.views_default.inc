@@ -551,15 +551,7 @@ function blog_features_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'all' => 'all',
-    'article' => 'article',
-    'page' => 'page',
     'blog' => 'blog',
-    'grid_lightbox_gallery' => 'grid_lightbox_gallery',
-    'in_the_news' => 'in_the_news',
-    'lecture' => 'lecture',
-    'news_article' => 'news_article',
-    'webform' => 'webform',
   );
   /* Filter criterion: Content: Post date */
   $handler->display->display_options['filters']['created']['id'] = 'created';
