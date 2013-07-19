@@ -1,0 +1,7 @@
+@include normalize.scss
+@include pages.scss
+@include blocks.scss
+@include research-page.scss
+@include staff-page.scss
+@include feedback-page.scss
+@include mixins.scss

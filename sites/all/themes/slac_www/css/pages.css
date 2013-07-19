@@ -1,6 +1,28 @@
+/* Grids */
+/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+.container:after {
+  clear: both;
+}
 
-@import "mixins";
-
+/* line 47, ../sass/_mixins.scss */
+.frontpage-left-col {
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
 
 /*
  * @file
@@ -10,44 +32,46 @@
  * miscellaneous Drupal elements that appear in the $content variable, such as
  * ul.links, .pager, .more-link, etc.
  */
-
 /*
  * Body
  */
-
+/* line 18, ../sass/pages.scss */
 body {
   margin: 0;
   padding: 0;
   background: #e9e9e9;
 }
 
-
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
  */
-
 /* Basic styles */
-
+/* line 32, ../sass/pages.scss */
 .page-basic {
   background: transparent;
-  > .panel-panel {
-    width: 100%;
-    max-width: 1024px;
-    margin: auto;
-    clear: both;
-  }
-  .header {
-    background: url('../images/header-bg.jpg') repeat-x top;
-    img {
-      float: left;
-    }
-    .pane-pane-header {
-      height: 80px;
-      background: url('../images/header-connectors.png') no-repeat 100px 0;
-    }
-  }
-  #name-and-slogan {
-    display: none;
-  }
+}
+/* line 34, ../sass/pages.scss */
+.page-basic > .panel-panel {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  clear: both;
+}
+/* line 40, ../sass/pages.scss */
+.page-basic .header {
+  background: url("../images/header-bg.jpg") repeat-x top;
+}
+/* line 42, ../sass/pages.scss */
+.page-basic .header img {
+  float: left;
+}
+/* line 45, ../sass/pages.scss */
+.page-basic .header .pane-pane-header {
+  height: 80px;
+  background: url("../images/header-connectors.png") no-repeat 100px 0;
+}
+/* line 50, ../sass/pages.scss */
+.page-basic #name-and-slogan {
+  display: none;
 }
