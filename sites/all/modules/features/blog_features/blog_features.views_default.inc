@@ -79,6 +79,13 @@ function blog_features_views_default_views() {
     1 => 0,
     3 => 0,
   );
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'blog' => 'blog',
+  );
 
   /* Display: Blog Year+month */
   $handler = $view->new_display('block', 'Blog Year+month', 'block');
@@ -121,6 +128,13 @@ function blog_features_views_default_views() {
     2 => '2',
     1 => 0,
     3 => 0,
+  );
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'blog' => 'blog',
   );
   $export['blog_archive'] = $view;
 
