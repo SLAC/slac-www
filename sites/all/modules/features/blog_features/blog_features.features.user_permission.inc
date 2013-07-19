@@ -52,6 +52,13 @@ function blog_features_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: edit terms in 5.
+  $permissions['edit terms in 5'] = array(
+    'name' => 'edit terms in 5',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: edit terms in 6.
   $permissions['edit terms in 6'] = array(
     'name' => 'edit terms in 6',
