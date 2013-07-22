@@ -41,8 +41,36 @@ body {
   > .content{
     background: #fff;
   }
-  > .footer{
+  .footer{
     background: #878787;
+    color: #fff;
+    font-size: 9px;
+    .panels-flexible-region-first {
+      width: 58%;
+    }
+    .pane-menu-menu-footer-menu {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 1px solid #aeaeae;
+      .menu {
+        li {
+          float: left;
+          width: 20%;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+    .panels-flexible-region-last {
+      width: 21%;
+      float: right;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
   .content > .inside, .footer > .inside {
     margin: 0 2%;
