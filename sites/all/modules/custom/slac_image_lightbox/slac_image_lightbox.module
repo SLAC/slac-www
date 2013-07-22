@@ -93,9 +93,6 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
       $caption = '<p>' . $image_element['#title'] . '</p>';
     }
 
-    $file_uri = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);
-    $download_link_text = t('Download original image');
-
     // Create 'lightbox_large_image' image style if it not exists.
     if (!image_style_load('lightbox_large_image')) {
       _slac_image_lightbox_create_style();
@@ -112,13 +109,12 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
 
     $image_download_link = array(
       '#type' => 'link',
-      '#title' => $download_link_text,
-      '#href' => $file_uri,
+      '#title' => t('Download original image'),
+      '#href' =>'download/file/fid/' . $file->fid,
       '#options' => array(
         'html' => TRUE,
         'attributes' => array(
           'class' => array(),
-          'target' => '_blank',
           'id' => 'lightbox2-download-link-text'
         ),
       ),
@@ -145,7 +141,7 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
       $image_url = $new_image_url;
     }
     else {
-      $image_url = $file_uri;
+      $image_url = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);;
     }
 
     $element = array(

@@ -3,4 +3,5 @@ description = "Display mode to dispay images in a lightbox."
 package = SLAC
 dependencies[] = file_entity
 dependencies[] = lightbox2
+dependencies[] = download_file
 core = 7.x
