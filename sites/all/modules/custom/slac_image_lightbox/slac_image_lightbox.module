@@ -60,10 +60,6 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
       'sanitize' => 0,
     );
 
-    if (!image_style_load('lightbox_large_image')) {
-      _slac_image_lightbox_create_style();
-    }
-
     if (!empty($display['settings']['image_style'])) {
       $image_element = array(
         '#theme' => 'image_style',
@@ -86,6 +82,7 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
       );
     }
 
+    // Create image caption.
     if (isset($file->field_description[LANGUAGE_NONE][0]['value']) && !empty($image_element['#title'])) {
       $caption =  $image_element['#title'] . '<br><br>' .  $file->field_description[LANGUAGE_NONE][0]['value'];
     }
@@ -98,6 +95,11 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
 
     $file_uri = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);
     $download_link_text = t('Download original image');
+
+    // Create 'lightbox_large_image' image style if it not exists.
+    if (!image_style_load('lightbox_large_image')) {
+      _slac_image_lightbox_create_style();
+    }
 
     $style = 'lightbox_large_image';
     $new_image_url = '';
@@ -124,7 +126,6 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
 
     $image_effect_width = 0;
     $image_effect_height = 0;
-
     $image_style = image_style_load('lightbox_large_image');
     $isid = $image_style['isid'];
     if (image_effect_load($isid, 'lightbox_large_image')) {
@@ -136,6 +137,9 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
     $link_element = '';
     $lightbox_image_width = $file->image_dimensions['width'];
     $lightbox_image_height = $file->image_dimensions['height'];
+
+    // Check if original image dimension is larger that image style dimensions
+    // to set the url to the image that will be displayed in lightbox.
     if ($lightbox_image_width > $image_effect_width || $lightbox_image_height > $image_effect_height) {
       $rendered_link = render($image_download_link);
       $link_element = '<br><br>' . $rendered_link;
@@ -162,13 +166,16 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
   }
 }
 
+/**
+ * Create a new image style.
+ */
 function _slac_image_lightbox_create_style() {
   $style = image_style_save(array('name' => 'lightbox_large_image'));
   $effect = array(
     'name' => 'image_scale_and_crop',
     'data' => array(
       'width' => 1024,
-      'height' => 768,
+      'height' => 786,
       'upscale' => TRUE,
     ),
     'isid' => $style['isid'],
