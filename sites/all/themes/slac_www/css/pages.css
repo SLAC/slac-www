@@ -66,57 +66,72 @@ body {
 /* line 42, ../sass/pages.scss */
 .page-basic .header img {
   float: left;
+  margin-left: 20px;
+  margin-top: 23px;
 }
-/* line 45, ../sass/pages.scss */
+/* line 47, ../sass/pages.scss */
 .page-basic .header .pane-pane-header {
   height: 80px;
   background: url("../images/header-connectors.png") no-repeat 230px 0;
 }
-/* line 50, ../sass/pages.scss */
+/* line 52, ../sass/pages.scss */
 .page-basic #name-and-slogan {
   display: none;
 }
 
 /* Main menu */
-/* line 57, ../sass/pages.scss */
-.main-menu {
+/* line 59, ../sass/pages.scss */
+.header .main-menu {
   width: 100%;
   float: left;
   height: 31px;
   padding: 0 0 5px 0;
-  background: url("../images/menu-bg.png") repeat-x top;
+  background: url("../images/menu-bg.png") repeat-x bottom;
 }
-/* line 63, ../sass/pages.scss */
-.main-menu ul {
+/* line 65, ../sass/pages.scss */
+.header .main-menu ul {
   width: 100%;
   border: none;
 }
-/* line 66, ../sass/pages.scss */
-.main-menu ul ul {
+/* line 68, ../sass/pages.scss */
+.header .main-menu ul ul {
   border: none;
 }
-/* line 69, ../sass/pages.scss */
-.main-menu ul li {
+/* line 71, ../sass/pages.scss */
+.header .main-menu ul li {
   border: none;
   background: transparent;
-  width: 16.66%;
-  line-height: 31px;
 }
-/* line 72, ../sass/pages.scss */
+
+/* line 78, ../sass/pages.scss */
 .main-menu ul li.menuparent {
   border: none;
   background: transparent;
 }
-/* line 75, ../sass/pages.scss */
+/* line 81, ../sass/pages.scss */
 .main-menu ul li.menuparent:hover {
   border: none;
   background: transparent;
 }
-/* line 83, ../sass/pages.scss */
-.main-menu ul a {
-  padding: 0;
+
+/* line 88, ../sass/pages.scss */
+.header .main-menu ul li {
+  width: 16.66%;
+  height: 24px;
+  padding: 3px 0;
+}
+/* line 93, ../sass/pages.scss */
+.header .main-menu ul a {
   font-size: 12px;
   color: #5e5e5e;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 0 0 0 17px;
+  display: block;
+  height: 24px;
+  line-height: 24px;
+}
+/* line 103, ../sass/pages.scss */
+.header .main-menu ul li:hover {
+  border-bottom: 2px solid #93303f;
 }

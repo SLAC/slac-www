@@ -41,6 +41,8 @@ body {
     background: url('../images/header-bg.jpg') repeat-x top;
     img {
       float: left;
+      margin-left: 20px;
+      margin-top: 23px;
     }
     .pane-pane-header {
       height: 80px;
@@ -54,12 +56,12 @@ body {
 
 /* Main menu */
 
-.main-menu {
+.header .main-menu {
   width: 100%;
   float: left;
   height: 31px;
   padding: 0 0 5px 0;
-  background: url('../images/menu-bg.png') repeat-x top;
+  background: url('../images/menu-bg.png') repeat-x bottom;
   ul {
     width: 100%;
     border: none;
@@ -69,23 +71,36 @@ body {
     li {
       border: none;
       background: transparent;
-      &.menuparent {
-        border: none;
-        background: transparent;
-        &:hover {
-          border: none;
-          background: transparent;
-        }
-      }
-      width: 16.66%;
-      line-height: 31px;
     }
-    a {
-      padding: 0;
-      font-size: 12px;
-      color: #5e5e5e;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
+  }
+}
+
+.main-menu ul li.menuparent {
+  border: none;
+  background: transparent;
+  &:hover {
+    border: none;
+    background: transparent;
+  }
+}
+
+.header .main-menu ul {
+  li {
+    width: 16.66%;
+    height: 24px;
+    padding: 3px 0;
+  }
+  a {
+    font-size: 12px;
+    color: #5e5e5e;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 0 0 17px;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+  }
+  li:hover {
+    border-bottom: 2px solid #93303f;
   }
 }
