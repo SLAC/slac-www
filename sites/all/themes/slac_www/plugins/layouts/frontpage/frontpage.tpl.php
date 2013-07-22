@@ -38,7 +38,7 @@
           <div class="inside middleleft"><?php print $content['middleleft']; ?></div>    
         <?php endif ?>
       </div>
-      <div czass="frontpage-middle-right">
+      <div class="frontpage-middle-right">
         <?php if ($content['middleright']): ?>
           <div class="inside middleright"><?php print $content['middleright']; ?></div>    
         <?php endif ?>
