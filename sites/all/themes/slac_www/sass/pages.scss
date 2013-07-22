@@ -31,6 +31,7 @@ body {
 
 .page-basic {
   background: transparent;
+  overflow: hidden;
   > .panel-panel {
     width: 100%;
     max-width: 1024px;
@@ -43,16 +44,21 @@ body {
   > .footer{
     background: #878787;
   }
+  .content > .inside, .footer > .inside {
+    margin: 0 2%;
+    width: 96%;
+  }
   .header {
     background: url('../images/header-bg.jpg') repeat-x top;
     img {
       float: left;
-      margin-left: 20px;
       margin-top: 23px;
     }
     .pane-pane-header {
       height: 80px;
       background: url("../images/header-connectors.png") no-repeat 230px 0;
+      margin: 0 2%;
+      width: 96%;
     }
   }
   #name-and-slogan {
