@@ -12,6 +12,7 @@ $plugin = array(
   'theme arguments' => array('id', 'content'),
   'css' => 'frontpage.css',
   'regions' => array(
+    'slider' => t('Slider'),
     'left' => t('Left sidebar'),
     'middletop' => t('Middle top'),
     'middleleft' => t('Middle left '),

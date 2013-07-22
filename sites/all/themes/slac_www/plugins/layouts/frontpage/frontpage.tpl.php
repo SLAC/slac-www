@@ -16,7 +16,10 @@
 ?>
 <div class="panel-display panel-frontpage clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   
- 
+  <?php if ($content[' slider']): ?>
+    <div class="inside slider"><?php print $content[' slider']; ?></div>    
+  <?php endif ?>
+
 
   <div class="frontpage-right">
    
