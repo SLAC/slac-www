@@ -84,13 +84,13 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
 
     // Create image caption.
     if (isset($file->field_description[LANGUAGE_NONE][0]['value']) && !empty($image_element['#title'])) {
-      $caption =  $image_element['#title'] . '<br><br>' .  $file->field_description[LANGUAGE_NONE][0]['value'];
+      $caption = '<p>' . $image_element['#title'] . '</p><p>' .  $file->field_description[LANGUAGE_NONE][0]['value'] . '</p>';
     }
     elseif (isset($file->field_description[LANGUAGE_NONE][0]['value']) && empty($image_element['#title'])) {
-      $caption = $file->field_description[LANGUAGE_NONE][0]['value'];
+      $caption = '<p>' . $file->field_description[LANGUAGE_NONE][0]['value'] . '</p>';
     }
     else {
-      $caption = $image_element['#title'];
+      $caption = '<p>' . $image_element['#title'] . '</p>';
     }
 
     $file_uri = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);
@@ -142,7 +142,6 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
     // to set the url to the image that will be displayed in lightbox.
     if ($lightbox_image_width > $image_effect_width || $lightbox_image_height > $image_effect_height) {
       $rendered_link = render($image_download_link);
-      $link_element = '<br><br>' . $rendered_link;
       $image_url = $new_image_url;
     }
     else {
@@ -157,7 +156,7 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
         'html' => TRUE,
         'attributes' => array(
           'class' => array(),
-          'rel' => 'lightbox[][' . $caption . $link_element . ']',
+          'rel' => 'lightbox[][' . $caption . $rendered_link . ']',
         ),
       ),
     );
