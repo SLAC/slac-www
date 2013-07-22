@@ -60,6 +60,10 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
       'sanitize' => 0,
     );
 
+    if (!image_style_load('lightbox_large_image')) {
+      _slac_image_lightbox_create_style();
+    }
+
     if (!empty($display['settings']['image_style'])) {
       $image_element = array(
         '#theme' => 'image_style',
@@ -92,19 +96,82 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
       $caption = $image_element['#title'];
     }
 
-    $element = array(
+    $file_uri = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);
+    $download_link_text = t('Download original image');
+
+    $style = 'lightbox_large_image';
+    $new_image_url = '';
+    $derivative_url = image_style_url($style, $file->uri);
+    $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
+
+    if (!$success) {
+      $new_image_url  = file_create_url($derivative_url);
+    }
+
+    $image_download_link = array(
       '#type' => 'link',
-      '#title' => render($image_element),
-      '#href' => str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri),
+      '#title' => $download_link_text,
+      '#href' => $file_uri,
       '#options' => array(
         'html' => TRUE,
         'attributes' => array(
           'class' => array(),
-          'rel' => 'lightbox[][' . $caption . ']',
+          'target' => '_blank',
+          'id' => 'lightbox2-download-link-text'
+        ),
+      ),
+    );
+
+    $image_effect_width = 0;
+    $image_effect_height = 0;
+
+    $image_style = image_style_load('lightbox_large_image');
+    $isid = $image_style['isid'];
+    if (image_effect_load($isid, 'lightbox_large_image')) {
+      $image_effect = image_effect_load($isid, 'lightbox_large_image');
+      $image_effect_width = $image_effect['data']['width'];
+      $image_effect_height = $image_effect['data']['height'];
+    }
+
+    $link_element = '';
+    $lightbox_image_width = $file->image_dimensions['width'];
+    $lightbox_image_height = $file->image_dimensions['height'];
+    if ($lightbox_image_width > $image_effect_width || $lightbox_image_height > $image_effect_height) {
+      $rendered_link = render($image_download_link);
+      $link_element = '<br><br>' . $rendered_link;
+      $image_url = $new_image_url;
+    }
+    else {
+      $image_url = $file_uri;
+    }
+
+    $element = array(
+      '#type' => 'link',
+      '#title' => render($image_element),
+      '#href' => $image_url,
+      '#options' => array(
+        'html' => TRUE,
+        'attributes' => array(
+          'class' => array(),
+          'rel' => 'lightbox[][' . $caption . $link_element . ']',
         ),
       ),
     );
 
     return $element;
   }
+}
+
+function _slac_image_lightbox_create_style() {
+  $style = image_style_save(array('name' => 'lightbox_large_image'));
+  $effect = array(
+    'name' => 'image_scale_and_crop',
+    'data' => array(
+      'width' => 1024,
+      'height' => 768,
+      'upscale' => TRUE,
+    ),
+    'isid' => $style['isid'],
+  );
+  image_effect_save($effect);
 }
