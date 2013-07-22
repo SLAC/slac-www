@@ -25,14 +25,6 @@
    
     <div class="frontpage-middle-col">
 
-      <?php if ($content['left']): ?>
-        <div class="inside left"><?php print $content['left']; ?></div>
-      <?php endif ?>
-
-    </div>
-
-    <div class="frontpage-right-col">
-      
       <?php if ($content['middletop']): ?>
         <div class="inside middletop"><?php print $content['middletop']; ?></div>    
       <?php endif ?>
@@ -47,6 +39,14 @@
           <div class="inside middleright"><?php print $content['middleright']; ?></div>    
         <?php endif ?>
       </div>
+
+    </div>
+
+    <div class="frontpage-right-col">
+      
+      <?php if ($content['left']): ?>
+        <div class="inside left"><?php print $content['left']; ?></div>
+      <?php endif ?>
 
     </div>
 
