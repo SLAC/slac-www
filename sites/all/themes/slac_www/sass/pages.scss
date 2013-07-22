@@ -37,6 +37,12 @@ body {
     margin: auto;
     clear: both;
   }
+  > .content{
+    background: #fff;
+  }
+  > .footer{
+    background: #878787;
+  }
   .header {
     background: url('../images/header-bg.jpg') repeat-x top;
     img {
@@ -55,6 +61,11 @@ body {
 } 
 
 /* Main menu */
+
+.main-menu {
+  position: relative;
+  z-index: 11;
+}
 
 .header .main-menu {
   width: 100%;
@@ -102,5 +113,22 @@ body {
   }
   li:hover {
     border-bottom: 2px solid #93303f;
+  }
+  ul {
+    padding-top: 2px;
+    li {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      height: auto;
+      a {
+        line-height: normal;
+        height: auto;
+        padding: 0;
+      }
+      &:hover {
+        border: none;
+      }
+    }
   }
 }
