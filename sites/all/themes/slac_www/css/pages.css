@@ -216,12 +216,26 @@ body {
 }
 
 /* Slider */
-/* line 178, ../sass/pages.scss */
-.front-slider .views-slideshow-cycle-main-frame {
-  width: 100%;
+/* line 177, ../sass/pages.scss */
+.front-slider {
+  padding-top: 15px;
 }
 
-/* line 182, ../sass/pages.scss */
+/* line 181, ../sass/pages.scss */
+.front-slider .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+}
+
+/* line 185, ../sass/pages.scss */
+.front-slider .views-field-nothing {
+  float: left;
+  width: 38%;
+  height: 264px;
+  background: #6bb938;
+}
+
+/* line 192, ../sass/pages.scss */
 .front-slider .views-field-field-image {
   float: right;
+  width: 62%;
 }
