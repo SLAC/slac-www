@@ -2,6 +2,34 @@
 .panel-3col { 
 }
 
+  .staffresourcestop{
+    width: 100%;
+  }
+
+  .rowonecolone,
+  .rowonecoltwo,
+  .rowonecolthree,
+  .rowtwocolone,
+  .rowtwocoltwo,
+  .rowtwocolthree{
+    width:  30%;
+    float: left;
+    margin-right: 5%;
+  }
+
+  .rowonecolthree,
+  .rowtwocolthree{
+    margin-right: 0;
+  }
+*/
+  .rowonecolone,
+  .rowonecoltwo,
+  .rowonecolthree{
+    margin-bottom: 40px;
+  }
+
+
+/*
 .panel-3col .panel-col-first { 
   float: left; 
   width: 25%; 
@@ -32,4 +60,3 @@
 .panel-3col .panel-separator {
   margin: 0 0 1em 0;
 }
-*/

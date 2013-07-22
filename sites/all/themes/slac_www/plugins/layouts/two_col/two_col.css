@@ -1,12 +1,12 @@
-/*
-.general-two-col { 
 
+.general-two-col { 
+/*  overflow: hidden;  */
 }
 
 .general-two-col .general-left { 
   float: left; 
-  width: 71%; 
-  margin-right: 4%;
+/*  width: 71%; 
+  margin-right: 4%;*/
 }
 
 .general-two-col .general-left .inside { 
@@ -15,7 +15,7 @@
 
 .general-two-col .general-right { 
   float: right; 
-  width: 25%; 
+  /*width: 25%; */
 }
 
 .general-two-col .general-right .inside { 
@@ -25,4 +25,3 @@
 .general-two-col .panel-separator {
   margin: 0;
 }
-*/

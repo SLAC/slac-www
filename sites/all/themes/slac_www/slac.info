@@ -1,9 +1,12 @@
+
 screenshot  = screenshot.png
-name        = SLAC WWW theme
+name        = SLAC theme
 description = Subtheme based on Zen theme.
 
 core        = 7.x
 base theme  = zen
+
+
 
 stylesheets[all][] = css/global.css
 stylesheets[all][] = css/normalize.css
@@ -11,6 +14,11 @@ stylesheets[all][] = css/tabs.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/blocks.css
 stylesheets[all][] = css/pages.css
+stylesheets[all][] = css/research-page.css
+stylesheets[all][] = css/staff-page.css
+stylesheets[all][] = css/feedback-page.css
+stylesheets[all][] = css/media-600.css
+stylesheets[all][] = css/media-900.css
 
 
 scripts[] = js/script.js
@@ -32,7 +40,20 @@ plugins[panels][layouts] = plugins/layouts
 ;stylesheets[all][] = css/comments.css
 ;stylesheets[all][] = css/fields.css
 
+
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
 regions[content]        = Content
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
 
 features[] = logo
 features[] = name
