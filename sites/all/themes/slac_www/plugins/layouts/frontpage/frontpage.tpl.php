@@ -21,14 +21,18 @@
   <?php endif ?>
 
 
-  <div class="frontpage-right">
-   
-    <div class="frontpage-middle-col">
+  <div class="center-wrapper">
 
+    <div class="frontpage-left-col">
+      <?php if ($content['right']): ?>
+        <div class="inside right"><?php print $content['right']; ?></div>
+      <?php endif ?>
+    </div>
+    
+    <div class="frontpage-middle-col">
       <?php if ($content['middletop']): ?>
         <div class="inside middletop"><?php print $content['middletop']; ?></div>    
       <?php endif ?>
-
       <div class="frontpage-middle-left">
         <?php if ($content['middleleft']): ?>
           <div class="inside middleleft"><?php print $content['middleleft']; ?></div>    
@@ -39,24 +43,13 @@
           <div class="inside middleright"><?php print $content['middleright']; ?></div>    
         <?php endif ?>
       </div>
-
     </div>
 
     <div class="frontpage-right-col">
-      
       <?php if ($content['left']): ?>
         <div class="inside left"><?php print $content['left']; ?></div>
       <?php endif ?>
-
     </div>
-
-  </div>
-
-  <div class="frontpage-left-col">
-
-    <?php if ($content['right']): ?>
-      <div class="inside right"><?php print $content['right']; ?></div>
-    <?php endif ?>
 
   </div>
 
