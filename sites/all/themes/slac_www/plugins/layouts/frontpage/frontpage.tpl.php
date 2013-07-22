@@ -24,8 +24,8 @@
   <div class="center-wrapper">
 
     <div class="frontpage-left-col">
-      <?php if ($content['right']): ?>
-        <div class="inside right"><?php print $content['right']; ?></div>
+      <?php if ($content['left']): ?>
+        <div class="inside left"><?php print $content['left']; ?></div>
       <?php endif ?>
     </div>
     
@@ -46,8 +46,8 @@
     </div>
 
     <div class="frontpage-right-col">
-      <?php if ($content['left']): ?>
-        <div class="inside left"><?php print $content['left']; ?></div>
+      <?php if ($content['right']): ?>
+        <div class="inside right"><?php print $content['right']; ?></div>
       <?php endif ?>
     </div>
 

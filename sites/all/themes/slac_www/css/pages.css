@@ -303,3 +303,21 @@ body {
 }
 
 /* Layouts */
+/* line 215, ../sass/pages.scss */
+.panel-frontpage .center-wrapper {
+  clear: both;
+}
+
+/* line 219, ../sass/pages.scss */
+.frontpage-middle-left {
+  width: 69%;
+  float: left;
+  padding-right: 2.5%;
+}
+
+/* line 225, ../sass/pages.scss */
+.frontpage-middle-right {
+  width: 26%;
+  float: right;
+  padding-left: 2.5%;
+}
