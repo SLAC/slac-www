@@ -134,7 +134,7 @@ function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
       $image_effect_height = $image_effect['data']['height'];
     }
 
-    $link_element = '';
+    $rendered_link = '';
     $lightbox_image_width = $file->image_dimensions['width'];
     $lightbox_image_height = $file->image_dimensions['height'];
 
