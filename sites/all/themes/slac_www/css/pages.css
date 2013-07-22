@@ -40,6 +40,7 @@ body {
   margin: 0;
   padding: 0;
   background: #e9e9e9;
+  font-family: "Arial", sans-serif;
 }
 
 /*
@@ -69,9 +70,53 @@ body {
 /* line 45, ../sass/pages.scss */
 .page-basic .header .pane-pane-header {
   height: 80px;
-  background: url("../images/header-connectors.png") no-repeat 100px 0;
+  background: url("../images/header-connectors.png") no-repeat 230px 0;
 }
 /* line 50, ../sass/pages.scss */
 .page-basic #name-and-slogan {
   display: none;
+}
+
+/* Main menu */
+/* line 57, ../sass/pages.scss */
+.main-menu {
+  width: 100%;
+  float: left;
+  height: 31px;
+  padding: 0 0 5px 0;
+  background: url("../images/menu-bg.png") repeat-x top;
+}
+/* line 63, ../sass/pages.scss */
+.main-menu ul {
+  width: 100%;
+  border: none;
+}
+/* line 66, ../sass/pages.scss */
+.main-menu ul ul {
+  border: none;
+}
+/* line 69, ../sass/pages.scss */
+.main-menu ul li {
+  border: none;
+  background: transparent;
+  width: 16.66%;
+  line-height: 31px;
+}
+/* line 72, ../sass/pages.scss */
+.main-menu ul li.menuparent {
+  border: none;
+  background: transparent;
+}
+/* line 75, ../sass/pages.scss */
+.main-menu ul li.menuparent:hover {
+  border: none;
+  background: transparent;
+}
+/* line 83, ../sass/pages.scss */
+.main-menu ul a {
+  padding: 0;
+  font-size: 12px;
+  color: #5e5e5e;
+  text-transform: uppercase;
+  text-decoration: none;
 }
