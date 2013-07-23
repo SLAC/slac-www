@@ -1,4 +1,17 @@
-
+#page-manager-edit .frontpage-left-col{
+  width: 25%;
+}
+#page-manager-edit .frontpage-middle-col{
+  width: 50%;
+}
+#page-manager-edit .frontpage-right-col{
+width: 25%;
+}
+#page-manager-edit .frontpage-middle-left,
+#page-manager-edit .frontpage-middle-right{
+  width: 50%;
+  float: left;
+}
 
 
 

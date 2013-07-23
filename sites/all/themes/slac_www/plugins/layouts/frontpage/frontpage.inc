@@ -12,19 +12,12 @@ $plugin = array(
   'theme arguments' => array('id', 'content'),
   'css' => 'frontpage.css',
   'regions' => array(
-    'colonerowone' => t('Lab News slider'),
-    'colonerowtwo' => t('Lab News list'),
-    'colonerowthree' => t('Slac Science'),
-    'coltworowone' => t('Links'),
-    'coltworowtwo' => t('Calendar'),
-    'coltworowthree' => t('Access Information'),
-    'coltworowfour' => t('Weather'),
-    'colthreerowone' => t('People finder'),
-    'colthreerowtwo' => t('Top links'),
-    'colthreerowthree' => t('Slac projects'),
-    'colthreerowfour' => t('Directorate links'),
-    'colthreerowfive' => t('Help desk, Flea market'),
-    'colthreerowsix' => t('Security, Contacts')
+    'slider' => t('Slider'),
+    'left' => t('Left sidebar'),
+    'middletop' => t('Middle top'),
+    'middleleft' => t('Middle left '),
+    'middleright' => t('Middle right'),
+    'right' => t('Right sidebar')
   ),
 );
 

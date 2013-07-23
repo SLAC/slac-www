@@ -31,20 +31,62 @@ body {
 
 .page-basic {
   background: transparent;
+  overflow: hidden;
   > .panel-panel {
     width: 100%;
     max-width: 1024px;
     margin: auto;
     clear: both;
   }
+  > .content{
+    background: #fff;
+  }
+  .footer{
+    background: #878787;
+    color: #fff;
+    font-size: 9px;
+    .panels-flexible-region-first {
+      width: 58%;
+    }
+    .pane-menu-menu-footer-menu {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 1px solid #aeaeae;
+      .menu {
+        li {
+          float: left;
+          width: 20%;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+    .panels-flexible-region-last {
+      width: 21%;
+      float: right;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .content > .inside, .footer > .inside {
+    margin: 0 2%;
+    width: 96%;
+  }
   .header {
     background: url('../images/header-bg.jpg') repeat-x top;
     img {
       float: left;
+      margin-top: 23px;
     }
     .pane-pane-header {
       height: 80px;
-      background: url('../images/header-connectors.png') no-repeat 100px 0;
+      background: url("../images/header-connectors.png") no-repeat 230px 0;
+      margin: 0 2%;
+      width: 96%;
     }
   }
   #name-and-slogan {
@@ -55,11 +97,16 @@ body {
 /* Main menu */
 
 .main-menu {
+  position: relative;
+  z-index: 11;
+}
+
+.header .main-menu {
   width: 100%;
   float: left;
   height: 31px;
   padding: 0 0 5px 0;
-  background: url('../images/menu-bg.png') repeat-x top;
+  background: url('../images/menu-bg.png') repeat-x bottom;
   ul {
     width: 100%;
     border: none;
@@ -69,23 +116,53 @@ body {
     li {
       border: none;
       background: transparent;
-      &.menuparent {
-        border: none;
-        background: transparent;
-        &:hover {
-          border: none;
-          background: transparent;
-        }
-      }
-      width: 16.66%;
-      line-height: 31px;
     }
-    a {
+  }
+}
+
+.main-menu ul li.menuparent {
+  border: none;
+  background: transparent;
+  &:hover {
+    border: none;
+    background: transparent;
+  }
+}
+
+.header .main-menu ul {
+  li {
+    width: 16.66%;
+    height: 24px;
+    padding: 3px 0;
+  }
+  a {
+    font-size: 12px;
+    color: #5e5e5e;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 0 0 17px;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+  }
+  li:hover {
+    border-bottom: 2px solid #93303f;
+  }
+  ul {
+    padding-top: 2px;
+    li {
+      width: 100%;
+      margin: 0;
       padding: 0;
-      font-size: 12px;
-      color: #5e5e5e;
-      text-transform: uppercase;
-      text-decoration: none;
+      height: auto;
+      a {
+        line-height: normal;
+        height: auto;
+        padding: 0;
+      }
+      &:hover {
+        border: none;
+      }
     }
   }
 }
