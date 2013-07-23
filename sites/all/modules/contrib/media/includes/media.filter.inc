@@ -337,7 +337,7 @@ function media_format_form($form, $form_state, $file) {
     return;
   }
 
-  $default_view_mode = media_variable_get('wysiwyg_default_view_mode');
+  $default_view_mode = isset($_GET['view_mode']) ? $_GET['view_mode'] : media_variable_get('wysiwyg_default_view_mode');
   if (!isset($formats[$default_view_mode])) {
     $default_view_mode = key($formats);
   }
