@@ -68,3 +68,91 @@
   box-sizing: border-box;
   word-wrap: break-word;
 }
+
+/* Slider */
+/* line 6, ../sass/blocks.scss */
+.front-slider {
+  padding-bottom: 15px;
+}
+/* line 8, ../sass/blocks.scss */
+.front-slider .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+}
+/* line 11, ../sass/blocks.scss */
+.front-slider .views-field-nothing {
+  float: left;
+  width: 38%;
+  height: 264px;
+  background: #6bb938;
+  overflow: hidden;
+}
+/* line 18, ../sass/blocks.scss */
+.front-slider .views-field-field-image {
+  float: right;
+  width: 62%;
+}
+
+/* line 24, ../sass/blocks.scss */
+.slide-text-side {
+  font-size: 22px;
+  color: #fff;
+  line-height: normal;
+  width: 86%;
+  margin: 10px 8%;
+  line-height: 30px;
+}
+/* line 31, ../sass/blocks.scss */
+.slide-text-side a {
+  font-size: 34px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 46px;
+  padding-bottom: 20px;
+  display: block;
+}
+
+/* */
+/* line 44, ../sass/blocks.scss */
+.highlited .field-label, .highlited .pane-title {
+  border-bottom: 2px solid #831425;
+  font-size: 14px;
+  color: #7f6332;
+  font-weight: normal;
+  padding-bottom: 3px;
+  margin-bottom: 12px;
+}
+
+/* line 55, ../sass/blocks.scss */
+.video .field-item {
+  border-top: 1px dashed #c7c8c8;
+  padding: 18px 0 25px 0;
+  font-size: 12px;
+}
+/* line 59, ../sass/blocks.scss */
+.video .field-item:first-child {
+  border-top: none;
+  padding-top: 9px;
+}
+/* line 63, ../sass/blocks.scss */
+.video .field-item img {
+  border: 1px solid #fff;
+  border-top: 0;
+  border-left: 0;
+  -webkit-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
+  -ms-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
+  width: 100%;
+  height: auto;
+}
+/* line 74, ../sass/blocks.scss */
+.video .field-item a {
+  color: #881728;
+  text-decoration: none;
+  padding-top: 12px;
+  display: block;
+}
+/* line 81, ../sass/blocks.scss */
+.video a.youtube-thumbnail {
+  padding-top: 0;
+}
