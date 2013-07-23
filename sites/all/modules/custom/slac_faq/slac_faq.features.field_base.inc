@@ -48,7 +48,7 @@ function slac_faq_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_status',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'foreign keys' => array(),
     'indexes' => array(
