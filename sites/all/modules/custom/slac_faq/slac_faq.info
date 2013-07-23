@@ -1,6 +1,7 @@
 name = Slac FAQ
 core = 7.x
 package = SLAC
+php = 5.2.4
 dependencies[] = list
 dependencies[] = node
 dependencies[] = page_manager
