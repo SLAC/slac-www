@@ -138,10 +138,10 @@
   border: 1px solid #fff;
   border-top: 0;
   border-left: 0;
-  -webkit-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
-  -moz-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
-  -ms-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.4);
   width: 100%;
   height: auto;
 }
@@ -155,4 +155,30 @@
 /* line 81, ../sass/blocks.scss */
 .video a.youtube-thumbnail {
   padding-top: 0;
+}
+
+/* line 87, ../sass/blocks.scss */
+.bg-list .areYouText, .bg-list .social_links {
+  padding: 10px 0;
+  margin-bottom: 7px;
+  background: white url("../images/list-bg.png") repeat-x bottom;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 94, ../sass/blocks.scss */
+.bg-list .areYouText a {
+  color: #881728;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  line-height: normal;
+}
+/* line 101, ../sass/blocks.scss */
+.bg-list .social_links li {
+  width: 20%;
+  text-align: center;
+}
+/* line 104, ../sass/blocks.scss */
+.bg-list .social_links li a {
+  margin: auto;
 }
