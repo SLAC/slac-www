@@ -69,6 +69,51 @@
   word-wrap: break-word;
 }
 
+/* line 57, ../sass/_mixins.scss */
+.three-col .three-col-left {
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 61, ../sass/_mixins.scss */
+.three-col .three-col-middle {
+  float: left;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: -75%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/* line 65, ../sass/_mixins.scss */
+.three-col .three-col-right {
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
 /* line 3, ../sass/blocks.scss */
 .frontpage-right-col .panel-pane {
   margin-bottom: 35px;
@@ -139,7 +184,7 @@
 
 /* */
 /* line 68, ../sass/blocks.scss */
-.highlited .field-label, .highlited .pane-title, .highlited .pane-title a {
+.highlited .field-label, .highlited .pane-title {
   border-bottom: 2px solid #831425;
   font-size: 14px;
   color: #7f6332;
@@ -147,43 +192,48 @@
   padding-bottom: 3px;
   margin-bottom: 12px;
 }
+/* line 75, ../sass/blocks.scss */
+.highlited .field-label a, .highlited .pane-title a {
+  color: #7f6332;
+  text-decoration: none;
+}
 
-/* line 79, ../sass/blocks.scss */
+/* line 83, ../sass/blocks.scss */
 .video .field-item {
   border-top: 1px dashed #c7c8c8;
   padding: 18px 0 25px 0;
   font-size: 12px;
 }
-/* line 83, ../sass/blocks.scss */
+/* line 87, ../sass/blocks.scss */
 .video .field-item:first-child {
   border-top: none;
   padding-top: 9px;
 }
-/* line 87, ../sass/blocks.scss */
+/* line 91, ../sass/blocks.scss */
 .video .field-item img {
   border: 1px solid #fff;
   border-top: 0;
   border-left: 0;
-  -webkit-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
-  -moz-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
-  -ms-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.4);
   width: 100%;
   height: auto;
 }
-/* line 98, ../sass/blocks.scss */
+/* line 102, ../sass/blocks.scss */
 .video .field-item a {
   color: #881728;
   text-decoration: none;
   padding-top: 12px;
   display: block;
 }
-/* line 105, ../sass/blocks.scss */
+/* line 109, ../sass/blocks.scss */
 .video a.youtube-thumbnail {
   padding-top: 0;
 }
 
-/* line 111, ../sass/blocks.scss */
+/* line 115, ../sass/blocks.scss */
 .bg-list .areYouText, .bg-list .social_links {
   padding: 10px 0;
   margin-bottom: 7px;
@@ -191,7 +241,7 @@
   width: 100%;
   overflow: hidden;
 }
-/* line 118, ../sass/blocks.scss */
+/* line 122, ../sass/blocks.scss */
 .bg-list .areYouText a {
   color: #881728;
   text-decoration: none;
@@ -201,12 +251,12 @@
   width: 90%;
   margin: 0 5%;
 }
-/* line 127, ../sass/blocks.scss */
+/* line 131, ../sass/blocks.scss */
 .bg-list .social_links li {
   width: 20%;
   text-align: center;
 }
-/* line 130, ../sass/blocks.scss */
+/* line 134, ../sass/blocks.scss */
 .bg-list .social_links li a {
   margin: auto;
 }
