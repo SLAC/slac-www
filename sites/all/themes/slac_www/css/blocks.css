@@ -199,18 +199,18 @@
 }
 
 /* line 83, ../sass/blocks.scss */
-.video .field-item {
+.video-block .field-item {
   border-top: 1px dashed #c7c8c8;
   padding: 18px 0 25px 0;
   font-size: 12px;
 }
 /* line 87, ../sass/blocks.scss */
-.video .field-item:first-child {
+.video-block .field-item:first-child {
   border-top: none;
   padding-top: 9px;
 }
 /* line 91, ../sass/blocks.scss */
-.video .field-item img {
+.video-block .field-item img {
   border: 1px solid #fff;
   border-top: 0;
   border-left: 0;
@@ -222,14 +222,14 @@
   height: auto;
 }
 /* line 102, ../sass/blocks.scss */
-.video .field-item a {
+.video-block .field-item a {
   color: #881728;
   text-decoration: none;
   padding-top: 12px;
   display: block;
 }
 /* line 109, ../sass/blocks.scss */
-.video a.youtube-thumbnail {
+.video-block a.youtube-thumbnail {
   padding-top: 0;
 }
 
