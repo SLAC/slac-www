@@ -372,13 +372,14 @@ a {
 
 /* line 215, ../sass/pages.scss */
 .frontpage-middle-left {
-  width: 69%;
+  width: 67%;
   float: left;
   margin: 2.5% 0 0 1.5%;
   border-right: 1px solid #bbbdbe;
+  padding-right: 2%;
 }
 
-/* line 222, ../sass/pages.scss */
+/* line 223, ../sass/pages.scss */
 .frontpage-middle-right {
   width: 26%;
   float: right;
