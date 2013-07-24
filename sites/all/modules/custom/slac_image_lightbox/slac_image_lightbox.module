@@ -101,9 +101,9 @@ function theme_image_style_lightbox($variables) {
   $image_style = $variables['style_name'];
   $file = $variables['file'];
 
-  $alt = isset($file->field_file_image_alt_text[LANGUAGE_NONE][0]['value']) ?: '';
-  $title = isset($file->field_file_image_title_text[LANGUAGE_NONE][0]['value']) ?: '';
-  $description = isset($file->field_description[LANGUAGE_NONE][0]['value']) ?: '';
+  $alt = isset($file->field_file_image_alt_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] : '';
+  $title = isset($file->field_file_image_title_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_title_text[LANGUAGE_NONE][0]['value'] : '';
+  $description = isset($file->field_description[LANGUAGE_NONE][0]['value']) ? $file->field_description[LANGUAGE_NONE][0]['value'] : '';
 
   $rendered_image = theme('image_style', array(
     'path' => $file->uri,
@@ -114,121 +114,73 @@ function theme_image_style_lightbox($variables) {
     'title' => $title,
   ));
 
-  $caption = '<p>' . implode('<p></p>', array_filter($title, $description)) . '</p>';
+  //Create 'lightbox_large_image' image style if it not exists.
+  if (!image_style_load('lightbox_large_image')) {
+    _slac_image_lightbox_create_style();
+  }
 
-  return $rendered_image;
+  $style = 'lightbox_large_image';
+  $new_image_url = '';
+  $derivative_url = image_style_url($style, $file->uri);
+  $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
+
+  if (!$success) {
+    $new_image_url = file_create_url($derivative_url);
+  }
+
+  // Download path is provided by Download File module.
+  // See Download File module permission to set restrictions for download.
+  $image_download_href = 'download/file/fid/' . $file->fid;
+  $image_download_link = array(
+      '#type' => 'link',
+      '#title' => t('Download original image'),
+      '#href' => $image_download_href,
+      '#options' => array(
+          'html' => TRUE,
+          'attributes' => array(
+              'class' => array('lightbox-download-link'),
+          ),
+      ),
+  );
+
+  $image_effect_width = 0;
+  $image_effect_height = 0;
+  $image_style = image_style_load('lightbox_large_image');
+  $isid = $image_style['isid'];
+  if (image_effect_load($isid, 'lightbox_large_image')) {
+    $image_effect = image_effect_load($isid, 'lightbox_large_image');
+    $image_effect_width = $image_effect['data']['width'];
+    $image_effect_height = $image_effect['data']['height'];
+  }
+
+  $rendered_link = '';
+  $lightbox_image_width = $file->image_dimensions['width'];
+  $lightbox_image_height = $file->image_dimensions['height'];
+
+  // Check if original image dimension is larger that image style dimensions
+  // to set the url to the image that will be displayed in lightbox.
+  if ($lightbox_image_width > $image_effect_width || $lightbox_image_height > $image_effect_height) {
+    $rendered_link = render($image_download_link);
+    $image_url = $new_image_url;
+  }
+  else {
+    $image_url = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);
+  }
+
+  //Create image caption.
+  if ($description != '' && $title) {
+    $caption = '<p>' . $title . '</p><p>' . $description . '</p>';
+  }
+  elseif ($description != '' && !$title) {
+    $caption = '<p>' . $description . '</p>';
+  }
+  else {
+    $caption = '<p>' . $title . '</p>';
+  }
+
+  $rendered_image_as_link = l($rendered_image, $image_url, array('attributes' => array('rel' => 'lightbox[][' . $caption . $rendered_link . ']'), 'html' => TRUE));
+  return $rendered_image_as_link;
 }
-
-//<<<<<<< HEAD:sites/all/modules/custom/slac_image_lightbox/slac_image_lightbox.module
-//  if (file_entity_file_is_readable($file) && isset($file->image_dimensions)) {
-//    $replace_options = array(
-//      'clear' => 1,
-//      'sanitize' => 0,
-//    );
-//
-//    if (!empty($display['settings']['image_style'])) {
-//      $image_element = array(
-//        '#theme' => 'image_style',
-//        '#style_name' => $display['settings']['image_style'],
-//        '#path' => $file->uri,
-//        '#width' => $file->image_dimensions['width'],
-//        '#height' => $file->image_dimensions['height'],
-//        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options),
-//        '#title' => token_replace($display['settings']['title'], array('file' => $file), $replace_options),
-//      );
-//    }
-//    else {
-//      $image_element = array(
-//        '#theme' => 'image',
-//        '#path' => $file->uri,
-//        '#width' => $file->image_dimensions['width'],
-//        '#height' => $file->image_dimensions['height'],
-//        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options),
-//        '#title' => token_replace($display['settings']['title'], array('file' => $file), $replace_options),
-//      );
-//    }
-//
-//    // Create image caption.
-//    if (isset($file->field_description[LANGUAGE_NONE][0]['value']) && !empty($image_element['#title'])) {
-//      $caption = '<p>' . $image_element['#title'] . '</p><p>' . $file->field_description[LANGUAGE_NONE][0]['value'] . '</p>';
-//    }
-//    elseif (isset($file->field_description[LANGUAGE_NONE][0]['value']) && empty($image_element['#title'])) {
-//      $caption = '<p>' . $file->field_description[LANGUAGE_NONE][0]['value'] . '</p>';
-//    }
-//    else {
-//      $caption = '<p>' . $image_element['#title'] . '</p>';
-//    }
-//
-//    // Create 'lightbox_large_image' image style if it not exists.
-//    if (!image_style_load('lightbox_large_image')) {
-//      _slac_image_lightbox_create_style();
-//    }
-//
-//    $style = 'lightbox_large_image';
-//    $new_image_url = '';
-//    $derivative_url = image_style_url($style, $file->uri);
-//    $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
-//
-//    if (!$success) {
-//      $new_image_url  = file_create_url($derivative_url);
-//    }
-//
-//    // Download path is provided by Download File module.
-//    // See Download File module permission to set restrictions for download.
-//    $image_download_href = 'download/file/fid/' . $file->fid;
-//    $image_download_link = array(
-//      '#type' => 'link',
-//      '#title' => t('Download original image'),
-//      '#href' => $image_download_href,
-//      '#options' => array(
-//        'html' => TRUE,
-//        'attributes' => array(
-//          'class' => array(),
-//          'id' => 'lightbox2-download-link-text'
-//        ),
-//      ),
-//    );
-//
-//    $image_effect_width = 0;
-//    $image_effect_height = 0;
-//    $image_style = image_style_load('lightbox_large_image');
-//    $isid = $image_style['isid'];
-//    if (image_effect_load($isid, 'lightbox_large_image')) {
-//      $image_effect = image_effect_load($isid, 'lightbox_large_image');
-//      $image_effect_width = $image_effect['data']['width'];
-//      $image_effect_height = $image_effect['data']['height'];
-//    }
-//
-//    $rendered_link = '';
-//    $lightbox_image_width = $file->image_dimensions['width'];
-//    $lightbox_image_height = $file->image_dimensions['height'];
-//
-//    // Check if original image dimension is larger that image style dimensions
-//    // to set the url to the image that will be displayed in lightbox.
-//    if ($lightbox_image_width > $image_effect_width || $lightbox_image_height > $image_effect_height) {
-//      $rendered_link = render($image_download_link);
-//      $image_url = $new_image_url;
-//    }
-//    else {
-//      $image_url = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);;
-//    }
-//
-//    $element = array(
-//      '#type' => 'link',
-//      '#title' => render($image_element),
-//      '#href' => $image_url,
-//      '#options' => array(
-//        'html' => TRUE,
-//        'attributes' => array(
-//          'class' => array(),
-//          'rel' => 'lightbox[][' . $caption . $rendered_link . ']',
-//        ),
-//      ),
-//    );
-//
-//    return $element;
-//  }
-//}
 
 /**
  * Create a new image style.
