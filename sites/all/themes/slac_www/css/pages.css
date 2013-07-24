@@ -42,9 +42,9 @@
 /* line 57, ../sass/_mixins.scss */
 .frontpage-middle-col {
   float: left;
-  width: 62.5%;
-  margin-left: 16.66667%;
-  margin-right: -79.16667%;
+  width: 54.16667%;
+  margin-left: 20.83333%;
+  margin-right: -75%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -87,9 +87,9 @@
 /* line 69, ../sass/_mixins.scss */
 .three-col .three-col-middle {
   float: left;
-  width: 62.5%;
-  margin-left: 16.66667%;
-  margin-right: -79.16667%;
+  width: 54.16667%;
+  margin-left: 20.83333%;
+  margin-right: -75%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -372,11 +372,11 @@ a {
 
 /* line 215, ../sass/pages.scss */
 .frontpage-middle-left {
-  width: 67%;
+  width: 66%;
   float: left;
   margin: 2.5% 0 0 1.5%;
   border-right: 1px solid #bbbdbe;
-  padding-right: 2%;
+  padding-right: 3%;
 }
 
 /* line 223, ../sass/pages.scss */
