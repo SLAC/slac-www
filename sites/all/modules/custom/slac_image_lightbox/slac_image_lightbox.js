@@ -18,3 +18,14 @@
     }
   };
 
+  // Reload formatter selection iframe after cropping dialog
+  // has been closed so new thumbnails got rendered.
+  Drupal.EPSACropOld = jQuery.extend(true, {}, Drupal.EPSACrop);
+  Drupal.EPSACrop.dialog = function(type_name, field_name, bundle, delta, img, trueSize) {
+    Drupal.EPSACropOld.dialog(type_name, field_name, bundle, delta, img, trueSize);
+    $('#EPSACropDialog').bind('dialogclose', function(){
+      document.location.reload();
+    });
+  }
+
+})(jQuery);
