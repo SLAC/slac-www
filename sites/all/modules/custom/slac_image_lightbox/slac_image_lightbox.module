@@ -34,7 +34,7 @@ function slac_image_lightbox_media_format_form_prepare_alter(&$form, $form_state
         'path' => $file->uri,
       ));
 
-      preg_match('/\?itok=[a-zA-Z0-9]*/', $rendered_image, $matches);
+      preg_match('/\?itok=[a-zA-Z0-9-_]*/', $rendered_image, $matches);
       $rendered_image = str_replace($matches[0], $matches[0] . '&' . rand(0, 1000) . '=' . rand(0, 1000), $rendered_image);
 
       $thumbnail_options[$view_mode_name] = $rendered_image;
