@@ -4,164 +4,182 @@
 * Implements hook_entity_info_alter().
 */
 function slac_image_lightbox_entity_info_alter(&$entity_info) {
-  $entity_info['file']['view modes']['epsa_crop_mode'] = array(
-    'label' => t('EPSA Crop Mode'),
-    'custom settings' => TRUE,
+  foreach (_epsacrop_load_styles() as $image_style) {
+    $entity_info['file']['view modes']['crop_' . $image_style['name']] = array(
+      'label' => t('Crop ' . $image_style['name']),
+      'custom settings' => TRUE,
+    );
+  }
+}
+
+/**
+ * Implements hook_media_format_form_prepare_alter().
+ *
+ * Alter media image selection view_mode form. Add cropping button.
+ *
+ * @param $form
+ * @param $form_state
+ * @param $file
+ */
+function slac_image_lightbox_media_format_form_prepare_alter(&$form, $form_state, $file) {
+
+  $thumbnail_options = array();
+  // Add default so it will be unset.
+  $view_mode_settings = field_view_mode_settings('file', $file->type) + array('default' => 'default');
+  foreach ($view_mode_settings as $view_mode_name => $view_mode_info) {
+    if (strpos($view_mode_name, 'crop_') === 0) {
+      $image_style_name = substr($view_mode_name, strlen('crop_'));
+      $rendered_image = theme('image_style', array(
+        'style_name' => $image_style_name,
+        'path' => $file->uri,
+      ));
+
+      preg_match('/\?itok=[a-zA-Z0-9]*/', $rendered_image, $matches);
+      $rendered_image = str_replace($matches[0], $matches[0] . '&' . rand(0, 1000) . '=' . rand(0, 1000), $rendered_image);
+
+      $thumbnail_options[$view_mode_name] = $rendered_image;
+      continue;
+    }
+    if (isset($form['options']['format']['#options'][$view_mode_name])) {
+      unset($form['options']['format']['#options'][$view_mode_name]);
+    }
+  }
+
+  $form['options']['thumbnails'] = array(
+    '#type' => 'radios',
+    '#title' => t('Thumbnail'),
+    '#options' => $thumbnail_options,
+  );
+
+  _epsacrop_include_header_html();
+  $form['#attached']['js'][] = drupal_get_path('module', 'slac_image_lightbox') . '/slac_image_lightbox.js';
+  $markup = "<a href=\"javascript:Drupal.EPSACrop.dialog('all', '"
+    . 'all' . "', '"
+    . 'all' . "', '"
+    . $file->fid . "', '"
+    . image_style_url('epsacrop_thumb', $file->uri) . "', ["
+    . $file->image_dimensions['width'] . ","
+    . $file->image_dimensions['height'] . "]);\">" . t("manage image crops") . "</a>";
+  $form['crop'] = array(
+    '#type' => 'markup',
+    '#markup' => $markup
   );
 }
 
 /**
- * Implements hook_file_formatter_info().
+ * Implements hook_media_token_to_markup_alter().
+ *
+ * Needed to display thumbnails properly in WYSIWYG on inserting.
  */
-function slac_image_lightbox_file_formatter_info() {
-  $formatters = array();
-
-  // Add a simple file formatter for displaying an image in a chosen style.
-  if (module_exists('image')) {
-    $formatters['slac_image_lightbox'] = array(
-      'label' => t('SLAC Image Lightbox'),
-      'description' => t('Displays image files in content in a popup lightbox'),
-      'default settings' => array(
-        'image_style' => '',
-        'alt' => '',
-        'title' => '',
-      ),
-      'view callback' => 'slac_image_lightbox_file_formatter_view',
-      'settings callback' => 'file_entity_file_formatter_file_image_settings',
-    );
-    // Provide default token values.
-    if (module_exists('token')) {
-      $formatters['slac_image_lightbox']['default settings']['alt'] = '[file:field_file_image_alt_text]';
-      $formatters['slac_image_lightbox']['default settings']['title'] = '[file:field_file_image_title_text]';
-    }
-    elseif (module_exists('entity_token')) {
-      $formatters['slac_image_lightbox']['default settings']['alt'] = '[file:field-file-image-alt-text]';
-      $formatters['slac_image_lightbox']['default settings']['title'] = '[file:field-file-image-title-text]';
-    }
+function slac_image_lightbox_media_token_to_markup_alter(&$element, $tag_info, &$settings) {
+  if (strpos($tag_info['view_mode'], 'crop_') === FALSE) {
+    return;
   }
+  $image_style = substr($tag_info['view_mode'], strlen('crop_'));
 
-  return $formatters;
+  $element_alter = &$element;
+  if (isset($element['content']['file'])) {
+    $element_alter = &$element['content']['file'];
+    $element_alter['#theme'] = 'image_style_lightbox';
+  }
+  else {
+    $element_alter['#theme'] = 'image_style';
+  }
+  $element_alter['#style_name'] = $image_style;
 }
 
-function slac_image_lightbox_file_formatter_view($file, $display, $langcode) {
-  // Prevent PHP notices when trying to read empty files.
-  if (!$file->filesize) {
-    return;
+/**
+ * Implements hook_theme().
+ */
+function slac_image_lightbox_theme() {
+  return array('image_style_lightbox' => array(
+    'variables' => array('style_name' => '', 'file' => NULL),
+  ));
+}
+
+function theme_image_style_lightbox($variables) {
+  $image_style = $variables['style_name'];
+  $file = $variables['file'];
+
+  $alt = isset($file->field_file_image_alt_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] : '';
+  $title = isset($file->field_file_image_title_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_title_text[LANGUAGE_NONE][0]['value'] : '';
+  $description = isset($file->field_description[LANGUAGE_NONE][0]['value']) ? $file->field_description[LANGUAGE_NONE][0]['value'] : '';
+
+  $rendered_image = theme('image_style', array(
+    'path' => $file->uri,
+    'style_name' => $image_style,
+    'width' => '',
+    'height' => '',
+    'alt' => $alt,
+    'title' => $title,
+  ));
+
+  //Create 'lightbox_large_image' image style if it not exists.
+  if (!image_style_load('lightbox_large_image')) {
+    _slac_image_lightbox_create_style();
   }
 
-  // Do not bother proceeding if this file does not have an image mime type.
-  if (strpos($file->filemime, 'image/') !== 0) {
-    return;
+  $style = 'lightbox_large_image';
+  $new_image_url = '';
+  $derivative_url = image_style_url($style, $file->uri);
+  $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
+
+  if (!$success) {
+    $new_image_url = file_create_url($derivative_url);
   }
 
-  if (file_entity_file_is_readable($file) && isset($file->image_dimensions)) {
-    $replace_options = array(
-      'clear' => 1,
-      'sanitize' => 0,
-    );
-
-    if (!empty($display['settings']['image_style'])) {
-      $image_element = array(
-        '#theme' => 'image_style',
-        '#style_name' => $display['settings']['image_style'],
-        '#path' => $file->uri,
-        '#width' => $file->image_dimensions['width'],
-        '#height' => $file->image_dimensions['height'],
-        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options),
-        '#title' => token_replace($display['settings']['title'], array('file' => $file), $replace_options),
-      );
-    }
-    else {
-      $image_element = array(
-        '#theme' => 'image',
-        '#path' => $file->uri,
-        '#width' => $file->image_dimensions['width'],
-        '#height' => $file->image_dimensions['height'],
-        '#alt' => token_replace($display['settings']['alt'], array('file' => $file), $replace_options),
-        '#title' => token_replace($display['settings']['title'], array('file' => $file), $replace_options),
-      );
-    }
-
-    // Create image caption.
-    if (isset($file->field_description[LANGUAGE_NONE][0]['value']) && !empty($image_element['#title'])) {
-      $caption = '<p>' . $image_element['#title'] . '</p><p>' . $file->field_description[LANGUAGE_NONE][0]['value'] . '</p>';
-    }
-    elseif (isset($file->field_description[LANGUAGE_NONE][0]['value']) && empty($image_element['#title'])) {
-      $caption = '<p>' . $file->field_description[LANGUAGE_NONE][0]['value'] . '</p>';
-    }
-    else {
-      $caption = '<p>' . $image_element['#title'] . '</p>';
-    }
-
-    // Create 'lightbox_large_image' image style if it not exists.
-    if (!image_style_load('lightbox_large_image')) {
-      _slac_image_lightbox_create_style();
-    }
-
-    $style = 'lightbox_large_image';
-    $new_image_url = '';
-    $derivative_url = image_style_url($style, $file->uri);
-    $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
-
-    if (!$success) {
-      $new_image_url  = file_create_url($derivative_url);
-    }
-
-    // Download path is provided by Download File module.
-    // See Download File module permission to set restrictions for download.
-    $image_download_href = 'download/file/fid/' . $file->fid;
-    $image_download_link = array(
+  // Download path is provided by Download File module.
+  // See Download File module permission to set restrictions for download.
+  $image_download_href = 'download/file/fid/' . $file->fid;
+  $image_download_link = array(
       '#type' => 'link',
       '#title' => t('Download original image'),
       '#href' => $image_download_href,
       '#options' => array(
-        'html' => TRUE,
-        'attributes' => array(
-          'class' => array(),
-          'id' => 'lightbox2-download-link-text'
-        ),
+          'html' => TRUE,
+          'attributes' => array(
+              'class' => array('lightbox-download-link'),
+          ),
       ),
-    );
+  );
 
-    $image_effect_width = 0;
-    $image_effect_height = 0;
-    $image_style = image_style_load('lightbox_large_image');
-    $isid = $image_style['isid'];
-    if (image_effect_load($isid, 'lightbox_large_image')) {
-      $image_effect = image_effect_load($isid, 'lightbox_large_image');
-      $image_effect_width = $image_effect['data']['width'];
-      $image_effect_height = $image_effect['data']['height'];
-    }
-
-    $rendered_link = '';
-    $lightbox_image_width = $file->image_dimensions['width'];
-    $lightbox_image_height = $file->image_dimensions['height'];
-
-    // Check if original image dimension is larger that image style dimensions
-    // to set the url to the image that will be displayed in lightbox.
-    if ($lightbox_image_width > $image_effect_width || $lightbox_image_height > $image_effect_height) {
-      $rendered_link = render($image_download_link);
-      $image_url = $new_image_url;
-    }
-    else {
-      $image_url = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);;
-    }
-
-    $element = array(
-      '#type' => 'link',
-      '#title' => render($image_element),
-      '#href' => $image_url,
-      '#options' => array(
-        'html' => TRUE,
-        'attributes' => array(
-          'class' => array(),
-          'rel' => 'lightbox[][' . $caption . $rendered_link . ']',
-        ),
-      ),
-    );
-
-    return $element;
+  $image_effect_width = 0;
+  $image_effect_height = 0;
+  $image_style = image_style_load('lightbox_large_image');
+  $isid = $image_style['isid'];
+  if (image_effect_load($isid, 'lightbox_large_image')) {
+    $image_effect = image_effect_load($isid, 'lightbox_large_image');
+    $image_effect_width = $image_effect['data']['width'];
+    $image_effect_height = $image_effect['data']['height'];
   }
+
+  $rendered_link = '';
+  $lightbox_image_width = $file->image_dimensions['width'];
+  $lightbox_image_height = $file->image_dimensions['height'];
+
+  // Check if original image dimension is larger that image style dimensions
+  // to set the url to the image that will be displayed in lightbox.
+  if ($lightbox_image_width > $image_effect_width || $lightbox_image_height > $image_effect_height) {
+    $rendered_link = render($image_download_link);
+    $image_url = $new_image_url;
+  }
+  else {
+    $image_url = str_replace('public:/', variable_get('file_public_path', 'sites/default/files'), $file->uri);
+  }
+
+  //Create image caption.
+  if ($description != '' && $title) {
+    $caption = '<p>' . $title . '</p><p>' . $description . '</p>';
+  }
+  elseif ($description != '' && !$title) {
+    $caption = '<p>' . $description . '</p>';
+  }
+  else {
+    $caption = '<p>' . $title . '</p>';
+  }
+
+  $rendered_image_as_link = l($rendered_image, $image_url, array('attributes' => array('rel' => 'lightbox[][' . $caption . $rendered_link . ']'), 'html' => TRUE));
+  return $rendered_image_as_link;
 }
 
 /**
@@ -179,4 +197,19 @@ function _slac_image_lightbox_create_style() {
     'isid' => $style['isid'],
   );
   image_effect_save($effect);
+}
+
+/**
+ * Implements hook_file_displays_alter().
+ *
+ * Set the image style preset for file display. This is needed for displaying
+ * thumbnails properly in WYSIWYG on inserting the image.
+ */
+function slac_image_lightbox_file_displays_alter(&$displays, $file, $view_mode) {
+  if (strpos($view_mode, 'crop_') === FALSE || $file->type != 'image') {
+    return;
+  }
+  $image_style = substr($view_mode, strlen('crop_'));
+  $displays['file_image']['settings']['image_style'] = $image_style;
+  $displays['file_image']['weight'] = -1;
 }
