@@ -46,7 +46,7 @@ function slac_image_lightbox_media_format_form_prepare_alter(&$form, $form_state
   }
 
   $form['options']['thumbnails'] = array(
-    '#type' =>'radios',
+    '#type' => 'radios',
     '#title' => t('Thumbnail'),
     '#options' => $thumbnail_options,
   );
@@ -54,12 +54,12 @@ function slac_image_lightbox_media_format_form_prepare_alter(&$form, $form_state
   _epsacrop_include_header_html();
   $form['#attached']['js'][] = drupal_get_path('module', 'slac_image_lightbox') . '/slac_image_lightbox.js';
   $markup = "<a href=\"javascript:Drupal.EPSACrop.dialog('all', '"
-    . 'all' /*$setting['field_name']*/ . "', '"
-    . 'all' /*$setting['bundle']*/ . "', '"
-    . $file->fid /*$setting['fid']*/ . "', '"
-    . image_style_url('epsacrop_thumb', $file->uri) /*$setting['url']*/ . "', ["
-    . $file->image_dimensions['width'] /*$setting['size'][0]*/ . ","
-    . $file->image_dimensions['height'] /*$setting['size'][1]*/ . "]);\">" . t("manage image crops") . "</a>";
+    . 'all' . "', '"
+    . 'all' . "', '"
+    . $file->fid . "', '"
+    . image_style_url('epsacrop_thumb', $file->uri) . "', ["
+    . $file->image_dimensions['width'] . ","
+    . $file->image_dimensions['height'] . "]);\">" . t("manage image crops") . "</a>";
   $form['crop'] = array(
     '#type' => 'markup',
     '#markup' => $markup
