@@ -1,6 +1,6 @@
-name = SLAC Forms Alter
-description = Used for add custom form alter 
+name = SLAC Blog Test Content
+description = Test content for Blog
 package = Propeople
 core = 7.x
 
-dependencies[] = webform
+dependencies[] = dblog
