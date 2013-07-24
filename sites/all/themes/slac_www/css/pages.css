@@ -144,7 +144,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #e9e9e9;
+  background: #e9e9e9 url("../images/bg.jpeg") repeat top;
   font-family: "Arial", sans-serif;
 }
 
@@ -316,50 +316,70 @@ a {
 /* line 168, ../sass/pages.scss */
 .header .main-menu ul ul {
   padding-top: 2px;
-  background: #fff;
   top: 32px;
   padding: 5px 0;
 }
-/* line 173, ../sass/pages.scss */
+/* line 172, ../sass/pages.scss */
 .header .main-menu ul ul li {
   width: 92%;
   margin: 0;
   padding: 0;
   height: auto;
-  padding: 5px 4%;
+  padding: 0 4%;
+  background: #efefef;
+  border: 1px solid #ccc;
+  border-top: none;
 }
-/* line 179, ../sass/pages.scss */
+/* line 181, ../sass/pages.scss */
 .header .main-menu ul ul li:hover {
-  background: #e1e1e1;
+  background: #fff;
 }
-/* line 182, ../sass/pages.scss */
+/* line 184, ../sass/pages.scss */
 .header .main-menu ul ul li a {
   line-height: normal;
   height: auto;
-  padding: 0;
+  padding: 5px 0;
+  color: #881728;
 }
 /* line 189, ../sass/pages.scss */
+.header .main-menu ul ul li a:hover {
+  text-decoration: underline;
+}
+/* line 195, ../sass/pages.scss */
 .header .main-menu ul li:hover li {
-  border: none;
   height: auto;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 
 /* Layouts */
-/* line 198, ../sass/pages.scss */
+/* line 205, ../sass/pages.scss */
 .panel-frontpage .center-wrapper {
   clear: both;
 }
 
-/* line 202, ../sass/pages.scss */
+/* line 208, ../sass/pages.scss */
+.frontpage-middle-col {
+  line-height: 18px;
+  font-size: 13px;
+  -webkit-box-shadow: 3px 3px 2px 1px #efefef;
+  -moz-box-shadow: 3px 3px 2px 1px #efefef;
+  -ms-box-shadow: 3px 3px 2px 1px #efefef;
+  -o-box-shadow: 3px 3px 2px 1px #efefef;
+  box-shadow: 3px 3px 2px 1px #efefef;
+}
+
+/* line 214, ../sass/pages.scss */
 .frontpage-middle-left {
   width: 69%;
   float: left;
-  padding-right: 2.5%;
+  margin: 2.5% 0 0 1.5%;
+  border-right: 1px solid #bbbdbe;
 }
 
-/* line 208, ../sass/pages.scss */
+/* line 221, ../sass/pages.scss */
 .frontpage-middle-right {
   width: 26%;
   float: right;
-  padding-left: 2.5%;
+  margin-left: 2.5%;
 }
