@@ -42,9 +42,9 @@
 /* line 57, ../sass/_mixins.scss */
 .frontpage-middle-col {
   float: left;
-  width: 58.33333%;
+  width: 62.5%;
   margin-left: 16.66667%;
-  margin-right: -75%;
+  margin-right: -79.16667%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -57,8 +57,8 @@
 /* line 61, ../sass/_mixins.scss */
 .frontpage-right-col {
   float: left;
-  width: 25%;
-  margin-left: 75%;
+  width: 20.83333%;
+  margin-left: 79.16667%;
   margin-right: -100%;
   padding-left: 1%;
   padding-right: 1%;
@@ -72,9 +72,9 @@
 /* line 65, ../sass/_mixins.scss */
 .three-col .three-col-left {
   float: left;
-  width: 25%;
+  width: 16.66667%;
   margin-left: 0%;
-  margin-right: -25%;
+  margin-right: -16.66667%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -87,9 +87,9 @@
 /* line 69, ../sass/_mixins.scss */
 .three-col .three-col-middle {
   float: left;
-  width: 50%;
-  margin-left: 25%;
-  margin-right: -75%;
+  width: 62.5%;
+  margin-left: 16.66667%;
+  margin-right: -79.16667%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -102,8 +102,8 @@
 /* line 73, ../sass/_mixins.scss */
 .three-col .three-col-right {
   float: left;
-  width: 25%;
-  margin-left: 75%;
+  width: 20.83333%;
+  margin-left: 79.16667%;
   margin-right: -100%;
   padding-left: 1%;
   padding-right: 1%;
@@ -117,9 +117,9 @@
 /* line 77, ../sass/_mixins.scss */
 .pane-page-content > .pane-title {
   float: left;
-  width: 50%;
-  margin-left: 25%;
-  margin-right: -75%;
+  width: 62.5%;
+  margin-left: 16.66667%;
+  margin-right: -79.16667%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -155,10 +155,12 @@
   font-size: 22px;
   color: #fff;
   line-height: normal;
-  width: 38%;
+  width: 32%;
+  padding: 20px 3%;
   line-height: 30px;
+  height: 264px;
 }
-/* line 28, ../sass/blocks.scss */
+/* line 30, ../sass/blocks.scss */
 .slide-text-side a {
   font-size: 34px;
   color: #fff;
@@ -169,18 +171,18 @@
 }
 
 /* Main menu */
-/* line 41, ../sass/blocks.scss */
+/* line 43, ../sass/blocks.scss */
 .left-menu .pane-title {
   margin: 0;
 }
-/* line 44, ../sass/blocks.scss */
+/* line 46, ../sass/blocks.scss */
 .left-menu .menu li {
   padding-top: 2px;
   border-bottom: 1px solid #d4d4d4;
   font-size: 12px;
   line-height: normal;
 }
-/* line 49, ../sass/blocks.scss */
+/* line 51, ../sass/blocks.scss */
 .left-menu .menu li a {
   padding: 10px 0;
   display: block;
@@ -190,11 +192,11 @@
 }
 
 /* */
-/* line 61, ../sass/blocks.scss */
+/* line 63, ../sass/blocks.scss */
 .highlited {
   margin-bottom: 35px;
 }
-/* line 63, ../sass/blocks.scss */
+/* line 65, ../sass/blocks.scss */
 .highlited .field-label, .highlited .pane-title {
   border-bottom: 2px solid #831425;
   font-size: 14px;
@@ -203,24 +205,24 @@
   padding-bottom: 3px;
   margin-bottom: 12px;
 }
-/* line 70, ../sass/blocks.scss */
+/* line 72, ../sass/blocks.scss */
 .highlited .field-label a, .highlited .pane-title a {
   color: #7f6332;
   text-decoration: none;
 }
 
-/* line 78, ../sass/blocks.scss */
+/* line 80, ../sass/blocks.scss */
 .video-block .field-item {
   border-top: 1px dashed #c7c8c8;
   padding: 18px 0 25px 0;
   font-size: 12px;
 }
-/* line 82, ../sass/blocks.scss */
+/* line 84, ../sass/blocks.scss */
 .video-block .field-item:first-child {
   border-top: none;
   padding-top: 9px;
 }
-/* line 86, ../sass/blocks.scss */
+/* line 88, ../sass/blocks.scss */
 .video-block .field-item img {
   border: 1px solid #fff;
   border-top: 0;
@@ -232,7 +234,7 @@
   width: 100%;
   height: auto;
 }
-/* line 97, ../sass/blocks.scss */
+/* line 99, ../sass/blocks.scss */
 .video-block .field-item a {
   color: #881728;
   text-decoration: none;
@@ -241,12 +243,12 @@
   line-height: normal;
   padding-top: 12px;
 }
-/* line 102, ../sass/blocks.scss */
+/* line 104, ../sass/blocks.scss */
 .video-block a.youtube-thumbnail {
   padding-top: 0;
 }
 
-/* line 108, ../sass/blocks.scss */
+/* line 110, ../sass/blocks.scss */
 .bg-list .areYouText, .bg-list .social_links {
   padding: 10px 0;
   margin-bottom: 7px;
@@ -254,7 +256,7 @@
   width: 100%;
   overflow: hidden;
 }
-/* line 115, ../sass/blocks.scss */
+/* line 117, ../sass/blocks.scss */
 .bg-list .areYouText a {
   color: #881728;
   text-decoration: none;
@@ -264,31 +266,31 @@
   width: 90%;
   margin: 0 5%;
 }
-/* line 120, ../sass/blocks.scss */
+/* line 122, ../sass/blocks.scss */
 .bg-list .social_links li {
   width: 20%;
   text-align: center;
 }
-/* line 123, ../sass/blocks.scss */
+/* line 125, ../sass/blocks.scss */
 .bg-list .social_links li a {
   margin: auto;
 }
 
-/* line 130, ../sass/blocks.scss */
+/* line 132, ../sass/blocks.scss */
 .related-links .field-label, .related-links .pane-title {
   border-bottom-color: #6d6c6c;
   color: #6d6c6c;
   font-size: 10px;
   text-transform: uppercase;
 }
-/* line 136, ../sass/blocks.scss */
+/* line 138, ../sass/blocks.scss */
 .related-links .field-item .field-item, .related-links .menu li {
   font-size: 11px;
   line-height: 18px;
   margin: 0 3%;
   width: 94%;
 }
-/* line 142, ../sass/blocks.scss */
+/* line 144, ../sass/blocks.scss */
 .related-links .field .field .field-item a, .related-links .menu li a {
   padding: 0 0 0 6%;
   width: 94%;
@@ -300,20 +302,82 @@
   line-height: normal;
 }
 
-/* line 150, ../sass/blocks.scss */
+/* line 152, ../sass/blocks.scss */
 .front-news {
   font-size: 12px;
   color: #828282;
   font-style: italic;
 }
-/* line 154, ../sass/blocks.scss */
+/* line 156, ../sass/blocks.scss */
 .front-news .views-row {
   padding-bottom: 14px;
 }
-/* line 157, ../sass/blocks.scss */
+/* line 159, ../sass/blocks.scss */
 .front-news a {
   color: #881728;
   text-decoration: none;
+  display: block;
+  line-height: normal;
+}
+
+/* About page */
+/* line 170, ../sass/blocks.scss */
+.pane-node-field-image {
+  margin-bottom: 20px;
+}
+/* line 172, ../sass/blocks.scss */
+.pane-node-field-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 178, ../sass/blocks.scss */
+.pane-node-body .introduction-block {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 183, ../sass/blocks.scss */
+.shaded-background {
+  padding-top: 26px;
+}
+/* line 185, ../sass/blocks.scss */
+.shaded-background .content-block-heading {
+  border-bottom: 2px solid #831425;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 6px 0 5px 14px;
+}
+/* line 191, ../sass/blocks.scss */
+.shaded-background .content-block-body {
+  background: #f6f6f6;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYmViZWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ebebeb',GradientType=0 );
+  /* IE6-8 */
+  width: 94%;
+  padding: 20px 3%;
+  font-size: 14px;
+  overflow: hidden;
+}
+/* line 214, ../sass/blocks.scss */
+.shaded-background .content-block-body a {
+  color: #881728;
+  text-decoration: none;
+  font-size: 12px;
   display: block;
   line-height: normal;
 }
