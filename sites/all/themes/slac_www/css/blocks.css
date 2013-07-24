@@ -197,7 +197,7 @@
   margin-bottom: 35px;
 }
 /* line 65, ../sass/blocks.scss */
-.highlited .field-label, .highlited .pane-title, .highlited .views-field-title {
+.highlited .field-label, .highlited .pane-title {
   border-bottom: 2px solid #831425;
   font-size: 14px;
   color: #7f6332;
@@ -206,7 +206,7 @@
   margin-bottom: 12px;
 }
 /* line 72, ../sass/blocks.scss */
-.highlited .field-label a, .highlited .pane-title a, .highlited .views-field-title a {
+.highlited .field-label a, .highlited .pane-title a {
   color: #7f6332;
   text-decoration: none;
 }
@@ -407,6 +407,45 @@
 }
 /* line 255, ../sass/blocks.scss */
 .middletop .views-field-field-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 263, ../sass/blocks.scss */
+.middleleft .views-row {
+  width: 98%;
+  margin-right: 2%;
+  border-bottom: 1px solid #bbbdbe;
+  font-size: 11px;
+  line-height: 14px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+/* line 274, ../sass/blocks.scss */
+.middleleft .views-row-last {
+  border: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+/* line 280, ../sass/blocks.scss */
+.middleleft .views-field-title a {
+  font-size: 13px;
+  padding-bottom: 5px;
+}
+/* line 285, ../sass/blocks.scss */
+.middleleft .views-field-nothing {
+  float: left;
+  width: 55%;
+}
+/* line 290, ../sass/blocks.scss */
+.middleleft .views-field-field-image {
+  float: right;
+  width: 42%;
+  margin-left: 3%;
+}
+/* line 296, ../sass/blocks.scss */
+.middleleft .views-field-field-image img {
   width: 100%;
   height: auto;
 }

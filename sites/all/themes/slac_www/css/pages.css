@@ -367,9 +367,10 @@ a {
   -ms-box-shadow: 3px 3px 2px 1px #efefef;
   -o-box-shadow: 3px 3px 2px 1px #efefef;
   box-shadow: 3px 3px 2px 1px #efefef;
+  padding-bottom: 10px;
 }
 
-/* line 214, ../sass/pages.scss */
+/* line 215, ../sass/pages.scss */
 .frontpage-middle-left {
   width: 69%;
   float: left;
@@ -377,7 +378,7 @@ a {
   border-right: 1px solid #bbbdbe;
 }
 
-/* line 221, ../sass/pages.scss */
+/* line 222, ../sass/pages.scss */
 .frontpage-middle-right {
   width: 26%;
   float: right;
