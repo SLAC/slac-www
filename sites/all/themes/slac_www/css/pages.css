@@ -359,6 +359,10 @@ a {
   font-weight: bold;
   padding-bottom: 15px;
 }
+/* line 209, ../sass/pages.scss */
+.pane-page-content > .pane-content {
+  clear: both;
+}
 
 /* Layouts */
 /* line 216, ../sass/pages.scss */
