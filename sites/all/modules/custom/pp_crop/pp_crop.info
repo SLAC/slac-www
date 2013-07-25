@@ -1,5 +1,5 @@
 name = PP Crop
-description = "Display mode to dispay images in a lightbox."
+description = "Provide posibility to crop images on upload with media browser."
 package = SLAC
 dependencies[] = file_entity
 dependencies[] = lightbox2
