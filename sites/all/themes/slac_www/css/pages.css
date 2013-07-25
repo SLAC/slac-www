@@ -411,29 +411,31 @@ a {
   .page-basic .footer .pane-menu-menu-footer-menu .menu li {
     background: #a1a1a1;
     clear: both;
-    margin-bottom: 14px;
     width: 100%;
+    margin: 0 0 14px 0;
   }
   /* line 266, ../sass/pages.scss */
   .page-basic .footer .pane-menu-menu-footer-menu .menu a {
     background: url("../images/footer-arrow.png") no-repeat right center;
     padding: 7px 0;
     margin: 0 12px;
+    margin: 0 1% 0 2%;
+    width: 97%;
   }
-  /* line 272, ../sass/pages.scss */
-  .page-basic .footer .pane-menu-menu-footer-menu .panels-flexible-region-first {
+  /* line 275, ../sass/pages.scss */
+  .page-basic .footer .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px;
   }
-  /* line 277, ../sass/pages.scss */
-  .page-basic .footer .pane-menu-menu-footer-menu .panels-flexible-region-last {
+  /* line 280, ../sass/pages.scss */
+  .page-basic .footer .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center;
   }
-  /* line 282, ../sass/pages.scss */
-  .page-basic .footer .pane-menu-menu-footer-menu .panels-flexible-region-last img {
+  /* line 285, ../sass/pages.scss */
+  .page-basic .footer .panels-flexible-region-last img {
     width: auto;
   }
 }
