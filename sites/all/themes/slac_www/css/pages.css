@@ -189,7 +189,7 @@ a {
 }
 /* line 55, ../sass/pages.scss */
 .page-basic .footer .panels-flexible-region-first {
-  width: 58%;
+  width: 570px;
 }
 /* line 58, ../sass/pages.scss */
 .page-basic .footer .pane-menu-menu-footer-menu {
@@ -201,64 +201,68 @@ a {
 /* line 64, ../sass/pages.scss */
 .page-basic .footer .pane-menu-menu-footer-menu .menu li {
   float: left;
-  width: 20%;
+  margin-right: 10%;
 }
-/* line 68, ../sass/pages.scss */
+/* line 67, ../sass/pages.scss */
+.page-basic .footer .pane-menu-menu-footer-menu .menu li.last {
+  margin: 0;
+}
+/* line 71, ../sass/pages.scss */
 .page-basic .footer .pane-menu-menu-footer-menu .menu a {
   color: #fff;
   text-decoration: none;
   padding-left: 9px;
   background: url("../images/footer-menu-arrow.png") no-repeat left 5px;
 }
-/* line 76, ../sass/pages.scss */
+/* line 79, ../sass/pages.scss */
 .page-basic .footer .panels-flexible-region-last {
   width: 21%;
   float: right;
 }
-/* line 79, ../sass/pages.scss */
+/* line 82, ../sass/pages.scss */
 .page-basic .footer .panels-flexible-region-last img {
   width: 100%;
   height: auto;
 }
-/* line 85, ../sass/pages.scss */
+/* line 88, ../sass/pages.scss */
 .page-basic .content > .inside, .page-basic .footer > .inside {
   margin: 0 2%;
   width: 96%;
 }
-/* line 91, ../sass/pages.scss */
+/* line 94, ../sass/pages.scss */
 .not-front .page-basic .content > .inside {
   width: 98%;
   margin: 0 1%;
 }
-/* line 96, ../sass/pages.scss */
+/* line 99, ../sass/pages.scss */
 .page-basic .header {
   background: url("../images/header-bg.jpg") repeat-x top;
 }
-/* line 98, ../sass/pages.scss */
+/* line 101, ../sass/pages.scss */
 .page-basic .header img {
   float: left;
   margin-top: 23px;
 }
-/* line 102, ../sass/pages.scss */
+/* line 105, ../sass/pages.scss */
 .page-basic .header .pane-pane-header {
   height: 80px;
   background: url("../images/header-connectors.png") no-repeat 230px 0;
   margin: 0 2%;
   width: 96%;
 }
-/* line 109, ../sass/pages.scss */
+/* line 112, ../sass/pages.scss */
 .page-basic #name-and-slogan {
   display: none;
 }
 
 /* Main menu */
-/* line 116, ../sass/pages.scss */
+/* line 119, ../sass/pages.scss */
 .main-menu {
   position: relative;
   z-index: 11;
 }
 
-/* line 121, ../sass/pages.scss */
+/* line 124, ../sass/pages.scss */
 .header .main-menu {
   width: 100%;
   float: left;
@@ -266,38 +270,38 @@ a {
   padding: 0 0 5px 0;
   background: url("../images/menu-bg.png") repeat-x bottom;
 }
-/* line 127, ../sass/pages.scss */
+/* line 130, ../sass/pages.scss */
 .header .main-menu ul {
   width: 100%;
   border: none;
 }
-/* line 130, ../sass/pages.scss */
+/* line 133, ../sass/pages.scss */
 .header .main-menu ul ul {
   border: none;
 }
-/* line 133, ../sass/pages.scss */
+/* line 136, ../sass/pages.scss */
 .header .main-menu ul li {
   border: none;
   background: transparent;
 }
 
-/* line 140, ../sass/pages.scss */
+/* line 143, ../sass/pages.scss */
 .main-menu ul li.menuparent {
   border: none;
   background: transparent;
 }
-/* line 143, ../sass/pages.scss */
+/* line 146, ../sass/pages.scss */
 .main-menu ul li.menuparent:hover {
   border: none;
   background: transparent;
 }
 
-/* line 150, ../sass/pages.scss */
+/* line 153, ../sass/pages.scss */
 .header .main-menu ul li {
   width: 16.66%;
   height: 31px;
 }
-/* line 154, ../sass/pages.scss */
+/* line 157, ../sass/pages.scss */
 .header .main-menu ul a {
   font-size: 12px;
   color: #5e5e5e;
@@ -308,18 +312,18 @@ a {
   height: 31px;
   line-height: 31px;
 }
-/* line 164, ../sass/pages.scss */
+/* line 167, ../sass/pages.scss */
 .header .main-menu ul li:hover {
   height: 30px;
   border-bottom: 2px solid #93303f;
 }
-/* line 168, ../sass/pages.scss */
+/* line 171, ../sass/pages.scss */
 .header .main-menu ul ul {
   padding-top: 2px;
   top: 32px;
   padding: 5px 0;
 }
-/* line 172, ../sass/pages.scss */
+/* line 175, ../sass/pages.scss */
 .header .main-menu ul ul li {
   width: 92%;
   margin: 0;
@@ -330,47 +334,47 @@ a {
   border: 1px solid #ccc;
   border-top: none;
 }
-/* line 181, ../sass/pages.scss */
+/* line 184, ../sass/pages.scss */
 .header .main-menu ul ul li:hover {
   background: #fff;
 }
-/* line 184, ../sass/pages.scss */
+/* line 187, ../sass/pages.scss */
 .header .main-menu ul ul li a {
   line-height: normal;
   height: auto;
   padding: 7px 0;
   color: #881728;
 }
-/* line 189, ../sass/pages.scss */
+/* line 192, ../sass/pages.scss */
 .header .main-menu ul ul li a:hover {
   text-decoration: underline;
 }
-/* line 195, ../sass/pages.scss */
+/* line 198, ../sass/pages.scss */
 .header .main-menu ul li:hover li {
   height: auto;
   border: 1px solid #ccc;
   border-top: none;
 }
 
-/* line 203, ../sass/pages.scss */
+/* line 206, ../sass/pages.scss */
 .pane-page-content > .pane-title {
   font-size: 24px;
   color: #474747;
   font-weight: bold;
   padding-bottom: 15px;
 }
-/* line 209, ../sass/pages.scss */
+/* line 212, ../sass/pages.scss */
 .pane-page-content > .pane-content {
   clear: both;
 }
 
 /* Layouts */
-/* line 216, ../sass/pages.scss */
+/* line 219, ../sass/pages.scss */
 .panel-frontpage .center-wrapper {
   clear: both;
 }
 
-/* line 219, ../sass/pages.scss */
+/* line 222, ../sass/pages.scss */
 .frontpage-middle-col {
   line-height: 18px;
   font-size: 13px;
@@ -382,7 +386,7 @@ a {
   padding-bottom: 10px;
 }
 
-/* line 226, ../sass/pages.scss */
+/* line 229, ../sass/pages.scss */
 .frontpage-middle-left {
   width: 66%;
   float: left;
@@ -391,9 +395,45 @@ a {
   padding-right: 3%;
 }
 
-/* line 234, ../sass/pages.scss */
+/* line 237, ../sass/pages.scss */
 .frontpage-middle-right {
   width: 26%;
   float: right;
   margin-left: 2.5%;
+}
+
+@media (max-width: 600px) {
+  /* line 257, ../sass/pages.scss */
+  .page-basic .footer .pane-menu-menu-footer-menu {
+    padding: 0;
+  }
+  /* line 260, ../sass/pages.scss */
+  .page-basic .footer .pane-menu-menu-footer-menu .menu li {
+    background: #a1a1a1;
+    clear: both;
+    margin-bottom: 14px;
+    width: 100%;
+  }
+  /* line 266, ../sass/pages.scss */
+  .page-basic .footer .pane-menu-menu-footer-menu .menu a {
+    background: url("../images/footer-arrow.png") no-repeat right center;
+    padding: 7px 0;
+    margin: 0 12px;
+  }
+  /* line 272, ../sass/pages.scss */
+  .page-basic .footer .pane-menu-menu-footer-menu .panels-flexible-region-first {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  /* line 277, ../sass/pages.scss */
+  .page-basic .footer .pane-menu-menu-footer-menu .panels-flexible-region-last {
+    clear: both;
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  /* line 282, ../sass/pages.scss */
+  .page-basic .footer .pane-menu-menu-footer-menu .panels-flexible-region-last img {
+    width: auto;
+  }
 }
