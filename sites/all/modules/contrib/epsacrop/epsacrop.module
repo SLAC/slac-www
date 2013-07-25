@@ -492,7 +492,7 @@ function epsacrop_form_media_edit_alter(&$form, $form_state) {
  * Add epsacrop to file_entity edit form.
  */
 function epsacrop_form_file_entity_edit_alter(&$form, $form_state) {
-  if (!_epsacrop_access() || !isset($form['preview']['#file']) || !$form['preview']['#file']->type == 'image') {
+  if (!_epsacrop_access() || !isset($form['preview']['#file']) || $form['preview']['#file']->type != 'image') {
     return;
   }
 
