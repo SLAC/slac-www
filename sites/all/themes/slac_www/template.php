@@ -224,9 +224,20 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
-function slac_preprocess_block(&$variables) {
-  // In the header region visually hide block titles.
-  if ($variables['block']->region == 'header') {
-    $variables['title_attributes_array']['class'][] = 'element-invisible';
+
+
+  /**
+   * Adding menu name class to menu items,
+   * adding menu item depth ass class. 
+   */
+  function slac_www_menu_link(array $variables) {
+    $element = $variables['element'];
+    $original_link = $element['#original_link'];
+    $depth = 'depth-' . $original_link['depth'];
+    $menu_name = 'item-' . $original_link['menu_name'];
+  
+    $variables['element']['#attributes']['class'][] = $depth;
+    $variables['element']['#attributes']['class'][] = $menu_name;
+  
+    return theme_menu_link($variables);
   }
-}
