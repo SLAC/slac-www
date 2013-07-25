@@ -1,8 +1,8 @@
 (function ($) {
 
-  Drupal.behaviors.SLACImageLightbox = {
+  Drupal.behaviors.ppCrop = {
     attach: function(context) {
-      $('input[name=thumbnails]').once('SLACImageLightbox').click(function(){
+      $('input[name=thumbnails]').once('ppCrop').click(function(){
         var $radios_value = $('input[name=thumbnails]:checked').val();
         if ($radios_value == $(this).val()) {
           $('#edit-format').val($radios_value);

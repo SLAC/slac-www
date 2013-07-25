@@ -3,7 +3,7 @@
 /**
 * Implements hook_entity_info_alter().
 */
-function slac_image_lightbox_entity_info_alter(&$entity_info) {
+function pp_crop_entity_info_alter(&$entity_info) {
   foreach (_epsacrop_load_styles() as $image_style) {
     $entity_info['file']['view modes']['crop_' . $image_style['name']] = array(
       'label' => t('Crop ' . $image_style['name']),
@@ -21,7 +21,7 @@ function slac_image_lightbox_entity_info_alter(&$entity_info) {
  * @param $form_state
  * @param $file
  */
-function slac_image_lightbox_media_format_form_prepare_alter(&$form, $form_state, $file) {
+function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
 
   $thumbnail_options = array();
   // Add default so it will be unset.
@@ -52,7 +52,7 @@ function slac_image_lightbox_media_format_form_prepare_alter(&$form, $form_state
   );
 
   _epsacrop_include_header_html();
-  $form['#attached']['js'][] = drupal_get_path('module', 'slac_image_lightbox') . '/slac_image_lightbox.js';
+  $form['#attached']['js'][] = drupal_get_path('module', 'pp_crop') . '/pp_crop.js';
   $markup = "<a href=\"javascript:Drupal.EPSACrop.dialog('all', '"
     . 'all' . "', '"
     . 'all' . "', '"
@@ -71,7 +71,7 @@ function slac_image_lightbox_media_format_form_prepare_alter(&$form, $form_state
  *
  * Needed to display thumbnails properly in WYSIWYG on inserting.
  */
-function slac_image_lightbox_media_token_to_markup_alter(&$element, $tag_info, &$settings) {
+function pp_crop_media_token_to_markup_alter(&$element, $tag_info, &$settings) {
   if (strpos($tag_info['view_mode'], 'crop_') === FALSE) {
     return;
   }
@@ -91,7 +91,7 @@ function slac_image_lightbox_media_token_to_markup_alter(&$element, $tag_info, &
 /**
  * Implements hook_theme().
  */
-function slac_image_lightbox_theme() {
+function pp_crop_theme() {
   return array('image_style_lightbox' => array(
     'variables' => array('style_name' => '', 'file' => NULL),
   ));
@@ -116,7 +116,7 @@ function theme_image_style_lightbox($variables) {
 
   //Create 'lightbox_large_image' image style if it not exists.
   if (!image_style_load('lightbox_large_image')) {
-    _slac_image_lightbox_create_style();
+    _pp_crop_create_style();
   }
 
   $style = 'lightbox_large_image';
@@ -177,7 +177,7 @@ function theme_image_style_lightbox($variables) {
 /**
  * Create a new image style.
  */
-function _slac_image_lightbox_create_style() {
+function _pp_crop_create_style() {
   $style = image_style_save(array('name' => 'lightbox_large_image'));
   $effect = array(
     'name' => 'image_scale_and_crop',
@@ -197,7 +197,7 @@ function _slac_image_lightbox_create_style() {
  * Set the image style preset for file display. This is needed for displaying
  * thumbnails properly in WYSIWYG on inserting the image.
  */
-function slac_image_lightbox_file_displays_alter(&$displays, $file, $view_mode) {
+function pp_crop_file_displays_alter(&$displays, $file, $view_mode) {
   if (strpos($view_mode, 'crop_') === FALSE || $file->type != 'image') {
     return;
   }
