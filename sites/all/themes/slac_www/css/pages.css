@@ -42,9 +42,9 @@
 /* line 57, ../sass/_mixins.scss */
 .frontpage-middle-col {
   float: left;
-  width: 54.16667%;
-  margin-left: 20.83333%;
-  margin-right: -75%;
+  width: 62.5%;
+  margin-left: 16.66667%;
+  margin-right: -79.16667%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -87,9 +87,9 @@
 /* line 69, ../sass/_mixins.scss */
 .three-col .three-col-middle {
   float: left;
-  width: 54.16667%;
-  margin-left: 20.83333%;
-  margin-right: -75%;
+  width: 62.5%;
+  margin-left: 16.66667%;
+  margin-right: -79.16667%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -117,9 +117,9 @@
 /* line 77, ../sass/_mixins.scss */
 .pane-page-content > .pane-title {
   float: left;
-  width: 54.16667%;
-  margin-left: 20.83333%;
-  margin-right: -75%;
+  width: 62.5%;
+  margin-left: 16.66667%;
+  margin-right: -79.16667%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -338,7 +338,7 @@ a {
 .header .main-menu ul ul li a {
   line-height: normal;
   height: auto;
-  padding: 5px 0;
+  padding: 7px 0;
   color: #881728;
 }
 /* line 189, ../sass/pages.scss */
@@ -352,7 +352,7 @@ a {
   border-top: none;
 }
 
-/* line 202, ../sass/pages.scss */
+/* line 203, ../sass/pages.scss */
 .pane-page-content > .pane-title {
   font-size: 24px;
   color: #474747;
@@ -361,12 +361,12 @@ a {
 }
 
 /* Layouts */
-/* line 211, ../sass/pages.scss */
+/* line 216, ../sass/pages.scss */
 .panel-frontpage .center-wrapper {
   clear: both;
 }
 
-/* line 214, ../sass/pages.scss */
+/* line 219, ../sass/pages.scss */
 .frontpage-middle-col {
   line-height: 18px;
   font-size: 13px;
@@ -378,7 +378,7 @@ a {
   padding-bottom: 10px;
 }
 
-/* line 221, ../sass/pages.scss */
+/* line 226, ../sass/pages.scss */
 .frontpage-middle-left {
   width: 66%;
   float: left;
@@ -387,7 +387,7 @@ a {
   padding-right: 3%;
 }
 
-/* line 229, ../sass/pages.scss */
+/* line 234, ../sass/pages.scss */
 .frontpage-middle-right {
   width: 26%;
   float: right;
