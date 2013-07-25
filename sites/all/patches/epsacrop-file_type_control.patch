@@ -1,0 +1,13 @@
+diff --git a/sites/all/modules/contrib/epsacrop/epsacrop.module b/sites/all/modules/contrib/epsacrop/epsacrop.module
+index 3356bcb..3ed8c8f 100644
+--- a/sites/all/modules/contrib/epsacrop/epsacrop.module
++++ b/sites/all/modules/contrib/epsacrop/epsacrop.module
+@@ -492,7 +492,7 @@ function epsacrop_form_media_edit_alter(&$form, $form_state) {
+  * Add epsacrop to file_entity edit form.
+  */
+ function epsacrop_form_file_entity_edit_alter(&$form, $form_state) {
+-  if (!_epsacrop_access() || !isset($form['preview']['#file']) || !$form['preview']['#file']->type == 'image') {
++  if (!_epsacrop_access() || !isset($form['preview']['#file']) || $form['preview']['#file']->type != 'image') {
+     return;
+   }
+ 

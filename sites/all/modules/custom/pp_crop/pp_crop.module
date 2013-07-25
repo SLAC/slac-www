@@ -22,7 +22,9 @@ function pp_crop_entity_info_alter(&$entity_info) {
  * @param $file
  */
 function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
-
+  if ($file->type != 'image') {
+    return;
+  }
   $thumbnail_options = array();
   // Add default so it will be unset.
   $view_mode_settings = field_view_mode_settings('file', $file->type) + array('default' => 'default');
