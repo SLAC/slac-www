@@ -1,0 +1,13 @@
+diff --git a/media_youtube.module b/media_youtube.module
+index 21c3312..6169266 100644
+--- a/media_youtube.module
++++ b/media_youtube.module
+@@ -271,7 +271,7 @@ function media_youtube_add_validate($form, &$form_state) {
+     return;
+   }
+ 
+-  $validators = $form['#validators'];
++  $validators = isset($form['#validators']) ? $form['#validators'] : array();
+   if ($validators) {
+     // Check for errors. @see media_add_upload_validate calls file_save_upload().
+     // this code is ripped from file_save_upload because we just want the validation part.
