@@ -224,7 +224,7 @@
     -o-box-shadow: 3px 3px 2px 0px #888888;
     box-shadow: 3px 3px 2px 0px #888888; }
   /* line 106, ../sass/blocks.scss */
-  .video-block .field-item a {
+  .video-block .field-item .youtube-video-popup a {
     color: #881728;
     text-decoration: none;
     font-size: 12px;
