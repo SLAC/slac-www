@@ -9,6 +9,8 @@
         var height = Drupal.settings.slac_admin.height;
         if (width >= screen.width || height >= screen.height) {
           $('a[rel^="lightbox"]').find('img').unwrap();
+	  // Disable lightbox2 video;
+	  Drupal.settings.lightbox2.enable_video = 0;
         }
       }
     }
