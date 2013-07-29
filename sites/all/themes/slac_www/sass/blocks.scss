@@ -19,20 +19,21 @@
 }
 
 .slide-text-side {
-  font-size: 22px;
+  font-size: 17px;
   color: #fff;
-  line-height: normal;
   width: 32%;
   padding: 20px 3%;
-  line-height: 30px;
+  line-height: 23px;
   height: 224px;
+  letter-spacing: .03em;
   a {
-    font-size: 34px;
+    font-size: 30px;
     color: #fff;
     text-decoration: none;
-    line-height: 46px;
+    line-height: normal;
     padding-bottom: 20px;
     display: block;
+    letter-spacing: .04em;
   }
 }
 
@@ -89,6 +90,7 @@
     border-top: 1px dashed #c7c8c8;
     padding: 18px 0 25px 0;
     font-size: 12px;
+    overflow: hidden;
     &:first-child {
       border-top: none;
       padding-top: 9px;
@@ -101,8 +103,10 @@
       float: left;
     }
     a {
+      @mixin box-shadow(3px, 3px, 2px, 0, #888);
       @include links();
-      overflow: hidden;
+      float: left;
+      width: 100%;
     }
   }
   a.youtube-title{
@@ -132,6 +136,7 @@
   }
   .areYouText a {
     @include links();
+    display: block;
   	width: 90%;
   	margin: 0 5%;
   }
@@ -168,6 +173,7 @@
     width: 94%;
     background: url('../images/red-arrow.png') no-repeat 0 5px;
     @include links();
+    display: block;
   }
 }
 

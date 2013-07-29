@@ -8,7 +8,7 @@
   clear: both; }
 
 /* Front page layout */
-/* line 50, ../sass/_mixins.scss */
+/* line 49, ../sass/_mixins.scss */
 .slider {
   float: left;
   width: 100%;
@@ -22,7 +22,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 54, ../sass/_mixins.scss */
+/* line 53, ../sass/_mixins.scss */
 .frontpage-left-col {
   float: left;
   width: 16.66667%;
@@ -36,7 +36,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 58, ../sass/_mixins.scss */
+/* line 57, ../sass/_mixins.scss */
 .frontpage-middle-col {
   float: left;
   width: 62.5%;
@@ -50,7 +50,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 62, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 .frontpage-right-col {
   float: left;
   width: 20.83333%;
@@ -65,7 +65,7 @@
   word-wrap: break-word; }
 
 /* Three col layout */
-/* line 68, ../sass/_mixins.scss */
+/* line 67, ../sass/_mixins.scss */
 .three-col .three-col-left {
   float: left;
   width: 16.66667%;
@@ -79,7 +79,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 72, ../sass/_mixins.scss */
+/* line 71, ../sass/_mixins.scss */
 .three-col .three-col-middle {
   float: left;
   width: 62.5%;
@@ -93,7 +93,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 76, ../sass/_mixins.scss */
+/* line 75, ../sass/_mixins.scss */
 .three-col .three-col-right {
   float: left;
   width: 20.83333%;
@@ -107,7 +107,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 80, ../sass/_mixins.scss */
+/* line 79, ../sass/_mixins.scss */
 .pane-page-content > .pane-title {
   float: left;
   width: 62.5%;
@@ -144,7 +144,6 @@ a {
   color: #881728;
   text-decoration: none;
   font-size: 12px;
-  display: block;
   line-height: normal; }
 
 /* line 29, ../sass/pages.scss */
