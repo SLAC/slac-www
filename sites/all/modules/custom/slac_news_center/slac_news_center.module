@@ -1,6 +1,55 @@
 <?php
 
 /**
+ * Implements hook_node_view
+ */
+function slac_news_center_node_view($node, $view_mode) {
+  // adding promoted into a rss category
+  if ($view_mode === 'rss') {
+    if ($node->promote == 1) {
+      $node->rss_elements[] = array(
+        'key' => 'category',
+        'value' => 'Promoted',
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function slac_news_center_field_formatter_info() {
+  return array(
+    'image_rss_enclosure' => array(
+      'label' => t('RSS Enclosure'),
+      'field types' => array('image'),
+    ),
+  );
+} 
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function slac_news_center_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  switch ($display['type']) {
+    case 'image_rss_enclosure':
+      foreach ($items as $delta => $item) {
+        $entity->rss_elements[] = array(
+          'key' => 'enclosure',
+          'attributes' => array(
+            'url' => file_create_url($item['uri']),
+            'type' => (isset($item['filemime'])) ? $item['filemime'] : '',
+            'length' => (isset($item['filesize'])) ? $item['filesize'] : 0,
+          ),
+        );      
+      }
+    break;
+  }
+  return $element;
+}
+
+/**
  * Implements hook_ctools_plugin_directory().
  */
 function slac_news_center_ctools_plugin_directory($module, $plugin) {
