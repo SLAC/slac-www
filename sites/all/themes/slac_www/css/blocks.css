@@ -215,16 +215,16 @@
   .video-block .field-item img {
     border-top: 0;
     border-left: 0;
-    width: 100%;
+    width: 97%;
     height: auto;
-    float: left; }
-  /* line 105, ../sass/blocks.scss */
-  .video-block .field-item a {
+    float: left;
     -webkit-box-shadow: 3px 3px 2px 0px #888888;
     -moz-box-shadow: 3px 3px 2px 0px #888888;
     -ms-box-shadow: 3px 3px 2px 0px #888888;
     -o-box-shadow: 3px 3px 2px 0px #888888;
-    box-shadow: 3px 3px 2px 0px #888888;
+    box-shadow: 3px 3px 2px 0px #888888; }
+  /* line 106, ../sass/blocks.scss */
+  .video-block .field-item a {
     color: #881728;
     text-decoration: none;
     font-size: 12px;
@@ -308,12 +308,12 @@
   /* line 184, ../sass/blocks.scss */
   .front-news .views-row {
     padding-bottom: 14px; }
-  /* line 187, ../sass/blocks.scss */
+    /* line 186, ../sass/blocks.scss */
+    .front-news .views-row div {
+      display: inline; }
+  /* line 190, ../sass/blocks.scss */
   .front-news a {
-    color: #881728;
-    text-decoration: none;
-    display: block;
-    line-height: normal; }
+    font-style: normal; }
 
 /* line 195, ../sass/blocks.scss */
 .introduction-block {

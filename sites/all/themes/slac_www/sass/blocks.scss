@@ -98,12 +98,12 @@
     img {
       border-top: 0;
       border-left: 0;
-      width: 100%;
+      width: 97%;
       height: auto;
       float: left;
+      @include box-shadow(3px, 3px, 2px, 0px, #888);
     }
     a {
-      @include box-shadow(3px, 3px, 2px, 0px, #888);
       @include links();
       float: left;
       width: 100%;
@@ -183,12 +183,12 @@
   font-style: italic;
   .views-row {
     padding-bottom: 14px;
+    div{
+      display: inline;
+    }
   }
   a {
-    color: #881728;
-    text-decoration: none;
-    display: block;
-    line-height: normal;
+    font-style: normal;
   }
 }
 
