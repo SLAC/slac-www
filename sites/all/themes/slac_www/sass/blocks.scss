@@ -103,7 +103,7 @@
       float: left;
     }
     a {
-      @mixin box-shadow(3px, 3px, 2px, 0, #888);
+      @include box-shadow(3px, 3px, 2px, 0px, #888);
       @include links();
       float: left;
       width: 100%;

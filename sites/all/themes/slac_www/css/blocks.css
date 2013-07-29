@@ -1,88 +1,467 @@
-/*
-Syntax error: Invalid CSS after "...xin box-shadow(": expected variable (e.g. $foo), was "3px, 3px, 2px, ..."
-        on line 106 of D:/Sites/slac-www/sites/all/themes/slac_www/sass/blocks.scss
+/* Grids */
+/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+.container:before, .container:after {
+  content: "";
+  display: table; }
+/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+.container:after {
+  clear: both; }
 
-Backtrace:
-D:/Sites/slac-www/sites/all/themes/slac_www/sass/blocks.scss:106
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1129:in `expected'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/script/lexer.rb:199:in `expected!'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/script/parser.rb:476:in `assert_tok'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/script/parser.rb:351:in `defn_arglist!'
-org/jruby/RubyKernel.java:1419:in `loop'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/script/parser.rb:348:in `defn_arglist!'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/script/parser.rb:104:in `parse_mixin_definition_arglist'
-org/jruby/RubyKernel.java:2092:in `send'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1005:in `sass_script'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:173:in `mixin_directive'
-org/jruby/RubyKernel.java:2092:in `send'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:163:in `special_directive'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:135:in `directive'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:537:in `block_child'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:526:in `block_contents'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:518:in `block'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:512:in `ruleset'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:574:in `declaration_or_ruleset'
-org/jruby/RubyProc.java:268:in `call'
-org/jruby/RubyProc.java:228:in `call'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1104:in `rethrow'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:575:in `declaration_or_ruleset'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:537:in `block_child'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:529:in `block_contents'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:518:in `block'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:512:in `ruleset'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:574:in `declaration_or_ruleset'
-org/jruby/RubyProc.java:268:in `call'
-org/jruby/RubyProc.java:228:in `call'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1104:in `rethrow'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:575:in `declaration_or_ruleset'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:537:in `block_child'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:526:in `block_contents'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:518:in `block'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:512:in `ruleset'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:536:in `block_child'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:529:in `block_contents'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:70:in `stylesheet'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:27:in `parse'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/engine.rb:342:in `_to_tree'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/engine.rb:315:in `_render'
-C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/engine.rb:262:in `render'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
-org/jruby/RubyArray.java:1603:in `each'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
-org/jruby/RubyMethod.java:133:in `call'
-org/jruby/RubyProc.java:268:in `call'
-org/jruby/RubyProc.java:228:in `call'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `modified'
-org/jruby/RubyArray.java:1603:in `each'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
-org/jruby/RubyArray.java:1603:in `each'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
-org/jruby/RubyKernel.java:1419:in `loop'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
-C:/Program Files (x86)/Scout/vendor/gems/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-C:\Program Files (x86)\Scout\bin\compass:12:in `(root)'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...xin box-shadow(\": expected variable (e.g. $foo), was \"3px, 3px, 2px, ...\"\A         on line 106 of D:/Sites/slac-www/sites/all/themes/slac_www/sass/blocks.scss"; }
+/* Front page layout */
+/* line 49, ../sass/_mixins.scss */
+.slider {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 53, ../sass/_mixins.scss */
+.frontpage-left-col {
+  float: left;
+  width: 16.66667%;
+  margin-left: 0%;
+  margin-right: -16.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 57, ../sass/_mixins.scss */
+.frontpage-middle-col {
+  float: left;
+  width: 62.5%;
+  margin-left: 16.66667%;
+  margin-right: -79.16667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 61, ../sass/_mixins.scss */
+.frontpage-right-col {
+  float: left;
+  width: 20.83333%;
+  margin-left: 79.16667%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* Three col layout */
+/* line 67, ../sass/_mixins.scss */
+.three-col .three-col-left {
+  float: left;
+  width: 16.66667%;
+  margin-left: 0%;
+  margin-right: -16.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 71, ../sass/_mixins.scss */
+.three-col .three-col-middle {
+  float: left;
+  width: 62.5%;
+  margin-left: 16.66667%;
+  margin-right: -79.16667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 75, ../sass/_mixins.scss */
+.three-col .three-col-right {
+  float: left;
+  width: 20.83333%;
+  margin-left: 79.16667%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 79, ../sass/_mixins.scss */
+.pane-page-content > .pane-title {
+  float: left;
+  width: 62.5%;
+  margin-left: 16.66667%;
+  margin-right: -79.16667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* Slider */
+/* line 6, ../sass/blocks.scss */
+.front-slider {
+  padding-bottom: 15px; }
+  /* line 8, ../sass/blocks.scss */
+  .front-slider .views-slideshow-cycle-main-frame-row {
+    width: 100% !important; }
+  /* line 11, ../sass/blocks.scss */
+  .front-slider .views-field-nothing {
+    display: inline;
+    overflow: hidden; }
+  /* line 15, ../sass/blocks.scss */
+  .front-slider .views-field-field-image {
+    float: left;
+    width: 62%; }
+
+/* line 21, ../sass/blocks.scss */
+.slide-text-side {
+  font-size: 17px;
+  color: #fff;
+  width: 32%;
+  padding: 20px 3%;
+  line-height: 23px;
+  height: 224px;
+  letter-spacing: .03em; }
+  /* line 29, ../sass/blocks.scss */
+  .slide-text-side a {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    line-height: normal;
+    padding-bottom: 20px;
+    display: block;
+    letter-spacing: .04em; }
+
+/* Main menu */
+/* line 43, ../sass/blocks.scss */
+.left-menu.highlited .pane-title {
+  margin: 0; }
+  /* line 45, ../sass/blocks.scss */
+  .left-menu.highlited .pane-title a {
+    text-transform: none;
+    font-size: 14px;
+    margin: 0 0 0 8px;
+    color: #881728; }
+/* line 52, ../sass/blocks.scss */
+.left-menu .menu li {
+  padding-top: 2px;
+  border-bottom: 1px solid #d4d4d4;
+  font-size: 12px;
+  line-height: normal; }
+  /* line 57, ../sass/blocks.scss */
+  .left-menu .menu li a {
+    padding: 10px 5%;
+    width: 90%;
+    display: block;
+    text-decoration: none;
+    margin: 0; }
+
+/* */
+/* line 69, ../sass/blocks.scss */
+.highlited {
+  margin-bottom: 35px; }
+  /* line 72, ../sass/blocks.scss */
+  .highlited .field-label,
+  .highlited .pane-title {
+    border-bottom: 2px solid #831425;
+    font-size: 14px;
+    color: #7f6332;
+    padding-bottom: 3px;
+    margin-bottom: 12px;
+    font-weight: normal;
+    line-height: normal;
+    text-transform: uppercase; }
+    /* line 81, ../sass/blocks.scss */
+    .highlited .field-label a,
+    .highlited .pane-title a {
+      color: #7f6332;
+      text-decoration: none; }
+
+/* line 89, ../sass/blocks.scss */
+.video-block .field-item {
+  border-top: 1px dashed #c7c8c8;
+  padding: 18px 0 25px 0;
+  font-size: 12px;
+  overflow: hidden; }
+  /* line 94, ../sass/blocks.scss */
+  .video-block .field-item:first-child {
+    border-top: none;
+    padding-top: 9px; }
+  /* line 98, ../sass/blocks.scss */
+  .video-block .field-item img {
+    border-top: 0;
+    border-left: 0;
+    width: 100%;
+    height: auto;
+    float: left; }
+  /* line 105, ../sass/blocks.scss */
+  .video-block .field-item a {
+    -webkit-box-shadow: 3px 3px 2px 0px #888888;
+    -moz-box-shadow: 3px 3px 2px 0px #888888;
+    -ms-box-shadow: 3px 3px 2px 0px #888888;
+    -o-box-shadow: 3px 3px 2px 0px #888888;
+    box-shadow: 3px 3px 2px 0px #888888;
+    color: #881728;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: normal;
+    float: left;
+    width: 100%; }
+/* line 112, ../sass/blocks.scss */
+.video-block a.youtube-title {
+  padding-top: 12px; }
+/* line 115, ../sass/blocks.scss */
+.video-block .youtube-thumbnail {
+  position: relative; }
+  /* line 117, ../sass/blocks.scss */
+  .video-block .youtube-thumbnail:after {
+    content: url("../images/video-icon.png");
+    float: right;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    bottom: 7px;
+    right: 9px; }
+
+/* line 130, ../sass/blocks.scss */
+.bg-list .areYouText, .bg-list .social_links {
+  padding: 10px 0;
+  margin-bottom: 7px;
+  background: white url("../images/list-bg.png") repeat-x bottom;
+  width: 100%;
+  overflow: hidden; }
+/* line 137, ../sass/blocks.scss */
+.bg-list .areYouText a {
+  color: #881728;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: normal;
+  display: block;
+  width: 90%;
+  margin: 0 5%; }
+/* line 143, ../sass/blocks.scss */
+.bg-list .social_links li {
+  width: 20%;
+  text-align: center; }
+  /* line 146, ../sass/blocks.scss */
+  .bg-list .social_links li a {
+    margin: auto; }
+
+/* line 154, ../sass/blocks.scss */
+.related-links .field-label,
+.related-links .pane-title {
+  border-bottom-color: #6d6c6c;
+  color: #6d6c6c;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: normal; }
+/* line 163, ../sass/blocks.scss */
+.related-links .field-item .field-item,
+.related-links .menu li,
+.related-links ul.news-archive-links li {
+  font-size: 11px;
+  line-height: 18px;
+  margin: 0 3%;
+  width: 94%; }
+/* line 171, ../sass/blocks.scss */
+.related-links .field .field .field-item a,
+.related-links .menu li a,
+.related-links ul.news-archive-links a {
+  padding: 0 0 0 6%;
+  width: 94%;
+  background: url("../images/red-arrow.png") no-repeat 0 5px;
+  color: #881728;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: normal;
+  display: block; }
+
+/* line 180, ../sass/blocks.scss */
+.front-news {
+  font-size: 12px;
+  color: #828282;
+  font-style: italic; }
+  /* line 184, ../sass/blocks.scss */
+  .front-news .views-row {
+    padding-bottom: 14px; }
+  /* line 187, ../sass/blocks.scss */
+  .front-news a {
+    color: #881728;
+    text-decoration: none;
+    display: block;
+    line-height: normal; }
+
+/* line 195, ../sass/blocks.scss */
+.introduction-block {
+  line-height: 20px; }
+
+/* line 199, ../sass/blocks.scss */
+.pane-node-field-image {
+  margin-bottom: 10px; }
+  /* line 201, ../sass/blocks.scss */
+  .pane-node-field-image img {
+    width: 100%;
+    height: auto; }
+
+/* Shadowed background */
+/* line 210, ../sass/blocks.scss */
+.shaded-background {
+  padding-top: 26px; }
+  /* line 212, ../sass/blocks.scss */
+  .shaded-background .content-block-heading {
+    border-bottom: 2px solid #831425;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 6px 0 5px 7px;
+    letter-spacing: 1px;
+    color: #7F6332; }
+  /* line 220, ../sass/blocks.scss */
+  .shaded-background .content-block-body {
+    background: #f6f6f6;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYmViZWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
+    background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ebebeb',GradientType=0 );
+    width: 94%;
+    padding: 20px 3%;
+    font-size: 14px;
+    overflow: hidden; }
+    /* line 234, ../sass/blocks.scss */
+    .shaded-background .content-block-body a {
+      font-size: 11px; }
+
+/* */
+/* line 243, ../sass/blocks.scss */
+.middletop .highlited {
+  margin-bottom: 17px; }
+/* line 247, ../sass/blocks.scss */
+.middletop .pane-content {
+  line-height: 18px;
+  width: 98.5%;
+  margin-left: 1.5%;
+  border-bottom: 1px solid #bbbdbe;
+  overflow: hidden;
+  padding-bottom: 22px; }
+/* line 256, ../sass/blocks.scss */
+.middletop .views-field-nothing {
+  float: left;
+  width: 55%; }
+/* line 261, ../sass/blocks.scss */
+.middletop .views-field-title a {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: normal;
+  padding-bottom: 10px; }
+/* line 268, ../sass/blocks.scss */
+.middletop .views-field-field-image {
+  float: right;
+  width: 42%;
+  margin-left: 3%; }
+  /* line 272, ../sass/blocks.scss */
+  .middletop .views-field-field-image img {
+    width: 100%;
+    height: auto; }
+
+/* line 281, ../sass/blocks.scss */
+.middleleft .views-row {
+  width: 100%;
+  border-bottom: 1px solid #bbbdbe;
+  font-size: 11px;
+  line-height: 14px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  overflow: hidden; }
+/* line 291, ../sass/blocks.scss */
+.middleleft .views-row-last {
+  border: none;
+  padding-bottom: 0;
+  margin-bottom: 0; }
+/* line 297, ../sass/blocks.scss */
+.middleleft .views-field-title a {
+  font-size: 13px;
+  padding-bottom: 5px; }
+/* line 302, ../sass/blocks.scss */
+.middleleft .views-field-nothing {
+  float: left;
+  width: 55%; }
+/* line 307, ../sass/blocks.scss */
+.middleleft .views-field-field-image {
+  float: right;
+  width: 42%;
+  margin-left: 3%; }
+  /* line 311, ../sass/blocks.scss */
+  .middleleft .views-field-field-image img {
+    width: 100%;
+    height: auto; }
+
+/* News list */
+/* line 321, ../sass/blocks.scss */
+.news-list {
+  margin: 35px 0 0 0; }
+  /* line 323, ../sass/blocks.scss */
+  .news-list:first-child {
+    margin-top: 0; }
+  /* line 326, ../sass/blocks.scss */
+  .news-list .views-row {
+    padding: 20px 2% 30px;
+    width: 96%;
+    background: url("../images/dotted-border.png") repeat-x bottom;
+    overflow: hidden; }
+  /* line 333, ../sass/blocks.scss */
+  .news-list .views-row-last {
+    background: none; }
+  /* line 337, ../sass/blocks.scss */
+  .news-list .views-field-nothing {
+    float: left;
+    width: 76%;
+    color: #373738;
+    font-size: 12px;
+    line-height: normal; }
+  /* line 345, ../sass/blocks.scss */
+  .news-list .views-field-field-image {
+    float: right;
+    width: 20%;
+    margin-left: 4%; }
+    /* line 349, ../sass/blocks.scss */
+    .news-list .views-field-field-image img {
+      width: 100%;
+      height: auto; }
+  /* line 355, ../sass/blocks.scss */
+  .news-list .views-field-created {
+    color: #373738;
+    font-size: 11px;
+    font-weight: bold;
+    padding-bottom: 8px; }
+    /* line 360, ../sass/blocks.scss */
+    .news-list .views-field-created a {
+      font-size: 13px;
+      display: block;
+      padding-bottom: 4px; }
