@@ -22,8 +22,15 @@
   border-radius: $radius;
 }
 
+@mixin links ($font-color:#881728, $fz:12px, $text-decoration:none) {
+  color: $font-color;
+  text-decoration: $text-decoration;
+  font-size: $fz;
+  display: block;
+  line-height: normal;
+}
 
-
+  
 
 
 
@@ -33,20 +40,47 @@
 @import "zen";
 
 
-  $zen-gutter-width: 2%;  // Set the gutter size. A half-gutter is used on
-                            // each side of each column.
-
+  $zen-gutter-width: 2%;  
+  $zen-column-count: 24;  
   .container {
-    @include zen-grid-container();  // Define the container for your grid items.
+    @include zen-grid-container(); 
   }
 
-  $zen-column-count: 12;  // Set the number of grid columns to use in this media
-                          // query. You'll likely want a different grid for
-                          // different screen sizes.
-
-  .frontpage-left-col {
-    @include zen-grid-item(3, 1);   // Span 3 columns starting in 1st column.
+  /* Front page layout */
+  .slider{
+    @include zen-grid-item(24, 1);
+  } 
+  
+  .frontpage-left-col{
+    @include zen-grid-item(4, 1);
   }
+
+  .frontpage-middle-col{
+    @include zen-grid-item(15, 5);
+  }
+
+  .frontpage-right-col{
+    @include zen-grid-item(5, 20);
+  }
+
+  /* Three col layout */
+
+  .three-col .three-col-left{
+    @include zen-grid-item(4, 1);
+  }
+
+  .three-col .three-col-middle{
+    @include zen-grid-item(15, 5);
+  }
+
+  .three-col .three-col-right{
+    @include zen-grid-item(5, 20);
+  }
+
+  .pane-page-content > .pane-title{
+    @include zen-grid-item(15, 5);
+  }
+
 
 
 @media (max-width: 900px) {
@@ -58,6 +92,3 @@
 
 
 }
-
-
-

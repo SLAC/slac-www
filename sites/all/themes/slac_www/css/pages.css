@@ -318,17 +318,19 @@ a {
   font-size: 24px;
   color: #474747;
   font-weight: bold;
-  padding-bottom: 15px; }
-/* line 214, ../sass/pages.scss */
+  padding-bottom: 15px;
+  position: relative;
+  top: 20px; }
+/* line 216, ../sass/pages.scss */
 .pane-page-content > .pane-content {
   clear: both; }
 
 /* Layouts */
-/* line 221, ../sass/pages.scss */
+/* line 223, ../sass/pages.scss */
 .panel-frontpage .center-wrapper {
   clear: both; }
 
-/* line 224, ../sass/pages.scss */
+/* line 226, ../sass/pages.scss */
 .frontpage-middle-col {
   line-height: 18px;
   font-size: 13px;
@@ -339,7 +341,7 @@ a {
   box-shadow: 3px 3px 2px 1px #efefef;
   padding-bottom: 10px; }
 
-/* line 231, ../sass/pages.scss */
+/* line 233, ../sass/pages.scss */
 .frontpage-middle-left {
   width: 66%;
   float: left;
@@ -347,43 +349,44 @@ a {
   border-right: 1px solid #bbbdbe;
   padding-right: 3%; }
 
-/* line 239, ../sass/pages.scss */
+/* line 241, ../sass/pages.scss */
 .frontpage-middle-right {
   width: 26%;
   float: right;
   margin-left: 2.5%; }
 
-/* line 245, ../sass/pages.scss */
+/* line 247, ../sass/pages.scss */
 .three-col-middle {
-  font-size: 13px; }
+  font-size: 13px;
+  margin: 19px 0 0 0; }
 
 @media (max-width: 600px) {
-  /* line 262, ../sass/pages.scss */
+  /* line 258, ../sass/pages.scss */
   .page-basic .footer .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 265, ../sass/pages.scss */
+    /* line 261, ../sass/pages.scss */
     .page-basic .footer .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0; }
-    /* line 271, ../sass/pages.scss */
+    /* line 267, ../sass/pages.scss */
     .page-basic .footer .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
       margin: 0 12px;
       margin: 0 1% 0 2%;
       width: 97%; }
-  /* line 280, ../sass/pages.scss */
+  /* line 276, ../sass/pages.scss */
   .page-basic .footer .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 285, ../sass/pages.scss */
+  /* line 281, ../sass/pages.scss */
   .page-basic .footer .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 290, ../sass/pages.scss */
+    /* line 286, ../sass/pages.scss */
     .page-basic .footer .panels-flexible-region-last img {
       width: auto; } }
