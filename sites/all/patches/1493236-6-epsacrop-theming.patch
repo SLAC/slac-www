@@ -1,0 +1,395 @@
+diff --git a/css/epsacrop.css b/css/epsacrop.css
+deleted file mode 100644
+index 3af4a35..0000000
+--- a/css/epsacrop.css
++++ /dev/null
+@@ -1,63 +0,0 @@
+-.epsacrop-edit-crop-link {
+-  display:inline;
+-  margin-left:200px;
+-}
+-.epsacrop-global{
+-  /* width:850px;
+-  height:571px; */
+-  /* border:1px solid red; */
+-  position:relative;
+-}
+-.epsacrop-image-crop {
+-  border:1px solid #999999;
+-  background-color:#DADADA;
+-  padding:2px;
+-  z-index:9;
+-  float:left;
+-}
+-.epsacrop-presets-menu ul.epsacrop-presets-menu-ul{
+-  margin:0; padding:0;
+-  list-style:none;
+-  float:left;
+-  z-index:10;
+-}
+-.epsacrop-presets-menu ul.epsacrop-presets-menu-ul li {
+-  background: none;
+-  padding: 0; margin: 0;  
+-}
+-
+-.epsacrop-presets-menu ul.epsacrop-presets-menu-ul li a{
+-  color:#212121;
+-  text-decoration:none;
+-  background-color:#DADADA;
+-  padding:5px; margin:0 0 3px 0;
+-  border:1px solid #999999;
+-  border-left:none;
+-  width:100px;
+-  color:#212121;
+-  display:block;
+-}
+-.epsacrop-presets-menu ul.epsacrop-presets-menu-ul li a.selected{
+-  color:#212121;
+-  text-decoration:none;
+-  background-color:#EFEFEF;
+-  padding:5px; margin:0 0 3px 0;
+-  border:1px solid #999999;
+-  border-left:none;
+-  width:100px;
+-  color:#212121;
+-  display:block;
+-}
+-.epsacrop-preview{
+-  width:100px;
+-  height:100px;
+-  /* border:1px solid green; */
+-  float:right;
+-  /* padding:30px 50px 0 0; */
+-  overflow:hidden;
+-  /* position:absolute;
+-  right:0; bottom:250px; */
+-}
+-#edit-epsacropcoords-wrapper, #edit-epsacropscalled-wrapper {
+-   display:none;
+-}
+diff --git a/epsacrop.module b/epsacrop.module
+index c0e0db3..d6e557e 100644
+--- a/epsacrop.module
++++ b/epsacrop.module
+@@ -122,7 +122,9 @@ function epsacrop_menu() {
+ 
+ 
+ /**
+- * epsacrop_dialog function.
++ * EPSA Crop dialog AJAX callback.
++ *
++ * Builds up a render array that gets themed via theme_epsacrop_dialog().
+  * 
+  * @access public
+  * @param string $entity_name
+@@ -132,22 +134,9 @@ function epsacrop_menu() {
+  * @return void
+  */
+ function epsacrop_dialog($entity_name, $field_name, $bundle, $fid) {
+-  $out = '';
+-  //@TODO: If a method is added to determine if the image is used elsewhere (or number of instances), add that condition for the message
+-  //related issue: http://drupal.org/node/1352722
+-  if(module_exists('media')) {
+-    $out .= '<p>For convenience, cropping applies to <strong>all</strong> current and future content which uses this image. (If the image is from the library, changing the cropping will affect all existing content which uses the image.)</p>';
+-  }
+-  $out .='<div class="epsacrop-global">' . "\n";
+-  $out .='<div class="epsacrop-image-crop">' . "\n";
+-  $out .='<img id="epsacrop-target" />' . "\n";
+-  $out .='</div>' . "\n";
+-  $out .='<div class="epsacrop-presets-menu">' . "\n";
+-  $out .='<ul class="epsacrop-presets-menu-ul">' . "\n";
+-  $i = 0;
+-
+-  if($entity_name == 'all' && $field_name == 'all' && $bundle == 'all') {
+-    //When on the file edit page, there is no entity_name, field_name or bundle. So make all styles available for editing
++  if ($entity_name == 'all' && $field_name == 'all' && $bundle == 'all') {
++    // When on the file edit page, there is no entity_name, field_name or bundle.
++    // So make all styles available for editing
+     $all_styles = array_keys(_epsacrop_load_styles());
+     $styles = array('styles' => array_combine($all_styles, $all_styles));
+   }
+@@ -155,28 +144,129 @@ function epsacrop_dialog($entity_name, $field_name, $bundle, $fid) {
+     $styles = _epsacrop_load_styles_by_instance($entity_name, $field_name, $bundle);
+   }
+ 
++  $i = 0;
++  $list_items = array();
++  $style_info = array();
++
+   foreach ($styles['styles'] as $style_name) {
+     $style = _epsacrop_load_style($style_name);
+     $effect = _epsacrop_get_effect($style);
++
+     $id = 'epsacrop-' . $effect['ieid'] . '-' . $effect['isid'];
+-    $out .='<li class="epsacrop-presets-menu-li"><a data-bgcolor="' . $effect['data']['jcrop_settings']['bgcolor'] . '" data-bgopacity="' . $effect['data']['jcrop_settings']['bgopacity'] . '" data-aspect-ratio="' . $effect['data']['jcrop_settings']['aspect_ratio'] . '" id="' . $id . '" href="javascript:Drupal.EPSACrop.crop(\'' . $id . '\');" rel="' . $effect['data']['width'] . 'x' . $effect['data']['height'] . '"' . ($i++ == 0 ? ' class="selected"' : '') . '>' . $style['name'] . '</a></li>';
++    $name = $style['name'];
++    $selected = ($i++ == 0) ? TRUE : FALSE;
++
++    // Build up the link element for each style, which holds basic data
++    // about the style itself. These links should not be modified, except
++    // maybe to add extra classes.
++    $link_attributes = array(
++      'id' => $id,
++      'rel' => $effect['data']['width'] . 'x' . $effect['data']['height'],
++      'class' => ($selected) ? array('selected', 'epsacrop-style') : array('epsacrop-style'),
++      'data-bgcolor' => $effect['data']['jcrop_settings']['bgcolor'],
++      'data-bgopacity' => $effect['data']['jcrop_settings']['bgopacity'],
++      'data-aspect-ratio' => $effect['data']['jcrop_settings']['aspect_ratio'],
++    );
++    $link = array(
++      '#theme' => 'link',
++      '#text' => $name,
++      '#path' => "javascript:Drupal.EPSACrop.crop('$id');",
++      '#options' => array(
++        'attributes' => $link_attributes,
++        'html' => FALSE,
++        'external' => TRUE,
++       ),
++    );
++
++    // Build up a list of items suitable for theme_item_list(). Note that
++    // theme_item_list does not accept render arrays, so we have to render
++    // the link here. The original render array is stored in $style_info
++    // in case themers need to re-render.
++    $classes = array('epsacrop-style-wrapper', 'vertical-tab-button', 'epsacrop-presets-menu-li');
++    if ($selected) {
++      $classes[] = 'selected';
++    }
++    $list_items[] = array(
++      'data' => drupal_render($link),
++      'class' => $classes,
++    );
++
++    // Save raw style information in case themers want to
++    // handle things differently.
++    $style_info[] = array(
++      'link' => $link,
++      'style' => $style,
++      'effect' => $effect,
++    );
+   }
+-  $out .='</ul>' . "\n";
+-  $out .='</div>' . "\n";
+-  $data = _epsacrop_get_coords_from_fid($fid);
+-  if (!is_string($data)) {
+-    $data = drupal_json_encode((object) $data);
++
++  // Add relevant messages to the dialog.
++  // @todo If a method is added to determine if the image is used elsewhere
++  // (or number of instances), add that condition for the message.
++  // Related issue: http://drupal.org/node/1352722
++  $message = array();
++  if (module_exists('media')) {
++    $message = array(
++      '#prefix' => '<p class="epsacrop-message">',
++      '#markup' => t('For convenience, cropping applies to !all current and future content which uses this image. (If the image is from the library, changing the cropping will affect all existing content which uses the image.)', array('!all' => '<strong>' . t('all') . '</strong>')),
++      '#suffix' => '</p>',
++    );
+   }
+-  $out .='<div style="display:none;"><textarea id="epsacrop-coords-data">' . $data . '</textarea></div>' . "\n";
+-  $out .='<br style="clear:both;" />' . "\n";
+-  $out .='</div>' . "\n";
++
++  // Theme the styles as a list. Wrap the list in a container to preserve
++  // backwards compatibility with custom themes.
++  $styles_list = array(
++    '#theme' => 'item_list',
++    '#type' => 'ul',
++    '#items' => $list_items,
++    '#styles' => $style_info,
++    '#attributes' => array(
++      'class' => array('vertical-tabs-list', 'epsacrop-presets-menu-ul'),
++    ),
++  );
++  $styles_container = array(
++    '#type' => 'container',
++    '#attributes' => array(
++      'class' => array('epsacrop-presets-menu'),
++    ),
++    'styles' => $styles_list,
++  );
++
++  // Wrap the cropping image in a container.
++  $image = array(
++    '#markup' => '<img id="epsacrop-target" />',
++    '#theme_wrappers' => array('container'),
++    '#attributes' => array('class' => array('vertical-tabs-panes', 'epsacrop-image-crop')),
++  );
++
++  // Theme the whole dialog.
++  $dialog = array(
++    '#theme' => 'epsacrop_dialog',
++    '#attributes' => array(
++      'class' => array('vertical-tabs', 'clearfix', 'epsacrop-global'),
++    ),
++    'message' => $message,
++    'styles' => $styles_container,
++    'image' => $image,
++  );
++
++  // Store cropping data in a hidden textarea.
++  $coords = _epsacrop_get_coords_from_fid($fid);
++  $data = array(
++    '#type' => 'textarea',
++    '#prefix' => '<div style="display:none;">',
++    '#value' => !is_string($coords) ? drupal_json_encode((object) $coords) : $coords,
++    '#suffix' => '</div>',
++    '#attributes' => array('id' => 'epsacrop-coords-data'),
++  );
++
++  echo drupal_render($dialog);
++  echo drupal_render($data);
+ 
+   $GLOBALS['devel_shutdown'] = FALSE;
+-  echo $out;
+   drupal_exit();
+ }
+ 
+-
+ /**
+  * epsacrop_ajax function.
+  * 
+@@ -506,12 +596,21 @@ function epsacrop_form_file_entity_edit_alter(&$form, $form_state) {
+   $info = image_get_info($file->uri);
+   $setting['fid'] = $file->fid;
+   $setting['url'] = image_style_url('epsacrop_thumb', $file->uri);
+-  $setting['size'] = array($info['width'], $info['height']);;
+ 
+-  $markup = "[<a href=\"javascript:Drupal.EPSACrop.dialog('" . $setting['entity_type'] . "', '" . $setting['field_name'] . "', '" . $setting['bundle'] . "', '" . $setting['fid'] . "', '" . $setting['url'] . "', [" . $setting['size'][0] . "," . $setting['size'][1] . "]);\" class=\"button epsacrop\">" . t("manage image crops") . "</a>]";
++  $width = $info['width'];
++  $height = $info['height'];
++  $params = implode("', '", array(
++    $setting['entity_type'],
++    $setting['field_name'],
++    $setting['bundle'],
++    $setting['fid'],
++    $setting['url'],
++  ));
++
+   $form['epsacrop'] = array(
+-    '#type' => 'markup',
+-    '#markup' => $markup
++    '#theme' => 'epsacrop_link',
++    '#href' => "javascript:Drupal.EPSACrop.dialog('$params', [$width,$height]);",
++    '#settings' => $setting,
+   );
+ }
+ 
+@@ -573,13 +672,22 @@ function epsacrop_element_process($element, $form_state, $form) {
+     );
+   }
+   else if (isset($setting['fid'])) {
+-    $markup = "[<a href=\"javascript:Drupal.EPSACrop.dialog('" . $setting['entity_type'] . "', '" . $setting['field_name'] . "', '" . $setting['bundle'] . "', '" . $setting['fid'] . "', '" . $setting['url'] . "', [" . $setting['size'][0] . "," . $setting['size'][1] . "]);\">" . t("manage image crops") . "</a>]";
++    $width = $setting['size'][0];
++    $height = $setting['size'][1];
++    $params = implode("', '", array(
++      $setting['entity_type'],
++      $setting['field_name'],
++      $setting['bundle'],
++      $setting['fid'],
++      $setting['url'],
++    ));
++
+     $element['epsacrop'] = array(
+-      '#type' => 'markup',
+-      '#markup' => $markup
++      '#theme' => 'epsacrop_link',
++      '#href' => "javascript:Drupal.EPSACrop.dialog('$params', [$width,$height]);",
++      '#settings' => $setting,
+     );
+   }
+-
+   return $element;
+ }
+ 
+@@ -721,7 +829,6 @@ function _epsacrop_include_header_html() {
+   drupal_add_js($module_path . '/js/epsacrop.js');
+   
+   drupal_add_css(EPSACROP_JCROP_PATH . '/css/jquery.Jcrop.css');
+-  drupal_add_css($module_path . '/css/epsacrop.css');
+ }
+ 
+ 
+@@ -921,3 +1028,55 @@ function _epsacrop_get_uri_from_fid($fid) {
+ function _epsacrop_access() {
+   return user_access('epsacrop create crops') || user_access('epsacrop edit all crops');
+ }
++
++/**
++ * Implements hook_theme().
++ */
++function epsacrop_theme() {
++  return array(
++    'epsacrop_link' => array(
++      'variables' => array('href' => NULL, 'settings' => NULL),
++    ),
++    'epsacrop_dialog' => array(
++      'render element' => 'dialog',
++    ),
++  );
++}
++
++/**
++ * Theme the links that open EPSA Crop dialogs.
++ */
++function theme_epsacrop_link($variables) {
++  $link = array(
++    'text' => t('manage image crops'),
++    'path' => $variables['href'],
++    'options' => array(
++      'html' => FALSE,
++      'external' => TRUE,
++      'attributes' => array('class' => array('epsacrop-link')),
++    ),
++  );
++  return '[' . theme('link', $link) . ']';
++}
++
++/**
++ * Theme the entire EPSA Crop dialog content.
++ *
++ * From here, themers have the ability to adjust just about any content within
++ * the cropping dialog. Only the links for styles have been rendered already.
++ */
++function theme_epsacrop_dialog($variables) {
++  $dialog = $variables['dialog'];
++  $output = '';
++
++  // Display the message outside the main container.
++  if (!empty($dialog['message'])) {
++    $output .= drupal_render($dialog['message']);
++  }
++
++  // Wrap all child sections in a main container.
++  $attributes = !empty($dialog['#attributes']) ? drupal_attributes($dialog['#attributes']) : '';
++  $output .= '<div' . $attributes . '>' . drupal_render_children($dialog) . '</div>';
++
++  return $output;
++}
+diff --git a/js/epsacrop.js b/js/epsacrop.js
+index 299ea65..3dc398d 100644
+--- a/js/epsacrop.js
++++ b/js/epsacrop.js
+@@ -45,7 +45,7 @@
+           }
+         }).load(Drupal.settings.basePath +'?q=crop/dialog/' + type_name + '/' + field_name +'/' + bundle +'/'+ delta, function (){
+         try{
+-          var item = $('.epsacrop-presets-menu a[class=selected]');
++          var item = $('.epsacrop-style.selected');
+           var preset = item.attr('id'); 
+           var coords = item.attr('rel').split('x');
+           var aspectRatio = item.attr('data-aspect-ratio');
+@@ -104,10 +104,10 @@
+       }); // end load
+     }, // end dialog
+     crop: function ( preset ) {
+-      $('.epsacrop-presets-menu a').removeClass('selected');
+-      $('.epsacrop-presets-menu a#' + preset).addClass('selected');
++      $('.epsacrop-style, .epsacrop-style-wrapper').removeClass('selected');
++      $('.epsacrop-style#' + preset).addClass('selected').closest('.epsacrop-style-wrapper').addClass('selected');
+       
+-      var item = $('.epsacrop-presets-menu a[class=selected]');
++      var item = $('.epsacrop-style.selected');
+       var coords = item.attr('rel').split('x');
+       var aspectRatio = item.attr('data-aspect-ratio');
+       var bgcolor = item.attr('data-bgcolor');
