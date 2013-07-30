@@ -13,6 +13,16 @@ function pp_crop_entity_info_alter(&$entity_info) {
 }
 
 /**
+ * Implements hook_element_info_alter.
+ */
+function pp_crop_element_info_alter(&$type) {
+  $type['managed_file']['#process'][] = 'pp_crop_element_process';
+  if (module_exists('media')) {
+    $type['media']['#process'][] = 'pp_crop_element_process';
+  }
+}
+
+/**
  * Implements hook_media_format_form_prepare_alter().
  *
  * Alter media image selection view_mode form. Add cropping button.
@@ -25,27 +35,8 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
   if ($file->type != 'image') {
     return;
   }
-  $thumbnail_options = array();
-  // Add default so it will be unset.
-  $view_mode_settings = field_view_mode_settings('file', $file->type) + array('default' => 'default');
-  foreach ($view_mode_settings as $view_mode_name => $view_mode_info) {
-    if (strpos($view_mode_name, 'crop_') === 0) {
-      $image_style_name = substr($view_mode_name, strlen('crop_'));
-      $rendered_image = theme('image_style', array(
-        'style_name' => $image_style_name,
-        'path' => $file->uri,
-      ));
 
-      preg_match('/\?itok=[a-zA-Z0-9-_]*/', $rendered_image, $matches);
-      $rendered_image = str_replace($matches[0], $matches[0] . '&' . rand(0, 1000) . '=' . rand(0, 1000), $rendered_image);
-
-      $thumbnail_options[$view_mode_name] = $rendered_image;
-      continue;
-    }
-    if (isset($form['options']['format']['#options'][$view_mode_name])) {
-      unset($form['options']['format']['#options'][$view_mode_name]);
-    }
-  }
+  $thumbnail_options = pp_crop_get_images_thumbnails($form, $file);
 
   $form['options']['thumbnails'] = array(
     '#type' => 'radios',
@@ -54,7 +45,7 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
   );
 
   _epsacrop_include_header_html();
-  $form['#attached']['js'][] = drupal_get_path('module', 'pp_crop') . '/pp_crop.js';
+  $form['#attached']['js'][] = drupal_get_path('module', 'pp_crop') . '/js/pp_crop.js';
   $markup = "<a href=\"javascript:Drupal.EPSACrop.dialog('all', '"
     . 'all' . "', '"
     . 'all' . "', '"
@@ -94,9 +85,42 @@ function pp_crop_media_token_to_markup_alter(&$element, $tag_info, &$settings) {
  * Implements hook_theme().
  */
 function pp_crop_theme() {
-  return array('image_style_lightbox' => array(
-    'variables' => array('style_name' => '', 'file' => NULL),
-  ));
+  return array(
+    'image_style_lightbox' => array(
+      'variables' => array('style_name' => '', 'file' => NULL),
+    ),
+    'images_thumbnails_list' => array(
+      'variables' => array('thumbnail_options' => array(), 'file' => NULL),
+    )
+  );
+}
+
+function theme_images_thumbnails_list($variables) {
+  if (empty($variables['thumbnail_options']) || $variables['file'] == NULL) {
+    return;
+  }
+
+  $file = $variables['file'];
+  $manage_crop_link = "<span class=\"manage-link-wrapper\"></br><a class=\"button manage-crop-link\" href=\"javascript:Drupal.EPSACrop.dialog('all', '"
+    . 'all' . "', '"
+    . 'all' . "', '"
+    . $file->fid . "', '"
+    . image_style_url('epsacrop_thumb', $file->uri) . "', ["
+    . $file->image_dimensions['width'] . ","
+    . $file->image_dimensions['height'] . "]);\">" . t("Change thumbnails") . "</a></br></br></span>";
+
+  $thumbnail_options = $variables['thumbnail_options'];
+  $rows = array();
+  foreach ($thumbnail_options as $image_preset => $image_element) {
+    $rows[] = array(
+      array('data' => $image_preset),
+      array('data' => $image_element)
+    );
+  }
+  $header = array(t('Image preset'), t('Image thumbnail'));
+  $images_table = theme('table', array('header' => $header, 'rows' => $rows));
+
+  return '<div id="view-thumbnails-' . $file->fid . '-block" title="Manage image thumbnails">' . $manage_crop_link . $images_table . $manage_crop_link . '</div>';
 }
 
 function theme_image_style_lightbox($variables) {
@@ -206,4 +230,77 @@ function pp_crop_file_displays_alter(&$displays, $file, $view_mode) {
   $image_style = substr($view_mode, strlen('crop_'));
   $displays['file_image']['settings']['image_style'] = $image_style;
   $displays['file_image']['weight'] = -1;
+}
+
+/**
+ * Helper function that add a link in image widget field to open a dialog with images thumbnails.
+ */
+function pp_crop_element_process($element, $form_state, $form) {
+  if (!isset($element['#field_name']) || !_epsacrop_access()) {
+    return $element;
+  }
+
+  if(!isset($element['#file']) || !is_object($element['#file'])) {
+    return $element;
+  }
+
+  $file = $element['#file'];
+
+  _epsacrop_include_header_html();
+  $styles = _epsacrop_load_styles_by_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
+  if (count($styles) == 0) {
+    return $element;
+  }
+
+  $thumbnail_options = pp_crop_get_images_thumbnails($form, $file);
+  $images_thumbnails = theme(
+    'images_thumbnails_list',
+    array(
+      'thumbnail_options' => $thumbnail_options,
+      'file' => $file
+    )
+  );
+
+  drupal_add_library('system', 'ui.dialog');
+  drupal_add_js(drupal_get_path('module', 'pp_crop') . '/js/pp_crop_field.js');
+
+  $markup = '<a id="view-thumbnails-' . $file->fid . '" class="button" href="#">' . t('Manage thumbnails') . '</a>';
+  $element['manage_thumbnails'] = array(
+    '#type' => 'markup',
+    '#markup' => $markup . $images_thumbnails
+  );
+
+  return $element;
+}
+
+/**
+ * Returns an array with crop image style as key and image html element as value.
+ */
+function pp_crop_get_images_thumbnails(&$form, $file) {
+  if (!$file) {
+    return;
+  }
+
+  $thumbnail_options = array();
+  // Add default so it will be unset.
+  $view_mode_settings = field_view_mode_settings('file', $file->type) + array('default' => 'default');
+  foreach ($view_mode_settings as $view_mode_name => $view_mode_info) {
+    if (strpos($view_mode_name, 'crop_') === 0) {
+      $image_style_name = substr($view_mode_name, strlen('crop_'));
+      $rendered_image = theme('image_style', array(
+        'style_name' => $image_style_name,
+        'path' => $file->uri,
+      ));
+
+      preg_match('/\?itok=[a-zA-Z0-9-_]*/', $rendered_image, $matches);
+      $rendered_image = str_replace($matches[0], $matches[0] . '&' . rand(0, 1000) . '=' . rand(0, 1000), $rendered_image);
+
+      $thumbnail_options[$view_mode_name] = $rendered_image;
+      continue;
+    }
+    if (isset($form['options']['format']['#options'][$view_mode_name])) {
+      unset($form['options']['format']['#options'][$view_mode_name]);
+    }
+  }
+  return $thumbnail_options;
 }
