@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Connections page feature.
+ */
+
+include_once 'slac_connections_page.features.inc';
