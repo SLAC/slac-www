@@ -1,5 +1,5 @@
 name = SLAC Admin
-description = "SLAC configuration pages."
+description = "SLAC configuration pages. Editorial enhancements."
 package = SLAC
 core = 7.x
 

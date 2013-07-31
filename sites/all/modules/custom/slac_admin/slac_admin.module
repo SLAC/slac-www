@@ -18,3 +18,20 @@ function slac_admin_js_alter(&$javascript) {
     );
   }
 }
+
+/**
+ * Implements hook_contextual_links_view_alter().
+ *
+ * Add "Edit slideshow content" for frontpage slideshow contextual links.
+ */
+function slac_admin_contextual_links_view_alter(&$element, $items) {
+  if (!isset($element['#links']['views-ui-edit']['href']) || $element['#links']['views-ui-edit']['href'] != 'admin/structure/views/view/frontpage_slideshow/edit') {
+    return;
+  }
+
+  $element['#links']['edit-content'] = array(
+    'title' => t('Edit slideshow content'),
+    'href' => 'admin/structure/nodequeue/1/view/1',
+    'query' => $element['#links']['views-ui-edit']['query'],
+  );
+}
