@@ -72,25 +72,27 @@ a img{
     overflow: hidden;
     border-bottom: 1px solid #aeaeae;
     padding-bottom: 6px;
-    li {
-      float: left;
-      width: 21%;
-      margin: 0;
-      text-align:center;
-      &.first{
-        width: 15%;
-        text-align:left;
+    .menu {
+      li {
+        float: left;
+        width: 21%;
+        margin: 0;
+        text-align:center;
+        &.first{
+          width: 15%;
+          text-align:left;
+        }
+        &.last{
+          text-align: right;
+          width: 22%;
+        }
       }
-      &.last{
-        text-align: right;
-        width: 22%;
+      a {
+        color: #fff;
+        text-decoration: none;
+        padding-left: 9px;
+        background: url('../images/footer-menu-arrow.png') no-repeat left 5px;
       }
-    }
-    a {
-      color: #fff;
-      text-decoration: none;
-      padding-left: 9px;
-      background: url('../images/footer-menu-arrow.png') no-repeat left 5px;
     }
   }
   .panels-flexible-region-last {
