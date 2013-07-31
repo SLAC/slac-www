@@ -75,9 +75,9 @@
   .field-label, 
   .pane-title{
     border-bottom: 2px solid #831425;
-    font-size: 14px;
+    font-size: 12px;
     color: #7f6332;
-    padding-bottom: 3px;
+    padding-bottom: 2px;
     margin-bottom: 12px;
     font-weight: normal;
     line-height: normal;
@@ -111,7 +111,7 @@
       @include box-shadow(3px, 3px, 2px, 0px, #888);
     }
     .youtube-video-popup a {
-      @include links();
+      @include links(11px);
       float: left;
       width: 100%;
     }

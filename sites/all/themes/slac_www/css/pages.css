@@ -1,14 +1,14 @@
 /* Grids */
-/* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
 /* Front page layout */
-/* line 49, ../sass/_mixins.scss */
+/* line 45, ../sass/_mixins.scss */
 .slider {
   float: left;
   width: 100%;
@@ -22,7 +22,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 53, ../sass/_mixins.scss */
+/* line 49, ../sass/_mixins.scss */
 .frontpage-left-col {
   float: left;
   width: 16.66667%;
@@ -36,7 +36,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 57, ../sass/_mixins.scss */
+/* line 53, ../sass/_mixins.scss */
 .frontpage-middle-col {
   float: left;
   width: 62.5%;
@@ -50,7 +50,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 61, ../sass/_mixins.scss */
+/* line 57, ../sass/_mixins.scss */
 .frontpage-right-col {
   float: left;
   width: 20.83333%;
@@ -65,7 +65,7 @@
   word-wrap: break-word; }
 
 /* Three col layout */
-/* line 67, ../sass/_mixins.scss */
+/* line 63, ../sass/_mixins.scss */
 .three-col .three-col-left {
   float: left;
   width: 16.66667%;
@@ -79,7 +79,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 71, ../sass/_mixins.scss */
+/* line 67, ../sass/_mixins.scss */
 .three-col .three-col-middle {
   float: left;
   width: 62.5%;
@@ -93,7 +93,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 75, ../sass/_mixins.scss */
+/* line 71, ../sass/_mixins.scss */
 .three-col .three-col-right {
   float: left;
   width: 20.83333%;
@@ -107,7 +107,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 79, ../sass/_mixins.scss */
+/* line 75, ../sass/_mixins.scss */
 .pane-page-content > .pane-title {
   float: left;
   width: 62.5%;
@@ -141,9 +141,9 @@ body {
 
 /* line 25, ../sass/pages.scss */
 a {
+  font-size: 12px;
   color: #881728;
   text-decoration: none;
-  font-size: 12px;
   line-height: normal; }
 
 /* line 29, ../sass/pages.scss */
