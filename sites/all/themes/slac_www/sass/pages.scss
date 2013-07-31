@@ -72,27 +72,25 @@ a img{
     overflow: hidden;
     border-bottom: 1px solid #aeaeae;
     padding-bottom: 6px;
-    .menu {
-      li {
-        float: left;
-        width: 21%;
-        margin: 0;
-        text-align:center;
-        &.first{
-          width: 15%;
-          text-align:left;
-        }
-        &.last{
-          text-align: right;
-          width: 22%;
-        }
+    li {
+      float: left;
+      width: 21%;
+      margin: 0;
+      text-align:center;
+      &.first{
+        width: 15%;
+        text-align:left;
       }
-      a {
-        color: #fff;
-        text-decoration: none;
-        padding-left: 9px;
-        background: url('../images/footer-menu-arrow.png') no-repeat left 5px;
+      &.last{
+        text-align: right;
+        width: 22%;
       }
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding-left: 9px;
+      background: url('../images/footer-menu-arrow.png') no-repeat left 5px;
     }
   }
   .panels-flexible-region-last {
@@ -277,7 +275,7 @@ a.lightbox-processed{
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .page-basic .pane-menu-menu-footer-menu .menu li{
     &.first{
       width: 15%;
@@ -295,7 +293,7 @@ a.lightbox-processed{
 }
 
 @media (max-width: 600px) {
-  .page-basic .footer{
+  .page-basic{
     .pane-menu-menu-footer-menu{
       padding: 0;  
       .menu{
@@ -304,6 +302,7 @@ a.lightbox-processed{
           clear: both;
           width: 100%;
           margin: 0 0 14px 0;
+          text-align: left;
         }
         a{
           background: url('../images/footer-arrow.png') no-repeat right center;
@@ -311,6 +310,7 @@ a.lightbox-processed{
           margin: 0 12px;
           margin: 0 1% 0 2%;
           width: 97%;
+          display: block;
         }
       }
     }
