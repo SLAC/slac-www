@@ -64,7 +64,8 @@ a img{
   }
 
   .panels-flexible-region-first {
-    width: 570px;
+    width: 75%;
+    max-width: 570px;
   }
   .pane-menu-menu-footer-menu {
     width: 100%;
@@ -74,9 +75,16 @@ a img{
     .menu {
       li {
         float: left;
-        margin-right: 10%;
+        width: 21%;
+        margin: 0;
+        text-align:center;
+        &.first{
+          width: 15%;
+          text-align:left;
+        }
         &.last{
-          margin:  0;
+          text-align: right;
+          width: 22%;
         }
       }
       a {
@@ -266,6 +274,22 @@ a.lightbox-processed{
   display:inline;
 }
 
+
+
+
+@media (max-width: 900px) {
+  .page-basic .pane-menu-menu-footer-menu .menu li{
+    &.first{
+      width: 15%;
+    }
+    &.last{
+      width: 22%;
+    }
+    a{
+      font-size: 9px;
+    }
+  }
+}
 
 @media (max-width: 900px) {
 }
