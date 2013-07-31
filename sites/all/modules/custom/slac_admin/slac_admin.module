@@ -25,13 +25,25 @@ function slac_admin_js_alter(&$javascript) {
  * Add "Edit slideshow content" for frontpage slideshow contextual links.
  */
 function slac_admin_contextual_links_view_alter(&$element, $items) {
-  if (!isset($element['#links']['views-ui-edit']['href']) || $element['#links']['views-ui-edit']['href'] != 'admin/structure/views/view/frontpage_slideshow/edit') {
-    return;
+  if (_slac_admin_is_contextual_link_a_view($element, 'frontpage_slideshow')) {
+    $element['#links']['edit-content'] = array(
+      'title' => t('Edit slideshow content'),
+      'href' => 'admin/structure/nodequeue/1/view/1',
+      'query' => $element['#links']['views-ui-edit']['query'],
+    );
   }
 
-  $element['#links']['edit-content'] = array(
-    'title' => t('Edit slideshow content'),
-    'href' => 'admin/structure/nodequeue/1/view/1',
-    'query' => $element['#links']['views-ui-edit']['query'],
-  );
+  if (_slac_admin_is_contextual_link_a_view($element, 'slac_in_the_news')) {
+    $element['#links']['edit-content'] = array(
+      'title' => t('Edit listed content'),
+      'href' => 'admin/structure/in_the_news',
+    );
+  }
+}
+
+/**
+ * Helper function for contextual links.
+ */
+function _slac_admin_is_contextual_link_a_view($element, $view_id) {
+  return isset($element['#links']['views-ui-edit']['href']) && $element['#links']['views-ui-edit']['href'] == 'admin/structure/views/view/' . $view_id . '/edit';
 }
