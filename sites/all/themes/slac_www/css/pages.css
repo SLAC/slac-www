@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -326,7 +326,7 @@ a img {
   font-size: 24px;
   color: #474747;
   font-weight: bold;
-  padding-bottom: 15px;
+  margin-bottom: 40px;
   position: relative;
   top: 20px; }
 /* line 225, ../sass/pages.scss */
@@ -369,36 +369,40 @@ a img {
   margin: 19px 0 0 0; }
 
 /* line 261, ../sass/pages.scss */
+.page-news-news-center .three-col-middle {
+  margin-top: 0; }
+
+/* line 265, ../sass/pages.scss */
 a.lightbox-processed {
   display: inline; }
 
 @media (max-width: 600px) {
-  /* line 271, ../sass/pages.scss */
+  /* line 275, ../sass/pages.scss */
   .page-basic .footer .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 274, ../sass/pages.scss */
+    /* line 278, ../sass/pages.scss */
     .page-basic .footer .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0; }
-    /* line 280, ../sass/pages.scss */
+    /* line 284, ../sass/pages.scss */
     .page-basic .footer .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
       margin: 0 12px;
       margin: 0 1% 0 2%;
       width: 97%; }
-  /* line 289, ../sass/pages.scss */
+  /* line 293, ../sass/pages.scss */
   .page-basic .footer .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 294, ../sass/pages.scss */
+  /* line 298, ../sass/pages.scss */
   .page-basic .footer .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 299, ../sass/pages.scss */
+    /* line 303, ../sass/pages.scss */
     .page-basic .footer .panels-flexible-region-last img {
       width: auto; } }
