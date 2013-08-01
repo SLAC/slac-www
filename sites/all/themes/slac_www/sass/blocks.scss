@@ -228,14 +228,14 @@
     line-height: 20px;
     font-size: 13px;  
     color: #474748;
-    width: 95%;
-    margin-left: 5%;
   }
   li{
     list-style-type: disc;
     list-style-position: inside;
     color: #555;
     line-height: 22px;
+    width: 95%;
+    margin-left: 5%;
   }
   a{
     font-size: 13px;
@@ -262,9 +262,12 @@
     border-bottom: 2px solid #831425;
     font-size: 14px;
     text-transform: uppercase;
-    padding: 6px 0 5px 7px;
+    padding: 6px 0 0 7px;
     letter-spacing: 1px;
     color: #7F6332;
+  }
+  .content-block-body{
+    margin-top: 20px;
   }
 }
 
