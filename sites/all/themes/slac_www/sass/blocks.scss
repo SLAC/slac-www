@@ -248,7 +248,8 @@
     margin: 20px 0 10px;
   }
 
-  .page-link{
+  .page-link,
+  .imgLink{
     font-size: 12px;
     margin-top: 15px;
     display: block;
@@ -295,6 +296,11 @@
   }
 }
 
+.images .content-block-body{
+  padding: 20px 1% 0;
+  width: 98%;
+}
+
 .contentInnerBoxStyle4{
   float: left;
   width: 23%; 
@@ -315,6 +321,23 @@
   img{
     width: 100%;
     height: auto;
+  }
+}
+
+.one-image{
+  .content-block-bod-inner{
+    float: left;
+    width: 70%;
+    margin-right: 5%;
+  }  
+  .content-graphic-block{
+    float: right;
+    width: 25%;
+  }
+  .content-graphic-block img{
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
