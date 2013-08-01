@@ -244,7 +244,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ebebeb',GradientType=0 );
     width: 94%;
     padding: 20px 3%;
-    font-size: 14px;
+    font-size: 13px;
     overflow: hidden;
   }
 }
@@ -261,6 +261,9 @@
     color: #555;
     line-height: 22px;
   }
+  a{
+    font-size: 13px;
+  }
   .content-title{
     line-height: normal;
     color: #666;
@@ -269,9 +272,10 @@
     margin: 20px 0 10px;
   }
 
-  .download-link{
-    font-size: 11px;
-    margin-top: 10px;
+  .small-link{
+    font-size: 12px;
+    margin-top: 15px;
+    display: block;
   }
 }
 
