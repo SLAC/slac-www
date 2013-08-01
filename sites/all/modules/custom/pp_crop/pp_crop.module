@@ -1,6 +1,70 @@
 <?php
 
 /**
+ * Implements hook_permission().
+ */
+function pp_crop_permission() {
+  return array(
+    'administer crop styles' =>  array(
+      'title' => t('Administer image crop styles for wysiwyg.'),
+      'description' => t('Set styles that will be used for image croping with wysiwyg.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function pp_crop_menu() {
+  $items = array();
+
+  $items['admin/config/pp_crop/wysiwyg'] = array(
+    'title' => 'Administer image crop styles for wysiwyg.',
+    'description' => 'Set styles that will be used for image croping with wysiwyg.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('pp_crop_wysiwyg_settings_form'),
+    'access arguments' => array('administer crop styles'),
+  );
+
+  return $items;
+}
+
+/**
+ * Form callback for image croping feature in wysiwyg.
+ */
+function pp_crop_wysiwyg_settings_form($form, &$form_state) {
+  $thumbnail_options = array();
+  $epsacrop_styles = _epsacrop_load_styles();
+
+  foreach ($epsacrop_styles as $key => $style) {
+    $thumbnail_options[$key] = $style['name'];
+  }
+
+  $form['crop_styles'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('EPSACrop Styles'),
+    '#options' => $thumbnail_options,
+    '#default_value' => variable_get('pp_crop_wysiwyg_settings', array()),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+    '#submit' => array('pp_crop_wysiwyg_settings_submit_form_submit'),
+  );
+
+  return $form;
+}
+
+/**
+ * Submit callback for wysiwyg settings form.
+ */
+function pp_crop_wysiwyg_settings_submit_form_submit($form, &$form_state) {
+  variable_set('pp_crop_wysiwyg_settings', $form_state['values']['crop_styles']);
+
+  drupal_set_message(t('Your settings have been saved'));
+}
+
+/**
 * Implements hook_entity_info_alter().
 */
 function pp_crop_entity_info_alter(&$entity_info) {
@@ -36,12 +100,24 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
     return;
   }
 
+  $options = array();
+  $styles = variable_get('pp_crop_wysiwyg_settings', array());
   $thumbnail_options = pp_crop_get_images_thumbnails($form, $file);
+
+  foreach ($thumbnail_options as $image_preset => $image_element) {
+    $preset = substr($image_preset, 5);
+    if (!isset($styles[$preset])) {
+      continue;
+    }
+    if ($styles[$preset] != '0') {
+      $options[$image_preset] = $image_element;
+    }
+  }
 
   $form['options']['thumbnails'] = array(
     '#type' => 'radios',
     '#title' => t('Thumbnail'),
-    '#options' => $thumbnail_options,
+    '#options' => $options,
   );
 
   _epsacrop_include_header_html();
@@ -90,7 +166,14 @@ function pp_crop_theme() {
       'variables' => array('style_name' => '', 'file' => NULL),
     ),
     'images_thumbnails_list' => array(
-      'variables' => array('thumbnail_options' => array(), 'file' => NULL),
+      'variables' => array(
+        'thumbnail_options' => array(),
+        'file' => NULL,
+        'entity_type' => 'all',
+        'field_name' => 'all',
+        'bundle' => 'all',
+        'styles' => array(),
+      )
     )
   );
 }
@@ -100,22 +183,32 @@ function theme_images_thumbnails_list($variables) {
     return;
   }
 
+  $entity_type = $variables['entity_type'];
+  $field_name = $variables['field_name'];
+  $bundle = $variables['bundle'];
+
   $file = $variables['file'];
-  $manage_crop_link = "<span class=\"manage-link-wrapper\"></br><a class=\"button manage-crop-link\" href=\"javascript:Drupal.EPSACrop.dialog('all', '"
-    . 'all' . "', '"
-    . 'all' . "', '"
+  $manage_crop_link = "<span class=\"manage-link-wrapper\"></br><a class=\"button manage-crop-link\" href=\"javascript:Drupal.EPSACrop.dialog("
+    . "'" . $variables['entity_type'] . "',"
+    . "'" . $variables['field_name'] . "' ,"
+    . "'" . $variables['bundle'] . "' , '"
     . $file->fid . "', '"
     . image_style_url('epsacrop_thumb', $file->uri) . "', ["
     . $file->image_dimensions['width'] . ","
     . $file->image_dimensions['height'] . "]);\">" . t("Change thumbnails") . "</a></br></br></span>";
 
   $thumbnail_options = $variables['thumbnail_options'];
+
+  // Create a table with thumbnails.
   $rows = array();
   foreach ($thumbnail_options as $image_preset => $image_element) {
-    $rows[] = array(
-      array('data' => $image_preset),
-      array('data' => $image_element)
-    );
+    $image_preset = substr($image_preset, 5);
+    if (in_array($image_preset, $variables['styles'])) {
+      $rows[] = array(
+        array('data' => $image_preset),
+        array('data' => $image_element)
+      );
+    }
   }
   $header = array(t('Image preset'), t('Image thumbnail'));
   $images_table = theme('table', array('header' => $header, 'rows' => $rows));
@@ -257,7 +350,11 @@ function pp_crop_element_process($element, $form_state, $form) {
     'images_thumbnails_list',
     array(
       'thumbnail_options' => $thumbnail_options,
-      'file' => $file
+      'file' => $file,
+      'entity_type' => $element['#entity_type'],
+      'field_name' => $element['#field_name'],
+      'bundle' => $element['#bundle'],
+      'styles' => $styles['styles'],
     )
   );
 
