@@ -210,6 +210,9 @@
 
   .pane-node-field-image {
     margin-bottom: 10px;
+    width: 98%;
+    padding: 1%;
+    background: #EFEFEF;
     img {
       width: 100%;
       height: auto;
@@ -217,7 +220,7 @@
   }
 
 
-/* Shadowed background */
+/* Content styles */
 
 .shaded-background {
   padding-top: 26px;
@@ -243,11 +246,35 @@
     padding: 20px 3%;
     font-size: 14px;
     overflow: hidden;
-    a {
-      font-size: 11px;
-    } 
   }
 }
+
+.pane-node-body{
+  p{
+    line-height: 20px;
+    font-size: 13px;  
+    color: #474748;
+  }
+  li{
+    list-style-type: disc;
+    list-style-position: inside;
+    color: #555;
+    line-height: 22px;
+  }
+  .content-title{
+    line-height: normal;
+    color: #666;
+    font-size: 15px;
+    font-weight:bold;
+    margin: 20px 0 10px;
+  }
+
+  .download-link{
+    font-size: 11px;
+    margin-top: 10px;
+  }
+}
+
 
 /* */
 

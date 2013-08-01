@@ -331,17 +331,20 @@
 
 /* line 211, ../sass/blocks.scss */
 .pane-node-field-image {
-  margin-bottom: 10px; }
-  /* line 213, ../sass/blocks.scss */
+  margin-bottom: 10px;
+  width: 98%;
+  padding: 1%;
+  background: #EFEFEF; }
+  /* line 216, ../sass/blocks.scss */
   .pane-node-field-image img {
     width: 100%;
     height: auto; }
 
-/* Shadowed background */
-/* line 222, ../sass/blocks.scss */
+/* Content styles */
+/* line 225, ../sass/blocks.scss */
 .shaded-background {
   padding-top: 26px; }
-  /* line 224, ../sass/blocks.scss */
+  /* line 227, ../sass/blocks.scss */
   .shaded-background .content-block-heading {
     border-bottom: 2px solid #831425;
     font-size: 14px;
@@ -349,7 +352,7 @@
     padding: 6px 0 5px 7px;
     letter-spacing: 1px;
     color: #7F6332; }
-  /* line 232, ../sass/blocks.scss */
+  /* line 235, ../sass/blocks.scss */
   .shaded-background .content-block-body {
     background: #f6f6f6;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYmViZWIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -364,15 +367,35 @@
     padding: 20px 3%;
     font-size: 14px;
     overflow: hidden; }
-    /* line 246, ../sass/blocks.scss */
-    .shaded-background .content-block-body a {
-      font-size: 11px; }
+
+/* line 253, ../sass/blocks.scss */
+.pane-node-body p {
+  line-height: 20px;
+  font-size: 13px;
+  color: #474748; }
+/* line 258, ../sass/blocks.scss */
+.pane-node-body li {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #555;
+  line-height: 22px; }
+/* line 264, ../sass/blocks.scss */
+.pane-node-body .content-title {
+  line-height: normal;
+  color: #666;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 20px 0 10px; }
+/* line 272, ../sass/blocks.scss */
+.pane-node-body .download-link {
+  font-size: 11px;
+  margin-top: 10px; }
 
 /* */
-/* line 255, ../sass/blocks.scss */
+/* line 282, ../sass/blocks.scss */
 .middletop .highlited {
   margin-bottom: 17px; }
-/* line 259, ../sass/blocks.scss */
+/* line 286, ../sass/blocks.scss */
 .middletop .pane-content {
   line-height: 18px;
   width: 98.5%;
@@ -380,27 +403,27 @@
   border-bottom: 1px solid #bbbdbe;
   overflow: hidden;
   padding-bottom: 22px; }
-/* line 268, ../sass/blocks.scss */
+/* line 295, ../sass/blocks.scss */
 .middletop .views-field-nothing {
   float: left;
   width: 55%; }
-/* line 273, ../sass/blocks.scss */
+/* line 300, ../sass/blocks.scss */
 .middletop .views-field-title a {
   font-size: 16px;
   font-weight: 100;
   line-height: normal;
   padding-bottom: 10px; }
-/* line 280, ../sass/blocks.scss */
+/* line 307, ../sass/blocks.scss */
 .middletop .views-field-field-image {
   float: right;
   width: 42%;
   margin-left: 3%; }
-  /* line 284, ../sass/blocks.scss */
+  /* line 311, ../sass/blocks.scss */
   .middletop .views-field-field-image img {
     width: 100%;
     height: auto; }
 
-/* line 293, ../sass/blocks.scss */
+/* line 320, ../sass/blocks.scss */
 .middleleft .views-row {
   width: 100%;
   border-bottom: 1px solid #bbbdbe;
@@ -409,74 +432,74 @@
   padding-bottom: 15px;
   margin-bottom: 20px;
   overflow: hidden; }
-/* line 303, ../sass/blocks.scss */
+/* line 330, ../sass/blocks.scss */
 .middleleft .views-row-last {
   border: none;
   padding-bottom: 0;
   margin-bottom: 0; }
-/* line 309, ../sass/blocks.scss */
+/* line 336, ../sass/blocks.scss */
 .middleleft .views-field-title a {
   font-size: 13px;
   padding-bottom: 5px; }
-/* line 314, ../sass/blocks.scss */
+/* line 341, ../sass/blocks.scss */
 .middleleft .views-field-nothing {
   float: left;
   width: 55%; }
-/* line 319, ../sass/blocks.scss */
+/* line 346, ../sass/blocks.scss */
 .middleleft .views-field-field-image {
   float: right;
   width: 42%;
   margin-left: 3%; }
-  /* line 323, ../sass/blocks.scss */
+  /* line 350, ../sass/blocks.scss */
   .middleleft .views-field-field-image img {
     width: 100%;
     height: auto; }
 
 /* News list */
-/* line 333, ../sass/blocks.scss */
+/* line 360, ../sass/blocks.scss */
 .news-list {
   margin: 35px 0 0 0; }
-  /* line 335, ../sass/blocks.scss */
+  /* line 362, ../sass/blocks.scss */
   .news-list:first-child {
     margin-top: 0; }
-  /* line 338, ../sass/blocks.scss */
+  /* line 365, ../sass/blocks.scss */
   .news-list .views-row {
     padding: 15px 12px 18px 36px;
     width: auto;
     background: url("../images/dotted-border.png") repeat-x bottom;
     overflow: hidden; }
-  /* line 345, ../sass/blocks.scss */
+  /* line 372, ../sass/blocks.scss */
   .news-list .views-row-last {
     background: none; }
-  /* line 349, ../sass/blocks.scss */
+  /* line 376, ../sass/blocks.scss */
   .news-list .views-field-nothing {
     float: left;
     width: 76%;
     color: #373738;
     font-size: 12px;
     line-height: normal; }
-  /* line 357, ../sass/blocks.scss */
+  /* line 384, ../sass/blocks.scss */
   .news-list .views-field-field-image {
     float: right;
     width: 20%;
     margin-left: 4%; }
-    /* line 361, ../sass/blocks.scss */
+    /* line 388, ../sass/blocks.scss */
     .news-list .views-field-field-image img {
       width: 100%;
       height: auto; }
-  /* line 367, ../sass/blocks.scss */
+  /* line 394, ../sass/blocks.scss */
   .news-list .views-field-created {
     color: #474747;
     font-size: 12px;
     font-weight: bold;
     padding-bottom: 10px; }
-  /* line 374, ../sass/blocks.scss */
+  /* line 401, ../sass/blocks.scss */
   .news-list .views-field-title a {
     display: block;
     font-size: 13px;
     font-weight: bold;
     padding-bottom: 4px; }
-  /* line 381, ../sass/blocks.scss */
+  /* line 408, ../sass/blocks.scss */
   .news-list .views-field-body {
     line-height: 16px;
     color: #474747; }
