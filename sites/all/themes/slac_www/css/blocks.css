@@ -402,17 +402,18 @@
     width: 94%;
     padding: 20px 3%;
     font-size: 13px;
-    overflow: hidden; }
-  /* line 291, ../sass/blocks.scss */
+    overflow: hidden;
+    margin-top: 0; }
+  /* line 292, ../sass/blocks.scss */
   .shaded-background li {
     width: 100%;
     margin: 0; }
 
 /* */
-/* line 301, ../sass/blocks.scss */
+/* line 302, ../sass/blocks.scss */
 .middletop .highlited {
   margin-bottom: 17px; }
-/* line 305, ../sass/blocks.scss */
+/* line 306, ../sass/blocks.scss */
 .middletop .pane-content {
   line-height: 18px;
   width: 98.5%;
@@ -420,27 +421,27 @@
   border-bottom: 1px solid #bbbdbe;
   overflow: hidden;
   padding-bottom: 22px; }
-/* line 314, ../sass/blocks.scss */
+/* line 315, ../sass/blocks.scss */
 .middletop .views-field-nothing {
   float: left;
   width: 55%; }
-/* line 319, ../sass/blocks.scss */
+/* line 320, ../sass/blocks.scss */
 .middletop .views-field-title a {
   font-size: 16px;
   font-weight: 100;
   line-height: normal;
   padding-bottom: 10px; }
-/* line 326, ../sass/blocks.scss */
+/* line 327, ../sass/blocks.scss */
 .middletop .views-field-field-image {
   float: right;
   width: 42%;
   margin-left: 3%; }
-  /* line 330, ../sass/blocks.scss */
+  /* line 331, ../sass/blocks.scss */
   .middletop .views-field-field-image img {
     width: 100%;
     height: auto; }
 
-/* line 339, ../sass/blocks.scss */
+/* line 340, ../sass/blocks.scss */
 .middleleft .views-row {
   width: 100%;
   border-bottom: 1px solid #bbbdbe;
@@ -449,74 +450,74 @@
   padding-bottom: 15px;
   margin-bottom: 20px;
   overflow: hidden; }
-/* line 349, ../sass/blocks.scss */
+/* line 350, ../sass/blocks.scss */
 .middleleft .views-row-last {
   border: none;
   padding-bottom: 0;
   margin-bottom: 0; }
-/* line 355, ../sass/blocks.scss */
+/* line 356, ../sass/blocks.scss */
 .middleleft .views-field-title a {
   font-size: 13px;
   padding-bottom: 5px; }
-/* line 360, ../sass/blocks.scss */
+/* line 361, ../sass/blocks.scss */
 .middleleft .views-field-nothing {
   float: left;
   width: 55%; }
-/* line 365, ../sass/blocks.scss */
+/* line 366, ../sass/blocks.scss */
 .middleleft .views-field-field-image {
   float: right;
   width: 42%;
   margin-left: 3%; }
-  /* line 369, ../sass/blocks.scss */
+  /* line 370, ../sass/blocks.scss */
   .middleleft .views-field-field-image img {
     width: 100%;
     height: auto; }
 
 /* News list */
-/* line 379, ../sass/blocks.scss */
+/* line 380, ../sass/blocks.scss */
 .news-list {
   margin: 35px 0 0 0; }
-  /* line 381, ../sass/blocks.scss */
+  /* line 382, ../sass/blocks.scss */
   .news-list:first-child {
     margin-top: 0; }
-  /* line 384, ../sass/blocks.scss */
+  /* line 385, ../sass/blocks.scss */
   .news-list .views-row {
     padding: 15px 12px 18px 36px;
     width: auto;
     background: url("../images/dotted-border.png") repeat-x bottom;
     overflow: hidden; }
-  /* line 391, ../sass/blocks.scss */
+  /* line 392, ../sass/blocks.scss */
   .news-list .views-row-last {
     background: none; }
-  /* line 395, ../sass/blocks.scss */
+  /* line 396, ../sass/blocks.scss */
   .news-list .views-field-nothing {
     float: left;
     width: 76%;
     color: #373738;
     font-size: 12px;
     line-height: normal; }
-  /* line 403, ../sass/blocks.scss */
+  /* line 404, ../sass/blocks.scss */
   .news-list .views-field-field-image {
     float: right;
     width: 20%;
     margin-left: 4%; }
-    /* line 407, ../sass/blocks.scss */
+    /* line 408, ../sass/blocks.scss */
     .news-list .views-field-field-image img {
       width: 100%;
       height: auto; }
-  /* line 413, ../sass/blocks.scss */
+  /* line 414, ../sass/blocks.scss */
   .news-list .views-field-created {
     color: #474747;
     font-size: 12px;
     font-weight: bold;
     padding-bottom: 10px; }
-  /* line 420, ../sass/blocks.scss */
+  /* line 421, ../sass/blocks.scss */
   .news-list .views-field-title a {
     display: block;
     font-size: 13px;
     font-weight: bold;
     padding-bottom: 4px; }
-  /* line 427, ../sass/blocks.scss */
+  /* line 428, ../sass/blocks.scss */
   .news-list .views-field-body {
     line-height: 16px;
     color: #474747; }
