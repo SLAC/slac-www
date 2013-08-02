@@ -66,6 +66,9 @@
       text-decoration: none;
     }
   }
+  .depth-2.active-trail{
+  background-color: #eeeeee;
+  }
 }
 
 /* */
@@ -282,7 +285,6 @@
   .content-block-heading {
     border-bottom: 2px solid #831425;
     font-size: 14px;
-    text-transform: uppercase;
     padding: 6px 0 2px 7px;
     letter-spacing: 1px;
     color: #7F6332;
@@ -345,6 +347,10 @@
 }
 
 .one-image{
+  .content-block-body{
+    width: 97%;
+    padding: 10px 1.5%;
+  }
   .content-block-body-inner{
     float: left;
     width: 70%;

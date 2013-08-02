@@ -263,9 +263,28 @@ a.lightbox-processed{
   display:inline;
 }
 
+/* Image popup */
 
-
-
+#imageData{
+  position:relative;  
+  padding: 0 0 45px 0;
+  #bottomNav{
+    margin: 0;
+    height:auto;
+    position:absolute;
+    bottom: 3px;
+    right: 5px;
+  }
+  #imageDetails{
+    width: 95%;
+    margin: 0 3%;
+    p{
+      text-align:left;
+      font-weight: normal;
+    }
+  }
+}  
+  
 @media (max-width: 700px) {
   .pane-menu-menu-footer-menu .menu li{
     &.first{
