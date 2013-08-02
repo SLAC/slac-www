@@ -327,6 +327,7 @@ function slac_frontpage_slideshow_views_slideshow_panes_content_type_render($sub
  */
 function slac_frontpage_slideshow_views_slideshow_panes_add_defaults(&$conf, $view) {
   views_content_views_panes_add_defaults($conf, $view);
+    
   $conf += array('slideshow_configuration' => '');
 }
 
@@ -334,14 +335,20 @@ function slac_frontpage_slideshow_views_slideshow_panes_add_defaults(&$conf, $vi
  * Returns an edit form for a block.
  */
 function slac_frontpage_slideshow_views_slideshow_panes_content_type_edit_form($form, &$form_state) {
+  $position = array('left', 'right');
+  $color = array('#E17000', '#6E2585', '#0099CC', '#69BE28');
+  for ($i = 0; $i < 10; $i++) {
+    $config[$i] = $position[array_rand($position)] . ',' . $color[array_rand($color)];
+  }
+
   $form = views_content_views_panes_content_type_edit_form($form, $form_state);
 
   $conf = $form_state['conf'];
   $form['slideshow_configuration'] = array(
     '#title' => t('Slideshow'),
     '#type' => 'textarea',
-    '#description' => t('left|right,{color}, one per line'),
-    '#default_value' => isset($conf['slideshow_configuration']) ? $conf['slideshow_configuration'] : '',
+    '#description' => t('Place the position and color of text block for the slideshow here in the format of: left|right,{color}, one per line. For example: left,#FF0000'),
+    '#default_value' => ((bool) $conf['slideshow_configuration']) ? $conf['slideshow_configuration'] : implode("\r\n", $config),
   );
 
   return $form;
