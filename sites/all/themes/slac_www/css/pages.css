@@ -372,45 +372,46 @@ a.lightbox-processed {
 /* line 268, ../sass/pages.scss */
 #imageData {
   position: relative;
-  padding: 0 0 45px 0; }
-  /* line 271, ../sass/pages.scss */
+  padding: 0 0 45px 0;
+  overflow: hidden; }
+  /* line 272, ../sass/pages.scss */
   #imageData #bottomNav {
     margin: 0;
     height: auto;
     position: absolute;
     bottom: 3px;
     right: 5px; }
-  /* line 278, ../sass/pages.scss */
+  /* line 279, ../sass/pages.scss */
   #imageData #imageDetails {
     width: 95%;
     margin: 0 3%; }
-    /* line 281, ../sass/pages.scss */
+    /* line 282, ../sass/pages.scss */
     #imageData #imageDetails p {
       text-align: left;
       font-weight: normal; }
 
 @media (max-width: 700px) {
-  /* line 290, ../sass/pages.scss */
+  /* line 291, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.first {
     width: 15%; }
-  /* line 293, ../sass/pages.scss */
+  /* line 294, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.last {
     width: 22%; }
-  /* line 296, ../sass/pages.scss */
+  /* line 297, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li a {
     font-size: 9px; } }
 @media (max-width: 600px) {
-  /* line 307, ../sass/pages.scss */
+  /* line 308, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 310, ../sass/pages.scss */
+    /* line 311, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 317, ../sass/pages.scss */
+    /* line 318, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -418,16 +419,16 @@ a.lightbox-processed {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 327, ../sass/pages.scss */
+  /* line 328, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 332, ../sass/pages.scss */
+  /* line 333, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 337, ../sass/pages.scss */
+    /* line 338, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; } }
