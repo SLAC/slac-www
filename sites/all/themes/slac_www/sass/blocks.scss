@@ -2,6 +2,9 @@
 
 
 /* Slider */
+.slider {
+  position: relative;
+}
 
 .front-slider {
   padding-bottom: 15px;
@@ -15,6 +18,63 @@
   .views-field-field-image {
     float: left;
     width: 62%;
+  }
+  .views-slideshow-controls-text span {
+    position: absolute;
+    top: 40%;
+    z-index: 99;
+    width: 30px;
+    height: 74px;
+    display: block;
+    overflow: hidden;
+    background: url('../images/slider-arrow-bg.png') repeat;
+    @include rounded_corners(10px);   
+    a {
+      display: block;
+      background: url('../images/slider-back.png') no-repeat center;
+      height: 1px;
+      padding: 73px 0 0 0;
+    }
+  }
+  .views-slideshow-controls-text-previous {
+    left: 20px;
+  }
+  .views-slideshow-controls-text-next {
+    right: 20px;
+  }
+  span.views-slideshow-controls-text-next a{
+    background-image: url('../images/slider-next.png');
+  }
+  span.views-slideshow-controls-text-pause {
+    display: none;
+    a {
+      display: none;
+    }
+  }
+  .views-slideshow-pager-fields {
+    background:#D5D8DA;
+    padding:5px;
+  }
+  .views-slideshow-pager-fields {
+    position: absolute;
+    left: 40%;
+    bottom: 18px;
+    z-index: 99;
+    margin: 5px 10px 0 0;
+  }
+  .views-slideshow-pager-field-item {
+    float: left;
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+    text-indent: 100px;
+    background: #b8b9bb;
+    border: 1px solid #666;
+    margin: 5px;
+    &.active {
+      background: white;
+      border:1px solid #666;
+    }
   }
 }
 
