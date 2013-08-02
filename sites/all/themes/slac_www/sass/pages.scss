@@ -137,43 +137,33 @@ a img{
 
 /* Main menu */
 
-.main-menu {
+
+  .main-menu {
   position: relative;
-  z-index: 11; 
+  z-index: 11;
   width: 100%;
   float: left;
   height: 31px;
   padding: 0 0 5px 0;
-  background: url("../images/menu-bg.png") repeat-x bottom; 
-  ul{
+  background: url("../images/menu-bg.png") repeat-x bottom;
+  ul {
     width: 100%;
-    border: none; 
-    .nice-menu li.depth-1 {
-      background: url("../images/menu-del.png") no-repeat left center;  
+    border: none;
+    &.nice-menu li.depth-1 {
+      background: url("../images/menu-del.png") no-repeat left center;
       width: 16.66%;
-      height: 31px; 
+      height: 31px;
       border: none;
     }
-    li.depth-1{
-      &.first {
-        background: transparent; 
-      }
-      &:hover,
-      &.active-trail{
-        height: 30px;
-        border-bottom: 2px solid #93303f; 
-      }
+    li.depth-1.first {
+      background: transparent;
     }
     ul {
       padding-top: 2px;
       top: 32px;
-      padding: 3px 0 0; 
-      width: 100%; 
+      padding: 3px 0 0;
+      width: 100%;
     }
-  }
-  .depth-1:hover > a,
-  .active-trail a{
-    color: #881728; 
   }
   .depth-1 > a {
     font-size: 12px;
@@ -183,44 +173,56 @@ a img{
     padding: 0 0 0 17px;
     display: block;
     height: 31px;
-    line-height: 31px; 
+    line-height: 31px;
   }
-  .depth-2{
+  ul li.depth-1 {
+    &:hover, &.active-trail {
+      height: 30px;
+      border-bottom: 2px solid #93303f;
+    }
+  }
+  .depth-1:hover > a, .active-trail a {
+    color: #881728;
+  }
+
+
+
+  .depth-2 {
     width: 92%;
     margin: 0;
     padding: 0;
     height: auto;
     padding: 0 4%;
     background: #efefef;
-    border-top: none; 
-    a{
+    border-top: none;
+    a {
       line-height: normal;
       height: auto;
       padding: 7px 0;
-      color: #881728; 
-      &:hover{
+      color: #881728;
+      &:hover {
         text-decoration: underline;
       }
     }
-    &:hover,
-    &.active-trail{
+    &:hover, &.active-trail {
       background: #fff;
     }
   }
 }
 
-.pane-page-content > .pane-title {
-  font-size: 24px;
-  color: #474747;
-  font-weight: bold;
-  margin-bottom: 40px;
-  position: relative;
-  top: 20px; 
+.pane-page-content > {
+  .pane-title {
+    font-size: 24px;
+    color: #474747;
+    font-weight: bold;
+    margin-bottom: 40px;
+    position: relative;
+    top: 20px;
   }
-  
-.pane-page-content > .pane-content {
-  clear: both; 
+  .pane-content {
+    clear: both;
   }
+}
   
 /* Layouts */
 
