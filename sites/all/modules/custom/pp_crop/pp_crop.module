@@ -18,8 +18,8 @@ function pp_crop_permission() {
 function pp_crop_menu() {
   $items = array();
 
-  $items['admin/config/pp_crop/wysiwyg'] = array(
-    'title' => 'Administer image crop styles for wysiwyg.',
+  $items['admin/config/media/pp_crop'] = array(
+    'title' => 'PP Crop',
     'description' => 'Set styles that will be used for image croping with wysiwyg.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('pp_crop_wysiwyg_settings_form'),
@@ -43,6 +43,7 @@ function pp_crop_wysiwyg_settings_form($form, &$form_state) {
   $form['crop_styles'] = array(
     '#type' => 'checkboxes',
     '#title' => t('EPSACrop Styles'),
+    '#description' => t('Set styles that will be used for image croping with wysiwyg.'),
     '#options' => $thumbnail_options,
     '#default_value' => variable_get('pp_crop_wysiwyg_settings', array()),
   );
@@ -128,7 +129,7 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
     . $file->fid . "', '"
     . image_style_url('epsacrop_thumb', $file->uri) . "', ["
     . $file->image_dimensions['width'] . ","
-    . $file->image_dimensions['height'] . "]);\">" . t("manage image crops") . "</a>";
+    . $file->image_dimensions['height'] . "]);\">" . t("manage image crops") . "</a><br><br>";
   $form['crop'] = array(
     '#type' => 'markup',
     '#markup' => $markup
@@ -335,6 +336,12 @@ function pp_crop_element_process($element, $form_state, $form) {
 
   if(!isset($element['#file']) || !is_object($element['#file'])) {
     return $element;
+  }
+
+  // Unset epsacrop element.
+  // Instead of epsacrop element will be used "Manage thumbnails" element.
+  if (isset($element['epsacrop'])) {
+    unset($element['epsacrop']);
   }
 
   $file = $element['#file'];

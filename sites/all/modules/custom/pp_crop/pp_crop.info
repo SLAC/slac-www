@@ -3,5 +3,9 @@ description = "Provide posibility to crop images on upload with media browser."
 package = SLAC
 dependencies[] = file_entity
 dependencies[] = lightbox2
+dependencies[] = epsacrop
+dependencies[] = media
 dependencies[] = download_file
 core = 7.x
+
+configure = admin/config/media/pp_crop

@@ -21,17 +21,18 @@
          $('#' + blockId).dialog('open');
       });
       $('a.manage-crop-link').click(function(event) {
-         $('[id^=view-thumbnails-][id$=-block]').dialog('close');
-      });
-      Drupal.EPSACropOld = jQuery.extend(true, {}, Drupal.EPSACrop);
-      Drupal.EPSACrop.dialog = function(type_name, field_name, bundle, delta, img, trueSize) {
+        $('[id^=view-thumbnails-][id$=-block]').dialog('close');
+
+        Drupal.EPSACropOld = jQuery.extend(true, {}, Drupal.EPSACrop);
+        Drupal.EPSACrop.dialog = function(type_name, field_name, bundle, delta, img, trueSize) {
         Drupal.EPSACropOld.dialog(type_name, field_name, bundle, delta, img, trueSize);
-        $('#EPSACropDialog').bind('dialogclose', function(){
-          $(document).ajaxComplete(function() {
-            document.location.reload();
+          $('#EPSACropDialog').bind('dialogclose', function(){
+            $(document).ajaxComplete(function() {
+              document.location.reload();
+            });
           });
-        });
-      }
+        }
+      });
     }
   }
 
