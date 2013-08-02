@@ -297,7 +297,7 @@
 .related-links .field-label,
 .related-links .pane-title {
   border-bottom-color: #6d6c6c;
-  color: #6d6c6c;
+  color: #807f7f;
   font-size: 11px;
   text-transform: uppercase;
   line-height: normal; }
@@ -348,10 +348,10 @@
 
 /* line 229, ../sass/blocks.scss */
 .pane-node-field-image {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   width: 98%;
   padding: 1%;
-  background: #EFEFEF; }
+  background: #e0e0e1; }
   /* line 234, ../sass/blocks.scss */
   .pane-node-field-image img {
     width: 100%;
@@ -367,7 +367,7 @@
 .pane-node-body li {
   list-style-type: disc;
   list-style-position: inside;
-  color: #555;
+  color: #79182A;
   line-height: 22px;
   width: 95%;
   margin-left: 5%; }
@@ -398,7 +398,7 @@
     border-bottom: 2px solid #831425;
     font-size: 14px;
     text-transform: uppercase;
-    padding: 6px 0 0 7px;
+    padding: 6px 0 2px 7px;
     letter-spacing: 1px;
     color: #7F6332; }
   /* line 290, ../sass/blocks.scss */
