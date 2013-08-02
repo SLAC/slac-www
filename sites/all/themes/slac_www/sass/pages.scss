@@ -157,14 +157,19 @@ a img{
     li {
       border: none;
     }
-  }
-
-  li.depth-1{
-  background: url('../images/menu-del.png') left center;
-  &.first{
-    background: transparent;
+    li.depth-1{
+    background: url('../images/menu-del.png') no-repeat left center;
+    &.first{
+      background: transparent;
+      }
     }
   }
+}
+
+
+
+.header .main-menu li.depth-1, .header .main-menu li.depth-1:hover {
+background: url("../images/menu-del.png") no-repeat left center;
 }
 
 .main-menu ul li.menuparent {
@@ -252,7 +257,7 @@ a img{
 .frontpage-middle-col{  
   line-height: 18px;
   font-size: 13px;
-  @include box-shadow(3px, 3px, 2px, 1px, #EFEFEF);
+  @include box-shadow(2px, 2px, 2px, 1px, #e4e4e4);
   padding-bottom: 10px;
 }
 
