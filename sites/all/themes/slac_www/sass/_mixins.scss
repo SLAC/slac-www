@@ -76,10 +76,14 @@
     @include zen-grid-item(15, 5);
   }
 
-  .general-two-col .left{
+  .general-two-col .pane-page-content > .pane-title{
+    @include zen-grid-item(24, 1);
+  }
+
+  .general-two-col .general-left{
     @include zen-grid-item(18, 1);
   }
-  .general-two-col .right{
+  .general-two-col .general-left{
     @include zen-grid-item(6, 19);
   }
 
