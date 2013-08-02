@@ -34,6 +34,17 @@ function media_youtube_customization_field_formatter_info() {
   );
 }
 
+function media_youtube_customization_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'file_entity_edit' && $form['type']['#value'] == 'video' && isset($form['filename'])) {
+    // Unset filename field.
+    unset($form['filename']);
+    if (isset($form['field_video_description']['#weight'])) {
+      // Change weight for Video description field.
+      $form['field_video_description']['#weight'] = 1;
+    }
+  }
+}
+
 /**
  * Implements hook_field_formatter_view().
  */
@@ -62,6 +73,18 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
       // Get the render array for the thumbnail image
       $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
 
+      $video_title = '';
+      if (isset($item['field_title'][LANGUAGE_NONE][0]['value'])) {
+        $video_title = $item['field_title'][LANGUAGE_NONE][0]['value'];
+      }
+
+      $video_description = '';
+      if (isset($item['field_video_description'][LANGUAGE_NONE][0]['value'])) {
+        $video_description = $item['field_video_description'][LANGUAGE_NONE][0]['value'];
+      }
+
+      $caption = '<p>' . $video_title . '</p><p>' . $video_description . '</p>';
+
       // Wrap the image in a link to trigger lightbox.
       $render_video = array(
         '#type' => 'link',
@@ -74,15 +97,10 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
               'lightbox',
               'youtube-thumbnail'
             ),
-            'rel' => array('lightvideo'),
+            'rel' => array('lightvideo[]['. $caption .']'),
           ),
         ),
       );
-
-      $video_title = '';
-      if (isset($item['field_title'][LANGUAGE_NONE][0]['value'])) {
-        $video_title = $item['field_title'][LANGUAGE_NONE][0]['value'];
-      }
 
       // Wrap the title in a link to trigger lightbox.
       $title = array(
@@ -96,7 +114,7 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
               'lightbox',
               'youtube-title'
             ),
-            'rel' => array('lightvideo'),
+            'rel' => array('lightvideo[]['. $caption .']'),
           ),
         ),
       );
