@@ -323,24 +323,25 @@ a img {
     border: 1px solid #ccc;
     border-top: none; }
     /* line 217, ../sass/pages.scss */
-    .header .main-menu ul ul li:hover {
-      background: #fff; }
-    /* line 220, ../sass/pages.scss */
     .header .main-menu ul ul li a {
       line-height: normal;
       height: auto;
       padding: 7px 0;
       color: #881728; }
-      /* line 225, ../sass/pages.scss */
+      /* line 222, ../sass/pages.scss */
       .header .main-menu ul ul li a:hover {
         text-decoration: underline; }
-/* line 231, ../sass/pages.scss */
+  /* line 228, ../sass/pages.scss */
+  .header .main-menu ul ul .depth-2:hover
+  .depth-2.active-trail {
+    background: #fff; }
+/* line 232, ../sass/pages.scss */
 .header .main-menu ul li:hover li {
   height: auto;
   border: 1px solid #ccc;
   border-top: none; }
 
-/* line 239, ../sass/pages.scss */
+/* line 240, ../sass/pages.scss */
 .pane-page-content > .pane-title {
   font-size: 24px;
   color: #474747;
@@ -348,16 +349,16 @@ a img {
   margin-bottom: 40px;
   position: relative;
   top: 20px; }
-/* line 247, ../sass/pages.scss */
+/* line 248, ../sass/pages.scss */
 .pane-page-content > .pane-content {
   clear: both; }
 
 /* Layouts */
-/* line 254, ../sass/pages.scss */
+/* line 255, ../sass/pages.scss */
 .panel-frontpage .center-wrapper {
   clear: both; }
 
-/* line 257, ../sass/pages.scss */
+/* line 258, ../sass/pages.scss */
 .frontpage-middle-col {
   line-height: 18px;
   font-size: 13px;
@@ -368,7 +369,7 @@ a img {
   box-shadow: 2px 2px 2px 1px #e4e4e4;
   padding-bottom: 10px; }
 
-/* line 264, ../sass/pages.scss */
+/* line 265, ../sass/pages.scss */
 .frontpage-middle-left {
   width: 66%;
   float: left;
@@ -376,47 +377,47 @@ a img {
   border-right: 1px solid #bbbdbe;
   padding-right: 3%; }
 
-/* line 272, ../sass/pages.scss */
+/* line 273, ../sass/pages.scss */
 .frontpage-middle-right {
   width: 26%;
   float: right;
   margin-left: 2.5%; }
 
-/* line 278, ../sass/pages.scss */
+/* line 279, ../sass/pages.scss */
 .three-col-middle {
   font-size: 13px;
   margin: 19px 0 0 0; }
 
-/* line 283, ../sass/pages.scss */
+/* line 284, ../sass/pages.scss */
 .page-news-news-center .three-col-middle {
   margin-top: 0; }
 
-/* line 287, ../sass/pages.scss */
+/* line 288, ../sass/pages.scss */
 a.lightbox-processed {
   display: inline; }
 
 @media (max-width: 700px) {
-  /* line 296, ../sass/pages.scss */
+  /* line 297, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.first {
     width: 15%; }
-  /* line 299, ../sass/pages.scss */
+  /* line 300, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.last {
     width: 22%; }
-  /* line 302, ../sass/pages.scss */
+  /* line 303, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li a {
     font-size: 9px; } }
 @media (max-width: 600px) {
-  /* line 313, ../sass/pages.scss */
+  /* line 314, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 316, ../sass/pages.scss */
+    /* line 317, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 323, ../sass/pages.scss */
+    /* line 324, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -424,16 +425,16 @@ a.lightbox-processed {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 333, ../sass/pages.scss */
+  /* line 334, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 338, ../sass/pages.scss */
+  /* line 339, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 343, ../sass/pages.scss */
+    /* line 344, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; } }

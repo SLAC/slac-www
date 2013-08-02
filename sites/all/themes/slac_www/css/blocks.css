@@ -162,7 +162,7 @@
   margin: 0; }
   /* line 45, ../sass/blocks.scss */
   .left-menu.highlited .pane-title a {
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 14px;
     padding-left: 8px;
     color: #881728; }

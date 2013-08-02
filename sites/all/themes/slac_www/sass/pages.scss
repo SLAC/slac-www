@@ -214,9 +214,6 @@ background: url("../images/menu-del.png") no-repeat left center;
       background: #efefef;
       border: 1px solid #ccc;
       border-top:  none;
-      &:hover {
-        background: #fff;
-      }
       a {
         line-height: normal;
         height: auto;
@@ -226,6 +223,10 @@ background: url("../images/menu-del.png") no-repeat left center;
           text-decoration: underline;
         }
       }
+    }
+    .depth-2:hover
+    .depth-2.active-trail{
+      background: #fff;
     }
   }
   li:hover li {
