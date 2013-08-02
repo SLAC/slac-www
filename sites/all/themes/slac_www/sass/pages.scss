@@ -183,6 +183,9 @@ background: url("../images/menu-del.png") no-repeat left center;
   li {
     width: 16.66%;
     height: 31px;
+    &.depth-1, &.depth-1:hover{
+      background: url("../images/menu-del.png") no-repeat left center;
+    }
   }
   a {
     font-size: 12px;
@@ -223,10 +226,10 @@ background: url("../images/menu-del.png") no-repeat left center;
           text-decoration: underline;
         }
       }
-    }
-    .depth-2:hover
-    .depth-2.active-trail{
-      background: #fff;
+      .depth-2:hover
+      .depth-2.active-trail{
+        background: #fff;
+      }
     }
   }
   li:hover li {
