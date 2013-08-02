@@ -83,6 +83,9 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
         $video_description = $item['field_video_description'][LANGUAGE_NONE][0]['value'];
       }
 
+      // Remove new lines from description.
+      $video_description = trim(preg_replace('/\s+/', ' ', $video_description));
+
       $caption = '<p>' . $video_title . '</p><p>' . $video_description . '</p>';
 
       // Wrap the image in a link to trigger lightbox.
