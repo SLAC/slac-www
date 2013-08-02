@@ -78,6 +78,7 @@
   margin-bottom: 0;
 }
 
+
 .highlited {
   margin-bottom: 16px;
   .field-label, 
@@ -151,14 +152,14 @@
 }
 
 .bg-list {
-  .areYouText, .social_links {
+  .field-item, .social_links {
     padding: 10px 0;
     margin-bottom: 0;
     background: white url('../images/list-bg.png') repeat-x bottom;
     width: 100%;
     overflow: hidden;
   }
-  .areYouText a {
+  .field-item a {
     @include links();
     display: block;
     width: 90%;
