@@ -150,7 +150,7 @@
   word-wrap: break-word; }
 
 /* line 86, ../sass/_mixins.scss */
-.general-two-col .general-left {
+.general-two-col .general-right {
   float: left;
   width: 25%;
   margin-left: 75%;
