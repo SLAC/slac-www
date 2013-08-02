@@ -8,7 +8,7 @@
   clear: both; }
 
 /* Front page layout */
-/* line 45, ../sass/_mixins.scss */
+/* line 45, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
 .slider {
   float: left;
   width: 100%;
@@ -22,7 +22,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 49, ../sass/_mixins.scss */
+/* line 49, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
 .frontpage-left-col {
   float: left;
   width: 16.66667%;
@@ -36,7 +36,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 53, ../sass/_mixins.scss */
+/* line 53, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
 .frontpage-middle-col {
   float: left;
   width: 62.5%;
@@ -50,7 +50,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 57, ../sass/_mixins.scss */
+/* line 57, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
 .frontpage-right-col {
   float: left;
   width: 20.83333%;
@@ -65,7 +65,7 @@
   word-wrap: break-word; }
 
 /* Three col layout */
-/* line 63, ../sass/_mixins.scss */
+/* line 63, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
 .three-col .three-col-left {
   float: left;
   width: 16.66667%;
@@ -79,7 +79,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 67, ../sass/_mixins.scss */
+/* line 67, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
 .three-col .three-col-middle {
   float: left;
   width: 62.5%;
@@ -93,7 +93,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 71, ../sass/_mixins.scss */
+/* line 71, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
 .three-col .three-col-right {
   float: left;
   width: 20.83333%;
@@ -107,12 +107,40 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 75, ../sass/_mixins.scss */
+/* line 75, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
 .pane-page-content > .pane-title {
   float: left;
   width: 62.5%;
   margin-left: 16.66667%;
   margin-right: -79.16667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 79, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+.general-two-col .left {
+  float: left;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: -75%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 82, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+.general-two-col .right {
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;

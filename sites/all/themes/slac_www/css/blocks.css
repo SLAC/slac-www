@@ -121,6 +121,34 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
+/* line 79, ../sass/_mixins.scss */
+.general-two-col .left {
+  float: left;
+  width: 75%;
+  margin-left: 0%;
+  margin-right: -75%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 82, ../sass/_mixins.scss */
+.general-two-col .right {
+  float: left;
+  width: 25%;
+  margin-left: 75%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
 /* Slider */
 /* line 6, ../sass/blocks.scss */
 .front-slider {
