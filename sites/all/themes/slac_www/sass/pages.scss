@@ -156,17 +156,21 @@ a img{
     }
     li {
       border: none;
-      background: transparent;
+    }
+  }
+
+  li.depth-1{
+  background: url('../images/menu-del.png') left center;
+  &.first{
+    background: transparent;
     }
   }
 }
 
 .main-menu ul li.menuparent {
   border: none;
-  background: transparent;
   &:hover {
     border: none;
-    background: transparent;
   }
 }
 
@@ -188,6 +192,9 @@ a img{
   li:hover {
     height: 30px;
     border-bottom: 2px solid #93303f;
+    a{
+      color: #881728;
+    }
   }
   ul {
     padding-top: 2px;
