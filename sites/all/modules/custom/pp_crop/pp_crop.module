@@ -184,10 +184,6 @@ function theme_images_thumbnails_list($variables) {
     return;
   }
 
-  $entity_type = $variables['entity_type'];
-  $field_name = $variables['field_name'];
-  $bundle = $variables['bundle'];
-
   $file = $variables['file'];
   $manage_crop_link = "<span class=\"manage-link-wrapper\"></br><a class=\"button manage-crop-link\" href=\"javascript:Drupal.EPSACrop.dialog("
     . "'" . $variables['entity_type'] . "',"
