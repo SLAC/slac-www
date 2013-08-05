@@ -302,6 +302,10 @@
 /* Content styles */
 
 
+.google-maps{
+  margin-top: 15px;
+}
+
 .pane-node-body{
   p{
     line-height: 20px;
@@ -430,6 +434,16 @@
   height: 1px;
   clear: both;
 }
+
+#orgwrapper{
+  clear:both;
+  overflow:hidden;
+  > div{
+    float: left;
+    width: 33%;
+    text-align:center;
+  }
+}  
 
 
 /* */
