@@ -450,28 +450,58 @@ a.lightbox-processed {
     border-top: 1px solid #ada47d;
     border-right: 1px solid #ada47d; }
 
+/* Past lectures */
+/* line 315, ../sass/pages.scss */
+table {
+  border: 2px solid #e7e7e7;
+  border-bottom: none; }
+  /* line 318, ../sass/pages.scss */
+  table th {
+    border: none;
+    border-bottom: 2px solid #e7e7e7;
+    padding: 10px 8px;
+    font-weight: bold;
+    color: #000;
+    background: #f7f7f7; }
+    /* line 325, ../sass/pages.scss */
+    table th a {
+      color: #474748;
+      font-size: 14px; }
+  /* line 330, ../sass/pages.scss */
+  table tr {
+    border: none; }
+  /* line 333, ../sass/pages.scss */
+  table .even td {
+    background: #fff; }
+  /* line 336, ../sass/pages.scss */
+  table td {
+    padding: 10px 8px;
+    background: #f7f7f7;
+    color: #6A6A6B;
+    font-size: 12px; }
+
 @media (max-width: 700px) {
-  /* line 314, ../sass/pages.scss */
+  /* line 346, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.first {
     width: 15%; }
-  /* line 317, ../sass/pages.scss */
+  /* line 349, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.last {
     width: 22%; }
-  /* line 320, ../sass/pages.scss */
+  /* line 352, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li a {
     font-size: 9px; } }
 @media (max-width: 600px) {
-  /* line 331, ../sass/pages.scss */
+  /* line 363, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 334, ../sass/pages.scss */
+    /* line 366, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 341, ../sass/pages.scss */
+    /* line 373, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -479,16 +509,16 @@ a.lightbox-processed {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 351, ../sass/pages.scss */
+  /* line 383, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 356, ../sass/pages.scss */
+  /* line 388, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 361, ../sass/pages.scss */
+    /* line 393, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; } }

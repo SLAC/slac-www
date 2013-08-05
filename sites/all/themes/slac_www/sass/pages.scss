@@ -308,6 +308,38 @@ a.lightbox-processed{
   }
 }
 
+/* Past lectures */
+
+.page-past-lectures{}
+
+table{
+  border: 2px solid #e7e7e7;
+  border-bottom: none;
+  th{
+    border: none;
+    border-bottom: 2px solid #e7e7e7;
+    padding: 10px 8px;
+    font-weight: bold;
+    color: #000;
+    background: #f7f7f7;
+    a{
+      color: #474748;
+      font-size: 14px;
+    }
+  }
+  tr{
+    border:none;
+  }
+  .even td{
+    background: #fff;
+  }
+  td{
+    padding: 10px 8px;
+    background: #f7f7f7;
+    color: #6A6A6B;
+    font-size: 12px;
+  }
+}
   
 @media (max-width: 700px) {
   .pane-menu-menu-footer-menu .menu li{
