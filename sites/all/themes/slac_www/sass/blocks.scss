@@ -123,19 +123,19 @@
       text-decoration: none;
     }
   }
-  .depth-2.active-trail
+  .depth-2.active-trail,
   .depth-2.active{
     background-color: #eeeeee;
   }
-  .depth-2.expanded{
-    background: #f5f5f5;
-    padding: 9px 0;
-    > a {
-      line-height: 22px;
-      background: #e7e7e7;
-      margin-bottom: 9px;
-    }
-  }
+  // .depth-2.expanded{
+  //   background: #f5f5f5;
+  //   padding: 9px 0;
+  //   > a {
+  //     line-height: 22px;
+  //     background: #e7e7e7;
+  //     margin-bottom: 9px;
+  //   }
+  // }
 
   li.depth-3{
     border:none;
@@ -332,6 +332,7 @@
     line-height: 20px;
     font-size: 13px;  
     color: #474748;
+    margin-bottom: 10px; 
   }
   li{
     list-style-type: disc;
