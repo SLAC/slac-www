@@ -80,8 +80,8 @@
     @include zen-grid-item(24, 1);
   }
 
-  .page-general-site-indexaspx .pane-page-content > .pane-content,
-  .page-general-site-indexaspx .pane-page-content > .pane-title{
+  .2-col-basic .pane-page-content > .pane-content,
+  .2-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(21, 2);
   }
 

@@ -450,6 +450,35 @@ table{
 }
 
 
+.centerDiv{
+  text-align:center;
+  margin: 20px 0 30px;
+}
+  
+a.imageLessButton:hover {
+  background-color: #dfdfdf;
+  border: 1px solid #dcdcdc;
+}
+
+a.imageLessButton {
+  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background-color: #ededed;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  font-family: arial;
+  font-size: .8em;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #ffffff;
+  color: #990000;
+}
+
   
 @media (max-width: 700px) {
   .pane-menu-menu-footer-menu .menu li{
