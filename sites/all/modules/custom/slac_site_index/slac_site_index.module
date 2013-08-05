@@ -1,0 +1,173 @@
+<?php
+
+/**
+ * Implements hook_permission().
+ */
+function slac_site_index_permission() {
+  return array(
+    'administer site index' =>  array(
+      'title' => t('Administer site index page'),
+      'description' => t('Upload excel file with site indexes'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function slac_site_index_menu() {
+  $items = array();
+
+  $items['admin/config/content/site_index'] = array(
+    'title' => 'Site Index',
+    'description' => 'Upload excel file with site indexes.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slac_site_index_form'),
+    'access arguments' => array('administer site index'),
+  );
+
+  return $items;
+}
+
+/**
+ * Form callback for file uploading form.
+ */
+function slac_site_index_form($form, &$form_state) {
+  $default_value = '';
+  if (file_load(variable_get('site_index_file_fid', ''))) {
+    $default_value = variable_get('site_index_file_fid', '');
+  }
+  else {
+    variable_del('site_index_file_fid');
+    variable_del('site_index_block_html');
+  }
+
+  $form['file'] = array(
+    '#type' => 'managed_file',
+    '#title' => t('Choose a file'),
+    '#default_value' => $default_value,
+    '#description' => t('Upload excel file with site indexes, allowed extensions: xls, xlsx'),
+    '#upload_validators' => array(
+    'file_validate_extensions' => array('xls xlsx'),
+    ),
+    '#upload_location' => 'public://site_index_file/',
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
+
+  return $form;
+}
+
+/**
+ * Validation callback for file uploading form.
+ */
+function slac_site_index_form_validate($form, &$form_state) {
+  if (!isset($form_state['values']['file']) || !is_numeric($form_state['values']['file'])
+    || ($form_state['values']['file'] == '0')) {
+    form_set_error('file', t('Please select an image to upload.'));
+  }
+}
+
+/**
+ * Submit callback for file uploading form.
+ */
+function slac_site_index_form_submit($form, &$form_state) {
+  $fid = $form_state['values']['file'];
+  variable_set('site_index_file_fid', $fid);
+  slac_site_index_elements($fid);
+  drupal_set_message(t('Your file has been saved'));
+}
+
+/**
+ * Returns an array with parsed excel file content.
+ */
+function slac_site_index_elements($fid) {
+  if (!is_numeric($fid)) {
+    return FALSE;
+  }
+
+  // Load phpexcel.inc from the node module.
+  module_load_include('inc', 'phpexcel', 'phpexcel');
+
+  if ($file = file_load($fid)) {
+    $parsed_file = phpexcel_import($file->uri);
+    $parsed_file = $parsed_file[0];
+    usort($parsed_file, '_compare_by_sitename');
+
+    $letters_pager = '<div class="sections-letters"> <a href="#A">A</a> ';
+    $index = 'A';
+    $rows = array();
+    $rows[] = array(array('data' => 'A', 'id' => array('A'), 'class' => 'index-letter'));
+    $links_array = array();
+    if ($parsed_file) {
+      $last_item = end($parsed_file);
+      foreach ($parsed_file as $value) {
+        $site_name = strtoupper(trim($value['Site Name']));
+        $first_letter = $site_name[0];
+        if ($first_letter != $index) {
+          $index = $first_letter;
+          $letters_pager .= '| <a href="#' . $first_letter . '">' . $first_letter . '</a>';
+          $rows[] = array(
+            array(
+              'data' => theme('item_list', array('items' => $links_array, 'title' => '', 'type' => 'ul')),
+              'class' => array('site-name-link')
+            )
+          );
+          $rows[] = array(array('data' => '<a href="#header">return to top</a>', 'class' => 'return-link'));
+          $rows[] = array(array('data' => $index, 'id' => array($index), 'class' => 'index-letter'));
+          $links_array = array();
+        }
+        $links_array[] = l($value['Site Name'], $value['URL']);
+
+        // Add list of links for last letter.
+        if ($value == $last_item) {
+          $rows[] = array(
+            array(
+              'data' => theme('item_list', array('items' => $links_array, 'title' => '', 'type' => 'ul')),
+              'class' => array('site-name-link')
+            )
+          );
+          $rows[] = array(array('data' => '<a href="#header">return to top</a>', 'class' => 'return-link'));
+        }
+      }
+    }
+    $header = array('');
+    $letters_pager .= '</div>';
+
+    $output = theme('table', array('header' => $header, 'rows' => $rows));
+    variable_set('site_index_block_html', $letters_pager . $output);
+    return TRUE;
+  }
+  else {
+    return FALSE;
+  }
+}
+
+/**
+ * Comparation function by Site Name.
+ */
+function _compare_by_sitename($a, $b) {
+  return strcasecmp($a["Site Name"], $b["Site Name"]);
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slac_site_index_ctools_plugin_directory($module, $plugin) {
+  if ($module === 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function slac_site_index_ctools_plugin_api($module, $api) {
+  if ($module == 'page_manager') {
+    return array('version' => 1);
+  }
+}
+

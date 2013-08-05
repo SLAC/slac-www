@@ -1,0 +1,4 @@
+name = Site index block
+description = "Provides a block with links for index page."
+package = SLAC
+core = 7.x
