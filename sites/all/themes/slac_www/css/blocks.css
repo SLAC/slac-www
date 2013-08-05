@@ -135,7 +135,22 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 83, ../sass/_mixins.scss */
+/* line 84, ../sass/_mixins.scss */
+.page-general-site-indexaspx .pane-content,
+.page-general-site-indexaspx .pane-page-content > .pane-title {
+  float: left;
+  width: 83.33333%;
+  margin-left: 8.33333%;
+  margin-right: -91.66667%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 88, ../sass/_mixins.scss */
 .general-two-col .general-left {
   float: left;
   width: 75%;
@@ -149,7 +164,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 86, ../sass/_mixins.scss */
+/* line 91, ../sass/_mixins.scss */
 .general-two-col .general-right {
   float: left;
   width: 25%;

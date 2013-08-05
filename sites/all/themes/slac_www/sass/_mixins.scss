@@ -80,6 +80,11 @@
     @include zen-grid-item(24, 1);
   }
 
+  .page-general-site-indexaspx .pane-content,
+  .page-general-site-indexaspx .pane-page-content > .pane-title{
+    @include zen-grid-item(20, 3);
+  }
+
   .general-two-col .general-left{
     @include zen-grid-item(18, 1);
   }
