@@ -35,6 +35,27 @@ a img{
   }
 }
 
+table{
+  font-size: 12px;
+  line-height: normal;
+  border: 1px solid #ada47d;
+  td{
+    padding: 8px 10px 8px;  
+    border-top: 1px solid #ada47d;
+    border-right: 1px solid #ada47d;
+  }
+}
+
+table th,
+table .header,
+.page-basic table .header{
+  background: #ADA47D;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 10px 8px;
+}
+
+
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
