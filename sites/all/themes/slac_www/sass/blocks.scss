@@ -52,25 +52,23 @@
     }
   }
   .views-slideshow-pager-fields {
-    background:#D5D8DA;
-    padding:5px;
-  }
-  .views-slideshow-pager-fields {
     position: absolute;
-    left: 40%;
-    bottom: 18px;
+    left: 45%;
+    bottom: 3px;
     z-index: 99;
-    margin: 5px 10px 0 0;
+    margin: 0;
+    background: #D5D8DA;
+    padding: 5px;
   }
   .views-slideshow-pager-field-item {
     float: left;
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     overflow: hidden;
     text-indent: 100px;
     background: #b8b9bb;
-    border: 1px solid #666;
-    margin: 5px;
+    border: 1px solid #666666;
+    margin: 1px 7px 0;
     &.active {
       background: white;
       border:1px solid #666;
