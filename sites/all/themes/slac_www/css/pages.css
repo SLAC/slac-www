@@ -136,7 +136,7 @@
   word-wrap: break-word; }
 
 /* line 84, ../sass/_mixins.scss */
-.page-general-site-indexaspx .pane-content,
+.page-general-site-indexaspx .pane-page-content > .pane-content,
 .page-general-site-indexaspx .pane-page-content > .pane-title {
   float: left;
   width: 83.33333%;
