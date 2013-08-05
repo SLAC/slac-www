@@ -380,6 +380,76 @@ a.lightbox-processed{
   margin-top: 20px;
 }
 
+/* Index page */
+
+.page-general-site-indexaspx {
+  .page-basic > .content{
+    overflow: hidden;
+  }  
+  .pane-page-content > .pane-title{
+    top: 0;
+    margin-bottom: 10px;
+  }
+
+  .sections-letters{
+  clear: both;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6em;
+  margin-bottom: 30px;
+  }
+
+  .sections-letters a{
+    font-size: 13px;  
+    font-weight:bold;
+    padding: 0 5px 0 2px; 
+  }
+
+table{
+  tr{
+    background: #fff;
+    padding: 0;
+  }
+  td{
+    padding-bottom: 20px;
+  }
+  &,
+  tr,
+  tr td{
+    border: none;
+  }
+  ul{
+  margin: 0 0 0 10px;
+  li{
+    list-style-type: square;
+    color: #696969;
+    font-size: 13px;
+    &.last{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .index-letter{
+    padding: 0 0 15px 0;
+    font-weight:bold;
+    color: #696969;
+    font-size: 16px;
+  }
+  a{
+    color: #990000;
+    &:hover{
+    border-bottom: 1px dotted #996633;
+    }
+  }
+  }
+  .return-link a{
+    margin-left: 10px;
+    font-size: 11px;
+    font-style: italic;
+  }
+}
+
+
   
 @media (max-width: 700px) {
   .pane-menu-menu-footer-menu .menu li{

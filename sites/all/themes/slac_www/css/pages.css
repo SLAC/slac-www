@@ -139,8 +139,8 @@
 .page-general-site-indexaspx .pane-page-content > .pane-content,
 .page-general-site-indexaspx .pane-page-content > .pane-title {
   float: left;
-  width: 83.33333%;
-  margin-left: 8.33333%;
+  width: 87.5%;
+  margin-left: 4.16667%;
   margin-right: -91.66667%;
   padding-left: 1%;
   padding-right: 1%;
@@ -532,28 +532,89 @@ a.lightbox-processed {
 .item-list .pager {
   margin-top: 20px; }
 
+/* Index page */
+/* line 386, ../sass/pages.scss */
+.page-general-site-indexaspx .page-basic > .content {
+  overflow: hidden; }
+/* line 389, ../sass/pages.scss */
+.page-general-site-indexaspx .pane-page-content > .pane-title {
+  top: 0;
+  margin-bottom: 10px; }
+/* line 394, ../sass/pages.scss */
+.page-general-site-indexaspx .sections-letters {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6em;
+  margin-bottom: 30px; }
+/* line 402, ../sass/pages.scss */
+.page-general-site-indexaspx .sections-letters a {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 5px 0 2px; }
+/* line 409, ../sass/pages.scss */
+.page-general-site-indexaspx table tr {
+  background: #fff;
+  padding: 0; }
+/* line 413, ../sass/pages.scss */
+.page-general-site-indexaspx table td {
+  padding-bottom: 20px; }
+/* line 418, ../sass/pages.scss */
+.page-general-site-indexaspx table,
+.page-general-site-indexaspx table tr,
+.page-general-site-indexaspx table tr td {
+  border: none; }
+/* line 421, ../sass/pages.scss */
+.page-general-site-indexaspx table ul {
+  margin: 0 0 0 10px; }
+  /* line 423, ../sass/pages.scss */
+  .page-general-site-indexaspx table ul li {
+    list-style-type: square;
+    color: #696969;
+    font-size: 13px; }
+    /* line 427, ../sass/pages.scss */
+    .page-general-site-indexaspx table ul li.last {
+      margin-bottom: 0; }
+/* line 432, ../sass/pages.scss */
+.page-general-site-indexaspx table .index-letter {
+  padding: 0 0 15px 0;
+  font-weight: bold;
+  color: #696969;
+  font-size: 16px; }
+/* line 438, ../sass/pages.scss */
+.page-general-site-indexaspx table a {
+  color: #990000; }
+  /* line 440, ../sass/pages.scss */
+  .page-general-site-indexaspx table a:hover {
+    border-bottom: 1px dotted #996633; }
+/* line 445, ../sass/pages.scss */
+.page-general-site-indexaspx .return-link a {
+  margin-left: 10px;
+  font-size: 11px;
+  font-style: italic; }
+
 @media (max-width: 700px) {
-  /* line 386, ../sass/pages.scss */
+  /* line 456, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.first {
     width: 15%; }
-  /* line 389, ../sass/pages.scss */
+  /* line 459, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.last {
     width: 22%; }
-  /* line 392, ../sass/pages.scss */
+  /* line 462, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li a {
     font-size: 9px; } }
 @media (max-width: 600px) {
-  /* line 403, ../sass/pages.scss */
+  /* line 473, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 406, ../sass/pages.scss */
+    /* line 476, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 413, ../sass/pages.scss */
+    /* line 483, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -561,16 +622,16 @@ a.lightbox-processed {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 423, ../sass/pages.scss */
+  /* line 493, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 428, ../sass/pages.scss */
+  /* line 498, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 433, ../sass/pages.scss */
+    /* line 503, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; } }

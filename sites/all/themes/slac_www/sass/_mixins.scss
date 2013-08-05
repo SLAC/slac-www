@@ -80,9 +80,9 @@
     @include zen-grid-item(24, 1);
   }
 
-  .page-general-site-indexaspx .pane-content,
+  .page-general-site-indexaspx .pane-page-content > .pane-content,
   .page-general-site-indexaspx .pane-page-content > .pane-title{
-    @include zen-grid-item(20, 3);
+    @include zen-grid-item(21, 2);
   }
 
   .general-two-col .general-left{
