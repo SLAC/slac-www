@@ -76,13 +76,15 @@
     @include zen-grid-item(15, 5);
   }
 
-  .general-two-col .pane-page-content > .pane-title{
+  .general-two-col .pane-page-content > .pane-title,
+  .two-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(24, 1);
   }
 
-  .2-col-basic .pane-page-content > .pane-content,
-  .2-col-basic .pane-page-content > .pane-title{
-    @include zen-grid-item(21, 2);
+  .one-col-basic .pane-page-content > .pane-content,
+  .one-col-basic .pane-page-content > .pane-title,
+  .node-type-news-article .pane-title{
+    @include zen-grid-item(22, 2);
   }
 
   .general-two-col .general-left{

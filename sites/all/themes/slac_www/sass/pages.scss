@@ -383,14 +383,7 @@ a.lightbox-processed{
 /* Index page */
 
 .page-general-site-indexaspx {
-  .page-basic > .content{
-    overflow: hidden;
-  }  
-  .pane-page-content > .pane-title{
-    top: 0;
-    margin-bottom: 10px;
-  }
-
+ 
   .sections-letters{
   clear: both;
   margin: 0;
@@ -449,10 +442,30 @@ table{
   }
 }
 
+.node-news-article{
+  line-height: 20px;
+  font-size: 13px;
+  color: #474748;
+  margin-bottom: 10px; 
+  .filter-wrapper{
+    display:none;
+  }
+}
+
+.two-col-basic .page-basic > .content,
+.one-col-basic .page-basic > .content{
+  overflow: hidden;
+}  
+
+.two-col-basic .pane-page-content > .pane-title,
+.one-col-basic .pane-page-content > .pane-title{
+  top: 0;
+  margin-bottom: 10px;
+}
 
 .centerDiv{
   text-align:center;
-  margin: 20px 0 30px;
+  margin: 20px 0;
 }
   
 a.imageLessButton:hover {
