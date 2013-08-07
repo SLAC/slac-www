@@ -1,4 +1,4 @@
 name = SLAC Search
-description = "Provides a block with serch form."
+description = "Provides search functionality."
 package = SLAC
 core = 7.x
