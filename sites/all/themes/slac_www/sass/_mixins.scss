@@ -99,6 +99,26 @@
 
 @media (max-width: 900px) {
 
+
+
+
+  $zen-gutter-width: 3%;  
+  $zen-column-count: 15;  
+
+  /* Front page layout */
+
+  .slider{
+    @include zen-grid-item(15, 1);
+  } 
+  
+  .frontpage-left-col{
+    @include zen-grid-item(3, 1);
+  }
+
+  .frontpage-middle-col,
+  .frontpage-right-col{
+    @include zen-grid-item(12, 4);
+  } 
  
 }
 

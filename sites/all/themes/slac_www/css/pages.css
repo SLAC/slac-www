@@ -181,6 +181,50 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
+@media (max-width: 900px) {
+  /* Front page layout */
+  /* line 110, ../sass/_mixins.scss */
+  .slider {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word; }
+
+  /* line 114, ../sass/_mixins.scss */
+  .frontpage-left-col {
+    float: left;
+    width: 20%;
+    margin-left: 0%;
+    margin-right: -20%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word; }
+
+  /* line 119, ../sass/_mixins.scss */
+  .frontpage-middle-col,
+  .frontpage-right-col {
+    float: left;
+    width: 80%;
+    margin-left: 20%;
+    margin-right: -100%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word; } }
 /*
  * @file
  * Page Styling
@@ -736,18 +780,37 @@ a.imageLessButton {
   /* line 593, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li a {
     font-size: 9px; } }
+@media (max-width: 900px) {
+  /* line 600, ../sass/pages.scss */
+  .frontpage-right-col {
+    clear: both;
+    margin-top: 30px; }
+    /* line 603, ../sass/pages.scss */
+    .frontpage-right-col .bg-list {
+      overflow: hidden; }
+    /* line 606, ../sass/pages.scss */
+    .frontpage-right-col .field-item {
+      width: 30%;
+      float: left;
+      margin-left: 5%; }
+      /* line 610, ../sass/pages.scss */
+      .frontpage-right-col .field-item:first-child {
+        margin-left: 0; }
+    /* line 614, ../sass/pages.scss */
+    .frontpage-right-col .connect {
+      width: 40%; } }
 @media (max-width: 600px) {
-  /* line 604, ../sass/pages.scss */
+  /* line 622, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 607, ../sass/pages.scss */
+    /* line 625, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 614, ../sass/pages.scss */
+    /* line 632, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -755,16 +818,16 @@ a.imageLessButton {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 624, ../sass/pages.scss */
+  /* line 642, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 629, ../sass/pages.scss */
+  /* line 647, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 634, ../sass/pages.scss */
+    /* line 652, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; } }
