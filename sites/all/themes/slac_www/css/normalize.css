@@ -52,3 +52,11 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+/* line 43, ../sass/normalize.scss */
+strong {
+  font-weight: bold; }
+
+/* line 47, ../sass/normalize.scss */
+em {
+  font-style: italic; }

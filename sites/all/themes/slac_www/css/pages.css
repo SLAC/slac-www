@@ -647,28 +647,39 @@ a.imageLessButton {
   text-shadow: 1px 1px 0px #ffffff;
   color: #990000; }
 
+/* line 503, ../sass/pages.scss */
+.section-set-search-optionaspx .search-description {
+  margin-bottom: 20px; }
+/* line 506, ../sass/pages.scss */
+.section-set-search-optionaspx .pane-search-options {
+  font-size: 12px;
+  margin-top: 10px; }
+  /* line 509, ../sass/pages.scss */
+  .section-set-search-optionaspx .pane-search-options input {
+    margin-bottom: 45px; }
+
 @media (max-width: 700px) {
-  /* line 505, ../sass/pages.scss */
+  /* line 518, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.first {
     width: 15%; }
-  /* line 508, ../sass/pages.scss */
+  /* line 521, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.last {
     width: 22%; }
-  /* line 511, ../sass/pages.scss */
+  /* line 524, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li a {
     font-size: 9px; } }
 @media (max-width: 600px) {
-  /* line 522, ../sass/pages.scss */
+  /* line 535, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 525, ../sass/pages.scss */
+    /* line 538, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 532, ../sass/pages.scss */
+    /* line 545, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -676,16 +687,16 @@ a.imageLessButton {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 542, ../sass/pages.scss */
+  /* line 555, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 547, ../sass/pages.scss */
+  /* line 560, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 552, ../sass/pages.scss */
+    /* line 565, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; } }
