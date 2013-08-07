@@ -173,6 +173,7 @@
     font-weight: normal;
     line-height: normal;
     text-transform: uppercase;
+    font-style: normal;
     a{
       color: #7f6332;
       text-decoration: none;
@@ -333,7 +334,7 @@
   }
 
   .pane-node-field-image {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     width: 98%;
     padding: 1%;
     background: #e0e0e1;
@@ -553,8 +554,16 @@
       height: auto;
     }
   }
+  .views-field-body{
+    font-size: 12px;
+    margin-top: 5px;
+  }
 }
 
+.frontpage-middle-left .views-field-body{
+  font-size: 11px;
+  margin-top: 5px;
+}
 
 .middleleft { 
   .views-row{
