@@ -1,0 +1,4 @@
+name = SLAC Search
+description = "Provides a block with serch form."
+package = SLAC
+core = 7.x
