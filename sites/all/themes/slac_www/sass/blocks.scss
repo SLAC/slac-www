@@ -109,6 +109,7 @@
       font-size: 14px;
       padding-left: 8px;
       color: #881728;
+      text-transform: uppercase;
     }
   }
   .menu li {
@@ -160,7 +161,6 @@
   margin-bottom: 0;
 }
 
-
 .highlited {
   margin-bottom: 16px;
   .field-label, 
@@ -181,6 +181,30 @@
   &.news-list .pane-title{
     margin-bottom: 0;
   }
+}
+
+.page-news-news-center .pane-page-content > .pane-title {
+  margin-bottom: 35px;
+  top: 10px;
+}
+
+.links{
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.links li{
+  float: left;  
+  text-transform: capitalize;
+  margin-right: 15px;
+}
+
+.comments .title{
+  font-weight: bold;
+}
+
+.section-about .left-menu .pane-title a{
+  text-transform: none;
 }
 
 .video-block{
