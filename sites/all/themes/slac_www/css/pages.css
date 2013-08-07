@@ -658,28 +658,96 @@ a.imageLessButton {
   .section-set-search-optionaspx .pane-search-options input {
     margin-bottom: 45px; }
 
+/* Header search */
+/* line 517, ../sass/pages.scss */
+#search-box {
+  float: right;
+  position: relative;
+  margin-top: 20px; }
+  /* line 521, ../sass/pages.scss */
+  #search-box .form-item {
+    margin: 0;
+    outline: none;
+    padding: 1px 0 1px 10px;
+    height: 22px;
+    width: 160px;
+    background: #fff; }
+  /* line 529, ../sass/pages.scss */
+  #search-box input {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    border: none; }
+    /* line 536, ../sass/pages.scss */
+    #search-box input:focus {
+      outline: none; }
+  /* line 540, ../sass/pages.scss */
+  #search-box .form-text {
+    width: 130px;
+    font-size: .7em;
+    color: #CCC; }
+  /* line 545, ../sass/pages.scss */
+  #search-box .form-submit {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    background: url("../images/search-button.png") no-repeat center;
+    text-indent: -100px;
+    cursor: pointer; }
+
+/* line 555, ../sass/pages.scss */
+#slac-search-options {
+  display: none !important; }
+  /* line 557, ../sass/pages.scss */
+  #slac-search-options:hover #slac-search-options {
+    display: block !important; }
+  /* line 560, ../sass/pages.scss */
+  #slac-search-options .form-item {
+    background: transparent;
+    padding: 0; }
+  /* line 564, ../sass/pages.scss */
+  #slac-search-options > .form-item {
+    width: 148px;
+    background-color: #EFEFEF;
+    color: #990000;
+    font-size: 11px;
+    z-index: 120;
+    -moz-box-shadow: 1px 1px 3px #555;
+    -webkit-box-shadow: 1px 1px 3px #555;
+    -ms-box-shadow: 1px 1px 3px #555;
+    box-shadow: 1px 1px 3px #555;
+    float: none; }
+  /* line 576, ../sass/pages.scss */
+  #slac-search-options .form-item .form-item {
+    float: left;
+    width: auto;
+    width: 40%;
+    margin: 0 5px; }
+
 @media (max-width: 700px) {
-  /* line 518, ../sass/pages.scss */
+  /* line 587, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.first {
     width: 15%; }
-  /* line 521, ../sass/pages.scss */
+  /* line 590, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li.last {
     width: 22%; }
-  /* line 524, ../sass/pages.scss */
+  /* line 593, ../sass/pages.scss */
   .pane-menu-menu-footer-menu .menu li a {
     font-size: 9px; } }
 @media (max-width: 600px) {
-  /* line 535, ../sass/pages.scss */
+  /* line 604, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 538, ../sass/pages.scss */
+    /* line 607, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 545, ../sass/pages.scss */
+    /* line 614, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -687,16 +755,16 @@ a.imageLessButton {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 555, ../sass/pages.scss */
+  /* line 624, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 560, ../sass/pages.scss */
+  /* line 629, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 565, ../sass/pages.scss */
+    /* line 634, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; } }

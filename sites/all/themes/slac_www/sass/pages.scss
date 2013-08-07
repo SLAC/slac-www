@@ -512,6 +512,75 @@ a.imageLessButton {
   }
 }
 
+/* Header search */
+
+#search-box{
+  float: right;
+  position: relative;
+  margin-top: 20px;
+  .form-item{
+    margin: 0;
+    outline: none;
+    padding: 1px 0 1px 10px;
+    height: 22px;
+    width: 160px;
+    background: #fff;
+  }
+  input{
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    &:focus{
+      outline: none;
+    }
+  }
+  .form-text{
+    width: 130px;
+    font-size: .7em;
+    color: #CCC;
+  }
+  .form-submit{
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    background: url('../images/search-button.png') no-repeat center;
+    text-indent: -100px;
+    cursor:pointer;
+  }
+}
+
+#slac-search-options{
+  display: none !important; 
+  &:hover #slac-search-options{
+    display:block !important;
+  }
+  .form-item{
+    background: transparent;
+    padding: 0;
+  }
+  > .form-item{
+    width: 148px;
+    background-color: #EFEFEF;
+    color: #990000;
+    font-size: 11px;
+    z-index: 120;
+    -moz-box-shadow: 1px 1px 3px #555;
+    -webkit-box-shadow: 1px 1px 3px #555;
+    -ms-box-shadow: 1px 1px 3px #555;
+    box-shadow: 1px 1px 3px #555;
+    float: none;
+  }
+  .form-item .form-item{
+    float:left;
+    width: auto;
+    width: 40%;
+    margin: 0 5px;
+  }
+}
+
   
 @media (max-width: 700px) {
   .pane-menu-menu-footer-menu .menu li{
