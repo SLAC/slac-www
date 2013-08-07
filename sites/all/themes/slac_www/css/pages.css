@@ -696,13 +696,13 @@ a.imageLessButton {
     background: url("../images/search-button.png") no-repeat center;
     text-indent: -100px;
     cursor: pointer; }
+  /* line 553, ../sass/pages.scss */
+  #search-box:hover #slac-search-options {
+    display: block !important; }
 
-/* line 555, ../sass/pages.scss */
+/* line 558, ../sass/pages.scss */
 #slac-search-options {
   display: none !important; }
-  /* line 557, ../sass/pages.scss */
-  #slac-search-options:hover #slac-search-options {
-    display: block !important; }
   /* line 560, ../sass/pages.scss */
   #slac-search-options .form-item {
     background: transparent;
