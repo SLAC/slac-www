@@ -3,7 +3,7 @@
 /**
  * Implements hook_file_mimetype_mapping_alter().
  *
- * Regster the video/youtube mimetype.
+ * Register the video/youtube mimetype.
  */
 function media_youtube_customization_mimetype_mapping_alter(&$mapping) {
   $mapping['mimetypes'][] = 'video/youtube';
@@ -63,6 +63,7 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
       // Parse the URL into parts, in order to make it an embed URL.
       // Make sure the correct include file is loaded
       module_load_include('inc', 'media_youtube', '/includes/media_youtube.formatters.inc');
+      module_load_include('inc', 'media_vimeo', '/includes/media_vimeo.formatters.inc');
 
       // Load the file
       $file = file_load($item['fid']);
@@ -71,8 +72,14 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
       $display['settings'] = array('image_style' => 'frontpage-media');
 
       // Get the render array for the thumbnail image
-      $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
-
+      switch ($item['filemime']) {
+        case 'video/youtube' :
+          $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
+          break;
+        case 'video/vimeo' :
+          $image_render_array = media_vimeo_file_formatter_image_view($file, $display, LANGUAGE_NONE);
+          break;
+      }
       $video_title = '';
       if (isset($item['field_title'][LANGUAGE_NONE][0]['value'])) {
         $video_title = $item['field_title'][LANGUAGE_NONE][0]['value'];
@@ -86,7 +93,7 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
       // Remove new lines from description.
       $video_description = trim(preg_replace('/\s+/', ' ', $video_description));
 
-      $caption = '<p>' . $video_title . '</p><p>' . $video_description . '</p><em>' . l(t('Visit SLAC on YouTube'), 'http://www.youtube.com/slac') . '</em>' ;
+      $caption = '<p>' . $video_title . '</p><p>' . $video_description . '</p><em>' . l(t('Visit SLAC on YouTube'), 'http://www.youtube.com/slac') . '</em>';
 
       // Wrap the image in a link to trigger lightbox.
       $render_video = array(
@@ -100,7 +107,7 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
               'lightbox',
               'youtube-thumbnail'
             ),
-            'rel' => array('lightvideo[]['. $caption .']'),
+            'rel' => array('lightvideo[][' . $caption . ']'),
           ),
         ),
       );
@@ -117,7 +124,7 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
               'lightbox',
               'youtube-title'
             ),
-            'rel' => array('lightvideo[]['. $caption .']'),
+            'rel' => array('lightvideo[][' . $caption . ']'),
           ),
         ),
       );
