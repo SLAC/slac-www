@@ -597,26 +597,22 @@ a.imageLessButton {
 }
 
 @media (max-width: 900px) {
-  .html .frontpage-right-col{
-    clear: both;
-  }
-
-  .frontpage-right-col{
+  .frontpage-right-col {
     clear: both;
     margin-top: 30px;
-    .bg-list{
-      overflow:hidden;
+    .bg-list {
+      overflow: hidden;
     }
-    .frontpage-right-col .field-item{
+    .field-item {
       width: 30%;
       float: left;
       margin-left: 5%;
-      &:first-child{
+      &:first-child {
         margin-left: 0;
       }
-      .connect{
-        width: 40%;
-      }
+    }
+    .connect {
+      width: 40%;
     }
   }
 }

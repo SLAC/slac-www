@@ -782,39 +782,35 @@ a.imageLessButton {
     font-size: 9px; } }
 @media (max-width: 900px) {
   /* line 600, ../sass/pages.scss */
-  .html .frontpage-right-col {
-    clear: both; }
-
-  /* line 604, ../sass/pages.scss */
   .frontpage-right-col {
     clear: both;
     margin-top: 30px; }
-    /* line 607, ../sass/pages.scss */
+    /* line 603, ../sass/pages.scss */
     .frontpage-right-col .bg-list {
       overflow: hidden; }
-    /* line 610, ../sass/pages.scss */
-    .frontpage-right-col .frontpage-right-col .field-item {
+    /* line 606, ../sass/pages.scss */
+    .frontpage-right-col .field-item {
       width: 30%;
       float: left;
       margin-left: 5%; }
-      /* line 614, ../sass/pages.scss */
-      .frontpage-right-col .frontpage-right-col .field-item:first-child {
+      /* line 610, ../sass/pages.scss */
+      .frontpage-right-col .field-item:first-child {
         margin-left: 0; }
-      /* line 617, ../sass/pages.scss */
-      .frontpage-right-col .frontpage-right-col .field-item .connect {
-        width: 40%; } }
+    /* line 614, ../sass/pages.scss */
+    .frontpage-right-col .connect {
+      width: 40%; } }
 @media (max-width: 600px) {
-  /* line 626, ../sass/pages.scss */
+  /* line 622, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 629, ../sass/pages.scss */
+    /* line 625, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 636, ../sass/pages.scss */
+    /* line 632, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -822,16 +818,16 @@ a.imageLessButton {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 646, ../sass/pages.scss */
+  /* line 642, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 651, ../sass/pages.scss */
+  /* line 647, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 656, ../sass/pages.scss */
+    /* line 652, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; } }
