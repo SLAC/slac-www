@@ -654,5 +654,31 @@ a.imageLessButton {
       }
     }
   }
+
+  .frontpage-right-col .connect,
+  .frontpage-right-col .field-item,
+  .frontpage-middle-left,
+  .frontpage-middle-right,
+  .frontpage-right-col{
+    width: 100%;
+    margin: 0;
+    border: none;
+    margin-top: 0;
+  }
+
+  .frontpage-middle-left{
+    padding-bottom: 10px;
+  }
+
+  .frontpage-middle-col{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .front-news{
+    margin: 0;
+  }
 }
 

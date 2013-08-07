@@ -849,4 +849,30 @@ a.imageLessButton {
     text-align: center; }
     /* line 652, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
-      width: auto; } }
+      width: auto; }
+
+  /* line 662, ../sass/pages.scss */
+  .frontpage-right-col .connect,
+  .frontpage-right-col .field-item,
+  .frontpage-middle-left,
+  .frontpage-middle-right,
+  .frontpage-right-col {
+    width: 100%;
+    margin: 0;
+    border: none;
+    margin-top: 0; }
+
+  /* line 669, ../sass/pages.scss */
+  .frontpage-middle-left {
+    padding-bottom: 10px; }
+
+  /* line 673, ../sass/pages.scss */
+  .frontpage-middle-col {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none; }
+
+  /* line 680, ../sass/pages.scss */
+  .front-news {
+    margin: 0; } }
