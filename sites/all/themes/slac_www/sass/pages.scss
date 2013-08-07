@@ -550,13 +550,13 @@ a.imageLessButton {
     text-indent: -100px;
     cursor:pointer;
   }
+  &:hover #slac-search-options{
+    display:block !important;
+  }
 }
 
 #slac-search-options{
   display: none !important; 
-  &:hover #slac-search-options{
-    display:block !important;
-  }
   .form-item{
     background: transparent;
     padding: 0;
