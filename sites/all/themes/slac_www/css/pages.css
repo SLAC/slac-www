@@ -183,7 +183,7 @@
 
 @media (max-width: 900px) {
   /* Front page layout */
-  /* line 110, ../sass/_mixins.scss */
+  /* line 107, ../sass/_mixins.scss */
   .slider {
     float: left;
     width: 100%;
@@ -197,7 +197,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 114, ../sass/_mixins.scss */
+  /* line 111, ../sass/_mixins.scss */
   .frontpage-left-col {
     float: left;
     width: 20%;
@@ -211,7 +211,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 119, ../sass/_mixins.scss */
+  /* line 116, ../sass/_mixins.scss */
   .frontpage-middle-col,
   .frontpage-right-col {
     float: left;
@@ -225,6 +225,25 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word; } }
+@media (max-width: 600px) {
+  /* Front page layout */
+  /* line 132, ../sass/_mixins.scss */
+  .slider,
+  .frontpage-left-col,
+  .frontpage-middle-col,
+  .frontpage-right-col {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    clear: both; } }
 /*
  * @file
  * Page Styling
