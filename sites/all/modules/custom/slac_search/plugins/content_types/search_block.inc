@@ -51,6 +51,12 @@ function search_block_search_form($form, &$form_state) {
     '#prefix' => '<div id="slac-search-wrapper"><div id="slac-search">',
     '#suffix' => '</div>',
   );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Search'),
+    '#prefix' => '<div id="slac-search-button">',
+    '#suffix' => '</div>'
+  );
   $form['search_options'] = array(
     '#type' => 'radios',
     '#title' => '',
@@ -58,10 +64,6 @@ function search_block_search_form($form, &$form_state) {
     '#default_value' => $default_value,
     '#prefix' => '<div id="slac-search-options">',
     '#suffix' => '</div></div>'
-  );
-  $form['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Search'),
   );
   $form['#submit'] = array('search_block_search_form_submit');
 
