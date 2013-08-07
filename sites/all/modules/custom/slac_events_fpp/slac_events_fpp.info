@@ -1,0 +1,6 @@
+name = Frontpage Events
+description = Provide Events bundle for FPP
+package = Propeople
+core = 7.x
+
+dependencies[] = fieldable_panels_panes
