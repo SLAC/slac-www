@@ -680,5 +680,27 @@ a.imageLessButton {
   .front-news{
     margin: 0;
   }
-}
 
+  .frontpage-right-col .bg-list{
+    overflow: visible;
+  }
+
+  .pane-content{
+    overflow:hidden;
+  }
+
+  .page-basic .content > .inside, .page-basic .footer > .inside{
+    margin: 0;
+    width: 100%;
+  }
+
+  .highlited .field-label, .highlited .pane-title{
+    background: #999;
+    border: none;
+    padding: 0;
+    margin: 0 -7%;
+    padding: 6px 7%;
+    width: 100%;  
+    color: #fff;
+  }
+}
