@@ -292,6 +292,12 @@ a.lightbox-processed{
       font-weight: normal;
     }
   }
+  #caption em a{
+    position:absolute;
+    bottom: 14px;
+    right: 43px;
+    font-size: 11px;
+  }
 }  
 
 /* Meeting Rooms table */
