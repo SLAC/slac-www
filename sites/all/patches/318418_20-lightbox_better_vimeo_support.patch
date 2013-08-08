@@ -1,0 +1,35 @@
+--- js/lightbox_video.js	2011-03-15 05:45:31.000000000 -0500
++++ js/lightbox_videoNew.js	2011-03-15 05:42:59.000000000 -0500
+@@ -61,7 +61,7 @@ var Lightvideo = {
+     if (Lightvideo.checkYouTubeVideo(href) || Lightvideo.checkGoogleVideo(href) ||
+       Lightvideo.checkMySpaceVideo(href) || Lightvideo.checkLiveVideo(href) ||
+       Lightvideo.checkMetacafeVideo(href) ||
+-      Lightvideo.checkIFilmSpikeVideo(href)
++      Lightvideo.checkIFilmSpikeVideo(href) || Lightvideo.checkVimeoVideo(href)
+       ) {
+       return true;
+     }
+@@ -95,6 +95,23 @@ var Lightvideo = {
+     return false;
+   },
+ 
++  checkVimeoVideo: function(href) {
++    var patterns = [
++      'vimeo.com/([^/]*)'
++      ];
++
++    for (var i = 0; i < patterns.length; i++) {
++      var pattern = new RegExp(patterns[i], "i");
++      var results = pattern.exec(href);
++      if (results !== null) {
++        Lightbox.videoId = results[1];
++        Lightvideo.createEmbed("http://www.vimeo.com/moogaloop.swf?autoplay=1&clip_id="+Lightbox.videoId, "flvvideo", "#ffffff");
++        return true;
++      }
++    }
++    return false;
++  },
++
+   // checkGoogleVideo()
+   checkGoogleVideo: function(href) {
+     var patterns = [
