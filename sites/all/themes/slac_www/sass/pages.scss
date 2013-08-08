@@ -502,6 +502,8 @@ a.imageLessButton {
 .section-set-search-optionaspx{
   .search-description{
     margin-bottom: 20px;
+    color: #696969;
+    line-height: 19px;
   }
   .pane-search-options{
     font-size: 12px;
@@ -573,11 +575,22 @@ a.imageLessButton {
     box-shadow: 1px 1px 3px #555;
     float: none;
   }
-  .form-item .form-item{
+  .form-item .form-type-radio{
     float:left;
     width: auto;
     width: 40%;
-    margin: 0 5px;
+    height: 14px;
+    margin: 4px 0 4px 10px;
+  }
+  .form-type-radio input{
+    width: 14px;
+    height: 14px;
+    float:left;
+    margin-right: 5px;
+  }
+
+  .form-type-radio label{
+    line-height: 14px;
   }
 }
 
