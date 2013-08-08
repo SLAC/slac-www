@@ -256,6 +256,10 @@
   a{
     font-size: 11px;
   }
+  img{
+    width: 100%;
+    height: auto;
+  }
 }
 
 .bg-list .field-item, 
@@ -603,8 +607,12 @@
       height: auto;
     }
   }
-
 } 
+
+.node-type-page .pane-node-field-image,
+.node-type-page .pane-title{
+  margin-top: 18px;
+}
 
 /* News list */
 
