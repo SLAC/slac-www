@@ -717,9 +717,14 @@ a.imageLessButton {
     background: #999;
     border: none;
     padding: 0;
-    margin: 0 -7%;
+    margin: 0 -7% 20px;
     padding: 6px 7%;
     width: 100%;  
     color: #fff;
+  }
+
+  .video-block .youtube-thumbnail:after{
+    bottom: 7px;
+    right: 18px;
   }
 }
