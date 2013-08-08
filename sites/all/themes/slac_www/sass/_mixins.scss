@@ -99,9 +99,6 @@
 
 @media (max-width: 900px) {
 
-
-
-
   $zen-gutter-width: 3%;  
   $zen-column-count: 15;  
 
@@ -119,10 +116,21 @@
   .frontpage-right-col{
     @include zen-grid-item(12, 4);
   } 
- 
 }
 
 @media (max-width: 600px) {
 
 
+  $zen-gutter-width: 7%;  
+  $zen-column-count: 4;  
+
+  /* Front page layout */
+
+  .slider,
+  .frontpage-left-col,
+  .frontpage-middle-col,
+  .frontpage-right-col{
+    @include zen-grid-item(4, 1);
+    clear: both;
+  } 
 }
