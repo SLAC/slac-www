@@ -832,19 +832,19 @@
 /* line 613, ../sass/blocks.scss */
 .middleleft .views-field-nothing {
   float: left;
-  width: 55%; }
-/* line 618, ../sass/blocks.scss */
+  width: 55%;
+  margin-top: -3px; }
+/* line 619, ../sass/blocks.scss */
 .middleleft .views-field-field-image {
   float: right;
   width: 42%;
   margin-left: 3%; }
-  /* line 622, ../sass/blocks.scss */
+  /* line 623, ../sass/blocks.scss */
   .middleleft .views-field-field-image img {
     width: 100%;
     height: auto; }
 
 /* line 630, ../sass/blocks.scss */
-.node-type-page .pane-node-field-image,
 .pane-page-content > .pane-title {
   margin-top: 18px; }
 

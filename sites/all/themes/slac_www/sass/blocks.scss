@@ -613,6 +613,7 @@
   .views-field-nothing{
     float:left;
     width: 55%;  
+    margin-top: -3px;
   }
 
   .views-field-field-image{
@@ -626,7 +627,6 @@
   }
 } 
 
-.node-type-page .pane-node-field-image,
 .pane-page-content > .pane-title{
   margin-top: 18px;
 }
