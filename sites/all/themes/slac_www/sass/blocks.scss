@@ -373,13 +373,17 @@
     color: #474748;
     margin-bottom: 10px; 
   }
-  li{
+  .pane-node-body li{
+    color: #696969;
+    font-size: 13px;
     list-style-type: disc;
     list-style-position: inside;
-    color: #79182A;
-    line-height: 22px;
-    width: 95%;
-    margin-left: 5%;
+    padding: 2px 0;
+  }
+   
+  .pane-node-body li a{
+    color: #696969;
+    font-size: 13px;
   }
   a{
     font-size: 13px;
@@ -442,6 +446,12 @@
   li{
     width: 100%;
     margin: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+    color: #79182A;
+    line-height: 22px;
+    width: 95%;
+    margin-left: 5%;
   }
 }
 
