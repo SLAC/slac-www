@@ -88,6 +88,7 @@ a img{
   }
   .header {
     background: url('../images/header-bg.jpg') repeat-x top;
+    position: relative;
     img {
       float: left;
       margin-top: 23px;
@@ -637,6 +638,24 @@ a.imageLessButton {
 
 @media (max-width: 600px) {
   .page-basic{
+    overflow: hidden;
+    position:relative;
+    .sidebar-menu{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30%;
+    }
+    .main-menu{
+      position: absolute;
+      width: 40px;
+      top: 30px;
+      left: 0; 
+      cursor: pointer;
+    }
+    .main-menu .nice-menu{
+      display: none;
+    }
     .pane-menu-menu-footer-menu{
       padding: 0;  
       .menu{

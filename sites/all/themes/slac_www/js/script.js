@@ -63,4 +63,27 @@
 	}
 
 
+  Drupal.behaviors.leftMenu = {
+    attach: function (context, settings) {
+      if (Modernizr.mq('(max-width: 600px)')) { 
+        $('.main-menu').click(function() {
+           $(this).toggleClass('left-menu-active');
+          if(($(this).hasClass("left-menu-active")) == true) {
+          $(this).parents('.header').siblings('.panel-panel').andSelf().animate({
+              'marginLeft': '30%'
+            })
+          }   
+          else{
+          $(this).parents('.header').siblings('.panel-panel').andSelf().animate({
+              'marginLeft': '0'
+            })
+          }
+        });
+      }
+    }
+  }
+
+
+
+
 })(jQuery, Drupal, this, this.document);
