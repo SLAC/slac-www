@@ -896,3 +896,17 @@
   .news-list .views-field-body {
     line-height: 16px;
     color: #474747; }
+
+/* line 692, ../sass/blocks.scss */
+.section-news .view-news-center .views-field-created {
+  font-size: 11px;
+  color: #2B2B2B;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-top: 3px; }
+/* line 701, ../sass/blocks.scss */
+.section-news .view-news-center .views-field-title {
+  margin-top: 4px;
+  line-height: 20px;
+  margin-bottom: 1em; }
