@@ -12,6 +12,7 @@ $plugin = array(
   'theme arguments' => array('id', 'content'),
   'css' => 'page_basic.css',
   'regions' => array(
+    'menu' => t('Responsive menu'),
     'header' => t('Header'),
     'content' => t('Content'),
     'footer' => t('Footer')

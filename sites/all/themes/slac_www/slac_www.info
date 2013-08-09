@@ -15,7 +15,7 @@ stylesheets[all][] = css/pages.css
 
 scripts[] = js/script.js
 scripts[] = js/modernizr.js
-scripts[] = js/meny.min.js
+scripts[] = js/jquery.jpanelmenu.js
 
 
 plugins[panels][styles] = plugins/styles
