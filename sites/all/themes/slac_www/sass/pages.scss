@@ -42,6 +42,41 @@ a img{
 
 /* Basic styles */
 
+
+.left-menu-trigger{
+  position: absolute;
+  left: 0;
+  top:  50px;
+  width: 100px;
+  height:  20px;
+  background: #000;
+  cursor: pointer;
+  display: none;
+}
+
+
+.sidebar-menu .menu{
+  ul{
+    display:none;
+  }
+  li{
+    background: #fff;
+    border-bottom: 2px solid #b4b3b3;
+  }
+  a{
+    width: 90%;
+    padding: 12px 5%;
+    height: 16px;
+    display: block;
+    text-transform:uppercase;
+    color: #444;
+    &.active-trail,
+    &:hover{
+      background: #f0efef;
+    }
+  }
+}
+
 .page-basic {
   background: transparent;
   overflow: hidden;
@@ -50,6 +85,7 @@ a img{
     max-width: 1024px;
     margin: auto;
     clear: both;
+    position: relative;
   }
   > .content{
     background: #fff;
@@ -62,7 +98,9 @@ a img{
     padding: 16px 0 10px;
     line-height: 15px;
   }
-
+  .sidebar-menu{
+    display: none;
+  }
   .panels-flexible-region-first {
     width: 75%;
     max-width: 570px;
@@ -146,6 +184,7 @@ a img{
   float: left;
   height: 31px;
   padding: 0 0 5px 0;
+  display: block;
   background: url("../images/menu-bg.png") repeat-x bottom;
   ul {
     width: 100%;
@@ -613,6 +652,38 @@ a.imageLessButton {
       font-size: 9px;
     }
   }
+
+  .left-menu-trigger{
+    display: block;
+  }
+  
+  .page-basic{
+    overflow: hidden;
+    position:relative;
+    background: #ddd;
+    > .panel-panel{
+      -webkit-box-shadow:  -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      -moz-box-shadow:  -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      -ms-box-shadow:  -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      box-shadow:  -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+    }
+    .sidebar-menu{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30%;
+      display: block;
+    }
+    .main-menu{
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 701px){
+  .page-basic > .panel-panel{
+    margin: auto !important;
+  }
 }
 
 @media (max-width: 900px) {
@@ -637,25 +708,8 @@ a.imageLessButton {
 }
 
 @media (max-width: 600px) {
+  
   .page-basic{
-    overflow: hidden;
-    position:relative;
-    .sidebar-menu{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 30%;
-    }
-    .main-menu{
-      position: absolute;
-      width: 40px;
-      top: 30px;
-      left: 0; 
-      cursor: pointer;
-    }
-    .main-menu .nice-menu{
-      display: none;
-    }
     .pane-menu-menu-footer-menu{
       padding: 0;  
       .menu{
