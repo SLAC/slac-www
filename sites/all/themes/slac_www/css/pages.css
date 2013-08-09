@@ -284,61 +284,61 @@ a img {
  */
 /* Basic styles */
 /* line 45, ../sass/pages.scss */
-.page-basic {
+.page-basic .main-contant-region {
   background: transparent;
   overflow: hidden; }
   /* line 48, ../sass/pages.scss */
-  .page-basic > .panel-panel {
+  .page-basic .main-contant-region > .panel-panel {
     width: 100%;
     max-width: 1024px;
     margin: auto;
     clear: both; }
   /* line 54, ../sass/pages.scss */
-  .page-basic > .content {
+  .page-basic .main-contant-region > .content {
     background: #fff;
     padding: 15px 0 35px; }
   /* line 58, ../sass/pages.scss */
-  .page-basic .footer {
+  .page-basic .main-contant-region .footer {
     background: #878787;
     color: #fff;
     font-size: 10px;
     padding: 16px 0 10px;
     line-height: 15px; }
   /* line 66, ../sass/pages.scss */
-  .page-basic .panels-flexible-region-first {
+  .page-basic .main-contant-region .panels-flexible-region-first {
     width: 75%;
     max-width: 570px; }
   /* line 70, ../sass/pages.scss */
-  .page-basic .panels-flexible-region-last {
+  .page-basic .main-contant-region .panels-flexible-region-last {
     width: 21%;
     float: right; }
     /* line 73, ../sass/pages.scss */
-    .page-basic .panels-flexible-region-last img {
+    .page-basic .main-contant-region .panels-flexible-region-last img {
       width: 100%;
       height: auto; }
   /* line 78, ../sass/pages.scss */
-  .page-basic .content > .inside, .page-basic .footer > .inside {
+  .page-basic .main-contant-region .content > .inside, .page-basic .main-contant-region .footer > .inside {
     margin: 0 2%;
     width: 96%; }
   /* line 84, ../sass/pages.scss */
-  .not-front .page-basic .content > .inside {
+  .not-front .page-basic .main-contant-region .content > .inside {
     width: 98%;
     margin: 0 1%; }
   /* line 89, ../sass/pages.scss */
-  .page-basic .header {
+  .page-basic .main-contant-region .header {
     background: url("../images/header-bg.jpg") repeat-x top; }
     /* line 91, ../sass/pages.scss */
-    .page-basic .header img {
+    .page-basic .main-contant-region .header img {
       float: left;
       margin-top: 23px; }
   /* line 97, ../sass/pages.scss */
-  .page-basic .pane-pane-header {
+  .page-basic .main-contant-region .pane-pane-header {
     height: 80px;
     background: url("../images/header-connectors.png") no-repeat 230px 0;
     margin: 0 2%;
     width: 96%; }
   /* line 103, ../sass/pages.scss */
-  .page-basic #name-and-slogan {
+  .page-basic .main-contant-region #name-and-slogan {
     display: none; }
 
 /* line 109, ../sass/pages.scss */
