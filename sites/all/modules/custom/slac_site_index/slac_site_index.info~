@@ -1,4 +1,0 @@
-name = SLAC site index block
-description = "Provides a block with links for site index page."
-package = SLAC
-core = 7.x
