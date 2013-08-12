@@ -696,33 +696,30 @@ a.imageLessButton {
     }
   }
 
-  #search-box{
-    margin: 0;
-  }
-
   .header .section{
-    margin: 0 10px 0 52px;
+    margin: 0 0 0 52px;
   }
 
   /* Search box*/
 
   #search-box{
-    width: 24px;
-    height: 24px;
-    margin: 9px 0;
-    overflow: hidden;
-    background: url('../images/mobile-search.png') no-repeat top right;
-    float: right;
-    form{
-      display:none;
-    }
-    &:hover{
-      width:auto;
-      height:auto;
-      form{
-        display: block;
-      }
-    }
+    // width: 24px;
+    // height: 24px;
+    // margin: 9px 0;
+    // overflow: hidden;
+    // background: url('../images/mobile-search.png') no-repeat top right;
+    // float: right;
+    // margin: 0;
+    // form{
+    //   display:none;
+    // }
+    // &:hover{
+    //   width:auto;
+    //   height:auto;
+    //   form{
+    //     display: block;
+    //   }
+    // }
   }
 }
 
