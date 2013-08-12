@@ -147,6 +147,16 @@ function slac_site_index_elements($fid) {
 }
 
 /**
+* Implements hook_url_outbound_alter().
+*/
+function slac_site_index_url_outbound_alter(&$path, &$options, $original_path) {
+  // Add class 'external' for external links.
+  if ($options['external']) {
+    $options['attributes']['class'] = 'external';
+  }
+}
+
+/**
  * Comparation function by Site Name.
  */
 function _compare_by_sitename($a, $b) {
