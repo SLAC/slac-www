@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -865,10 +865,10 @@ a.imageLessButton {
     background: #ddd; }
     /* line 664, ../sass/pages.scss */
     .page-basic > .panel-panel {
-      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
-      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
-      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
-      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0); }
+      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7); }
     /* line 670, ../sass/pages.scss */
     .page-basic .sidebar-menu {
       position: absolute;
