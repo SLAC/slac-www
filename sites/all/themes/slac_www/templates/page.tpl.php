@@ -97,6 +97,10 @@
 
     <?php print render($page['header']); ?>
 
+      <div class="mobile-search">
+        <div class="search-box" id="search-box"><?php print $search_box; ?></div>
+      </div>
+      
     </div>
   </header>
 
