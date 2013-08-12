@@ -705,7 +705,7 @@ a.imageLessButton {
   }
 
   /* Search box*/
-  
+
   #search-box{
     width: 24px;
     height: 24px;
@@ -719,9 +719,8 @@ a.imageLessButton {
     &:hover{
       width:auto;
       height:auto;
-      :hover{
-        width:auto;
-        height:auto;
+      form{
+        display: block;
       }
     }
   }
