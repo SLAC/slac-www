@@ -34,6 +34,10 @@ a img{
   }
 }
 
+input:focus{
+  outline: none;
+}
+
 
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
@@ -637,9 +641,17 @@ a.imageLessButton {
   }
 }
 
-.mobile-search-box,
 .mobile-search-trigger{
   display: none;
+}
+
+@media (min-width: 701px){
+  .page-basic > .panel-panel{
+    margin: auto !important;
+  }
+  .mobile-search-box{
+    display: none !important;
+  }
 }
 
 @media (max-width: 700px) {
@@ -717,6 +729,7 @@ a.imageLessButton {
     margin: 0;
     background: url('../images/header-bg.jpg') repeat-x top;
     cursor: pointer;
+    display: block;
     span{
       background: url('../images/mobile-search.png') no-repeat top right;
       width: 52px;
@@ -726,28 +739,49 @@ a.imageLessButton {
   }  
 
   .mobile-search-box{
-    display: block;
     .pane-content{
       padding: 5px 0 12px;
       background: #8e001a;
       border-top: 1px solid #fff;
+      overflow: hidden;
     }
     .form-item{
       margin: 0;
     }
+    #slac-search{
+      line-height: 35px;
+      border: 2px solid #8c8b8b;
+      background: #fff;
+      color: #aaa;
+      padding: 0 3%;
+      width: 59%;
+      float:left;
+    }
+    form{
+      width: 96%;
+      margin: 0 2%;  
+    }
+    .form-text{
+      height: 35px;
+      background:none;
+      border: none;
+      padding: 0;
+      color: #aaa;
+    }
     #slac-search-button{
       float:right;
+      width: 30%;
+      max-width: 70px;
     }
-    #slac-search{
-      float: left;
+    .form-submit{
+      background: #8c8b8b;
+      border: none;
+      height: 39px;
+      padding: 0;
+      color: #fff;
+      margin: 0;
+      width: 100%;
     }
-  }
-
-}
-
-@media (min-width: 701px){
-  .page-basic > .panel-panel{
-    margin: auto !important;
   }
 }
 
