@@ -63,8 +63,14 @@
 	}
 
 
-  Drupal.behaviors.leftMenu = {
+  Drupal.behaviors.responsiveMenuAndSearch = {
     attach: function (context, settings) {
+
+      $('<div class="mobile-search-trigger"><span></span></div>').insertBefore('.pane-pane-header #search-box');
+      $('.pane-pane-header #search-box').click(function(){
+        $('.mobile-search-box').slideToggle();
+      });
+
       $('<div class="left-menu-trigger"></div>').insertBefore('.page-basic .header .inside');
        
         $('.left-menu-trigger').click(function() {
@@ -82,7 +88,6 @@
         });
     }
   }
-
 
 
 
