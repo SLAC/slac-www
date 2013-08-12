@@ -744,6 +744,7 @@ a.imageLessButton {
       background: #8e001a;
       border-top: 1px solid #fff;
       overflow: hidden;
+      display: none;
     }
     .form-item{
       margin: 0;
@@ -803,6 +804,11 @@ a.imageLessButton {
     .connect {
       width: 40%;
     }
+  }
+  .three-col .three-col-right .panel-pane{
+    float: left;
+    width: 25%;
+    margin-right: 5%;
   }
 }
 
@@ -898,5 +904,11 @@ a.imageLessButton {
   .video-block .youtube-thumbnail:after{
     bottom: 7px;
     right: 18px;
+  }
+
+  .three-col .three-col-right .panel-pane{
+    clear: both;
+    width: 100%;
+    margin: 0;
   }
 }
