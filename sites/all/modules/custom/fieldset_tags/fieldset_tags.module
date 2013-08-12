@@ -1,0 +1,219 @@
+<?php
+
+/**
+ * @file
+ *  Fieldset tags widget for taxonomy_term_reference field.
+ */
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function fieldset_tags_field_widget_info() {
+  return array(
+    'fieldset_tags' => array(
+      'label' => t('Fieldset tags (tagging)'),
+      'field types' => array('taxonomy_term_reference'),
+      'settings' => array(
+        'type' => 60,
+      ),
+      'behaviors' => array(
+        'multiple values' => FIELD_BEHAVIOR_CUSTOM,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function fieldset_tags_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $tags = array();
+  foreach ($items as $item) {
+    $tags[$item['tid']] = isset($item['taxonomy_term']) ? $item['taxonomy_term'] : taxonomy_term_load($item['tid']);
+  }
+
+  $vocab_machine_name = $field['settings']['allowed_values'][0]['vocabulary'];
+  $vocabulary = taxonomy_vocabulary_machine_name_load($vocab_machine_name);
+  $vid = $vocabulary->vid;
+
+  // Get all terms for the vocabulary.
+  $terms = taxonomy_get_tree($vid);
+
+  $element += array(
+    '#type' => 'item',
+    '#markup' => '',
+    '#element_validate' => array('fieldset_tags_field_widget_validate'),
+  );
+  $element['tags'] = array(
+    '#type' => 'fieldset',
+    '#title' => $vocabulary->name,
+    '#description' => t('Tags categorize content for searches and RSS feeds.'),
+    '#tree' => TRUE,
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+
+  $parents = array();
+  $prev_parents = array();
+  $depth = 0;
+  $prev_depth = 0;
+  foreach ($terms as $key => $term) {
+    $children = taxonomy_get_children($term->tid, $vid);
+
+    if (isset($depth)) {
+      if ($depth > $term->depth) {
+        $parents = array();
+      }
+      elseif ($depth < $term->depth) {
+        $parents[$key] = $key;
+      }
+    }
+    $depth = $term->depth;
+
+    if (!empty($children)) {
+      $parents[$key] = $key;
+
+      if ($prev_depth - $term->depth >= 0 ) {
+        for ($i = $prev_depth - $term->depth; $i >= 0 ; $i--) {
+          array_pop($prev_parents);
+        }
+        $element_string = _fieldset_tags_generate_element($term->tid, array_merge($prev_parents, $parents));
+      }
+      else {
+        $element_string = _fieldset_tags_generate_element($term->tid, $parents);
+      }
+      $form_element = "array(
+        '#type' => 'fieldset',
+        '#title' => '" . $term->name . "',
+        '#tree' => TRUE,
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+      );";
+      $elem = $element_string . ' = ' . $form_element;
+      eval($elem);
+
+      $prev_depth = $depth;
+      $prev_parents = $parents;
+
+      if (_get_children_if_last_parent($term->tid, $vid)) {
+        $options = array();
+        $children = _get_children_if_last_parent($term->tid, $vid);
+
+        $options = _fieldset_tags_get_array_as_string(_fieldset_tags_get_options($children));
+        $default_options = _fieldset_tags_get_array_as_string(_get_default_options($children, $tags));
+
+        $form_element = "array(
+          '#type' => 'checkboxes',
+          '#default_value' => " . $default_options . ",
+          '#options' => " . $options . ",
+          '#title' => '',
+        );";
+        $elem = $element_string . '[\'tag_options\']' . ' = ' . $form_element;
+        eval($elem);
+      }
+    }
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_widget_error().
+ */
+function fieldset_tags_field_widget_error($element, $error, $form, &$form_state) {
+  form_error($element, $error['message']);
+}
+
+function fieldset_tags_field_widget_validate($element, &$form_state) {
+  $items = array();
+  $result = array();
+  _fieldset_tags_get_values($element['tags'], $result);
+
+  foreach ($result as $value) {
+    $items[] = array('tid' => $value);
+  }
+
+  $element['#value'] = $result;
+  form_set_value($element, $items, $form_state);
+}
+
+/**
+ * Returns an array as string that can be evalued by eval() function;
+ */
+function _fieldset_tags_get_array_as_string($options) {
+  if (substr(var_export($options, TRUE), -3, 1) == ',') {
+    return substr_replace(var_export($options, TRUE), '', -3, 1);
+  }
+  else {
+    return var_export($options, TRUE);
+  }
+
+  return array();
+}
+
+/**
+ * Returns default options.
+ */
+function _get_default_options($children, $tags) {
+  $default_options = array();
+  foreach ($children as $tid => $term) {
+    if (in_array($term, $tags)) {
+      $default_options[$tid] = $tid;
+    }
+  }
+
+  return $default_options;
+}
+
+/**
+ * Returns an array with values for checkboxes form;
+ */
+function _fieldset_tags_get_options($children) {
+  $options = array();
+  foreach ($children as $tid => $term) {
+    $options[$tid] = $term->name;
+  }
+
+  return $options;
+}
+
+/**
+ * Generate $element array hierarchy as string.
+ */
+function _fieldset_tags_generate_element($tid, $parents) {
+
+  $element = '$element["tags"]';
+  foreach ($parents as $parent) {
+    $element .= '[' . $parent . ']';
+  }
+
+  return $element;
+}
+
+/**
+ * Returns all children if term is last parent for all children else return false.
+ */
+function _get_children_if_last_parent($tid, $vid) {
+  $children = taxonomy_get_children($tid, $vid);
+
+  foreach ($children as $child) {
+    if (count(taxonomy_get_children($child->tid, $vid)) != 0) {
+      return FALSE;
+    }
+  }
+
+  return $children;
+}
+
+function _fieldset_tags_get_values($element, &$result) {
+  foreach ($element as $key => $value) {
+    if (is_numeric($key) && isset($value['tag_options'])) {
+      if (!empty($value['tag_options']['#value'])) {
+        $result = $result + $value['tag_options']['#value'];
+      }
+    }
+    elseif (is_numeric($key) && is_array($value)) {
+      _fieldset_tags_get_values($value, $result);
+    }
+  }
+}
