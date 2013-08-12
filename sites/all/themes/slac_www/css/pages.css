@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -864,15 +864,11 @@ a.imageLessButton {
     background: #ddd; }
     /* line 661, ../sass/pages.scss */
     .page-basic > .panel-panel {
-      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7); }
-<<<<<<< HEAD
-    /* line 670, ../sass/pages.scss */
-=======
+      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0); }
     /* line 667, ../sass/pages.scss */
->>>>>>> 794ac816471e49e53f995d2d7c6a9b9d1eb3b559
     .page-basic .sidebar-menu {
       position: absolute;
       left: 0;
@@ -884,60 +880,63 @@ a.imageLessButton {
       display: none; }
 
   /* header */
-  /* line 682, ../sass/pages.scss */
+  /* line 683, ../sass/pages.scss */
+  .page-basic .header .inside,
   .page-basic .pane-pane-header {
     height: 42px;
-    margin: 0 2%;
-    width: 96%; }
-  /* line 687, ../sass/pages.scss */
+    margin: 0;
+    width: 100%; }
+  /* line 688, ../sass/pages.scss */
   .page-basic .header img {
-    margin: 0; }
-  /* line 690, ../sass/pages.scss */
+    margin: 7px 0;
+    width: 170px;
+    height: auto; }
+  /* line 693, ../sass/pages.scss */
   .page-basic .pane-pane-header {
     background-position: 230px center; }
 
-  /* line 695, ../sass/pages.scss */
+  /* line 698, ../sass/pages.scss */
   #search-box {
     margin: 0; }
 
-  /* line 699, ../sass/pages.scss */
+  /* line 702, ../sass/pages.scss */
   .header .section {
-    margin-left: 42px; } }
+    margin: 0 10px 0 52px; } }
 @media (min-width: 701px) {
-  /* line 706, ../sass/pages.scss */
+  /* line 709, ../sass/pages.scss */
   .page-basic > .panel-panel {
     margin: auto !important; } }
 @media (max-width: 900px) {
-  /* line 712, ../sass/pages.scss */
+  /* line 715, ../sass/pages.scss */
   .frontpage-right-col {
     clear: both;
     margin-top: 30px; }
-    /* line 715, ../sass/pages.scss */
+    /* line 718, ../sass/pages.scss */
     .frontpage-right-col .bg-list {
       overflow: hidden; }
-    /* line 718, ../sass/pages.scss */
+    /* line 721, ../sass/pages.scss */
     .frontpage-right-col .field-item {
       width: 30%;
       float: left;
       margin-left: 5%; }
-      /* line 722, ../sass/pages.scss */
+      /* line 725, ../sass/pages.scss */
       .frontpage-right-col .field-item:first-child {
         margin-left: 0; }
-    /* line 726, ../sass/pages.scss */
+    /* line 729, ../sass/pages.scss */
     .frontpage-right-col .connect {
       width: 40%; } }
 @media (max-width: 600px) {
-  /* line 735, ../sass/pages.scss */
+  /* line 738, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 738, ../sass/pages.scss */
+    /* line 741, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 745, ../sass/pages.scss */
+    /* line 748, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -945,21 +944,21 @@ a.imageLessButton {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 755, ../sass/pages.scss */
+  /* line 758, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px; }
-  /* line 760, ../sass/pages.scss */
+  /* line 763, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 765, ../sass/pages.scss */
+    /* line 768, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; }
 
-  /* line 775, ../sass/pages.scss */
+  /* line 778, ../sass/pages.scss */
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
   .frontpage-middle-left,
@@ -970,35 +969,35 @@ a.imageLessButton {
     border: none;
     margin-top: 0; }
 
-  /* line 782, ../sass/pages.scss */
+  /* line 785, ../sass/pages.scss */
   .frontpage-middle-left {
     padding-bottom: 10px; }
 
-  /* line 786, ../sass/pages.scss */
+  /* line 789, ../sass/pages.scss */
   .frontpage-middle-col {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     box-shadow: none; }
 
-  /* line 793, ../sass/pages.scss */
+  /* line 796, ../sass/pages.scss */
   .front-news {
     margin: 0; }
 
-  /* line 797, ../sass/pages.scss */
+  /* line 800, ../sass/pages.scss */
   .frontpage-right-col .bg-list {
     overflow: visible; }
 
-  /* line 801, ../sass/pages.scss */
+  /* line 804, ../sass/pages.scss */
   .pane-content {
     overflow: hidden; }
 
-  /* line 805, ../sass/pages.scss */
+  /* line 808, ../sass/pages.scss */
   .page-basic .content > .inside, .page-basic .footer > .inside {
     margin: 0;
     width: 100%; }
 
-  /* line 811, ../sass/pages.scss */
+  /* line 814, ../sass/pages.scss */
   .html .highlited .field-label,
   .html .highlited .pane-title {
     background: #999;
@@ -1009,7 +1008,7 @@ a.imageLessButton {
     width: 100%;
     color: #fff; }
 
-  /* line 821, ../sass/pages.scss */
+  /* line 824, ../sass/pages.scss */
   .video-block .youtube-thumbnail:after {
     bottom: 7px;
     right: 18px; } }

@@ -682,11 +682,13 @@ a.imageLessButton {
     .header .inside,
     .pane-pane-header{
       height: 42px;
-      margin: 0 2%; 
-      width: 96%;
+      margin: 0; 
+      width: 100%;
     }
     .header img{
-      margin: 0;
+      margin: 7px 0;
+      width: 170px;
+      height: auto;
     }
     .pane-pane-header{
       background-position: 230px center; 
@@ -698,7 +700,7 @@ a.imageLessButton {
   }
 
   .header .section{
-    margin-left: 42px;
+    margin: 0 10px 0 52px;
   }
 
 }
