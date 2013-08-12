@@ -50,6 +50,7 @@ a img{
   height:  42px;
   background: #bebebe url('../images/mobile-menu.png') no-repeat center center;
   cursor: pointer;
+  display: none;
 }
 
 .sidebar-menu .menu{
@@ -703,6 +704,27 @@ a.imageLessButton {
     margin: 0 10px 0 52px;
   }
 
+  /* Search box*/
+  
+  #search-box{
+    width: 24px;
+    height: 24px;
+    margin: 9px 0;
+    overflow: hidden;
+    background: url('../images/mobile-search.png') no-repeat top right;
+    float: right;
+    form{
+      display:none;
+    }
+    &:hover{
+      width:auto;
+      height:auto;
+      :hover{
+        width:auto;
+        height:auto;
+      }
+    }
+  }
 }
 
 @media (min-width: 701px){
