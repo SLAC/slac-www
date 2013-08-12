@@ -119,15 +119,13 @@
 
   .three-col .three-col-left{
     @include zen-grid-item(3, 1);
-
   }
+
   .three-col .three-col-middle,
-  .three-col .three-col-right{
-    @include zen-grid-item(15, 1);
-    clear: both;
+  .three-col .three-col-right,
+  .pane-page-content > .pane-title{
+    @include zen-grid-item(12, 4);
   }
-
-
 }
 
 @media (max-width: 600px) {
@@ -142,11 +140,19 @@
   .frontpage-left-col,
   .frontpage-middle-col,
   .frontpage-right-col,
-  .three-col .three-col-left{
+  .three-col .three-col-left,
   .three-col .three-col-middle,
-  .three-col .three-col-right{
+  .three-col .three-col-right,
+  .pane-page-content > .pane-title{
     @include zen-grid-item(4, 1);
     clear: both;
   } 
-
 }
+
+
+
+
+
+
+
+
