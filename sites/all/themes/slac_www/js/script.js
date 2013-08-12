@@ -67,7 +67,7 @@
     attach: function (context, settings) {
 
       $('<div class="mobile-search-trigger"><span></span></div>').insertBefore('.pane-pane-header #search-box');
-      $('.pane-pane-header #search-box').click(function(){
+      $('.mobile-search-trigger').click(function(){
         $('.mobile-search-box').slideToggle();
       });
 
