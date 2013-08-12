@@ -27,8 +27,6 @@ function fieldset_tags_field_widget_info() {
  * Implements hook_field_widget_form().
  */
 function fieldset_tags_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
-  $settings = $instance['widget']['settings'];
-
   $tags = array();
   foreach ($items as $item) {
     $tags[$item['tid']] = isset($item['taxonomy_term']) ? $item['taxonomy_term'] : taxonomy_term_load($item['tid']);
@@ -185,7 +183,7 @@ function _fieldset_tags_get_options($children) {
 function _fieldset_tags_generate_element($tid, $parents) {
 
   $element = '$element["tags"]';
-  foreach ($parents as $key => $parent) {
+  foreach ($parents as $parent) {
     $element .= '[' . $parent . ']';
   }
 
