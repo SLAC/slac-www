@@ -42,18 +42,15 @@ a img{
 
 /* Basic styles */
 
-
 .left-menu-trigger{
   position: absolute;
+  top: 0;
   left: 0;
-  top:  50px;
-  width: 100px;
-  height:  20px;
-  background: #000;
+  width: 42px;
+  height:  42px;
+  background: #bebebe url('../images/mobile-menu.png') no-repeat center center;
   cursor: pointer;
-  display: none;
 }
-
 
 .sidebar-menu .menu{
   ul{
@@ -678,6 +675,32 @@ a.imageLessButton {
       display: none;
     }
   }
+
+/* header */
+
+  .page-basic{
+    .header .inside,
+    .pane-pane-header{
+      height: 42px;
+      margin: 0 2%; 
+      width: 96%;
+    }
+    .header img{
+      margin: 0;
+    }
+    .pane-pane-header{
+      background-position: 230px center; 
+    }
+  }
+
+  #search-box{
+    margin: 0;
+  }
+
+  .header .section{
+    margin-left: 42px;
+  }
+
 }
 
 @media (min-width: 701px){
