@@ -51,5 +51,3 @@
     <?php endif; ?>
   </div> <!-- /section -->
 </div> <!-- /header -->
-
-<div class="mobile-search-box" id="search-box"><?php print $search_box; ?></div>
