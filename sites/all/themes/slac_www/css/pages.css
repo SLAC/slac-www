@@ -1108,14 +1108,16 @@ a.imageLessButton {
 
   /* line 887, ../sass/pages.scss */
   .frontpage-right-col .bg-list {
-    overflow: visible; }
+    overflow: visible;
+    float: left;
+    width: 100%; }
 
-  /* line 891, ../sass/pages.scss */
+  /* line 893, ../sass/pages.scss */
   .page-basic .content > .inside, .page-basic .footer > .inside {
     margin: 0;
     width: 100%; }
 
-  /* line 897, ../sass/pages.scss */
+  /* line 899, ../sass/pages.scss */
   .front .highlited .field-label,
   .front .highlited .pane-title {
     background: #999;
@@ -1127,35 +1129,58 @@ a.imageLessButton {
     color: #fff;
     display: block; }
 
-  /* line 908, ../sass/pages.scss */
+  /* line 910, ../sass/pages.scss */
   .video-block .youtube-thumbnail:after {
     bottom: 7px;
     right: 18px; }
 
-  /* line 913, ../sass/pages.scss */
+  /* line 915, ../sass/pages.scss */
   .three-col .three-col-right .panel-pane {
     clear: both;
     width: 100%;
     margin: 0; }
 
   /* Not front menus */
-  /* line 923, ../sass/pages.scss */
+  /* line 925, ../sass/pages.scss */
   .not-front .left-menu .depth-2.active-trail,
   .not-front .left-menu .depth-2.active {
     background: #b5b5b5; }
-  /* line 927, ../sass/pages.scss */
+  /* line 929, ../sass/pages.scss */
   .not-front .left-menu .menu li,
   .not-front .left-menu .pane-title {
     background: #e3e3e3;
     border-bottom: none;
     margin-bottom: 10px; }
-  /* line 933, ../sass/pages.scss */
+  /* line 935, ../sass/pages.scss */
   .not-front .left-menu .menu li a,
   .not-front .left-menu .pane-title a {
     padding: 7px 25px;
     display: block; }
-  /* line 937, ../sass/pages.scss */
+  /* line 939, ../sass/pages.scss */
   .not-front .left-menu .pane-title a {
     padding: 5px 15px;
     font-size: 16px;
-    line-height: normal; } }
+    line-height: normal; }
+
+  /* line 946, ../sass/pages.scss */
+  .back-on-top {
+    width: 98%;
+    padding: 0 2%;
+    display: block;
+    background: #780017;
+    color: #fff;
+    font-size: 12px;
+    line-height: 28px;
+    height: 28px;
+    text-transform: uppercase; }
+    /* line 956, ../sass/pages.scss */
+    .back-on-top span {
+      background: url("../images/footer-top-arrow.png") no-repeat right center;
+      padding-right: 23px; }
+
+  /* line 962, ../sass/pages.scss */
+  .page-basic > .panel-panel {
+    -webkit-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; } }
