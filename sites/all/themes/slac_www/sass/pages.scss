@@ -844,6 +844,7 @@ a.imageLessButton {
       width: 100%;
       padding-bottom: 15px;
       float: none;
+      margin: auto;
     }  
     
     .panels-flexible-region-last{
@@ -892,8 +893,9 @@ a.imageLessButton {
     width: 100%;
   }
 
-  .html .highlited .field-label, 
-  .html .highlited .pane-title{
+  .front .highlited .field-label, 
+  .front .highlited .pane-title,
+  .html .left-menu .pane-title{
     background: #999;
     border: none;
     padding: 0;
