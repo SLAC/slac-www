@@ -894,8 +894,7 @@ a.imageLessButton {
   }
 
   .front .highlited .field-label, 
-  .front .highlited .pane-title,
-  .html .left-menu .pane-title{
+  .front .highlited .pane-title{
     background: #999;
     border: none;
     padding: 0;
@@ -903,6 +902,7 @@ a.imageLessButton {
     padding: 6px 7%;
     width: 100%;  
     color: #fff;
+    display: block;
   }
 
   .video-block .youtube-thumbnail:after{
@@ -915,4 +915,31 @@ a.imageLessButton {
     width: 100%;
     margin: 0;
   }
+
+  /* Not front menus */
+
+  .not-front .left-menu .depth-2.active-trail, 
+  .not-front .left-menu .depth-2.active{
+    background: #b5b5b5;
+  }
+
+  .not-front .left-menu .menu li,
+  .not-front .left-menu .pane-title{
+    background: #e3e3e3;
+    border-bottom: none;
+    margin-bottom: 10px;
+  } 
+
+  .not-front .left-menu .menu li a,
+  .not-front .left-menu .pane-title a{
+    padding: 7px 25px;
+    display: block;
+  }
+
+  .not-front .left-menu .pane-title a{
+    padding: 5px 15px;
+    font-size: 16px;
+    line-height: normal;
+  }
+
 }

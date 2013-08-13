@@ -915,10 +915,10 @@ a.imageLessButton {
     background: #ddd; }
     /* line 678, ../sass/pages.scss */
     .page-basic > .panel-panel {
-      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7); }
+      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0); }
     /* line 684, ../sass/pages.scss */
     .page-basic .pane-pane-header #search-box {
       display: none; }
@@ -1115,17 +1115,17 @@ a.imageLessButton {
     margin: 0;
     width: 100%; }
 
-  /* line 898, ../sass/pages.scss */
+  /* line 897, ../sass/pages.scss */
   .front .highlited .field-label,
-  .front .highlited .pane-title,
-  .html .left-menu .pane-title {
+  .front .highlited .pane-title {
     background: #999;
     border: none;
     padding: 0;
     margin: 0 -7% 20px;
     padding: 6px 7%;
     width: 100%;
-    color: #fff; }
+    color: #fff;
+    display: block; }
 
   /* line 908, ../sass/pages.scss */
   .video-block .youtube-thumbnail:after {
@@ -1136,4 +1136,29 @@ a.imageLessButton {
   .three-col .three-col-right .panel-pane {
     clear: both;
     width: 100%;
-    margin: 0; } }
+    margin: 0; }
+
+  /* Not front menus */
+  /* line 922, ../sass/pages.scss */
+  .not-front .left-menu .depth-2.active-trail,
+  .not-front .left-menu .depth-2.active {
+    background: #b5b5b5; }
+
+  /* line 927, ../sass/pages.scss */
+  .not-front .left-menu .menu li,
+  .not-front .left-menu .pane-title {
+    background: #e3e3e3;
+    border-bottom: none;
+    margin-bottom: 10px; }
+
+  /* line 934, ../sass/pages.scss */
+  .not-front .left-menu .menu li a,
+  .not-front .left-menu .pane-title a {
+    padding: 7px 25px;
+    display: block; }
+
+  /* line 939, ../sass/pages.scss */
+  .not-front .left-menu .pane-title a {
+    padding: 5px 15px;
+    font-size: 16px;
+    line-height: normal; } }
