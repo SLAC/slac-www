@@ -54,34 +54,21 @@ function fieldset_tags_field_widget_form(&$form, &$form_state, $field, $instance
   );
 
   $parents = array();
-  $prev_parents = array();
   $depth = 0;
   $prev_depth = 0;
   foreach ($terms as $key => $term) {
     $children = taxonomy_get_children($term->tid, $vid);
-
-    if (isset($depth)) {
-      if ($depth > $term->depth) {
-        $parents = array();
-      }
-      elseif ($depth < $term->depth) {
-        $parents[$key] = $key;
-      }
-    }
     $depth = $term->depth;
 
     if (!empty($children)) {
-      $parents[$key] = $key;
-
-      if ($prev_depth - $term->depth >= 0 ) {
-        for ($i = $prev_depth - $term->depth; $i >= 0 ; $i--) {
-          array_pop($prev_parents);
+      if ($prev_depth - $depth > 0 ) {
+        for ($i = $prev_depth - $term->depth - 1; $i >= 0 ; $i--) {
+          array_pop($parents);
         }
-        $element_string = _fieldset_tags_generate_element($term->tid, array_merge($prev_parents, $parents));
       }
-      else {
-        $element_string = _fieldset_tags_generate_element($term->tid, $parents);
-      }
+      $parents[$key] = $key;
+      
+      $element_string = _fieldset_tags_generate_element($term->tid, $parents);
       $form_element = "array(
         '#type' => 'fieldset',
         '#title' => '" . $term->name . "',
@@ -93,13 +80,14 @@ function fieldset_tags_field_widget_form(&$form, &$form_state, $field, $instance
       eval($elem);
 
       $prev_depth = $depth;
-      $prev_parents = $parents;
-
       if (_get_children_if_last_parent($term->tid, $vid)) {
+        array_pop($parents);
         $options = array();
+        // Get children if curent item is last parent.
         $children = _get_children_if_last_parent($term->tid, $vid);
-
+	// Get options array as string.
         $options = _fieldset_tags_get_array_as_string(_fieldset_tags_get_options($children));
+        // Get default options array as string.
         $default_options = _fieldset_tags_get_array_as_string(_get_default_options($children, $tags));
 
         $form_element = "array(
