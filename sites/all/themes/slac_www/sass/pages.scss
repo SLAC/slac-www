@@ -805,9 +805,14 @@ a.imageLessButton {
       width: 40%;
     }
   }
+
+  .three-col .three-col-right{
+    clear: both;
+  }
+
   .three-col .three-col-right .panel-pane{
     float: left;
-    width: 25%;
+    width: 35%;
     margin-right: 5%;
   }
 }
@@ -838,6 +843,7 @@ a.imageLessButton {
     .panels-flexible-region-first {
       width: 100%;
       padding-bottom: 15px;
+      float: none;
     }  
     
     .panels-flexible-region-last{
@@ -879,10 +885,6 @@ a.imageLessButton {
 
   .frontpage-right-col .bg-list{
     overflow: visible;
-  }
-
-  .pane-content{
-    overflow:hidden;
   }
 
   .page-basic .content > .inside, .page-basic .footer > .inside{
