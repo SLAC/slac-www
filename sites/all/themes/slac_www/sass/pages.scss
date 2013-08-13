@@ -918,28 +918,26 @@ a.imageLessButton {
 
   /* Not front menus */
 
-  .not-front .left-menu .depth-2.active-trail, 
-  .not-front .left-menu .depth-2.active{
-    background: #b5b5b5;
+  .not-front .left-menu{
+    .depth-2.active-trail, 
+    .depth-2.active{
+      background: #b5b5b5;
+    }
+    .menu li,
+    .pane-title{
+      background: #e3e3e3;
+      border-bottom: none;
+      margin-bottom: 10px;
+    } 
+    .menu li a,
+    .pane-title a{
+      padding: 7px 25px;
+      display: block;
+    }
+    .pane-title a{
+      padding: 5px 15px;
+      font-size: 16px;
+      line-height: normal;
+    }
   }
-
-  .not-front .left-menu .menu li,
-  .not-front .left-menu .pane-title{
-    background: #e3e3e3;
-    border-bottom: none;
-    margin-bottom: 10px;
-  } 
-
-  .not-front .left-menu .menu li a,
-  .not-front .left-menu .pane-title a{
-    padding: 7px 25px;
-    display: block;
-  }
-
-  .not-front .left-menu .pane-title a{
-    padding: 5px 15px;
-    font-size: 16px;
-    line-height: normal;
-  }
-
 }
