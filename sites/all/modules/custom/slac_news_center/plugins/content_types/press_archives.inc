@@ -32,8 +32,6 @@ function press_archives_center_content_type_render($subtype, $conf, $panel_args,
     $link = 'news/press-release-archive-' . $year;
     $items[] = l($link_title, $link);
   }
-  $items[] = l(t('2010 - 1997 Archives'), 'http://home.slac.stanford.edu/pressreleases/');
-
   $block->content = theme('item_list', array('items' => $items, 'attributes' => array('class' => 'news-archive-links')));
 
   return $block;
