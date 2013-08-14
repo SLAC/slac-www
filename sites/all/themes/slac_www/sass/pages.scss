@@ -599,9 +599,6 @@ a.imageLessButton {
     text-indent: -100px;
     cursor:pointer;
   }
-  &:hover #slac-search-options{
-    display:block !important;
-  }
 }
 
 #slac-search-options{
@@ -743,12 +740,12 @@ a.imageLessButton {
   }  
 
   .mobile-search-box{
+    display: none;
     .pane-content{
       padding: 5px 0 12px;
       background: #8e001a;
       border-top: 1px solid #fff;
       overflow: hidden;
-      display: none;
     }
     .form-item{
       margin: 0;
@@ -772,6 +769,7 @@ a.imageLessButton {
       border: none;
       padding: 0;
       color: #aaa;
+       width: 100%;
     }
     #slac-search-button{
       float:right;
