@@ -714,12 +714,13 @@
 
 
 @media (max-width: 600px) {
-.shaded-background{
-  .contentInnerBoxStyle4{
-    width: 48%;
-  }
-  .contentInnerBoxStyle4:nth-child(2n+1){
-    clear:both;
+  .shaded-background{
+    .contentInnerBoxStyle4{
+      width: 48%;
+    }
+    .contentInnerBoxStyle4:nth-child(2n+1){
+      clear:both;
+    }
   }
 }
 
