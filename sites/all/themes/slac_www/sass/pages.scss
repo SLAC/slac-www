@@ -602,6 +602,7 @@ a.imageLessButton {
 }
 
 #slac-search-options{
+  display:none;
   .form-item{
     background: transparent;
     padding: 0;
@@ -785,7 +786,11 @@ a.imageLessButton {
       width: 100%;
     }
   }
+  #slac-search-options{
+    display:none;
+  }
 }
+
 
 @media (max-width: 900px) {
   .frontpage-right-col {
