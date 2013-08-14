@@ -485,6 +485,10 @@ table{
       list-style-type: square;
       color: #696969;
       font-size: 13px;
+      color: #990000;
+      a{
+        color: #990000;
+      }
       &.last{
         margin-bottom: 0;
       }
@@ -494,6 +498,14 @@ table{
     margin-left: 10px;
     font-size: 11px;
     font-style: italic;
+  }
+  .staff-return-link{
+    margin-bottom: 20px;
+  }
+  .staff-return-link a{
+    font-size: 11px;
+    font-style: italic;
+    margin-bottom:;
   }
 }
 
