@@ -806,8 +806,27 @@ a.imageLessButton {
   }
 }
 
+.three-col .three-col-middle{
+  width: 72%;
+  float: left;
+  margin-right: 3%;
+}
+
+.three-col .three-col-right{
+  width: 25%;
+  float: right;
+}
+
 
 @media (max-width: 900px) {
+  
+
+  .three-col .three-col-middle,
+  .three-col .three-col-right{
+    width: 100%;
+    clear: both;
+  }
+
   .frontpage-right-col {
     clear: both;
     margin-top: 30px;
@@ -877,7 +896,7 @@ a.imageLessButton {
         width: auto;
       }
     }
-  }
+  }\
 
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
