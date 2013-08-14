@@ -97,12 +97,13 @@
 
   Drupal.behaviors.slacSearch = {
     attach: function(context) {
-      $('#slac-search-wrapper').each(function(){
-        $(this).hover(function(){
-            $("#slac-search-options").fadeIn("slow");
+      $('#search-box, #mobile-search-box').each(function(){
+        $this= $(this);
+        $this.hover(function(){
+          $this.find("#slac-search-options").fadeIn("slow");
         },
         function(){
-            $("#slac-search-options").fadeOut();
+          $this.find("#slac-search-options").fadeOut();
         });      
       })     
     }
