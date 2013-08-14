@@ -169,9 +169,8 @@
 
 @media (max-width: 900px) {
   /* Front page layout */
-  /* line 103, ../sass/_mixins.scss */
-  .slider,
-  .three-col .three-col-middle-right {
+  /* line 102, ../sass/_mixins.scss */
+  .slider {
     float: left;
     width: 100%;
     margin-left: 0%;
@@ -184,7 +183,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 107, ../sass/_mixins.scss */
+  /* line 106, ../sass/_mixins.scss */
   .frontpage-left-col {
     float: left;
     width: 20%;
@@ -198,7 +197,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 112, ../sass/_mixins.scss */
+  /* line 111, ../sass/_mixins.scss */
   .frontpage-middle-col,
   .frontpage-right-col {
     float: left;
@@ -213,7 +212,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 116, ../sass/_mixins.scss */
+  /* line 115, ../sass/_mixins.scss */
   .three-col .three-col-left {
     float: left;
     width: 20%;
@@ -228,7 +227,8 @@
     word-wrap: break-word; }
 
   /* line 120, ../sass/_mixins.scss */
-  .pane-page-content > .pane-title {
+  .pane-page-content > .pane-title,
+  .three-col .three-col-middle-right {
     float: left;
     width: 80%;
     margin-left: 20%;

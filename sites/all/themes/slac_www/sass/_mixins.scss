@@ -99,8 +99,7 @@
 
   /* Front page layout */
 
-  .slider,
-  .three-col .three-col-middle-right{
+  .slider{
     @include zen-grid-item(15, 1);
   } 
   
@@ -117,7 +116,8 @@
     @include zen-grid-item(3, 1);
   }
 
-  .pane-page-content > .pane-title{
+  .pane-page-content > .pane-title,
+  .three-col .three-col-middle-right{
     @include zen-grid-item(12, 4);
   }
 }

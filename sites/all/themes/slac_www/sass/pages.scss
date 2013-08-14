@@ -437,18 +437,17 @@ a.lightbox-processed{
 /* Index page */
 
 .page-general-site-indexaspx {
- 
   .sections-letters{
-  clear: both;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6em;
-  margin-bottom: 30px;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6em;
+    margin-bottom: 30px;
+    font-size: 13px;  
+    font-weight: bold;
   }
 
   .sections-letters a{
-    font-size: 13px;  
-    font-weight:bold;
     padding: 0 5px 0 2px; 
   }
 
@@ -467,6 +466,9 @@ table{
   }
   ul{
   margin: 0 0 0 10px;
+  ul{
+    padding-bottom: 0;
+  }
   li{
     list-style-type: square;
     color: #696969;
@@ -475,6 +477,7 @@ table{
         margin-bottom: 0;
       }
     }
+  }
   }
   .index-letter{
     padding: 0 0 15px 0;
@@ -487,7 +490,6 @@ table{
     &:hover{
     border-bottom: 1px dotted #996633;
     }
-  }
   }
   .return-link a{
     margin-left: 10px;
@@ -656,6 +658,11 @@ a.imageLessButton {
 .three-col .three-col-right{
   width: 25%;
   float: right;
+}
+
+.tablesorter{
+  width: 100;
+  margin-top: 10px;
 }
 
 @media (min-width: 701px){
