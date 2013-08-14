@@ -443,12 +443,12 @@ a.lightbox-processed{
     padding: 0;
     line-height: 1.6em;
     margin-bottom: 30px;
-    font-size: 13px;  
-    font-weight: bold;
   }
 
   .sections-letters a{
     padding: 0 5px 0 2px; 
+    font-size: 13px;  
+    font-weight: bold;
   }
 
 table{
@@ -464,31 +464,30 @@ table{
   tr td{
     border: none;
   }
-  ul{
-  margin: 0 0 0 10px;
-  ul{
-    padding-bottom: 0;
+
   }
-  li{
-    list-style-type: square;
-    color: #696969;
-    font-size: 13px;
-    &.last{
-        margin-bottom: 0;
-      }
-    }
-  }
-  }
-  .index-letter{
+  .index-letter,
+  .small-index-letter{
     padding: 0 0 15px 0;
     font-weight:bold;
     color: #696969;
     font-size: 16px;
   }
-  a{
-    color: #990000;
-    &:hover{
-    border-bottom: 1px dotted #996633;
+  .small-index-letter{
+    font-size: 13px;
+  }
+  ul{
+    margin: 0 0 0 10px;
+    ul{
+      padding-bottom: 0;
+    }
+    li{
+      list-style-type: square;
+      color: #696969;
+      font-size: 13px;
+      &.last{
+        margin-bottom: 0;
+      }
     }
   }
   .return-link a{
