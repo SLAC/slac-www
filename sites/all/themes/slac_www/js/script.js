@@ -91,7 +91,7 @@
 
   Drupal.behaviors.backOnTop = {
     attach: function (context, settings) {
-      $('<a href="#" class="back-on-top"><span>Go to top</span></a>').insertAfter('.page-basic > .content') 
+      $('<a href="#" class="back-on-top"><span>Go to top</span></a>').insertAfter('.page-basic > .content > .inside') 
     }
   }
 

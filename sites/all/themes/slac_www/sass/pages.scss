@@ -868,6 +868,10 @@ a.imageLessButton {
     clear: both;
     margin-bottom: 40px;
   }
+
+  .three-col .three-col-right{
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -963,6 +967,11 @@ a.imageLessButton {
   .video-block .youtube-thumbnail:after{
     bottom: 7px;
     right: 18px;
+  }
+
+  .three-col .three-col-left,
+  .three-col .three-col-right{
+    margin-bottom: 40px;
   }
 
   .three-col .three-col-right .panel-pane{
