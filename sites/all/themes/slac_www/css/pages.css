@@ -1,9 +1,9 @@
 /*
 Syntax error: Invalid CSS after "  }": expected "}", was "\"
-        on line 899 of D:/Sites/slac-www/sites/all/themes/slac_www/sass/pages.scss
+        on line 881 of D:/Sites/slac-www/sites/all/themes/slac_www/sass/pages.scss
 
 Backtrace:
-D:/Sites/slac-www/sites/all/themes/slac_www/sass/pages.scss:899
+D:/Sites/slac-www/sites/all/themes/slac_www/sass/pages.scss:881
 C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1129:in `expected'
 C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1066:in `expected'
 C:/Program Files (x86)/Scout/vendor/gems/gems/sass-3.2.1/lib/sass/../sass/scss/parser.rb:1061:in `tok!'
@@ -58,4 +58,4 @@ C:\Program Files (x86)\Scout\bin\compass:12:in `(root)'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"  }\": expected \"}\", was \"\\"\A         on line 899 of D:/Sites/slac-www/sites/all/themes/slac_www/sass/pages.scss"; }
+  content: "Syntax error: Invalid CSS after \"  }\": expected \"}\", was \"\\"\A         on line 881 of D:/Sites/slac-www/sites/all/themes/slac_www/sass/pages.scss"; }
