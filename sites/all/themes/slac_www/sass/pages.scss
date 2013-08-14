@@ -808,7 +808,6 @@ a.imageLessButton {
 
 
 @media (max-width: 900px) {
-
   .frontpage-right-col {
     clear: both;
     margin-top: 30px;
@@ -878,7 +877,7 @@ a.imageLessButton {
         width: auto;
       }
     }
-  }\
+  }
 
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
@@ -986,11 +985,5 @@ a.imageLessButton {
     -ms-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-  }
-
-  .three-col .three-col-middle,
-  .three-col .three-col-right{
-    width: 100%;
-    clear: both;
   }
 }
