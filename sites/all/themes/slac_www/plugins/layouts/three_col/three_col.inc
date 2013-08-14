@@ -13,6 +13,7 @@ $plugin = array(
   'css' => 'three_col.css',
   'regions' => array(
     'left' => t('Left Column'),
+    'mainmiddleright' => t('Main Middle+Right Column'),
     'middle' => t('Middle Column'),
     'right' => t('Right Column')
   ),

@@ -15,21 +15,21 @@
  */
 ?>
 <div class="panel-display three-col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+  <div class="three-col-middle-right">
+    <div class="panel-panel three-col-middle">
+       <?php if ($content['middle']): ?>
+          <div class="inside"><?php print $content['middle']; ?></div>
+        <?php endif ?>
+    </div>
+    <div class="panel-panel three-col-right">
+       <?php if ($content['right']): ?>
+          <div class="inside"><?php print $content['right']; ?></div>
+        <?php endif ?>
+    </div>
+  </div>
   <div class="panel-panel three-col-left">
      <?php if ($content['left']): ?>
         <div class="inside"><?php print $content['left']; ?></div>
-      <?php endif ?>
-  </div>
-
-  <div class="panel-panel three-col-middle">
-     <?php if ($content['middle']): ?>
-        <div class="inside"><?php print $content['middle']; ?></div>
-      <?php endif ?>
-  </div>
-
-  <div class="panel-panel three-col-right">
-     <?php if ($content['right']): ?>
-        <div class="inside"><?php print $content['right']; ?></div>
       <?php endif ?>
   </div>
 </div>

@@ -64,12 +64,8 @@
     @include zen-grid-item(4, 1);
   }
 
-  .three-col .three-col-middle{
-    @include zen-grid-item(15, 5);
-  }
-
-  .three-col .three-col-right{
-    @include zen-grid-item(5, 20);
+  .three-col .three-col-middle-right{
+    @include zen-grid-item(20, 5);
   }
 
   .pane-page-content > .pane-title{
@@ -95,7 +91,14 @@
     @include zen-grid-item(6, 19);
   }
 
-
+/*
+  .three-col .three-col-middle{
+    @include zen-grid-item(15, 5);
+  }
+  .three-col .three-col-right{
+    @include zen-grid-item(5, 20);
+  }
+*/
 
 @media (max-width: 900px) {
 
