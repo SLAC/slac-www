@@ -787,7 +787,22 @@ a.imageLessButton {
     }
   }
   #slac-search-options{
-    display:none;
+    display: block;
+    overflow: hidden;
+    float: left;
+    clear: both;
+    width: 59%;
+    padding: 0 3%;
+    border: 2px solid #f2f2f2;
+    background: #f2f2f2;
+    height: 28px;
+  }
+  .form-item .form-type-radio{
+    margin: 7px 10px 4px 0;
+    color: #000;
+  }
+  .form-type-radio input{
+    margin-top: 0;
   }
 }
 
