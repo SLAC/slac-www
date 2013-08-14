@@ -675,6 +675,10 @@ a.imageLessButton {
   margin-top: 10px;
 }
 
+.mobile-search-box{
+  display: none;
+}
+
 @media (min-width: 701px){
   .page-basic > .panel-panel{
     margin: auto !important;
@@ -770,13 +774,13 @@ a.imageLessButton {
 
   .mobile-search-box{
     display: none;
+    width: 100%;
+    clear: both;
     .pane-content{
       padding: 5px 0 12px;
       background: #8e001a;
       border-top: 1px solid #fff;
       overflow: hidden;
-      width: 100%;
-      clear: both;
     }
     .form-item{
       margin: 0;
