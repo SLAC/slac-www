@@ -775,6 +775,8 @@ a.imageLessButton {
       background: #8e001a;
       border-top: 1px solid #fff;
       overflow: hidden;
+      width: 100%;
+      clear: both;
     }
     .form-item{
       margin: 0;
@@ -825,12 +827,21 @@ a.imageLessButton {
       background: #f2f2f2;
       height: 28px;
       .form-item .form-type-radio{
-        margin: 7px 10px 4px 0;
+        margin: 7px 0 4px 10%;
         color: #000;
+        width: 45%
+      }
+      .form-item .form-type-radio:first-child{
+        margin-left: 0;
       }
     }
     .form-type-radio input{
       margin-top: 0;
+      padding: 0;
+    }
+    .form-type-radio label{
+      float: left;
+      height: 14px;
     }
   }
 }
@@ -1016,6 +1027,7 @@ a.imageLessButton {
     height: 28px;
     text-transform: uppercase;
     margin-bottom: 15px;
+    clear: both;
     span{
       background: url('../images/footer-top-arrow.png') no-repeat right center;
       padding-right: 23px;
