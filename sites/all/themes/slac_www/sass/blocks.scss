@@ -306,6 +306,8 @@
     line-height: 18px;
     margin: 0 3%;
     width: 94%;
+    width: 97%;
+    padding-left: 3%;
   }
   .field .field .field-item a, 
   .menu li a,
@@ -483,9 +485,12 @@
     font-weight:bold;
     a{
       font-weight: normal;
-      &:hover {
+      & {
         border-bottom: 1px dotted #996633;
       }
+    }
+    .imgLink:hover{
+      border: none;
     }
   }
   img{
@@ -709,7 +714,13 @@
 
 
 @media (max-width: 600px) {
-
+.shaded-background{
+  .contentInnerBoxStyle4{
+    width: 48%;
+  }
+  .contentInnerBoxStyle4:nth-child(2n+1){
+    clear:both;
+  }
 }
 
 
