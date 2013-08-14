@@ -1071,32 +1071,29 @@ a.imageLessButton {
       width: 40%; }
 
   /* line 859, ../sass/pages.scss */
-  .three-col .three-col-right {
-    clear: both; }
-
-  /* line 863, ../sass/pages.scss */
   .three-col .three-col-right .panel-pane {
     float: left;
     width: 35%;
     margin-right: 5%; }
 
-  /* line 870, ../sass/pages.scss */
+  /* line 866, ../sass/pages.scss */
   .three-col .three-col-middle,
   .three-col .three-col-right {
     width: 100%;
-    clear: both; } }
+    clear: both;
+    margin-bottom: 40px; } }
 @media (max-width: 600px) {
-  /* line 879, ../sass/pages.scss */
+  /* line 876, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 882, ../sass/pages.scss */
+    /* line 879, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 889, ../sass/pages.scss */
+    /* line 886, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -1104,23 +1101,23 @@ a.imageLessButton {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 899, ../sass/pages.scss */
+  /* line 896, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px;
     float: none;
     margin: auto; }
-  /* line 906, ../sass/pages.scss */
+  /* line 903, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 911, ../sass/pages.scss */
+    /* line 908, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; }
 
-  /* line 921, ../sass/pages.scss */
+  /* line 918, ../sass/pages.scss */
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
   .frontpage-middle-left,
@@ -1131,33 +1128,33 @@ a.imageLessButton {
     border: none;
     margin-top: 0; }
 
-  /* line 928, ../sass/pages.scss */
+  /* line 925, ../sass/pages.scss */
   .frontpage-middle-left {
     padding-bottom: 10px; }
 
-  /* line 932, ../sass/pages.scss */
+  /* line 929, ../sass/pages.scss */
   .frontpage-middle-col {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     box-shadow: none; }
 
-  /* line 939, ../sass/pages.scss */
+  /* line 936, ../sass/pages.scss */
   .front-news {
     margin: 0; }
 
-  /* line 943, ../sass/pages.scss */
+  /* line 940, ../sass/pages.scss */
   .frontpage-right-col .bg-list {
     overflow: visible;
     float: left;
     width: 100%; }
 
-  /* line 949, ../sass/pages.scss */
+  /* line 946, ../sass/pages.scss */
   .page-basic .content > .inside, .page-basic .footer > .inside {
     margin: 0;
     width: 100%; }
 
-  /* line 955, ../sass/pages.scss */
+  /* line 952, ../sass/pages.scss */
   .front .highlited .field-label,
   .front .highlited .pane-title {
     background: #999;
@@ -1169,40 +1166,40 @@ a.imageLessButton {
     color: #fff;
     display: block; }
 
-  /* line 966, ../sass/pages.scss */
+  /* line 963, ../sass/pages.scss */
   .video-block .youtube-thumbnail:after {
     bottom: 7px;
     right: 18px; }
 
-  /* line 971, ../sass/pages.scss */
+  /* line 968, ../sass/pages.scss */
   .three-col .three-col-right .panel-pane {
     clear: both;
     width: 100%;
     margin: 0; }
 
   /* Not front menus */
-  /* line 981, ../sass/pages.scss */
+  /* line 978, ../sass/pages.scss */
   .not-front .left-menu .depth-2.active-trail,
   .not-front .left-menu .depth-2.active {
     background: #b5b5b5; }
-  /* line 985, ../sass/pages.scss */
+  /* line 982, ../sass/pages.scss */
   .not-front .left-menu .menu li,
   .not-front .left-menu .pane-title {
     background: #e3e3e3;
     border-bottom: none;
     margin-bottom: 10px; }
-  /* line 991, ../sass/pages.scss */
+  /* line 988, ../sass/pages.scss */
   .not-front .left-menu .menu li a,
   .not-front .left-menu .pane-title a {
     padding: 7px 25px;
     display: block; }
-  /* line 995, ../sass/pages.scss */
+  /* line 992, ../sass/pages.scss */
   .not-front .left-menu .pane-title a {
     padding: 5px 15px;
     font-size: 16px;
     line-height: normal; }
 
-  /* line 1002, ../sass/pages.scss */
+  /* line 999, ../sass/pages.scss */
   .back-on-top {
     width: 98%;
     padding: 0 2%;
@@ -1212,13 +1209,14 @@ a.imageLessButton {
     font-size: 12px;
     line-height: 28px;
     height: 28px;
-    text-transform: uppercase; }
-    /* line 1012, ../sass/pages.scss */
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+    /* line 1010, ../sass/pages.scss */
     .back-on-top span {
       background: url("../images/footer-top-arrow.png") no-repeat right center;
       padding-right: 23px; }
 
-  /* line 1018, ../sass/pages.scss */
+  /* line 1016, ../sass/pages.scss */
   .page-basic > .panel-panel {
     -webkit-box-shadow: none;
     -ms-box-shadow: none;

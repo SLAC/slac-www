@@ -856,10 +856,6 @@ a.imageLessButton {
     }
   }
 
-  .three-col .three-col-right{
-    clear: both;
-  }
-
   .three-col .three-col-right .panel-pane{
     float: left;
     width: 35%;
@@ -870,6 +866,7 @@ a.imageLessButton {
   .three-col .three-col-right{
     width: 100%;
     clear: both;
+    margin-bottom: 40px;
   }
 }
 
@@ -1009,6 +1006,7 @@ a.imageLessButton {
     line-height: 28px;
     height: 28px;
     text-transform: uppercase;
+    margin-bottom: 15px;
     span{
       background: url('../images/footer-top-arrow.png') no-repeat right center;
       padding-right: 23px;
