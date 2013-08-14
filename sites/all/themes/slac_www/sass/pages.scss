@@ -620,7 +620,8 @@ a.imageLessButton {
     padding: 0;
   }
   > .form-item{
-    width: 148px;
+    width: auto;
+    max-width: 200px;
     background-color: #EFEFEF;
     color: #990000;
     font-size: 11px;
