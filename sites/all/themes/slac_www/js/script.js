@@ -89,13 +89,23 @@
     }
   }
 
-
-
   Drupal.behaviors.backOnTop = {
     attach: function (context, settings) {
       $('<a href="#" class="back-on-top"><span>Go to top</span></a>').insertBefore('.footer') 
     }
   }
 
+  Drupal.behaviors.slacSearch = {
+    attach: function(context) {
+      $('#slac-search-wrapper').each(function(){
+        $(this).hover(function(){
+            $("#slac-search-options").fadeIn("slow");
+        },
+        function(){
+            $("#slac-search-options").fadeOut();
+        });      
+      })     
+    }
+  }
 
 })(jQuery, Drupal, this, this.document);
