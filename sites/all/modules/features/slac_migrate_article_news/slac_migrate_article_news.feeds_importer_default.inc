@@ -23,6 +23,7 @@ function slac_migrate_article_news_feeds_importer_default() {
         'recursive' => TRUE,
         'filemask' => '/\\.xml$/',
         'updated_files' => FALSE,
+        'directory' => 'public://feeds',
       ),
     ),
     'parser' => array(
@@ -119,20 +120,10 @@ function slac_migrate_article_news_feeds_importer_default() {
             'autocreate' => 1,
           ),
           7 => array(
-            'source' => 'xpathparser:7',
-            'target' => 'field_image_description',
-            'unique' => FALSE,
-          ),
-          8 => array(
             'source' => 'xpathparser:8',
             'target' => 'field_article_type',
             'term_search' => '0',
             'autocreate' => 1,
-          ),
-          9 => array(
-            'source' => 'Blank source 1',
-            'target' => 'field_source',
-            'unique' => FALSE,
           ),
         ),
         'update_existing' => '0',
