@@ -320,6 +320,8 @@
     display: block;
     font-size: 11px;
     line-height: 18px;
+    padding-bottom: 1px;
+    clear: both;
   }
   .field .field .field-item a:hover, 
   .menu li a:hover,
@@ -411,7 +413,9 @@
     font-size: 12px;
     margin-top: 15px;
     float: left;
+    padding-bottom: 1px;
     &:hover{
+      padding-bottom: 0;
       border-bottom: 1px dotted #996633;
     }
   }
