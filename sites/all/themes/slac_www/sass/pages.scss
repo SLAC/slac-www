@@ -282,12 +282,25 @@ input:focus{
   line-height: 18px;
   font-size: 13px;
   @include box-shadow(2px, 2px, 2px, 1px, #e4e4e4);
-  padding: 0 2% 10px 1%;
+  padding-bottom: 10px;
   float:left;
   width: 72%;
+  padding: 0 2% 10px 1%;
+}
+
+.frontpage-right-col{
+  float:left;
+  width: 23%;
+  padding-left: 2%;
 }
 
 .frontpage-middle-right{
+  width: 26%;
+  float: right;
+  margin-left: 2.5%;
+}
+
+.frontpage-right-col{
   float:left;
   width: 23%;
   padding-left: 2%;
