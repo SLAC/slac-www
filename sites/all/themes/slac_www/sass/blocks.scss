@@ -22,6 +22,9 @@
   .views-field-field-image {
     float: left;
     width: 62%;
+    .image-field-caption{
+      display: none;
+    }
   }
   .views-slideshow-controls-text span {
     position: absolute;

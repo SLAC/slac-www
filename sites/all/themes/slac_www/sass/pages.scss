@@ -906,8 +906,12 @@ a.imageLessButton {
 
   .three-col .three-col-right .panel-pane{
     float: left;
-    width: 35%;
-    margin-right: 5%;
+    width: 30%;
+    margin-left: 5%;
+  }
+
+  .three-col .three-col-right .panel-pane:first-child{
+    margin-left: 0;
   }
 
   .three-col .three-col-middle,
