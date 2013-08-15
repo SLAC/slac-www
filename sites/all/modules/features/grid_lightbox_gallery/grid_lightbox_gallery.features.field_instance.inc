@@ -58,9 +58,12 @@ function grid_lightbox_gallery_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'lightbox2',
-        'settings' => array(),
-        'type' => 'lightbox2__lightshow__grid-lightbox-gallery-thumbnail__grid-lightbox-gallery-full-size',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
         'weight' => 0,
       ),
     ),
@@ -73,6 +76,7 @@ function grid_lightbox_gallery_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',

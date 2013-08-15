@@ -87,6 +87,7 @@ function slac_migrate_pages_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => 'images',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',

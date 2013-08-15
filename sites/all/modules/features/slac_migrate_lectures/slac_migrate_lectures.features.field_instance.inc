@@ -165,8 +165,19 @@ function slac_migrate_lectures_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'crop_landscape' => 'crop_landscape',
+          'crop_portrait' => 'crop_portrait',
+          'crop_square' => 0,
+          'ecrop_frontpage_carousel' => 0,
+          'ecrop_frontpage_headlines' => 0,
+          'ecrop_frontpage_headlines_small' => 'ecrop_frontpage_headlines_small',
+        ),
+      ),
       'file_directory' => 'lectures_files',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -175,12 +186,28 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
-        'preview_image_style' => 'thumbnail',
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+          'youtube' => 0,
+        ),
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 8,
     ),
   );

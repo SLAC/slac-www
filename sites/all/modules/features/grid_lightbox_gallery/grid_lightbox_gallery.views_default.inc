@@ -49,7 +49,7 @@ function grid_lightbox_gallery_views_default_views() {
     'image_style' => 'grid-lightbox-gallery-full-size',
     'image_link' => '',
   );
-  /* Field: Field collection item: Description */
+  /* Field: Field: Description */
   $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
   $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
   $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
