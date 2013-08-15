@@ -1,0 +1,10 @@
+name = News-articles importer
+description = "Imports news-articles"
+package = SLAC
+core = 7.x
+dependencies[] = feeds
+dependencies[] = feeds_tamper
+dependencies[] = feeds_fetcher_directory
+dependencies[] = feeds_xpathparser
+dependencies[] = image_field_caption
+
