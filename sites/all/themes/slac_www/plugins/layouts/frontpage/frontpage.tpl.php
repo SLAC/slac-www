@@ -33,15 +33,17 @@
       <?php if ($content['middletop']): ?>
         <div class="inside middletop"><?php print $content['middletop']; ?></div>    
       <?php endif ?>
-      <div class="frontpage-middle-left">
-        <?php if ($content['middleleft']): ?>
-          <div class="inside middleleft"><?php print $content['middleleft']; ?></div>    
-        <?php endif ?>
-      </div>
-      <div class="frontpage-middle-right">
-        <?php if ($content['middleright']): ?>
-          <div class="inside middleright"><?php print $content['middleright']; ?></div>    
-        <?php endif ?>
+      <div class="middleright">
+        <div class="frontpage-middle-left">
+          <?php if ($content['middleleft']): ?>
+            <div class="inside middleleft"><?php print $content['middleleft']; ?></div>    
+          <?php endif ?>
+        </div>
+        <div class="frontpage-middle-right">
+          <?php if ($content['middleright']): ?>
+            <div class="inside middleright"><?php print $content['middleright']; ?></div>    
+          <?php endif ?>
+        </div>
       </div>
     </div>
 

@@ -50,12 +50,8 @@
     @include zen-grid-item(4, 1);
   }
 
-  .frontpage-middle-col{
+  .middleright{
     @include zen-grid-item(15, 5);
-  }
-
-  .frontpage-right-col{
-    @include zen-grid-item(5, 20);
   }
 
   /* Three col layout */
@@ -107,10 +103,9 @@
     @include zen-grid-item(3, 1);
   }
 
-  .frontpage-middle-col,
-  .frontpage-right-col{
+  .middleright{
     @include zen-grid-item(12, 4);
-  } 
+  }
 
   .three-col .three-col-left{
     @include zen-grid-item(3, 1);
@@ -130,6 +125,10 @@
   }
 }
 
+
+
+
+middleright
 @media (max-width: 600px) {
 
 
@@ -140,8 +139,7 @@
 
   .slider,
   .frontpage-left-col,
-  .frontpage-middle-col,
-  .frontpage-right-col,
+  .middleright,
   .three-col .three-col-left,
   .three-col .three-col-middle-right,
   .pane-page-content > .pane-title,
