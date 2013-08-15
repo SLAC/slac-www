@@ -68,10 +68,6 @@
     @include zen-grid-item(15, 5);
   }
 
-  .two-col-basic .pane-page-content > .pane-title{
-    @include zen-grid-item(24, 1);
-  }
-
   .one-col-basic .pane-page-content > .pane-content,
   .one-col-basic .pane-page-content > .pane-title,
   .node-type-news-article .pane-page-content > .pane-content,
@@ -79,6 +75,7 @@
     @include zen-grid-item(22, 2);
   }
 
+  .two-col-basic .pane-page-content > .pane-title,
   .general-two-col .pane-page-content > .pane-title,
   .general-two-col .general-left{
     @include zen-grid-item(18, 1);
