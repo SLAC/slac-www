@@ -239,17 +239,35 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    word-wrap: break-word; }
+
+  /* line 125, ../sass/_mixins.scss */
+  .general-two-col .general-left,
+  .general-two-col .general-right {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
     word-wrap: break-word; } }
 @media (max-width: 600px) {
   /* Front page layout */
-  /* line 139, ../sass/_mixins.scss */
+  /* line 147, ../sass/_mixins.scss */
   .slider,
   .frontpage-left-col,
   .frontpage-middle-col,
   .frontpage-right-col,
   .three-col .three-col-left,
   .three-col .three-col-middle-right,
-  .pane-page-content > .pane-title {
+  .pane-page-content > .pane-title,
+  .general-two-col .general-left,
+  .general-two-col .general-right,
+  .two-col-basic .pane-page-content > .pane-title {
     float: left;
     width: 100%;
     margin-left: 0%;
@@ -938,10 +956,10 @@ a.imageLessButton {
     background: #ddd; }
     /* line 718, ../sass/pages.scss */
     .page-basic > .panel-panel {
-      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7); }
+      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0); }
     /* line 724, ../sass/pages.scss */
     .page-basic .pane-pane-header #search-box {
       display: none; }
