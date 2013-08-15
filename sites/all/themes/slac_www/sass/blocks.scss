@@ -475,6 +475,10 @@
   }
 }
 
+.page-body-block .shaded-background:first-child{
+  padding-top: 0;
+}
+
 .no-shaded-background .content-block-body{
   margin-left: 20px;
 }
