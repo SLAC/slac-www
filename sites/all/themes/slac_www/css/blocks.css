@@ -93,8 +93,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 72, ../sass/_mixins.scss */
-.general-two-col .pane-page-content > .pane-title,
+/* line 71, ../sass/_mixins.scss */
 .two-col-basic .pane-page-content > .pane-title {
   float: left;
   width: 100%;
@@ -108,7 +107,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 79, ../sass/_mixins.scss */
+/* line 78, ../sass/_mixins.scss */
 .one-col-basic .pane-page-content > .pane-content,
 .one-col-basic .pane-page-content > .pane-title,
 .node-type-news-article .pane-page-content > .pane-content,
@@ -126,6 +125,7 @@
   word-wrap: break-word; }
 
 /* line 83, ../sass/_mixins.scss */
+.general-two-col .pane-page-content > .pane-title,
 .general-two-col .general-left {
   float: left;
   width: 75%;
