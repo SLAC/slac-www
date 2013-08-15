@@ -259,13 +259,17 @@ input:focus{
     font-weight: bold;
     margin-bottom: 20px;
     position: relative;
-    top: 20px;
+    top: 0;
   }
   .pane-content {
     clear: both;
   }
 }
 
+.content-block-other:first-child .shaded-background:first-child{
+  padding: 0;
+  margin-top: -23px;
+}
 
 .node-type-news-article .pane-page-content{overflow:hidden;}
 
@@ -689,6 +693,10 @@ a.imageLessButton {
 .tablesorter{
   width: 100%;
   margin-top: 10px;
+}
+
+.map-print{
+  margin-top: -20px;
 }
 
 .imgclass img{

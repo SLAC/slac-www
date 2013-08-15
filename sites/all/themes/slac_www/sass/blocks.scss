@@ -367,6 +367,9 @@
 
 .google-maps{
   margin-top: 15px;
+  table td{
+    border:none;
+  }
 }
 
 .date-paragraph{
@@ -377,7 +380,7 @@
   font-size: 10px;
 }
 
-.pane-node-body{
+div.pane-node-body{
   p{
     line-height: 20px;
     font-size: 13px;  
@@ -394,6 +397,9 @@
     list-style-position: inside;
     padding: 2px 0;
     line-height: 18px;
+    li a{
+      color: #79182A;
+    }
     a{
       color: #696969;
       font-size: 13px;
@@ -425,7 +431,8 @@
   }
 }
 
-.three-col-middle .field-name-body .field-item > p:first-child{
+.three-col-middle .field-name-body .field-item > p:first-child,
+.mapclass{
   margin-top: -6px;
 }
 
