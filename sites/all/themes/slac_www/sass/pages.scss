@@ -856,7 +856,6 @@ a.imageLessButton {
   }
 }
 
-
 @media (max-width: 900px) {
   .frontpage-right-col {
     clear: both;
@@ -893,6 +892,12 @@ a.imageLessButton {
   .three-col .three-col-right{
     margin-bottom: 5px;
   }
+
+  .general-two-col .general-left,
+  .general-two-col .general-right{
+    clear: both;
+    margin-bottom: 40px;
+  }  
 }
 
 @media (max-width: 600px) {
