@@ -29,11 +29,11 @@
       <?php endif ?>
     </div>
     
-    <div class="frontpage-middle-col">
-      <?php if ($content['middletop']): ?>
-        <div class="inside middletop"><?php print $content['middletop']; ?></div>    
-      <?php endif ?>
-      <div class="middleright">
+    <div class="middleright">
+      <div class="frontpage-middle-col">
+        <?php if ($content['middletop']): ?>
+          <div class="inside middletop"><?php print $content['middletop']; ?></div>    
+        <?php endif ?>
         <div class="frontpage-middle-left">
           <?php if ($content['middleleft']): ?>
             <div class="inside middleleft"><?php print $content['middleleft']; ?></div>    
@@ -45,12 +45,12 @@
           <?php endif ?>
         </div>
       </div>
-    </div>
 
-    <div class="frontpage-right-col">
-      <?php if ($content['right']): ?>
-        <div class="inside right"><?php print $content['right']; ?></div>
-      <?php endif ?>
+      <div class="frontpage-right-col">
+        <?php if ($content['right']): ?>
+          <div class="inside right"><?php print $content['right']; ?></div>
+        <?php endif ?>
+      </div>      
     </div>
 
   </div>

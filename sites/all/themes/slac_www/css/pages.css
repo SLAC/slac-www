@@ -255,7 +255,7 @@
     word-wrap: break-word; } }
 @media (max-width: 600px) {
   /* Front page layout */
-  /* line 143, ../sass/_mixins.scss */
+  /* line 144, ../sass/_mixins.scss */
   .slider,
   .frontpage-left-col,
   .middleright,

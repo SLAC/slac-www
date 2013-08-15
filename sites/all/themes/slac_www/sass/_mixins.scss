@@ -105,7 +105,7 @@
 
   .middleright{
     @include zen-grid-item(12, 4);
-  }
+  } 
 
   .three-col .three-col-left{
     @include zen-grid-item(3, 1);
@@ -126,6 +126,7 @@
 }
 
 @media (max-width: 600px) {
+
 
   $zen-gutter-width: 7%;  
   $zen-column-count: 4;  
