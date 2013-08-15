@@ -968,10 +968,10 @@ a.imageLessButton {
     background: #ddd; }
     /* line 733, ../sass/pages.scss */
     .page-basic > .panel-panel {
-      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
-      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7); }
+      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
+      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0); }
     /* line 739, ../sass/pages.scss */
     .page-basic .pane-pane-header #search-box {
       display: none; }
@@ -1102,59 +1102,64 @@ a.imageLessButton {
       float: left;
       height: 14px; } }
 @media (max-width: 900px) {
-  /* line 875, ../sass/pages.scss */
+  /* line 877, ../sass/pages.scss */
+  .frontpage-middle-col,
   .frontpage-right-col {
-    clear: both;
+    width: 100%;
+    clear: both; }
+
+  /* line 881, ../sass/pages.scss */
+  .frontpage-right-col {
     margin-top: 30px; }
-    /* line 878, ../sass/pages.scss */
+    /* line 883, ../sass/pages.scss */
     .frontpage-right-col .bg-list {
       overflow: hidden; }
-    /* line 881, ../sass/pages.scss */
+    /* line 886, ../sass/pages.scss */
     .frontpage-right-col .field-item {
       width: 30%;
       float: left;
       margin-left: 5%; }
-      /* line 885, ../sass/pages.scss */
+      /* line 890, ../sass/pages.scss */
       .frontpage-right-col .field-item:first-child {
         margin-left: 0; }
-    /* line 889, ../sass/pages.scss */
+    /* line 894, ../sass/pages.scss */
     .frontpage-right-col .connect {
       width: 40%; }
 
-  /* line 894, ../sass/pages.scss */
+  /* line 899, ../sass/pages.scss */
   .three-col .three-col-right .panel-pane {
     float: left;
     width: 35%;
     margin-right: 5%; }
 
-  /* line 901, ../sass/pages.scss */
+  /* line 906, ../sass/pages.scss */
   .three-col .three-col-middle,
   .three-col .three-col-right {
     width: 100%;
     clear: both;
     margin-bottom: 40px; }
 
-  /* line 907, ../sass/pages.scss */
+  /* line 912, ../sass/pages.scss */
   .three-col .three-col-right {
     margin-bottom: 5px; }
 
-  /* line 912, ../sass/pages.scss */
+  /* line 917, ../sass/pages.scss */
   .general-two-col .general-left,
   .general-two-col .general-right {
     clear: both;
     margin-bottom: 40px; } }
 @media (max-width: 600px) {
-  /* line 921, ../sass/pages.scss */
+  /* line 926, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
     padding: 0; }
-    /* line 924, ../sass/pages.scss */
+    /* line 929, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu li {
       background: #a1a1a1;
       clear: both;
       width: 100%;
       margin: 0 0 14px 0;
       text-align: left; }
-    /* line 931, ../sass/pages.scss */
+    /* line 936, ../sass/pages.scss */
     .page-basic .pane-menu-menu-footer-menu .menu a {
       background: url("../images/footer-arrow.png") no-repeat right center;
       padding: 7px 0;
@@ -1162,23 +1167,23 @@ a.imageLessButton {
       margin: 0 1% 0 2%;
       width: 97%;
       display: block; }
-  /* line 941, ../sass/pages.scss */
+  /* line 946, ../sass/pages.scss */
   .page-basic .panels-flexible-region-first {
     width: 100%;
     padding-bottom: 15px;
     float: none;
     margin: auto; }
-  /* line 948, ../sass/pages.scss */
+  /* line 953, ../sass/pages.scss */
   .page-basic .panels-flexible-region-last {
     clear: both;
     float: none;
     width: 100%;
     text-align: center; }
-    /* line 953, ../sass/pages.scss */
+    /* line 958, ../sass/pages.scss */
     .page-basic .panels-flexible-region-last img {
       width: auto; }
 
-  /* line 963, ../sass/pages.scss */
+  /* line 968, ../sass/pages.scss */
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
   .frontpage-middle-left,
@@ -1189,33 +1194,37 @@ a.imageLessButton {
     border: none;
     margin-top: 0; }
 
-  /* line 970, ../sass/pages.scss */
+  /* line 975, ../sass/pages.scss */
+  .frontpage-right-col {
+    padding-bottom: 40px; }
+
+  /* line 979, ../sass/pages.scss */
   .frontpage-middle-left {
     padding-bottom: 10px; }
 
-  /* line 974, ../sass/pages.scss */
+  /* line 983, ../sass/pages.scss */
   .frontpage-middle-col {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     box-shadow: none; }
 
-  /* line 981, ../sass/pages.scss */
+  /* line 990, ../sass/pages.scss */
   .front-news {
     margin: 0; }
 
-  /* line 985, ../sass/pages.scss */
+  /* line 994, ../sass/pages.scss */
   .frontpage-right-col .bg-list {
     overflow: visible;
     float: left;
     width: 100%; }
 
-  /* line 991, ../sass/pages.scss */
+  /* line 1000, ../sass/pages.scss */
   .page-basic .content > .inside, .page-basic .footer > .inside {
     margin: 0;
     width: 100%; }
 
-  /* line 997, ../sass/pages.scss */
+  /* line 1006, ../sass/pages.scss */
   .front .highlited .field-label,
   .front .highlited .pane-title {
     background: #999;
@@ -1227,45 +1236,45 @@ a.imageLessButton {
     color: #fff;
     display: block; }
 
-  /* line 1008, ../sass/pages.scss */
+  /* line 1017, ../sass/pages.scss */
   .video-block .youtube-thumbnail:after {
     bottom: 7px;
     right: 18px; }
 
-  /* line 1014, ../sass/pages.scss */
+  /* line 1023, ../sass/pages.scss */
   .three-col .three-col-left,
   .three-col .three-col-right {
     margin-bottom: 40px; }
 
-  /* line 1018, ../sass/pages.scss */
+  /* line 1027, ../sass/pages.scss */
   .three-col .three-col-right .panel-pane {
     clear: both;
     width: 100%;
     margin: 0; }
 
   /* Not front menus */
-  /* line 1028, ../sass/pages.scss */
+  /* line 1037, ../sass/pages.scss */
   .not-front .left-menu .depth-2.active-trail,
   .not-front .left-menu .depth-2.active {
     background: #b5b5b5; }
-  /* line 1032, ../sass/pages.scss */
+  /* line 1041, ../sass/pages.scss */
   .not-front .left-menu .menu li,
   .not-front .left-menu .pane-title {
     background: #e3e3e3;
     border-bottom: none;
     margin-bottom: 10px; }
-  /* line 1038, ../sass/pages.scss */
+  /* line 1047, ../sass/pages.scss */
   .not-front .left-menu .menu li a,
   .not-front .left-menu .pane-title a {
     padding: 7px 25px;
     display: block; }
-  /* line 1042, ../sass/pages.scss */
+  /* line 1051, ../sass/pages.scss */
   .not-front .left-menu .pane-title a {
     padding: 5px 15px;
     font-size: 16px;
     line-height: normal; }
 
-  /* line 1049, ../sass/pages.scss */
+  /* line 1058, ../sass/pages.scss */
   .back-on-top {
     width: 98%;
     padding: 0 2%;
@@ -1278,12 +1287,12 @@ a.imageLessButton {
     text-transform: uppercase;
     margin-bottom: 15px;
     clear: both; }
-    /* line 1061, ../sass/pages.scss */
+    /* line 1070, ../sass/pages.scss */
     .back-on-top span {
       background: url("../images/footer-top-arrow.png") no-repeat right center;
       padding-right: 23px; }
 
-  /* line 1067, ../sass/pages.scss */
+  /* line 1076, ../sass/pages.scss */
   .page-basic > .panel-panel {
     -webkit-box-shadow: none;
     -ms-box-shadow: none;

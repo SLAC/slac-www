@@ -872,8 +872,13 @@ a.imageLessButton {
 }
 
 @media (max-width: 900px) {
-  .frontpage-right-col {
+
+  .frontpage-middle-col,
+  .frontpage-right-col{
+    width: 100%;
     clear: both;
+  }
+  .frontpage-right-col {
     margin-top: 30px;
     .bg-list {
       overflow: hidden;
@@ -966,6 +971,10 @@ a.imageLessButton {
     border: none;
     margin-top: 0;
   }
+
+  .frontpage-right-col{
+    padding-bottom: 40px;
+  } 
 
   .frontpage-middle-left{
     padding-bottom: 10px;
