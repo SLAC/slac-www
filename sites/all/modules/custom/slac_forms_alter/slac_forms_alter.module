@@ -4,9 +4,10 @@
  * Implements hook_form_alter
  * @param type $form
  * @param type $form_state
- * @param type $form_id 
+ * @param type $form_id
  */
 function slac_forms_alter_form_alter(&$form, &$form_state, $form_id) {
+
   if (strpos($form_id, 'webform_client_form') !== FALSE) {
     if (isset($form['#node']->field_form_page) && !empty($form['#node']->field_form_page) && $form['#node']->field_form_page[LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
       $form['actions']['submit']['#value'] = t('» send feedback');
@@ -16,10 +17,41 @@ function slac_forms_alter_form_alter(&$form, &$form_state, $form_id) {
 
 /**
  * Implements template_preprocess_node
- * @param array $variables 
+ * @param array $variables
  */
 function slac_forms_alter_preprocess_node(&$variables) {
   if (isset($variables['field_form_page']) && !empty($variables['field_form_page']) && $variables['field_form_page'][LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
     $variables['content']['webform']['#form']['submitted']['topic_of_your_feedback___question']['#options'][''] = t('Please make a selection');
   }
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function slac_forms_alter_field_widget_form_alter(&$element, &$form_state, $context) {
+  $instance = $context['instance'];
+  $settings = $instance['settings'];
+
+  if (isset($settings['image_field_caption']) && $instance['widget']['type'] == 'image_image' && $settings['image_field_caption']) {
+    foreach (element_children($element) as $delta) {
+      $element[$delta]['#process'][] = 'slac_forms_alter_widget_process';
+    }
+  }
+}
+
+/**
+ * Callback function to alter 'image_field_caption' field.
+ */
+function slac_forms_alter_widget_process($element, &$form_state, $form) {
+  $item = $element['#value'];
+
+  if (isset($element['image_field_caption'])) {
+    $element['image_field_caption']['#title'] = t('Description');
+    $element['image_field_caption']['#type'] = 'textarea';
+    $element['image_field_caption']['#resizable'] = FALSE;
+    $element['image_field_caption']['#weight'] = 0;
+    $element['image_field_caption']['#description'] = t('The description contain additional information about the image.');
+  }
+
+  return $element;
 }
