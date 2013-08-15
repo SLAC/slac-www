@@ -182,7 +182,12 @@
   &.news-list .pane-title{
     margin-bottom: 0;
   }
+  .three-col-right &{
+    clear: both;
+    overflow: hidden;
+  }
 }
+
 
 .page-news-news-center .pane-page-content > .pane-title {
   margin-bottom: 35px;
@@ -365,7 +370,7 @@
 /* Content styles */
 
 
-.google-maps{
+.html .google-maps{
   margin-top: 15px;
   table td{
     border:none;
