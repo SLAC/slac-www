@@ -313,12 +313,18 @@
   .menu li a,
   ul.news-archive-links a{
     padding-left: 5%;
-    width: 95%;
+    max-width: 95%;
+    float: left;
     background: url('../images/red-arrow.png') no-repeat 0 5px;
     @include links();
     display: block;
     font-size: 11px;
     line-height: 18px;
+  }
+  .field .field .field-item a:hover, 
+  .menu li a:hover,
+  ul.news-archive-links a:hover{
+    border-bottom: 1px dotted #996633;
   }
 }
 
