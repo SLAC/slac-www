@@ -29,7 +29,7 @@
       <?php endif ?>
     </div>
     
-    <div class="middleright">
+    <div class="middleright-wrapper">
       <div class="frontpage-middle-col">
         <?php if ($content['middletop']): ?>
           <div class="inside middletop"><?php print $content['middletop']; ?></div>    

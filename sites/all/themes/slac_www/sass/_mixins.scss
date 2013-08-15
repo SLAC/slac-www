@@ -50,8 +50,8 @@
     @include zen-grid-item(4, 1);
   }
 
-  .middleright{
-    @include zen-grid-item(15, 5);
+  .middleright-wrapper{
+    @include zen-grid-item(20, 5);
   }
 
   /* Three col layout */
@@ -103,7 +103,7 @@
     @include zen-grid-item(3, 1);
   }
 
-  .middleright{
+  .middleright-wrapper{
     @include zen-grid-item(12, 4);
   } 
 
@@ -135,7 +135,7 @@
 
   .slider,
   .frontpage-left-col,
-  .middleright,
+  .middleright-wrapper,
   .three-col .three-col-left,
   .three-col .three-col-middle-right,
   .pane-page-content > .pane-title,

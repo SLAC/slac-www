@@ -37,11 +37,11 @@
   word-wrap: break-word; }
 
 /* line 53, ../sass/_mixins.scss */
-.middleright {
+.middleright-wrapper {
   float: left;
-  width: 62.5%;
+  width: 83.33333%;
   margin-left: 16.66667%;
-  margin-right: -79.16667%;
+  margin-right: -100%;
   padding-left: 1%;
   padding-right: 1%;
   -moz-box-sizing: border-box;
@@ -184,7 +184,7 @@
     word-wrap: break-word; }
 
   /* line 106, ../sass/_mixins.scss */
-  .middleright {
+  .middleright-wrapper {
     float: left;
     width: 80%;
     margin-left: 20%;
@@ -258,7 +258,7 @@
   /* line 144, ../sass/_mixins.scss */
   .slider,
   .frontpage-left-col,
-  .middleright,
+  .middleright-wrapper,
   .three-col .three-col-left,
   .three-col .three-col-middle-right,
   .pane-page-content > .pane-title,
