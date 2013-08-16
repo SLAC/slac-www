@@ -726,9 +726,6 @@ a.imageLessButton {
 .mobile-search-box{
   display: none;
 }
-.section-navigation-block{
-  display: none;
-}
 
 @media (min-width: 701px){
   .page-basic > .panel-panel{
@@ -740,8 +737,6 @@ a.imageLessButton {
 }
 
 @media (max-width: 700px) {
-
-  .header-link{display: none;}
   .pane-menu-menu-footer-menu .menu li{
     &.first{
       width: 15%;
@@ -998,7 +993,6 @@ a.imageLessButton {
     }
   }
 
-
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
   .frontpage-middle-left,
@@ -1042,8 +1036,7 @@ a.imageLessButton {
   }
 
   .front .highlited .field-label, 
-  .front .highlited .pane-title,
-  .section-navigation-block{
+  .front .highlited .pane-title{
     background: #999;
     border: none;
     padding: 0;
