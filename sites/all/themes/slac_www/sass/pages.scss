@@ -1021,10 +1021,15 @@ a.imageLessButton {
     border: none;
     padding: 0;
     margin: 0 -7% 20px;
-    padding: 6px 7%;
+    padding: 6px 7% 5px;
     width: 100%;  
     color: #fff;
     display: block;
+  }
+
+  .front .middletop .pane-title{
+    background-image: url('../images/headliner-arrow.png');
+    background-position: right center; 
   }
 
   .video-block .youtube-thumbnail:after{

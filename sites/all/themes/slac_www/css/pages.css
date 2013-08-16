@@ -1232,58 +1232,63 @@ a.imageLessButton {
     border: none;
     padding: 0;
     margin: 0 -7% 20px;
-    padding: 6px 7%;
+    padding: 6px 7% 5px;
     width: 100%;
     color: #fff;
     display: block; }
 
   /* line 1030, ../sass/pages.scss */
+  .front .middletop .pane-title {
+    background-image: url("../images/headliner-arrow.png");
+    background-position: right center; }
+
+  /* line 1035, ../sass/pages.scss */
   .video-block .youtube-thumbnail:after {
     bottom: 7px;
     right: 18px; }
 
-  /* line 1036, ../sass/pages.scss */
+  /* line 1041, ../sass/pages.scss */
   .three-col .three-col-left,
   .three-col .three-col-right {
     margin-bottom: 40px; }
 
-  /* line 1040, ../sass/pages.scss */
+  /* line 1045, ../sass/pages.scss */
   .three-col .three-col-right .panel-pane {
     clear: both;
     width: 100%;
     margin: 0; }
 
   /* Not front menus */
-  /* line 1050, ../sass/pages.scss */
+  /* line 1055, ../sass/pages.scss */
   .not-front .left-menu .menu li,
   .not-front .left-menu .pane-title {
     background: #e9e9e9;
     border-bottom: none;
     margin-bottom: 10px; }
-  /* line 1056, ../sass/pages.scss */
+  /* line 1061, ../sass/pages.scss */
   .not-front .left-menu .menu li a,
   .not-front .left-menu .pane-title a {
     padding: 7px 25px;
     display: block; }
-  /* line 1060, ../sass/pages.scss */
+  /* line 1065, ../sass/pages.scss */
   .not-front .left-menu .pane-title a {
     padding: 5px 15px;
     font-size: 16px;
     line-height: normal; }
-  /* line 1066, ../sass/pages.scss */
+  /* line 1071, ../sass/pages.scss */
   .not-front .left-menu .depth-2.expanded,
   .not-front .left-menu .menu li ul {
     padding: 0; }
-  /* line 1070, ../sass/pages.scss */
+  /* line 1075, ../sass/pages.scss */
   .not-front .left-menu .menu li > a:hover,
   .not-front .left-menu .menu li > a.active-trail {
     background: #ccc; }
-  /* line 1073, ../sass/pages.scss */
+  /* line 1078, ../sass/pages.scss */
   .not-front .left-menu .menu li ul {
     margin: 10px 0 0 0;
     padding-bottom: 1px; }
 
-  /* line 1079, ../sass/pages.scss */
+  /* line 1084, ../sass/pages.scss */
   .back-on-top {
     width: 98%;
     padding: 0 2%;
@@ -1296,12 +1301,12 @@ a.imageLessButton {
     text-transform: uppercase;
     margin-bottom: 15px;
     clear: both; }
-    /* line 1091, ../sass/pages.scss */
+    /* line 1096, ../sass/pages.scss */
     .back-on-top span {
       background: url("../images/footer-top-arrow.png") no-repeat right center;
       padding-right: 23px; }
 
-  /* line 1097, ../sass/pages.scss */
+  /* line 1102, ../sass/pages.scss */
   .page-basic > .panel-panel {
     -webkit-box-shadow: none;
     -ms-box-shadow: none;
