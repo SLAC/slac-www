@@ -77,10 +77,13 @@
 
   .two-col-basic .pane-page-content > .pane-title,
   .general-two-col .pane-page-content > .pane-title,
-  .general-two-col .general-left{
+  .general-two-col .general-left,
+  .two-col-leftsidebar .general-right,
+  .two-col-leftsidebar .general-right > .pane-title{
     @include zen-grid-item(18, 1);
   }
-  .general-two-col .general-right{
+  .general-two-col .general-right,
+  .two-col-leftsidebar .general-right{
     @include zen-grid-item(6, 19);
   }
 
@@ -113,11 +116,13 @@
     @include zen-grid-item(12, 4);
   }
 
-  .general-two-col .general-left{
+  .general-two-col .general-left,
+  .two-col-leftsidebar .general-right{
     @include zen-grid-item(15, 1);
   }
 
-  .general-two-col .general-right{
+  .general-two-col .general-right,
+  .two-col-leftsidebar .general-left{
     @include zen-grid-item(5, 1);
   }
 }
@@ -138,6 +143,8 @@
   .pane-page-content > .pane-title,
   .general-two-col .general-left,
   .general-two-col .general-right,
+  .two-col-leftsidebar .general-left,
+  .two-col-leftsidebar .general-right,
   .two-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(4, 1);
     clear: both;
