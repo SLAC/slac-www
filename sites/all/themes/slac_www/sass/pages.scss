@@ -998,6 +998,7 @@ a.imageLessButton {
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     box-shadow: none;
+    padding: 0;
   }
 
   .front-news{
@@ -1025,6 +1026,10 @@ a.imageLessButton {
     width: 98%;
     color: #fff;
     display: block;
+  }
+
+  .frontpage-middle-right .highlited .pane-title{
+    text-transform: none;
   }
 
   .front .middletop .pane-title{
