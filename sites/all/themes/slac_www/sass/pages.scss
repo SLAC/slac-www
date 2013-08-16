@@ -998,6 +998,7 @@ a.imageLessButton {
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     box-shadow: none;
+    padding: 0;
   }
 
   .front-news{
@@ -1020,9 +1021,9 @@ a.imageLessButton {
     background: #999;
     border: none;
     padding: 0;
-    margin: 0 -7% 20px;
-    padding: 6px 7% 5px;
-    width: 100%;  
+    margin: 0 -6% 20px;
+    padding: 6px 6% 5px;
+    width: 98%;
     color: #fff;
     display: block;
   }
@@ -1030,6 +1031,7 @@ a.imageLessButton {
   .front .middletop .pane-title{
     background-image: url('../images/headliner-arrow.png');
     background-position: right center; 
+    background-repeat: no-repeat;
   }
 
   .video-block .youtube-thumbnail:after{
