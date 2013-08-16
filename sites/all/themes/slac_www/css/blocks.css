@@ -110,12 +110,10 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 82, ../sass/_mixins.scss */
+/* line 80, ../sass/_mixins.scss */
 .two-col-basic .pane-page-content > .pane-title,
 .general-two-col .pane-page-content > .pane-title,
-.general-two-col .general-left,
-.two-col-leftsidebar .general-right,
-.two-col-leftsidebar .general-right > .pane-title {
+.general-two-col .general-left {
   float: left;
   width: 75%;
   margin-left: 0%;
@@ -128,9 +126,8 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 86, ../sass/_mixins.scss */
-.general-two-col .general-right,
-.two-col-leftsidebar .general-right {
+/* line 83, ../sass/_mixins.scss */
+.general-two-col .general-right {
   float: left;
   width: 25%;
   margin-left: 75%;
@@ -143,9 +140,38 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
+/* line 87, ../sass/_mixins.scss */
+.two-col-leftsidebar .general-right {
+  float: left;
+  width: 25%;
+  margin-left: 0%;
+  margin-right: -25%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 92, ../sass/_mixins.scss */
+.two-col-leftsidebar .general-right,
+.two-col-leftsidebar .general-right > .pane-title {
+  float: left;
+  width: 75%;
+  margin-left: 25%;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
 @media (max-width: 900px) {
   /* Front page layout */
-  /* line 98, ../sass/_mixins.scss */
+  /* line 104, ../sass/_mixins.scss */
   .slider {
     float: left;
     width: 100%;
@@ -159,7 +185,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 102, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   .frontpage-left-col {
     float: left;
     width: 20%;
@@ -173,7 +199,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 106, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .middleright-wrapper {
     float: left;
     width: 80%;
@@ -187,7 +213,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 110, ../sass/_mixins.scss */
+  /* line 116, ../sass/_mixins.scss */
   .three-col .three-col-left {
     float: left;
     width: 20%;
@@ -201,7 +227,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 115, ../sass/_mixins.scss */
+  /* line 121, ../sass/_mixins.scss */
   .pane-page-content > .pane-title,
   .three-col .three-col-middle-right {
     float: left;
@@ -216,9 +242,8 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 120, ../sass/_mixins.scss */
-  .general-two-col .general-left,
-  .two-col-leftsidebar .general-right {
+  /* line 125, ../sass/_mixins.scss */
+  .general-two-col .general-left {
     float: left;
     width: 100%;
     margin-left: 0%;
@@ -231,9 +256,8 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 125, ../sass/_mixins.scss */
-  .general-two-col .general-right,
-  .two-col-leftsidebar .general-left {
+  /* line 129, ../sass/_mixins.scss */
+  .general-two-col .general-right {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
@@ -244,10 +268,38 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+    word-wrap: break-word; }
+
+  /* line 133, ../sass/_mixins.scss */
+  .two-col-leftsidebar .general-left {
+    float: left;
+    width: 26.66667%;
+    margin-left: 0%;
+    margin-right: -26.66667%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word; }
+
+  /* line 137, ../sass/_mixins.scss */
+  .two-col-leftsidebar .general-right {
+    float: left;
+    width: 80%;
+    margin-left: 20%;
+    margin-right: -100%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
     word-wrap: break-word; } }
 @media (max-width: 600px) {
   /* Front page layout */
-  /* line 148, ../sass/_mixins.scss */
+  /* line 160, ../sass/_mixins.scss */
   .slider,
   .frontpage-left-col,
   .middleright-wrapper,
