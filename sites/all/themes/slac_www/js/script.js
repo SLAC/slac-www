@@ -120,7 +120,7 @@
               .find('.slide-text-side').css({'height':h-40});
             } else{
               slider.css({'width':'100%','height':h+80})
-              .find('.views_slideshow_slide').css({'width':'100%','height':'100%'});
+              .find('.views_slideshow_slide').css({'height':'100%'});
             }
             if( h != slider.find('.views_slideshow_slide:visible img').height() ){resizer()}
           }
