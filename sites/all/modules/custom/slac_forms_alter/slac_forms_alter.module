@@ -47,10 +47,10 @@ function slac_forms_alter_widget_process($element, &$form_state, $form) {
 
   if (isset($element['image_field_caption'])) {
     $element['image_field_caption']['#title'] = t('Description');
-    $element['image_field_caption']['#type'] = 'textarea';
     $element['image_field_caption']['#resizable'] = FALSE;
     $element['image_field_caption']['#weight'] = 0;
-    $element['image_field_caption']['#description'] = t('The description contain additional information about the image.');
+    $element['image_field_caption']['#description'] = t('The description contains additional information about the image.');
+    $element['image_field_caption']['#format'] = 'plain_text';
   }
 
   return $element;
