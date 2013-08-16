@@ -139,22 +139,11 @@
     a:hover{
       background-color: #f2f2f2;
     }
-    .expanded{
-      padding-top: 8px;
-       > a{
-        padding-top: 4px;
-        padding-bottom: 4px;
-        margin-bottom: 4px;
-        :hover{
-          background: #e7e7e7;
-        }
-      } 
-    }
   }
 
-  .left-menu li.depth-3 a:hover, 
-  .left-menu li.depth-3.active-trail a,
-  .left-menu .depth-2.expanded.active-trail > a{
+  li.depth-3 a:hover, 
+  li.depth-3.active-trail a,
+  .depth-2.expanded.active-trail > a{
     background: #e7e7e7;
   }
   
@@ -169,6 +158,18 @@
     &.active-trail a{
       background: #e7e7e7;
     }
+  }
+
+  .depth-2.expanded{
+    padding-top: 8px;
+    > a{
+      padding-top: 4px;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+      &:hover{
+        background: #e7e7e7;
+      }
+    } 
   }
 }
   
