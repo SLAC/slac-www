@@ -1,7 +1,6 @@
 (function ($) {
   Drupal.behaviors.displayResolutionSettings = {
     attach: function (context, settings) {
-
       if (typeof Drupal.settings.slac_admin != 'undefined'
         && typeof Drupal.settings.slac_admin.width != 'undefined'
         && typeof Drupal.settings.slac_admin.height != 'undefined') {
@@ -13,6 +12,8 @@
 	  Drupal.settings.lightbox2.enable_video = 0;
         }
       }
+      //Disable lightbox zoom.
+      Drupal.settings.lightbox2.disable_zoom = 1;
     }
   }
 })(jQuery);
