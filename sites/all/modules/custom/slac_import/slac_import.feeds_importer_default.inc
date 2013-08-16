@@ -39,6 +39,7 @@ function slac_import_feeds_importer_default() {
           'xpathparser:8' => 'page-metadata/article-type',
           'xpathparser:9' => 'news-article-media/main-graphic-video/news-article-graphic/fullsize-image-location',
           'xpathparser:10' => 'news-article-media/main-graphic-video/news-article-graphic/image-description',
+          'xpathparser:11' => 'page-metadata/page-author',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -52,6 +53,7 @@ function slac_import_feeds_importer_default() {
           'xpathparser:8' => 0,
           'xpathparser:9' => 0,
           'xpathparser:10' => 0,
+          'xpathparser:11' => 0,
         ),
         'context' => '//root',
         'exp' => array(
@@ -69,6 +71,7 @@ function slac_import_feeds_importer_default() {
             'xpathparser:8' => 0,
             'xpathparser:9' => 0,
             'xpathparser:10' => 0,
+            'xpathparser:11' => 0,
           ),
         ),
         'allow_override' => 1,
@@ -126,6 +129,11 @@ function slac_import_feeds_importer_default() {
           8 => array(
             'source' => 'xpathparser:9',
             'target' => 'field_image:image_field_caption',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'xpathparser:9',
+            'target' => 'field_page_author',
             'unique' => FALSE,
           ),
         ),
