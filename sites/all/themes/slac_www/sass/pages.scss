@@ -737,6 +737,8 @@ a.imageLessButton {
 }
 
 @media (max-width: 700px) {
+  
+  .header-link{display: none;}
   .pane-menu-menu-footer-menu .menu li{
     &.first{
       width: 15%;
@@ -993,7 +995,6 @@ a.imageLessButton {
     }
   }
 
-  .header-link{display: none;}
 
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
