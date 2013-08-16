@@ -18,7 +18,6 @@
     width: 100% !important;
   }
   .views-field-nothing {
-    display: inline;
     height: auto;
     width: auto;
   } 
@@ -164,11 +163,12 @@
   }
   .slide-text-side {
     width: 100%;
-    height: 70px;
+    height: 70px !important;
     padding: 5px 0;
     border-bottom: 2px solid #ccc;
     background-color: #fff !important;
     color: #881728;
+    float: none !important;
   }
   .views-field-field-image {
     width: 100%;
