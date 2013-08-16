@@ -343,6 +343,32 @@ input:focus{
   }
 }
 
+@media (max-width: 900px){
+.node-type-news-article .content{
+  .general-left > div{
+    padding-right: 0;
+    border: none;
+  }
+  .general-right{
+    width: 100%;
+  }
+  .general-right > div{
+    padding-left: 0;
+  }
+  .pane-node-field-image .field-item{
+    width: 46%;
+    margin-right: 2%;
+    float: left;
+    &.even{
+      clear: both;
+    }
+    &.odd{
+      margin-left: 2%;
+    }
+  }
+}
+}
+
 /* Layouts */
 
 .panel-frontpage .center-wrapper{
