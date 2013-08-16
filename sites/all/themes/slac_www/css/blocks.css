@@ -300,7 +300,7 @@
     word-wrap: break-word; } }
 @media (max-width: 600px) {
   /* Front page layout */
-  /* line 161, ../sass/_mixins.scss */
+  /* line 162, ../sass/_mixins.scss */
   .slider,
   .frontpage-left-col,
   .middleright-wrapper,
@@ -311,7 +311,8 @@
   .general-two-col .general-right,
   .two-col-leftsidebar .general-left,
   .two-col-leftsidebar .general-right,
-  .two-col-basic .pane-page-content > .pane-title {
+  .two-col-basic .pane-page-content > .pane-title,
+  .two-col-leftsidebar-layout .pane-page-content > .pane-title {
     float: left;
     width: 100%;
     margin-left: 0%;

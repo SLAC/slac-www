@@ -158,7 +158,8 @@
   .general-two-col .general-right,
   .two-col-leftsidebar .general-left,
   .two-col-leftsidebar .general-right,
-  .two-col-basic .pane-page-content > .pane-title{
+  .two-col-basic .pane-page-content > .pane-title,
+  .two-col-leftsidebar-layout .pane-page-content > .pane-title{
     @include zen-grid-item(4, 1);
     clear: both;
   } 

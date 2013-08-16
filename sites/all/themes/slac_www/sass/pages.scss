@@ -371,10 +371,13 @@ a.lightbox-processed{
   line-height: normal;
   border: 1px solid #ada47d;
   .header{
-    background: #ADA47D;
+    background: #ADA47D url('../images/bg.gif') no-repeat right center;
     color: #fff;
     font-weight: bold;
     padding: 8px 10px 8px;
+    &.headerSortUp{
+      background-image:url('../images/asc.gif');
+    }
   }
   td{
     padding: 8px 10px 8px;  
