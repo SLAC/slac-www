@@ -132,7 +132,7 @@ function slac_import_feeds_importer_default() {
             'unique' => FALSE,
           ),
           9 => array(
-            'source' => 'xpathparser:9',
+            'source' => 'xpathparser:11',
             'target' => 'field_page_author',
             'unique' => FALSE,
           ),
