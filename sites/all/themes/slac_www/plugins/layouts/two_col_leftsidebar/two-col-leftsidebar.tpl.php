@@ -15,15 +15,14 @@
  */
 ?>
 <div class="panel-display two-col-leftsidebar clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="panel-panel general-left">
-     <?php if ($content['left']): ?>
-        <div class="inside"><?php print $content['left']; ?></div>
-      <?php endif ?>
-  </div>
-
   <div class="panel-panel general-right">
      <?php if ($content['right']): ?>
         <div class="inside"><?php print $content['right']; ?></div>
+      <?php endif ?>
+  </div>
+  <div class="panel-panel general-left">
+     <?php if ($content['left']): ?>
+        <div class="inside"><?php print $content['left']; ?></div>
       <?php endif ?>
   </div>
 </div>
