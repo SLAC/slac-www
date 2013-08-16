@@ -726,6 +726,9 @@ a.imageLessButton {
 .mobile-search-box{
   display: none;
 }
+.section-navigation-block{
+  display: none;
+}
 
 @media (min-width: 701px){
   .page-basic > .panel-panel{
@@ -737,7 +740,7 @@ a.imageLessButton {
 }
 
 @media (max-width: 700px) {
-  
+
   .header-link{display: none;}
   .pane-menu-menu-footer-menu .menu li{
     &.first{
@@ -1039,7 +1042,8 @@ a.imageLessButton {
   }
 
   .front .highlited .field-label, 
-  .front .highlited .pane-title{
+  .front .highlited .pane-title,
+  .section-navigation-block{
     background: #999;
     border: none;
     padding: 0;
