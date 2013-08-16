@@ -404,35 +404,35 @@
   .front-slider {
     width: 97%;
     padding: 1.5%;
+    height: 97%;
     margin: 0 0 15px 0;
     background-color: #fff; }
-    /* line 150, ../sass/blocks.scss */
+    /* line 151, ../sass/blocks.scss */
     .front-slider div {
       height: 100%; }
-    /* line 153, ../sass/blocks.scss */
+    /* line 154, ../sass/blocks.scss */
     .front-slider .views-field-nothing {
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 100%; }
-    /* line 159, ../sass/blocks.scss */
+      width: 100%;
+      height: 82px; }
+    /* line 161, ../sass/blocks.scss */
     .front-slider .slide-text-side {
       width: 100%;
-      height: 70px !important;
+      height: 70px;
       padding: 5px 0;
       border-bottom: 2px solid #ccc;
       background-color: #fff !important;
       color: #881728; }
-    /* line 167, ../sass/blocks.scss */
+    /* line 169, ../sass/blocks.scss */
     .front-slider .views-field-field-image {
-      position: absolute;
-      top: 0;
-      bottom: 80px;
       width: 100%;
-      overflow: hidden; }
+      height: auto;
+      padding-bottom: 82px; }
       /* line 173, ../sass/blocks.scss */
       .front-slider .views-field-field-image div {
-        width: auto; }
+        width: 100%; }
     /* line 178, ../sass/blocks.scss */
     .front-slider .views-slideshow-controls-top,
     .front-slider .views-slideshow-controls-bottom {
