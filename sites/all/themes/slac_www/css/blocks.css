@@ -141,7 +141,7 @@
   word-wrap: break-word; }
 
 /* line 87, ../sass/_mixins.scss */
-.two-col-leftsidebar .general-right {
+.two-col-leftsidebar .general-left {
   float: left;
   width: 25%;
   margin-left: 0%;
@@ -273,9 +273,9 @@
   /* line 133, ../sass/_mixins.scss */
   .two-col-leftsidebar .general-left {
     float: left;
-    width: 26.66667%;
+    width: 20%;
     margin-left: 0%;
-    margin-right: -26.66667%;
+    margin-right: -20%;
     padding-left: 1.5%;
     padding-right: 1.5%;
     -moz-box-sizing: border-box;

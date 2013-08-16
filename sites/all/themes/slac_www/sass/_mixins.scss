@@ -84,7 +84,7 @@
     @include zen-grid-item(6, 19);
   }
 
-  .two-col-leftsidebar .general-right{
+  .two-col-leftsidebar .general-left{
     @include zen-grid-item(6, 1);
   }
 
@@ -131,7 +131,7 @@
   }
 
   .two-col-leftsidebar .general-left{
-    @include zen-grid-item(4, 1);
+    @include zen-grid-item(3, 1);
   }
   
   .two-col-leftsidebar .general-right{
