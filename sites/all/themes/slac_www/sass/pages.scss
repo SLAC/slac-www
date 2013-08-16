@@ -592,6 +592,25 @@ a.imageLessButton {
   }
 }
 
+/**/
+
+.header-link{
+  float: right;
+  margin: 20px 28px 0 0;
+  a{
+    color: #fff;
+    font-size: 11px;
+    margin-left: 10px;
+    a:hover{
+      text-decoration:underline;
+    }
+  }
+  span.ext{
+    display: none;
+  }
+}
+
+
 /* Header search */
 
 #search-box{
@@ -973,6 +992,8 @@ a.imageLessButton {
       }
     }
   }
+
+  .header-link{display: none;}
 
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
