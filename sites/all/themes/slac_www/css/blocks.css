@@ -1048,24 +1048,27 @@ div.pane-node-body img {
     .news-list .views-field-field-image img {
       width: 100%;
       height: auto; }
-  /* line 828, ../sass/blocks.scss */
+    /* line 826, ../sass/blocks.scss */
+    .news-list .views-field-field-image .image-field-caption {
+      display: none; }
+  /* line 829, ../sass/blocks.scss */
   .news-list .views-field-created {
     color: #474747;
     font-size: 12px;
     font-weight: bold;
     padding-bottom: 10px; }
-  /* line 835, ../sass/blocks.scss */
+  /* line 836, ../sass/blocks.scss */
   .news-list .views-field-title a {
     display: block;
     font-size: 13px;
     font-weight: bold;
     padding-bottom: 4px; }
-  /* line 842, ../sass/blocks.scss */
+  /* line 843, ../sass/blocks.scss */
   .news-list .views-field-body {
     line-height: 16px;
     color: #474747; }
 
-/* line 849, ../sass/blocks.scss */
+/* line 852, ../sass/blocks.scss */
 .section-news .view-news-center .views-field-created {
   font-size: 11px;
   color: #2B2B2B;
@@ -1073,15 +1076,15 @@ div.pane-node-body img {
   margin-bottom: 0px;
   padding-bottom: 0px;
   margin-top: -2px; }
-/* line 858, ../sass/blocks.scss */
+/* line 861, ../sass/blocks.scss */
 .section-news .view-news-center .views-field-title {
   line-height: 20px;
   margin: 4px 0 18px; }
 
 @media (max-width: 600px) {
-  /* line 871, ../sass/blocks.scss */
+  /* line 874, ../sass/blocks.scss */
   .shaded-background .contentInnerBoxStyle4 {
     width: 48%; }
-  /* line 874, ../sass/blocks.scss */
+  /* line 877, ../sass/blocks.scss */
   .shaded-background .contentInnerBoxStyle4:nth-child(2n+1) {
     clear: both; } }
