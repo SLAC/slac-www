@@ -46,9 +46,10 @@
       </div> <!-- /name-and-slogan -->
     </div> <!-- /logo-title -->
 
-    <div class="header-link"><?php print l(t('Employee Portal'), 'https://portal.slac.stanford.edu', array('external' => TRUE)); ?></div>
     <?php if (!empty($search_box)): ?>
       <div id="search-box"><?php print $search_box; ?></div>
     <?php endif; ?>
+
+      <div class="header-link"><?php print l(t('Employee Portal'), 'https://portal.slac.stanford.edu', array('external' => TRUE)); ?></div>
   </div> <!-- /section -->
 </div> <!-- /header -->
