@@ -1278,8 +1278,12 @@ a.imageLessButton {
   .not-front .left-menu .menu li > a:hover,
   .not-front .left-menu .menu li > a.active-trail {
     background: #ccc; }
+  /* line 1073, ../sass/pages.scss */
+  .not-front .left-menu .menu li ul {
+    margin: 10px 0 0 0;
+    padding-bottom: 1px; }
 
-  /* line 1075, ../sass/pages.scss */
+  /* line 1079, ../sass/pages.scss */
   .back-on-top {
     width: 98%;
     padding: 0 2%;
@@ -1292,12 +1296,12 @@ a.imageLessButton {
     text-transform: uppercase;
     margin-bottom: 15px;
     clear: both; }
-    /* line 1087, ../sass/pages.scss */
+    /* line 1091, ../sass/pages.scss */
     .back-on-top span {
       background: url("../images/footer-top-arrow.png") no-repeat right center;
       padding-right: 23px; }
 
-  /* line 1093, ../sass/pages.scss */
+  /* line 1097, ../sass/pages.scss */
   .page-basic > .panel-panel {
     -webkit-box-shadow: none;
     -ms-box-shadow: none;

@@ -1070,6 +1070,10 @@ a.imageLessButton {
     .menu li > a.active-trail {
       background: #ccc;
     }
+    .menu li ul{
+      margin: 10px 0 0 0;
+      padding-bottom: 1px;
+    }
   }
 
   .back-on-top{
