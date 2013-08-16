@@ -89,7 +89,7 @@
   }
 
   .two-col-leftsidebar .general-right,
-  .two-col-leftsidebar .general-right > .pane-title{
+  .two-col-leftsidebar-layout .pane-page-content > .pane-title{
     @include zen-grid-item(18, 7);
   }
 
@@ -134,7 +134,8 @@
     @include zen-grid-item(3, 1);
   }
   
-  .two-col-leftsidebar .general-right{
+  .two-col-leftsidebar .general-right,
+  .two-col-leftsidebar-layout .pane-page-content > .pane-title{
     @include zen-grid-item(12, 4);
   }
 }
