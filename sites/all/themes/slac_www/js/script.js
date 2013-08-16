@@ -113,11 +113,14 @@
     attach: function (context, settings) {
       // fix slider width/height on screen resize
       var slider = $('.views-slideshow-cycle-main-frame'),
-          resizer2 = function( event ){
+          resizer = function( event ){
             var h = slider.find('.views_slideshow_slide:visible img').height();
             if( $(window).width() > 600 ){
               slider.css({'width':'100%','height':h})
               .find('.slide-text-side').css({'height':h-40});
+            } else{
+              slider.css({'width':'100%','height':h+82})
+              .find('.views_slideshow_slide').css({'height':'100%'});
             }
             if( h != slider.find('.views_slideshow_slide:visible img').height() ){resizer()}
           }
