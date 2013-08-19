@@ -36,6 +36,7 @@ a img{
 
 input:focus{
   outline: none;
+  box-shadow: none;
 }
 
 
@@ -426,8 +427,10 @@ a.lightbox-processed{
   .views-exposed-widgets {
     margin-top: 15px;
     position: relative;
+    padding-right: 65px;
   }
   .view-filters{
+    float: left;
     margin-bottom: 15px; 
     label{
       color: #474747;
@@ -435,7 +438,6 @@ a.lightbox-processed{
       margin-bottom: 5px;
       font-size: 13px;
       line-height: normal;
-      height: 16px;
     }
     .views-widget{
       border: 1px solid #d5d5d5;
@@ -452,23 +454,34 @@ a.lightbox-processed{
         border: none;
         height: 22px;
       }
-      &:focus{
-        outline: none;
-        box-shadow: none;
-      }
     }
     .form-submit{
       cursor: pointer;
-      margin-top: 21px;
       height: 24px;
-      line-height: 24px;
+      line-height: normal;
       padding: 0 5px;
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      margin: 0;
+    }
+    .views-exposed-widget{
+      padding-top: 0;
+    }
+    .views-submit-button{
+      padding-right: 0;
     }
   }
   .views-widget{
     overflow: hidden;
   }
   .description{
+    clear: both;
+    font-size: 12px;
+    line-height: normal;
+    height: 15px;
+  }
+  .view-content{
     clear: both;
   }
 }
@@ -659,6 +672,7 @@ a.imageLessButton {
     border: none;
     &:focus{
       outline: none;
+      box-shadow: none;
     }
   }
   .form-text{
