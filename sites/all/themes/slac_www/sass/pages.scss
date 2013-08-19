@@ -302,6 +302,9 @@ input:focus{
   float:left;
   width: 23%;
   padding-left: 2%;
+  .highlited {
+    margin-bottom: 47px;
+  }
 }
 
 .frontpage-middle-right{
@@ -426,8 +429,6 @@ a.lightbox-processed{
   }
   .views-exposed-widgets {
     margin-top: 15px;
-    position: relative;
-    padding-right: 65px;
   }
   .view-filters{
     float: left;
@@ -457,13 +458,6 @@ a.lightbox-processed{
     }
     .form-submit{
       cursor: pointer;
-      height: 24px;
-      line-height: normal;
-      padding: 0 5px;
-      position: absolute;
-      bottom: 20px;
-      right: 0;
-      margin: 0;
     }
     .views-exposed-widget{
       padding-top: 0;
