@@ -57,6 +57,10 @@
       display: none;
     }
   }
+  .views-slideshow-controls-top,
+  .views-slideshow-controls-bottom{
+    display: block;
+  }
   .views-slideshow-controls-text{
     width: auto;
   }
@@ -130,8 +134,7 @@
 
 @media (max-width: 768px){
 .front-slider{
-  .views-slideshow-controls-top,
-  .views-slideshow-controls-bottom{
+  .views-slideshow-controls-top{
     display: none;
   }
 }
