@@ -446,6 +446,11 @@ a.lightbox-processed{
         padding: 0;
         margin: 0;
         border: none;
+        height: 22px;
+      }
+      &:focus{
+        outline: none;
+        box-shadow: none;
       }
     }
     .form-submit{
