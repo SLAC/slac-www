@@ -433,18 +433,22 @@ a.lightbox-processed{
       line-height: normal;
       height: 16px;
     }
-    .form-text{
+    .views-widget{
       border: 1px solid #d5d5d5;
       float: left;
       height: 22px;
       line-height: 22px;
       padding: 0 5px;
-      margin: 0;
+      margin: 0 0 5px 0;
       color: #8C8C8C;
       font-size: 12px;
+      input{
+        padding: 0;
+        margin: 0;
+        border: none;
+      }
     }
     .form-submit{
-      height: 24px;
       cursor: pointer;
       margin-top: 23px;
     }
@@ -457,7 +461,6 @@ a.lightbox-processed{
   }
   .description{
     clear: both;
-    margin-top: 5px;
   }
   .views-submit-button{
     padding-top: 13px;
