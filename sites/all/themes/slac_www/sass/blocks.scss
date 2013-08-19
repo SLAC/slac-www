@@ -262,8 +262,13 @@
   margin-bottom: 6px;
 }  
 
-.frontpage-right-col .connect .pane-title{
+.frontpage-right-col .connect .pane-title,
+.node-type-news-article .bg-list .pane-title{
   margin-bottom: 0;
+}
+
+.node-type-news-article .bg-list .pane-title{
+  margin-top: 35px;
 }
 
 .highlited {
@@ -385,7 +390,9 @@
 }
 
 .bg-list {
-  .field-item, .social_links {
+  .field-item, 
+  .social_links,
+  .social-icon-block{
     padding: 10px 0;
     margin-bottom: 0;
     background: white url('../images/list-bg.png') repeat-x bottom;
@@ -866,13 +873,6 @@ div.pane-node-body{
 
 .node-type-news-article .content{
   padding-top: 30px;
-  .general-left > div{
-    padding-right: 10px;
-    border-right: 1px solid #EFEFEF;
-  }
-  .general-right > div{
-    padding-left: 10px;
-  }
   .pane-back-links{
     padding: 10px 0 20px;
     font-size: 0.7em;
@@ -906,20 +906,31 @@ div.pane-node-body{
       line-height: 18px;
     }
   }
-  .pane-node-field-image{
+  .social-icon-block a{
+    width: 16.5%;
+    text-align: center;
+    float:left;
+  } 
+  .views-field-field-image{
     padding-top: 20px;
     background: transparent;
-    .field-item{
-      padding-top: 20px;
-      margin-bottom: 20px;
+    a{
+      padding-top: 40px;
       border-top: 1px dashed #B0B0B0;
-    }
+      float: left;
+      &:first-child{
+        padding-top: 0;
+        border-top: none;
+      }
+    }    
     img{
       display: block;
       margin-bottom: 20px;
+      width: 100%;
+      height: auto;
     }
     .image-field-caption{
-      margin: 20px 0 10px;
+      margin: 0 0 25px 0;
       line-height: 1.2em;
       font-size: 0.7em;
       font-style: italic;
@@ -928,29 +939,16 @@ div.pane-node-body{
     }
   }
 }
+
+
 @media (max-width: 900px){
-  .node-type-news-article .content{
-    .general-left > div{
-      padding-right: 0;
-      border: none;
-    }
-    .general-right{
+  .node-type-news-article .content .views-field-field-image{
+    a{
       width: 100%;
     }
-
-    .general-right > div{
-      padding-left: 0;
-    }
-    .pane-node-field-image .field-item{
-      width: 46%;
-      margin-right: 2%;
-      float: left;
-      &.even{
-        clear: both;
-      }
-      &.odd{
-        margin-left: 2%;
-      }
+    img{
+      width:auto;
+      margin: 0 auto 20px;
     }
   }
 }
