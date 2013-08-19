@@ -327,8 +327,8 @@ function slac_frontpage_slideshow_views_slideshow_panes_content_type_render($sub
  */
 function slac_frontpage_slideshow_views_slideshow_panes_add_defaults(&$conf, $view) {
   views_content_views_panes_add_defaults($conf, $view);
-    
-  $conf += array('slideshow_configuration' => '');
+
+  $conf += array('slideshow_configuration' => '', 'slideshow_configuration_default' => '');
 }
 
 /**
@@ -352,6 +352,13 @@ function slac_frontpage_slideshow_views_slideshow_panes_content_type_edit_form($
     '#default_value' => ((bool) $conf['slideshow_configuration']) ? $conf['slideshow_configuration'] : implode("\r\n", $config),
   );
 
+  $form['slideshow_configuration_default'] = array(
+    '#title' => t('Slide default setting'),
+    '#type' => 'textfield',
+    '#description' => t('Default position and color if there are more slides than rows in settings above'),
+    '#default_value' => isset($conf['slideshow_configuration_default']) ? $conf['slideshow_configuration_default'] : '',
+  );
+
   return $form;
 }
 
@@ -362,6 +369,9 @@ function slac_frontpage_slideshow_views_slideshow_panes_content_type_edit_form_s
   views_content_views_panes_content_type_edit_form_submit($form, $form_state);
   if (isset($form_state['values']['slideshow_configuration'])) {
     $form_state['conf']['slideshow_configuration'] = $form_state['values']['slideshow_configuration'];
+  }
+  if (isset($form_state['values']['slideshow_configuration_default'])) {
+    $form_state['conf']['slideshow_configuration_default'] = $form_state['values']['slideshow_configuration_default'];
   }
 }
 
