@@ -594,7 +594,7 @@ a.imageLessButton {
     font-size: 12px;
     margin-top: 10px;
     input{
-      margin-bottom: 45px;
+      margin: 0 15px 45px 0;
     }
   }
 }
@@ -743,6 +743,60 @@ a.imageLessButton {
   }
 }
 
+@media (max-width: 900px) {
+
+  .frontpage-middle-col,
+  .frontpage-right-col{
+    width: 100%;
+    clear: both;
+  }
+  .frontpage-right-col {
+    margin-top: 30px;
+    .bg-list {
+      overflow: hidden;
+    }
+    .field-item {
+      width: 30%;
+      float: left;
+      margin-left: 5%;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .connect {
+      width: 40%;
+    }
+  }
+
+  .three-col .three-col-right .panel-pane{
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+    clear: none;
+  }
+
+  .three-col .three-col-right .panel-pane:first-child{
+    margin-left: 0;
+  }
+
+  .three-col .three-col-middle,
+  .three-col .three-col-right{
+    width: 100%;
+    clear: both;
+    margin-bottom: 40px;
+  }
+
+  .three-col .three-col-right{
+    margin-bottom: 5px;
+  }
+
+  .general-two-col .general-left,
+  .general-two-col .general-right{
+    clear: both;
+    margin-bottom: 40px;
+  }  
+}
+
 @media (max-width: 700px) {
   .pane-menu-menu-footer-menu .menu li{
     &.first{
@@ -808,6 +862,25 @@ a.imageLessButton {
   .header .section{
     margin: 0 0 0 52px;
   }
+}
+
+
+@media (max-width: 900px) and (min-width: 601px){
+  .pane-page-content > .pane-title{
+    width: 70% !important;
+    margin-left: 30% !important;
+  }
+  .three-col-middle-right{
+    width: 70% !important;
+    margin-left: 30% !important;
+  }
+  .three-col-left{
+    width: 30% !important;
+    margin-right: -30% !important;
+  }
+}
+
+@media (max-width: 600px) {
 
   .mobile-search-trigger{
     margin: 0;
@@ -904,79 +977,7 @@ a.imageLessButton {
       height: 14px;
     }
   }
-}
 
-@media (max-width: 900px) {
-
-  .frontpage-middle-col,
-  .frontpage-right-col{
-    width: 100%;
-    clear: both;
-  }
-  .frontpage-right-col {
-    margin-top: 30px;
-    .bg-list {
-      overflow: hidden;
-    }
-    .field-item {
-      width: 30%;
-      float: left;
-      margin-left: 5%;
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-    .connect {
-      width: 40%;
-    }
-  }
-
-  .three-col .three-col-right .panel-pane{
-    float: left;
-    width: 30%;
-    margin-left: 5%;
-    clear: none;
-  }
-
-  .three-col .three-col-right .panel-pane:first-child{
-    margin-left: 0;
-  }
-
-  .three-col .three-col-middle,
-  .three-col .three-col-right{
-    width: 100%;
-    clear: both;
-    margin-bottom: 40px;
-  }
-
-  .three-col .three-col-right{
-    margin-bottom: 5px;
-  }
-
-  .general-two-col .general-left,
-  .general-two-col .general-right{
-    clear: both;
-    margin-bottom: 40px;
-  }  
-}
-
-@media (max-width: 900px) and (min-width: 601px){
-  .pane-page-content > .pane-title{
-    width: 70% !important;
-    margin-left: 30% !important;
-  }
-  .three-col-middle-right{
-    width: 70% !important;
-    margin-left: 30% !important;
-  }
-  .three-col-left{
-    width: 30% !important;
-    margin-right: -30% !important;
-  }
-}
-
-@media (max-width: 600px) {
-  
   .page-basic{
     .pane-menu-menu-footer-menu{
       padding: 0;  
