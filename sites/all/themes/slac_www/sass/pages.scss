@@ -423,6 +423,10 @@ a.lightbox-processed{
       vertical-align: middle;
     }
   }
+  .views-exposed-widgets {
+    margin-top: 15px;
+    position: relative;
+  }
   .view-filters{
     margin-bottom: 15px; 
     label{
@@ -455,20 +459,17 @@ a.lightbox-processed{
     }
     .form-submit{
       cursor: pointer;
-      margin-top: 23px;
+      margin-top: 21px;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 5px;
     }
-  }
-  .views-exposed-widget{
-    padding: 16px 0 0 ;
   }
   .views-widget{
     overflow: hidden;
   }
   .description{
     clear: both;
-  }
-  .views-submit-button{
-    padding-top: 13px;
   }
 }
 
