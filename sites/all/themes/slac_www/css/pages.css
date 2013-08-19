@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -1091,7 +1091,7 @@ a.imageLessButton {
   /* line 787, ../sass/pages.scss */
   .three-col .three-col-right .panel-pane {
     float: left;
-    width: 30%;
+    width: 100%;
     margin-left: 5%;
     clear: none; }
 
