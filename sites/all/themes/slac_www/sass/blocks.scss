@@ -385,7 +385,9 @@
 }
 
 .bg-list {
-  .field-item, .social_links {
+  .field-item, 
+  .social_links,
+  .social-icon-block{
     padding: 10px 0;
     margin-bottom: 0;
     background: white url('../images/list-bg.png') repeat-x bottom;
