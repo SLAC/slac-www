@@ -393,7 +393,6 @@ a.lightbox-processed{
 /* Past lectures */
 
 .page-past-lectures{
-
   table{
     border: 2px solid #e7e7e7;
     border-bottom: none;
@@ -430,6 +429,9 @@ a.lightbox-processed{
       color: #474747;
       font-weight: bold;
       margin-bottom: 5px;
+      font-size: 13px;
+      line-height: normal;
+      height: 16px;
     }
     .form-text{
       border: 1px solid #d5d5d5;
@@ -440,6 +442,11 @@ a.lightbox-processed{
       margin: 0;
       color: #8C8C8C;
       font-size: 12px;
+    }
+    .form-submit{
+      height: 24px;
+      cursor: pointer;
+      margin-top: 23px;
     }
   }
   .views-exposed-widget{
