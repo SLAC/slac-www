@@ -30,7 +30,7 @@ function slac_frontpage_slideshow_preprocess_views_view_field(&$vars, $hook) {
     $style = explode(PHP_EOL, $conf['slideshow_configuration']);
     $slide_count = &drupal_static(__FUNCTION__ . ':slide_count', 0);
 
-    $style_pair = $conf['slideshow_configuration_default'];
+    $style_pair = isset($conf['slideshow_configuration_default']) ? $conf['slideshow_configuration_default'] : '';
     if (array_key_exists($slide_count, $style) && $style[$slide_count] != '') {
       $style_pair = $style[$slide_count];
     }
