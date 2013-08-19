@@ -137,6 +137,11 @@
   .two-col-leftsidebar-layout .pane-page-content > .pane-title{
     @include zen-grid-item(12, 4);
   }
+
+  .node-type-news-article .general-two-col .general-right{
+    @include zen-grid-item(15, 1);
+    clear: both;
+  }
 }
 
 @media (max-width: 600px) {
@@ -158,7 +163,8 @@
   .two-col-leftsidebar .general-left,
   .two-col-leftsidebar .general-right,
   .two-col-basic .pane-page-content > .pane-title,
-  .two-col-leftsidebar-layout .pane-page-content > .pane-title{
+  .two-col-leftsidebar-layout .pane-page-content > .pane-title,
+  .node-type-news-article .general-two-col .general-right{
     @include zen-grid-item(4, 1);
     clear: both;
   } 

@@ -8,7 +8,7 @@
   clear: both; }
 
 /* Front page layout */
-/* line 45, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 45, ../sass/_mixins.scss */
 .slider {
   float: left;
   width: 100%;
@@ -22,7 +22,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 49, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 49, ../sass/_mixins.scss */
 .frontpage-left-col {
   float: left;
   width: 16.66667%;
@@ -36,7 +36,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 53, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 53, ../sass/_mixins.scss */
 .middleright-wrapper {
   float: left;
   width: 83.33333%;
@@ -51,7 +51,7 @@
   word-wrap: break-word; }
 
 /* Three col layout */
-/* line 59, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 59, ../sass/_mixins.scss */
 .three-col .three-col-left {
   float: left;
   width: 16.66667%;
@@ -65,7 +65,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 63, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 63, ../sass/_mixins.scss */
 .three-col .three-col-middle-right {
   float: left;
   width: 83.33333%;
@@ -79,7 +79,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 67, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 67, ../sass/_mixins.scss */
 .pane-page-content > .pane-title {
   float: left;
   width: 62.5%;
@@ -93,7 +93,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 73, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 73, ../sass/_mixins.scss */
 .one-col-basic .pane-page-content > .pane-content,
 .one-col-basic .pane-page-content > .pane-title,
 .node-type-news-article .pane-page-content > .pane-content {
@@ -109,7 +109,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 79, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 79, ../sass/_mixins.scss */
 .two-col-basic .pane-page-content > .pane-title,
 .general-two-col .pane-page-content > .pane-title,
 .general-two-col .general-left {
@@ -125,7 +125,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 82, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 82, ../sass/_mixins.scss */
 .general-two-col .general-right {
   float: left;
   width: 25%;
@@ -139,7 +139,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 86, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 86, ../sass/_mixins.scss */
 .two-col-leftsidebar .general-left {
   float: left;
   width: 25%;
@@ -153,7 +153,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 91, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+/* line 91, ../sass/_mixins.scss */
 .two-col-leftsidebar .general-right,
 .two-col-leftsidebar-layout .pane-page-content > .pane-title {
   float: left;
@@ -170,7 +170,7 @@
 
 @media (max-width: 900px) {
   /* Front page layout */
-  /* line 103, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 103, ../sass/_mixins.scss */
   .slider {
     float: left;
     width: 100%;
@@ -184,7 +184,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 107, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 107, ../sass/_mixins.scss */
   .frontpage-left-col {
     float: left;
     width: 20%;
@@ -198,7 +198,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 111, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 111, ../sass/_mixins.scss */
   .middleright-wrapper {
     float: left;
     width: 80%;
@@ -212,7 +212,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 115, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 115, ../sass/_mixins.scss */
   .three-col .three-col-left {
     float: left;
     width: 20%;
@@ -226,7 +226,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 120, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 120, ../sass/_mixins.scss */
   .pane-page-content > .pane-title,
   .three-col .three-col-middle-right {
     float: left;
@@ -241,7 +241,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 124, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 124, ../sass/_mixins.scss */
   .general-two-col .general-left {
     float: left;
     width: 100%;
@@ -255,7 +255,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 128, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 128, ../sass/_mixins.scss */
   .general-two-col .general-right {
     float: left;
     width: 33.33333%;
@@ -269,7 +269,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 132, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 132, ../sass/_mixins.scss */
   .two-col-leftsidebar .general-left {
     float: left;
     width: 20%;
@@ -283,7 +283,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 137, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 137, ../sass/_mixins.scss */
   .two-col-leftsidebar .general-right,
   .two-col-leftsidebar-layout .pane-page-content > .pane-title {
     float: left;
@@ -296,10 +296,25 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    word-wrap: break-word; } }
+    word-wrap: break-word; }
+
+  /* line 141, ../sass/_mixins.scss */
+  .node-type-news-article .general-two-col .general-right {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    clear: both; } }
 @media (max-width: 600px) {
   /* Front page layout */
-  /* line 161, D:/Sites/slac-www/sites/all/themes/slac_www/sass/_mixins.scss */
+  /* line 167, ../sass/_mixins.scss */
   .slider,
   .frontpage-left-col,
   .middleright-wrapper,
@@ -311,7 +326,8 @@
   .two-col-leftsidebar .general-left,
   .two-col-leftsidebar .general-right,
   .two-col-basic .pane-page-content > .pane-title,
-  .two-col-leftsidebar-layout .pane-page-content > .pane-title {
+  .two-col-leftsidebar-layout .pane-page-content > .pane-title,
+  .node-type-news-article .general-two-col .general-right {
     float: left;
     width: 100%;
     margin-left: 0%;
