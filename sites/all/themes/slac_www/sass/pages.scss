@@ -177,6 +177,7 @@ input:focus{
       text-decoration: none;
       padding-left: 9px;
       background: url('../images/footer-menu-arrow.png') no-repeat left 5px;
+      font-size: 9px;
     }
   }
 } 
@@ -1182,6 +1183,7 @@ a.imageLessButton {
       border: 2px solid #f2f2f2;
       background: #f2f2f2;
       height: 28px;
+      position: static;
       .form-item .form-type-radio{
         margin: 7px 0 4px 10%;
         color: #000;
