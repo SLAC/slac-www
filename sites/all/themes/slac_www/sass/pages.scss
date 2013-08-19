@@ -133,6 +133,7 @@ input:focus{
   .header {
     background: url('../images/header-bg.jpg') repeat-x top;
     position: relative;
+    z-index: 99;
     img {
       float: left;
       margin-top: 23px;
@@ -657,9 +658,16 @@ a.imageLessButton {
     cursor:pointer;
   }
 }
+.slac-search-wrapper{
+  position: relative;
+}
 
 #slac-search-options{
-  display:none;
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 170px;
   .form-item{
     background: transparent;
     padding: 0;
@@ -734,7 +742,7 @@ a.imageLessButton {
   display: none;
 }
 
-@media (min-width: 701px){
+@media (min-width: 501px){
   .page-basic > .panel-panel{
     margin: auto !important;
   }
@@ -819,7 +827,7 @@ a.imageLessButton {
     position: relative;
     margin: 8px 10px 0 0;
   }
-  
+
   .page-basic{
     overflow: hidden;
     position:relative;
