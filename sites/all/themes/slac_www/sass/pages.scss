@@ -814,7 +814,12 @@ a.imageLessButton {
     display: block;
   }
   
-
+  #search-box {
+    float: right;
+    position: relative;
+    margin: 8px 10px 0 0;
+  }
+  
   .page-basic{
     overflow: hidden;
     position:relative;
@@ -879,106 +884,6 @@ a.imageLessButton {
 }
 
 @media (max-width: 600px) {
-  
-  .page-basic .pane-pane-header #search-box{
-    display: none;
-  }
-  
-  .mobile-search-trigger{
-    margin: 0;
-    width: 52px;
-    height: 42px;
-    margin: 9px 0;
-    overflow: hidden;
-    float: right;
-    margin: 0;
-    background: url('../images/header-bg.jpg') repeat-x top;
-    cursor: pointer;
-    display: block;
-    span{
-      background: url('../images/mobile-search.png') no-repeat top right;
-      width: 52px;
-      height: 42px;
-      display: block;
-    }
-  }  
-
-  .mobile-search-box{
-    display: none;
-    width: 100%;
-    clear: both;
-    .pane-content{
-      padding: 5px 0 12px;
-      background: #8e001a;
-      border-top: 1px solid #fff;
-      overflow: hidden;
-    }
-    .form-item{
-      margin: 0;
-    }
-    #slac-search{
-      line-height: 35px;
-      border: 2px solid #8c8b8b;
-      background: #fff;
-      color: #aaa;
-      padding: 0 3%;
-      width: 59%;
-      float:left;
-    }
-    form{
-      width: 96%;
-      margin: 0 2%;  
-    }
-    .form-text{
-      height: 35px;
-      background:none;
-      border: none;
-      padding: 0;
-      color: #aaa;
-       width: 100%;
-    }
-    #slac-search-button{
-      float:right;
-      width: 30%;
-      max-width: 70px;
-    }
-    .form-submit{
-      background: #8c8b8b;
-      border: none;
-      height: 39px;
-      padding: 0;
-      color: #fff;
-      margin: 0;
-      width: 100%;
-    }
-    #slac-search-options{
-      display: block;
-      overflow: hidden;
-      float: left;
-      clear: both;
-      width: 59%;
-      padding: 0 3%;
-      border: 2px solid #f2f2f2;
-      background: #f2f2f2;
-      height: 28px;
-      .form-item .form-type-radio{
-        margin: 7px 0 4px 10%;
-        color: #000;
-        width: 45%
-      }
-      .form-item .form-type-radio:first-child{
-        margin-left: 0;
-      }
-    }
-    .form-type-radio input{
-      margin-top: 0;
-      padding: 0;
-    }
-    .form-type-radio label{
-      float: left;
-      height: 14px;
-    }
-  }
 
   .page-basic{
     .pane-menu-menu-footer-menu{
@@ -1181,6 +1086,110 @@ a.imageLessButton {
     iframe{
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  
+  .page-basic .pane-pane-header #search-box{
+    display: none;
+  }
+  
+  .mobile-search-trigger{
+    margin: 0;
+    width: 52px;
+    height: 42px;
+    margin: 9px 0;
+    overflow: hidden;
+    float: right;
+    margin: 0;
+    background: url('../images/header-bg.jpg') repeat-x top;
+    cursor: pointer;
+    display: block;
+    span{
+      background: url('../images/mobile-search.png') no-repeat top right;
+      width: 52px;
+      height: 42px;
+      display: block;
+    }
+  }  
+
+  .mobile-search-box{
+    display: none;
+    width: 100%;
+    clear: both;
+    .pane-content{
+      padding: 5px 0 12px;
+      background: #8e001a;
+      border-top: 1px solid #fff;
+      overflow: hidden;
+    }
+    .form-item{
+      margin: 0;
+    }
+    #slac-search{
+      line-height: 35px;
+      border: 2px solid #8c8b8b;
+      background: #fff;
+      color: #aaa;
+      padding: 0 3%;
+      width: 59%;
+      float:left;
+    }
+    form{
+      width: 96%;
+      margin: 0 2%;  
+    }
+    .form-text{
+      height: 35px;
+      background:none;
+      border: none;
+      padding: 0;
+      color: #aaa;
+       width: 100%;
+    }
+    #slac-search-button{
+      float:right;
+      width: 30%;
+      max-width: 70px;
+    }
+    .form-submit{
+      background: #8c8b8b;
+      border: none;
+      height: 39px;
+      padding: 0;
+      color: #fff;
+      margin: 0;
+      width: 100%;
+    }
+    #slac-search-options{
+      display: block;
+      overflow: hidden;
+      float: left;
+      clear: both;
+      width: 59%;
+      padding: 0 3%;
+      border: 2px solid #f2f2f2;
+      background: #f2f2f2;
+      height: 28px;
+      .form-item .form-type-radio{
+        margin: 7px 0 4px 10%;
+        color: #000;
+        width: 45%
+      }
+      .form-item .form-type-radio:first-child{
+        margin-left: 0;
+      }
+    }
+    .form-type-radio input{
+      margin-top: 0;
+      padding: 0;
+    }
+    .form-type-radio label{
+      float: left;
+      height: 14px;
     }
   }
 }
