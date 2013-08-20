@@ -91,7 +91,10 @@
 
   Drupal.behaviors.backOnTop = {
     attach: function (context, settings) {
-      $('<a href="#" class="back-on-top"><span>Go to top</span></a>').insertAfter('.page-basic > .content > .inside') 
+      $('<a href="#" class="back-on-top"><span>Go to top</span></a>').insertAfter('.page-basic > .content > .inside');
+
+      /* Left menu expanded class */
+      $('.left-menu li ul').closest('li').addClass('has-subitems');
     }
   }
 
