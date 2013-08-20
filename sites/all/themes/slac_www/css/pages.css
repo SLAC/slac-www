@@ -1198,21 +1198,21 @@ a.imageLessButton {
   /* line 898, ../sass/pages.scss */
   .header .section {
     margin: 0 0 0 52px; } }
-@media (max-width: 900px) and (min-width: 601px) {
-  /* line 905, ../sass/pages.scss */
-  .pane-page-content > .pane-title {
+/*
+@media (max-width: 900px) and (min-width: 601px){
+  .pane-page-content > .pane-title{
     width: 70% !important;
-    margin-left: 30% !important; }
-
-  /* line 909, ../sass/pages.scss */
-  .three-col-middle-right {
+    margin-left: 30% !important;
+  }
+  .three-col-middle-right{
     width: 70% !important;
-    margin-left: 30% !important; }
-
-  /* line 913, ../sass/pages.scss */
-  .three-col-left {
+    margin-left: 30% !important;
+  }
+  .three-col-left{
     width: 30% !important;
-    margin-right: -30% !important; } }
+    margin-right: -30% !important;
+  }
+}*/
 @media (max-width: 600px) {
   /* line 922, ../sass/pages.scss */
   .page-basic .pane-menu-menu-footer-menu {
