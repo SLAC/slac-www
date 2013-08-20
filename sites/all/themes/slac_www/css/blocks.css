@@ -1085,11 +1085,11 @@ div.pane-node-body img {
 /* line 779, ../sass/blocks.scss */
 .middleleft .views-field-nothing {
   float: left;
-  width: 55%; }
+  width: 66%; }
 /* line 784, ../sass/blocks.scss */
 .middleleft .views-field-field-image {
   float: right;
-  width: 42%;
+  width: 31%;
   margin-left: 3%; }
   /* line 788, ../sass/blocks.scss */
   .middleleft .views-field-field-image img {
