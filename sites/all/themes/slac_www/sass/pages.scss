@@ -462,6 +462,10 @@ span.ext{
         margin: 0;
         border: none;
         height: 22px;
+        &::-webkit-input-placeholder {
+          color: #fff;
+          color: transparent;
+        }
       }
     }
     .form-submit{
@@ -1008,14 +1012,14 @@ a.imageLessButton {
   }
 
   .front .highlited .field-label, 
-  .front .highlited .pane-title,
-  .section-navigation-block{
+  .front .highlited .pane-title, 
+  .section-navigation-block {
     background: #999;
     border: none;
     padding: 0;
-    margin: 0 -6% 20px;
-    padding: 6px 6% 5px;
-    width: 98%;
+    margin: 0 -3.7% 20px;
+    padding: 6px 3.7% 5px;
+    width: 100%;
     color: #fff;
     display: block;
   }

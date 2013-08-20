@@ -455,6 +455,13 @@
     border-bottom: 1px dotted #996633;
     padding-bottom: 0;
   }
+  .field-item{
+    clear:both;
+    padding: 2px 0;
+    a{
+     float:left;
+    }
+  }
 }
 
 .front-news {
