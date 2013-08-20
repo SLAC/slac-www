@@ -291,6 +291,7 @@
   }
   &.news-list .pane-title{
     margin-bottom: 0;
+    padding-left: 2%;
   }
   .three-col-right &{
     clear: both;
@@ -809,7 +810,7 @@ div.pane-node-body{
     margin-top: 0;
   }
   .views-row{
-    padding: 15px 12px 18px 36px;
+    padding: 15px 2% 18px 2%; 
     width: auto;
     background: url('../images/dotted-border.png') repeat-x bottom;
     overflow: hidden;
@@ -865,14 +866,13 @@ div.pane-node-body{
     font-size: 11px;
     color: #2B2B2B;
     font-weight: bold;
-    margin-bottom: 0px;
     padding-bottom: 0px;
-    margin-top: -2px;
+    margin: -2px 0 9px;
   }
   
   .views-field-title{
     line-height: 20px;
-    margin:  4px 0 18px;
+    margin: 4px 0 0px;
   }
 }
 
