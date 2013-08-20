@@ -70,11 +70,11 @@
 
   .one-col-basic .pane-page-content > .pane-content,
   .one-col-basic .pane-page-content > .pane-title,
-  .node-type-news-article .pane-page-content > .pane-content{
+  .node-type-news-article .pane-page-content > .pane-content,
+  .two-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(22, 2);
   }
 
-  .two-col-basic .pane-page-content > .pane-title,
   .general-two-col .pane-page-content > .pane-title,
   .general-two-col .general-left{
     @include zen-grid-item(18, 1);
@@ -100,7 +100,8 @@
 
   /* Front page layout */
 
-  .slider{
+  .slider,
+  .two-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(15, 1);
   } 
   
