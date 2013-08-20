@@ -56,8 +56,6 @@
 		    	$(this).closest('.view-grouping-content').hide().siblings().removeClass('expanded');
 		    	});
 	 			}
-
-
 			});
 	  }
 	}
@@ -138,5 +136,18 @@
       $('div[class*="views-slideshow-controls"]').find('a,.views-content-counter').click(resizer);
     }
   }
+
+  Drupal.behaviors.externalLinks = {
+    attach: function (context, settings) {
+      $('a.ext').each(function(){  
+        if ($(this).siblings('span.ext').length == 0) {
+          $('<span class="ext"></span>').insertAfter(this); 
+        }
+      });
+    }
+  }
+
+
+
 
 })(jQuery, Drupal, this, this.document);
