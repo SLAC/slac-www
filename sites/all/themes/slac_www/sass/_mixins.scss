@@ -42,7 +42,8 @@
   }
 
   /* Front page layout */
-  .slider{
+  .slider,
+  .two-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(24, 1);
   } 
   
@@ -70,8 +71,7 @@
 
   .one-col-basic .pane-page-content > .pane-content,
   .one-col-basic .pane-page-content > .pane-title,
-  .node-type-news-article .pane-page-content > .pane-content,
-  .two-col-basic .pane-page-content > .pane-title{
+  .node-type-news-article .pane-page-content > .pane-content{
     @include zen-grid-item(22, 2);
   }
 
