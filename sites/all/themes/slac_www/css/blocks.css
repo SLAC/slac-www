@@ -551,7 +551,7 @@
 /* line 229, ../sass/blocks.scss */
 .left-menu li.depth-3 a:hover,
 .left-menu li.depth-3.active-trail a,
-.left-menu .depth-2.expanded.active-trail > a {
+.left-menu .depth-2.has-subitems.active-trail > a {
   background: #e7e7e7; }
 /* line 233, ../sass/blocks.scss */
 .left-menu li.depth-3 {
@@ -565,15 +565,15 @@
   .left-menu li.depth-3 a:hover, .left-menu li.depth-3.active-trail a {
     background: #e7e7e7; }
 /* line 246, ../sass/blocks.scss */
-.left-menu .depth-2.expanded {
+.left-menu .depth-2.has-subitems {
   padding-top: 8px; }
   /* line 248, ../sass/blocks.scss */
-  .left-menu .depth-2.expanded > a {
+  .left-menu .depth-2.has-subitems > a {
     padding-top: 4px;
     padding-bottom: 4px;
     margin-bottom: 4px; }
     /* line 252, ../sass/blocks.scss */
-    .left-menu .depth-2.expanded > a:hover {
+    .left-menu .depth-2.has-subitems > a:hover {
       background: #e7e7e7; }
 
 /* */
