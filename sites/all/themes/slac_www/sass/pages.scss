@@ -274,7 +274,7 @@ input:focus{
 
 .content-block-other:first-child .shaded-background:first-child{
   padding: 0;
-  margin-top: -23px;
+  margin-top: -4px;
 }
 
 .node-type-news-article .pane-page-content{overflow:hidden;}
@@ -402,6 +402,8 @@ span.ext {
   display: inline;
   padding: 0 0 0 12px;
 }
+
+
 /* Past lectures */
 
 .page-past-lectures{
@@ -496,6 +498,57 @@ span.ext {
 
 .item-list .pager{
   margin-top: 20px;
+}
+
+
+.node-type-lecture{
+  .three-col-middle{
+    line-height: normal;
+  }
+  .pane-node-content{
+    background: #f7f7f7;
+    width: 90%;
+    padding: 5%;
+    .field-name-body p{
+      margin-top: -4px !important;
+      line-height: 20px;
+    }
+  }
+  .three-col-middle h2.pane-title, 
+  .three-col-middle h2.pane-title a{
+    margin: 0 0 2px 0;  
+    font-size: 16px;
+    color: #333333;
+    line-height: normal;
+    font-weight: bold;
+  }  
+  .field-name-field-speaker-name,
+  .field-name-field-affiliations{
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+  }
+  .field-name-field-lecture-date{
+    clear: both;
+  }
+  .field-name-field-video{
+    clear:both;
+    width: 100%;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    background: url("../images/dotted-border.png") repeat-x bottom;
+  }
+  .field-name-field-video .jwplayer{
+    margin: auto;
+  }
+  .field-type-image{
+    float: left;
+    margin-right: 35px;
+    background: #dadadc;
+    padding: 7px;
+  }
 }
 
 /* Index page */
