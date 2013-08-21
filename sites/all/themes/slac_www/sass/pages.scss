@@ -394,14 +394,14 @@ a.lightbox-processed{
   }
 }
 
-span.ext{
+span.ext {
   padding: 0;
-  float: left;
   width: 12px;
   height: 15px;
   margin-left: 2px;
+  display: inline;
+  padding: 0 0 0 12px;
 }
-
 /* Past lectures */
 
 .page-past-lectures{
@@ -465,6 +465,7 @@ span.ext{
         &::-webkit-input-placeholder {
           color: #fff;
           color: transparent;
+          display: none;
         }
       }
     }
@@ -929,6 +930,10 @@ a.imageLessButton {
 }*/
 
 @media (max-width: 600px) {
+  
+  .page-basic > .content {
+    padding-bottom: 25px;
+  }
 
   .page-basic{
     .pane-menu-menu-footer-menu{
@@ -968,6 +973,27 @@ a.imageLessButton {
       }
     }
   }
+
+  /* Socials */
+
+  .social_links a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    background: url('../images/socialsx24.png') no-repeat 0 0;
+  }
+
+  .social_links a.twitter{background-position: 0 -90px;}
+  .social_links a.flickr{background-position: 0 -30px;}
+  .social_links a.youtube{background-position: 0 -120px;}
+  .social_links a.feed{background-position: 0 -60px;}
+
+  .social_links a img{
+    display: none;
+  } 
+
+  /*  */
 
   .frontpage-right-col .connect,
   .frontpage-right-col .field-item,
@@ -1035,6 +1061,19 @@ a.imageLessButton {
     right: 18px;
   }
 
+  .video-block .field-item{  
+    border-top: 2px solid #e1e0e0;
+  }
+
+  .middletop .pane-content,
+  .middleleft .views-row{
+    border-bottom: 2px solid #e1e0e0;
+  }
+
+  .middleleft .views-row-last{
+    border: none;
+  }
+
   .three-col .three-col-left,
   .three-col .three-col-right,
   .two-col-leftsidebar .general-left,
@@ -1091,7 +1130,6 @@ a.imageLessButton {
     line-height: 28px;
     height: 28px;
     text-transform: uppercase;
-    margin-bottom: 15px;
     clear: both;
     span{
       background: url('../images/footer-top-arrow.png') no-repeat right center;
