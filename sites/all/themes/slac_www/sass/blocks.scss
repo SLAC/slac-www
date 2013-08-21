@@ -386,12 +386,16 @@
 }
 
 .bg-list .field-item, 
-.bg-list .social_links {
+.bg-list .social_links{
   padding: 10px 0;
   margin-bottom: 0;
   background: white url("../images/list-bg.png") repeat-x bottom;
   width: 100%;
   overflow: hidden; 
+}
+.social_links a img{
+  width: 16px;
+  height: 16px;
 }
 
 .bg-list {
