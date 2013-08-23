@@ -508,7 +508,7 @@ span.ext {
   .pane-node-content{
     background: #f7f7f7;
     width: 90%;
-    padding: 5%;
+    padding: 4% 5%;
     .field-name-body p{
       margin-top: -4px !important;
       line-height: 20px;
@@ -516,19 +516,20 @@ span.ext {
   }
   .three-col-middle h2.pane-title, 
   .three-col-middle h2.pane-title a{
-    margin: 0 0 2px 0;  
-    font-size: 16px;
-    color: #333333;
+    margin: 0 0 2px 0;
+    font-size: 18px;
+    color: #474748;
     line-height: normal;
     font-weight: bold;
+    margin: 0 0 4px;
   }  
   .field-name-field-speaker-name,
   .field-name-field-affiliations{
-    color: #666;
-    font-size: 13px;
-    font-weight: bold;
+    color: #474748;
+    font-size: 14px;
+    font-weight:normal;
     float: left;
-    margin-right: 5px;
+    margin: 0 5px 15px 0;
   }
   .field-name-field-lecture-date{
     clear: both;
@@ -542,6 +543,8 @@ span.ext {
   }
   .field-name-field-video .jwplayer{
     margin: auto;
+    width: 100%;
+    max-width: 100%;
   }
   .field-type-image{
     float: left;
