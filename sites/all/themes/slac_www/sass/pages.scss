@@ -983,20 +983,11 @@ a.imageLessButton {
 }*/
 
 @media (max-width: 600px) {
-    
-  .frontpage-left-col,
-  .middleright-wrapper{
-    width: 100%;
-    margin: 0;
-    clear:both;
-  }
-
+  
+  .frontpage-middle-right{display:none;}
   .page-basic > .content {
     padding-bottom: 25px;
-    background: #eee;
   }
-
-  .frontpage-middle-right{display:none;}
 
   .page-basic{
     .pane-menu-menu-footer-menu{
@@ -1101,12 +1092,6 @@ a.imageLessButton {
     width: 100%;
     color: #fff;
     display: block;
-  }
-
-  .front .highlited .field-label, 
-  .front .highlited .pane-title{
-    margin: 0 0 20px;
-    width: 92.6%;
   }
 
   .front .middletop .pane-title{
