@@ -316,7 +316,7 @@
 @media (max-width: 600px) {
   /* Front page layout */
   /* line 168, ../sass/_mixins.scss */
-  .front-slider,
+  .slider,
   .frontpage-middle-left .views-row,
   .front .highlited
   .three-col .three-col-left,

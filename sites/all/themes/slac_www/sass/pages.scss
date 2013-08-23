@@ -983,9 +983,17 @@ a.imageLessButton {
 }*/
 
 @media (max-width: 600px) {
-  
+    
+  .frontpage-left-col,
+  .middleright-wrapper{
+    width: 100%;
+    margin: 0;
+    clear:both;
+  }
+
   .page-basic > .content {
     padding-bottom: 25px;
+    background: #eee;
   }
 
   .page-basic{
@@ -1034,11 +1042,6 @@ a.imageLessButton {
     width: 24px;
     height: 24px;
     margin: auto;
-  }
-
-  .social_links a img{
-    width: 24px;
-    height: 24px;
   }
 
   /*  */
@@ -1096,6 +1099,12 @@ a.imageLessButton {
     width: 100%;
     color: #fff;
     display: block;
+  }
+
+  .front .highlited .field-label, 
+  .front .highlited .pane-title{
+    margin: 0 0 20px;
+    padding: 6px 0 5px;
   }
 
   .front .middletop .pane-title{
