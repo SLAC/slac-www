@@ -996,6 +996,8 @@ a.imageLessButton {
     background: #eee;
   }
 
+  .frontpage-middle-right{display:none;}
+
   .page-basic{
     .pane-menu-menu-footer-menu{
       padding: 0;  
@@ -1104,7 +1106,7 @@ a.imageLessButton {
   .front .highlited .field-label, 
   .front .highlited .pane-title{
     margin: 0 0 20px;
-    padding: 6px 0 5px;
+    width: 92.6%;
   }
 
   .front .middletop .pane-title{
