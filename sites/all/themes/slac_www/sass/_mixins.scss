@@ -153,9 +153,9 @@
 
   /* Front page layout */
 
-  .slider,
-  .frontpage-left-col,
-  .middleright-wrapper,
+  .front-slider,
+  .frontpage-middle-left .views-row,
+  .front .highlited
   .three-col .three-col-left,
   .three-col .three-col-middle-right,
   .pane-page-content > .pane-title,
@@ -170,3 +170,7 @@
     clear: both;
   } 
 }
+
+/*.frontpage-left-col,
+  .middleright-wrapper,
+*/

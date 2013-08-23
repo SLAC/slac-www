@@ -316,9 +316,9 @@
 @media (max-width: 600px) {
   /* Front page layout */
   /* line 168, ../sass/_mixins.scss */
-  .slider,
-  .frontpage-left-col,
-  .middleright-wrapper,
+  .front-slider,
+  .frontpage-middle-left .views-row,
+  .front .highlited
   .three-col .three-col-left,
   .three-col .three-col-middle-right,
   .pane-page-content > .pane-title,
@@ -341,6 +341,9 @@
     box-sizing: border-box;
     word-wrap: break-word;
     clear: both; } }
+/*.frontpage-left-col,
+  .middleright-wrapper,
+*/
 /*
  * @file
  * Page Styling
