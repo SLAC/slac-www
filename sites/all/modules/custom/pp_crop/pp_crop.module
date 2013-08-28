@@ -26,6 +26,14 @@ function pp_crop_menu() {
     'access arguments' => array('administer crop styles'),
   );
 
+  $items['js/pp_crop/manage_thumbnails/%/%'] = array(
+    'title' => 'AJAX callback to load thumbnails preview',
+    'page arguments' => array(3, 4),
+    'page callback' => 'pp_crop_ajax_manage_thumbnails',
+    'access arguments' => array('administer crop styles'),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
@@ -184,7 +192,7 @@ function theme_images_thumbnails_list($variables) {
     return;
   }
 
-  $file = $variables['file'];
+  $file = file_load($variables['file']);
   $manage_crop_link = "<span class=\"manage-link-wrapper\"></br><a class=\"button manage-crop-link\" href=\"javascript:Drupal.EPSACrop.dialog("
     . "'" . $variables['entity_type'] . "',"
     . "'" . $variables['field_name'] . "' ,"
@@ -330,17 +338,11 @@ function pp_crop_element_process($element, $form_state, $form) {
     return $element;
   }
 
-  if(!isset($element['#file']) || !is_object($element['#file'])) {
-    return $element;
-  }
-
   // Unset epsacrop element.
   // Instead of epsacrop element will be used "Manage thumbnails" element.
   if (isset($element['epsacrop'])) {
     unset($element['epsacrop']);
   }
-
-  $file = $element['#file'];
 
   _epsacrop_include_header_html();
   $styles = _epsacrop_load_styles_by_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
@@ -348,26 +350,20 @@ function pp_crop_element_process($element, $form_state, $form) {
     return $element;
   }
 
-  $thumbnail_options = pp_crop_get_images_thumbnails($form, $file);
-  $images_thumbnails = theme(
-    'images_thumbnails_list',
-    array(
-      'thumbnail_options' => $thumbnail_options,
-      'file' => $file,
-      'entity_type' => $element['#entity_type'],
-      'field_name' => $element['#field_name'],
-      'bundle' => $element['#bundle'],
-      'styles' => $styles['styles'],
-    )
+  $theme_variables = array(
+    'entity_type' => $element['#entity_type'],
+    'field_name' => $element['#field_name'],
+    'bundle' => $element['#bundle'],
+    'styles' => $styles['styles'],
   );
 
   drupal_add_library('system', 'ui.dialog');
   drupal_add_js(drupal_get_path('module', 'pp_crop') . '/js/pp_crop_field.js');
 
-  $markup = '<a id="view-thumbnails-' . $file->fid . '" class="button" href="#">' . t('Manage thumbnails') . '</a>';
   $element['manage_thumbnails'] = array(
     '#type' => 'markup',
-    '#markup' => $markup . $images_thumbnails
+    '#markup' => '<div class="theme-variables" data-theme-variables="' . urlencode(json_encode($theme_variables)) . '"></div>'
+               . '<div class="manage-thumbnails-popup"></div>',
   );
 
   return $element;
@@ -390,6 +386,7 @@ function pp_crop_get_images_thumbnails(&$form, $file) {
       $rendered_image = theme('image_style', array(
         'style_name' => $image_style_name,
         'path' => $file->uri,
+        'attributes' => array('class' => 'pp-crop-thumbnail'),
       ));
 
       preg_match('/\?itok=[a-zA-Z0-9-_]*/', $rendered_image, $matches);
@@ -403,4 +400,29 @@ function pp_crop_get_images_thumbnails(&$form, $file) {
     }
   }
   return $thumbnail_options;
+}
+
+/**
+ * AJAX callback to load thumbnails
+ *
+ * @param $settings
+ */
+function pp_crop_ajax_manage_thumbnails($settings, $fid) {
+  $settings = urldecode($settings);
+  $theme_variables = json_decode($settings, TRUE);
+
+  $file = file_load($fid);
+  $form = array();
+  $thumbnail_options = pp_crop_get_images_thumbnails($form, $file);
+
+  $theme_variables += array(
+    'thumbnail_options' => $thumbnail_options,
+    'file' => $file->fid,
+  );
+
+  $images_thumbnails = theme('images_thumbnails_list', $theme_variables);
+
+  print $images_thumbnails;
+  ajax_footer();
+  exit();
 }
