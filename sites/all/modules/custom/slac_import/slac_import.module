@@ -8,6 +8,24 @@ function slac_import_feeds_processor_targets_alter(&$targets, $entity_type, $bun
     $info = field_info_field($name);
 
     if ($info['type'] == 'image') {
+      $targets[$name . ':field_file_image_title_text'] = array(
+        'name' => t('@label: Media Title', array('@label' => $instance['label'])),
+        'callback' => 'slac_import_feeds_set_target',
+        'description' => t('The description tag of the @label field.', array('@label' => $instance['label'])),
+        'real_target' => $name,
+      );
+      $targets[$name . ':field_file_image_alt_text'] = array(
+        'name' => t('@label: Media Alt', array('@label' => $instance['label'])),
+        'callback' => 'slac_import_feeds_set_target',
+        'description' => t('The description tag of the @label field.', array('@label' => $instance['label'])),
+        'real_target' => $name,
+      );
+      $targets[$name . ':field_description'] = array(
+        'name' => t('@label: Media Description', array('@label' => $instance['label'])),
+        'callback' => 'slac_import_feeds_set_target',
+        'description' => t('The description tag of the @label field.', array('@label' => $instance['label'])),
+        'real_target' => $name,
+      );
       $targets[$name . ':image_field_caption'] = array(
         'name' => t('@label: Description', array('@label' => $instance['label'])),
         'callback' => 'slac_import_feeds_set_target',
@@ -38,11 +56,43 @@ function slac_import_feeds_set_target($source, &$entity, $target, $value) {
 
   $delta = 0;
   foreach ($value as $v) {
-    $field[LANGUAGE_NONE][$delta][$sub_field]['value'] = $v;
+    switch ($sub_field) {
+      case 'field_file_image_title_text':
+      case 'field_file_image_alt_text':
+      case 'field_description':
+        $field[LANGUAGE_NONE][$delta][$sub_field][LANGUAGE_NONE][0]['value'] = $v;
+      case 'image_field_caption':
+        $field[LANGUAGE_NONE][$delta][$sub_field]['value'] = $v;
+    }
     $delta++;
   }
 
   $entity->$field_name = $field;
+}
+
+/**
+ * Implements hook_import_feeds_presave().
+ */
+function slac_import_feeds_presave(FeedsSource $source, $entity, $item) {
+  if (isset($entity->field_image[LANGUAGE_NONE])) {
+    foreach ($entity->field_image[LANGUAGE_NONE] as $item) {
+      if (!isset($item['fid'])) {
+        continue;
+      }
+      $file = file_load($item['fid']);
+      // Save alt, title and description for images.
+      if (isset($item['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'])) {
+        $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] = $item['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'];
+      }
+      if (isset($item['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
+        $file->field_file_image_title_text[LANGUAGE_NONE][0]['value'] = $item['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+      }
+      if (isset($item['field_description'][LANGUAGE_NONE][0]['value'])) {
+        $file->field_description[LANGUAGE_NONE][0]['value'] = $item['field_description'][LANGUAGE_NONE][0]['value'];
+      }
+      file_save($file);
+    }
+  }
 }
 
 /**
