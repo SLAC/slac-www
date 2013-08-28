@@ -1510,15 +1510,19 @@ a.imageLessButton {
   height: auto; }
 
 /* line 1233, ../sass/pages.scss */
-.section-past-lectures .pane-title {
-  margin-bottom: -10px; }
+.section-past-lectures .pane-page-content > .pane-title {
+  margin-bottom: 4px; }
+/* line 1237, ../sass/pages.scss */
+.section-past-lectures .three-col-middle h2 {
+  margin-top: -20px;
+  color: #807f7f; }
 
 @media (max-width: 500px) {
-  /* line 1240, ../sass/pages.scss */
+  /* line 1246, ../sass/pages.scss */
   .page-basic .pane-pane-header #search-box {
     display: none; }
 
-  /* line 1244, ../sass/pages.scss */
+  /* line 1250, ../sass/pages.scss */
   .mobile-search-trigger {
     margin: 0;
     width: 52px;
@@ -1530,28 +1534,28 @@ a.imageLessButton {
     background: url("../images/header-bg.jpg") repeat-x top;
     cursor: pointer;
     display: block; }
-    /* line 1255, ../sass/pages.scss */
+    /* line 1261, ../sass/pages.scss */
     .mobile-search-trigger span {
       background: url("../images/mobile-search.png") no-repeat top right;
       width: 52px;
       height: 42px;
       display: block; }
 
-  /* line 1263, ../sass/pages.scss */
+  /* line 1269, ../sass/pages.scss */
   .mobile-search-box {
     display: none;
     width: 100%;
     clear: both; }
-    /* line 1267, ../sass/pages.scss */
+    /* line 1273, ../sass/pages.scss */
     .mobile-search-box .pane-content {
       padding: 5px 0 12px;
       background: #8e001a;
       border-top: 1px solid #fff;
       overflow: hidden; }
-    /* line 1273, ../sass/pages.scss */
+    /* line 1279, ../sass/pages.scss */
     .mobile-search-box .form-item {
       margin: 0; }
-    /* line 1276, ../sass/pages.scss */
+    /* line 1282, ../sass/pages.scss */
     .mobile-search-box #slac-search {
       line-height: 35px;
       border: 2px solid #8c8b8b;
@@ -1560,11 +1564,11 @@ a.imageLessButton {
       padding: 0 3%;
       width: 59%;
       float: left; }
-    /* line 1285, ../sass/pages.scss */
+    /* line 1291, ../sass/pages.scss */
     .mobile-search-box form {
       width: 96%;
       margin: 0 2%; }
-    /* line 1289, ../sass/pages.scss */
+    /* line 1295, ../sass/pages.scss */
     .mobile-search-box .form-text {
       height: 35px;
       background: none;
@@ -1572,12 +1576,12 @@ a.imageLessButton {
       padding: 0;
       color: #aaa;
       width: 100%; }
-    /* line 1297, ../sass/pages.scss */
+    /* line 1303, ../sass/pages.scss */
     .mobile-search-box #slac-search-button {
       float: right;
       width: 30%;
       max-width: 70px; }
-    /* line 1302, ../sass/pages.scss */
+    /* line 1308, ../sass/pages.scss */
     .mobile-search-box .form-submit {
       background: #8c8b8b;
       border: none;
@@ -1586,7 +1590,7 @@ a.imageLessButton {
       color: #fff;
       margin: 0;
       width: 100%; }
-    /* line 1311, ../sass/pages.scss */
+    /* line 1317, ../sass/pages.scss */
     .mobile-search-box #slac-search-options {
       display: block;
       overflow: hidden;
@@ -1598,24 +1602,24 @@ a.imageLessButton {
       background: #f2f2f2;
       height: 28px;
       position: static; }
-      /* line 1322, ../sass/pages.scss */
+      /* line 1328, ../sass/pages.scss */
       .mobile-search-box #slac-search-options .form-item .form-type-radio {
         margin: 7px 0 4px 10%;
         color: #000;
         width: 45%; }
-      /* line 1327, ../sass/pages.scss */
+      /* line 1333, ../sass/pages.scss */
       .mobile-search-box #slac-search-options .form-item .form-type-radio:first-child {
         margin-left: 0; }
-    /* line 1331, ../sass/pages.scss */
+    /* line 1337, ../sass/pages.scss */
     .mobile-search-box .form-type-radio input {
       margin-top: 0;
       padding: 0; }
-    /* line 1335, ../sass/pages.scss */
+    /* line 1341, ../sass/pages.scss */
     .mobile-search-box .form-type-radio label {
       float: left;
       height: 14px; } }
 @media (max-width: 900px) {
-  /* line 1345, ../sass/pages.scss */
+  /* line 1351, ../sass/pages.scss */
   .section-attending-lecture .three-col-middle > div {
     padding-right: 0;
     border-right: none; } }
