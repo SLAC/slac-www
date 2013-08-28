@@ -1167,7 +1167,7 @@ a.imageLessButton {
       padding: 0;
     }
     .menu li > a:hover,
-    .menu li > a.active-trail {
+    .menu li > a.active {
       background: #ccc;
     }
     .menu li ul{
@@ -1229,6 +1229,11 @@ a.imageLessButton {
   }
 }
 
+.section-past-lectures{
+  .pane-title{
+    margin-bottom: -10px;
+  }
+}
 
 @media (max-width: 500px) {
   

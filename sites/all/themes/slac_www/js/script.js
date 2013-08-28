@@ -63,34 +63,46 @@
 
   Drupal.behaviors.responsiveMenuAndSearch = {
     attach: function (context, settings) {
+      if( $('.mobile-search-trigger').length == 0 ){
+        $('<div class="mobile-search-trigger"><span></span></div>').insertBefore('.pane-pane-header #search-box');
+      }
 
-      $('<div class="mobile-search-trigger"><span></span></div>').insertBefore('.pane-pane-header #search-box');
       $('.mobile-search-trigger').click(function(){
-        $('.mobile-search-box').slideToggle();
+        if( $('.mobile-search-box').is(':hidden') ){
+          $('.mobile-search-box').slideDown('fast');
+        } else{
+          $('.mobile-search-box').slideUp('fast');
+        }
       });
 
-      $('<div class="left-menu-trigger"></div>').insertBefore('.page-basic .header .inside');
+      if( $('.left-menu-trigger').length == 0 ){
+        $('<div class="left-menu-trigger"></div>').insertBefore('.page-basic .header .inside');
+      }
        
-        $('.left-menu-trigger').click(function() {
-          $(this).toggleClass('left-menu-active');
-          if(($(this).hasClass("left-menu-active")) == true) {
-          $(this).parents('.header').siblings('.panel-panel').andSelf().animate({
-              'marginLeft': '30%'
-            })
-          }   
-          else{
-          $(this).parents('.header').siblings('.panel-panel').andSelf().animate({
-              'marginLeft': '0'
-            })
-          }
-        });
+      $('.left-menu-trigger').click(function() {
+        var $this = $(this);
+        if( $this.hasClass("left-menu-active") ) {
+          $this
+          .removeClass('left-menu-active')
+          .parents('.page-basic').find('> div:not(.sidebar-menu)').stop(true,true).animate({
+            'marginLeft': '0'
+          })
+        } else{
+          $this
+          .addClass('left-menu-active')
+          .parents('.page-basic').find('> div:not(.sidebar-menu)').stop(true,true).animate({
+            'marginLeft': '30%'
+          })
+        }
+      });
     }
   }
 
   Drupal.behaviors.backOnTop = {
     attach: function (context, settings) {
-      $('<a href="#" class="back-on-top"><span>Go to top</span></a>').insertAfter('.page-basic > .content > .inside');
-
+      if( $('.back-on-top').length == 0 ){
+        $('<a href="#" class="back-on-top"><span>Go to top</span></a>').insertAfter('.page-basic > .content > .inside');
+      }
       /* Left menu expanded class */
       $('.left-menu li ul').closest('li').addClass('has-subitems');
     }

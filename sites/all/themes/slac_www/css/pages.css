@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -1455,7 +1455,7 @@ a.imageLessButton {
     padding: 0; }
   /* line 1170, ../sass/pages.scss */
   .not-front .left-menu .menu li > a:hover,
-  .not-front .left-menu .menu li > a.active-trail {
+  .not-front .left-menu .menu li > a.active {
     background: #ccc; }
   /* line 1173, ../sass/pages.scss */
   .not-front .left-menu .menu li ul {
@@ -1509,12 +1509,16 @@ a.imageLessButton {
   width: 100%;
   height: auto; }
 
+/* line 1233, ../sass/pages.scss */
+.section-past-lectures .pane-title {
+  margin-bottom: -10px; }
+
 @media (max-width: 500px) {
-  /* line 1235, ../sass/pages.scss */
+  /* line 1240, ../sass/pages.scss */
   .page-basic .pane-pane-header #search-box {
     display: none; }
 
-  /* line 1239, ../sass/pages.scss */
+  /* line 1244, ../sass/pages.scss */
   .mobile-search-trigger {
     margin: 0;
     width: 52px;
@@ -1526,28 +1530,28 @@ a.imageLessButton {
     background: url("../images/header-bg.jpg") repeat-x top;
     cursor: pointer;
     display: block; }
-    /* line 1250, ../sass/pages.scss */
+    /* line 1255, ../sass/pages.scss */
     .mobile-search-trigger span {
       background: url("../images/mobile-search.png") no-repeat top right;
       width: 52px;
       height: 42px;
       display: block; }
 
-  /* line 1258, ../sass/pages.scss */
+  /* line 1263, ../sass/pages.scss */
   .mobile-search-box {
     display: none;
     width: 100%;
     clear: both; }
-    /* line 1262, ../sass/pages.scss */
+    /* line 1267, ../sass/pages.scss */
     .mobile-search-box .pane-content {
       padding: 5px 0 12px;
       background: #8e001a;
       border-top: 1px solid #fff;
       overflow: hidden; }
-    /* line 1268, ../sass/pages.scss */
+    /* line 1273, ../sass/pages.scss */
     .mobile-search-box .form-item {
       margin: 0; }
-    /* line 1271, ../sass/pages.scss */
+    /* line 1276, ../sass/pages.scss */
     .mobile-search-box #slac-search {
       line-height: 35px;
       border: 2px solid #8c8b8b;
@@ -1556,11 +1560,11 @@ a.imageLessButton {
       padding: 0 3%;
       width: 59%;
       float: left; }
-    /* line 1280, ../sass/pages.scss */
+    /* line 1285, ../sass/pages.scss */
     .mobile-search-box form {
       width: 96%;
       margin: 0 2%; }
-    /* line 1284, ../sass/pages.scss */
+    /* line 1289, ../sass/pages.scss */
     .mobile-search-box .form-text {
       height: 35px;
       background: none;
@@ -1568,12 +1572,12 @@ a.imageLessButton {
       padding: 0;
       color: #aaa;
       width: 100%; }
-    /* line 1292, ../sass/pages.scss */
+    /* line 1297, ../sass/pages.scss */
     .mobile-search-box #slac-search-button {
       float: right;
       width: 30%;
       max-width: 70px; }
-    /* line 1297, ../sass/pages.scss */
+    /* line 1302, ../sass/pages.scss */
     .mobile-search-box .form-submit {
       background: #8c8b8b;
       border: none;
@@ -1582,7 +1586,7 @@ a.imageLessButton {
       color: #fff;
       margin: 0;
       width: 100%; }
-    /* line 1306, ../sass/pages.scss */
+    /* line 1311, ../sass/pages.scss */
     .mobile-search-box #slac-search-options {
       display: block;
       overflow: hidden;
@@ -1594,24 +1598,24 @@ a.imageLessButton {
       background: #f2f2f2;
       height: 28px;
       position: static; }
-      /* line 1317, ../sass/pages.scss */
+      /* line 1322, ../sass/pages.scss */
       .mobile-search-box #slac-search-options .form-item .form-type-radio {
         margin: 7px 0 4px 10%;
         color: #000;
         width: 45%; }
-      /* line 1322, ../sass/pages.scss */
+      /* line 1327, ../sass/pages.scss */
       .mobile-search-box #slac-search-options .form-item .form-type-radio:first-child {
         margin-left: 0; }
-    /* line 1326, ../sass/pages.scss */
+    /* line 1331, ../sass/pages.scss */
     .mobile-search-box .form-type-radio input {
       margin-top: 0;
       padding: 0; }
-    /* line 1330, ../sass/pages.scss */
+    /* line 1335, ../sass/pages.scss */
     .mobile-search-box .form-type-radio label {
       float: left;
       height: 14px; } }
 @media (max-width: 900px) {
-  /* line 1340, ../sass/pages.scss */
+  /* line 1345, ../sass/pages.scss */
   .section-attending-lecture .three-col-middle > div {
     padding-right: 0;
     border-right: none; } }

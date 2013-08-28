@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -551,8 +551,8 @@
   background-color: #f2f2f2; }
 /* line 229, ../sass/blocks.scss */
 .left-menu li.depth-3 a:hover,
-.left-menu li.depth-3.active-trail a,
-.left-menu .depth-2.has-subitems.active-trail > a {
+.left-menu li.depth-3.active a,
+.left-menu .depth-2.has-subitems.active > a {
   background: #e7e7e7; }
 /* line 233, ../sass/blocks.scss */
 .left-menu li.depth-3 {
@@ -561,9 +561,9 @@
   .left-menu li.depth-3 a {
     line-height: normal;
     padding: 4px 10px;
-    margin-left: 10px; }
+    padding-left: 14px; }
   /* line 241, ../sass/blocks.scss */
-  .left-menu li.depth-3 a:hover, .left-menu li.depth-3.active-trail a {
+  .left-menu li.depth-3 a:hover, .left-menu li.depth-3.active a {
     background: #e7e7e7; }
 /* line 246, ../sass/blocks.scss */
 .left-menu .depth-2.has-subitems {

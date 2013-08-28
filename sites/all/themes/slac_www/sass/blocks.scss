@@ -225,8 +225,8 @@
   }
 
   li.depth-3 a:hover, 
-  li.depth-3.active-trail a,
-  .depth-2.has-subitems.active-trail > a{
+  li.depth-3.active a,
+  .depth-2.has-subitems.active > a{
     background: #e7e7e7;
   }
   
@@ -235,10 +235,10 @@
       a{
       line-height: normal;
       padding: 4px 10px;
-      margin-left: 10px;  
+      padding-left: 14px;
     }
     a:hover,
-    &.active-trail a{
+    &.active a{
       background: #e7e7e7;
     }
   }
