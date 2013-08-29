@@ -204,6 +204,10 @@ input:focus{
       border: none;
     }
     li.depth-1.first {
+      display: none;
+      background: transparent;
+    }    
+    & + li.depth-1{
       background: transparent;
     }
     ul {
