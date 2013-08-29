@@ -63,38 +63,45 @@
 
   Drupal.behaviors.responsiveMenuAndSearch = {
     attach: function (context, settings) {
-      if( $('.mobile-search-trigger').length == 0 ){
+      var mobileSearchTrigger = $('.mobile-search-trigger');
+      
+      if( mobileSearchTrigger.length == 0 ){
         $('<div class="mobile-search-trigger"><span></span></div>').insertBefore('.pane-pane-header #search-box');
+        mobileSearchTrigger = $('.mobile-search-trigger');
       }
 
-      $('.mobile-search-trigger').click(function(){
-        if( $('.mobile-search-box').is(':hidden') ){
-          $('.mobile-search-box').slideDown('fast');
-        } else{
-          $('.mobile-search-box').slideUp('fast');
-        }
-      });
+      if (!mobileSearchTrigger.hasClass('trigger-processed')) {
+        mobileSearchTrigger.addClass('trigger-processed');
+        mobileSearchTrigger.click(function(){
+          var $this = $('#mobile-search-box');
+          if( $this.is(':visible') ){
+            $this.slideUp('fast');
+          } else{
+            $this.slideDown('fast');
+          }
+        });
 
-      if( $('.left-menu-trigger').length == 0 ){
-        $('<div class="left-menu-trigger"></div>').insertBefore('.page-basic .header .inside');
-      }
-       
-      $('.left-menu-trigger').click(function() {
-        var $this = $(this);
-        if( $this.hasClass("left-menu-active") ) {
-          $this
-          .removeClass('left-menu-active')
-          .parents('.page-basic').find('> div:not(.sidebar-menu)').stop(true,true).animate({
-            'marginLeft': '0'
-          })
-        } else{
-          $this
-          .addClass('left-menu-active')
-          .parents('.page-basic').find('> div:not(.sidebar-menu)').stop(true,true).animate({
-            'marginLeft': '30%'
-          })
+        if( $('.left-menu-trigger').length == 0 ){
+          $('<div class="left-menu-trigger"></div>').insertBefore('.page-basic .header .inside');
         }
-      });
+
+        $('.left-menu-trigger').click(function() {
+          var $this = $(this);
+          if( $this.hasClass("left-menu-active") ) {
+            $this
+            .removeClass('left-menu-active')
+            .parents('.page-basic').find('> div:not(.sidebar-menu)').stop(true,true).animate({
+              'marginLeft': '0'
+            })
+          } else{
+            $this
+            .addClass('left-menu-active')
+            .parents('.page-basic').find('> div:not(.sidebar-menu)').stop(true,true).animate({
+              'marginLeft': '30%'
+            })
+          }
+        });
+      }
     }
   }
 
