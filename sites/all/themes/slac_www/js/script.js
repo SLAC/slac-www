@@ -101,6 +101,11 @@
             })
           }
         });
+
+        // main menu add class for menu items
+        $('.main-menu ul:first > li').each(function(){
+          $(this).addClass('menu-item-'+$(this).index());
+        });
       }
     }
   }
@@ -165,8 +170,5 @@
       });
     }
   }
-
-
-
 
 })(jQuery, Drupal, this, this.document);

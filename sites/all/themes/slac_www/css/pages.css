@@ -537,7 +537,7 @@ input:focus {
       display: none;
       background: transparent; }
     /* line 210, ../sass/pages.scss */
-    .main-menu ul + li.depth-1 {
+    .main-menu ul li.depth-1.menu-item-1 {
       background: transparent; }
     /* line 213, ../sass/pages.scss */
     .main-menu ul ul {

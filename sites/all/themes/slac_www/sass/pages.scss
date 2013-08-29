@@ -206,8 +206,8 @@ input:focus{
     li.depth-1.first {
       display: none;
       background: transparent;
-    }    
-    & + li.depth-1{
+    }
+    li.depth-1.menu-item-1{
       background: transparent;
     }
     ul {
