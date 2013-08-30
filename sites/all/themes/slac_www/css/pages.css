@@ -910,22 +910,22 @@ span.ext {
 .page-general-site-indexaspx .small-index-letter {
   font-size: 13px; }
 /* line 603, ../sass/pages.scss */
-.page-general-site-indexaspx ul {
+.page-general-site-indexaspx .content ul {
   margin: 0 0 0 10px; }
   /* line 605, ../sass/pages.scss */
-  .page-general-site-indexaspx ul ul {
+  .page-general-site-indexaspx .content ul ul {
     padding-bottom: 0; }
   /* line 608, ../sass/pages.scss */
-  .page-general-site-indexaspx ul li {
+  .page-general-site-indexaspx .content ul li {
     list-style-type: square;
     color: #696969;
     font-size: 13px;
     color: #990000; }
     /* line 613, ../sass/pages.scss */
-    .page-general-site-indexaspx ul li a {
+    .page-general-site-indexaspx .content ul li a {
       color: #990000; }
     /* line 616, ../sass/pages.scss */
-    .page-general-site-indexaspx ul li.last {
+    .page-general-site-indexaspx .content ul li.last {
       margin-bottom: 0; }
 /* line 621, ../sass/pages.scss */
 .page-general-site-indexaspx .return-link a {
