@@ -1369,3 +1369,16 @@ a.imageLessButton {
   }
 }
 }
+
+.section-content{
+  .content{
+    .three-col-middle-right{
+      width: 100%;
+      margin-left: 0;
+      .three-col-middle{
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+}
