@@ -136,6 +136,7 @@ input:focus{
     position: relative;
     z-index: 99;
     img {
+      display: block;
       float: left;
       margin-top: 23px;
     }
@@ -504,57 +505,82 @@ span.ext {
   margin-top: 20px;
 }
 
-
 .node-type-lecture{
+  .pane-pane-messages{
+    display: none;
+  }
   .three-col-middle{
-    line-height: normal;
-  }
-  .pane-node-content{
-    background: #f7f7f7;
-    width: 90%;
-    padding: 4% 5%;
-    .field-name-body p{
-      margin-top: -4px !important;
-      line-height: 20px;
+     position: relative;
+     .inside{
+      width: 90%;
+       margin: 0 auto;
+     }
+     .panel-separator{
+      display: none;
+     }
+    .pane-1{
+      position: absolute;
+      top: -60px;
+      right: 0;
     }
-  }
-  .three-col-middle h2.pane-title, 
-  .three-col-middle h2.pane-title a{
-    margin: 0 0 2px 0;
-    font-size: 18px;
-    color: #474748;
-    line-height: normal;
-    font-weight: bold;
-    margin: 0 0 4px;
-  }  
-  .field-name-field-speaker-name,
-  .field-name-field-affiliations{
-    color: #474748;
-    font-size: 14px;
-    font-weight:normal;
-    float: left;
-    margin: 0 5px 15px 0;
-  }
-  .field-name-field-lecture-date{
-    clear: both;
-  }
-  .field-name-field-video{
-    clear:both;
-    width: 100%;
-    padding: 30px 0;
-    margin-bottom: 30px;
-    background: url("../images/dotted-border.png") repeat-x bottom;
-  }
-  .field-name-field-video .jwplayer{
-    margin: auto;
-    width: 100%;
-    max-width: 100%;
-  }
-  .field-type-image{
-    float: left;
-    margin-right: 35px;
-    background: #dadadc;
-    padding: 7px;
+    .lectures-subtitle{
+      position: absolute;
+      top: -40px;
+      left: 0;
+      font-size: 1.2em;
+      color: #666;
+    }
+    .pane-node-title{
+      padding-bottom: 4px;
+      h2{
+        font-size: 1.4em;
+        font-weight: bold;
+      }
+    }
+    .pane-node-field-speaker-name,
+    .pane-3,
+    .pane-node-field-location{
+      display: inline-block;
+      padding-bottom: 10px;
+      & *{
+        font-size: 14px;
+        color: #474748;
+      }
+    }
+    .pane-node-created{
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .pane-node-field-video{
+      clear:both;
+      width: 100%;
+      padding: 30px 0;
+      margin-bottom: 30px;
+      background: url("../images/dotted-border.png") repeat-x bottom;
+    }
+    .pane-node-body{
+      .field-label{
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+    .pane-node-field-image{
+      background: transparent;
+    }
+    .pane-node-field-image:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .field-type-image{
+      .even, .odd{
+        float: left;
+        margin-right: 35px;
+        background: #dadadc;
+        padding: 7px;
+      }
+    }
   }
 }
 
@@ -842,7 +868,7 @@ a.imageLessButton {
 
 @media (min-width: 501px){
   .page-basic > .panel-panel{
-    margin: auto !important;
+    margin: 0 auto;
   }
   .mobile-search-box{
     display: none !important;
