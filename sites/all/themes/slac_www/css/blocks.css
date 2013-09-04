@@ -415,7 +415,7 @@
     -o-border-radius: 10px;
     -ms-border-radius: 10px;
     border-radius: 10px;
-    z-index: 99; }
+    z-index: 6; }
     /* line 74, ../sass/blocks.scss */
     .front-slider .views-slideshow-controls-text span.views-slideshow-controls-text-previous {
       left: 8px; }
@@ -446,7 +446,7 @@
     padding: 5px;
     margin: 0;
     background: #D5D8DA;
-    z-index: 99; }
+    z-index: 6; }
   /* line 107, ../sass/blocks.scss */
   .front-slider .views-slideshow-pager-field-item {
     float: left;
