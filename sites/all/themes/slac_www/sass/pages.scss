@@ -511,14 +511,20 @@ span.ext {
   }
   .three-col-middle{
      position: relative;
-     .inside{
+     > div{
       width: 90%;
        margin: 0 auto;
+       margin-bottom: 30px;
+       &:after{
+        content: "";
+        display: table;
+        clear: both;
+       }
      }
      .panel-separator{
       display: none;
      }
-    .pane-1{
+    .pane-2{
       position: absolute;
       top: -60px;
       right: 0;
@@ -538,12 +544,12 @@ span.ext {
       }
     }
     .pane-node-field-speaker-name,
-    .pane-3,
+    .pane-4,
     .pane-node-field-location{
       display: inline-block;
       padding-bottom: 10px;
       & *{
-        font-size: 14px;
+        font-size: 13px;
         color: #474748;
       }
     }
@@ -555,18 +561,28 @@ span.ext {
       clear:both;
       width: 100%;
       padding: 30px 0;
-      margin-bottom: 30px;
       background: url("../images/dotted-border.png") repeat-x bottom;
     }
-    .pane-node-body{
-      .field-label{
-        margin-bottom: 10px;
-        font-size: 1.2em;
-        font-weight: bold;
-      }
+    .pane-node-body .field-label,
+    .about-label{
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    .three-col-middle-center-left .inside{
+      padding-right: 4%;
+      text-align: justify;
     }
     .pane-node-field-image{
+      margin: 0;
       background: transparent;
+      .field-item {
+        margin: 0 0 10px 0 !important;
+        float: none !important;
+      }
+      img{
+        display: block;
+      }
     }
     .pane-node-field-image:after{
       content: "";
@@ -579,6 +595,22 @@ span.ext {
         margin-right: 35px;
         background: #dadadc;
         padding: 7px;
+      }
+    }
+    .three-col-middle-bottom{
+      margin-bottom: 0;
+      .three-col-middle-bottom-right .inside{
+        padding-left: 4%;
+      }
+      .field-name-field-speaker-name{
+        font-style: italic;
+        color: #666;
+      }
+      .field-name-field-about-the-speaker{
+        line-height: 20px;
+        font-size: 13px;
+        color: #474748;
+        text-align: justify;
       }
     }
   }
