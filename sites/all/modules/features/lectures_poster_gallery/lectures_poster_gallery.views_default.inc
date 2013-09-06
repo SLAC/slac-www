@@ -34,15 +34,13 @@ function lectures_poster_gallery_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_image_1']['id'] = 'field_image_1';
@@ -50,14 +48,17 @@ function lectures_poster_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_image_1']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image_1']['label'] = '';
   $handler->display->display_options['fields']['field_image_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_1']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_image_1']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image_1']['type'] = 'lightbox2';
   $handler->display->display_options['fields']['field_image_1']['settings'] = array(
     'type' => 'lightbox',
-    'image_style' => 'crop_portrait',
+    'image_style' => 'lecture_portrait',
     'lightbox_style' => '0',
-    'caption' => 'hidden',
+    'caption' => 'field_file_image_title_text',
   );
+  $handler->display->display_options['fields']['field_image_1']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_image_1']['delta_offset'] = '0';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
