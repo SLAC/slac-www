@@ -42,24 +42,49 @@ function lectures_poster_gallery_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_image_1']['id'] = 'field_image_1';
   $handler->display->display_options['fields']['field_image_1']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image_1']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image_1']['label'] = '';
+  $handler->display->display_options['fields']['field_image_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_1']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_image_1']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image_1']['type'] = 'lightbox2';
   $handler->display->display_options['fields']['field_image_1']['settings'] = array(
-    'type' => 'lightbox',
     'image_style' => 'lecture_portrait',
-    'lightbox_style' => '0',
-    'caption' => 'field_file_image_title_text',
+    'image_link' => '',
   );
   $handler->display->display_options['fields']['field_image_1']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_image_1']['delta_offset'] = '0';
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'lectures_gallery_large',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_image']['delta_offset'] = '0';
+  /* Field: Lightbox: Lightbox trigger */
+  $handler->display->display_options['fields']['lightbox2']['id'] = 'lightbox2';
+  $handler->display->display_options['fields']['lightbox2']['table'] = 'lightbox2';
+  $handler->display->display_options['fields']['lightbox2']['field'] = 'lightbox2';
+  $handler->display->display_options['fields']['lightbox2']['label'] = '';
+  $handler->display->display_options['fields']['lightbox2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['lightbox2']['trigger_field'] = 'field_image_1';
+  $handler->display->display_options['fields']['lightbox2']['popup'] = '[field_image]';
+  $handler->display->display_options['fields']['lightbox2']['caption'] = '[title]';
+  $handler->display->display_options['fields']['lightbox2']['rel_group'] = 1;
+  $handler->display->display_options['fields']['lightbox2']['custom_group'] = 'image_field';
+  $handler->display->display_options['fields']['lightbox2']['height'] = '700px';
+  $handler->display->display_options['fields']['lightbox2']['width'] = '453px';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
