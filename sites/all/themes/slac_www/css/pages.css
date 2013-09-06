@@ -1779,10 +1779,10 @@ a.imageLessButton {
     padding-right: 0;
     border-right: none; } }
 /* line 1527, ../sass/pages.scss */
-.section-content .content .three-col-middle-right {
+.section-content.page-node-2570 .content .three-col-middle-right {
   width: 100%;
   margin-left: 0; }
   /* line 1530, ../sass/pages.scss */
-  .section-content .content .three-col-middle-right .three-col-middle {
+  .section-content.page-node-2570 .content .three-col-middle-right .three-col-middle {
     width: 100%;
     margin-right: 0; }
