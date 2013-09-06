@@ -506,12 +506,9 @@ span.ext {
 }
 
 .node-type-lecture{
-  .pane-pane-messages{
-    display: none;
-  }
   .three-col-middle{
-     position: relative;
-     > div{
+    position: relative;
+    > div{
       width: 90%;
        margin: 0 auto;
        margin-bottom: 30px;
@@ -520,10 +517,13 @@ span.ext {
         display: table;
         clear: both;
        }
-      }
-      .panel-separator{
-        display: none;
-      }
+    }
+    .jwplayer{
+      width: 100% !important; 
+    }
+    .panel-separator{
+      display: none;
+    }
     .three-col-middle-top{
       .pane-2{
         position: absolute;
@@ -532,7 +532,7 @@ span.ext {
       }
       .lectures-subtitle{
         position: absolute;
-        top: -40px;
+        top: -35px;
         left: 0;
         font-size: 1.2em;
         color: #666;
@@ -617,7 +617,7 @@ span.ext {
 
     .three-col-middle-bottom{
       margin-bottom: 0;
-      .three-col-middle-bottom-right .inside{
+      .three-col-middle-bottom-left .inside{
         padding-left: 4%;
       }
       .about-label{
@@ -940,7 +940,7 @@ a.imageLessButton {
 /* SLAC Connections */
 .section-slac-connections{
   .pane-node-title{
-    margin-top: -40px;
+    margin-top: -35px;
     padding-bottom: 40px;
     font-size: 1.2em;
     color: #666;
@@ -1309,6 +1309,48 @@ a.imageLessButton {
     -ms-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+  }
+
+  .node-type-lecture{
+    .three-col-middle-top{
+      .past-lectures-wrapper .social-icon-block{
+        display: none;
+      }
+    }
+    .three-col-middle-center,
+    .three-col-middle-bottom{
+      background: url("../images/dotted-border.png") repeat-x bottom;
+    }
+    .three-col-middle-bottom{
+      padding: 20px 0 10px 0;
+    }
+    .three-col-middle-center-left,
+    .three-col-middle-center-right,
+    .three-col-middle-bottom-left,
+    .three-col-middle-bottom-right{
+      width: 100%;
+      float: none;
+      .inside{
+        padding: 0 0 10px 0 !important;
+      }
+    }
+    .three-col-middle-center{
+      .field-label{
+        padding-bottom: 10px;
+      }
+      .pane-node-field-image{
+        padding-top: 0 !important;
+      }
+    }
+    .three-col-middle-bottom{
+      position: relative;
+      padding-top: 10px;
+      .about-label{
+        position: absolute;
+        top: 10px;
+        left: 0;
+      }
+    }
   }
 }
 
