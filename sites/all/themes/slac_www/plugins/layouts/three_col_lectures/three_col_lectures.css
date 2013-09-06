@@ -21,12 +21,12 @@
 
 .content .three-col-middle-bottom-left{
   float: left;
-  width: 35%;
+  width: 65%;
 }
 
 .content .three-col-middle-bottom-right{
   float: left;
-  width: 65%;
+  width: 35%;
 }
 
 .content .three-col-middle-bottom{
