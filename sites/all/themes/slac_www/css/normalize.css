@@ -60,3 +60,7 @@ strong {
 /* line 47, ../sass/normalize.scss */
 em {
   font-style: italic; }
+
+/* line 50, ../sass/normalize.scss */
+a {
+  font-style: normal; }
