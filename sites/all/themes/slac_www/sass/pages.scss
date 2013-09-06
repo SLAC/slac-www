@@ -937,6 +937,16 @@ a.imageLessButton {
   display: none;
 }
 
+/* SLAC Connections */
+.section-slac-connections{
+  .pane-node-title{
+    margin-top: -40px;
+    padding-bottom: 40px;
+    font-size: 1.2em;
+    color: #666;
+  }
+}
+
 @media (min-width: 501px){
   .page-basic > .panel-panel{
     margin: 0 auto;
