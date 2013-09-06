@@ -427,41 +427,27 @@
   }
   .pane-title{
     padding-left: 10px;
+    margin: 0;
     line-height: 16px;
   }
-  .field-item .field-item, 
+  .fieldable-panels-pane{
+    padding-bottom: 2px;
+  }
+  .fieldable-panels-pane .field-item,
   .menu li,
   ul.news-archive-links li{
-    font-size: 11px;
-    line-height: 18px;
-    margin: 0 0 0 4%;
     width: 96%;
-  }
-  .field .field .field-item a, 
-  .menu li a,
-  ul.news-archive-links a{
-    padding-left: 5%;
-    max-width: 95%;
-    background: url('../images/red-arrow.png') no-repeat 0 5px;
-    @include links();
-    display: inline;
-    font-size: 11px;
+    padding: 2px 0 2px 4%;
+    margin: 0;
     line-height: 18px;
-    padding-bottom: 1px;
-    clear: both;
-    float: none;
-  }
-  .field .field .field-item a:hover, 
-  .menu li a:hover,
-  ul.news-archive-links a:hover{
-    border-bottom: 1px dotted #996633;
-    padding-bottom: 0;
-  }
-  .field-item{
-    clear:both;
-    padding: 2px 0;
     a{
-     float:left;
+      padding-left: 10px;
+      background: url('../images/red-arrow.png') no-repeat 0 5px;
+      @include links();
+      font-size: 11px;
+      &:hover{
+        border-bottom: 1px dotted #996633;
+      }
     }
   }
 }
