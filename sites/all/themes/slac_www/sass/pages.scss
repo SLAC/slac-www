@@ -428,6 +428,38 @@ span.ext {
   padding: 0 0 0 12px;
 }
 
+/* staff resources page */
+.staff-resources-page-content{
+  padding-right: 20px;
+  border-right: 1px solid #EFEFEF;
+  .introduction-block{
+    margin-bottom: 30px;
+  }
+  .content-block-body{
+    h2{
+      font-weight: bold;
+    }
+    #directorates{
+      margin-left: 25px;
+    }
+    a{
+      color: #881728;
+    }
+    .staff-return-link{
+      margin-bottom: 25px;
+    }
+    ul ul{
+      padding-bottom: 0;
+    }
+    ul li li{
+      color: #696969;
+      list-style-type: circle;
+      li{
+        list-style-type: square;
+      }
+    }
+  }
+}
 
 /* poster gallery */
 .page-community-poster-gallery{
