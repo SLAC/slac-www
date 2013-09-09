@@ -411,7 +411,17 @@ span.ext {
 
 /* Past lectures */
 
-.page-past-lectures{
+.page-community-past-lectures{
+  .three-col-middle .pane-title{
+    margin-top: -35px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    line-height: 1em;
+    color: #666;
+  }
+  .views-submit-button{
+    display: none;
+  }
   table{
     border: 2px solid #e7e7e7;
     border-bottom: none;
@@ -425,6 +435,9 @@ span.ext {
       a{
         color: #474748;
         font-size: 14px;
+        img{
+          float: right;
+        }
       }
     }
     tr{
@@ -1358,7 +1371,7 @@ a.imageLessButton {
 }
 
 /* attending lecture page */ 
-.section-attending-lecture{
+.page-node-2568.section-community{
   .pane-title{
     margin-bottom: 0;
   }
@@ -1511,8 +1524,9 @@ a.imageLessButton {
   }
 }
 
+/* attending lecture page */
 @media (max-width: 900px){
-.section-attending-lecture{
+.page-node-2568.section-community{
   .three-col-middle{
     & > div{
       padding-right: 0;
