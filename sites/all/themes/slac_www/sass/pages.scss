@@ -680,7 +680,9 @@ span.ext {
   }
 
   .sections-letters a{
-    padding: 0 5px 0 2px; 
+    display: inline;
+    padding: 0;
+    margin: 0;
     font-size: 13px;  
     font-weight: bold;
   }
@@ -690,10 +692,6 @@ table{
     background: #fff;
     padding: 0;
   }
-  td{
-    padding-bottom: 20px;
-  }
-  &,
   tr,
   tr td{
     border: none;
@@ -703,35 +701,46 @@ table{
   .index-letter,
   .small-index-letter{
     padding: 0 0 15px 0;
-    font-weight:bold;
+    font-weight: bold;
+    font-weight: 600;
     color: #696969;
     font-size: 16px;
   }
   .small-index-letter{
     font-size: 13px;
   }
-  .content ul{
-    margin: 0 0 0 10px;
+  .site-name-link{
+    padding-left: 12px;
+    padding-bottom: 0;
     ul{
-      padding-bottom: 0;
+      margin: 0;
     }
     li{
       list-style-type: square;
       color: #696969;
       font-size: 13px;
-      color: #990000;
       a{
         color: #990000;
+      }
+      a.externalLink{
+        padding-right: 15px;
+        background: url(../images/external-link-icon.png) no-repeat right center;
       }
       &.last{
         margin-bottom: 0;
       }
     }
   }
+  .return-link{
+    padding: 20px 0;
+  }
   .return-link a{
-    margin-left: 10px;
     font-size: 11px;
     font-style: italic;
+    &:before,
+    &:after{
+      content: ' - ';
+    }
   }
   .staff-return-link{
     margin-bottom: 20px;
