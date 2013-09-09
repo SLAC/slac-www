@@ -345,34 +345,50 @@ a.lightbox-processed{
   display:inline;
 }
 
-/* Image popup */
-
-#imageData{
-  position:relative;  
-  padding: 0 0 45px 0;
-  overflow: hidden;
-  #bottomNav{
-    margin: 0;
-    height:auto;
-    position:absolute;
-    bottom: 3px;
-    right: 5px;
+/* lightbox */
+#outerImageContainer{
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
+}
+#imageDataContainer{
+
+}
+#bottomNav{
+  width: 100%;
+  margin: 0 !important;
+  height: 65px !important;
+  overflow: hidden;
+  position: relative;
+  #frameHoverNav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  a{
+    display: block;
+    margin: 0 !important;
+  }
+}
+#bottomNavClose{
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+}
+#imageData{
   #imageDetails{
     width: 95%;
-    margin: 0 3%;
+    margin: 0 2.5%;
+    clear: both;
     p{
       text-align:left;
       font-weight: normal;
     }
   }
-  #caption em a{
-    position:absolute;
-    bottom: 14px;
-    right: 43px;
-    font-size: 11px;
-  }
 }
+
 /* Meeting Rooms table */
 .section-visiting-slac{
   table{
@@ -407,6 +423,39 @@ span.ext {
   display: inline;
   padding: 0 0 0 12px;
 }
+
+
+/* poster gallery */
+.page-community-poster-gallery{
+  .pane-pane-messages{
+    display: none;
+  }
+  .three-col-middle{
+    .pane-title{
+      margin-top: -35px;
+      margin-bottom: 19px;
+      font-size: 1.2em;
+      line-height: 1em;
+      color: #666;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+    }
+    tr{
+      padding: 5px 0;
+    }
+    td{
+      padding: 1%;
+    }
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+      border: none;
+    }
+  }
+} 
 
 
 /* Past lectures */
