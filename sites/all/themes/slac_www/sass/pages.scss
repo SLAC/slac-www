@@ -197,7 +197,7 @@ input:focus{
   padding: 0 0 5px 0;
   display: block;
   background: url("../images/menu-bg.png") repeat-x bottom;
-  ul {
+  .nice-menu-menu-top-nav-menu{
     width: 100%;
     border: none;
     &.nice-menu li.depth-1 {
@@ -444,6 +444,9 @@ span.ext {
     }
     a{
       color: #881728;
+      &:hover{
+        border-bottom: 1px dotted #996633;
+      }
     }
     .staff-return-link{
       margin-bottom: 25px;

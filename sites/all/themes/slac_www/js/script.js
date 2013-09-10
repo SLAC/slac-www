@@ -103,7 +103,7 @@
         });
 
         // main menu add class for menu items
-        $('.main-menu ul:first > li').each(function(){
+        $('.main-menu ul.nice-menu-menu-top-nav-menu > li').each(function(){
           $(this).addClass('menu-item-'+$(this).index());
         });
       }
