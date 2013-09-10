@@ -498,10 +498,15 @@ span.ext {
       border-collapse: collapse;
     }
     tr{
+      width: 100%;
       padding: 5px 0;
     }
     td{
+      width: 23%;
       padding: 1%;
+      .field-content,a{
+        display: block;
+      }
     }
     img{
       display: block;
