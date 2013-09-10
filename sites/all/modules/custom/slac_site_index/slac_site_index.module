@@ -97,7 +97,7 @@ function slac_site_index_elements($fid) {
     $parsed_file = $parsed_file[0];
     usort($parsed_file, '_compare_by_sitename');
 
-    $letters_pager = '<div class="sections-letters"> <a href="#A">A</a> ';
+    $letters_pager = '<div class="sections-letters"> <a href="#A">A</a>';
     $index = 'A';
     $rows = array();
     $rows[] = array(array('data' => 'A', 'id' => array('A'), 'class' => 'index-letter'));
@@ -109,7 +109,7 @@ function slac_site_index_elements($fid) {
         $first_letter = $site_name[0];
         if ($first_letter != $index) {
           $index = $first_letter;
-          $letters_pager .= '| <a href="#' . $first_letter . '">' . $first_letter . '</a>';
+          $letters_pager .= ' | <a href="#' . $first_letter . '">' . $first_letter . '</a>';
           $rows[] = array(
             array(
               'data' => theme('item_list', array('items' => $links_array, 'title' => '', 'type' => 'ul')),
