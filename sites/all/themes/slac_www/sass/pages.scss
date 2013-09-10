@@ -392,6 +392,14 @@ a.lightbox-processed{
   }
 }
 
+@media (max-width: 600px){
+  #outerImageContainer,
+  #imageDataContainer{
+    width: 95% !important;
+    height: auto !important;
+  }
+}
+
 /* Meeting Rooms table */
 .section-visiting-slac{
   table{
