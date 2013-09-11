@@ -823,11 +823,14 @@ table{
       color: #696969;
       font-size: 13px;
       a{
+        padding-right: 20px;
         color: #990000;
+        &.ext{
+          background: url(../images/external-link-icon.png) no-repeat right center;
+        }
       }
-      .ext{
-        margin-left: 5px;
-        background: url(../images/external-link-icon.png) no-repeat center center;
+      span.ext{
+        display: none;
       }
       &.last{
         margin-bottom: 0;
