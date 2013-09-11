@@ -351,12 +351,9 @@ a.lightbox-processed{
 #outerImageContainer{
   img{
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
-}
-.node-type-lecture #outerImageContainer img{
-  //width: 100% !important;
 }
 #bottomNav{
   width: 100%;
