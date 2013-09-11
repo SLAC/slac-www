@@ -788,9 +788,13 @@ span.ext {
   .sections-letters a{
     display: inline;
     padding: 0;
+    padding-right: 4px;
     margin: 0;
     font-size: 13px;  
     font-weight: bold;
+    &:first-child{
+      padding-right: 0;
+    }
   }
 
 table{
