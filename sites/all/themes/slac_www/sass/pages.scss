@@ -351,14 +351,12 @@ a.lightbox-processed{
 #outerImageContainer{
   img{
     display: block;
+    max-width: 100%;
     height: auto;
   }
 }
 .node-type-lecture #outerImageContainer img{
-  width: 100% !important;
-}
-#hoverNav{
-  display: none !important;
+  //width: 100% !important;
 }
 #bottomNav{
   width: 100%;
@@ -368,17 +366,12 @@ a.lightbox-processed{
   position: relative;
   clear: both;
   #frameHoverNav{
-    display: block !important;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 90px !important;
-    a{
-      display: block !important;
-    }
   }
   a{
-    display: block;
     margin: 0 !important;
   }
 }
