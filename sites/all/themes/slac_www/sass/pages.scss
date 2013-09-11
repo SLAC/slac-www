@@ -358,10 +358,7 @@ a.lightbox-processed{
   width: 100% !important;
 }
 #hoverNav{
-  display: block !important;
-  a{
-    display: block !important;
-  }
+  display: none !important;
 }
 #bottomNav{
   width: 100%;
@@ -371,10 +368,14 @@ a.lightbox-processed{
   position: relative;
   clear: both;
   #frameHoverNav{
-    display: none !important;
+    display: block !important;
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 90px !important;
+    a{
+      display: block !important;
+    }
   }
   a{
     display: block;
@@ -408,9 +409,6 @@ a.lightbox-processed{
     width: 96% !important;
     height: auto !important;
     padding: 2% !important;
-  }
-  #frameHoverNav{
-    width: 90px !important;
   }
 }
 
