@@ -619,6 +619,9 @@ div.pane-node-body{
   li,a{
     color: #881728;
   }
+  a:hover{
+    border-bottom: 1px dotted #996633;
+  }
 }
 
 .page-body-block .shaded-background:first-child{
