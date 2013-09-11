@@ -1,0 +1,4 @@
+name = SLAC in the news
+description = "Provides some modifications for SLAC IN THE NEWS block"
+package = SLAC
+core = 7.x
