@@ -351,12 +351,9 @@ a.lightbox-processed{
 #outerImageContainer{
   img{
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
-}
-#imageDataContainer{
-
 }
 #bottomNav{
   width: 100%;
@@ -369,9 +366,9 @@ a.lightbox-processed{
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 90px !important;
   }
   a{
-    display: block;
     margin: 0 !important;
   }
 }
@@ -402,9 +399,6 @@ a.lightbox-processed{
     width: 96% !important;
     height: auto !important;
     padding: 2% !important;
-  }
-  #frameHoverNav{
-    width: 90px !important;
   }
 }
 
@@ -780,6 +774,9 @@ span.ext {
 /* Index page */
 
 .page-general-site-indexaspx {
+  .pane-content a:hover{
+    border-bottom: 1px dotted #996633;
+  }
   .sections-letters{
     clear: both;
     margin: 0;
@@ -791,9 +788,13 @@ span.ext {
   .sections-letters a{
     display: inline;
     padding: 0;
+    padding-right: 4px;
     margin: 0;
     font-size: 13px;  
     font-weight: bold;
+    &:first-child{
+      padding-right: 0;
+    }
   }
 
 table{
@@ -830,10 +831,13 @@ table{
       font-size: 13px;
       a{
         color: #990000;
+        &.ext{
+          padding-right: 15px;
+          background: url(../images/external-link-icon.png) no-repeat right center;
+        }
       }
-      a.externalLink{
-        padding-right: 15px;
-        background: url(../images/external-link-icon.png) no-repeat right center;
+      span.ext{
+        display: none;
       }
       &.last{
         margin-bottom: 0;
@@ -857,6 +861,59 @@ table{
   .staff-return-link a{
     font-size: 11px;
     font-style: italic;
+  }
+}
+
+/* feedback page */
+.node-type-webform{
+  .pane-pane-messages{
+    display: none;
+  }
+  .content{
+    .pane-title{
+      float: none;
+      padding: 18px 0 15px;
+      margin: 0;
+    }
+    .pane-content,
+    .pane-title{
+      width: 90%;
+      margin-left: 5%;
+    }
+    .field-name-body{
+      margin-bottom: 20px;
+      font-size: 0.8em;
+      color: #666;
+    }
+    form{
+      max-width: 650px;
+      padding: 0 30px 30px;
+      margin-bottom: 30px;
+      background-color: #f8f8f8;
+      border: 3px solid #F0F0F0;
+      label,
+      .description{
+        font-size: 0.8em;
+        font-weight: normal;
+        color: #666;
+      }
+      #edit-submit{
+        padding: 6px 12px;
+        background-color: #EDEDED;
+        color: #881728;
+        font-weight: bold;
+        text-shadow: 1px 1px 0px #ffffff;
+        border: 1px solid #dcdcdc;
+        @include rounded_corners(6px);
+        &:hover{
+          background-color: #dfdfdf;
+        }
+      }
+    }
+    .form-item,
+    .form-actions{
+      margin: 30px 0 0 0;
+    }
   }
 }
 
