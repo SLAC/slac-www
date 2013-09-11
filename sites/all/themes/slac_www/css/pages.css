@@ -1131,9 +1131,9 @@ span.ext {
     .page-general-site-indexaspx .site-name-link li a {
       color: #990000; }
     /* line 834, ../sass/pages.scss */
-    .page-general-site-indexaspx .site-name-link li a.externalLink {
-      padding-right: 15px;
-      background: url(../images/external-link-icon.png) no-repeat right center; }
+    .page-general-site-indexaspx .site-name-link li .ext {
+      margin-left: 5px;
+      background: url(../images/external-link-icon.png) no-repeat center center; }
     /* line 838, ../sass/pages.scss */
     .page-general-site-indexaspx .site-name-link li.last {
       margin-bottom: 0; }

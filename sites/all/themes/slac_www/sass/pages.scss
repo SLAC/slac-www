@@ -831,9 +831,9 @@ table{
       a{
         color: #990000;
       }
-      a.externalLink{
-        padding-right: 15px;
-        background: url(../images/external-link-icon.png) no-repeat right center;
+      .ext{
+        margin-left: 5px;
+        background: url(../images/external-link-icon.png) no-repeat center center;
       }
       &.last{
         margin-bottom: 0;
