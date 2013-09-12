@@ -13,6 +13,10 @@ function slac_forms_alter_form_alter(&$form, &$form_state, $form_id) {
       $form['actions']['submit']['#value'] = t('» send feedback');
     }
   }
+  // add pleceholder to search box
+  if($form_id == 'search_block_search_form'){
+    $form['keyword']['#attributes'] = array('placeholder' => t('search web or people'));
+  }
 }
 
 /**
