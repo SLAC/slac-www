@@ -865,25 +865,26 @@ table{
 
 /* feedback page */
 .node-type-webform{
-  .pane-pane-messages{
-    display: none;
+  &.page-node-1976{
+    .content{
+      .pane-title{
+        float: none;
+        padding: 18px 0 15px;
+        margin: 0;
+      }
+      .pane-content,
+      .pane-title{
+        width: 90%;
+        margin-left: 5%;
+      }
+      .field-name-body{
+        margin-bottom: 20px;
+        font-size: 0.8em;
+        color: #666;
+      }
+    }
   }
   .content{
-    .pane-title{
-      float: none;
-      padding: 18px 0 15px;
-      margin: 0;
-    }
-    .pane-content,
-    .pane-title{
-      width: 90%;
-      margin-left: 5%;
-    }
-    .field-name-body{
-      margin-bottom: 20px;
-      font-size: 0.8em;
-      color: #666;
-    }
     form{
       max-width: 650px;
       padding: 0 30px 30px;
