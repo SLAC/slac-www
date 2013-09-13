@@ -1609,3 +1609,16 @@ div table.gadget {
 div table.gadget iframe {
   width: 100% !important;
 }
+
+/* Lightbox */
+/* line 1095, ../sass/blocks.scss */
+#imageData #caption p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+/* line 1099, ../sass/blocks.scss */
+#imageData #caption em a {
+  display: block;
+  font-size: 16px;
+  padding-top: 6px;
+}

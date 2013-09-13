@@ -1089,3 +1089,16 @@ width: 100%;
     width: 100% !important;
   }
 }
+
+/* Lightbox */
+#imageData #caption {
+  p {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  em a{
+    display: block;
+    font-size: 16px;
+    padding-top: 6px;
+  }
+}
