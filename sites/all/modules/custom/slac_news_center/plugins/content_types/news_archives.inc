@@ -3,7 +3,6 @@
 /**
  * Display News Archive block with links.
  */
-
 /**
  * Plugins are described by creating a $plugin array which will be used
  * by the system that includes this file.
@@ -34,7 +33,9 @@ function news_archives_content_type_render($subtype, $conf, $panel_args, $contex
   }
   $load_menu = menu_load_links('menu-news-archives');
   foreach ($load_menu as $value) {
-    $items[$value['link_title']] = l(t($value['link_title']), $value['link_path']);
+    if (!$value['hidden']) {
+      $items[$value['link_title']] = l(t($value['link_title']), $value['link_path']);
+    }
   }
   ksort($items);
   $block->content = theme('item_list', array('items' => $items, 'attributes' => array('class' => 'news-archive-links')));
