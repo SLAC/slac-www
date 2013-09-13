@@ -712,13 +712,13 @@ div.pane-node-body{
       border: 2px solid #807f7f;
       background-color: #fff;
     }
-    &>img{
-      width: 96% !important;
-    }
     img{
       width: 100% !important;
       height: auto !important;
       display: block;
+    }
+    &>img{
+      width: 96% !important;
     }
   }
 }

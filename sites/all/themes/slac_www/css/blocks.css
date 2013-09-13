@@ -1194,14 +1194,14 @@ div.pane-node-body img {
   background-color: #fff;
 }
 /* line 715, ../sass/blocks.scss */
-.one-image .content-graphic-block > img {
-  width: 96% !important;
-}
-/* line 718, ../sass/blocks.scss */
 .one-image .content-graphic-block img {
   width: 100% !important;
   height: auto !important;
   display: block;
+}
+/* line 720, ../sass/blocks.scss */
+.one-image .content-graphic-block > img {
+  width: 96% !important;
 }
 
 /* line 726, ../sass/blocks.scss */
