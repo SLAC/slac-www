@@ -18,49 +18,60 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /*HTML5display-roleresetforolderbrowsers*/
 /* line 23, ../sass/normalize.scss */
 article, aside, details, figcaption, figure, footer,
 header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 /* line 25, ../sass/normalize.scss */
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 /* line 27, ../sass/normalize.scss */
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 /* line 29, ../sass/normalize.scss */
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 /* line 32, ../sass/normalize.scss */
 blockquote:before, blockquote:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 /* line 36, ../sass/normalize.scss */
 q:before, q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 /* line 39, ../sass/normalize.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 /* line 43, ../sass/normalize.scss */
 strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /* line 47, ../sass/normalize.scss */
 em {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /* line 50, ../sass/normalize.scss */
 a {
-  font-style: normal; }
+  font-style: normal;
+}
