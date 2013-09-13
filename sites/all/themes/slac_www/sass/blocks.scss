@@ -405,12 +405,24 @@ $linkcolor: #990000;
   overflow: hidden; 
 }
 .bg-list .field-item {
+  display: table;
+  width: 100%;
   min-height: 30px;
 }
+.bg-list .field-item a {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .social_links a img{
   width: 16px;
   height: 16px;
 }
+
 
 .bg-list {
   .field-item, 
