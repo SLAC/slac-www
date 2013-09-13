@@ -404,20 +404,6 @@ $linkcolor: #990000;
   width: 100%;
   overflow: hidden; 
 }
-.bg-list .field-item {
-  display: table;
-  width: 100%;
-  min-height: 30px;
-}
-.bg-list .field-item a {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 10px;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 .social_links a img{
   width: 16px;
   height: 16px;
@@ -439,6 +425,20 @@ $linkcolor: #990000;
     display: block;
     width: 90%;
     margin: 0 5%;
+  }
+}
+
+.bg-list .field-item {
+  display: table;
+  width: 100%;
+  min-height: 30px;
+}
+.bg-list .field-item a {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+  &:hover {
+    text-decoration: underline;
   }
 }
 

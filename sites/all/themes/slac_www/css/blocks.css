@@ -829,30 +829,12 @@
 }
 
 /* line 407, ../sass/blocks.scss */
-.bg-list .field-item {
-  display: table;
-  width: 100%;
-  min-height: 30px;
-}
-
-/* line 412, ../sass/blocks.scss */
-.bg-list .field-item a {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0 10px;
-}
-/* line 416, ../sass/blocks.scss */
-.bg-list .field-item a:hover {
-  text-decoration: underline;
-}
-
-/* line 421, ../sass/blocks.scss */
 .social_links a img {
   width: 16px;
   height: 16px;
 }
 
-/* line 430, ../sass/blocks.scss */
+/* line 416, ../sass/blocks.scss */
 .bg-list .field-item,
 .bg-list .social_links,
 .bg-list .social-icon-block {
@@ -862,7 +844,7 @@
   width: 100%;
   overflow: hidden;
 }
-/* line 437, ../sass/blocks.scss */
+/* line 423, ../sass/blocks.scss */
 .bg-list .field-item a {
   font-size: 12px;
   color: #881728;
@@ -871,6 +853,24 @@
   display: block;
   width: 90%;
   margin: 0 5%;
+}
+
+/* line 431, ../sass/blocks.scss */
+.bg-list .field-item {
+  display: table;
+  width: 100%;
+  min-height: 30px;
+}
+
+/* line 436, ../sass/blocks.scss */
+.bg-list .field-item a {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+/* line 440, ../sass/blocks.scss */
+.bg-list .field-item a:hover {
+  text-decoration: underline;
 }
 
 /* line 447, ../sass/blocks.scss */
