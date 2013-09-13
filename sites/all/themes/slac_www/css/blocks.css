@@ -1592,3 +1592,11 @@ div.pane-node-body img {
     clear: both;
   }
 }
+/* Forms. */
+@media (max-width: 800px) {
+  /* line 1080, ../sass/blocks.scss */
+  .form-text,
+  .form-select {
+    max-width: 100%;
+  }
+}

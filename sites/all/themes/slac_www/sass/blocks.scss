@@ -1073,3 +1073,11 @@ div.pane-node-body{
     clear: both;
   }
 }
+
+/* Forms. */
+@media (max-width: 800px) {
+  .form-text,
+  .form-select {
+    max-width: 100%;
+  }
+}
