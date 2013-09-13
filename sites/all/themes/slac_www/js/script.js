@@ -41,7 +41,9 @@
 
     	$('.section-research-resources .view-content .view-grouping-content').append('<span class="collapse">Collapse<img src="/sites/all/themes/slac/images/collapse.png" alt="" /></span>');	
 			$(window).resize(function() {
-				if (Modernizr.mq('(max-width: 600px)')) {		
+        var smallflag = false;
+        if (Modernizr.mq('(max-width: 600px)')) {
+          smallflag = true;
 		    	$('.section-research-resources .view-content .view-grouping-header').click(function(){
 					  var $this = $(this);
 		        if (!$this.index() && !$this.hasClass('processed')) {
@@ -56,6 +58,11 @@
 		    	$(this).closest('.view-grouping-content').hide().siblings().removeClass('expanded');
 		    	});
 	 			}
+        $('.video-block .field-item .youtube-video-popup a').click(function() {
+          if (smallflag) {
+            window.location = $(this).attr('href');
+          }            
+        });
 			});
 	  }
 	}
@@ -174,6 +181,17 @@
   Drupal.behaviors.placeholderIE = {
     attach: function (context, settings) {
       $("[placeholder]").textPlaceholder();
+    }
+  }
+
+  Drupal.behaviors.videoBlockonMobile = {
+    attach: function (context, settings) {
+      var smallflag = Modernizr.mq('(max-width: 600px)');
+      $('.video-block .field-item .youtube-video-popup a').click(function() {
+        if (smallflag) {
+          window.location = $(this).attr('href');
+        }            
+      });
     }
   }
 
