@@ -168,7 +168,7 @@
     padding: 5px 0;
     border-bottom: 2px solid #ccc;
     background-color: #fff !important;
-    color: #881728;
+    color: $linkcolor;
     float: none !important;
   }
   .views-field-field-image {
@@ -202,7 +202,7 @@
       text-transform: none;
       font-size: 14px;
       padding-left: 8px;
-      color: #881728;
+      color: $linkcolor;
       text-transform: uppercase;
     }
   }
@@ -402,6 +402,9 @@
   width: 100%;
   overflow: hidden; 
 }
+.bg-list .field-item {
+  min-height: 30px;
+}
 .social_links a img{
   width: 16px;
   height: 16px;
@@ -576,7 +579,7 @@ div.pane-node-body{
     font-size: 14px;
     padding: 6px 0 2px 7px;
     letter-spacing: 1px;
-    color: #7F6332;
+    color: $goldtitle;
   }
   .content-block-body{
     margin-top: 20px;
@@ -626,7 +629,7 @@ div.pane-node-body{
 }
 .shaded-background.about-organization{
   li,a{
-    color: #881728;
+    color: $linkcolor;
   }
   a:hover{
     border-bottom: 1px dotted #996633;
@@ -946,7 +949,7 @@ div.pane-node-body{
   .pane-back-links{
     padding: 10px 0 20px;
     font-size: 0.7em;
-    color: #881728;
+    color: $linkcolor;
     a{
       padding-left: 2px;
       font-weight: bold;
