@@ -75,11 +75,6 @@
     @include zen-grid-item(22, 2);
   }
 
-  .page-general-site-indexaspx .pane-page-content > .pane-title,
-  .page-general-site-indexaspx .pane-page-content .pane-page-content > .pane-content{
-    @include zen-grid-item(24, 1);
-  }
-
   .general-two-col .pane-page-content > .pane-title,
   .general-two-col .general-left{
     @include zen-grid-item(18, 1);
