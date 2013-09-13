@@ -228,11 +228,9 @@ input:focus{
     display: block;
     height: 31px;
     line-height: 31px;
-    &.active {
-      height: 29px;
-      border-bottom: 2px #881728 solid;
-    }
   }
+  .depth-1.active-trail > a,
+  .depth-1 > a.active,
   .depth-1:hover > a {
     height: 29px;
     border-bottom: 2px #881728 solid;
