@@ -214,9 +214,8 @@ input:focus{
       background: transparent;
     }
     ul {
-      padding-top: 2px;
-      top: 32px;
-      padding: 3px 0 0;
+      top: 31px;
+      padding: 0 0;
       width: 100%;
     }
   }
@@ -229,6 +228,14 @@ input:focus{
     display: block;
     height: 31px;
     line-height: 31px;
+    .active {
+      height: 29px;
+      border-bottom: 2px #881728 solid;
+    }
+  }
+  .depth-1:hover > a {
+    height: 29px;
+    border-bottom: 2px #881728 solid;
   }
   ul li.depth-1 {
     &:hover, &.active-trail {
