@@ -1413,7 +1413,10 @@ a.imageLessButton {
     color: #fff;
     display: block;
   }
-
+  .page-node-3346 .section-navigation-block,
+  .page-node-1231 .section-navigation-block {
+    display: none;
+  }
   .front .middletop .pane-title{
     background-image: url('../images/headliner-arrow.png');
     background-position: right center; 
