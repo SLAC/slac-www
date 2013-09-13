@@ -58,7 +58,7 @@
 		    	$(this).closest('.view-grouping-content').hide().siblings().removeClass('expanded');
 		    	});
 	 			}
-        $('.video-block .field-item .youtube-video-popup a').click(function() {
+        $('.video-block .field-item .youtube-video-popup a, div.pane-node-body a.lightbox-processed').click(function() {
           if (smallflag) {
             window.location = $(this).attr('href');
           }            
@@ -184,10 +184,10 @@
     }
   }
 
-  Drupal.behaviors.videoBlockonMobile = {
+  Drupal.behaviors.popupBlockonMobile = {
     attach: function (context, settings) {
       var smallflag = Modernizr.mq('(max-width: 600px)');
-      $('.video-block .field-item .youtube-video-popup a').click(function() {
+      $('.video-block .field-item .youtube-video-popup a, div.pane-node-body a.lightbox-processed').click(function() {
         if (smallflag) {
           window.location = $(this).attr('href');
         }            
