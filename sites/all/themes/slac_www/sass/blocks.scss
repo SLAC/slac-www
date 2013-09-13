@@ -1,5 +1,7 @@
 @import "mixins";
 
+$goldtitle: #996633;
+$linkcolor: #990000;
 
 /* Slider */
 .front-slider {
@@ -168,7 +170,7 @@
     padding: 5px 0;
     border-bottom: 2px solid #ccc;
     background-color: #fff !important;
-    color: #881728;
+    color: $linkcolor;
     float: none !important;
   }
   .views-field-field-image {
@@ -202,7 +204,7 @@
       text-transform: none;
       font-size: 14px;
       padding-left: 8px;
-      color: #881728;
+      color: $linkcolor;
       text-transform: uppercase;
     }
   }
@@ -407,6 +409,7 @@
   height: 16px;
 }
 
+
 .bg-list {
   .field-item, 
   .social_links,
@@ -422,6 +425,20 @@
     display: block;
     width: 90%;
     margin: 0 5%;
+  }
+}
+
+.bg-list .field-item {
+  display: table;
+  width: 100%;
+  min-height: 30px;
+}
+.bg-list .field-item a {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -529,11 +546,7 @@ div.pane-node-body{
     list-style-position: inside;
     padding: 2px 0;
     line-height: 18px;
-    li a{
-      color: #79182A;
-    }
     a{
-      color: #696969;
       font-size: 13px;
     }
   }
@@ -576,7 +589,7 @@ div.pane-node-body{
     font-size: 14px;
     padding: 6px 0 2px 7px;
     letter-spacing: 1px;
-    color: #7F6332;
+    color: $goldtitle;
   }
   .content-block-body{
     margin-top: 20px;
@@ -626,7 +639,7 @@ div.pane-node-body{
 }
 .shaded-background.about-organization{
   li,a{
-    color: #881728;
+    color: $linkcolor;
   }
   a:hover{
     border-bottom: 1px dotted #996633;
@@ -699,8 +712,8 @@ div.pane-node-body{
       background-color: #fff;
     }
     img{
-      width: 100%;
-      height: auto;
+      width: 100% !important;
+      height: auto !important;
       display: block;
     }
   }
@@ -946,7 +959,7 @@ div.pane-node-body{
   .pane-back-links{
     padding: 10px 0 20px;
     font-size: 0.7em;
-    color: #881728;
+    color: $linkcolor;
     a{
       padding-left: 2px;
       font-weight: bold;
@@ -1058,5 +1071,34 @@ div.pane-node-body{
   #orgwrapper div{
     width: 100%;
     clear: both;
+  }
+}
+
+/* Forms. */
+@media (max-width: 800px) {
+  .form-text,
+  .form-select {
+    max-width: 100%;
+  }
+}
+
+/* table gadget. */
+div table.gadget {
+width: 100%;
+  iframe {
+    width: 100% !important;
+  }
+}
+
+/* Lightbox */
+#imageData #caption {
+  p {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  em a{
+    display: block;
+    font-size: 16px;
+    padding-top: 6px;
   }
 }

@@ -433,6 +433,20 @@ a.lightbox-processed{
     }
   }
 }
+@media (max-width: 600px){ 
+  .section-visiting-slac table .header {
+    background-image: none;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      line-height: 9px;
+      background: url('../images/bg.gif') no-repeat center center;
+      margin-left: 4px;
+    }
+  }
+}
 
 span.ext {
   padding: 0;
@@ -1413,7 +1427,10 @@ a.imageLessButton {
     color: #fff;
     display: block;
   }
-
+  .page-node-3346 .section-navigation-block,
+  .page-node-1231 .section-navigation-block {
+    display: none;
+  }
   .front .middletop .pane-title{
     background-image: url('../images/headliner-arrow.png');
     background-position: right center; 
