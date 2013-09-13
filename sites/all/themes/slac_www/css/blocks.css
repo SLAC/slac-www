@@ -1641,3 +1641,8 @@ div table.gadget iframe {
   font-size: 16px;
   padding-top: 6px;
 }
+
+/* line 1110, ../sass/blocks.scss */
+.move-title-left .pane-title {
+  margin-left: 0 !important;
+}

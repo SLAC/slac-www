@@ -184,6 +184,16 @@
     }
   }
 
+  Drupal.behaviors.columnsChecker = {
+    attach: function (context, settings) {
+      if ($('.no-left-column').length) {
+        $('.pane-page-content').addClass('move-title-left');
+      }
+    }
+  }
+
+  
+
   Drupal.behaviors.popupBlockonMobile = {
     attach: function (context, settings) {
       var smallflag = Modernizr.mq('(max-width: 600px)');
