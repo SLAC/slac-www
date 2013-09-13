@@ -584,7 +584,7 @@
 }
 /* Pager items. */
 /* line 191, ../sass/blocks.scss */
-.item-list ul li {
+.item-list .pager li {
   margin: 0 0 0.25em 0;
 }
 
