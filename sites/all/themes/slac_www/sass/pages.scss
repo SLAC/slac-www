@@ -433,6 +433,11 @@ a.lightbox-processed{
     }
   }
 }
+@media (max-width: 600px){ 
+  .section-visiting-slac table .header {
+    background-image: none;
+  }
+}
 
 span.ext {
   padding: 0;
