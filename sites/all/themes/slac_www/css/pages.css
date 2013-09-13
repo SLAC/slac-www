@@ -2341,3 +2341,34 @@ a.imageLessButton {
 .page-node-1242 .pane-page-content > .pane-title {
   margin-bottom: 10px;
 }
+
+/* line 1755, ../sass/pages.scss */
+.page-node-1233 .content-block .content-block-body > h3 {
+  display: list-item;
+  color: #696969;
+  margin-left: 40px;
+  margin-bottom: 6px;
+}
+/* line 1760, ../sass/pages.scss */
+.page-node-1233 .content-block .content-block-body > h3 + ul {
+  margin-left: 25px;
+}
+
+/* line 1765, ../sass/pages.scss */
+.field-name-body .field-item > h5,
+.newsarticlebodyimagetext {
+  font-size: 13px;
+  color: #474748;
+  margin-bottom: 10px;
+}
+
+/* line 1770, ../sass/pages.scss */
+.field-name-body .field-item > h5 {
+  font-weight: bold;
+}
+
+/* line 1773, ../sass/pages.scss */
+.newsarticlebodyimagetext {
+  margin-top: 10px;
+  line-height: 18px;
+}
