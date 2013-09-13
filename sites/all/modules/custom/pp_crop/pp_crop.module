@@ -426,3 +426,55 @@ function pp_crop_ajax_manage_thumbnails($settings, $fid) {
   ajax_footer();
   exit();
 }
+
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function pp_crop_field_formatter_info() {
+  $formatters = array();
+  if (module_exists('image')) {
+    $formatters['pp_crop_lightbox2'] = array(
+      'label' => 'PP Crop Lightbox2',
+      'field types' => array('image'),
+      'settings' => array(
+        'image_style' => 'original',
+      ),
+    );
+  }
+  return $formatters;
+}
+
+
+/**
+ * Implements hook_field_formatter_settings().
+ */
+function pp_crop_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $form = array();
+  $form['image_style'] = array(
+    '#title' => t('Image style'),
+    '#description' => t('The thumbnail to display as a link for the lightbox.'),
+    '#type' => 'select',
+    '#options' => lightbox2_image_styles(),
+    '#default_value' => $settings['image_style'],
+  );
+  return $form;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function pp_crop_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $settings = $display['settings'];
+  foreach ($items as $delta => $item) {
+    $element[$delta] = array(
+      '#theme' => 'image_style_lightbox',
+      '#style_name' => $settings['image_style'],
+      '#file' => (object) $item,
+    );
+  }
+  return $element;
+}
