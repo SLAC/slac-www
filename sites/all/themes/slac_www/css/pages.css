@@ -624,7 +624,7 @@ input:focus {
   line-height: 31px;
 }
 /* line 231, ../sass/pages.scss */
-.main-menu .depth-1 > a .active {
+.main-menu .depth-1 > a.active {
   height: 29px;
   border-bottom: 2px #881728 solid;
 }

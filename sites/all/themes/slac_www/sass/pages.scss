@@ -228,7 +228,7 @@ input:focus{
     display: block;
     height: 31px;
     line-height: 31px;
-    .active {
+    &.active {
       height: 29px;
       border-bottom: 2px #881728 solid;
     }
