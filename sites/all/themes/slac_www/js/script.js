@@ -173,7 +173,7 @@
 
   Drupal.behaviors.placeholderIE = {
     attach: function (context, settings) {
-      $("[placeholder]").textPlaceholder();
+      $("#search-box .form-text").textPlaceholder();
     }
   }
 
