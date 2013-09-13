@@ -64,7 +64,7 @@
   .three-col .three-col-middle-right{
     @include zen-grid-item(20, 5);
   }
-  .three-col.no-left-column .three-col-middle-right{
+  .no-left-column .three-col-middle-right{
     @include zen-grid-item(24, 1);
   }
 
