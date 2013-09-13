@@ -1081,3 +1081,11 @@ div.pane-node-body{
     max-width: 100%;
   }
 }
+
+/* table gadget. */
+div table.gadget {
+width: 100%;
+  iframe {
+    width: 100% !important;
+  }
+}

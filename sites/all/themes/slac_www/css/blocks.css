@@ -1600,3 +1600,12 @@ div.pane-node-body img {
     max-width: 100%;
   }
 }
+/* table gadget. */
+/* line 1086, ../sass/blocks.scss */
+div table.gadget {
+  width: 100%;
+}
+/* line 1088, ../sass/blocks.scss */
+div table.gadget iframe {
+  width: 100% !important;
+}
