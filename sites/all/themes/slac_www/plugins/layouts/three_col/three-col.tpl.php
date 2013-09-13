@@ -15,7 +15,13 @@
  */
 ?>
 <div class="panel-display three-col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="three-col-middle-right">
+  <?php 
+    $column_class = '';
+    if (!$content['left']): 
+      $column_class = ' no-left-column';
+    endif; 
+  ?>
+  <div class="three-col-middle-right <?php print $column_class ?>">
     <div class="panel-panel three-col-middle">
        <?php if ($content['middle']): ?>
           <div class="inside"><?php print $content['middle']; ?></div>
