@@ -705,11 +705,15 @@ div.pane-node-body{
   .content-graphic-block{
     float: right;
     width: 25%;
-    a{
+    a,
+    &>img{
       display: block;
       padding: 2px;
       border: 2px solid #807f7f;
       background-color: #fff;
+    }
+    &>img{
+      width: 96% !important;
     }
     img{
       width: 100% !important;
