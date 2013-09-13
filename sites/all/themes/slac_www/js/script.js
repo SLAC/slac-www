@@ -171,4 +171,13 @@
     }
   }
 
+  Drupal.behaviors.placeholderIE = {
+    attach: function (context, settings) {
+      $("[placeholder]").textPlaceholder();
+    }
+  }
+
 })(jQuery, Drupal, this, this.document);
+
+
+
