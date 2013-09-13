@@ -30,8 +30,13 @@ function press_archives_center_content_type_render($subtype, $conf, $panel_args,
   for ($year = $current_year; $year >= 2011; $year--) {
     $link_title = $year . t(' Archive');
     $link = 'news/press-release-archive-' . $year;
-    $items[] = l($link_title, $link);
+    $items[$link_title] = l(t($link_title), $link);
   }
+  $load_menu = menu_load_links('menu-news-releases-archives');
+  foreach ($load_menu as $value) {
+    $items[$value['link_title']] = l(t($value['link_title']), $value['link_path']);
+  }
+  ksort($items);
   $block->content = theme('item_list', array('items' => $items, 'attributes' => array('class' => 'news-archive-links')));
 
   return $block;
