@@ -114,6 +114,7 @@
     background: #b8b9bb;
     border: 1px solid #666666;
     margin: 1px 7px 0;
+    cursor: pointer;
     &.active {
       background: white;
     }
@@ -184,6 +185,11 @@
     display: none;
   }
 }
+}
+
+/* Pager items. */
+.item-list ul li {
+  margin: 0 0 0.25em 0;
 }
 
 
