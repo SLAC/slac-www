@@ -712,8 +712,8 @@ div.pane-node-body{
       background-color: #fff;
     }
     img{
-      width: 100%;
-      height: auto;
+      width: 100% !important;
+      height: auto !important;
       display: block;
     }
   }
