@@ -907,7 +907,6 @@ div.pane-node-body{
 } 
 
 
-
 .section-news .view-news-center{
   .views-field-created{
     font-size: 12px;
@@ -920,6 +919,15 @@ div.pane-node-body{
   .views-field-title{
     line-height: 20px;
     margin: 4px 0 18px;
+  }
+}
+
+.section-news .news-list{
+  .views-field-created{
+    margin: 0px 0 9px;
+  }
+  .views-field-title{
+    margin: 4px 0 0px;
   }
 }
 
