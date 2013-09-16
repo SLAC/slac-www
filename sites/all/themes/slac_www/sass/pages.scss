@@ -461,13 +461,39 @@ span.ext {
   padding: 0 0 0 12px;
 }
 
+
+
+
+
+.staff-resources-page-content .igp-link {
+  float: right;
+  margin: -33px 0 0 0;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.staff-resources-page-content .igp-link a{
+  font-size: 11px;
+}
+
+.staff-resources-page-content .igp-link a:hover{
+  border-bottom: 1px #881728 dotted;
+}
 /* staff resources page */
 .staff-resources-page-content{
   padding-right: 20px;
   border-right: 1px solid #EFEFEF;
   .igp-link{
-    float:right;
+    float: right;
     margin: -33px 0 0 0;
+    font-size: 12px;
+    font-style: italic;
+    a{
+      font-size: 11px;
+      &:hover{
+        border-bottom: 1px #881728 dotted;
+      }
+    }
   }
   .introduction-block{
     margin-bottom: 30px;
