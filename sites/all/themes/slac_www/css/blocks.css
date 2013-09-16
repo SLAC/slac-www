@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, c:/program files (x86)/scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 56, c:/program files (x86)/scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -1402,8 +1402,12 @@ div table.gadget {
 #imageData #caption em a {
   display: block;
   font-size: 16px;
-  padding-top: 6px; }
+  padding-top: 6px;
+  float: left;
+  position: absolute;
+  bottom: 22px;
+  z-index: 99; }
 
-/* line 1110, ../sass/blocks.scss */
+/* line 1114, ../sass/blocks.scss */
 .move-title-left .pane-title {
   margin-left: 0 !important; }
