@@ -1,25 +1,6 @@
 <?php
 
 /**
- * Implements hook_js_alter().
- */
-function slac_admin_js_alter(&$javascript) {
-  $file = drupal_get_path('module', 'slac_admin') . '/js/slac_admin.js';
-  $javascript[$file] = drupal_js_defaults($file);
-
-  $load_width = breakpoints_breakpoint_load_by_fullkey('custom.user.width_disable_lightbox');
-  $load_height = breakpoints_breakpoint_load_by_fullkey('custom.user.height_disable_lightbox');
-
-  if ($load_width && $load_height) {
-    drupal_add_js(array('slac_admin' => array(
-        'width' => $load_width->breakpoint,
-        'height' => $load_height->breakpoint)),
-        array('type' => 'setting')
-    );
-  }
-}
-
-/**
  * Implements hook_contextual_links_view_alter().
  *
  * Add "Edit slideshow content" for frontpage slideshow contextual links.

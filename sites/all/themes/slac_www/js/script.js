@@ -41,29 +41,22 @@
 
     	$('.section-research-resources .view-content .view-grouping-content').append('<span class="collapse">Collapse<img src="/sites/all/themes/slac/images/collapse.png" alt="" /></span>');	
 			$(window).resize(function() {
-        var smallflag = false;
-        if (Modernizr.mq('(max-width: 600px)')) {
-          smallflag = true;
-		    	$('.section-research-resources .view-content .view-grouping-header').click(function(){
-					  var $this = $(this);
-		        if (!$this.index() && !$this.hasClass('processed')) {
-		          $this.addClass('processed').toggleClass('expanded').siblings('.view-grouping-content').toggle(1, function() {
-		            $this.removeClass('processed');
-		          });
-		          $this.parent().siblings('.view-grouping').find('.view-grouping-content').hide()
-		          	   .stop().siblings().removeClass('expanded');
-		        }
-					});
-		    	$('.section-research-resources .view-content .collapse').click(function(){
-		    	$(this).closest('.view-grouping-content').hide().siblings().removeClass('expanded');
-		    	});
-	 			}
-        $('.video-block .field-item .youtube-video-popup a, div.pane-node-body a.lightbox-processed').click(function() {
-          if (smallflag) {
-            window.location = $(this).attr('href');
-          }            
+                if (Modernizr.mq('(max-width: 600px)')) {
+                    $('.section-research-resources .view-content .view-grouping-header').click(function () {
+                        var $this = $(this);
+                        if (!$this.index() && !$this.hasClass('processed')) {
+                            $this.addClass('processed').toggleClass('expanded').siblings('.view-grouping-content').toggle(1, function () {
+                                $this.removeClass('processed');
+                            });
+                            $this.parent().siblings('.view-grouping').find('.view-grouping-content').hide()
+                                .stop().siblings().removeClass('expanded');
+                        }
+                    });
+                    $('.section-research-resources .view-content .collapse').click(function () {
+                        $(this).closest('.view-grouping-content').hide().siblings().removeClass('expanded');
+                    });
+                }
         });
-			});
 	  }
 	}
 
