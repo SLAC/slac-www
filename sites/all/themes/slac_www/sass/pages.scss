@@ -91,7 +91,6 @@ input:focus{
   #imageData{
     position: relative;
   }
-    
   .lightbox-download-link{
     position: absolute;
     bottom: 20px;
@@ -100,6 +99,7 @@ input:focus{
     height: 16px; 
     float:left;
     padding-left: 20px;
+    z-index: 99;
   }
 }
 
