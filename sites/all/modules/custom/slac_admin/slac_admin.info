@@ -4,3 +4,5 @@ package = SLAC
 core = 7.x
 
 configure = admin/config/slac
+
+files[] = slac_admin_lightbox2_handler_field_lightbox2.inc

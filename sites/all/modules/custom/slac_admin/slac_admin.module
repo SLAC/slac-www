@@ -28,3 +28,13 @@ function slac_admin_contextual_links_view_alter(&$element, $items) {
 function _slac_admin_is_contextual_link_a_view($element, $view_id) {
   return isset($element['#links']['views-ui-edit']['href']) && $element['#links']['views-ui-edit']['href'] == 'admin/structure/views/view/' . $view_id . '/edit';
 }
+
+/**
+ * Implementation of hook_views_api().
+ */
+function slac_admin_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'slac_admin'),
+  );
+}
