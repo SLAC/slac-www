@@ -1219,6 +1219,13 @@ a.imageLessButton {
   }
 }
 
+
+@media (min-width: 601px) & (max-width: 649px){
+  .video-block .pane-title{
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 900px) {
 
   .frontpage-middle-col,
@@ -1239,6 +1246,10 @@ a.imageLessButton {
       &:first-child {
         margin-left: 0;
       }
+      &:nth-child(3n+1){
+        clear:both;
+        margin-left: 0;
+      }
     }
     .connect {
       width: 40%;
@@ -1248,7 +1259,6 @@ a.imageLessButton {
   .three-col .three-col-right .panel-pane{
     float: left;
     width: 100%;
-    margin-left: 5%;
     clear: none;
   }
 
