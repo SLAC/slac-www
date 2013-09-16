@@ -86,6 +86,23 @@ input:focus{
   }
 }
 
+
+#lightbox{
+  #imageData{
+    position: relative;
+  }
+    
+  .lightbox-download-link{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;  
+    background: url('../images/download-icon.png') no-repeat 0 center;
+    height: 16px; 
+    float:left;
+    padding-left: 20px;
+  }
+}
+
 .page-basic {
   background: transparent;
   overflow: hidden;
