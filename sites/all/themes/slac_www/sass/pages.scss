@@ -158,10 +158,10 @@ input:focus{
 
 .pane-menu-menu-footer-menu {
   width: 100%;
-  overflow: hidden;
   border-bottom: 1px solid #aeaeae;
   padding-bottom: 6px;
   .menu {
+  overflow: hidden;
     li {
       float: left;
       width: 21%;

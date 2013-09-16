@@ -505,30 +505,32 @@ input:focus {
 /* line 159, ../sass/pages.scss */
 .pane-menu-menu-footer-menu {
   width: 100%;
-  overflow: hidden;
   border-bottom: 1px solid #aeaeae;
   padding-bottom: 6px; }
-  /* line 165, ../sass/pages.scss */
-  .pane-menu-menu-footer-menu .menu li {
-    float: left;
-    width: 21%;
-    margin: 0;
-    text-align: center; }
-    /* line 170, ../sass/pages.scss */
-    .pane-menu-menu-footer-menu .menu li.first {
-      width: 15%;
-      text-align: left; }
-    /* line 174, ../sass/pages.scss */
-    .pane-menu-menu-footer-menu .menu li.last {
-      text-align: right;
-      width: 22%; }
-  /* line 179, ../sass/pages.scss */
-  .pane-menu-menu-footer-menu .menu a {
-    color: #fff;
-    text-decoration: none;
-    padding-left: 9px;
-    background: url("../images/footer-menu-arrow.png") no-repeat left center;
-    font-size: 9px; }
+  /* line 163, ../sass/pages.scss */
+  .pane-menu-menu-footer-menu .menu {
+    overflow: hidden; }
+    /* line 165, ../sass/pages.scss */
+    .pane-menu-menu-footer-menu .menu li {
+      float: left;
+      width: 21%;
+      margin: 0;
+      text-align: center; }
+      /* line 170, ../sass/pages.scss */
+      .pane-menu-menu-footer-menu .menu li.first {
+        width: 15%;
+        text-align: left; }
+      /* line 174, ../sass/pages.scss */
+      .pane-menu-menu-footer-menu .menu li.last {
+        text-align: right;
+        width: 22%; }
+    /* line 179, ../sass/pages.scss */
+    .pane-menu-menu-footer-menu .menu a {
+      color: #fff;
+      text-decoration: none;
+      padding-left: 9px;
+      background: url("../images/footer-menu-arrow.png") no-repeat left center;
+      font-size: 9px; }
 
 /* Main menu */
 /* line 191, ../sass/pages.scss */
