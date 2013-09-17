@@ -42,6 +42,15 @@ input:focus{
 .contextual-links li{
   width: 100% !important;
 }
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #666 !important;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #666 !important;
+}
+
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
@@ -1069,15 +1078,6 @@ a.imageLessButton {
       margin: 0 15px 45px 0;
     }
   }
-}
-
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #666 !important;
-  line-height: 10px;
-}
-input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #666 !important;
-  line-height: 10px;
 }
 
 /**/
