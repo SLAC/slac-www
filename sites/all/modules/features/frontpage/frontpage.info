@@ -8,7 +8,6 @@ project = frontpage
 dependencies[] = ctools
 dependencies[] = image
 dependencies[] = page_manager
-dependencies[] = slac_frontpage_slideshow
 dependencies[] = views
 dependencies[] = views_content
 dependencies[] = views_slideshow
