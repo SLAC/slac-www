@@ -202,19 +202,16 @@ $linkcolor: #990000;
 
 
 
-  .slider{
-    .html &{
-      margin: 0 1.5% 20px;
-      border-bottom: 2px solid #e1e0e0;
-      overflow: hidden;
-      width: 97% !important;
-      max-width: 100%;
-      padding: 1.5% !important;
-      height: 97%;
-      margin: 0 1.5% 15px 1.5%;
-      background-color: #fff; 
-    }
-
+  .html .slider{
+    margin: 0 1.5% 20px;
+    border-bottom: 2px solid #e1e0e0;
+    overflow: hidden;
+    width: 97% !important;
+    max-width: 100%;
+    padding: 1.5% !important;
+    height: 97%;
+    margin: 0 1.5% 15px 1.5%;
+    background-color: #fff; 
     div{
     height: 100% !important;
     }
@@ -256,14 +253,6 @@ $linkcolor: #990000;
     .field-slideshow-description{
       display:none;
     }
-
-    .field-slideshow-description a{
-      color: #fff;
-      padding: 20px 3%;
-      line-height: 23px;
-      letter-spacing: .03em;
-      font-size: 17px;
-    }
     .field-slideshow-caption a{
       font-size: 30px;
       color: #fff;
@@ -272,6 +261,14 @@ $linkcolor: #990000;
       padding-bottom: 20px;
       display: block;
       letter-spacing: .04em;
+    }
+
+    .field-slideshow-description{
+      color: #fff;
+      padding: 20px 3%;
+      line-height: 23px;
+      letter-spacing: .03em;
+      font-size: 17px;
     }
   }
 
