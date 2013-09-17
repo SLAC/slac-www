@@ -33,7 +33,7 @@ function slac_active_menu_form_page_node_form_alter(&$form, &$form_state) {
     '#type' => 'select',
     '#options' => $options,
     '#empty_option' => t('None'),
-    '#default_value' => isset($default_values[$form_state['node']->nid]) ?: '',
+    '#default_value' => isset($default_values[$form_state['node']->nid]) ? $default_values[$form_state['node']->nid] : '',
   );
 
   $form['actions']['submit']['#submit'][] = 'slac_active_menu_node_submit';
@@ -44,6 +44,9 @@ function slac_active_menu_form_page_node_form_alter(&$form, &$form_state) {
  */
 function slac_active_menu_node_submit($form, $form_state) {
   $active_menu_values = variable_get('slac_active_menu_values', array());
+  if (!isset($form_state['node'])) {
+    return;
+  }
   $nid = $form_state['node']->nid;
   if (!empty($form_state['values']['slac_active_menu']['menu_item'])) {
     $active_menu_values[$nid] = $form_state['values']['slac_active_menu']['menu_item'];
