@@ -4,8 +4,8 @@
  * Implements hook_init().
  */
 function slac_int_ext_links_init() {
-  $internal_links = drupal_strtolower(variable_get('slac_internal_links'));
-  $external_links = drupal_strtolower(variable_get('slac_external_links'));
+  $internal_links = variable_get('slac_internal_links');
+  $external_links = variable_get('slac_external_links');
   drupal_add_js(array('slac_int_ext_links' => array('internal_links' => $internal_links)), 'setting');
   drupal_add_js(array('slac_int_ext_links' => array('external_links' => $external_links)), 'setting');
   drupal_add_js(drupal_get_path('module', 'slac_int_ext_links') . '/js/slac_int_ext_links.js');
