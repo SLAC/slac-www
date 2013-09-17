@@ -42,6 +42,7 @@ input:focus{
 .contextual-links li{
   width: 100% !important;
 }
+
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
@@ -83,6 +84,40 @@ input:focus{
     &:hover{
       background: #f0efef;
     }
+  }
+}
+
+#lightbox{
+  #imageData{
+    position: relative;
+    #numberDisplay{
+      text-align:center;
+      padding: 10px 0 0 0;
+      margin-bottom: -5px;
+    }
+  }
+  .lightbox-download-link{
+    position: absolute;
+    bottom: 23px;
+    left: 20px;  
+    background: url('../images/download-icon.png') no-repeat 0 center;
+    height: 16px; 
+    float:left;
+    padding-left: 20px;
+    z-index: 99;
+  }
+  #nextLink:hover, 
+  #nextLink:visited:hover, 
+  #nextLink.force_show_nav, 
+  #frameNextLink{
+    background-position:right 50%;
+  }
+
+  #prevLink:hover, 
+  #prevLink:visited:hover, 
+  #prevLink.force_show_nav, 
+  #framePrevLink{
+    background-position:left 50%;
   }
 }
 
@@ -1085,7 +1120,7 @@ a.imageLessButton {
   .form-text{
     width: 130px;
     font-size: .7em;
-    color: #CCC;
+    color: #666;
   }
   .form-submit{
     position: absolute;
@@ -1095,6 +1130,15 @@ a.imageLessButton {
     text-indent: -100px;
     cursor:pointer;
   }
+  input::-webkit-input-placeholder{
+    color: #666 !important;
+    line-height: 24px;
+  }
+  input:-moz-placeholder{
+    color: #666 !important;
+    line-height: 24px;
+  }
+
 }
 .slac-search-wrapper{
   position: relative;
@@ -1202,6 +1246,13 @@ a.imageLessButton {
   }
 }
 
+
+@media (min-width: 601px) and (max-width: 649px){
+  .video-block .pane-title{
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 900px) {
 
   .frontpage-middle-col,
@@ -1222,6 +1273,10 @@ a.imageLessButton {
       &:first-child {
         margin-left: 0;
       }
+      &:nth-child(3n+1){
+        clear:both;
+        margin-left: 0;
+      }
     }
     .connect {
       width: 40%;
@@ -1231,7 +1286,6 @@ a.imageLessButton {
   .three-col .three-col-right .panel-pane{
     float: left;
     width: 100%;
-    margin-left: 5%;
     clear: none;
   }
 
