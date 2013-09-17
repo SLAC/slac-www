@@ -4,7 +4,7 @@ $goldtitle: #996633;
 $linkcolor: #990000;
 
 /* Slider */
-.front-slider {
+/*.front-slider {
   width: 100%;
   height: auto;
   padding-bottom: 15px;
@@ -121,30 +121,30 @@ $linkcolor: #990000;
       background: white;
     }
   }
-}
+}*/
 
 @media (max-width: 1023px){
-.front-slider{
+/*.front-slider{
   .views-slideshow-controls-bottom{
     display: none;
   }
-}
+}*/
 }
 
 @media (max-width: 768px){
-.front-slider{
+/*.front-slider{
   .views-slideshow-controls-top,
   .views-slideshow-controls-bottom{
     display: none;
   }
-}
+}*/
 }
 
 @media (max-width: 600px){
 .slider{
   margin: 1.5%;
 }
-.front-slider{
+/*.front-slider{
   width: 97%;
   padding: 1.5%;
   height: 97%;
@@ -186,7 +186,7 @@ $linkcolor: #990000;
   .views-slideshow-controls-bottom{
     display: none;
   }
-}
+}*/
 }
 
 /* Pager items. */

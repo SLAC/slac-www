@@ -20,7 +20,6 @@ jQuery.fn.textPlaceholder = function () {
 		input.focus(function(){
 			if (input.hasClass('text-placeholder')) {
 				this.value = '';
-				this.placeholder = '';
 				input.removeClass('text-placeholder')
 			}
 		});
