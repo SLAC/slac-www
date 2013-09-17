@@ -137,18 +137,18 @@
   Drupal.behaviors.sliderResize = {
     attach: function (context, settings) {
       // fix slider width/height on screen resize
-      var slider = $('.views-slideshow-cycle-main-frame'),
+      var slider = $('.slider'),
           resizer = function( event ){
-            var h = slider.find('.views_slideshow_slide:visible img').height();
+            var h = slider.find('.field-slideshow-image-caption:visible img').height();
             if( $(window).width() > 580 ){
               console.log('width: ' + $(window).width() + ' h= ' +h);
               slider.css({'width':'100%','height':h})
-              .find('.slide-text-side').css({'height':h-40});
+              .find('.field-slideshow-body').css({'height':h-40});
             } else{
               slider.css({'width':'100%','height':h+82})
-              .find('.views_slideshow_slide').css({'height':'100%'});
+              .find('.field-slideshow-image-caption').css({'height':'100%'});
             }
-            if( h != slider.find('.views_slideshow_slide:visible img').height() ){resizer()}
+            if( h != slider.find('.field-slideshow-image-caption:visible img').height() ){resizer()}
           }
       // on DOM ready
       $(window).load(resizer);
