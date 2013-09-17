@@ -1,0 +1,4 @@
+name = SLAC Active Menu
+description = "Set active top level menu item."
+package = SLAC
+core = 7.x
