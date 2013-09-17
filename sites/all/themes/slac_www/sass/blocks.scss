@@ -206,9 +206,6 @@ $linkcolor: #990000;
 
 
 
-
-
-
   .html .slider{
     margin: 0 1.5% 20px;
     border-bottom: 2px solid #e1e0e0;
@@ -263,6 +260,22 @@ $linkcolor: #990000;
     display:none;
   }
 
+  .field-slideshow-description a{
+    color: #fff;
+    padding: 20px 3%;
+    line-height: 23px;
+    letter-spacing: .03em;
+    font-size: 17px;
+  }
+  .field-slideshow-caption a{
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    line-height: normal;
+    padding-bottom: 20px;
+    display: block;
+    letter-spacing: .04em;
+  }
 
 }
 
