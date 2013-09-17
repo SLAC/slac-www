@@ -140,7 +140,7 @@
       var slider = $('.views-slideshow-cycle-main-frame'),
           resizer = function( event ){
             var h = slider.find('.views_slideshow_slide:visible img').height();
-            if( $(window).width() > 600 ){
+            if( $(window).width() > 580 ){
               console.log('width: ' + $(window).width() + ' h= ' +h);
               slider.css({'width':'100%','height':h})
               .find('.slide-text-side').css({'height':h-40});
