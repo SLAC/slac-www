@@ -44,11 +44,15 @@ input:focus{
 }
 
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder {
   color: #666 !important;
+  line-height: 10px;
 }
-input:-moz-placeholder, textarea:-moz-placeholder {
+input:-moz-placeholder, 
+textarea:-moz-placeholder {
   color: #666 !important;
+  line-height: 10px;
 }
 
 /*
@@ -1128,7 +1132,7 @@ a.imageLessButton {
   .form-text{
     width: 130px;
     font-size: .7em;
-    color: #CCC;
+    color: #666;
   }
   .form-submit{
     position: absolute;
