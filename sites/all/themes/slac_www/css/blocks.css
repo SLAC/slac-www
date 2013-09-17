@@ -549,7 +549,7 @@
   }*/
   /* line 215, ../sass/blocks.scss */
   .slider {
-    width: 100% !important;
+    width: 97% !important;
     max-width: 100%;
     padding: 1.5% !important;
     height: 97%;
@@ -562,12 +562,12 @@
     display: none; }
 
   /* line 229, ../sass/blocks.scss */
-  .field-slideshow-slide {
-    padding-bottom: 85px; }
-
-  /* line 233, ../sass/blocks.scss */
   .slider div {
     height: 100% !important; }
+
+  /* line 233, ../sass/blocks.scss */
+  .field-slideshow-slide {
+    background: transparent !important; }
 
   /* line 237, ../sass/blocks.scss */
   .slider .field-slideshow-body {

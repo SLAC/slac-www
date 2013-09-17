@@ -213,7 +213,7 @@ $linkcolor: #990000;
 
 
 .slider{
-  width: 100% !important;
+  width: 97% !important;
   max-width: 100%;
   padding: 1.5% !important;
   height: 97%;
@@ -226,14 +226,14 @@ $linkcolor: #990000;
   display:none;
 }
 
-.field-slideshow-slide{
-  padding-bottom: 85px;
-}
-
 .slider div{
 height: 100% !important;
 }
   
+.field-slideshow-slide{
+  background: transparent !important;
+}
+
 .slider .field-slideshow-body{
   display: block;
   position: absolute;
