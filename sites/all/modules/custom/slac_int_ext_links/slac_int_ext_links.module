@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function slac_int_ext_links_init() {
+  $internal_links = variable_get('slac_internal_links');
+  $external_links = variable_get('slac_external_links');
+  drupal_add_js(array('slac_int_ext_links' => array('internal_links' => $internal_links)), 'setting');
+  drupal_add_js(array('slac_int_ext_links' => array('external_links' => $external_links)), 'setting');
+  drupal_add_js(drupal_get_path('module', 'slac_int_ext_links') . '/js/slac_int_ext_links.js');
+}
+
+/**
+ * Implements hook_permission().
+ */
+function slac_int_ext_links_permission() {
+  return array(
+    'administer int ext links' =>  array(
+      'title' => t('Administer internal and external links.'),
+      'description' => t('Add/remove the links to identify which is internal or external.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function slac_int_ext_links_menu() {
+  $items = array();
+
+  $items['admin/config/user-interface/int-ext-links'] = array(
+    'title' => 'Internal/external links',
+    'description' => 'Add/remove the links to identify which is internal or external.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slac_int_ext_links_settings_form'),
+    'access arguments' => array('administer int ext links'),
+  );
+
+  return $items;
+}
+
+/**
+ * Form callback for image croping feature in wysiwyg.
+ */
+function slac_int_ext_links_settings_form($form, &$form_state) {
+
+  $form['internal_links'] = array(
+    '#title' => t('Internal links'),
+    '#type' => 'textarea',
+    '#default_value' => variable_get('slac_internal_links'),
+  );
+  $form['external_links'] = array(
+    '#title' => t('External links'),
+    '#type' => 'textarea',
+    '#default_value' => variable_get('slac_external_links'),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+    '#submit' => array('slac_int_ext_links_settings_submit'),
+  );
+
+  return $form;
+}
+
+/**
+ * Submit callback for wysiwyg settings form.
+ */
+function slac_int_ext_links_settings_submit($form, &$form_state) {
+  variable_set('slac_internal_links', trim($form_state['values']['internal_links']));
+  variable_set('slac_external_links', trim($form_state['values']['external_links']));
+
+  drupal_set_message(t('Your settings have been saved'));
+}

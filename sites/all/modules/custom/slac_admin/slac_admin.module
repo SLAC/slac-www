@@ -6,14 +6,6 @@
  * Add "Edit slideshow content" for frontpage slideshow contextual links.
  */
 function slac_admin_contextual_links_view_alter(&$element, $items) {
-  if (_slac_admin_is_contextual_link_a_view($element, 'frontpage_slideshow')) {
-    $element['#links']['edit-content'] = array(
-      'title' => t('Edit slideshow content'),
-      'href' => 'admin/structure/fieldable-panels-panes/manage/slideshow',
-      'query' => $element['#links']['views-ui-edit']['query'],
-    );
-  }
-
   if (_slac_admin_is_contextual_link_a_view($element, 'slac_in_the_news')) {
     $element['#links']['edit-content'] = array(
       'title' => t('Edit listed content'),

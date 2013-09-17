@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implementation of hook_install.
+ */
+function slac_int_ext_links_install() {
+  variable_set('slac_internal_links');
+  variable_set('slac_external_links');
+}
+
+/**
+ * Implementation of hook_uninstall.
+ */
+function slac_int_ext_links_uninstall() {
+  variable_del('slac_internal_links');
+  variable_del('slac_external_links');
+}
