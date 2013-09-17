@@ -217,7 +217,7 @@ $linkcolor: #990000;
     max-width: 100%;
     padding: 1.5% !important;
     height: 97%;
-    margin: 0 0 15px 0;
+    margin: 0 1.5% 15px 1.5%;
     background-color: #fff; 
   }
 
@@ -255,6 +255,8 @@ $linkcolor: #990000;
   .slider .field-name-field-slideshow-txtlr-slide .field-slideshow-caption-text a{
     padding-bottom: 0;
     color: $linkcolor;
+    font-size: 15px;
+    letter-spacing: 0;
   }
 
   .slider .field-slideshow-description{
