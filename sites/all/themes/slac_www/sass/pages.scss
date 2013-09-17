@@ -43,18 +43,6 @@ input:focus{
   width: 100% !important;
 }
 
-
-input::-webkit-input-placeholder, 
-textarea::-webkit-input-placeholder {
-  color: #666 !important;
-  line-height: 10px;
-}
-input:-moz-placeholder, 
-textarea:-moz-placeholder {
-  color: #666 !important;
-  line-height: 10px;
-}
-
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
@@ -1142,6 +1130,15 @@ a.imageLessButton {
     text-indent: -100px;
     cursor:pointer;
   }
+  input::-webkit-input-placeholder{
+    color: #666 !important;
+    line-height: 24px;
+  }
+  input:-moz-placeholder{
+    color: #666 !important;
+    line-height: 24px;
+  }
+
 }
 .slac-search-wrapper{
   position: relative;
