@@ -464,8 +464,8 @@
     text-decoration: none; }
 /* line 131, ../sass/blocks.scss */
 .left-menu .depth-2.active-trail, .left-menu .depth-2.active,
-.left-menu .depth-2 a:hover
-a.active {
+.left-menu .depth-2 a:hover,
+.left-menu .depth-2 a.active {
   background-color: #f2f2f2; }
 /* line 138, ../sass/blocks.scss */
 .left-menu li.depth-3 a:hover,
