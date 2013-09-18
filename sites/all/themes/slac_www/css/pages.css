@@ -491,12 +491,12 @@ input:focus {
     padding: 16px 0 10px;
     line-height: 15px; }
     /* line 144, ../sass/pages.scss */
-    .page-basic .footer img {
-      width: auto; }
-    /* line 147, ../sass/pages.scss */
     .page-basic .footer a {
       color: #fff;
       font-size: 10px; }
+      /* line 147, ../sass/pages.scss */
+      .page-basic .footer a img {
+        width: auto; }
   /* line 152, ../sass/pages.scss */
   .page-basic .sidebar-menu {
     display: none; }
