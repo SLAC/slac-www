@@ -29,9 +29,15 @@ $linkcolor: #990000;
   }
 }
 
+.field-slideshow-slide{
+  width: 100% !important;
+}
+
 .slider .field-slideshow{
   padding-bottom: 0 !important;
 }
+
+.field-name-field-slideshow-txtlr-slide .field-slideshow-controls a{z-index: 90;}
 
 @media (max-width: 1000px){
   .html .slider .field-slideshow-caption a {

@@ -144,6 +144,9 @@ input:focus{
     a{
       color: #fff;
       font-size: 10px;
+      &:hover{
+        text-decoration: underline;
+      }
       img{
         width: auto;
       }
@@ -250,6 +253,9 @@ input:focus{
       width: 16.66%;
       height: 31px;
       border: none;
+      &:hover{
+        background-color:#FFF;
+      }
     }
     li.depth-1.first {
       display: none;
@@ -1190,9 +1196,12 @@ a.imageLessButton {
     float:left;
     margin-right: 5px;
   }
-
   .form-type-radio label{
     line-height: 14px;
+    cursor:pointer;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
 
@@ -1280,9 +1289,6 @@ a.imageLessButton {
       width: 30%;
       float: left;
       margin-left: 5%;
-      &:first-child {
-        margin-left: 0;
-      }
       &:nth-child(3n+1){
         clear:both;
         margin-left: 0;
