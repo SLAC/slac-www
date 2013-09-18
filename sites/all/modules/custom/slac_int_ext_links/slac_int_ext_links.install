@@ -4,8 +4,8 @@
  * Implementation of hook_install.
  */
 function slac_int_ext_links_install() {
-  variable_set('slac_internal_links');
-  variable_set('slac_external_links');
+  variable_set('slac_internal_links', '');
+  variable_set('slac_external_links', '');
 }
 
 /**
