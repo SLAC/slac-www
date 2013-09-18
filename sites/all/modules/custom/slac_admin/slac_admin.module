@@ -30,3 +30,13 @@ function slac_admin_views_api() {
     'path' => drupal_get_path('module', 'slac_admin'),
   );
 }
+
+/**
+ * Implements hook_field_collection_is_empty_required_element().
+ */
+function slac_admin_field_collection_is_empty_required_element($element) {
+  switch ($element['#type']) {
+    case 'media':
+      return !isset($element['#value']['fid']) || empty($element['#value']['fid']);
+  }
+}
