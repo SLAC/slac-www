@@ -48,12 +48,18 @@ function slac_int_ext_links_settings_form($form, &$form_state) {
   $form['internal_links'] = array(
     '#title' => t('Internal links'),
     '#type' => 'textarea',
-    '#default_value' => variable_get('slac_internal_links'),
+    '#default_value' => implode("\n", variable_get('slac_internal_links')),
+    '#description' => t('Place set of regular expressions (one per line) according to !url', 
+        array('!url' => l('documentation', "http://www.w3schools.com/jsref/jsref_obj_regexp.asp", 
+            array('attributes' => array('target' => '_blank'))))),
   );
   $form['external_links'] = array(
     '#title' => t('External links'),
     '#type' => 'textarea',
-    '#default_value' => variable_get('slac_external_links'),
+    '#default_value' => implode("\n", variable_get('slac_external_links')),
+    '#description' => t('Place set of regular expressions (one per line) according to !url', 
+        array('!url' => l('documentation', "http://www.w3schools.com/jsref/jsref_obj_regexp.asp", 
+            array('attributes' => array('target' => '_blank'))))),
   );
   $form['submit'] = array(
     '#type' => 'submit',
@@ -68,8 +74,8 @@ function slac_int_ext_links_settings_form($form, &$form_state) {
  * Submit callback for wysiwyg settings form.
  */
 function slac_int_ext_links_settings_submit($form, &$form_state) {
-  variable_set('slac_internal_links', trim($form_state['values']['internal_links']));
-  variable_set('slac_external_links', trim($form_state['values']['external_links']));
+  variable_set('slac_internal_links', explode("\n",trim($form_state['values']['internal_links'])));
+  variable_set('slac_external_links', explode("\n",trim($form_state['values']['external_links'])));
 
   drupal_set_message(t('Your settings have been saved'));
 }
