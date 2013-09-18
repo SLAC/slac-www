@@ -141,6 +141,13 @@ input:focus{
     font-size: 10px;
     padding: 16px 0 10px;
     line-height: 15px;
+    img{
+      width: auto;
+    }
+    a{
+      color: #fff;
+      font-size: 10px;
+    }
   }
   .sidebar-menu{
     display: none;
