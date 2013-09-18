@@ -127,7 +127,8 @@ $linkcolor: #990000;
   .depth-2{
     &.active-trail,
     &.active, 
-    a:hover{
+    a:hover
+    a.active{
       background-color: #f2f2f2;
     }
   }
