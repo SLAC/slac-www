@@ -2,4 +2,5 @@ name = SLAC internal, external links icons
 description = "Provide possibility to add different icons for internal and external links."
 package = SLAC
 dependencies[] = link
+configure = admin/config/user-interface/int-ext-links
 core = 7.x
