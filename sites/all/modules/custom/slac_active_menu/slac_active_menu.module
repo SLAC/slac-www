@@ -1,0 +1,92 @@
+<?php
+
+define('SLAC_ACTIVE_MENU_TOP_MENU_NAME', 'menu-top-nav-menu');
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter basic page node form.
+ */
+function slac_active_menu_form_page_node_form_alter(&$form, &$form_state) {
+  $form['slac_active_menu'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Highlight top menu'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'additional_settings',
+    '#tree' => TRUE,
+  );
+
+  $top_menu_tree = menu_tree(SLAC_ACTIVE_MENU_TOP_MENU_NAME);
+
+  $options = array();
+  foreach ($top_menu_tree as $mlid => $menu_item) {
+    if (isset($menu_item['#title'])) {
+      $options[$mlid] = filter_xss_admin($menu_item['#title']);
+    }
+  }
+
+  $default_values = variable_get('slac_active_menu_values', array());
+  $form['slac_active_menu']['menu_item'] = array(
+    '#title' => t('Active top menu item'),
+    '#description' => t('Select top menu item to be active when this node is being viewed.'),
+    '#type' => 'select',
+    '#options' => $options,
+    '#empty_option' => t('None'),
+    '#default_value' => isset($default_values[$form_state['node']->nid]) ? $default_values[$form_state['node']->nid] : '',
+  );
+
+  $form['actions']['submit']['#submit'][] = 'slac_active_menu_node_submit';
+}
+
+/**
+ * Submit callback to save selected top menu items into variable.
+ */
+function slac_active_menu_node_submit($form, $form_state) {
+  $active_menu_values = variable_get('slac_active_menu_values', array());
+  if (!isset($form_state['node'])) {
+    return;
+  }
+  $nid = $form_state['node']->nid;
+  if (!empty($form_state['values']['slac_active_menu']['menu_item'])) {
+    $active_menu_values[$nid] = $form_state['values']['slac_active_menu']['menu_item'];
+  }
+  elseif (isset($active_menu_values[$nid])) {
+    unset($active_menu_values[$nid]);
+  }
+  variable_set('slac_active_menu_values', $active_menu_values);
+}
+
+/**
+ * Implements hook_ctools_plugin_post_alter().
+ */
+function slac_active_menu_ctools_plugin_post_alter(&$plugin, &$info) {
+  if ($plugin['plugin type'] == 'content_types' && $plugin['title'] == 'Block') {
+    $plugin['render callback'] = 'slac_active_menu_custom_menu_block_menu_tree_content_type_render';
+  }
+}
+
+/**
+ * Wrapper around ctools_block_content_type_render().
+ */
+function slac_active_menu_custom_menu_block_menu_tree_content_type_render($subtype, $conf, $args, $context) {
+  $is_node_page = (arg(0) == 'node');
+  $presaved_path = '';
+
+  if ($is_node_page) {
+    $active_menu_values = variable_get('slac_active_menu_values', array());
+    if (isset($active_menu_values[arg(1)])) {
+      $presaved_path = current_path();
+      $menu_item = menu_link_load($active_menu_values[arg(1)]);
+      menu_set_active_item($menu_item['link_path']);
+    }
+  }
+
+  $block = ctools_block_content_type_render($subtype, $conf, $args, $context);
+
+  if (!empty($presaved_path)) {
+    menu_set_active_item($presaved_path);
+  }
+
+  return $block;
+}

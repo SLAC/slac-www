@@ -1,0 +1,17 @@
+diff --git a/field_collection.module b/field_collection.module
+index 645093a..c5b338c 100644
+--- a/field_collection.module
++++ b/field_collection.module
+@@ -1669,7 +1669,11 @@ function field_collection_field_widget_embed_validate($element, &$form_state, $c
+         $is_empty_multiple = (!count($elements['#value']));
+         $is_empty_string = (is_string($elements['#value']) && drupal_strlen(trim($elements['#value'])) == 0);
+         $is_empty_value = ($elements['#value'] === 0);
+-        if ($is_empty_multiple || $is_empty_string || $is_empty_value) {
++        $is_empty_by_hook_invokation = FALSE;
++        foreach (module_implements('field_collection_is_empty_required_element') as $module) {
++          $is_empty_by_hook_invokation = $is_empty_by_hook_invokation || (bool) module_invoke($module, 'field_collection_is_empty_required_element', $element);
++        }
++        if ($is_empty_multiple || $is_empty_string || $is_empty_value || $is_empty_by_hook_invokation) {
+           if (isset($elements['#title'])) {
+             form_error($elements, t('!name field is required.', array('!name' => $elements['#title'])));
+           }

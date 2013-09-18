@@ -19,6 +19,15 @@ function field_collection_help($path, $arg) {
 }
 
 /**
+ * Implements hook_ctools_plugin_directory().
+ */
+function field_collection_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'ctools/' . $plugin;
+  }
+}
+
+/**
  * Implements hook_entity_info().
  */
 function field_collection_entity_info() {
@@ -1660,7 +1669,13 @@ function field_collection_field_widget_embed_validate($element, &$form_state, $c
         $is_empty_multiple = (!count($elements['#value']));
         $is_empty_string = (is_string($elements['#value']) && drupal_strlen(trim($elements['#value'])) == 0);
         $is_empty_value = ($elements['#value'] === 0);
-        if ($is_empty_multiple || $is_empty_string || $is_empty_value) {
+
+        $is_empty_hook_invokation = FALSE;
+        foreach (module_implements('field_collection_is_empty_required_element') as $module) {
+          $is_empty_hook_invokation = $is_empty_hook_invokation || (bool) module_invoke($module, 'field_collection_is_empty_required_element', $elements);
+        }
+
+        if ($is_empty_multiple || $is_empty_string || $is_empty_value || $is_empty_hook_invokation) {
           if (isset($elements['#title'])) {
             form_error($elements, t('!name field is required.', array('!name' => $elements['#title'])));
           }

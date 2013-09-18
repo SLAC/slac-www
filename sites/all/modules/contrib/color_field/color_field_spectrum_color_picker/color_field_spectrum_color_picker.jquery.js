@@ -6,7 +6,7 @@
   Drupal.behaviors.color_field_spectrum = {
     attach: function (context) {
       $.each(Drupal.settings.color_field_spectrum, function (selector) {
-        $('#' + this.id).spectrum({
+        $('.' + this.class).spectrum({
           preferredFormat: "hex",
           showInput: this.show_input,
           showAlpha: false,

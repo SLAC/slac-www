@@ -27,7 +27,7 @@ if (!isset($pager_position)) {
           <?php if ($num) : ?>display:none;<?php endif; ?>
           <?php if (isset($item['field_fcollection_bgcolor'])): ?> background-color:<?php print $item['field_fcollection_bgcolor'][LANGUAGE_NONE][0]['rgb'];?>;<?php endif;?>">
 
-        <div class="field-slideshow-body" <?php if (isset($item['field_fcollection_txtposition'])): ?>style="float:<?php print $item['field_fcollection_txtposition'][LANGUAGE_NONE][0]['value']; ?>"<?php endif;?>>
+        <div class="field-slideshow-body" <?php if (isset($item['field_fcollection_txtposition'][LANGUAGE_NONE])): ?>style="float:<?php print $item['field_fcollection_txtposition'][LANGUAGE_NONE][0]['value']; ?>"<?php endif;?>>
           <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
             <div class="field-slideshow-caption">
               <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>
