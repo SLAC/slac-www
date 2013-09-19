@@ -1459,8 +1459,9 @@ a.imageLessButton {
       float:none;
       width: 100%;
       text-align:center;
-      img{
+      .pane-content a img{
         width: auto;
+        float: none;
       }
     }
   }
