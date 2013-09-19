@@ -253,7 +253,8 @@ input:focus{
       width: 16.66%;
       height: 31px;
       border: none;
-      &:hover{
+      &:hover,
+      &.active-trail{
         background-color:#FFF;
       }
     }
