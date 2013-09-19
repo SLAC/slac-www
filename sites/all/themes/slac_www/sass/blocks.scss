@@ -35,6 +35,7 @@ $linkcolor: #990000;
 
 .slider .field-slideshow{
   padding-bottom: 0 !important;
+  width: 100%;
 }
 
 .field-name-field-slideshow-txtlr-slide .field-slideshow-controls a{z-index: 90;}
@@ -396,15 +397,44 @@ $linkcolor: #990000;
     padding: 2px 0 2px 4%;
     margin: 0;
     line-height: 18px;
+      background: url('../images/red-arrow.png') no-repeat 8px 8px;
     a{
       padding-left: 10px;
-      background: url('../images/red-arrow.png') no-repeat 0 5px;
       @include links();
       font-size: 11px;
       &:hover{
         border-bottom: 1px dotted #996633;
       }
     }
+  }
+}
+
+div.html .links-internal-external-icons{
+  div{
+    overflow:hidden;
+  }  
+
+  a{
+    float:left;
+    clear:both;
+    line-height: 18px;
+    padding-bottom: 1px;
+    &:hover{
+      padding-bottom: 0;
+    }
+  }
+    
+  .external,
+  .internal{
+    padding-right: 13px;
+  }
+
+  .external{
+    background: url('../images/external-link-icon.png') no-repeat right center;
+  }
+
+  .internal{
+    background: url('../images/external-link-icon.png') no-repeat right center;
   }
 }
 
