@@ -1300,7 +1300,6 @@ a.imageLessButton {
       padding-left: 5%;
       background: transparent;
       a{
-        display: table-cell;
         padding: 10px;
         min-height: 30px;
         background: white url("../images/list-bg.png") repeat-x bottom;
@@ -1504,6 +1503,7 @@ a.imageLessButton {
 
   .frontpage-right-col .field-item{
     margin-top: 20px;
+    padding: 0;
   }
 
   .frontpage-right-col{
