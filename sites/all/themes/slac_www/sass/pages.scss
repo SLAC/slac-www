@@ -147,11 +147,16 @@ input:focus{
       &:hover{
         text-decoration: underline;
       }
+      &:first-child img{
+        width: 27%;
+      }
       img{
-        width: auto;
+        width: 73%;
+        float:left;
       }
     }
   }
+
   .sidebar-menu{
     display: none;
   }
