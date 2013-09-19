@@ -745,26 +745,26 @@
       border-bottom: 1px dotted #996633; }
 
 /* line 413, ../sass/blocks.scss */
-div.html .links-internal-external-icons div {
+.html .inside .links-internal-external-icons div {
   overflow: hidden; }
 /* line 417, ../sass/blocks.scss */
-div.html .links-internal-external-icons a {
+.html .inside .links-internal-external-icons a {
   float: left;
   clear: both;
   line-height: 18px;
   padding-bottom: 1px; }
   /* line 422, ../sass/blocks.scss */
-  div.html .links-internal-external-icons a:hover {
+  .html .inside .links-internal-external-icons a:hover {
     padding-bottom: 0; }
 /* line 428, ../sass/blocks.scss */
-div.html .links-internal-external-icons .external,
-div.html .links-internal-external-icons .internal {
+.html .inside .links-internal-external-icons .external,
+.html .inside .links-internal-external-icons .internal {
   padding-right: 13px; }
 /* line 432, ../sass/blocks.scss */
-div.html .links-internal-external-icons .external {
+.html .inside .links-internal-external-icons .external {
   background: url("../images/external-link-icon.png") no-repeat right center; }
 /* line 436, ../sass/blocks.scss */
-div.html .links-internal-external-icons .internal {
+.html .inside .links-internal-external-icons .internal {
   background: url("../images/external-link-icon.png") no-repeat right center; }
 
 /* line 441, ../sass/blocks.scss */
