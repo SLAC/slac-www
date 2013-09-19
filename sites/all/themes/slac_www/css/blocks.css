@@ -762,10 +762,10 @@
   padding-right: 13px; }
 /* line 432, ../sass/blocks.scss */
 .html .inside .links-internal-external-icons .external {
-  background: url("../images/external-link-icon.png") no-repeat right center; }
+  background: url("../images/external-icon.png") no-repeat right center; }
 /* line 436, ../sass/blocks.scss */
 .html .inside .links-internal-external-icons .internal {
-  background: url("../images/external-link-icon.png") no-repeat right center; }
+  background: url("../images/internal-icon.png") no-repeat right center; }
 
 /* line 441, ../sass/blocks.scss */
 .front-news {
