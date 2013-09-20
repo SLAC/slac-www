@@ -11,6 +11,9 @@ $linkcolor: #990000;
 
 .html .slider{
   margin-bottom: 20px;
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,.25);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.25);
+  box-shadow: 0 0 10px rgba(0,0,0,.25);
   .field-slideshow-caption a{
     font-size: 30px;
     display:inline;
@@ -21,12 +24,16 @@ $linkcolor: #990000;
       border-bottom: 1px dotted #EFEFEF;  
     }
   }
-  .field-slideshow-description{
+  .field-slideshow-description,
+  .field-slideshow-description a{
     color: #fff;
     padding: 20px 0;
     line-height: 23px;
     letter-spacing: .03em;
-    font-size: 17px;
+    font-size: 18px;
+    &:hover{
+      border-bottom: 1px dotted #EFEFEF;
+    }
   }
 }
 
