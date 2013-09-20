@@ -451,7 +451,6 @@ a.lightbox-processed{
   }
 }
 
-
 .general-two-col{
   .general-left{
     margin-left: -15px;
@@ -1352,7 +1351,18 @@ a.imageLessButton {
   .general-two-col .general-right{
     clear: both;
     margin-bottom: 40px;
-  }  
+  }    
+
+  .general-two-col{
+    .general-left{
+      margin-left: 0;
+    }
+
+    .general-right{
+      margin: 0;
+      float: left;
+    }
+  }
 }
 
 @media (max-width: 700px) {

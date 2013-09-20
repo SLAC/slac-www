@@ -126,11 +126,11 @@
   }
 
   .general-two-col .general-left{
-    @include zen-grid-item(15, 1);
+    @include zen-grid-item(10, 1);
   }
 
   .general-two-col .general-right{
-    @include zen-grid-item(5, 1);
+    @include zen-grid-item(5, 11);
   }
 
   .two-col-leftsidebar .general-left{
