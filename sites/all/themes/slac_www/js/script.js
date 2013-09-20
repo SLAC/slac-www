@@ -174,9 +174,22 @@
 
   Drupal.behaviors.placeholderIE = {
     attach: function (context, settings) {
+      
+      $('#search-box .form-text').data('holder',$('#search-box .form-text').attr('placeholder'));
+      $('#search-box .form-text').focusin(function(){
+          $(this).attr('placeholder','');
+      });
+      $('#search-box .form-text').focusout(function(){
+          $(this).attr('placeholder',$(this).data('holder'));
+      });
+    
+      /* ie*/
       $("[placeholder]").textPlaceholder();
+    
     }
   }
+
+
 
   Drupal.behaviors.columnsChecker = {
     attach: function (context, settings) {
