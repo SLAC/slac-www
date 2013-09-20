@@ -1347,20 +1347,15 @@ a.imageLessButton {
     margin-bottom: 5px;
   }
 
-  .general-two-col .general-left,
-  .general-two-col .general-right{
-    clear: both;
-    margin-bottom: 40px;
-  }    
-
   .general-two-col{
     .general-left{
       margin-left: 0;
+      margin-bottom: 40px;
     }
 
     .general-right{
       margin: 0;
-      float: left;
+      margin-bottom: 40px;
     }
   }
 }
