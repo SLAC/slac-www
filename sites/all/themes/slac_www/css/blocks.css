@@ -747,6 +747,9 @@
 /* line 413, ../sass/blocks.scss */
 .html .inside .links-internal-external-icons div {
   overflow: hidden; }
+/* line 416, ../sass/blocks.scss */
+.html .inside .links-internal-external-icons .contextual-links-processed {
+  overflow: visible; }
 /* line 417, ../sass/blocks.scss */
 .html .inside .links-internal-external-icons a {
   float: left;

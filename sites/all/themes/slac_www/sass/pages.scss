@@ -451,6 +451,19 @@ a.lightbox-processed{
   }
 }
 
+
+.general-two-col{
+  .general-left{
+    margin-left: -15px;
+  }
+
+  .general-right{
+    float:right;
+    margin-left: 0;
+    margin-right: -15px;
+  }
+}
+
 @media (max-width: 600px){
   #outerImageContainer,
   #imageDataContainer{

@@ -412,8 +412,8 @@ $linkcolor: #990000;
 .html .inside .links-internal-external-icons{
   div{
     overflow:hidden;
-  }  
-
+  }
+  .contextual-links-processed{overflow: visible;}  
   a{
     float:left;
     clear:both;
