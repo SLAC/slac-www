@@ -31,9 +31,9 @@ $linkcolor: #990000;
     line-height: 23px;
     letter-spacing: .03em;
     font-size: 18px;
-    &:hover{
-      border-bottom: 1px dotted #EFEFEF;
-    }
+  }
+  .field-slideshow-description a:hover{
+    border-bottom: 1px dotted #EFEFEF;
   }
 }
 

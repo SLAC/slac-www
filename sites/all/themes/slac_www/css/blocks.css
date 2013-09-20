@@ -384,10 +384,9 @@
     line-height: 23px;
     letter-spacing: .03em;
     font-size: 18px; }
-    /* line 34, ../sass/blocks.scss */
-    .html .slider .field-slideshow-description:hover,
-    .html .slider .field-slideshow-description a:hover {
-      border-bottom: 1px dotted #EFEFEF; }
+  /* line 35, ../sass/blocks.scss */
+  .html .slider .field-slideshow-description a:hover {
+    border-bottom: 1px dotted #EFEFEF; }
 
 /* line 40, ../sass/blocks.scss */
 .field-slideshow-slide {
