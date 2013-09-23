@@ -1339,21 +1339,27 @@ div.pane-node-body img {
   /* line 1064, ../sass/blocks.scss */
   .form-text,
   .form-select {
-    max-width: 100%; } }
+    max-width: 100%; }
+
+  /* line 1068, ../sass/blocks.scss */
+  .node-type-lecture .field-name-field-video .field-item > div,
+  .node-type-lecture object {
+    width: 100% !important;
+    height: auto !important; } }
 /* table gadget. */
-/* line 1070, ../sass/blocks.scss */
+/* line 1076, ../sass/blocks.scss */
 div table.gadget {
   width: 100%; }
-  /* line 1072, ../sass/blocks.scss */
+  /* line 1078, ../sass/blocks.scss */
   div table.gadget iframe {
     width: 100% !important; }
 
 /* Lightbox */
-/* line 1079, ../sass/blocks.scss */
+/* line 1085, ../sass/blocks.scss */
 #imageData #caption p {
   font-size: 13px;
   margin-bottom: 5px; }
-/* line 1083, ../sass/blocks.scss */
+/* line 1089, ../sass/blocks.scss */
 #imageData #caption em a {
   display: block;
   font-size: 16px;
@@ -1363,6 +1369,6 @@ div table.gadget {
   bottom: 22px;
   z-index: 99; }
 
-/* line 1094, ../sass/blocks.scss */
+/* line 1100, ../sass/blocks.scss */
 .move-title-left .pane-title {
   margin-left: 0 !important; }
