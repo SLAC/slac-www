@@ -189,7 +189,8 @@ $linkcolor: #990000;
       padding-left: 14px;
     }
     a:hover,
-    &.active a{
+    &.active a,
+    a.active-trail{
       background: #e7e7e7;
     }
   }
