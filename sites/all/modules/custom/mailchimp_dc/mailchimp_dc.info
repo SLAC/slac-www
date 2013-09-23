@@ -1,0 +1,9 @@
+name = Mailchimp Recurring Campaign
+description = Allows mailchimp campaigns to be generated on a recurring basis
+core = 7.x
+package = MailChimp
+version = 7.x-1.0-dev
+dependencies[] = mailchimp_campaign
+dependencies[] = ctools
+
+files[] = views/views_handler_filter_recurring_campaign.inc

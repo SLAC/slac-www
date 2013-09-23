@@ -1,0 +1,242 @@
+<?php
+/**
+ * @file
+ * Code for the mailchimp_dc.install file
+ */
+ 
+/** 
+ * Implements hook_schema
+ */
+function mailchimp_dc_schema() {
+
+  $schema['mailchimp_dc_config'] = array(
+    'description' => 'Stores configuration to recurring mailchimp campaigns',
+    'export' => array(
+      'key' => 'name',
+      'identifier' => 'preset', // Exports will be as $tamper_instalce
+      'default hook' => 'default_mailchimp_dc_preset',  // Function hook name.
+      'api' => array(
+        'owner' => 'mailchimp_dc',
+        'api' => 'default_mailchimp_dc_presets',  // Base name for api include files.
+        'minimum_version' => 1,
+        'current_version' => 1,
+      ),
+    ),
+    'fields' => array(
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => "Machine name of this recurring campaign",
+      ),
+      'label' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => "Human label of this recurring campaign",
+      ),
+      'schedule_type' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'description' => "Schedule type of this recurring campaign, such as weekly or monthly",
+      ),
+      'schedule_type_setting' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'description' => "Additional scheduling option such as day of the week or day of the month",
+      ),
+      'schedule_time' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "Time of the day when the mail should go out",
+      ),
+      'suppress' => array(
+        'type' => 'blob',
+        'serialize' => TRUE,
+        'not null' => FALSE,
+        'description' => "Dates that should be suppressed, I.E 12-07-2013"
+      ),
+      'auto_send' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'default' => 0,
+        'not null' => FALSE,
+        'description' => "Indicate if mail campaign should go out automatically or not."
+      ),
+      'list' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "A short has of the list id in mailchimp",
+      ),
+      'template' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'description' => "The template id selected from mailchimp, usually a number",
+      ),
+      'content' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "content hook that allows automated content population.",
+      ),
+      'from_mail' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "From email for this recurring campaign",
+      ),   
+      'from_name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "From name for this recurring campaign",
+      ),
+      'status' => array(
+        'type' => 'int',
+        'not null' => FALSE,
+        'size' => 'tiny',
+        'description' => 'Indicate the status of this campaign',
+      ), 
+      'data' => array(
+        'type' => 'blob',
+        'serialize' => TRUE,
+        'not null' => FALSE,
+        'size' => 'big',
+        'description' => "Additional configuration data"
+      ),
+      'created' => array(
+        'type' => 'int',
+        'not null' => FALSE,
+        'size' => 'big',
+        'description' => 'Time when the campaign was created',
+      ),
+    ),
+    'primary key' => array('name'),  
+  );
+
+  $schema['mailchimp_dc'] = array(
+    'description' => 'Stores daily digest creation information',
+    'fields' => array(
+      'date' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'description' => "Date in the format of yyyy-mm-dd format",
+      ),
+      'mc_campaign_id' => array(
+        'description' => 'MailChimp campaign ID.',
+        'type' => 'varchar',
+        'length' => 16,
+        'not null' => TRUE,
+      ),
+      'created' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'default' => 0,
+        'not null' => TRUE,
+        'description' => "If the campaign for that day has been created or not",
+      ),
+      'timestamp' => array(
+        'type' => 'int',
+        'not null' => FALSE,
+        'size' => 'big',
+        'description' => 'Time when the campaign was created',
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => "Machine name of this recurring campaign",
+      ),
+    ),
+    'primary key' => array('date', 'name'),
+  );
+  
+  // Table to store mailchimp campaign information for views
+  $schema['mailchimp_dc_campaign'] = array(
+    'description' => 'Store detailed mailchimp campaign informaiton',
+    'fields' => array(
+      'mc_campaign_id' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'description' => "MC Campaign id",
+      ),
+      'list_id' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'description' => "MC list id",
+      ),
+      'title' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "MC Title",
+      ),
+      'archive_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "Campaign archive url",
+      ),
+      'from_name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "From name",
+      ),
+      'from_email' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "From email",
+      ),
+      'subject' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "Subject",
+      ),
+      'status' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "status",
+      ),
+      'created' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'default' => 0,
+        'not null' => FALSE,
+        'description' => "When the campaign is created",
+      ),
+      'updated' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'default' => 0,
+        'not null' => FALSE,
+        'description' => "When the campaign is updated",
+      ),
+      'sent' => array(
+        'type' => 'int',
+        'not null' => FALSE,
+        'size' => 'big',
+        'description' => 'Time when the campaign was sent',
+      ),
+      'recurring_campaign' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => "Machine name of this recurring campaign",
+      ),
+    ),
+    'primary key' => array('mc_campaign_id'),
+  );
+  return $schema;  
+}
