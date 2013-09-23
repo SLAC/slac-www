@@ -1637,7 +1637,8 @@ a.imageLessButton {
       padding: 0;
     }
     .menu li > a:hover,
-    .menu li > a.active {
+    .menu li > a.active,
+    .depth-3 a.active-trail{
       background: #ccc;
     }
     .menu li ul{
