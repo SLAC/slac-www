@@ -5,3 +5,18 @@
  */
 
 include_once 'slac_external_email.features.inc';
+
+/**
+ * Implements hook_node_view_alter
+ */
+function slac_external_email_node_view_alter(&$build) {
+  if ($build['#bundle'] == 'news_article') {
+    if ($build['#view_mode'] == 'email_side_news' ||
+      $build['#view_mode'] == 'email_top_story' ||
+      $build['#view_mode'] == 'email_main_story') {
+      unset($build['links']);
+      unset($build['#contextual_links']);
+      dpm($build);
+    }
+  }
+}
