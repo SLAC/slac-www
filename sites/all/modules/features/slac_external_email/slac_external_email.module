@@ -16,7 +16,6 @@ function slac_external_email_node_view_alter(&$build) {
       $build['#view_mode'] == 'email_main_story') {
       unset($build['links']);
       unset($build['#contextual_links']);
-      dpm($build);
     }
   }
 }
