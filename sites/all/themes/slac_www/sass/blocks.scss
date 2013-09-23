@@ -530,7 +530,7 @@ div.pane-node-body{
   }
 
   .page-link{
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 15px;
     float: left;
     padding-bottom: 1px;
@@ -554,7 +554,7 @@ div.pane-node-body{
     padding-top: 26px;
   .content-block-heading {
     border-bottom: 2px solid #831425;
-    font-size: 14px;
+    font-size: 13px;
     padding: 6px 0 2px 7px;
     letter-spacing: 1px;
     color: $goldtitle;
@@ -581,6 +581,9 @@ div.pane-node-body{
     font-size: 13px;
     overflow: hidden;
     margin-top: 0;
+    a{
+      font-size:  13px;
+    }
   }
   ul{
     margin: 0;
