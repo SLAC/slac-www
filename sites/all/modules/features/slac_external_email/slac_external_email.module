@@ -7,15 +7,73 @@
 include_once 'slac_external_email.features.inc';
 
 /**
+ *  Implements hook_theme
+ */
+function slac_external_email_theme() {
+  // We need to define our own theming function to theme the node view modes we have
+  // defined for mailing purposes.
+  return array(
+    'slac_external_email_main' => array(
+      'render element' => 'elements',
+      'preprocess functions' => array(
+        'template_preprocess',
+        'template_preprocess_node',
+        'slac_external_email_preprocess_bottom',
+      ),
+      'template' => 'slac_external_email_main',
+    ),
+    'slac_external_email_bottom' => array(
+      'render element' => 'elements',
+      'preprocess functions' => array(
+        'template_preprocess',
+        'template_preprocess_node',
+        'slac_external_email_preprocess_bottom'
+      ),
+      'template' => 'slac_external_email_bottom',
+    ),
+  );
+}
+
+/**
+ * Preprocess function
+ * @param $vars
+ */
+function slac_external_email_preprocess_bottom(&$vars) {
+  // unset and only make sure we render 1 image for external email
+  // main news story
+  // bottom 3 column section
+  $content = $vars['content'];
+  if (array_key_exists('field_image', $content)) {
+    if (count($content['field_image']['#items']) > 1) {
+      for ($i = 1; $i <= count($content['field_image']['#items']); $i++) {
+        unset($content['field_image']['#items'][$i]);
+        unset($content['field_image'][$i]);
+      }
+      $vars['content'] = $content;
+    }
+  }
+}
+
+/**
  * Implements hook_node_view_alter
  */
 function slac_external_email_node_view_alter(&$build) {
+  // For view modes that only appears in the emails, we do not want to display
+  // links and contextual links
   if ($build['#bundle'] == 'news_article') {
     if ($build['#view_mode'] == 'email_side_news' ||
       $build['#view_mode'] == 'email_top_story' ||
       $build['#view_mode'] == 'email_main_story') {
       unset($build['links']);
       unset($build['#contextual_links']);
+    }
+    switch($build['#view_mode']) {
+      case 'email_side_news':
+        $build['#theme'] = 'slac_external_email_bottom';
+      break;
+      case 'email_main_story':
+        $build['#theme'] = 'slac_external_email_main';
+      break;
     }
   }
 }
@@ -45,4 +103,3 @@ function _slac_external_email_mailchimp_dc_content($template_sections) {
     ),
   );  
 }
-
