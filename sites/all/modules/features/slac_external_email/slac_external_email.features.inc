@@ -41,7 +41,7 @@ function slac_external_email_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => 300,
+          'width' => 350,
           'height' => '',
           'upscale' => 0,
         ),
@@ -54,7 +54,7 @@ function slac_external_email_image_default_styles() {
   $styles['external_email_small'] = array(
     'name' => 'external_email_small',
     'effects' => array(
-      25 => array(
+      23 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -64,8 +64,8 @@ function slac_external_email_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 160,
-          'height' => 160,
+          'width' => 180,
+          'height' => 120,
         ),
         'weight' => 2,
       ),
