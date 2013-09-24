@@ -67,11 +67,22 @@ $linkcolor: #990000;
     width: 23%;
     padding: 20px 6% 0;
   }
+  .html .slider .field-slideshow-caption a {
+    font-size: 24px;
+  }
+
 }
+
+@media (max-width: 800px){
+  .html .slider .field-slideshow-caption a{
+    font-size: 20px;
+  }
+}
+
 
 @media (max-width: 700px){
   .html .slider .field-slideshow-caption a{
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
