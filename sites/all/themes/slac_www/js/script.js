@@ -143,7 +143,8 @@
               w = $(window).width(),
               r = w/h | 0;
             if( $(window).width() > 580 ){
-              console.log(r);
+              h = (r > 2) ? w * 0.4323 : h;
+              slider.css({'width':'100%','height':h})
             } else{
               slider.css({'width':'100%','height':h+82})
               .find('.field-slideshow-image-caption').css({'height':'100%'});
