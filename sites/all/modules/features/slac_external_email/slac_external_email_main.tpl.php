@@ -87,6 +87,9 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <div class="content"<?php print $content_attributes; ?>>
+    <?php if (array_key_exists('field_page_author', $content)): ?>
+      <?php hide($content['field_page_author']); ?>
+    <?php endif;?>
     <?php print render($content);?>
     <a href="<?php print $node_url; ?>">(Read more)</a>
   </div>
