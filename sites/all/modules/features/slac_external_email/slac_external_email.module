@@ -18,6 +18,7 @@ function slac_external_email_theme() {
       'preprocess functions' => array(
         'template_preprocess',
         'template_preprocess_node',
+        'slac_external_email_preprocess_bottom',
       ),
       'template' => 'slac_external_email_main',
     ),
@@ -39,6 +40,7 @@ function slac_external_email_theme() {
  */
 function slac_external_email_preprocess_bottom(&$vars) {
   // unset and only make sure we render 1 image for external email
+  // main news story
   // bottom 3 column section
   $content = $vars['content'];
   if (array_key_exists('field_image', $content)) {
