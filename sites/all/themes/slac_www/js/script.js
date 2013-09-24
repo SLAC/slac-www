@@ -141,13 +141,12 @@
           resizer = function( event ){
             var h = slider.find('.field-slideshow-image-caption:visible img').height(),
               w = $(window).width(),
-              r = w/h | 0;
+              r = w/h;
             if( $(window).width() > 580 ){
-              h = (r > 2) ? w * 0.4323 : h;
-              slider.css({'width':'100%','height':h})
+              slider.css({'width':'100%','height':h});
             } else{
               slider.css({'width':'100%','height':h+82})
-              .find('.field-slideshow-image-caption').css({'height':'100%'});
+              //.find('.field-slideshow-image-caption').css({'height':'100%'});
             }
             if( h != slider.find('.field-slideshow-image-caption:visible img').height() ){resizer()}
           }
