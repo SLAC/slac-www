@@ -86,19 +86,6 @@
     <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
-  <table border="0" width="100%" class="author_info" style="border:none">
-    <tr>
-      <td align="left" width="50%">
-        <?php if (array_key_exists('field_page_author', $content)): ?>
-          <?php print render($content['field_page_author']); ?>
-          <?php hide($content['field_page_author']); ?>
-        <?php endif;?>
-      </td>
-      <td align="right" width="50%">
-        <?php print date('F j, Y', $node->created); ?>
-      </td>
-    </tr>
-  </table>
   <div class="content"<?php print $content_attributes; ?>>
     <?php print render($content);?>
     <a href="<?php print $node_url; ?>">(Read more)</a>
