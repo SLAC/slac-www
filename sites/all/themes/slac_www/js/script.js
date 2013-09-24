@@ -129,8 +129,8 @@
         },
         function(){
           $this.find("#slac-search-options").fadeOut();
-        });      
-      })     
+        });
+      })
     }
   }
 
@@ -139,11 +139,11 @@
       // fix slider width/height on screen resize
       var slider = $('.slider'),
           resizer = function( event ){
-            var h = slider.find('.field-slideshow-image-caption:visible img').height();
+            var h = slider.find('.field-slideshow-image-caption:visible img').height(),
+              w = $(window).width(),
+              r = w/h | 0;
             if( $(window).width() > 580 ){
-              console.log('width: ' + $(window).width() + ' h= ' +h);
-              slider.css({'width':'100%','height':h})
-              .find('.field-slideshow-body').css({'height':h-40});
+              console.log(r);
             } else{
               slider.css({'width':'100%','height':h+82})
               .find('.field-slideshow-image-caption').css({'height':'100%'});
@@ -164,9 +164,9 @@
 
   Drupal.behaviors.externalLinks = {
     attach: function (context, settings) {
-      $('a.ext').each(function(){  
+      $('a.ext').each(function(){
         if ($(this).siblings('span.ext').length == 0) {
-          $('<span class="ext"></span>').insertAfter(this); 
+          $('<span class="ext"></span>').insertAfter(this);
         }
       });
     }
@@ -174,7 +174,7 @@
 
   Drupal.behaviors.placeholderIE = {
     attach: function (context, settings) {
-      
+
       $('#search-box .form-text').data('holder',$('#search-box .form-text').attr('placeholder'));
       $('#search-box .form-text').focusin(function(){
           $(this).attr('placeholder','');
@@ -182,10 +182,10 @@
       $('#search-box .form-text').focusout(function(){
           $(this).attr('placeholder',$(this).data('holder'));
       });
-    
+
       /* ie*/
       $("[placeholder]").textPlaceholder();
-    
+
     }
   }
 
@@ -199,15 +199,13 @@
     }
   }
 
-  
-
   Drupal.behaviors.popupBlockonMobile = {
     attach: function (context, settings) {
       var smallflag = Modernizr.mq('(max-width: 600px)');
       $('.video-block .field-item .youtube-video-popup a, a.lightbox-processed').click(function() {
         if (smallflag) {
           window.location = $(this).attr('href');
-        }            
+        }
       });
     }
   }

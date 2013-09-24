@@ -380,7 +380,7 @@
 /* line 44, ../sass/blocks.scss */
 .slider .field-slideshow {
   padding-bottom: 0 !important;
-  width: 100%; }
+  width: 100% !important; }
 
 /* line 49, ../sass/blocks.scss */
 .field-name-field-slideshow-txtlr-slide .field-slideshow-controls a {
