@@ -35,7 +35,11 @@ if (!isset($pager_position)) {
           <?php endif; ?>
           <?php if (isset($item['field_fcollection_description'])) : ?>
             <div class="field-slideshow-description" >
-              <?php if (isset($item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value'])) { print $item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value']; }?>
+              <?php if (isset($item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value'])) {?>
+                <a href="<?php print $item['field_fcollection_link'][LANGUAGE_NONE][0]['url'] ?>">
+                <?php print $item['field_fcollection_description'][LANGUAGE_NONE][0]['safe_value'];?>
+                </a>
+              <?php }?>
             </div>
           <?php endif; ?>
         </div>

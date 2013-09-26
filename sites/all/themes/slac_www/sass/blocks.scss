@@ -351,13 +351,18 @@ $linkcolor: #990000;
   }
 }
 
-.bg-list .field-item, 
+.bg-list .field-item,
 .bg-list .social_links{
   padding: 10px 0;
   margin-bottom: 0;
   background: white url("../images/list-bg.png") repeat-x bottom;
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
+}
+
+.bg-list .field-item:hover,
+.bg-list .social_links:hover{
+  background: white url("../images/list-bg-dark.png") repeat-x bottom;
 }
 .social_links a img{
   width: 16px;
@@ -366,7 +371,7 @@ $linkcolor: #990000;
 
 
 .bg-list {
-  .field-item, 
+  .field-item,
   .social_links,
   .social-icon-block{
     padding: 10px 0;
@@ -1018,6 +1023,7 @@ div.pane-node-body{
       clear: both;
       font-size: 0.7em;
       font-style: italic;
+      color: #666;
       & > div{
         display: inline;
         line-height: 1.4em;

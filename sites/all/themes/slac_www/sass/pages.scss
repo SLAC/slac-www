@@ -276,15 +276,16 @@ input:focus{
       width: 100%;
     }
   }
-  .depth-1 > a {
+  .menuparent.depth-1 > a {
     font-size: 12px;
     color: #5e5e5e;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 0 0 0 15px;
+    padding: 0 13px;
     display: block;
     height: 31px;
     line-height: 31px;
+    letter-spacing: 0.12em;
   }
   .depth-1.active-trail > a,
   .depth-1 > a.active,
@@ -1316,10 +1317,16 @@ a.imageLessButton {
       min-height: 50px;
       padding-left: 5%;
       background: transparent;
+      &:hover{
+        background: transparent;
+      }
       a{
         padding: 10px;
         min-height: 30px;
         background: white url("../images/list-bg.png") repeat-x bottom;
+      }
+      a:hover{
+        background: white url("../images/list-bg-dark.png") repeat-x bottom;
       }
       &:nth-child(3n+1){
         clear:both;
@@ -1354,14 +1361,18 @@ a.imageLessButton {
 
   .general-two-col{
     .general-left{
-      margin-left: 0;
       margin-bottom: 40px;
     }
 
     .general-right{
-      margin: 0;
       margin-bottom: 40px;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .main-menu .menuparent.depth-1 > a{
+    letter-spacing: 0;
   }
 }
 
@@ -1381,7 +1392,7 @@ a.imageLessButton {
   .left-menu-trigger{
     display: block;
   }
-  
+
   #search-box {
     float: right;
     position: relative;
