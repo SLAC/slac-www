@@ -160,11 +160,11 @@
       $(window).resize(resizer);
       // on slider btns click
       $('div[class*="views-slideshow-controls"]').find('a,.views-content-counter').click(resizer);
-    }
 
     /* Controls */
-
     $( ".prev, .next" ).wrapInner( "<span></span>");
+
+    }
   }
 
   Drupal.behaviors.externalLinks = {
