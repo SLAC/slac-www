@@ -1322,6 +1322,9 @@ a.imageLessButton {
         min-height: 30px;
         background: white url("../images/list-bg.png") repeat-x bottom;
       }
+      a:hover{
+        background-image: url("../images/list-bg-dark.png");
+      }
       &:nth-child(3n+1){
         clear:both;
         padding-left: 0;
