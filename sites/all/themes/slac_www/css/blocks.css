@@ -348,9 +348,9 @@
 /* line 12, ../sass/blocks.scss */
 .html .slider {
   margin-bottom: 20px;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
   /* line 17, ../sass/blocks.scss */
   .html .slider .field-slideshow-caption a {
     font-size: 30px;
@@ -672,7 +672,6 @@
   overflow: hidden; }
 
 /* line 363, ../sass/blocks.scss */
-.bg-list .field-item:hover,
 .bg-list .social_links:hover {
   background: white url("../images/list-bg-dark.png") repeat-x bottom; }
 
