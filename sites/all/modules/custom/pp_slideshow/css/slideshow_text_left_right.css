@@ -63,7 +63,6 @@
 .field-name-field-slideshow-txtlr-slide .field-slideshow-controls a span{
     position: absolute;
     top: 40%;
-    right: 0;
     display: block;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -80,9 +79,11 @@
 
 .field-name-field-slideshow-txtlr-slide .field-slideshow-controls .prev span{
     background-image: url("../images/slideshow_text_left_right/slider-back.png");
+    right: 0;
 }
 .field-name-field-slideshow-txtlr-slide .field-slideshow-controls .next span{
     background-image: url("../images/slideshow_text_left_right/slider-next.png");
+    left: 0;
 }
 
 .field-name-field-slideshow-txtlr-slide .field-slideshow-controls a:hover span{
