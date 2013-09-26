@@ -54,11 +54,9 @@
 }
 
 .field-name-field-slideshow-txtlr-slide .field-slideshow-controls .prev{
-    background-image: url("../images/slideshow_text_left_right/slider-back.png");
     left: 0;
 }
 .field-name-field-slideshow-txtlr-slide .field-slideshow-controls .next{
-    background-image: url("../images/slideshow_text_left_right/slider-next.png");
     right: 0;
 }
 
