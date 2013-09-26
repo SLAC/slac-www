@@ -1370,6 +1370,12 @@ a.imageLessButton {
   }
 }
 
+@media (max-width: 800px) {
+  .main-menu .menuparent.depth-1 > a{
+    letter-spacing: 0;
+  }
+}
+
 @media (max-width: 700px) {
   .pane-menu-menu-footer-menu .menu li{
     &.first{
@@ -1386,7 +1392,7 @@ a.imageLessButton {
   .left-menu-trigger{
     display: block;
   }
-  
+
   #search-box {
     float: right;
     position: relative;
