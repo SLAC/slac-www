@@ -1317,6 +1317,9 @@ a.imageLessButton {
       min-height: 50px;
       padding-left: 5%;
       background: transparent;
+      &:hover{
+        background: transparent;
+      }
       a{
         padding: 10px;
         min-height: 30px;
