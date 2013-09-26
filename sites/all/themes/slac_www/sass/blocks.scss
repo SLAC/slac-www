@@ -359,6 +359,14 @@ $linkcolor: #990000;
   width: 100%;
   overflow: hidden; 
 }
+.bg-list .field-item:hover, 
+.bg-list .social_links:hover{
+  padding: 10px 0;
+  margin-bottom: 0;
+  background: white url("../images/list-bg-dark.png") repeat-x bottom;
+  width: 100%;
+  overflow: hidden; 
+}
 .social_links a img{
   width: 16px;
   height: 16px;

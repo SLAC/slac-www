@@ -1596,7 +1596,7 @@ a.imageLessButton {
         background: white url("../images/list-bg.png") repeat-x bottom; }
       /* line 1325, ../sass/pages.scss */
       .frontpage-right-col .field-item a:hover {
-        background-image: url("../images/list-bg-dark.png"); }
+        background: white url("../images/list-bg-dark.png") repeat-x bottom; }
       /* line 1328, ../sass/pages.scss */
       .frontpage-right-col .field-item:nth-child(3n+1) {
         clear: both;
