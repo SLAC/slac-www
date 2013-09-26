@@ -602,7 +602,7 @@ input:focus {
       padding: 0 0;
       width: 100%; }
   /* line 279, ../sass/pages.scss */
-  .main-menu .depth-1 > a {
+  .main-menu .menuparent.depth-1 > a {
     font-size: 12px;
     color: #5e5e5e;
     text-transform: uppercase;
