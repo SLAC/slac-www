@@ -91,6 +91,10 @@
   visibility: visible;
 }
 
+.field-name-field-slideshow-txtlr-slide .field-slideshow-controls a.hidden{
+  display: none;
+}
+
 .field-slideshow-text-left-right-wrapper:hover .field-slideshow-controls span{
   visibility: visible;
 }

@@ -161,9 +161,17 @@
       // on slider btns click
       $('div[class*="views-slideshow-controls"]').find('a,.views-content-counter').click(resizer);
 
-    /* Controls */
-    $( ".prev, .next" ).wrapInner( "<span></span>");
+      /* Controls */
+      $( ".prev, .next" ).wrapInner( "<span></span>");
 
+      $('.field-slideshow-controls a').hover(
+        function () {
+          $(this).siblings('a').addClass('hidden');
+        },
+        function () {
+          $(this).siblings('a').removeClass('hidden');
+        }
+      );
     }
   }
 
