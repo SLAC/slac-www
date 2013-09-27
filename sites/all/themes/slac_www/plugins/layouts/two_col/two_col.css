@@ -21,3 +21,11 @@
 	float: left;
 	width: 25%;
 }
+
+.vertical-line{
+  float: right;
+  height: 1000px;
+  width: 1px;
+  margin-right: 12px;
+  background: #e0e0e1;
+}
