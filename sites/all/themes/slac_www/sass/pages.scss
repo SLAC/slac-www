@@ -1483,8 +1483,14 @@ a.imageLessButton {
 }*/
 
 @media (max-width: 600px) {
-  .general-two-col .general-left{
-    margin-left: 0;
+  .general-two-col
+    .general-left{
+      margin-left: 0;
+    }
+    .general-right{
+      float: left;
+      margin: 0;
+    }
   }
   .two-col-basic .pane-page-content > .pane-content{
     padding:  0;
