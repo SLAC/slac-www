@@ -112,8 +112,8 @@
 .one-col-basic .pane-page-content > .pane-content,
 .one-col-basic .pane-page-content > .pane-title,
 .node-type-news-article .pane-page-content > .pane-content,
-.two-col-basic .pane-page-content,
-.two-col-basic .pane-title {
+.two-col-basic .pane-page-content > .pane-content,
+.two-col-basic .pane-page-content > .pane-title {
   float: left;
   width: 91.66667%;
   margin-left: 4.16667%;

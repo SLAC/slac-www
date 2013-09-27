@@ -75,8 +75,8 @@
   .one-col-basic .pane-page-content > .pane-content,
   .one-col-basic .pane-page-content > .pane-title,
   .node-type-news-article .pane-page-content > .pane-content,
-  .two-col-basic .pane-page-content,
-  .two-col-basic .pane-title{
+  .two-col-basic .pane-page-content > .pane-content,
+  .two-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(22, 2);
   }
 
