@@ -397,7 +397,7 @@ $linkcolor: #990000;
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
-  &::hover span{
+  &:hover span{
     border-bottom: 1px dotted #881728;
   }
 }
