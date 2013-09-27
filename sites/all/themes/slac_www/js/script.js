@@ -223,6 +223,14 @@
     }
   }
 
+  Drupal.behaviors.youAreBlock = {
+    attach: function (context, settings) {
+      $('.pane-bundle-are-you-block .field-item a').wrapInner('<span></span>');
+    }
+  }
+
+
+
 })(jQuery, Drupal, this, this.document);
 
 

@@ -715,8 +715,8 @@
   vertical-align: middle;
   padding: 0 10px; }
   /* line 400, ../sass/blocks.scss */
-  .bg-list .field-item a:hover {
-    text-decoration: underline; }
+  .bg-list .field-item a::hover span {
+    border-bottom: 1px dotted #881728; }
 
 /* line 407, ../sass/blocks.scss */
 .related-links .field-label,
