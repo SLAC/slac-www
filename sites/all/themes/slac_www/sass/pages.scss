@@ -564,7 +564,7 @@ span.ext {
     display: block;
   }
   .imageLessButton{
-    width:  100%;
+    width: 77%;
     max-width:  420px;
     margin: auto;
     display: block;
@@ -1488,6 +1488,9 @@ a.imageLessButton {
   }
   .two-col-basic .pane-page-content > .pane-content{
     padding:  0;
+  }
+  .vertical-line{
+    display: none;
   }
 
   .frontpage-middle-right{display:none;}
