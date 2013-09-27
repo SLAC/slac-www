@@ -507,14 +507,7 @@ a.lightbox-processed{
   }
 }
 
-.general-two-col .general-left{
-    margin-left: 0;
-}
-
-.two-col-basic .pane-page-content > .pane-content{
-  padding:  0;
-}
-
+@media (max-width: 600px){ 
   .section-visiting-slac table .header {
     background-image: none;
     &:after {
@@ -1490,7 +1483,13 @@ a.imageLessButton {
 }*/
 
 @media (max-width: 600px) {
-  
+  .general-two-col .general-left{
+    margin-left: 0;
+  }
+  .two-col-basic .pane-page-content > .pane-content{
+    padding:  0;
+  }
+
   .frontpage-middle-right{display:none;}
   .page-basic > .content {
     padding-bottom: 25px;
