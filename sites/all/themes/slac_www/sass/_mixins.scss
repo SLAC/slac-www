@@ -35,18 +35,18 @@
 @import "zen";
 
 
-  $zen-gutter-width: 2%;  
-  $zen-column-count: 24;  
+  $zen-gutter-width: 2%;
+  $zen-column-count: 24;
   .container {
-    @include zen-grid-container(); 
+    @include zen-grid-container();
   }
 
   /* Front page layout */
   .slider,
   .two-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(24, 1);
-  } 
-  
+  }
+
   .frontpage-left-col{
     @include zen-grid-item(4, 1);
   }
@@ -74,7 +74,9 @@
 
   .one-col-basic .pane-page-content > .pane-content,
   .one-col-basic .pane-page-content > .pane-title,
-  .node-type-news-article .pane-page-content > .pane-content{
+  .node-type-news-article .pane-page-content > .pane-content,
+  .two-col-basic .pane-page-content > .pane-content,
+  .two-col-basic .pane-page-content > .pane-title{
     @include zen-grid-item(22, 2);
   }
 
