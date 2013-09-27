@@ -570,6 +570,21 @@ span.ext {
     margin: auto;
     display: block;
   }
+
+  .pane-node-field-image{
+    margin-bottom: 20px;
+    width:  99%;
+    padding: 0.5% 5px;
+    background: #EFEFEF;
+    overflow: hidden;
+    .field-item{
+      overflow: hidden;
+      border: 2px solid #fff;
+    }
+    img{
+      float: left;
+    }
+  }
   .introduction-block{
     margin-bottom: 30px;
     clear:both;
