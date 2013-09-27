@@ -108,10 +108,11 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 77, ../sass/_mixins.scss */
+/* line 78, ../sass/_mixins.scss */
 .one-col-basic .pane-page-content > .pane-content,
 .one-col-basic .pane-page-content > .pane-title,
-.two-col-basic .pane-page-content > .pane-content {
+.pane-page-content > .pane-content,
+.two-col-basic .pane-page-content {
   float: left;
   width: 91.66667%;
   margin-left: 4.16667%;
@@ -124,7 +125,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 82, ../sass/_mixins.scss */
+/* line 83, ../sass/_mixins.scss */
 .general-two-col .pane-page-content > .pane-title,
 .general-two-col .general-left {
   float: left;
@@ -139,7 +140,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 85, ../sass/_mixins.scss */
+/* line 86, ../sass/_mixins.scss */
 .general-two-col .general-right {
   float: left;
   width: 25%;
@@ -153,7 +154,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 89, ../sass/_mixins.scss */
+/* line 90, ../sass/_mixins.scss */
 .two-col-leftsidebar .general-left {
   float: left;
   width: 25%;
@@ -167,7 +168,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 94, ../sass/_mixins.scss */
+/* line 95, ../sass/_mixins.scss */
 .two-col-leftsidebar .general-right,
 .two-col-leftsidebar-layout .pane-page-content > .pane-title {
   float: left;
@@ -184,7 +185,7 @@
 
 @media (max-width: 900px) {
   /* Front page layout */
-  /* line 107, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   .slider,
   .two-col-basic .pane-page-content > .pane-title {
     float: left;
@@ -199,7 +200,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 111, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .frontpage-left-col {
     float: left;
     width: 20%;
@@ -213,7 +214,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 115, ../sass/_mixins.scss */
+  /* line 116, ../sass/_mixins.scss */
   .middleright-wrapper {
     float: left;
     width: 80%;
@@ -227,7 +228,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 119, ../sass/_mixins.scss */
+  /* line 120, ../sass/_mixins.scss */
   .three-col .three-col-left {
     float: left;
     width: 20%;
@@ -241,7 +242,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 125, ../sass/_mixins.scss */
   .pane-page-content > .pane-title,
   .three-col .three-col-middle-right {
     float: left;
@@ -256,7 +257,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 128, ../sass/_mixins.scss */
+  /* line 129, ../sass/_mixins.scss */
   .general-two-col .general-left {
     float: left;
     width: 66.66667%;
@@ -270,7 +271,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 132, ../sass/_mixins.scss */
+  /* line 133, ../sass/_mixins.scss */
   .general-two-col .general-right {
     float: left;
     width: 33.33333%;
@@ -284,7 +285,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 136, ../sass/_mixins.scss */
+  /* line 137, ../sass/_mixins.scss */
   .two-col-leftsidebar .general-left {
     float: left;
     width: 20%;
@@ -298,7 +299,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 141, ../sass/_mixins.scss */
+  /* line 142, ../sass/_mixins.scss */
   .two-col-leftsidebar .general-right,
   .two-col-leftsidebar-layout .pane-page-content > .pane-title {
     float: left;
@@ -314,7 +315,7 @@
     word-wrap: break-word; } }
 @media (max-width: 600px) {
   /* Front page layout */
-  /* line 167, ../sass/_mixins.scss */
+  /* line 168, ../sass/_mixins.scss */
   .slider,
   .frontpage-left-col,
   .middleright-wrapper,

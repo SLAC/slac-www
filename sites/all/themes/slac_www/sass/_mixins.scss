@@ -74,7 +74,8 @@
 
   .one-col-basic .pane-page-content > .pane-content,
   .one-col-basic .pane-page-content > .pane-title,
-  .two-col-basic .pane-page-content > .pane-content{
+  .pane-page-content > .pane-content,
+  .two-col-basic .pane-page-content{
     @include zen-grid-item(22, 2);
   }
 
