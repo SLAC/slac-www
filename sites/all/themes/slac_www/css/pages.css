@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, c:/program files (x86)/scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, c:/program files (x86)/scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -775,10 +775,10 @@ a.lightbox-processed {
     font-weight: normal; }
 
 /* line 456, ../sass/pages.scss */
-.general-two-col .general-left {
+.node-type-news-article .general-two-col .general-left {
   margin-left: -15px; }
 /* line 460, ../sass/pages.scss */
-.general-two-col .general-right {
+.node-type-news-article .general-two-col .general-right {
   float: right;
   margin-left: 0;
   margin-right: -15px; }
