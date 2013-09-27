@@ -507,7 +507,14 @@ a.lightbox-processed{
   }
 }
 
-@media (max-width: 600px){ 
+.general-two-col .general-left{
+    margin-left: 0;
+}
+
+.two-col-basic .pane-page-content > .pane-content{
+  padding:  0;
+}
+
   .section-visiting-slac table .header {
     background-image: none;
     &:after {
@@ -547,7 +554,6 @@ span.ext {
 }
 /* staff resources page */
 .staff-resources-page-content{
-  padding-right: 20px;
   .igp-link{
     float: right;
     margin: -33px 0 0 0;
