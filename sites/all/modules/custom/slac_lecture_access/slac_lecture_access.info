@@ -1,0 +1,6 @@
+name = Slac lecture date access
+description = "Access plugin for date field."
+package = SLAC
+core = 7.x
+dependencies[] = ctools
+

@@ -1,9 +1,9 @@
 /* Grids */
-/* line 52, c:/program files (x86)/scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:before, .container:after {
   content: "";
   display: table; }
-/* line 56, c:/program files (x86)/scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 .container:after {
   clear: both; }
 
@@ -108,10 +108,12 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 77, ../sass/_mixins.scss */
+/* line 79, ../sass/_mixins.scss */
 .one-col-basic .pane-page-content > .pane-content,
 .one-col-basic .pane-page-content > .pane-title,
-.node-type-news-article .pane-page-content > .pane-content {
+.node-type-news-article .pane-page-content > .pane-content,
+.two-col-basic .pane-page-content > .pane-content,
+.two-col-basic .pane-page-content > .pane-title {
   float: left;
   width: 91.66667%;
   margin-left: 4.16667%;
@@ -124,7 +126,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 82, ../sass/_mixins.scss */
+/* line 84, ../sass/_mixins.scss */
 .general-two-col .pane-page-content > .pane-title,
 .general-two-col .general-left {
   float: left;
@@ -139,7 +141,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 85, ../sass/_mixins.scss */
+/* line 87, ../sass/_mixins.scss */
 .general-two-col .general-right {
   float: left;
   width: 25%;
@@ -153,7 +155,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 89, ../sass/_mixins.scss */
+/* line 91, ../sass/_mixins.scss */
 .two-col-leftsidebar .general-left {
   float: left;
   width: 25%;
@@ -167,7 +169,7 @@
   box-sizing: border-box;
   word-wrap: break-word; }
 
-/* line 94, ../sass/_mixins.scss */
+/* line 96, ../sass/_mixins.scss */
 .two-col-leftsidebar .general-right,
 .two-col-leftsidebar-layout .pane-page-content > .pane-title {
   float: left;
@@ -184,9 +186,10 @@
 
 @media (max-width: 900px) {
   /* Front page layout */
-  /* line 107, ../sass/_mixins.scss */
+  /* line 110, ../sass/_mixins.scss */
   .slider,
-  .two-col-basic .pane-page-content > .pane-title {
+  .two-col-basic .pane-page-content > .pane-title,
+  .two-col-basic .pane-page-content > .pane-content {
     float: left;
     width: 100%;
     margin-left: 0%;
@@ -199,7 +202,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 111, ../sass/_mixins.scss */
+  /* line 114, ../sass/_mixins.scss */
   .frontpage-left-col {
     float: left;
     width: 20%;
@@ -213,7 +216,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 115, ../sass/_mixins.scss */
+  /* line 118, ../sass/_mixins.scss */
   .middleright-wrapper {
     float: left;
     width: 80%;
@@ -227,7 +230,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 119, ../sass/_mixins.scss */
+  /* line 122, ../sass/_mixins.scss */
   .three-col .three-col-left {
     float: left;
     width: 20%;
@@ -241,7 +244,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 127, ../sass/_mixins.scss */
   .pane-page-content > .pane-title,
   .three-col .three-col-middle-right {
     float: left;
@@ -256,7 +259,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 128, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   .general-two-col .general-left {
     float: left;
     width: 66.66667%;
@@ -270,7 +273,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 132, ../sass/_mixins.scss */
+  /* line 135, ../sass/_mixins.scss */
   .general-two-col .general-right {
     float: left;
     width: 33.33333%;
@@ -284,7 +287,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 136, ../sass/_mixins.scss */
+  /* line 139, ../sass/_mixins.scss */
   .two-col-leftsidebar .general-left {
     float: left;
     width: 20%;
@@ -298,7 +301,7 @@
     box-sizing: border-box;
     word-wrap: break-word; }
 
-  /* line 141, ../sass/_mixins.scss */
+  /* line 144, ../sass/_mixins.scss */
   .two-col-leftsidebar .general-right,
   .two-col-leftsidebar-layout .pane-page-content > .pane-title {
     float: left;
@@ -314,7 +317,7 @@
     word-wrap: break-word; } }
 @media (max-width: 600px) {
   /* Front page layout */
-  /* line 167, ../sass/_mixins.scss */
+  /* line 170, ../sass/_mixins.scss */
   .slider,
   .frontpage-left-col,
   .middleright-wrapper,
@@ -712,8 +715,8 @@
   vertical-align: middle;
   padding: 0 10px; }
   /* line 400, ../sass/blocks.scss */
-  .bg-list .field-item a:hover {
-    text-decoration: underline; }
+  .bg-list .field-item a:hover span {
+    border-bottom: 1px dotted #881728; }
 
 /* line 407, ../sass/blocks.scss */
 .related-links .field-label,

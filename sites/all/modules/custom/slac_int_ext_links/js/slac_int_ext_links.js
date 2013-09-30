@@ -4,7 +4,7 @@
         attach: function (context) {
             var internal_links = Drupal.settings.slac_int_ext_links.internal_links;
             var external_links = Drupal.settings.slac_int_ext_links.external_links;
-            $('.links-internal-external-icons a').once(function (index, element) {	
+            $('.pane-page-content a').once(function (index, element) {
                 link_checker(internal_links, $(this), 'internal')
                 link_checker(external_links, $(this), 'external')
             });
