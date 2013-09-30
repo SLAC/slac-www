@@ -670,9 +670,6 @@ span.ext {
     line-height: 1em;
     color: #666;
   }
-  .views-submit-button{
-    display: none;
-  }
   table{
     border: 2px solid #e7e7e7;
     border-bottom: none;
@@ -1015,6 +1012,14 @@ span.ext {
         a{
           line-height:  normal;
           line-height:  20px;
+          line-height: normal;
+          line-height: 20px;
+          height: 18px;
+          width: 29px;
+          text-indent: 100px;
+          overflow: hidden;
+          display: block;
+          background: url('../images/ical.png') no-repeat 0 0;
         }
       }
     }
@@ -1041,7 +1046,7 @@ span.ext {
       padding-top:  25px;
       margin-top:  25px;
       overflow: hidden;
-    background: url("../images/dotted-border.png") repeat-x top;
+      background: url("../images/dotted-border.png") repeat-x top;
       .views-label{
         font-size: 14px;
         font-weight: bold;
@@ -1055,12 +1060,15 @@ span.ext {
         img{
           margin-right:  25px;
           float: left;
+          border: 5px solid #dadadc;
           }
         }
         span{
           font-size:  11px;
           padding-top:  3px;
           font-style: italic;
+          float: left;
+          clear: both;
         }
       }
     }
