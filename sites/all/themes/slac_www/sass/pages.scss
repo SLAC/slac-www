@@ -793,14 +793,16 @@ span.ext {
       display: none;
     }
     .three-col-middle-top{
-      .pane-2{
+/*      .pane-2{
         position: absolute;
         top: -60px;
         right: 0;
-      }
+      }*/
       .lectures-subtitle{
-        position: absolute;
-        top: -35px;
+/*        position: absolute;
+        top: -35px;*/
+        width: 110%;
+        margin: 10px 0 20px -5%;
         left: 0;
         font-size: 1.2em;
         color: #666;
