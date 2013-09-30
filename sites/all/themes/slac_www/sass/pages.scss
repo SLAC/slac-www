@@ -153,6 +153,10 @@ input:focus{
       img{
         width: 73%;
         float:left;
+        filter: none;
+        &:hover{
+          filter: none;
+        }
       }
     }
   }
