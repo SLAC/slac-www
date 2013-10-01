@@ -14,6 +14,7 @@ $plugin = array(
   'regions' => array(
     'left' => t('Left Column'),
     'mainmiddleright' => t('Main Middle+Right Column'),
+    'middle-top-first' => t('Middle Column Top First'),
     'middle-top' => t('Middle Column Top'),
     'middle-center-left' => t('Middle Column Center Left'),
     'middle-center-right' => t('Middle Column Center Right'),
