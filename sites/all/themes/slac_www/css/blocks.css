@@ -1405,12 +1405,13 @@ div table.gadget {
   margin-left: 0 !important; }
 
 /* general links underline adjustment */
-/* line 1137, ../sass/blocks.scss */
+/* line 1138, ../sass/blocks.scss */
 .three-col-middle a:hover,
-.two-col-leftsidebar .general-right a:hover {
+.two-col-leftsidebar .general-right a:hover,
+.general-two-col .general-left a:hover {
   border-bottom: 1px dotted #881728; }
 
-/* line 1145, ../sass/blocks.scss */
+/* line 1146, ../sass/blocks.scss */
 .three-col-middle .page-link .page-link:hover,
 .views-field-field-image a:hover,
 #orgwrapper a.highlight:hover,
@@ -1419,13 +1420,6 @@ a.imgclass:hover,
 a.lightbox-processed:hover {
   border-bottom: none; }
 
-/* line 1149, ../sass/blocks.scss */
+/* line 1150, ../sass/blocks.scss */
 .content-graphic-block a:hover {
   border: 2px solid #807f7f; }
-
-/* */
-/* line 1155, ../sass/blocks.scss */
-#edit-thumbnails label img {
-  max-width: 743px;
-  width: 100%;
-  height: auto; }

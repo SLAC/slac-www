@@ -1134,7 +1134,8 @@ width: 100%;
 /* general links underline adjustment */
 
 .three-col-middle a:hover,
-.two-col-leftsidebar .general-right a:hover{
+.two-col-leftsidebar .general-right a:hover,
+.general-two-col .general-left a:hover{
   border-bottom: 1px dotted #881728;
 }
 .three-col-middle .page-link .page-link:hover,
@@ -1148,12 +1149,4 @@ a.lightbox-processed:hover{
 
 .content-graphic-block a:hover{
   border: 2px solid #807f7f;
-}
-
-/* */
-
-#edit-thumbnails label img{
-  max-width: 743px;
-  width: 100%;
-  height: auto;
 }
