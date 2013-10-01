@@ -231,7 +231,7 @@
 
   Drupal.behaviors.verticalLine = {
     attach: function (context, settings) {
-      $mainHeight = $('.general-two-col').height();
+      $mainHeight = ($('.general-two-col').height())-35;
       $('.vertical-line').css( "height", $mainHeight );
     }
   }
