@@ -16,7 +16,7 @@
         for (var i = 0; i < links_array.length; i++) {
             var link = $.trim(links_array[i]);
             patt = new RegExp(link);
-            if (patt.test(href) == true) {
+            if (patt.test(href) == true || (href.indexOf(link)>=0)) {
                 obj.addClass(css_class);
             }
         }
