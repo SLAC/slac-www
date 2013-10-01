@@ -127,7 +127,7 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
       $options[$image_preset] = $image_element;
     }
   }
-  $options['crop_original_size'] = theme('image_style', array('style_name' => 'original_size', 'path' => $form['#media']->uri, 'attributes' => array('class' => 'pp-crop-thumbnail original-size')));
+  
   $form['options']['thumbnails'] = array(
     '#type' => 'radios',
     '#title' => t('Thumbnail'),
