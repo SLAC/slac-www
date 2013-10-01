@@ -223,6 +223,20 @@
     }
   }
 
+  Drupal.behaviors.youAreBlock = {
+    attach: function (context, settings) {
+      $('.pane-bundle-are-you-block .field-item a').wrapInner('<span></span>');
+    }
+  }
+
+  Drupal.behaviors.verticalLine = {
+    attach: function (context, settings) {
+      $mainHeight = $('.general-two-col').height();
+      $('.vertical-line').css( "height", $mainHeight );
+    }
+  }
+
+
 })(jQuery, Drupal, this, this.document);
 
 

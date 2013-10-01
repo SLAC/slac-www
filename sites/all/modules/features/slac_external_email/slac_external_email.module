@@ -41,13 +41,14 @@ function slac_external_email_theme() {
 function slac_external_email_preprocess_bottom(&$vars) {
   // unset and only make sure we render 1 image for external email
   // main news story
-  // bottom 3 column section
+  // bottom 3 column section 
   $content = $vars['content'];
   if (array_key_exists('field_image', $content)) {
     if (count($content['field_image']['#items']) > 1) {
-      for ($i = 1; $i <= count($content['field_image']['#items']); $i++) {
-        unset($content['field_image']['#items'][$i]);
-        unset($content['field_image'][$i]);
+      for ($i = 1; $i < count($content['field_image']['#items']); $i++) {
+//        unset($content['field_image']['#items'][$i]);
+//        unset($content['field_image'][$i]);
+					$content['field_image'][$i]['#theme'] = '';
       }
       $vars['content'] = $content;
     }
