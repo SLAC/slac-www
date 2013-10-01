@@ -5,7 +5,7 @@
  */
 function pp_crop_permission() {
   return array(
-    'administer crop styles' =>  array(
+    'administer crop styles' => array(
       'title' => t('Administer image crop styles for wysiwyg.'),
       'description' => t('Set styles that will be used for image croping with wysiwyg.'),
     ),
@@ -47,6 +47,7 @@ function pp_crop_wysiwyg_settings_form($form, &$form_state) {
   foreach ($epsacrop_styles as $key => $style) {
     $thumbnail_options[$key] = $style['name'];
   }
+  $thumbnail_options['original_size'] = 'original_size';
 
   $form['crop_styles'] = array(
     '#type' => 'checkboxes',
@@ -74,8 +75,8 @@ function pp_crop_wysiwyg_settings_submit_form_submit($form, &$form_state) {
 }
 
 /**
-* Implements hook_entity_info_alter().
-*/
+ * Implements hook_entity_info_alter().
+ */
 function pp_crop_entity_info_alter(&$entity_info) {
   foreach (_epsacrop_load_styles() as $image_style) {
     $entity_info['file']['view modes']['crop_' . $image_style['name']] = array(
@@ -83,6 +84,10 @@ function pp_crop_entity_info_alter(&$entity_info) {
       'custom settings' => TRUE,
     );
   }
+  $entity_info['file']['view modes']['crop_original_size'] = array(
+      'label' => t('Crop crop_original_size'),
+      'custom settings' => TRUE,
+    );
 }
 
 /**
@@ -122,7 +127,7 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
       $options[$image_preset] = $image_element;
     }
   }
-
+  $options['crop_original_size'] = theme('image_style', array('style_name' => 'original_size', 'path' => $form['#media']->uri, 'attributes' => array('class' => 'pp-crop-thumbnail original-size')));
   $form['options']['thumbnails'] = array(
     '#type' => 'radios',
     '#title' => t('Thumbnail'),
@@ -132,12 +137,12 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
   _epsacrop_include_header_html();
   $form['#attached']['js'][] = drupal_get_path('module', 'pp_crop') . '/js/pp_crop.js';
   $markup = "<a href=\"javascript:Drupal.EPSACrop.dialog('all', '"
-    . 'all' . "', '"
-    . 'all' . "', '"
-    . $file->fid . "', '"
-    . image_style_url('epsacrop_thumb', $file->uri) . "', ["
-    . $file->image_dimensions['width'] . ","
-    . $file->image_dimensions['height'] . "]);\">" . t("manage image crops") . "</a><br><br>";
+      . 'all' . "', '"
+      . 'all' . "', '"
+      . $file->fid . "', '"
+      . image_style_url('epsacrop_thumb', $file->uri) . "', ["
+      . $file->image_dimensions['width'] . ","
+      . $file->image_dimensions['height'] . "]);\">" . t("manage image crops") . "</a><br><br>";
   $form['crop'] = array(
     '#type' => 'markup',
     '#markup' => $markup
@@ -194,13 +199,13 @@ function theme_images_thumbnails_list($variables) {
 
   $file = file_load($variables['file']);
   $manage_crop_link = "<span class=\"manage-link-wrapper\"></br><a class=\"button manage-crop-link\" href=\"javascript:Drupal.EPSACrop.dialog("
-    . "'" . $variables['entity_type'] . "',"
-    . "'" . $variables['field_name'] . "' ,"
-    . "'" . $variables['bundle'] . "' , '"
-    . $file->fid . "', '"
-    . image_style_url('epsacrop_thumb', $file->uri) . "', ["
-    . $file->image_dimensions['width'] . ","
-    . $file->image_dimensions['height'] . "]);\">" . t("Change thumbnails") . "</a></br></br></span>";
+      . "'" . $variables['entity_type'] . "',"
+      . "'" . $variables['field_name'] . "' ,"
+      . "'" . $variables['bundle'] . "' , '"
+      . $file->fid . "', '"
+      . image_style_url('epsacrop_thumb', $file->uri) . "', ["
+      . $file->image_dimensions['width'] . ","
+      . $file->image_dimensions['height'] . "]);\">" . t("Change thumbnails") . "</a></br></br></span>";
 
   $thumbnail_options = $variables['thumbnail_options'];
 
@@ -236,7 +241,7 @@ function theme_image_style_lightbox($variables) {
     'height' => '',
     'alt' => $alt,
     'title' => $title,
-  ));
+      ));
 
   //Create 'lightbox_large_image' image style if it not exists.
   if (!image_style_load('lightbox_large_image')) {
@@ -256,15 +261,15 @@ function theme_image_style_lightbox($variables) {
   // See Download File module permission to set restrictions for download.
   $image_download_href = 'download/file/fid/' . $file->fid;
   $image_download_link = array(
-      '#type' => 'link',
-      '#title' => t('Download original image'),
-      '#href' => $image_download_href,
-      '#options' => array(
-          'html' => TRUE,
-          'attributes' => array(
-              'class' => array('lightbox-download-link'),
-          ),
+    '#type' => 'link',
+    '#title' => t('Download original image'),
+    '#href' => $image_download_href,
+    '#options' => array(
+      'html' => TRUE,
+      'attributes' => array(
+        'class' => array('lightbox-download-link'),
       ),
+    ),
   );
 
   $image_effect_width = 0;
@@ -363,7 +368,7 @@ function pp_crop_element_process($element, $form_state, $form) {
   $element['manage_thumbnails'] = array(
     '#type' => 'markup',
     '#markup' => '<div class="theme-variables" data-theme-variables="' . urlencode(json_encode($theme_variables)) . '"></div>'
-               . '<div class="manage-thumbnails-popup"></div>',
+    . '<div class="manage-thumbnails-popup"></div>',
   );
 
   return $element;
@@ -387,7 +392,7 @@ function pp_crop_get_images_thumbnails(&$form, $file) {
         'style_name' => $image_style_name,
         'path' => $file->uri,
         'attributes' => array('class' => 'pp-crop-thumbnail'),
-      ));
+          ));
 
       preg_match('/\?itok=[a-zA-Z0-9-_]*/', $rendered_image, $matches);
       $rendered_image = str_replace($matches[0], $matches[0] . '&' . rand(0, 1000) . '=' . rand(0, 1000), $rendered_image);
@@ -427,7 +432,6 @@ function pp_crop_ajax_manage_thumbnails($settings, $fid) {
   exit();
 }
 
-
 /**
  * Implements hook_field_formatter_info().
  */
@@ -444,7 +448,6 @@ function pp_crop_field_formatter_info() {
   }
   return $formatters;
 }
-
 
 /**
  * Implements hook_field_formatter_settings().
