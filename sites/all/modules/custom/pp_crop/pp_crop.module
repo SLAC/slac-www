@@ -113,7 +113,7 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
   if ($file->type != 'image') {
     return;
   }
-
+  drupal_add_css(drupal_get_path('module', 'pp_crop') . '/css/pp_crop.css');
   $options = array();
   $styles = variable_get('pp_crop_wysiwyg_settings', array());
   $thumbnail_options = pp_crop_get_images_thumbnails($form, $file);
