@@ -17,17 +17,17 @@
 <div class="panel-display three-col clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
   <div class="three-col-middle-right">
     <div class="panel-panel three-col-middle">
-      <div class="panel-panel three-col-middle-top-first">
-        <?php if ($content['middle-top-first']): ?>
-          <div class="inside"><?php print $content['middle-top-first']; ?></div>
-        <?php endif ?>
-      </div>
       <div class="lectures-gray-content">
         <div class="panel-panel three-col-middle-top">
           <?php if ($content['middle-top']): ?>
             <div class="inside"><?php print $content['middle-top']; ?></div>
           <?php endif ?>
         </div>
+      <div class="panel-panel three-col-middle-top-seccond">
+        <?php if ($content['middle-top-seccond']): ?>
+          <div class="inside"><?php print $content['middle-top-seccond']; ?></div>
+        <?php endif ?>
+      </div>
         <div class="panel-panel three-col-middle-center">
           <div class="panel-panel three-col-middle-center-left">
             <?php if ($content['middle-center-left']): ?>
