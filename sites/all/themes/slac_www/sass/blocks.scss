@@ -317,15 +317,16 @@ $linkcolor: #990000;
     }
     .youtube-video-popup a {
       @include links(11px);
-      float: left;
       width: 100%;
     }
   }
-  a.youtube-title{
-    padding-top: 12px;
+  a.youtube-title:hover{
+    border-bottom: 1px dotted #881728;
   }
   .youtube-thumbnail{
     position: relative;
+    float: left;
+    margin-bottom: 12px;
     &:after{
       content: url('../images/video-icon.png');
       float: right;
@@ -344,6 +345,9 @@ $linkcolor: #990000;
   color: #555;
   a{
     font-size: 11px;
+    &:hover{
+      border-bottom: 1px dotted #881728;
+    }
   }
   img{
     width: 100%;
@@ -475,6 +479,9 @@ $linkcolor: #990000;
   }
   a {
     font-style: normal;
+    &:hover{
+      border-bottom: 1px dotted #881728;
+    }
   }
 }
 
@@ -752,7 +759,6 @@ div.pane-node-body{
   .highlited{
     margin-bottom: 17px;
   }
-     
   .pane-content{
     line-height: 18px;
     width: 98.5%;
@@ -764,14 +770,17 @@ div.pane-node-body{
 
   .views-field-nothing{
     float:left;
-    width: 66%;  
+    width: 66%;
   }
 
-  .views-field-title a{ 
+  .views-field-title a{
     font-size: 16px;
     font-weight: 100;
     line-height: normal;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    &:hover{
+      border-bottom: 1px dotted #881728;
+    }
   }
 
   .views-field-field-image{
@@ -795,7 +804,7 @@ div.pane-node-body{
   margin-top: 5px;
 }
 
-.middleleft { 
+.middleleft {
   .views-row{
     width: 100%;
     border-bottom: 1px solid #bbbdbe;
@@ -805,7 +814,6 @@ div.pane-node-body{
     margin-bottom: 20px;
     overflow: hidden;
   }
-  
   .views-row-last{
     border: none;
     padding-bottom: 0;
@@ -813,8 +821,11 @@ div.pane-node-body{
   }
 
   .views-field-title a{
-    font-size: 13px;  
-    padding-bottom: 5px;
+    font-size: 13px;
+    margin-bottom: 5px;
+    &:hover{
+      border-bottom: 1px dotted #881728;
+    }
   }
 
   .views-field-nothing{
@@ -883,10 +894,9 @@ div.pane-node-body{
   }
 
   .views-field-title a{
-    display: block;
     font-size: 13px;
     font-weight: bold;
-    padding-bottom: 4px;
+    margin-bottom: 4px;
   }
 
   .views-field-body{
@@ -1117,4 +1127,24 @@ width: 100%;
 
 .move-title-left .pane-title{
   margin-left: 0 !important;
+}
+
+
+/* general links underline adjustment */
+
+.three-col-middle a:hover,
+.two-col-leftsidebar .general-right a:hover{
+  border-bottom: 1px dotted #881728;
+}
+.three-col-middle .page-link .page-link:hover,
+.views-field-field-image a:hover,
+#orgwrapper a.highlight:hover,
+a.imgclass:hover,
+.ical-link a:hover,
+a.lightbox-processed:hover{
+  border-bottom: none;
+}
+
+.content-graphic-block a:hover{
+  border: 2px solid #807f7f;
 }
