@@ -565,6 +565,7 @@ div.pane-node-body{
   }
   img{
     max-width: 100%;
+    height: auto;
   }
 }
 
@@ -1147,4 +1148,12 @@ a.lightbox-processed:hover{
 
 .content-graphic-block a:hover{
   border: 2px solid #807f7f;
+}
+
+/* */
+
+#edit-thumbnails label img{
+  max-width: 743px;
+  width: 100%;
+  height: auto;
 }
