@@ -229,6 +229,12 @@
     }
   }
 
+  Drupal.behaviors.verticalLine = {
+    attach: function (context, settings) {
+      $mainHeight = $('.general-two-col').height();
+      $('.vertical-line').css( "height", $mainHeight );
+    }
+  }
 
 
 })(jQuery, Drupal, this, this.document);
