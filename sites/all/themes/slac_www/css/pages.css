@@ -2331,11 +2331,11 @@ a.imageLessButton {
     padding-bottom: 26px; }
 
 @media (max-width: 500px) {
-  /* line 2111, ../sass/pages.scss */
+  /* line 2112, ../sass/pages.scss */
   .page-basic .pane-pane-header #search-box {
     display: none; }
 
-  /* line 2115, ../sass/pages.scss */
+  /* line 2116, ../sass/pages.scss */
   .mobile-search-trigger {
     margin: 0;
     width: 52px;
@@ -2347,28 +2347,28 @@ a.imageLessButton {
     background: url("../images/header-bg.jpg") repeat-x top;
     cursor: pointer;
     display: block; }
-    /* line 2126, ../sass/pages.scss */
+    /* line 2127, ../sass/pages.scss */
     .mobile-search-trigger span {
       background: url("../images/mobile-search.png") no-repeat top right;
       width: 52px;
       height: 42px;
       display: block; }
 
-  /* line 2134, ../sass/pages.scss */
+  /* line 2135, ../sass/pages.scss */
   .mobile-search-box {
     display: none;
     width: 100%;
     clear: both; }
-    /* line 2138, ../sass/pages.scss */
+    /* line 2139, ../sass/pages.scss */
     .mobile-search-box .pane-content {
       padding: 5px 0 12px;
       background: #8e001a;
       border-top: 1px solid #fff;
       overflow: hidden; }
-    /* line 2144, ../sass/pages.scss */
+    /* line 2145, ../sass/pages.scss */
     .mobile-search-box .form-item {
       margin: 0; }
-    /* line 2147, ../sass/pages.scss */
+    /* line 2148, ../sass/pages.scss */
     .mobile-search-box #slac-search {
       line-height: 35px;
       border: 2px solid #8c8b8b;
@@ -2377,11 +2377,11 @@ a.imageLessButton {
       padding: 0 3%;
       width: 59%;
       float: left; }
-    /* line 2156, ../sass/pages.scss */
+    /* line 2157, ../sass/pages.scss */
     .mobile-search-box form {
       width: 96%;
       margin: 0 2%; }
-    /* line 2160, ../sass/pages.scss */
+    /* line 2161, ../sass/pages.scss */
     .mobile-search-box .form-text {
       height: 35px;
       background: none;
@@ -2389,12 +2389,12 @@ a.imageLessButton {
       padding: 0;
       color: #aaa;
       width: 100%; }
-    /* line 2168, ../sass/pages.scss */
+    /* line 2169, ../sass/pages.scss */
     .mobile-search-box #slac-search-button {
       float: right;
       width: 30%;
       max-width: 70px; }
-    /* line 2173, ../sass/pages.scss */
+    /* line 2174, ../sass/pages.scss */
     .mobile-search-box .form-submit {
       background: #8c8b8b;
       border: none;
@@ -2403,7 +2403,7 @@ a.imageLessButton {
       color: #fff;
       margin: 0;
       width: 100%; }
-    /* line 2182, ../sass/pages.scss */
+    /* line 2183, ../sass/pages.scss */
     .mobile-search-box #slac-search-options {
       display: block;
       overflow: hidden;
@@ -2415,64 +2415,92 @@ a.imageLessButton {
       background: #f2f2f2;
       height: 28px;
       position: static; }
-      /* line 2193, ../sass/pages.scss */
+      /* line 2194, ../sass/pages.scss */
       .mobile-search-box #slac-search-options .form-item .form-type-radio {
         margin: 7px 0 4px 10%;
         color: #000;
         width: 45%; }
-      /* line 2198, ../sass/pages.scss */
+      /* line 2199, ../sass/pages.scss */
       .mobile-search-box #slac-search-options .form-item .form-type-radio:first-child {
         margin-left: 0; }
-    /* line 2202, ../sass/pages.scss */
+    /* line 2203, ../sass/pages.scss */
     .mobile-search-box .form-type-radio input {
       margin-top: 0;
       padding: 0; }
-    /* line 2206, ../sass/pages.scss */
+    /* line 2207, ../sass/pages.scss */
     .mobile-search-box .form-type-radio label {
       float: left;
       height: 14px; } }
+@media (max-width: 370px) {
+  /* line 2218, ../sass/pages.scss */
+  .pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side,
+  .pane-next-lecture .view-content .views-field-field-image {
+    float: none;
+    margin: auto; }
+  /* line 2223, ../sass/pages.scss */
+  .pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side a,
+  .pane-next-lecture .view-content .views-field-field-image a {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    display: block; }
+  /* line 2230, ../sass/pages.scss */
+  .pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side a img,
+  .pane-next-lecture .view-content .views-field-field-image a img {
+    margin: auto;
+    float: none; }
+  /* line 2234, ../sass/pages.scss */
+  .pane-next-lecture .view-content .views-field-nothing-2 .views-label {
+    text-align: center; }
+  /* line 2237, ../sass/pages.scss */
+  .pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side span {
+    text-align: center;
+    margin: auto;
+    display: block;
+    width: 100%;
+    padding: 0 0 10px; } }
 /* attending lecture page */
 @media (max-width: 900px) {
-  /* line 2217, ../sass/pages.scss */
+  /* line 2251, ../sass/pages.scss */
   .page-node-2568.section-community .three-col-middle > div {
     padding-right: 0;
     border-right: none; } }
-/* line 2227, ../sass/pages.scss */
+/* line 2261, ../sass/pages.scss */
 .section-content.page-node-2570 .content .three-col-middle-right {
   width: 100%;
   margin-left: 0; }
-  /* line 2230, ../sass/pages.scss */
+  /* line 2264, ../sass/pages.scss */
   .section-content.page-node-2570 .content .three-col-middle-right .three-col-middle {
     width: 100%;
     margin-right: 0; }
 
 /* Custom pages */
-/* line 2239, ../sass/pages.scss */
+/* line 2273, ../sass/pages.scss */
 .page-node-1242 .pane-page-content > .pane-title {
   margin-bottom: 10px; }
 
-/* line 2243, ../sass/pages.scss */
+/* line 2277, ../sass/pages.scss */
 .page-node-1233 .content-block .content-block-body > h3 {
   display: list-item;
   color: #696969;
   margin-left: 40px;
   margin-bottom: 6px; }
-  /* line 2248, ../sass/pages.scss */
+  /* line 2282, ../sass/pages.scss */
   .page-node-1233 .content-block .content-block-body > h3 + ul {
     margin-left: 25px; }
 
-/* line 2253, ../sass/pages.scss */
+/* line 2287, ../sass/pages.scss */
 .field-name-body .field-item > h5,
 .newsarticlebodyimagetext {
   font-size: 13px;
   color: #474748;
   margin-bottom: 10px; }
 
-/* line 2258, ../sass/pages.scss */
+/* line 2292, ../sass/pages.scss */
 .field-name-body .field-item > h5 {
   font-weight: bold; }
 
-/* line 2261, ../sass/pages.scss */
+/* line 2295, ../sass/pages.scss */
 .newsarticlebodyimagetext {
   margin-top: 10px;
   line-height: 18px; }

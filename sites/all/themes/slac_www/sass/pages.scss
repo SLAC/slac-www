@@ -2106,12 +2106,13 @@ a.imageLessButton {
   }
 }
 
+
 @media (max-width: 500px) {
-  
+
   .page-basic .pane-pane-header #search-box{
     display: none;
   }
-  
+
   .mobile-search-trigger{
     margin: 0;
     width: 52px;
@@ -2129,7 +2130,7 @@ a.imageLessButton {
       height: 42px;
       display: block;
     }
-  }  
+  }
 
   .mobile-search-box{
     display: none;
@@ -2155,7 +2156,7 @@ a.imageLessButton {
     }
     form{
       width: 96%;
-      margin: 0 2%;  
+      margin: 0 2%;
     }
     .form-text{
       height: 35px;
@@ -2206,6 +2207,39 @@ a.imageLessButton {
     .form-type-radio label{
       float: left;
       height: 14px;
+    }
+  }
+}
+
+
+@media (max-width: 370px) {
+  .pane-next-lecture .view-content{
+    .views-field-nothing-2 .about-speaker-side,
+    .views-field-field-image{
+      float: none;
+      margin: auto;
+    }
+    .views-field-nothing-2 .about-speaker-side a,
+    .views-field-field-image a{
+      margin: auto;
+      width:  100%;
+      text-align: center;
+      display: block;
+    }
+    .views-field-nothing-2 .about-speaker-side a img,
+    .views-field-field-image a img{
+      margin: auto;
+      float: none;
+    }
+    .views-field-nothing-2 .views-label{
+      text-align: center;
+    }
+    .views-field-nothing-2 .about-speaker-side span{
+      text-align: center;
+      margin: auto;
+      display: block;
+      width:  100%;
+      padding:  0 0 10px;
     }
   }
 }
