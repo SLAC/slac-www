@@ -15,6 +15,7 @@ $plugin = array(
     'left' => t('Left Column'),
     'mainmiddleright' => t('Main Middle+Right Column'),
     'middle-top' => t('Middle Column Top'),
+    'middle-top-seccond' => t('Middle Column Top Seccond'),
     'middle-center-left' => t('Middle Column Center Left'),
     'middle-center-right' => t('Middle Column Center Right'),
     'middle-bottom-left' => t('Middle Column Bottom Left'),

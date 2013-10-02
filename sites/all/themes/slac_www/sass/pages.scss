@@ -468,19 +468,6 @@ a.lightbox-processed{
   }
 }
 
-@media (max-width: 600px){
-  #outerImageContainer,
-  #imageDataContainer{
-    width: 95% !important;
-    height: auto !important;
-  }
-  #modalContainer{
-    width: 96% !important;
-    height: auto !important;
-    padding: 2% !important;
-  }
-}
-
 /* Meeting Rooms table */
 .section-visiting-slac{
   table{
@@ -511,20 +498,6 @@ a.lightbox-processed{
   }
 }
 
-@media (max-width: 600px){ 
-  .section-visiting-slac table .header {
-    background-image: none;
-    &:after {
-      content: '';
-      display: inline-block;
-      width: 9px;
-      height: 9px;
-      line-height: 9px;
-      background: url('../images/bg.gif') no-repeat center center;
-      margin-left: 4px;
-    }
-  }
-}
 
 span.ext {
   padding: 0;
@@ -767,166 +740,17 @@ span.ext {
   margin-top: 20px;
 }
 
-.node-type-lecture{
-  line-height: normal;
-  .views-field-field-speaker-name{
-    float:left;
-  } 
-  .three-col-middle{
-    position: relative;
-    > div{
-      width: 90%;
-       margin: 0 auto;
-       margin-bottom: 30px;
-       &:after{
-        content: "";
-        display: table;
-        clear: both;
-       }
-    }
-    .jwplayer{
-      width: 100% !important; 
-    }
-    .panel-separator{
-      display: none;
-    }
-    .three-col-middle-top{
-/*      .pane-2{
-        position: absolute;
-        top: -60px;
-        right: 0;
-      }*/
-      .lectures-subtitle{
-/*        position: absolute;
-        top: -35px;*/
-        width: 110%;
-        margin: 10px 0 20px -5%;
-        left: 0;
-        font-size: 1.2em;
-        color: #666;
-      }
-      .pane-node-title{
-        padding-bottom: 4px;
-        h2{
-          font-size: 1.4em;
-          font-weight: bold;
-        }
-      }
-      .past-lectures-wrapper{
-        width: 110%;
-        margin: 10px 0 20px -5%;
-        border-bottom: 2px solid #831425;
-        &:after{
-          content: "";
-          display: table;
-          clear: both;
-        }
-        .past-lectures-text{
-          display: inline;
-          color: #7f6332;
-          text-transform: uppercase;
-        }
-        .social-icon-block{
-          float: right;
-          margin-top: -8px;
-        }
-      }
-      .pane-node-field-speaker-name,
-      .pane-5,
-      .pane-node-field-location{
-        display: inline-block;
-        padding-bottom: 10px;
-        & *{
-          font-size: 13px;
-          color: #474748;
-        }
-      }
-      .pane-node-created{
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-top: 15px;
-      }
-      .pane-node-field-video{
-        clear:both;
-        width: 100%;
-        padding: 30px 0;
-        background: url("../images/dotted-border.png") repeat-x bottom;
-      }      
-    }
-
-    .three-col-middle-center{
-      margin-bottom: 5px;
-      .pane-node-body .field-label{
-        margin-bottom: 10px;
-        font-size: 1.1em;
-        font-weight: bold;
-      }
-
-      .three-col-middle-center-left .inside{
-        padding-right: 4%;
-        text-align: justify;
-      }
-      .pane-node-field-image{
-        margin: 0;
-        padding-top: 20px;
-        background: transparent;
-        .field-item {
-          padding: 7px;
-          margin: 0 0 10px 0 !important;          
-          background: #dadadc;
-          float: none !important;
-        }
-        img{
-          display: block;
-          width: 100% !important;
-          height: auto !important;
-        }
-      }
-    }
-
-    .three-col-middle-bottom{
-      margin-bottom: 0;
-      .three-col-middle-bottom-left .inside{
-        padding-left: 4%;
-      }
-      .about-label{
-        margin-bottom: 10px;
-        font-size: 1.1em;
-        font-weight: bold;
-      }
-      .pane-node-field-speaker-image{
-        .field-label{
-          display: none;
-        }
-        .field-item{
-          background: #dadadc;
-          padding: 7px;
-        }
-        img{
-          display: block;
-          width: 100% !important;
-          height: auto !important;
-        }
-      }
-      .speaker-name{
-        padding-top: 5px;
-        font-style: italic;
-        color: #666;
-      }
-      .pane-node-field-about-the-speaker{
-        padding-top: 20px;
-        line-height: 20px;
-        font-size: 13px;
-        color: #474748;
-        text-align: justify;
-      }
-    }
-  }
-}
-
-/**/
+/* Lecture page */
 
 .pane-next-lecture{
+  .pane-title{
+    border-bottom: 2px solid #831425;
+    font-size: 14px;
+    padding: 6px 0 2px 7px;
+    letter-spacing: 1px;
+    color: #7F6332;
+    text-transform: uppercase;
+  }
   p,
   .lectures-text{
     line-height: 20px;
@@ -940,6 +764,13 @@ span.ext {
     margin-bottom: 30px;
     overflow: visible;
     padding:  0;
+    p{
+      margin-bottom: 20px;
+    }
+    a{
+      margin-left: 10px;
+      line-height: 40px;
+    }
   }
   .sheduled-lectures-text{
     width: 100%;
@@ -964,16 +795,14 @@ span.ext {
     padding: 20px 5% ;
     margin: auto;
     background: #f6f6f6;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
-  background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-  background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-  background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-  background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
-  line-height: normal;
+    background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
+    background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
+    line-height: normal;
   }
-
 
   .lectures-image{
     margin-bottom: 20px;
@@ -993,6 +822,9 @@ span.ext {
 
   .view-content {
     color: #474748;
+    a img {
+      border: 4px solid #dadadc;
+    }
     .views-field-title{
       font-size: 18px;
       font-weight: bold;
@@ -1052,13 +884,14 @@ span.ext {
         display: block;
       }
       .about-speaker-side{
+        overflow: hidden;
+        float: left;
         a{
         margin: 0;
         float: left;
         img{
           margin-right:  25px;
           float: left;
-          border: 5px solid #dadadc;
           }
         }
         span{
@@ -1074,8 +907,136 @@ span.ext {
 }
 
 
+/* Node type lecture */
 
+.node-type-lecture .three-col-middle{
+  position: relative;
+  margin-top: 0;
+  .lecture-past-link{
+    position: absolute;
+    top: -38px;
+    right:  0;
+  }
+  .lectures-subtitle{
+    margin:  -17px 0 50px;
+    color: #9B9B9B;
+    font-size:  14px;
+  }
+  .pane-next-lecture .view-header {
+    position: relative;
+    padding-bottom: 1px;
+  }
+  .past-lectures-wrapper{
+    position: relative;
+    .social-icon-block{
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+      a{margin-left: 10px;}
+    }
+  }
+  .past-lectures-text{
+    width: 100%;
+    border-bottom: 2px solid #831425;
+    margin: 35px 0 0;
+    color: #7f6332;
+    text-transform: uppercase;
+  }
 
+  .three-col-middle-top-seccond{
+    .pane-node-title{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .view{
+      font-size: 14px; 
+    }
+    .pane-node-field-lecture-date{
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .pane-node-field-video{
+      clear:both;
+      width: 100%;
+      padding: 30px 0;
+      margin-bottom: 25px;
+      background: url("../images/dotted-border.png") repeat-x bottom;
+    }
+  }
+
+  .three-col-middle-center{
+    .field-name-body .field-items .field-item p{
+      margin-top:  0;
+    }
+    .field-label{
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 3px;
+      display: block;
+    }
+  }
+
+  .three-col-middle-bottom{
+    .pane-node-field-speaker-image{
+      .field-label{
+        display: none;
+      }
+      img{
+        width:  95%;
+        height: auto;
+      }
+    }
+    .field-name-field-about-the-speaker p{
+      line-height: 20px;
+      font-size: 13px;
+      color: #474748;
+      margin-bottom: 10px;
+    }
+    .about-label{
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 3px;
+      display: block;
+    }
+    .speaker-name{
+      .field-item{
+        font-size: 11px;
+        padding-top: 3px;
+        font-style: italic;
+        float: left;
+        clear: both;
+      }
+    }
+  }
+  .pane-node-field-image{
+    width: auto;
+    background: transparent;
+  }
+}
+
+.lectures-gray-content{
+  width:  90%;
+  margin-top:  -1px;
+  padding: 20px 5% ;
+  margin: auto;
+  background: #f6f6f6;
+  background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
+  background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+  background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+  background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+  background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
+  line-height: normal;
+  overflow: hidden;
+  a img{
+      border: 4px solid #dadadc;
+  }
+}
+
+.jwplayer{
+  width:  100% !important;
+}
 
 /* Index page */
 
@@ -1623,23 +1584,34 @@ a.imageLessButton {
   }
 }
 
-/*
-@media (max-width: 900px) and (min-width: 601px){
-  .pane-page-content > .pane-title{
-    width: 70% !important;
-    margin-left: 30% !important;
-  }
-  .three-col-middle-right{
-    width: 70% !important;
-    margin-left: 30% !important;
-  }
-  .three-col-left{
-    width: 30% !important;
-    margin-right: -30% !important;
-  }
-}*/
-
 @media (max-width: 600px) {
+
+  #outerImageContainer,
+  #imageDataContainer{
+    width: 95% !important;
+    height: auto !important;
+  }
+  #modalContainer{
+    width: 96% !important;
+    height: auto !important;
+    padding: 2% !important;
+  }
+
+  .section-visiting-slac table .header {
+    background-image: none;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      line-height: 9px;
+      background: url('../images/bg.gif') no-repeat center center;
+      margin-left: 4px;
+    }
+  }
+  .node-type-lecture .three-col-middle-bottom-left{
+    width: 43%;
+  }
   .general-two-col{
     .general-left{
       margin-left: 0;
@@ -1687,8 +1659,7 @@ a.imageLessButton {
       padding-bottom: 15px;
       float: none;
       margin: auto;
-    }  
-    
+    }
     .panels-flexible-region-last{
       clear:both;
       float:none;
@@ -1880,22 +1851,8 @@ a.imageLessButton {
         display: none;
       }
     }
-    .three-col-middle-center,
-    .three-col-middle-bottom{
-      background: url("../images/dotted-border.png") repeat-x bottom;
-    }
     .three-col-middle-bottom{
       padding: 20px 0 10px 0;
-    }
-    .three-col-middle-center-left,
-    .three-col-middle-center-right,
-    .three-col-middle-bottom-left,
-    .three-col-middle-bottom-right{
-      width: 100%;
-      float: none;
-      .inside{
-        padding: 0 0 10px 0 !important;
-      }
     }
     .three-col-middle-center{
       .field-label{
@@ -1905,14 +1862,8 @@ a.imageLessButton {
         padding-top: 0 !important;
       }
     }
-    .three-col-middle-bottom{
-      position: relative;
-      padding-top: 10px;
-      .about-label{
-        position: absolute;
-        top: 10px;
-        left: 0;
-      }
+    .three-col-middle-bottom-left{
+      width: 44%;
     }
   }
 }
@@ -1967,12 +1918,13 @@ a.imageLessButton {
   }
 }
 
+
 @media (max-width: 500px) {
-  
+
   .page-basic .pane-pane-header #search-box{
     display: none;
   }
-  
+
   .mobile-search-trigger{
     margin: 0;
     width: 52px;
@@ -1990,7 +1942,7 @@ a.imageLessButton {
       height: 42px;
       display: block;
     }
-  }  
+  }
 
   .mobile-search-box{
     display: none;
@@ -2016,7 +1968,7 @@ a.imageLessButton {
     }
     form{
       width: 96%;
-      margin: 0 2%;  
+      margin: 0 2%;
     }
     .form-text{
       height: 35px;
@@ -2069,6 +2021,60 @@ a.imageLessButton {
       height: 14px;
     }
   }
+}
+
+
+@media (max-width: 370px) {
+
+  .pane-next-lecture .view-content,
+  .html.node-type-lecture .three-col-middle{
+    .views-field-nothing-2 .about-speaker-side,
+    .views-field-field-image{
+      float: none;
+      margin: auto;
+    }
+    .views-field-nothing-2 .about-speaker-side a,
+    .views-field-field-image a,
+    .pane-node-field-speaker-image a,
+    .lectures-gray-content a{
+      margin: auto;
+      width:  100%;
+      text-align: center;
+      display: block;
+    }
+    .views-field-nothing-2 .about-speaker-side a img,
+    .views-field-field-image a img,
+    .pane-node-field-speaker-image img,
+    .lectures-gray-content a img{
+      margin: auto;
+      float: none;
+      width: auto;
+    }
+    .views-field-nothing-2 .views-label,
+    .about-label{
+      text-align: center;
+    }
+    .views-field-nothing-2 .about-speaker-side span,
+    .speaker-name .field-item{
+      text-align: center;
+      margin: auto;
+      display: block;
+      width:  100%;
+      padding:  0 0 10px;
+    }
+  }
+
+  .node-type-lecture{
+    .three-col-middle-center-left,
+    .three-col-middle-center-right,
+    .three-col-middle-bottom-left,
+    .three-col-middle-bottom-right {
+      width: 100%;
+      float: none;
+      margin: auto;
+    }
+  }
+
 }
 
 /* attending lecture page */
