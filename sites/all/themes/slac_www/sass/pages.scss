@@ -919,9 +919,18 @@ span.ext {
 
 
 
+
 /* Lecture page */
 
 .pane-next-lecture{
+  .pane-title{
+    border-bottom: 2px solid #831425;
+    font-size: 14px;
+    padding: 6px 0 2px 7px;
+    letter-spacing: 1px;
+    color: #7F6332;
+    text-transform: uppercase;
+  }
   p,
   .lectures-text{
     line-height: 20px;
@@ -935,6 +944,13 @@ span.ext {
     margin-bottom: 30px;
     overflow: visible;
     padding:  0;
+    p{
+      margin-bottom: 20px;
+    }
+    a{
+      margin-left: 10px;
+      line-height: 40px;
+    }
   }
   .sheduled-lectures-text{
     width: 100%;
@@ -1047,6 +1063,8 @@ span.ext {
         display: block;
       }
       .about-speaker-side{
+        overflow: hidden;
+        float: left;
         a{
         margin: 0;
         float: left;
