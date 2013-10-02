@@ -1,3 +1,12 @@
+#page-manager-edit  .three-col-middle-center-right,
+#page-manager-edit .three-col-middle-bottom-right{
+  float: left;
+  width: 65%;
+}
+
+
+
+
 #page-manager-edit .three-col-left,
 #page-manager-edit .three-col-right{
   width: 25%;
