@@ -975,14 +975,13 @@ span.ext {
     padding: 20px 5% ;
     margin: auto;
     background: #f6f6f6;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
-  background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-  background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-  background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-  background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
-  line-height: normal;
+    background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
+    background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+    background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
+    line-height: normal;
   }
 
 
