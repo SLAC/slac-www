@@ -2028,7 +2028,7 @@ a.imageLessButton {
 @media (max-width: 370px) {
 
   .pane-next-lecture .view-content,
-  .node-type-lecture .three-col-middle{
+  .html.node-type-lecture .three-col-middle{
     .views-field-nothing-2 .about-speaker-side,
     .views-field-field-image{
       float: none;
@@ -2045,9 +2045,11 @@ a.imageLessButton {
     }
     .views-field-nothing-2 .about-speaker-side a img,
     .views-field-field-image a img,
-    .pane-node-field-speaker-image img{
+    .pane-node-field-speaker-image img,
+    .lectures-gray-content a img{
       margin: auto;
       float: none;
+      width: auto;
     }
     .views-field-nothing-2 .views-label,
     .about-label{
@@ -2070,6 +2072,7 @@ a.imageLessButton {
     .three-col-middle-bottom-right {
       width: 100%;
       float: none;
+      margin: auto;
     }
   }
 

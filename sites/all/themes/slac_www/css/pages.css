@@ -2256,8 +2256,8 @@ a.imageLessButton {
   /* line 2033, ../sass/pages.scss */
   .pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side,
   .pane-next-lecture .view-content .views-field-field-image,
-  .node-type-lecture .three-col-middle .views-field-nothing-2 .about-speaker-side,
-  .node-type-lecture .three-col-middle .views-field-field-image {
+  .html.node-type-lecture .three-col-middle .views-field-nothing-2 .about-speaker-side,
+  .html.node-type-lecture .three-col-middle .views-field-field-image {
     float: none;
     margin: auto; }
   /* line 2040, ../sass/pages.scss */
@@ -2265,89 +2265,93 @@ a.imageLessButton {
   .pane-next-lecture .view-content .views-field-field-image a,
   .pane-next-lecture .view-content .pane-node-field-speaker-image a,
   .pane-next-lecture .view-content .lectures-gray-content a,
-  .node-type-lecture .three-col-middle .views-field-nothing-2 .about-speaker-side a,
-  .node-type-lecture .three-col-middle .views-field-field-image a,
-  .node-type-lecture .three-col-middle .pane-node-field-speaker-image a,
-  .node-type-lecture .three-col-middle .lectures-gray-content a {
+  .html.node-type-lecture .three-col-middle .views-field-nothing-2 .about-speaker-side a,
+  .html.node-type-lecture .three-col-middle .views-field-field-image a,
+  .html.node-type-lecture .three-col-middle .pane-node-field-speaker-image a,
+  .html.node-type-lecture .three-col-middle .lectures-gray-content a {
     margin: auto;
     width: 100%;
     text-align: center;
     display: block; }
-  /* line 2048, ../sass/pages.scss */
+  /* line 2049, ../sass/pages.scss */
   .pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side a img,
   .pane-next-lecture .view-content .views-field-field-image a img,
   .pane-next-lecture .view-content .pane-node-field-speaker-image img,
-  .node-type-lecture .three-col-middle .views-field-nothing-2 .about-speaker-side a img,
-  .node-type-lecture .three-col-middle .views-field-field-image a img,
-  .node-type-lecture .three-col-middle .pane-node-field-speaker-image img {
+  .pane-next-lecture .view-content .lectures-gray-content a img,
+  .html.node-type-lecture .three-col-middle .views-field-nothing-2 .about-speaker-side a img,
+  .html.node-type-lecture .three-col-middle .views-field-field-image a img,
+  .html.node-type-lecture .three-col-middle .pane-node-field-speaker-image img,
+  .html.node-type-lecture .three-col-middle .lectures-gray-content a img {
     margin: auto;
-    float: none; }
-  /* line 2053, ../sass/pages.scss */
+    float: none;
+    width: auto; }
+  /* line 2055, ../sass/pages.scss */
   .pane-next-lecture .view-content .views-field-nothing-2 .views-label,
   .pane-next-lecture .view-content .about-label,
-  .node-type-lecture .three-col-middle .views-field-nothing-2 .views-label,
-  .node-type-lecture .three-col-middle .about-label {
+  .html.node-type-lecture .three-col-middle .views-field-nothing-2 .views-label,
+  .html.node-type-lecture .three-col-middle .about-label {
     text-align: center; }
-  /* line 2057, ../sass/pages.scss */
+  /* line 2059, ../sass/pages.scss */
   .pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side span,
   .pane-next-lecture .view-content .speaker-name .field-item,
-  .node-type-lecture .three-col-middle .views-field-nothing-2 .about-speaker-side span,
-  .node-type-lecture .three-col-middle .speaker-name .field-item {
+  .html.node-type-lecture .three-col-middle .views-field-nothing-2 .about-speaker-side span,
+  .html.node-type-lecture .three-col-middle .speaker-name .field-item {
     text-align: center;
     margin: auto;
     display: block;
     width: 100%;
     padding: 0 0 10px; }
 
-  /* line 2070, ../sass/pages.scss */
+  /* line 2072, ../sass/pages.scss */
   .node-type-lecture .three-col-middle-center-left,
   .node-type-lecture .three-col-middle-center-right,
   .node-type-lecture .three-col-middle-bottom-left,
   .node-type-lecture .three-col-middle-bottom-right {
     width: 100%;
-    float: none; } }
+    float: none;
+    margin: auto; } }
 /* attending lecture page */
 @media (max-width: 900px) {
-  /* line 2082, ../sass/pages.scss */
+  /* line 2085, ../sass/pages.scss */
   .page-node-2568.section-community .three-col-middle > div {
     padding-right: 0;
     border-right: none; } }
-/* line 2092, ../sass/pages.scss */
+/* line 2095, ../sass/pages.scss */
 .section-content.page-node-2570 .content .three-col-middle-right {
   width: 100%;
   margin-left: 0; }
-  /* line 2095, ../sass/pages.scss */
+  /* line 2098, ../sass/pages.scss */
   .section-content.page-node-2570 .content .three-col-middle-right .three-col-middle {
     width: 100%;
     margin-right: 0; }
 
 /* Custom pages */
-/* line 2104, ../sass/pages.scss */
+/* line 2107, ../sass/pages.scss */
 .page-node-1242 .pane-page-content > .pane-title {
   margin-bottom: 10px; }
 
-/* line 2108, ../sass/pages.scss */
+/* line 2111, ../sass/pages.scss */
 .page-node-1233 .content-block .content-block-body > h3 {
   display: list-item;
   color: #696969;
   margin-left: 40px;
   margin-bottom: 6px; }
-  /* line 2113, ../sass/pages.scss */
+  /* line 2116, ../sass/pages.scss */
   .page-node-1233 .content-block .content-block-body > h3 + ul {
     margin-left: 25px; }
 
-/* line 2118, ../sass/pages.scss */
+/* line 2121, ../sass/pages.scss */
 .field-name-body .field-item > h5,
 .newsarticlebodyimagetext {
   font-size: 13px;
   color: #474748;
   margin-bottom: 10px; }
 
-/* line 2123, ../sass/pages.scss */
+/* line 2126, ../sass/pages.scss */
 .field-name-body .field-item > h5 {
   font-weight: bold; }
 
-/* line 2126, ../sass/pages.scss */
+/* line 2129, ../sass/pages.scss */
 .newsarticlebodyimagetext {
   margin-top: 10px;
   line-height: 18px; }
