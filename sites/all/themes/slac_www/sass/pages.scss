@@ -1611,6 +1611,10 @@ a.imageLessButton {
     }
   }
 
+  .node-type-lecture .three-col-middle-bottom-left{
+    width: 43%; 111
+  }
+
   .general-two-col{
     .general-left{
       margin-left: 0;
@@ -1861,14 +1865,8 @@ a.imageLessButton {
         padding-top: 0 !important;
       }
     }
-    .three-col-middle-bottom{
-      position: relative;
-      padding-top: 10px;
-      .about-label{
-        position: absolute;
-        top: 10px;
-        left: 0;
-      }
+    .three-col-middle-bottom-left{
+      width: 44%;
     }
   }
 }
@@ -2030,28 +2028,37 @@ a.imageLessButton {
 
 
 @media (max-width: 370px) {
-  .pane-next-lecture .view-content{
+
+
+
+  .pane-next-lecture .view-content,
+  .node-type-lecture .three-col-middle{
     .views-field-nothing-2 .about-speaker-side,
     .views-field-field-image{
       float: none;
       margin: auto;
     }
     .views-field-nothing-2 .about-speaker-side a,
-    .views-field-field-image a{
+    .views-field-field-image a,
+    .pane-node-field-speaker-image a,
+    .lectures-gray-content a{
       margin: auto;
       width:  100%;
       text-align: center;
       display: block;
     }
     .views-field-nothing-2 .about-speaker-side a img,
-    .views-field-field-image a img{
+    .views-field-field-image a img,
+    .pane-node-field-speaker-image img{
       margin: auto;
       float: none;
     }
-    .views-field-nothing-2 .views-label{
+    .views-field-nothing-2 .views-label,
+    .about-label{
       text-align: center;
     }
-    .views-field-nothing-2 .about-speaker-side span{
+    .views-field-nothing-2 .about-speaker-side span,
+    .speaker-name .field-item{
       text-align: center;
       margin: auto;
       display: block;
