@@ -42,12 +42,10 @@ function pp_crop_menu() {
  */
 function pp_crop_wysiwyg_settings_form($form, &$form_state) {
   $thumbnail_options = array();
-  $epsacrop_styles = _epsacrop_load_styles();
-
-  foreach ($epsacrop_styles as $key => $style) {
+  $image_styles = image_styles();
+  foreach ($image_styles as $key => $style) {
     $thumbnail_options[$key] = $style['name'];
   }
-  $thumbnail_options['original_size'] = 'original_size';
 
   $form['crop_styles'] = array(
     '#type' => 'checkboxes',
@@ -69,8 +67,13 @@ function pp_crop_wysiwyg_settings_form($form, &$form_state) {
  * Submit callback for wysiwyg settings form.
  */
 function pp_crop_wysiwyg_settings_submit_form_submit($form, &$form_state) {
-  variable_set('pp_crop_wysiwyg_settings', $form_state['values']['crop_styles']);
-
+  $crop_style = $form_state['values']['crop_styles'];
+  foreach ($crop_style as $key => $value) {
+    if (!$value) {
+      unset($crop_style[$key]);
+    }
+  }
+  variable_set('pp_crop_wysiwyg_settings', $crop_style);
   drupal_set_message(t('Your settings have been saved'));
 }
 
@@ -78,16 +81,33 @@ function pp_crop_wysiwyg_settings_submit_form_submit($form, &$form_state) {
  * Implements hook_entity_info_alter().
  */
 function pp_crop_entity_info_alter(&$entity_info) {
-  foreach (_epsacrop_load_styles() as $image_style) {
-    $entity_info['file']['view modes']['crop_' . $image_style['name']] = array(
-      'label' => t('Crop ' . $image_style['name']),
-      'custom settings' => TRUE,
-    );
+  $image_styles = _pp_crop_load_styles();
+  if (is_array($image_styles) && count($image_styles)) {
+    foreach ($image_styles as $image_styles) {
+      $entity_info['file']['view modes']['crop_' . $image_styles['name']] = array(
+        'label' => t('Crop ' . $image_styles['name']),
+        'custom settings' => TRUE,
+      );
+    }
   }
-  $entity_info['file']['view modes']['crop_original_size'] = array(
-      'label' => t('Crop crop_original_size'),
-      'custom settings' => TRUE,
-    );
+}
+
+/**
+ * Helper function that get all styles from pp_crop module.
+ * 
+ * @access private
+ * @return array
+ */
+function _pp_crop_load_styles() {
+  $return = array();
+  $styles = image_styles();
+  $pp_crop_style = variable_get('pp_crop_wysiwyg_settings', array());
+  foreach ($styles as $style_name => $style) {
+    if (in_array($style_name, $pp_crop_style)) {
+      $return[$style_name] = $style;
+    }
+  }
+  return $return;
 }
 
 /**
@@ -117,7 +137,6 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
   $options = array();
   $styles = variable_get('pp_crop_wysiwyg_settings', array());
   $thumbnail_options = pp_crop_get_images_thumbnails($form, $file);
-
   foreach ($thumbnail_options as $image_preset => $image_element) {
     $preset = substr($image_preset, 5);
     if (!isset($styles[$preset])) {
@@ -127,7 +146,6 @@ function pp_crop_media_format_form_prepare_alter(&$form, $form_state, $file) {
       $options[$image_preset] = $image_element;
     }
   }
-  
   $form['options']['thumbnails'] = array(
     '#type' => 'radios',
     '#title' => t('Thumbnail'),
@@ -385,8 +403,9 @@ function pp_crop_get_images_thumbnails(&$form, $file) {
   $thumbnail_options = array();
   // Add default so it will be unset.
   $view_mode_settings = field_view_mode_settings('file', $file->type) + array('default' => 'default');
+  $pp_crop_style = variable_get('pp_crop_wysiwyg_settings', array());
   foreach ($view_mode_settings as $view_mode_name => $view_mode_info) {
-    if (strpos($view_mode_name, 'crop_') === 0) {
+    if ( strpos($view_mode_name, 'crop_') === 0 ) {
       $image_style_name = substr($view_mode_name, strlen('crop_'));
       $rendered_image = theme('image_style', array(
         'style_name' => $image_style_name,
