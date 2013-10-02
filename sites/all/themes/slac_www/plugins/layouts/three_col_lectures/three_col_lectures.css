@@ -10,23 +10,14 @@
 }
 
 .content .three-col-middle-center-left{
-  float: left;
-  width: 65%;
-}
-
-.content .three-col-middle-center-right{
-  float: left;
+  float: right;
   width: 35%;
 }
 
 .content .three-col-middle-bottom-left{
-  float: right;
-  width: 65%;
-}
-
-.content .three-col-middle-bottom-right{
   float: left;
-  width: 35%;
+  width: 30%;
+  margin: 0 5% 20px 0;
 }
 
 .content .three-col-middle-bottom{
