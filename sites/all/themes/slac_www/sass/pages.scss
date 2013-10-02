@@ -468,19 +468,6 @@ a.lightbox-processed{
   }
 }
 
-@media (max-width: 600px){
-  #outerImageContainer,
-  #imageDataContainer{
-    width: 95% !important;
-    height: auto !important;
-  }
-  #modalContainer{
-    width: 96% !important;
-    height: auto !important;
-    padding: 2% !important;
-  }
-}
-
 /* Meeting Rooms table */
 .section-visiting-slac{
   table{
@@ -511,20 +498,6 @@ a.lightbox-processed{
   }
 }
 
-@media (max-width: 600px){ 
-  .section-visiting-slac table .header {
-    background-image: none;
-    &:after {
-      content: '';
-      display: inline-block;
-      width: 9px;
-      height: 9px;
-      line-height: 9px;
-      background: url('../images/bg.gif') no-repeat center center;
-      margin-left: 4px;
-    }
-  }
-}
 
 span.ext {
   padding: 0;
@@ -766,159 +739,6 @@ span.ext {
 .item-list .pager{
   margin-top: 20px;
 }
-
-/*.node-type-lecture{
-  line-height: normal;
-  .views-field-field-speaker-name{
-    float:left;
-  }
-  .three-col-middle{
-    position: relative;
-    > div{
-      width: 90%;
-       margin: 0 auto;
-       margin-bottom: 30px;
-       &:after{
-        content: "";
-        display: table;
-        clear: both;
-       }
-    }
-    .jwplayer{
-      width: 100% !important;
-    }
-    .panel-separator{
-      display: none;
-    }
-    .three-col-middle-top{
-      .lectures-subtitle{
-        width: 110%;
-        margin: 10px 0 20px -5%;
-        left: 0;
-        font-size: 1.2em;
-        color: #666;
-      }
-      .pane-node-title{
-        padding-bottom: 4px;
-        h2{
-          font-size: 1.4em;
-          font-weight: bold;
-        }
-      }
-      .past-lectures-wrapper{
-        width: 110%;
-        margin: 10px 0 20px -5%;
-        border-bottom: 2px solid #831425;
-        &:after{
-          content: "";
-          display: table;
-          clear: both;
-        }
-        .past-lectures-text{
-          display: inline;
-          color: #7f6332;
-          text-transform: uppercase;
-        }
-        .social-icon-block{
-          float: right;
-          margin-top: -8px;
-        }
-      }
-      .pane-node-field-speaker-name,
-      .pane-5,
-      .pane-node-field-location{
-        display: inline-blofck;
-        padding-bottom: 10px;
-        & *{
-          font-size: 13px;
-          color: #474748;
-        }
-      }
-      .pane-node-created{
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-top: 15px;
-      }
-      .pane-node-field-video{
-        clear:both;
-        width: 100%;
-        padding: 30px 0;
-        background: url("../images/dotted-border.png") repeat-x bottom;
-      }
-    }
-
-    .three-col-middle-center{
-      margin-bottom: 5px;
-      .pane-node-body .field-label{
-        margin-bottom: 10px;
-        font-size: 1.1em;
-        font-weight: bold;
-      }
-
-      .three-col-middle-center-left .inside{
-        padding-right: 4%;
-        text-align: justify;
-      }
-      .pane-node-field-image{
-        margin: 0;
-        padding-top: 20px;
-        background: transparent;
-        .field-item {
-          padding: 7px;
-          margin: 0 0 10px 0 !important;
-          background: #dadadc;
-          float: none !important;
-        }
-        img{
-          display: block;
-          width: 100% !important;
-          height: auto !important;
-        }
-      }
-    }
-
-    .three-col-middle-bottom{
-      margin-bottom: 0;
-      .three-col-middle-bottom-left .inside{
-        padding-left: 4%;
-      }
-      .about-label{
-        margin-bottom: 10px;
-        font-size: 1.1em;
-        font-weight: bold;
-      }
-      .pane-node-field-speaker-image{
-        .field-label{
-          display: none;
-        }
-        .field-item{
-          background: #dadadc;
-          padding: 7px;
-        }
-        img{
-          display: block;
-          width: 100% !important;
-          height: auto !important;
-        }
-      }
-      .speaker-name{
-        padding-top: 5px;
-        font-style: italic;
-        color: #666;
-      }
-      .pane-node-field-about-the-speaker{
-        padding-top: 20px;
-        line-height: 20px;
-        font-size: 13px;
-        color: #474748;
-        text-align: justify;
-      }
-    }
-  }
-}*/
-
-
-
 
 /* Lecture page */
 
@@ -1215,6 +1035,9 @@ span.ext {
   }
 }
 
+.jwplayer{
+  width:  100% !important;
+}
 
 /* Index page */
 
@@ -1762,23 +1585,32 @@ a.imageLessButton {
   }
 }
 
-/*
-@media (max-width: 900px) and (min-width: 601px){
-  .pane-page-content > .pane-title{
-    width: 70% !important;
-    margin-left: 30% !important;
-  }
-  .three-col-middle-right{
-    width: 70% !important;
-    margin-left: 30% !important;
-  }
-  .three-col-left{
-    width: 30% !important;
-    margin-right: -30% !important;
-  }
-}*/
-
 @media (max-width: 600px) {
+
+  #outerImageContainer,
+  #imageDataContainer{
+    width: 95% !important;
+    height: auto !important;
+  }
+  #modalContainer{
+    width: 96% !important;
+    height: auto !important;
+    padding: 2% !important;
+  }
+
+  .section-visiting-slac table .header {
+    background-image: none;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      line-height: 9px;
+      background: url('../images/bg.gif') no-repeat center center;
+      margin-left: 4px;
+    }
+  }
+
   .general-two-col{
     .general-left{
       margin-left: 0;
@@ -1826,8 +1658,7 @@ a.imageLessButton {
       padding-bottom: 15px;
       float: none;
       margin: auto;
-    }  
-    
+    }
     .panels-flexible-region-last{
       clear:both;
       float:none;
@@ -2019,22 +1850,8 @@ a.imageLessButton {
         display: none;
       }
     }
-    .three-col-middle-center,
-    .three-col-middle-bottom{
-      background: url("../images/dotted-border.png") repeat-x bottom;
-    }
     .three-col-middle-bottom{
       padding: 20px 0 10px 0;
-    }
-    .three-col-middle-center-left,
-    .three-col-middle-center-right,
-    .three-col-middle-bottom-left,
-    .three-col-middle-bottom-right{
-      width: 100%;
-      float: none;
-      .inside{
-        padding: 0 0 10px 0 !important;
-      }
     }
     .three-col-middle-center{
       .field-label{
@@ -2242,6 +2059,17 @@ a.imageLessButton {
       padding:  0 0 10px;
     }
   }
+
+  .node-type-lecture{
+    .three-col-middle-center-left,
+    .three-col-middle-center-right,
+    .three-col-middle-bottom-left,
+    .three-col-middle-bottom-right {
+      width: 100%;
+      float: none;
+    }
+  }
+
 }
 
 /* attending lecture page */
