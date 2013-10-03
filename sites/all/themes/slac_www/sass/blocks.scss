@@ -432,7 +432,7 @@ $linkcolor: #990000;
     padding: 2px 0 2px 4%;
     margin: 0;
     line-height: 18px;
-      background: url('../images/red-arrow.png') no-repeat 8px 8px;
+      background: url('../images/red-arrow.png') no-repeat 8px 11px;
     a{
       padding-left: 10px;
       @include links();
@@ -495,7 +495,7 @@ $linkcolor: #990000;
     margin-bottom: 20px;
     width: 98%;
     padding: 1%;
-    background: #e0e0e1;
+    background: #EFEFEF;
     img {
       width: 100%;
       height: auto;
