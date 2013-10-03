@@ -585,6 +585,7 @@ div.pane-node-body{
     padding: 6px 0 2px 7px;
     letter-spacing: 1px;
     color: $goldtitle;
+    text-transform: uppercase;
   }
   .content-block-body{
     margin-top: 20px;
@@ -618,6 +619,7 @@ div.pane-node-body{
   li{
     width: 100%;
     margin: 0;
+    padding: 0;
     list-style-type: disc;
     list-style-position: outside;
     color: #79182A;
