@@ -216,6 +216,7 @@ input:focus{
   padding-bottom: 6px;
   .menu {
   overflow: hidden;
+  padding-left: 0;
     li {
       float: left;
       width: 21%;
@@ -493,9 +494,9 @@ a.lightbox-processed{
     border-right: 1px solid #ada47d;
     }
   }
-  .pane-title{
+/*  .pane-title{
     margin-bottom: 4px;
-  }
+  }*/
 }
 
 
