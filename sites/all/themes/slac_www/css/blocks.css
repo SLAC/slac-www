@@ -1021,7 +1021,7 @@ div.pane-node-body img {
   .one-image .content-graphic-block a, .one-image .content-graphic-block > img {
     display: block;
     padding: 2px;
-    border: 2px solid #807f7f;
+    border: 2px solid #DBDADB;
     background-color: #fff; }
   /* line 714, ../sass/blocks.scss */
   .one-image .content-graphic-block img {
@@ -1388,4 +1388,4 @@ a.lightbox-processed:hover {
 
 /* line 1113, ../sass/blocks.scss */
 .content-graphic-block a:hover {
-  border: 2px solid #807f7f; }
+  border: 2px solid #DBDADB; }

@@ -1067,6 +1067,8 @@ span.ext {
   }
 
   .three-col-middle-top-seccond{
+    overflow: hidden;
+    padding-bottom: 30px;
     .pane-node-title{
       font-size: 18px;
       font-weight: bold;
@@ -1079,7 +1081,7 @@ span.ext {
       font-weight: bold;
       margin-top: 10px;
       float: left;
-    }      
+    }
     .ical-link{
      margin: 10px 0 0 10px;
      float: left;
@@ -1090,13 +1092,13 @@ span.ext {
         text-indent: 100px;
         overflow: hidden;
         display: block;
-        background: url("/sites/all/themes/slac_www/images/ical.png") no-repeat 0 0;
-      }   
+        background: url("../slac_www/images/ical.png") no-repeat 0 0;
+      }
     }
     .pane-node-field-video{
       clear:both;
       width: 100%;
-      padding: 30px 0;
+      padding: 0 0 30px 0;
       margin-bottom: 25px;
       background: url("../images/dotted-border.png") repeat-x bottom;
     }
