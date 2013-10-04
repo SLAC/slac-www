@@ -10,11 +10,17 @@
 function slac_fieldset_tagging_widget_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'blog_node_form' || $form_id == 'news_article_node_form') {
-    $field_blog_tags = $form['field_blog_tags'][LANGUAGE_NONE]['tags'];
+    if ($form_id == 'blog_node_form') {
+      $field_name = 'field_blog_tags';
+    }
+    else {
+      $field_name = 'field_tags';
+    }
+    $field_blog_tags = $form[$field_name][LANGUAGE_NONE]['tags'];
     foreach ($field_blog_tags as $key => $value) {
       if (is_int($key)) {
         if (count($value['tag_options']['#default_value']) > 0) {
-          $form['field_blog_tags'][LANGUAGE_NONE]['tags'][$key]['#collapsed'] = FALSE;
+          $form[$field_name][LANGUAGE_NONE]['tags'][$key]['#collapsed'] = FALSE;
         }
       }
     }
