@@ -1,0 +1,7 @@
+name = PP Block Insert
+description = "Provide possibility to add custom html blocks in wysiwyg."
+package = PP
+core = 7.x
+
+files[] = "plugins/bean/pp_bi.block.inc"
+dependencies[] = bean
