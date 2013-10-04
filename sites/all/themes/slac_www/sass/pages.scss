@@ -1068,7 +1068,6 @@ span.ext {
 
   .three-col-middle-top-seccond{
     overflow: hidden;
-    padding-bottom: 30px;
     .pane-node-title{
       font-size: 18px;
       font-weight: bold;
@@ -1081,6 +1080,7 @@ span.ext {
       font-weight: bold;
       margin-top: 10px;
       float: left;
+      padding-bottom: 30px;
     }
     .ical-link{
      margin: 10px 0 0 10px;
@@ -1092,7 +1092,7 @@ span.ext {
         text-indent: 100px;
         overflow: hidden;
         display: block;
-        background: url("../slac_www/images/ical.png") no-repeat 0 0;
+        background: url("../images/ical.png") no-repeat 0 0;
       }
     }
     .pane-node-field-video{

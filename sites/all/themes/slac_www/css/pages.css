@@ -1366,21 +1366,21 @@ span.ext {
     text-transform: uppercase; }
   /* line 1069, ../sass/pages.scss */
   .node-type-lecture .three-col-middle .three-col-middle-top-seccond {
-    overflow: hidden;
-    padding-bottom: 30px; }
-    /* line 1072, ../sass/pages.scss */
+    overflow: hidden; }
+    /* line 1071, ../sass/pages.scss */
     .node-type-lecture .three-col-middle .three-col-middle-top-seccond .pane-node-title {
       font-size: 18px;
       font-weight: bold; }
-    /* line 1076, ../sass/pages.scss */
+    /* line 1075, ../sass/pages.scss */
     .node-type-lecture .three-col-middle .three-col-middle-top-seccond .view {
       font-size: 14px; }
-    /* line 1079, ../sass/pages.scss */
+    /* line 1078, ../sass/pages.scss */
     .node-type-lecture .three-col-middle .three-col-middle-top-seccond .pane-node-field-lecture-date {
       font-size: 16px;
       font-weight: bold;
       margin-top: 10px;
-      float: left; }
+      float: left;
+      padding-bottom: 30px; }
     /* line 1085, ../sass/pages.scss */
     .node-type-lecture .three-col-middle .three-col-middle-top-seccond .ical-link {
       margin: 10px 0 0 10px;
@@ -1393,7 +1393,7 @@ span.ext {
         text-indent: 100px;
         overflow: hidden;
         display: block;
-        background: url("../slac_www/images/ical.png") no-repeat 0 0; }
+        background: url("../images/ical.png") no-repeat 0 0; }
     /* line 1098, ../sass/pages.scss */
     .node-type-lecture .three-col-middle .three-col-middle-top-seccond .pane-node-field-video {
       clear: both;
