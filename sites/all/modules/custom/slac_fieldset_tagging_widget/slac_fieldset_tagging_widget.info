@@ -1,0 +1,5 @@
+name = Fieldset tagging widget
+description = "Provide some hooks for Fieldset tagging widget."
+package = SLAC
+dependencies[] = link
+core = 7.x

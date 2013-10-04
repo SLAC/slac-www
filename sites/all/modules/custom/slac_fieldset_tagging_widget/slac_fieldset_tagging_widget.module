@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implementation of hook_form_alter
+ * 
+ * @param boolean $form
+ * @param type $form_state
+ * @param type $form_id 
+ */
+function slac_fieldset_tagging_widget_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'blog_node_form') {
+    $field_blog_tags = $form['field_blog_tags'][LANGUAGE_NONE]['tags'];
+    foreach ($field_blog_tags as $key => $value) {
+      if (is_int($key)) {
+        if (count($value['tag_options']['#default_value']) > 0) {
+          $form['field_blog_tags'][LANGUAGE_NONE]['tags'][$key]['#collapsed'] = FALSE;
+        }
+      }
+    }
+  }
+}
