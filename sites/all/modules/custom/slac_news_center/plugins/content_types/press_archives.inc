@@ -38,6 +38,7 @@ function press_archives_center_content_type_render($subtype, $conf, $panel_args,
     }
   }
   ksort($items);
+  array_reverse($items);
   $block->content = theme('item_list', array('items' => $items, 'attributes' => array('class' => 'news-archive-links')));
 
   return $block;
