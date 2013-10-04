@@ -53,55 +53,53 @@ function fieldset_tags_field_widget_form(&$form, &$form_state, $field, $instance
     '#collapsed' => FALSE,
   );
 
-  $parents = array();
-  $depth = 0;
-  $prev_depth = 0;
-  foreach ($terms as $key => $term) {
-    $children = taxonomy_get_children($term->tid, $vid);
-    $depth = $term->depth;
-
-    if (!empty($children)) {
-      if ($prev_depth - $depth > 0 ) {
-        for ($i = $prev_depth - $term->depth - 1; $i >= 0 ; $i--) {
-          array_pop($parents);
-        }
-      }
-      $parents[$key] = $key;
-      
-      $element_string = _fieldset_tags_generate_element($term->tid, $parents);
-      $form_element = "array(
-        '#type' => 'fieldset',
-        '#title' => '" . $term->name . "',
-        '#tree' => TRUE,
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE,
-      );";
-      $elem = $element_string . ' = ' . $form_element;
-      eval($elem);
-
-      $prev_depth = $depth;
-      if (_get_children_if_last_parent($term->tid, $vid)) {
-        array_pop($parents);
-        $options = array();
-        // Get children if curent item is last parent.
-        $children = _get_children_if_last_parent($term->tid, $vid);
-	// Get options array as string.
-        $options = _fieldset_tags_get_array_as_string(_fieldset_tags_get_options($children));
-        // Get default options array as string.
-        $default_options = _fieldset_tags_get_array_as_string(_get_default_options($children, $tags));
-
-        $form_element = "array(
-          '#type' => 'checkboxes',
-          '#default_value' => " . $default_options . ",
-          '#options' => " . $options . ",
-          '#title' => '',
-        );";
-        $elem = $element_string . '[\'tag_options\']' . ' = ' . $form_element;
-        eval($elem);
-      }
-    }
+  $default_values = array();
+  foreach ($items as $item) {
+    $default_values[$item['tid']] = $item['tid'];
   }
 
+  $parent = NULL;
+  $children = array();
+  foreach ($terms as $term) {
+    if ($term->parents[0] == 0) {
+      // Build fieldset for previous terms group.
+      if (!empty($parent)) {
+        $element['tags'][] = _fieldset_tags_terms_form_element($parent, $children, $default_values);
+      }
+      $parent = $term;
+      $children = array($term);
+    }
+    else {
+      $children[] = $term;
+    }
+  }
+  $element['tags'][] = _fieldset_tags_terms_form_element($parent, $children, $default_values);
+
+  return $element;
+}
+
+function _fieldset_tags_terms_form_element($parent, $children, $global_default_values) {
+  $element = array(
+    '#type' => 'fieldset',
+    '#title' => $parent->name,
+    '#tree' => TRUE,
+    '#collapsible' => TRUE,
+  );
+  $options = array();
+  $default_values = array();
+  foreach ($children as $term) {
+    $tid = $term->tid;
+    $options[$tid] = $term->name;
+    if (in_array($tid, $global_default_values)) {
+      $default_values[$tid] = $tid;
+    }
+  }
+  $element['tag_options'] = array(
+    '#type' => 'checkboxes',
+    '#options' => $options,
+    '#default_value' => $default_values,
+  );
+  $element['#collapsed'] = empty($default_values);
   return $element;
 }
 
@@ -126,20 +124,6 @@ function fieldset_tags_field_widget_validate($element, &$form_state) {
 }
 
 /**
- * Returns an array as string that can be evalued by eval() function;
- */
-function _fieldset_tags_get_array_as_string($options) {
-  if (substr(var_export($options, TRUE), -3, 1) == ',') {
-    return substr_replace(var_export($options, TRUE), '', -3, 1);
-  }
-  else {
-    return var_export($options, TRUE);
-  }
-
-  return array();
-}
-
-/**
  * Returns default options.
  */
 function _get_default_options($children, $tags) {
@@ -151,46 +135,6 @@ function _get_default_options($children, $tags) {
   }
 
   return $default_options;
-}
-
-/**
- * Returns an array with values for checkboxes form;
- */
-function _fieldset_tags_get_options($children) {
-  $options = array();
-  foreach ($children as $tid => $term) {
-    $options[$tid] = $term->name;
-  }
-
-  return $options;
-}
-
-/**
- * Generate $element array hierarchy as string.
- */
-function _fieldset_tags_generate_element($tid, $parents) {
-
-  $element = '$element["tags"]';
-  foreach ($parents as $parent) {
-    $element .= '[' . $parent . ']';
-  }
-
-  return $element;
-}
-
-/**
- * Returns all children if term is last parent for all children else return false.
- */
-function _get_children_if_last_parent($tid, $vid) {
-  $children = taxonomy_get_children($tid, $vid);
-
-  foreach ($children as $child) {
-    if (count(taxonomy_get_children($child->tid, $vid)) != 0) {
-      return FALSE;
-    }
-  }
-
-  return $children;
 }
 
 function _fieldset_tags_get_values($element, &$result) {
