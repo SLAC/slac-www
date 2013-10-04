@@ -37,7 +37,9 @@ function news_archives_content_type_render($subtype, $conf, $panel_args, $contex
       $items[$value['link_title']] = l(t($value['link_title']), $value['link_path']);
     }
   }
-  ksort($items);
+  //ksort($items);
+  array_reverse($items);
+  
   $block->content = theme('item_list', array('items' => $items, 'attributes' => array('class' => 'news-archive-links')));
 
   return $block;

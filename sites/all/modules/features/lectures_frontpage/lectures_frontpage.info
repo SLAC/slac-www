@@ -4,6 +4,7 @@ package = SLAC
 php = 5.2.4
 version = 7.x-1.3
 project = lectures_frontpage
+dependencies[] = date_ical
 dependencies[] = menu
 dependencies[] = page_manager
 dependencies[] = slac_migrate_lectures

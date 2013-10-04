@@ -15,7 +15,7 @@ function lectures_poster_gallery_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Poster Gallery';
   $page->admin_description = 'Poster Gallery page.';
-  $page->path = 'poster-gallery';
+  $page->path = 'community/poster-gallery';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -55,7 +55,7 @@ function lectures_poster_gallery_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Poster Gallery';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -87,7 +87,7 @@ function lectures_poster_gallery_default_page_manager_pages() {
     $pane->panel = 'middle';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'SLAC Public Lecture Series',
@@ -112,7 +112,7 @@ function lectures_poster_gallery_default_page_manager_pages() {
     $pane->panel = 'middle';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Poster Gallery title',
@@ -166,14 +166,14 @@ function lectures_poster_gallery_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'highlited related-links',
+      'css_class' => 'highlited related-links links-internal-external-icons',
     );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
     $display->panels['right'][0] = 'new-5';
-  $display->hide_title = PANELS_TITLE_NONE;
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-4';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;

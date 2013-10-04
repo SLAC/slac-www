@@ -110,9 +110,10 @@ function slac_footer_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => 'Footer text',
       'title' => '<none>',
-      'body' => 'SLAC NATIONAL ACCELERATOR LABORATORY 2575 Sand Hill Road, Menlo Park, CA 94025
-Operated by Stanford University for the U.S. Department of Energy Office of Science',
-      'format' => 'filtered_html',
+      'body' => '<p><span><b><a href="http://www.slac.stanford.edu">SLAC NATIONAL ACCELERATOR LABORATORY</a></b> 2575 Sand Hill Road, Menlo Park, CA 94025</span><br />
+	<span>Operated by <a href="http://www.stanford.edu" target="_blank">Stanford University</a> for the <a href="http://science.energy.gov" target="_blank">U.S. Department of Energy Office of Science</a></span></p>
+',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
@@ -135,7 +136,8 @@ Operated by Stanford University for the U.S. Department of Energy Office of Scie
     $pane->configuration = array(
       'admin_title' => 'Footer logo',
       'title' => '',
-      'body' => '<img src="/sites/default/files/footer-logos.jpg" alt="" title="" />',
+      'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/all/themes/slac_www/images/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/all/themes/slac_www/images/doe-logo.png" /></a></p>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );

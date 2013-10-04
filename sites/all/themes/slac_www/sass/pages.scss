@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   background: #e9e9e9 url('../images/bg.jpg') repeat top;
-  font-family: "Arial", sans-serif;  
+  font-family: "Arial", sans-serif;
 }
 
 a{
@@ -49,6 +49,8 @@ input:focus{
  */
 
 /* Basic styles */
+
+#skip-link{margin: 0;}
 
 .left-menu-trigger{
   position: absolute;
@@ -216,6 +218,7 @@ input:focus{
   padding-bottom: 6px;
   .menu {
   overflow: hidden;
+  padding-left: 0;
     li {
       float: left;
       width: 21%;
@@ -493,9 +496,9 @@ a.lightbox-processed{
     border-right: 1px solid #ada47d;
     }
   }
-  .pane-title{
+/*  .pane-title{
     margin-bottom: 4px;
-  }
+  }*/
 }
 
 
@@ -908,7 +911,7 @@ span.ext {
 
 
 /* Node type lecture */
-
+/*
 .node-type-lecture .three-col-middle{
   position: relative;
   margin-top: 0;
@@ -965,6 +968,10 @@ span.ext {
     }
   }
 
+  .three-col-middle-bottom-right{
+    padding-top: 14px;
+  }
+
   .three-col-middle-center{
     .field-name-body .field-items .field-item p{
       margin-top:  0;
@@ -1013,7 +1020,153 @@ span.ext {
     width: auto;
     background: transparent;
   }
+}*/
+
+
+
+
+
+
+
+
+.node-type-lecture .three-col-middle{
+  position: relative;
+  margin-top: 0;
+  .lecture-past-link{
+    position: absolute;
+    top: -38px;
+    right:  0;
+  }
+  .lectures-subtitle{
+    margin:  -17px 0 50px;
+    color: #9B9B9B;
+    font-size:  14px;
+    &.sheduled{
+      margin: 18px 0 0 0;
+    }
+  }
+  .pane-next-lecture .view-header {
+    position: relative;
+    padding-bottom: 1px;
+  }
+  .past-lectures-wrapper{
+    position: relative;
+    .social-icon-block{
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+      a{margin-left: 10px;}
+    }
+  }
+  .past-lectures-text{
+    width: 100%;
+    border-bottom: 2px solid #831425;
+    margin: 35px 0 0;
+    color: #7f6332;
+    text-transform: uppercase;
+  }
+
+  .three-col-middle-top-seccond{
+    .pane-node-title{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .view{
+      font-size: 14px; 
+    }
+    .pane-node-field-lecture-date{
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+      float: left;
+    }      
+    .ical-link{
+     margin: 10px 0 0 10px;
+     float: left;
+      a{
+        line-height: 20px;
+        height: 18px;
+        width: 29px;
+        text-indent: 100px;
+        overflow: hidden;
+        display: block;
+        background: url("/sites/all/themes/slac_www/images/ical.png") no-repeat 0 0;
+      }   
+    }
+    .pane-node-field-video{
+      clear:both;
+      width: 100%;
+      padding: 30px 0;
+      margin-bottom: 25px;
+      background: url("../images/dotted-border.png") repeat-x bottom;
+    }
+  }
+
+  .three-col-middle-bottom-right{
+    padding-top: 14px;
+  }
+
+  .three-col-middle-center{
+   clear: both;
+   overflow: hidden;
+    .field-name-body .field-items .field-item p{
+      margin-top:  0;
+    }
+    .field-label{
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 3px;
+      display: block;
+    }
+  }
+
+  .three-col-middle-bottom{
+    .pane-node-field-speaker-image{
+      .field-label{
+        display: none;
+      }
+      img{
+        width:  95%;
+        height: auto;
+      }
+    }
+    .field-name-field-about-the-speaker p{
+      line-height: 20px;
+      font-size: 13px;
+      color: #474748;
+      margin-bottom: 10px;
+    }
+    .about-label{
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 3px;
+      display: block;
+    }
+    .speaker-name{
+      .field-item{
+        font-size: 11px;
+        padding-top: 3px;
+        font-style: italic;
+        float: left;
+        clear: both;
+      }
+    }
+  }
+  .pane-node-field-image{
+    width: auto;
+    background: transparent;
+  }
 }
+
+
+
+
+
+
+
+
+
+
 
 .lectures-gray-content{
   width:  90%;

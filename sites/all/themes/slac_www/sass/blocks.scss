@@ -161,22 +161,24 @@ $linkcolor: #990000;
       text-transform: uppercase;
     }
   }
-  .menu li {
-    border-bottom: 1px solid #d4d4d4;
-    font-size: 12px;
-    line-height: normal;
-    ul{
-      padding-bottom: 10px;
-    }
-    a {
-      display: block;
-      padding: 11px 8px;
-      margin: 0;
+  .menu{
+    padding: 0;
+    li{
+      border-bottom: 1px solid #d4d4d4;
+      font-size: 12px;
       line-height: normal;
-      text-decoration: none;
+      ul{
+        padding-bottom: 10px;
+      }
+      a {
+        display: block;
+        padding: 11px 8px;
+        margin: 0;
+        line-height: normal;
+        text-decoration: none;
+      }
     }
   }
-    
   .depth-2{
     &.active-trail,
     &.active, 
@@ -430,7 +432,7 @@ $linkcolor: #990000;
     padding: 2px 0 2px 4%;
     margin: 0;
     line-height: 18px;
-      background: url('../images/red-arrow.png') no-repeat 8px 8px;
+      background: url('../images/red-arrow.png') no-repeat 8px 11px;
     a{
       padding-left: 10px;
       @include links();
@@ -493,7 +495,7 @@ $linkcolor: #990000;
     margin-bottom: 20px;
     width: 98%;
     padding: 1%;
-    background: #e0e0e1;
+    background: #EFEFEF;
     img {
       width: 100%;
       height: auto;
@@ -532,7 +534,7 @@ div.pane-node-body{
     padding: 0 0 13px 25px;
   }
   li{
-    color: #696969;
+    color: #474748;
     font-size: 13px;
     list-style-type: disc;
     list-style-position: inside;
@@ -583,13 +585,14 @@ div.pane-node-body{
     padding: 6px 0 2px 7px;
     letter-spacing: 1px;
     color: $goldtitle;
+    text-transform: uppercase;
   }
   .content-block-body{
     margin-top: 20px;
   }
 }
 
-.shaded-background{
+.html .shaded-background{
   margin-top: 0;
   .content-block-body {
     background: #f6f6f6;
@@ -616,12 +619,13 @@ div.pane-node-body{
   li{
     width: 100%;
     margin: 0;
+    padding: 0;
     list-style-type: disc;
     list-style-position: outside;
     color: #79182A;
     line-height: 22px;
-    width: 95%;
-    margin-left: 5%;
+    width: 92%;
+    margin: 0 3% 0 5%;
   }
   a img{
     opacity: 1;

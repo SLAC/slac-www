@@ -251,15 +251,20 @@ function theme_image_style_lightbox($variables) {
   $alt = isset($file->field_file_image_alt_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] : '';
   $title = isset($file->field_file_image_title_text[LANGUAGE_NONE][0]['value']) ? $file->field_file_image_title_text[LANGUAGE_NONE][0]['value'] : '';
   $description = isset($file->field_description[LANGUAGE_NONE][0]['value']) ? $file->field_description[LANGUAGE_NONE][0]['value'] : '';
+  $style = isset($file->override['attributes']['style']) ? $file->override['attributes']['style'] : '';
 
   $rendered_image = theme('image_style', array(
     'path' => $file->uri,
     'style_name' => $image_style,
     'width' => '',
     'height' => '',
+    'style' => 'float: none;',
     'alt' => $alt,
     'title' => $title,
-      ));
+    'attributes' => array(
+      'style' => $style,
+    ),
+  ));
 
   //Create 'lightbox_large_image' image style if it not exists.
   if (!image_style_load('lightbox_large_image')) {
