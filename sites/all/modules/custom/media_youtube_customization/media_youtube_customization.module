@@ -59,7 +59,6 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
     if ($item['type'] == 'video') {
       // Transform the stream wrapper into a path.
       $path = drupal_realpath($item['uri']);
-//      $path = str_replace('http://', 'https://', $path);
 
       // Parse the URL into parts, in order to make it an embed URL.
       // Make sure the correct include file is loaded
@@ -144,6 +143,5 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
       'item' => $render_element,
     );
   }
-dpm($element);
   return $element;
 }
