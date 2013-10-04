@@ -36,7 +36,7 @@ function slac_index_page_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'one-col-basic',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -67,7 +67,10 @@ function slac_index_page_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'links-internal-external-icons',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();

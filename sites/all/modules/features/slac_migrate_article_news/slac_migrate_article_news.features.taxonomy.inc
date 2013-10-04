@@ -58,8 +58,8 @@ function slac_migrate_article_news_taxonomy_default_vocabularies() {
     'tags' => array(
       'name' => 'Tags',
       'machine_name' => 'tags',
-      'description' => 'Use tags to group articles on similar topics into categories.',
-      'hierarchy' => 0,
+      'description' => '',
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

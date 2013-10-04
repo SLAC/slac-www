@@ -17,7 +17,7 @@ function slac_connections_page_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 3;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'SLAC Connections page',
     'no_blocks' => 0,
@@ -65,6 +65,7 @@ function slac_connections_page_default_page_manager_handlers() {
       'left' => NULL,
       'middle' => NULL,
       'right' => NULL,
+      'mainmiddleright' => NULL,
     ),
   );
   $display->cache = array();
@@ -166,6 +167,29 @@ function slac_connections_page_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['middle'][2] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'right';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:a9d568dd-8c5e-4bbb-b47f-0bc14b94580c';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links links-internal-external-icons',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][0] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

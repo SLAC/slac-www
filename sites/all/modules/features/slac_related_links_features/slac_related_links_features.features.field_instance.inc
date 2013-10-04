@@ -18,7 +18,7 @@ function slac_related_links_features_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -70,6 +70,24 @@ function slac_related_links_features_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',

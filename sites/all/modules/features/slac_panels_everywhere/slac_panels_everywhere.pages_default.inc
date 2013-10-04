@@ -30,7 +30,7 @@ function slac_panels_everywhere_default_page_manager_handlers() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'page_basic';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -110,6 +110,8 @@ function slac_panels_everywhere_default_page_manager_handlers() {
       'center' => NULL,
       'content' => NULL,
       'footer' => NULL,
+      'header' => NULL,
+      'menu' => NULL,
     ),
   );
   $display->cache = array();
@@ -118,63 +120,6 @@ function slac_panels_everywhere_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
-    $pane->type = 'pane_header';
-    $pane->subtype = 'pane_header';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'center';
-    $pane->type = 'block';
-    $pane->subtype = 'nice_menus-1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '<none>',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'center';
-    $pane->type = 'page_breadcrumb';
-    $pane->subtype = 'page_breadcrumb';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['center'][2] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
     $pane->panel = 'content';
     $pane->type = 'pane_messages';
     $pane->subtype = 'pane_messages';
@@ -189,10 +134,10 @@ function slac_panels_everywhere_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['content'][0] = 'new-4';
+    $display->content['new-1'] = $pane;
+    $display->panels['content'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-2';
     $pane->panel = 'content';
     $pane->type = 'page_content';
     $pane->subtype = 'page_content';
@@ -211,10 +156,10 @@ function slac_panels_everywhere_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['content'][1] = 'new-5';
+    $display->content['new-2'] = $pane;
+    $display->panels['content'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-3';
     $pane->panel = 'footer';
     $pane->type = 'panels_mini';
     $pane->subtype = 'footer';
@@ -232,8 +177,92 @@ function slac_panels_everywhere_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['footer'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'header';
+    $pane->type = 'pane_header';
+    $pane->subtype = 'pane_header';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['header'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'header';
+    $pane->type = 'search_block';
+    $pane->subtype = 'search_block';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'mobile-search-box',
+      'css_class' => 'mobile-search-box',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['header'][1] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'header';
+    $pane->type = 'block';
+    $pane->subtype = 'nice_menus-1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'main-menu',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['footer'][0] = 'new-6';
+    $display->panels['header'][2] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'menu';
+    $pane->type = 'block';
+    $pane->subtype = 'menu-menu-top-nav-menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['menu'][0] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

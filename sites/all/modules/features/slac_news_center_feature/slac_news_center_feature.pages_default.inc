@@ -85,9 +85,10 @@ news/press-release-archive-2*',
         ),
       ),
     ),
+    'panels_menu_active_trail' => 'menu-top-nav-menu:363',
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'three_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -148,6 +149,7 @@ news/press-release-archive-2*',
       'center' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'middle' => NULL,
     ),
   );
   $display->cache = array();
@@ -156,24 +158,6 @@ news/press-release-archive-2*',
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'news_center-panel_pane_3';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-2';
@@ -187,12 +171,33 @@ news/press-release-archive-2*',
     $pane->style = array(
       'settings' => NULL,
     );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited left-menu',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['left'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news_center-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['left'][0] = 'new-2';
+    $display->panels['middle'][0] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'right';
@@ -205,7 +210,10 @@ news/press-release-archive-2*',
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -223,7 +231,10 @@ news/press-release-archive-2*',
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -276,7 +287,7 @@ news/press-release-archive-2*',
     ),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'three_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -309,7 +320,7 @@ news/press-release-archive-2*',
       'center' => array(
         'type' => 'region',
         'title' => 'Center',
-        'width' => '53.99481308155159',
+        'width' => '53.59815697075965',
         'width_type' => '%',
         'parent' => 'main-row',
       ),
@@ -324,7 +335,7 @@ news/press-release-archive-2*',
       'right' => array(
         'type' => 'region',
         'title' => 'Right',
-        'width' => '22.99574991536944',
+        'width' => '23.39240602616138',
         'width_type' => '%',
         'parent' => 'main-row',
         'class' => '',
@@ -337,6 +348,8 @@ news/press-release-archive-2*',
       'center' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'middle' => NULL,
+      'mainmiddleright' => NULL,
     ),
   );
   $display->cache = array();
@@ -345,42 +358,6 @@ news/press-release-archive-2*',
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'center';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'news_center-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['center'][0] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'center';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'news_center-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['center'][1] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-2';
@@ -394,12 +371,57 @@ news/press-release-archive-2*',
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited left-menu',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['left'][0] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news_center-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited news-list',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['middle'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'news_center-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited news-list',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['left'][0] = 'new-7';
+    $display->panels['middle'][1] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'right';
@@ -412,7 +434,10 @@ news/press-release-archive-2*',
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -430,7 +455,10 @@ news/press-release-archive-2*',
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -441,7 +469,7 @@ news/press-release-archive-2*',
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-6';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
@@ -451,7 +479,10 @@ news/press-release-archive-2*',
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links links-internal-external-icons',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();

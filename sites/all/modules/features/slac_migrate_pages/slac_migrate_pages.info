@@ -62,5 +62,5 @@ features[variable][] = menu_parent_page
 features[variable][] = node_options_page
 features[variable][] = node_preview_page
 features[variable][] = node_submitted_page
-features_exclude[taxonomy][page_keywords] = page_keywords
 features_exclude[dependencies][slac_migrate_article_news] = slac_migrate_article_news
+features_exclude[taxonomy][page_keywords] = page_keywords

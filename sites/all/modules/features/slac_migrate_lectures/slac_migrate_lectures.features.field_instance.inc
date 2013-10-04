@@ -18,11 +18,36 @@ function slac_migrate_lectures_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -36,7 +61,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Abstract',
+    'label' => 'Description',
     'required' => 0,
     'settings' => array(
       'display_summary' => 1,
@@ -69,6 +94,31 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 7,
       ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -91,7 +141,7 @@ function slac_migrate_lectures_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -103,11 +153,35 @@ function slac_migrate_lectures_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -131,7 +205,7 @@ function slac_migrate_lectures_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -142,14 +216,38 @@ function slac_migrate_lectures_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 8,
+        'weight' => 5,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -208,7 +306,7 @@ function slac_migrate_lectures_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -219,7 +317,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -229,6 +327,30 @@ function slac_migrate_lectures_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
+        'weight' => 2,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'teaser' => array(
@@ -261,7 +383,7 @@ function slac_migrate_lectures_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -273,11 +395,34 @@ function slac_migrate_lectures_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'text',
+        'label' => 'inline',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -301,7 +446,111 @@ function slac_migrate_lectures_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-lecture-field_speaker_image'
+  $field_instances['node-lecture-field_speaker_image'] = array(
+    'bundle' => 'lecture',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 8,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_speaker_image',
+    'label' => 'Speaker image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'crop_landscape' => 0,
+          'crop_portrait' => 0,
+          'crop_square' => 0,
+          'ecrop_frontpage_carousel' => 0,
+          'ecrop_frontpage_headlines' => 0,
+          'ecrop_frontpage_headlines_small' => 0,
+          'ecrop_news-article_content' => 0,
+          'ecrop_news_center' => 0,
+        ),
+      ),
+      'file_directory' => 'speaker-image',
+      'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
+          'upload' => 'upload',
+          'youtube' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
     ),
   );
 
@@ -313,11 +562,36 @@ function slac_migrate_lectures_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -352,12 +626,36 @@ function slac_migrate_lectures_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'jw_player',
         'settings' => array(
           'jwplayer_preset' => '528x400',
         ),
         'type' => 'jw_player',
+        'weight' => 4,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'teaser' => array(
@@ -402,19 +700,20 @@ function slac_migrate_lectures_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('About the Speaker');
-  t('Abstract');
   t('Affiliations');
+  t('Description');
   t('Image');
   t('Lecture Date');
   t('Location');
   t('Speaker Name');
+  t('Speaker image');
   t('Video');
 
   return $field_instances;

@@ -15,7 +15,7 @@ function slac_past_lectures_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Past Lectures';
   $page->admin_description = 'SLAC Past Lectures page.';
-  $page->path = 'past-lectures';
+  $page->path = 'community/past-lectures';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -43,7 +43,7 @@ function slac_past_lectures_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'three_col';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -104,15 +104,41 @@ function slac_past_lectures_default_page_manager_pages() {
       'center' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'middle' => NULL,
+      'mainmiddleright' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = 'SLAC Public Lecture Series';
+  $display->title = 'Past Lectures';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
+    $pane->type = 'block';
+    $pane->subtype = 'menu_block-2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited left-menu',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['left'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'slac_lectures-panel_pane_1';
     $pane->shown = TRUE;
@@ -126,8 +152,31 @@ function slac_past_lectures_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['middle'][0] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'right';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:a9d568dd-8c5e-4bbb-b47f-0bc14b94580c';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'token',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links links-internal-external-icons',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

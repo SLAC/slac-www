@@ -22,16 +22,16 @@ function lectures_poster_gallery_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'SLAC Public Lecture Series';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'mini';
   $handler->display->display_options['pager']['options']['items_per_page'] = '16';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
@@ -104,9 +104,21 @@ function lectures_poster_gallery_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'lecture' => 'lecture',
   );
+  /* Filter criterion: Field: Image (field_image:fid) */
+  $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
+  $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
 
   /* Display: Posters Gallery */
   $handler = $view->new_display('panel_pane', 'Posters Gallery', 'panel_pane_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '16';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '◄';
+  $handler->display->display_options['pager']['options']['tags']['next'] = '►';
   $handler->display->display_options['pane_category']['name'] = 'Lectures';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $export['lectures_gallery'] = $view;
