@@ -65,7 +65,7 @@ Lightvideo = {
     if (Lightvideo.checkYouTubeVideo(href) || Lightvideo.checkGoogleVideo(href) ||
       Lightvideo.checkMySpaceVideo(href) || Lightvideo.checkLiveVideo(href) ||
       Lightvideo.checkMetacafeVideo(href) ||
-      Lightvideo.checkIFilmSpikeVideo(href) || Lightvideo.checkVimeoVideo(href)
+      Lightvideo.checkIFilmSpikeVideo(href)
       ) {
       return true;
     }
@@ -86,30 +86,13 @@ Lightvideo = {
       var results = pattern.exec(href);
       if (results !== null) {
         Lightbox.videoId = results[1];
-        var href = "http://www.youtube.com/v/"+Lightbox.videoId;
+        var href = "//youtube.com/v/"+Lightbox.videoId;
         var variables = 'fs=1';
         if (Lightbox.flvFlashvars.length) {
           variables = variables + '&' + Lightbox.flvFlashvars;
           href = href + '&' + variables;
         }
         Lightvideo.createEmbed(href, "flvvideo", "#ffffff", variables);
-        return true;
-      }
-    }
-    return false;
-  },
-
-  checkVimeoVideo: function(href) {
-    var patterns = [
-      'vimeo.com/([^/]*)'
-      ];
-
-    for (var i = 0; i < patterns.length; i++) {
-      var pattern = new RegExp(patterns[i], "i");
-      var results = pattern.exec(href);
-      if (results !== null) {
-        Lightbox.videoId = results[1];
-        Lightvideo.createEmbed("http://www.vimeo.com/moogaloop.swf?autoplay=1&clip_id="+Lightbox.videoId, "flvvideo", "#ffffff");
         return true;
       }
     }

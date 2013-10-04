@@ -20,10 +20,3 @@ core = "7.x"
 project = "lightbox2"
 
 
-
-; Information added by drupal.org packaging script on 2013-07-07
-version = "7.x-1.0-beta1+9-dev"
-core = "7.x"
-project = "lightbox2"
-datestamp = "1373160102"
-

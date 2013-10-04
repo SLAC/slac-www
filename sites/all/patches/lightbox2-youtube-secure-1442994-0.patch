@@ -1,0 +1,13 @@
+diff --git a/js/lightbox_video.js b/js/lightbox_video.js
+index e7aad16..1dc6e9a 100644
+--- a/js/lightbox_video.js
++++ b/js/lightbox_video.js
+@@ -81,7 +81,7 @@ var Lightvideo = {
+       var results = pattern.exec(href);
+       if (results !== null) {
+         Lightbox.videoId = results[1];
+-        var href = "http://www.youtube.com/v/"+Lightbox.videoId;
++        var href = "//youtube.com/v/"+Lightbox.videoId;
+         var variables = 'fs=1';
+         if (Lightbox.flvFlashvars.length) {
+           variables = variables + '&' + Lightbox.flvFlashvars;

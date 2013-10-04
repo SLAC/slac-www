@@ -29,7 +29,7 @@ Lightbox = {
   resizeSpeed: 'normal', // Controls the speed of the lightbox resizing animation.
   fadeInSpeed: 'normal', // Controls the speed of the image appearance.
   slideDownSpeed: 'slow', // Controls the speed of the image details appearance.
-  minWidth: 180,
+  minWidth: 240,
   borderSize : 10,
   boxColor : 'fff',
   fontColor : '000',
