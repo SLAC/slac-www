@@ -74,8 +74,20 @@ function slac_int_ext_links_settings_form($form, &$form_state) {
  * Submit callback for wysiwyg settings form.
  */
 function slac_int_ext_links_settings_submit($form, &$form_state) {
-  variable_set('slac_internal_links', explode("\n",trim($form_state['values']['internal_links'])));
-  variable_set('slac_external_links', explode("\n",trim($form_state['values']['external_links'])));
+  $internal_links = array_map("slac_int_ext_links_empty_textarea", explode("\n",trim($form_state['values']['internal_links'])));
+  $external_links = array_map("slac_int_ext_links_empty_textarea", explode("\n",trim($form_state['values']['external_links'])));
+  variable_set('slac_internal_links', array_filter($internal_links));
+  variable_set('slac_external_links', array_filter($external_links));
 
   drupal_set_message(t('Your settings have been saved'));
+}
+
+/**
+ * Remove empty line from textarea
+ * @param type $array
+ * @return type 
+ */
+function slac_int_ext_links_empty_textarea($array) {
+  $item =  preg_replace("/[\n\r]/","", $array);
+  return $item;
 }
