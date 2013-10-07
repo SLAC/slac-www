@@ -147,5 +147,5 @@ function files_filter_filter_info() {
 }
 
 function files_filter_incline_replace($input_text) {
-  return str_replace(FILES_FILTER_REPLACE, base_path() . variable_get('stream_public_path', 'sites/default/files'), $input_text);
+  return str_replace(FILES_FILTER_REPLACE, base_path() . variable_get('file_public_path', conf_path() . '/files'), $input_text);
 }
