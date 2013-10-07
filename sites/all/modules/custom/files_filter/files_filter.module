@@ -1,0 +1,151 @@
+<?php
+
+define('FILES_FILTER_PATTERN', 'sites/default/files');
+define('FILES_FILTER_REPLACE', 'public://');
+define('FILES_CUSTOM_TABLES', serialize(array('block_custom' => 'body')));
+
+/**
+ * Implements hook_menu().
+ */
+function files_filter_menu() {
+  $items = array();
+
+  $items['admin/config/content/files_filter_replace'] = array(
+    'title' => 'Public files replace',
+    'description' => 'Replace sites/default/files to public:// in all text fields.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('files_filter_replace_form'),
+    'access arguments' => array('administer site configuration'),
+  );
+
+  return $items;
+}
+
+/**
+ * Form to run replacing action.
+ */
+function files_filter_replace_form($form, &$form_state) {
+  $fields_storage_details = _files_filter_get_fields_storage_details();
+  $form_state['field_storage_details'] = $fields_storage_details;
+
+  $rows = array();
+  foreach ($fields_storage_details as $field_name => $storage_details) {
+    $count = _files_filter_count_pattern_occurences('FIELD_LOAD_CURRENT', $storage_details) + _files_filter_count_pattern_occurences('FIELD_LOAD_REVISION', $storage_details);
+    $rows[] = array($field_name, $count);
+  }
+
+  // Go through custom tables as well.
+  $custom_tables = unserialize(FILES_CUSTOM_TABLES);
+  foreach ($custom_tables as $db_table_name => $db_table_field) {
+    $count = _files_filter_count_pattern_occurences_count_query($db_table_name, $db_table_field);
+    $rows[] = array('Custom table: ' . $db_table_name, $count);
+  }
+
+  $header = array(t('field name'), t('occurences'));
+  $form['counts'] = array(
+    '#markup' => theme('table', array('header' => $header, 'rows' => $rows, 'empty' => t('No occurences'))),
+  );
+
+  $form['submit'] = array(
+      '#value' => t('Submit'),
+      '#type' => 'submit',
+  );
+
+  $form['#submit'] = array('files_filter_replace_form_submit');
+
+  return $form;
+}
+
+function files_filter_replace_form_submit($form, $form_state) {
+  $fields_storage_details = $form_state['field_storage_details'];
+
+  foreach ($fields_storage_details as $field_name => $storage_details) {
+    foreach (array('FIELD_LOAD_CURRENT', 'FIELD_LOAD_REVISION') as $storage_details_key) {
+      $storage_details_keys = array_keys($storage_details[$storage_details_key]);
+      $db_table_name = reset($storage_details_keys);
+      $db_table_field = $storage_details[$storage_details_key][$db_table_name]['value'];
+
+      _files_filter_replace_query($db_table_name, $db_table_field);
+    }
+  }
+
+  // Go through custom tables as well.
+  $custom_tables = unserialize(FILES_CUSTOM_TABLES);
+  foreach ($custom_tables as $db_table_name => $db_table_field) {
+    _files_filter_replace_query($db_table_name, $db_table_field);
+  }
+
+  drupal_set_message(t('All occurences of %pattern have been replaced with %value',
+    array('%pattern' => FILES_FILTER_PATTERN, '%value' => FILES_FILTER_REPLACE))
+  );
+}
+
+/**
+ * Count number of occurences of FILES_FILTER_PATTERN in db tables.
+ */
+function _files_filter_count_pattern_occurences($storage_details_key, $storage_details) {
+  $storage_details_keys = array_keys($storage_details[$storage_details_key]);
+  $db_table_name = reset($storage_details_keys);
+  $db_table_field = $storage_details[$storage_details_key][$db_table_name]['value'];
+
+  return _files_filter_count_pattern_occurences_count_query($db_table_name, $db_table_field);
+}
+
+/**
+ * Run a replace query.
+ */
+function _files_filter_replace_query($db_table_name, $db_table_field) {
+  db_query('UPDATE {' . $db_table_name . '} SET ' . $db_table_field . ' = REPLACE(' . $db_table_field . ',:pattern, :value)', array(
+    ':pattern' => '/' . FILES_FILTER_PATTERN,
+    ':value' => FILES_FILTER_REPLACE,
+  ));
+
+  db_query('UPDATE {' . $db_table_name . '} SET ' . $db_table_field . ' = REPLACE(' . $db_table_field . ',:pattern, :value)', array(
+    ':pattern' => FILES_FILTER_PATTERN,
+    ':value' => FILES_FILTER_REPLACE,
+  ));
+}
+
+function _files_filter_count_pattern_occurences_count_query($db_table_name, $db_table_field) {
+  return db_query('SELECT count(*) AS count FROM {' . $db_table_name . '} WHERE ' . $db_table_field . ' LIKE :value1 OR ' . $db_table_field . ' LIKE :value2', array(
+    'value1' => '%' . db_like(FILES_FILTER_PATTERN) . '%',
+    'value2' => '%/' . db_like(FILES_FILTER_PATTERN) . '%',
+  ))->fetchField();
+}
+
+/**
+ * Retrieve sql storage details of text fields.
+ */
+function _files_filter_get_fields_storage_details() {
+  $fields_storage_details = array();
+  foreach (field_info_instances() as $bundle_fields) {
+    foreach ($bundle_fields as $field) {
+      $field = reset($field);
+      if (!isset($field['widget']['module']) || $field['widget']['module'] != 'text') {
+        continue;
+      }
+
+      $field_info = field_info_field($field['field_name']);
+      $fields_storage_details[$field['field_name']] = $field_info['storage']['details']['sql'];
+    }
+  }
+
+  return $fields_storage_details;
+}
+
+/**
+ * Implements hook_filter_info().
+ */
+function files_filter_filter_info() {
+  $filters['files_filter'] = array(
+    'title' => t('Public files filter'),
+    'description' => t('Replace public:// with proper path'),
+    'process callback' => 'files_filter_incline_replace',
+    'cache' => TRUE,
+  );
+  return $filters;
+}
+
+function files_filter_incline_replace($input_text) {
+  return str_replace(FILES_FILTER_REPLACE, base_path() . variable_get('stream_public_path', 'sites/default/files'), $input_text);
+}
