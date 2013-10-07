@@ -40,3 +40,13 @@ function slac_admin_field_collection_is_empty_required_element($element) {
       return !isset($element['#value']['fid']) || empty($element['#value']['fid']);
   }
 }
+
+/**
+ * Implements hook_js_alter().
+ */
+function slac_admin_js_alter(&$javascript) {
+  if (arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'news-article') {
+    // Removes the js that hides the summary field in node add form.
+    unset($javascript['modules/field/modules/text/text.js']);
+  }
+}
