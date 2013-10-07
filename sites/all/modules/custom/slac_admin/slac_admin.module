@@ -45,7 +45,14 @@ function slac_admin_field_collection_is_empty_required_element($element) {
  * Implements hook_js_alter().
  */
 function slac_admin_js_alter(&$javascript) {
-  if (arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'news-article') {
+  if (arg(0) == 'node' && is_numeric(arg(1)) && arg(2) == 'edit') {
+    $node = node_load(arg(1));
+    if ($node->type == 'news_article') {
+      // Removes the js that hides the summary field in node add form.
+      unset($javascript['modules/field/modules/text/text.js']);
+    }
+  }
+  elseif (arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'news-article') {
     // Removes the js that hides the summary field in node add form.
     unset($javascript['modules/field/modules/text/text.js']);
   }
