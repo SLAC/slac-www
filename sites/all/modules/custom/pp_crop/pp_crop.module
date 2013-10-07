@@ -101,9 +101,12 @@ function pp_crop_entity_info_alter(&$entity_info) {
 function _pp_crop_load_styles() {
   $return = array();
   $styles = image_styles();
-  $pp_crop_style = variable_get('pp_crop_wysiwyg_settings', array());
+  $pp_crop_wysiwyg_styles = variable_get('pp_crop_wysiwyg_settings', array());
+  $pp_crop_field_styles = variable_get('pp_crop_field_settings', array());
+  $pp_crop_styles = array_unique(array_merge($pp_crop_wysiwyg_styles, $pp_crop_field_styles));
+
   foreach ($styles as $style_name => $style) {
-    if (in_array($style_name, $pp_crop_style)) {
+    if (in_array($style_name, $pp_crop_styles)) {
       $return[$style_name] = $style;
     }
   }
@@ -374,8 +377,14 @@ function pp_crop_element_process($element, $form_state, $form) {
 
   _epsacrop_include_header_html();
   $styles = _epsacrop_load_styles_by_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
-  if (count($styles) == 0) {
-    return $element;
+  if (isset($styles['styles'])) {
+    if (count($styles['styles']) == 0) {
+      return $element;
+    }
+    variable_set('pp_crop_field_settings', $styles['styles']);
+  }
+  else {
+    return;
   }
 
   $theme_variables = array(
@@ -408,21 +417,34 @@ function pp_crop_get_images_thumbnails(&$form, $file) {
   $thumbnail_options = array();
   // Add default so it will be unset.
   $view_mode_settings = field_view_mode_settings('file', $file->type) + array('default' => 'default');
-  $pp_crop_style = variable_get('pp_crop_wysiwyg_settings', array());
+
+  $wysiwyg =  isset($file->override['wysiwyg']) ? $file->override['wysiwyg'] : FALSE;
+  if ($wysiwyg) {
+    $pp_crop_style = variable_get('pp_crop_wysiwyg_settings', array());
+  }
+  else {
+    $pp_crop_style = variable_get('pp_crop_field_settings', array());
+  }
+
   foreach ($view_mode_settings as $view_mode_name => $view_mode_info) {
-    if ( strpos($view_mode_name, 'crop_') === 0 ) {
+    if (strpos($view_mode_name, 'crop_') === 0 ) {
       $image_style_name = substr($view_mode_name, strlen('crop_'));
-      $rendered_image = theme('image_style', array(
-        'style_name' => $image_style_name,
-        'path' => $file->uri,
-        'attributes' => array('class' => 'pp-crop-thumbnail'),
-          ));
+      if (in_array($image_style_name, $pp_crop_style)) {
+        $rendered_image = theme('image_style', array(
+          'style_name' => $image_style_name,
+          'path' => $file->uri,
+          'attributes' => array('class' => 'pp-crop-thumbnail'),
+        ));
 
-      preg_match('/\?itok=[a-zA-Z0-9-_]*/', $rendered_image, $matches);
-      $rendered_image = str_replace($matches[0], $matches[0] . '&' . rand(0, 1000) . '=' . rand(0, 1000), $rendered_image);
+        preg_match('/\?itok=[a-zA-Z0-9-_]*/', $rendered_image, $matches);
+        $rendered_image = str_replace($matches[0], $matches[0] . '&' . rand(0, 1000) . '=' . rand(0, 1000), $rendered_image);
 
-      $thumbnail_options[$view_mode_name] = $rendered_image;
-      continue;
+        $thumbnail_options[$view_mode_name] = $rendered_image;
+        continue;
+      }
+      else {
+        continue;
+      }
     }
     if (isset($form['options']['format']['#options'][$view_mode_name])) {
       unset($form['options']['format']['#options'][$view_mode_name]);
