@@ -1389,3 +1389,19 @@ a.lightbox-processed:hover {
 /* line 1113, ../sass/blocks.scss */
 .content-graphic-block a:hover {
   border: 2px solid #DBDADB; }
+
+/* line 1117, ../sass/blocks.scss */
+.general-right .pane-node-terms {
+  background: #ebebeb;
+  padding: 10px; }
+  /* line 1120, ../sass/blocks.scss */
+  .general-right .pane-node-terms .pane-title {
+    color: #373738;
+    font-size: 12px;
+    padding-bottom: 5px;
+    font-weight: bold; }
+  /* line 1126, ../sass/blocks.scss */
+  .general-right .pane-node-terms a {
+    line-height: 18px;
+    color: #720c20;
+    font-size: 11px; }
