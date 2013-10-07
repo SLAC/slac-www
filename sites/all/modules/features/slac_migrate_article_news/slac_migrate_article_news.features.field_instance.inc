@@ -86,7 +86,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -146,7 +146,7 @@ function slac_migrate_article_news_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -215,12 +215,13 @@ function slac_migrate_article_news_field_default_field_instances() {
           'crop_landscape' => 0,
           'crop_portrait' => 0,
           'crop_square' => 0,
-          'ecrop_frontpage_carousel' => 'ecrop_frontpage_carousel',
+          'ecrop_frontpage_carousel' => 0,
           'ecrop_frontpage_headlines' => 'ecrop_frontpage_headlines',
           'ecrop_frontpage_headlines_small' => 'ecrop_frontpage_headlines_small',
           'ecrop_news-article_content' => 'ecrop_news-article_content',
           'ecrop_news_center' => 'ecrop_news_center',
-          'lightbox_large_image' => 'lightbox_large_image',
+          'lightbox_text_bottom' => 0,
+          'lightbox_text_left_right' => 0,
         ),
       ),
       'file_directory' => 'images',
@@ -253,6 +254,103 @@ function slac_migrate_article_news_field_default_field_instances() {
           'media_internet' => 0,
           'upload' => 0,
           'youtube' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-news_article-field_news_video'
+  $field_instances['node-news_article-field_news_video'] = array(
+    'bundle' => 'news_article',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'media',
+        'weight' => 8,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_news_video',
+    'label' => 'Video',
+    'required' => 0,
+    'settings' => array(
+      'epsacrop' => array(
+        'styles' => array(
+          'crop_landscape' => 0,
+          'crop_portrait' => 0,
+          'crop_square' => 0,
+          'ecrop_frontpage_carousel' => 0,
+          'ecrop_frontpage_headlines' => 0,
+          'ecrop_frontpage_headlines_small' => 0,
+          'ecrop_news-article_content' => 0,
+          'ecrop_news_center' => 0,
+          'lightbox_text_bottom' => 0,
+          'lightbox_text_left_right' => 0,
+        ),
+      ),
+      'file_extensions' => 'jpg jpeg gif png',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'vimeo' => 'vimeo',
+          'youtube' => 'youtube',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+          'youtube' => 'youtube',
         ),
         'progress_indicator' => 'throbber',
       ),
@@ -396,6 +494,7 @@ function slac_migrate_article_news_field_default_field_instances() {
   t('Image');
   t('Page author');
   t('Tags');
+  t('Video');
 
   return $field_instances;
 }
