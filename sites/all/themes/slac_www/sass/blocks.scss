@@ -497,7 +497,7 @@ $linkcolor: #990000;
     padding: 1%;
     background: #EFEFEF;
     img {
-      width: 100%;
+      width: 96%;
       height: auto;
     }
   }
@@ -1112,4 +1112,20 @@ a.lightbox-processed:hover{
 
 .content-graphic-block a:hover{
   border: 2px solid #DBDADB;
+}
+
+.general-right .pane-node-terms{
+  background: #ebebeb;
+  padding:  10px;
+  .pane-title{
+    color: #373738;
+    font-size:  12px;
+    padding-bottom:  5px;
+    font-weight: bold;
+  }
+  a{
+    line-height:  18px;
+    color: #720c20;
+font-size: 11px;
+  }
 }
