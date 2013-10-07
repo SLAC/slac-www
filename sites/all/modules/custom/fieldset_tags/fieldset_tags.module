@@ -123,20 +123,6 @@ function fieldset_tags_field_widget_validate($element, &$form_state) {
   form_set_value($element, $items, $form_state);
 }
 
-/**
- * Returns default options.
- */
-function _get_default_options($children, $tags) {
-  $default_options = array();
-  foreach ($children as $tid => $term) {
-    if (in_array($term, $tags)) {
-      $default_options[$tid] = $tid;
-    }
-  }
-
-  return $default_options;
-}
-
 function _fieldset_tags_get_values($element, &$result) {
   foreach ($element as $key => $value) {
     if (is_numeric($key) && isset($value['tag_options'])) {
