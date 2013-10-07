@@ -59,3 +59,22 @@ function slac_forms_alter_widget_process($element, &$form_state, $form) {
 
   return $element;
 }
+
+/**
+ * Implements hook_element_info_alter()
+ */
+function slac_forms_alter_element_info_alter(&$type) {
+  if (isset($type['link_field'])) {
+    $type['link_field']['#process'][] = 'slac_forms_alter_link_field_process';
+  }
+}
+
+function slac_forms_alter_link_field_process($element, $form_state, $complete_form) {
+  switch ($element['#field_name']) {
+    case 'field_link':
+      $element['title']['#title'] = t('Source');
+      break;
+  }
+
+  return $element;
+}
