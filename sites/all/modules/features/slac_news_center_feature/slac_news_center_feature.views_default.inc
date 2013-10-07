@@ -94,6 +94,10 @@ function slac_news_center_feature_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '150',
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -190,6 +194,10 @@ function slac_news_center_feature_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '150',
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
