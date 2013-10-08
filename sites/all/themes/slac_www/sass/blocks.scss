@@ -403,6 +403,7 @@ $linkcolor: #990000;
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
+  height:  30px;
   &:hover span{
     border-bottom: 1px dotted #881728;
   }
@@ -580,12 +581,13 @@ div.pane-node-body{
 .content-block{
     padding-top: 26px;
   .content-block-heading {
-    border-bottom: 2px solid #831425;
+    border-bottom: 2px solid #881728;
     font-size: 13px;
     padding: 6px 0 2px 7px;
-    letter-spacing: 1px;
-    color: $goldtitle;
+    color: #996633;
     text-transform: uppercase;
+    letter-spacing: .125em;
+    color: #7F6332;
   }
   .content-block-body{
     margin-top: 20px;
