@@ -14,18 +14,7 @@ function bi_block_add() {
  */
 function bi_browser() {
   module_invoke('admin_menu', 'suppress');
-
-  $output = array();
-
-  $output['text'] = drupal_get_form('bi_select_block_type_form');
-
-  $fake_buttons = '<div class="form-actions form-wrapper">';
-//  $fake_buttons .= l(t('Submit'), '', array('attributes' => array('class' => array('button', 'button-yes', 'fake-submit'))));
-  $fake_buttons .= l(t('Cancel'), '', array('attributes' => array('class' => array('button', 'button-no', 'fake-cancel'))));
-  $fake_buttons .= '</div>';
-  $output['fake_buttons']['#markup'] = $fake_buttons;
-
-  return $output;
+  return drupal_get_form('bi_select_block_type_form');
 }
 
 /**
@@ -44,10 +33,13 @@ function bi_select_block_type_form($form, &$form_state) {
     '#description' => t('Select type of the block to insert'),
     '#options' => $options,
   );
-  $form['submit'] = array(
+  $form['actions']['submit'] = array(
     '#type' => 'submit',
     '#submit' => array('bi_select_block_type_form_submit'),
     '#value' => t('Select')
+  );
+  $form['actions']['cancel'] = array(
+    '#markup' => l(t('Cancel'), '', array('attributes' => array('class' => array('button', 'button-no', 'fake-cancel')))),
   );
   return $form;
 }
