@@ -1,0 +1,5 @@
+name = Files Filter
+description = Replace sites/default/files to public:// in all text fields. Adds a filter to convert public:// to proper paths.
+package = User interface
+core = 7.x
+

@@ -21,7 +21,7 @@ $linkcolor: #990000;
     padding: 0;
     margin-bottom: 20px;
     &:hover{
-      border-bottom: 1px dotted #EFEFEF;  
+      border-bottom: 1px dotted #EFEFEF;
     }
   }
   .field-slideshow-description,
@@ -184,7 +184,7 @@ $linkcolor: #990000;
     &.active, 
     a:hover,
     a.active{
-      background-color: #f2f2f2;
+      background-color: #f5f5f5;
     }
   }
 
@@ -403,6 +403,7 @@ $linkcolor: #990000;
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
+  height:  30px;
   &:hover span{
     border-bottom: 1px dotted #881728;
   }
@@ -429,7 +430,7 @@ $linkcolor: #990000;
   .menu li,
   ul.news-archive-links li{
     width: 96%;
-    padding: 2px 0 2px 4%;
+    padding: 2px 0 0 4%;
     margin: 0;
     line-height: 18px;
       background: url('../images/red-arrow.png') no-repeat 8px 11px;
@@ -497,7 +498,7 @@ $linkcolor: #990000;
     padding: 1%;
     background: #EFEFEF;
     img {
-      width: 96%;
+      width: 100%;
       height: auto;
     }
   }
@@ -580,12 +581,13 @@ div.pane-node-body{
 .content-block{
     padding-top: 26px;
   .content-block-heading {
-    border-bottom: 2px solid #831425;
+    border-bottom: 2px solid #881728;
     font-size: 13px;
     padding: 6px 0 2px 7px;
-    letter-spacing: 1px;
-    color: $goldtitle;
+    color: #996633;
     text-transform: uppercase;
+    letter-spacing: .125em;
+    color: #7F6332;
   }
   .content-block-body{
     margin-top: 20px;
@@ -1117,6 +1119,7 @@ a.lightbox-processed:hover{
 .general-right .pane-node-terms{
   background: #ebebeb;
   padding:  10px;
+  margin-bottom: 50px;
   .pane-title{
     color: #373738;
     font-size:  12px;
@@ -1128,4 +1131,8 @@ a.lightbox-processed:hover{
     color: #720c20;
 font-size: 11px;
   }
+}
+
+.node-type-news-article .video-block .content{
+  padding-top:  12px;
 }
