@@ -8,19 +8,21 @@
  */
 function pp_bi_menu() {
   $items = array();
+
   $type = 'pp_bi';
   $types = bean_get_types();
   $type = $types[$type];
 
-  $items['block/add/' . str_replace('_', '-', $type->type) . '/%ctools_js/%'] = array(
+  $items['block/add/' . str_replace('_', '-', $type->type) . '/%ctools_js'] = array(
     'title' => 'zzz',
     'title callback' => 'check_plain',
     'page callback' => 'pp_bi_block_add',
-    'page arguments' => array($type->type, 4, 5),
+    //'page arguments' => array($type->type, 3),
     'access arguments' => array('create any ' . $type->type . ' bean'),
     'description' => $type->getDescription(),
     'file' => 'pp_bi.pages.inc',
   );
+
   /*$items['modal/node/%node/edit/%ctools_js/%'] = array(
     'title' => 'Edit',
     'page callback' => 'edit_node_modal_node_page_edit',
