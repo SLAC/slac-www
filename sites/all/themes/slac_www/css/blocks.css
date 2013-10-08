@@ -1393,18 +1393,18 @@ a.lightbox-processed:hover {
   border: 2px solid #DBDADB; }
 
 /* line 1119, ../sass/blocks.scss */
-.general-right .pane-node-terms {
+.general-right .pane-node-terms-misc {
   background: #ebebeb;
   padding: 10px;
   margin-bottom: 50px; }
   /* line 1123, ../sass/blocks.scss */
-  .general-right .pane-node-terms .pane-title {
+  .general-right .pane-node-terms-misc .pane-title {
     color: #373738;
     font-size: 12px;
     padding-bottom: 5px;
     font-weight: bold; }
   /* line 1129, ../sass/blocks.scss */
-  .general-right .pane-node-terms a {
+  .general-right .pane-node-terms-misc a {
     line-height: 18px;
     color: #720c20;
     font-size: 11px; }
