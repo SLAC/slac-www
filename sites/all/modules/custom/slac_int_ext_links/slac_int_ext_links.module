@@ -76,8 +76,8 @@ function slac_int_ext_links_settings_form($form, &$form_state) {
 function slac_int_ext_links_settings_submit($form, &$form_state) {
   $internal_links = array_map("slac_int_ext_links_empty_textarea", explode("\n",trim($form_state['values']['internal_links'])));
   $external_links = array_map("slac_int_ext_links_empty_textarea", explode("\n",trim($form_state['values']['external_links'])));
-  variable_set('slac_internal_links', array_filter($internal_links));
-  variable_set('slac_external_links', array_filter($external_links));
+  variable_set('slac_internal_links', array_values(array_filter($internal_links)));
+  variable_set('slac_external_links', array_values(array_filter($external_links)));
 
   drupal_set_message(t('Your settings have been saved'));
 }
