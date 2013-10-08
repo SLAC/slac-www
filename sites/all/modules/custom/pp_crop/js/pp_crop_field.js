@@ -1,5 +1,7 @@
 (function ($) {
 
+  Drupal.EPSACrop = Drupal.EPSACrop || {};
+
   Drupal.behaviors.ppCropField = {
     attach: function(context) {
       /**
@@ -30,6 +32,10 @@
             opacity: 0.6
           }
         });
+
+        if (!($theme_variables_element.data('theme-variables'))){
+          return;
+        };
 
         // Create a link "Manage thumbnails" and attach click event handler.
         var link = '<a href="#" class="manage-thumbnails button" id="manage-thumbnails-link-' + fid + '">' + Drupal.t('Manage thumbnails') + '</a>';
