@@ -1395,19 +1395,20 @@ a.lightbox-processed:hover {
 /* line 1119, ../sass/blocks.scss */
 .general-right .pane-node-terms {
   background: #ebebeb;
-  padding: 10px; }
-  /* line 1122, ../sass/blocks.scss */
+  padding: 10px;
+  margin-bottom: 50px; }
+  /* line 1123, ../sass/blocks.scss */
   .general-right .pane-node-terms .pane-title {
     color: #373738;
     font-size: 12px;
     padding-bottom: 5px;
     font-weight: bold; }
-  /* line 1128, ../sass/blocks.scss */
+  /* line 1129, ../sass/blocks.scss */
   .general-right .pane-node-terms a {
     line-height: 18px;
     color: #720c20;
     font-size: 11px; }
 
-/* line 1135, ../sass/blocks.scss */
+/* line 1136, ../sass/blocks.scss */
 .node-type-news-article .video-block .content {
   padding-top: 12px; }
