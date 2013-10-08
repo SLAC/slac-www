@@ -8,21 +8,42 @@
  * @param type $form_id 
  */
 function slac_fieldset_tagging_widget_form_alter(&$form, &$form_state, $form_id) {
-
-  if ($form_id == 'blog_node_form' || $form_id == 'news_article_node_form') {
-    if ($form_id == 'blog_node_form') {
-      $field_name = 'field_blog_tags';
-    }
-    else {
-      $field_name = 'field_tags';
-    }
-    $field_blog_tags = $form[$field_name][LANGUAGE_NONE]['tags'];
-    foreach ($field_blog_tags as $key => $value) {
-      if (is_int($key)) {
-        if (count($value['tag_options']['#default_value']) > 0) {
-          $form[$field_name][LANGUAGE_NONE]['tags'][$key]['#collapsed'] = FALSE;
+  switch ($form_id) {
+    case 'blog_node_form':
+    case 'news_article_node_form':
+      if ($form_id == 'blog_node_form') {
+        $field_name = 'field_blog_tags';
+      }
+      else {
+        $field_name = 'field_tags';
+      }
+      $field_blog_tags = $form[$field_name][LANGUAGE_NONE]['tags'];
+      foreach ($field_blog_tags as $key => $value) {
+        if (is_int($key)) {
+          if (count($value['tag_options']['#default_value']) > 0) {
+            $form[$field_name][LANGUAGE_NONE]['tags'][$key]['#collapsed'] = FALSE;
+          }
         }
       }
-    }
+      break;
   }
 }
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slac_fieldset_tagging_widget_ctools_plugin_directory($module, $plugin) {
+  if ($module === 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function slac_fieldset_tagging_widget_ctools_plugin_api($module, $api) {
+  if ($module == 'page_manager') {
+    return array('version' => 1);
+  }
+}
+
