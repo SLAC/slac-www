@@ -59,9 +59,6 @@
     mediaIframe.parents(".ui-dialog").find(".ui-dialog-titlebar").remove();
     Drupal.media.popups.overlayDisplace(mediaIframe.parents(".ui-dialog"));
 
-    mediaIframe.parents(".ui-dialog").find("a.fake-submit").once('fake-submit').bind('click', Drupal.bi.popups.blockSelectDialog.submit);
-    mediaIframe.parents(".ui-dialog").find("a.fake-cancel").once('fake-cancel').bind('click', Drupal.bi.popups.blockSelectDialog.submit);
-
     return mediaIframe;
   };
 
@@ -83,7 +80,7 @@
       },
       widget: { // Settings for the actual iFrame which is launched.
         src: Drupal.settings.bi.browserUrl, // Src of the media browser (if you want to totally override it)
-        onLoad: Drupal.media.popups.mediaBrowser.mediaBrowserOnLoad // Onload function when iFrame loads.
+        onLoad: Drupal.bi.popups.blockSelectDialog.onLoad // Onload function when iFrame loads.
       },
       dialog: Drupal.media.popups.getDialogOptions()
     };
@@ -102,6 +99,16 @@ Drupal.bi.popups.getPopupIframe = function (src, id, options) {
   .attr('id', id)
   .attr('scrolling', options.scrolling);
 };
+
+/**
+ * Called after iframe of selecting the block's type is loaded.
+ */
+Drupal.bi.popups.blockSelectDialog.onLoad = function() {
+  $('#blockInsertBrowser').contents().find('#skip-link').remove();
+  $('#blockInsertBrowser').contents().find('#branding').remove();
+
+  $('#blockInsertBrowser').contents().find('a.fake-cancel').bind('click', Drupal.bi.popups.blockSelectDialog.submit);
+}
 
 })(jQuery);
 

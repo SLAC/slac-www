@@ -20,7 +20,7 @@ function bi_browser() {
   $output['text'] = drupal_get_form('bi_select_block_type_form');
 
   $fake_buttons = '<div class="form-actions form-wrapper">';
-  $fake_buttons .= l(t('Submit'), '', array('attributes' => array('class' => array('button', 'button-yes', 'fake-submit'))));
+//  $fake_buttons .= l(t('Submit'), '', array('attributes' => array('class' => array('button', 'button-yes', 'fake-submit'))));
   $fake_buttons .= l(t('Cancel'), '', array('attributes' => array('class' => array('button', 'button-no', 'fake-cancel'))));
   $fake_buttons .= '</div>';
   $output['fake_buttons']['#markup'] = $fake_buttons;
