@@ -215,7 +215,7 @@
   Drupal.behaviors.popupBlockonMobile = {
     attach: function (context, settings) {
       var smallflag = Modernizr.mq('(max-width: 600px)');
-      $('.video-block .field-item .youtube-video-popup a, a.lightbox-processed').click(function() {
+      $('.video-block .field-item .youtube-video-popup a, a.lightbox-processed, .field-name-field-news-video .youtube-video-popup a').click(function() {
         if (smallflag) {
           window.location = $(this).attr('href');
         }
