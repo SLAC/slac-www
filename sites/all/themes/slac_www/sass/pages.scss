@@ -2276,7 +2276,6 @@ a.imageLessButton {
 }
 
 
-
 .three-col-middle-right{
   .empty-right{
     display: none;
@@ -2285,5 +2284,13 @@ a.imageLessButton {
   .with-empty-right{
     width:  90%;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 800px){
+  .three-col-middle-right{
+    .with-empty-right{
+      width:  100%;
+    }
   }
 }
