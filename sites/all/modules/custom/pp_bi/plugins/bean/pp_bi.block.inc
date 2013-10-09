@@ -92,6 +92,7 @@ class BlockBean extends BeanPlugin {
    * Displays the bean.
    */
   public function view($bean, $content, $view_mode = 'default', $langcode = NULL) {
+    $content = array();
     $content['body']['#markup'] = check_plain($bean->body);
     $content['more_link']['#markup'] = theme('bi_more_link', array('text' => $bean->more_link['text'], 'path' => $bean->more_link['path']));
     return $content;
