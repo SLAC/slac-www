@@ -351,9 +351,9 @@
 /* line 12, ../sass/blocks.scss */
 .html .slider {
   margin-bottom: 20px;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
   /* line 17, ../sass/blocks.scss */
   .html .slider .field-slideshow-caption a {
     font-size: 30px;
@@ -1428,3 +1428,11 @@ a.lightbox-processed:hover {
 /* line 1148, ../sass/blocks.scss */
 .node-type-news-article .video-block .content {
   padding-top: 12px; }
+
+/* line 1154, ../sass/blocks.scss */
+.three-col-middle-right .empty-right {
+  display: none; }
+/* line 1158, ../sass/blocks.scss */
+.three-col-middle-right .with-empty-right {
+  width: 90%;
+  margin-right: 0; }

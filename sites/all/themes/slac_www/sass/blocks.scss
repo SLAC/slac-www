@@ -1148,3 +1148,15 @@ font-size: 11px;
 .node-type-news-article .video-block .content{
   padding-top:  12px;
 }
+
+
+.three-col-middle-right{
+  .empty-right{
+    display: none;
+  }
+
+  .with-empty-right{
+    width:  90%;
+    margin-right: 0;
+  }
+}
