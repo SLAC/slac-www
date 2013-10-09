@@ -245,4 +245,5 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 function slac_www_preprocess_pane_header(&$vars) {
   $search_form = drupal_get_form('search_block_search_form');
   $vars['search_box'] = (isset($search_form) ? drupal_render($search_form) : '');
+  $vars['employee_portal_url'] = variable_get('employee_portal_url', '');
 }

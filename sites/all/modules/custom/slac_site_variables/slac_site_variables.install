@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implementation of hook_install.
+ */
+function slac_site_variables_install() {
+  variable_set('employee_portal_url', '');
+}
+
+/**
+ * Implementation of hook_uninstall.
+ */
+function slac_site_variables_uninstall() {
+  variable_del('employee_portal_url');
+}

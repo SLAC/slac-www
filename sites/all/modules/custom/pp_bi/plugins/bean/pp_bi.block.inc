@@ -95,7 +95,7 @@ class BlockBean extends BeanPlugin {
           'schemes' => array(
             'public' => 'public',
           ),
-          'file_directory' => 'pp_bi_images',
+          'file_directory' => 'bi_images',
           'file_extensions' => 'png jpg jpeg',
           'max_filesize' => '4 MB',
           'uri_scheme' => 'public',
@@ -143,7 +143,7 @@ class BlockBean extends BeanPlugin {
         //$content['nodes'][$node->nid] = node_view($node, $bean->settings['node_view_mode']);
       }
     }*/
-    $content['more_link']['#markup'] = theme('pp_bi_more_link', array('text' => $bean->more_link['text'], 'path' => $bean->more_link['path']));
+    $content['more_link']['#markup'] = theme('bi_more_link', array('text' => $bean->more_link['text'], 'path' => $bean->more_link['path']));
     return $content;
   }
 }
