@@ -28,7 +28,7 @@ function slac_import_feeds_importer_default() {
       'plugin_key' => 'FeedsXPathParserXML',
       'config' => array(
         'sources' => array(
-          'xpathparser:0' => 'page-metadata/page-title',
+          'xpathparser:0' => 'article-body/article-heading',
           'xpathparser:1' => 'article-body',
           'xpathparser:2' => 'news-article-media/*/news-article-graphic/fullsize-image-location',
           'xpathparser:3' => 'news-article-media/*/news-article-graphic/image-alt-text',
@@ -155,7 +155,7 @@ function slac_import_feeds_importer_default() {
             'unique' => FALSE,
           ),
         ),
-        'update_existing' => '2',
+        'update_existing' => '0',
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'news_article',

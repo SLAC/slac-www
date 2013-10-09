@@ -13,21 +13,6 @@ function slac_import_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
-  $feeds_tamper->id = 'news_article_importer_custom-blank_source_1-default_value';
-  $feeds_tamper->importer = 'news_article_importer_custom';
-  $feeds_tamper->source = 'Blank source 1';
-  $feeds_tamper->plugin_id = 'default_value';
-  $feeds_tamper->settings = array(
-    'default_value' => 'Internal',
-  );
-  $feeds_tamper->weight = 0;
-  $feeds_tamper->description = 'Set default value';
-
-  $export[$feeds_tamper->id] = $feeds_tamper;
-
-  $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'news_article_importer_custom-xpathparser_0-truncate_text';
   $feeds_tamper->importer = 'news_article_importer_custom';
   $feeds_tamper->source = 'xpathparser:0';
@@ -44,21 +29,6 @@ function slac_import_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
-  $feeds_tamper->id = 'news_article_importer_custom-xpathparser_10-hash';
-  $feeds_tamper->importer = 'news_article_importer_custom';
-  $feeds_tamper->source = 'xpathparser:10';
-  $feeds_tamper->plugin_id = 'hash';
-  $feeds_tamper->settings = array(
-    'override' => 1,
-  );
-  $feeds_tamper->weight = 0;
-  $feeds_tamper->description = 'Calculate hash';
-
-  $export[$feeds_tamper->id] = $feeds_tamper;
-
-  $feeds_tamper = new stdClass();
-  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
-  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'news_article_importer_custom-xpathparser_11-hash';
   $feeds_tamper->importer = 'news_article_importer_custom';
   $feeds_tamper->source = 'xpathparser:11';
@@ -68,6 +38,38 @@ function slac_import_feeds_tamper_default() {
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Calculate hash';
+
+  $export[$feeds_tamper->id] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'news_article_importer_custom-xpathparser_12-truncate_text';
+  $feeds_tamper->importer = 'news_article_importer_custom';
+  $feeds_tamper->source = 'xpathparser:12';
+  $feeds_tamper->plugin_id = 'truncate_text';
+  $feeds_tamper->settings = array(
+    'num_char' => '56',
+    'ellipses' => 1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Truncate';
+
+  $export[$feeds_tamper->id] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'news_article_importer_custom-xpathparser_13-truncate_text';
+  $feeds_tamper->importer = 'news_article_importer_custom';
+  $feeds_tamper->source = 'xpathparser:13';
+  $feeds_tamper->plugin_id = 'truncate_text';
+  $feeds_tamper->settings = array(
+    'num_char' => '56',
+    'ellipses' => 1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Truncate';
 
   $export[$feeds_tamper->id] = $feeds_tamper;
 
@@ -167,6 +169,36 @@ function slac_import_feeds_tamper_default() {
   $feeds_tamper->settings = '';
   $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'Unique';
+
+  $export[$feeds_tamper->id] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'news_article_importer_custom-blank_source_1-default_value';
+  $feeds_tamper->importer = 'news_article_importer_custom';
+  $feeds_tamper->source = 'Blank source 1';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => 'Internal',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set default value';
+
+  $export[$feeds_tamper->id] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'news_article_importer_custom-xpathparser_10-hash';
+  $feeds_tamper->importer = 'news_article_importer_custom';
+  $feeds_tamper->source = 'xpathparser:10';
+  $feeds_tamper->plugin_id = 'hash';
+  $feeds_tamper->settings = array(
+    'override' => 1,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Calculate hash';
 
   $export[$feeds_tamper->id] = $feeds_tamper;
 
