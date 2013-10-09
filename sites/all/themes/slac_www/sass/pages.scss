@@ -791,7 +791,7 @@ span.ext {
     }
   }
   .view-content,
-  .view-empty .lectures-event{
+  &.next-lecture-display .lectures-event{
     width:  90%;
     margin-top:  -1px;
     padding: 20px 5% ;

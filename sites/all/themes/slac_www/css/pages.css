@@ -1099,8 +1099,7 @@ span.ext {
     right: 0;
     bottom: -7px; }
 /* line 794, ../sass/pages.scss */
-.pane-next-lecture .view-content,
-.pane-next-lecture .view-empty .lectures-event {
+.pane-next-lecture .view-content, .pane-next-lecture.next-lecture-display .lectures-event {
   width: 90%;
   margin-top: -1px;
   padding: 20px 5%;
