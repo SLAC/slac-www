@@ -1,11 +1,6 @@
 (function($) {
-
-//  Drupal.CTools = Drupal.CTools || {};
-//  Drupal.CTools.Modal = Drupal.CTools.Modal || {};
-//  Drupal.bi = Drupal.bi || {};
-//
-
   Drupal.wysiwyg.plugins.bi = {
+
     isNode: function(node) {
       return $(node).is('img.media-element');
     },
@@ -25,16 +20,7 @@
           // Insert new media.
           insert.prompt(settings.global);
         }
-//          $.get(
-//            Drupal.settings.basePath + 'block/add/pp-bi/nojs',
-//            function(data) {
-//              Drupal.CTools.Modal.show()
-//              $('#modal-title').html(Drupal.t('Add a new block'));
-//              $('#modal-content').html(data);
-//            }
-//          );
       }
-      //Drupal.wysiwyg.instances[instanceId].insert('content');
     }
   };
 
@@ -45,16 +31,22 @@
 
   InsertBlock.prototype = {
     prompt: function (settings) {
-      Drupal.bi.popups.blockSelectDialog($.proxy(this, 'onSelect'), settings);
+      Drupal.bi.popups.blockSelectDialog($.proxy(this, 'insert'), settings);
     },
 
-    /**
-    * On selection of a media item, display item's display configuration form.
-    */
-   onSelect: function (media_files) {
-     this.block = media_files[0];
-     Drupal.media.popups.mediaStyleSelector(this.block, $.proxy(this, 'insert'), {});
-   }
+   /**
+   * Insert HTML to the WYSIWYG when block has been created. Set the macro.
+   */
+    insert: function (block) {
+      var markup = '<div class="block-insert" data-block_insert="' + block.bid + '">' + block.html + '</div>',
+            macro = '{{' + block.bid + '}}';
+
+      // Insert placeholder markup into wysiwyg.
+      Drupal.wysiwyg.instances[this.instanceId].insert(markup);
+      // Store macro/markup pair in the tagmap.
+      Drupal.settings.tagmap = Drupal.settings.tagmap || {};
+      Drupal.settings.tagmap[macro] = markup;
+    }
   };
 
 })(jQuery);

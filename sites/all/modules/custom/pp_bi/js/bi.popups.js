@@ -1,7 +1,7 @@
 (function($) {
   namespace('Drupal.bi.popups');
 
-  Drupal.bi.popups.blockSelectDialog = function (onSelect, globalOptions, pluginOptions, widgetOptions) {
+  Drupal.bi.popups.blockSelectDialog = function (insert, globalOptions, pluginOptions, widgetOptions) {
     var options = Drupal.bi.popups.blockSelectDialog.getDefaults();
     options.global = $.extend({}, options.global, globalOptions);
     options.plugins = pluginOptions;
@@ -19,6 +19,7 @@
 
     browserSrc += '&' + $.param(params);
     var mediaIframe = Drupal.bi.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
+    Drupal.bi.popups.blockSelectDialog.mediaframe = mediaIframe;
     // Attach the onLoad event
     mediaIframe.bind('load', options, options.widget.onLoad);
     /**
@@ -39,12 +40,12 @@
     var dialogOptions = options.dialog;
 
     dialogOptions.buttons[ok] = function () {
-      var selected = this.contentWindow.Drupal.media.browser.selectedMedia;
+      var selected = Drupal.bi.popups.blockSelectDialog.selectedBlock;
       if (selected.length < 1) {
         alert(notSelected);
         return;
       }
-      onSelect(selected);
+      insert(selected);
       $(this).dialog("destroy");
       $(this).remove();
     };

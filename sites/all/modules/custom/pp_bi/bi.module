@@ -170,3 +170,25 @@ function bi_admin_paths() {
   $paths['bi/*'] = TRUE;
   return $paths;
 }
+
+/**
+ * Alter bean_form form.
+ */
+function bi_form_bean_form_alter(&$form, $form_state) {
+  // We pass 'ajax' argument in bi_block_page().
+  if (!in_array('ajax', $form_state['build_info']['args'])) {
+    return;
+  }
+
+  $form['#attached']['js'] = array(drupal_get_path('module', 'bi') . '/js/bi.iframe.js');
+  $form['actions']['submit']['#ajax'] = array( 'callback' => 'bean_form_ajax_callback',);
+}
+
+function bean_form_ajax_callback($form, $form_state) {
+  $commands = array();
+  $bean = $form_state['bean'];
+  $commands[] = ajax_command_invoke('body', 'blockSelectDialogFinalizeSelection', array(
+    array('bid' => $bean->bid, 'html' => drupal_render(bean_view($bean))),
+  ));
+  return array('#type' => 'ajax', '#commands' => $commands);
+}

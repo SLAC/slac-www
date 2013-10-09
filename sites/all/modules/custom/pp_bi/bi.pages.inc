@@ -5,10 +5,6 @@
 
 require_once drupal_get_path('module', 'bean') .'/includes/bean.pages.inc';
 
-function bi_block_add() {
-  return drupal_get_form('bi_block_form');
-}
-
 /**
  * Page callback to select type of the block.
  */
@@ -63,5 +59,5 @@ function bi_block_page($block_id) {
   }
 
   module_load_include('inc', 'bean', 'includes/bean.pages');
-  return drupal_get_form('bean_form', $bean);
+  return drupal_get_form('bean_form', $bean, 'ajax');
 }
