@@ -1,0 +1,4 @@
+name = SLAC Public Lectures
+description = "Provides admin page to moderate public lectures."
+package = SLAC
+core = 7.x
