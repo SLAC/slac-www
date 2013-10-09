@@ -345,15 +345,27 @@ $linkcolor: #990000;
   font-size: 11px;
   line-height: normal;
   color: #555;
-  a{
+   a{
     font-size: 11px;
     &:hover{
       border-bottom: 1px dotted #881728;
     }
   }
   img{
-    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    width: 97%;
     height: auto;
+    float: left;
+    @include box-shadow(3px, 3px, 2px, 0px, #888);
+  }
+  .field-name-field-image a{
+    width:  100%;
+    float: left;
+    margin-bottom: 12px;
+    &:hover{
+      border-bottom:  none;
+    }
   }
 }
 
