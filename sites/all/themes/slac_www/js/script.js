@@ -229,7 +229,6 @@
                 if (smallflag) {
                     window.location = $(this).attr('href');
                 }
-                e.preventDefault();
             });
         }
     }
