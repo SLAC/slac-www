@@ -18,8 +18,7 @@
    * this is the standards-compliant way to do that. */
   margin-left: auto;
   margin-right: auto;
-  width: 980px;
-}
+  width: 980px; }
 
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
@@ -34,27 +33,24 @@
   padding-left: 10px;
   padding-right: 10px;
   border: 0 !important;
-  word-wrap: break-word;
-}
+  word-wrap: break-word; }
 
 /*
  * Containers for grid items and flow items.
  */
-/* line 52, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+/* line 52, c:/program files (x86)/scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
 #main:before,
 #main:after,
 #footer:before,
 #footer:after {
   content: "";
-  display: table;
-}
-/* line 56, C:/Program Files (x86)/Scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
+  display: table; }
+/* line 56, c:/program files (x86)/scout/vendor/gems/gems/zen-grids-1.2/stylesheets/zen/_grids.scss */
 #header:after,
 #main:after,
 #footer:after {
-  clear: both;
-}
+  clear: both; }
 
 /*
  * Navigation bar
@@ -63,8 +59,7 @@
 #main {
   padding-top: 3em;
   /* Move all the children of #main down to make room. */
-  position: relative;
-}
+  position: relative; }
 
 /* line 83, ../../sass/layouts/fixed-width.scss */
 #navigation {
@@ -72,8 +67,7 @@
   top: 0;
   /* Move the navbar up inside #main's padding. */
   height: 3em;
-  width: 960px;
-}
+  width: 960px; }
 
 /*
  * The layout when there is only one sidebar, the left one.
@@ -84,16 +78,14 @@
   float: left;
   width: 764px;
   margin-left: 196px;
-  margin-right: -980px;
-}
+  margin-right: -980px; }
 /* line 99, ../../sass/layouts/fixed-width.scss */
 .sidebar-first .region-sidebar-first {
   /* Span 1 column, starting in 1st column from left. */
   float: left;
   width: 176px;
   margin-left: 0px;
-  margin-right: -196px;
-}
+  margin-right: -196px; }
 
 /*
  * The layout when there is only one sidebar, the right one.
@@ -104,16 +96,14 @@
   float: left;
   width: 764px;
   margin-left: 0px;
-  margin-right: -784px;
-}
+  margin-right: -784px; }
 /* line 113, ../../sass/layouts/fixed-width.scss */
 .sidebar-second .region-sidebar-second {
   /* Span 1 column, starting in 5th column from left. */
   float: left;
   width: 176px;
   margin-left: 784px;
-  margin-right: -980px;
-}
+  margin-right: -980px; }
 
 /*
  * The layout when there are two sidebars.
@@ -124,21 +114,18 @@
   float: left;
   width: 568px;
   margin-left: 196px;
-  margin-right: -784px;
-}
+  margin-right: -784px; }
 /* line 127, ../../sass/layouts/fixed-width.scss */
 .two-sidebars .region-sidebar-first {
   /* Span 1 column, starting in 1st column from left. */
   float: left;
   width: 176px;
   margin-left: 0px;
-  margin-right: -196px;
-}
+  margin-right: -196px; }
 /* line 131, ../../sass/layouts/fixed-width.scss */
 .two-sidebars .region-sidebar-second {
   /* Span 1 column, starting in 5th column from left. */
   float: left;
   width: 176px;
   margin-left: 784px;
-  margin-right: -980px;
-}
+  margin-right: -980px; }

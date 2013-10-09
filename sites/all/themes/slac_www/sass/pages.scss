@@ -2274,3 +2274,23 @@ a.imageLessButton {
   margin-top: 10px;
   line-height: 18px;
 }
+
+
+.three-col-middle-right{
+  .empty-right{
+    display: none;
+  }
+
+  .with-empty-right{
+    width:  90%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px){
+  .three-col-middle-right{
+    .with-empty-right{
+      width:  100%;
+    }
+  }
+}

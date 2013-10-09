@@ -246,6 +246,15 @@
         }
     }
 
+  Drupal.behaviors.threeColLayoutNoRightSidebar = {
+    attach: function (context, settings) {
+      $('.three-col-middle-right .three-col-right').each(function(){
+        if ($(this).find('.inside').length == 0) {
+          $(this).addClass('empty-right').siblings('.three-col-middle').addClass('with-empty-right');
+        }
+      });
+    }
+  }
 
 })(jQuery, Drupal, this, this.document);
 
