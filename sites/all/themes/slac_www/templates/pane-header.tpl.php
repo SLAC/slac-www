@@ -50,6 +50,6 @@
       <div id="search-box"><?php print $search_box; ?></div>
     <?php endif; ?>
 
-      <div class="header-link"><?php print l(t('Employee Portal'), 'https://intranet.slac.stanford.edu', array('external' => TRUE)); ?></div>
+      <div class="header-link"><?php print l(t('Employee Portal'), $employee_portal_url, array('external' => TRUE)); ?></div>
   </div> <!-- /section -->
 </div> <!-- /header -->
