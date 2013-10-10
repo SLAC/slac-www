@@ -1,9 +1,11 @@
 <?php
 
 /**
- * Implements hook_entity_view_mode_alter()
+ * Implements hook_date_ical_html_alter()
  */
-function slac_date_ical_entity_view_mode_alter(&$view_mode, $context) {
-  $context['entity']->field_speaker_name['und'][0]['format'] = 'full_html';
-  $context['entity']->field_speaker_name['und'][0]['safe_value'] = '<p>' . $context['entity']->field_speaker_name['und'][0]['safe_value'] . '</p>';
+function slac_date_ical_entity_view_alter(&$build, $type) {
+  if ($type == 'node' && $build['#view_mode'] == 'ical') {
+    $build['body'][0]['#markup'] .= '<p>' . url('node/' . $build['#entity_view_mode']['id'], array('absolute' => TRUE)) . '</p>';
+    $build['field_speaker_name'][0]['#markup'] = '<p>' . $build['field_speaker_name'][0]['#markup'] . '</p>';
+  }
 }
