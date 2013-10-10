@@ -88,6 +88,11 @@ $linkcolor: #990000;
 
 @media (max-width: 600px){
 
+#lightbox,
+#lightbox2-overlay{
+  display: none !important;
+}
+
 .html .slider{
     margin: 0 1.5% 20px;
     border-bottom: 2px solid #e1e0e0;
@@ -106,7 +111,7 @@ $linkcolor: #990000;
     .field-slideshow-pager{
       display:none;
     }
-      
+
     .field-slideshow-slide{
       background: transparent !important;
     }

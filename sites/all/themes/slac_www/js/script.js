@@ -233,7 +233,7 @@
         }
     }
 
-    Drupal.behaviors.youAreBlock = {
+    Drupal.behaviors.areYouBlock = {
         attach: function (context, settings) {
             $('.pane-bundle-are-you-block .field-item a').wrapInner('<span></span>');
         }
