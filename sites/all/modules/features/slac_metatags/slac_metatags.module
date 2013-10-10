@@ -1,0 +1,46 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Alter metatags before being cached.
+ */
+function slac_metatags_metatag_metatags_view_alter(&$output, $instance) {
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $node = node_load(arg(1));
+    if (isset($node->field_page_author[LANGUAGE_NONE][0])) {
+      $output['pageAuthor']['#attached']['drupal_add_html_head'][0] = array(
+        array(
+          '#theme' => 'metatag',
+          '#tag' => 'meta',
+          '#id' => 'metatag_page_author',
+          '#name' => 'pageAuthor',
+          '#value' => $node->field_page_author[LANGUAGE_NONE][0]['value'],
+        ),
+        'pageAuthor',
+      );
+    }
+    if (isset($node->created)) {
+      $output['publishedDate']['#attached']['drupal_add_html_head'][0] = array(
+        array(
+          '#theme' => 'metatag',
+          '#tag' => 'meta',
+          '#id' => 'metatag_published_date',
+          '#name' => 'publishedDate',
+          '#value' => date("F j, Y", $node->created),
+        ),
+        'publishedDate',
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_metatag_config_default_alter().
+ */
+function slac_metatags_metatag_config_default_alter(&$config) {
+  if (isset($config->config['global']['generator'])) {
+    unset($config->config['global']['generator']);
+  }
+}
