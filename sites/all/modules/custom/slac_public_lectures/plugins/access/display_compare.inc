@@ -20,7 +20,7 @@ $plugin = array(
  */
 function slac_public_lecture_public_lecture_display_ctools_access_check($conf, $context) {
   // If for some unknown reason that $context isn't set, we just want to be sure.
-  if (variable_get('public_lecture_display', 0)) {
+  if (variable_get('public_lecture_date', '')) {
     return TRUE;
   }
 
