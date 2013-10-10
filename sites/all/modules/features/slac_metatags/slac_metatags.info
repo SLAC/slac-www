@@ -1,0 +1,12 @@
+name = SLAC Metatags
+core = 7.x
+package = SLAC
+version = 7.x-1.0
+project = slac_metatags
+dependencies[] = metatag
+features[features_api][] = api:2
+features[metatag][] = global
+features[metatag][] = global:frontpage
+features[metatag][] = node
+features[metatag][] = taxonomy_term
+features[metatag][] = user

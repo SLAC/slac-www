@@ -319,7 +319,11 @@ input:focus{
     height: auto;
     padding: 0 4%;
     background: #efefef;
-    border-top: none;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    &.last{
+      border-bottom: 1px solid #ccc;
+    }
     a {
       line-height: normal;
       height: auto;
@@ -334,6 +338,9 @@ input:focus{
     }
   }
 }
+  .menu-item-2 li.last{
+    border-top: 1px dashed #333;
+  }
 
 .pane-page-content > {
   .pane-title {
@@ -791,7 +798,7 @@ span.ext {
     }
   }
   .view-content,
-  .view-empty .lectures-event{
+  &.next-lecture-display .lectures-event{
     width:  90%;
     margin-top:  -1px;
     padding: 20px 5% ;
