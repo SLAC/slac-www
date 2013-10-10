@@ -15,7 +15,7 @@ function slac_metatags_metatag_export_default() {
     'instance' => 'global',
     'config' => array(
       'title' => array(
-        'value' => '[current-page:title] | [site:name]',
+        'value' => 'SLAC National Accelerator Laboratory - [current-page:title]',
       ),
       'canonical' => array(
         'value' => '[current-page:url:absolute]',
