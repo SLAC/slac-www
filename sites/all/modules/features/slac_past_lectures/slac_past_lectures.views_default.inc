@@ -210,6 +210,7 @@ function slac_past_lectures_views_default_views() {
   $handler->display->display_options['row_options']['inline'] = array(
     'field_speaker_name' => 'field_speaker_name',
     'field_location' => 'field_location',
+    'field_affiliations' => 'field_affiliations',
   );
   $handler->display->display_options['row_options']['separator'] = ',';
   $handler->display->display_options['row_options']['hide_empty'] = TRUE;
@@ -223,12 +224,12 @@ function slac_past_lectures_views_default_views() {
   $handler->display->display_options['fields']['field_speaker_name']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['field_speaker_name']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_speaker_name']['element_label_colon'] = FALSE;
-  /* Field: Content: Location */
-  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
-  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['label'] = '';
-  $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
+  /* Field: Content: Affiliations */
+  $handler->display->display_options['fields']['field_affiliations']['id'] = 'field_affiliations';
+  $handler->display->display_options['fields']['field_affiliations']['table'] = 'field_data_field_affiliations';
+  $handler->display->display_options['fields']['field_affiliations']['field'] = 'field_affiliations';
+  $handler->display->display_options['fields']['field_affiliations']['label'] = '';
+  $handler->display->display_options['fields']['field_affiliations']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
