@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_entity_view_mode_alter()
+ */
+function slac_date_ical_entity_view_mode_alter(&$view_mode, $context) {
+  $context['entity']->field_speaker_name['und'][0]['format'] = 'full_html';
+  $context['entity']->field_speaker_name['und'][0]['safe_value'] = '<p>' . $context['entity']->field_speaker_name['und'][0]['safe_value'] . '</p>';
+}

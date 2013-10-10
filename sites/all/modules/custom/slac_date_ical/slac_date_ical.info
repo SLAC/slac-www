@@ -1,0 +1,6 @@
+name = SLAC Date iCal hooks
+description = Some fixes of date iCal
+package = Propeople
+core = 7.x
+
+dependencies[] = date_ical
