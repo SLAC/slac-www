@@ -13,9 +13,9 @@ function slac_migrate_article_news_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'news_article_importer';
+  $feeds_importer->id = 'news_article_importer_custom';
   $feeds_importer->config = array(
-    'name' => 'News-article importer',
+    'name' => 'News-article importer (custom)',
     'description' => 'Imports news-articles from XML files',
     'fetcher' => array(
       'plugin_key' => 'feeds_fetcher_directory_fetcher',
@@ -30,17 +30,19 @@ function slac_migrate_article_news_feeds_importer_default() {
       'plugin_key' => 'FeedsXPathParserXML',
       'config' => array(
         'sources' => array(
-          'xpathparser:0' => 'page-metadata/page-title',
+          'xpathparser:0' => 'article-body/article-heading',
           'xpathparser:1' => 'article-body',
-          'xpathparser:2' => 'news-article-media/main-graphic-video/news-article-graphic/fullsize-image-location',
-          'xpathparser:3' => 'news-article-media/main-graphic-video/news-article-graphic/image-title',
-          'xpathparser:4' => 'news-article-media/main-graphic-video/news-article-graphic/image-alt-text',
+          'xpathparser:2' => 'news-article-media/*/news-article-graphic/fullsize-image-location',
+          'xpathparser:3' => 'news-article-media/*/news-article-graphic/image-alt-text',
+          'xpathparser:4' => 'news-article-media/*/news-article-graphic/image-title',
           'xpathparser:5' => 'page-metadata/publish-date',
           'xpathparser:6' => 'page-metadata/page-keywords',
-          'xpathparser:7' => 'news-article-media/main-graphic-video/news-article-graphic/image-description',
           'xpathparser:8' => 'page-metadata/article-type',
-          'xpathparser:9' => 'news-article-media/main-graphic-video/news-article-graphic/fullsize-image-location',
-          'xpathparser:10' => 'news-article-media/main-graphic-video/news-article-graphic/image-description',
+          'xpathparser:9' => 'news-article-media/*/news-article-graphic/image-description',
+          'xpathparser:11' => 'page-metadata/page-author',
+          'xpathparser:12' => 'news-article-media/*/news-article-graphic/image-alt-text',
+          'xpathparser:13' => 'news-article-media/*/news-article-graphic/image-title',
+          'xpathparser:14' => 'news-article-media/*/news-article-graphic/image-description',
         ),
         'rawXML' => array(
           'xpathparser:0' => 0,
@@ -50,10 +52,12 @@ function slac_migrate_article_news_feeds_importer_default() {
           'xpathparser:4' => 0,
           'xpathparser:5' => 0,
           'xpathparser:6' => 0,
-          'xpathparser:7' => 0,
           'xpathparser:8' => 0,
           'xpathparser:9' => 0,
-          'xpathparser:10' => 0,
+          'xpathparser:11' => 0,
+          'xpathparser:12' => 0,
+          'xpathparser:13' => 0,
+          'xpathparser:14' => 0,
         ),
         'context' => '//root',
         'exp' => array(
@@ -67,10 +71,12 @@ function slac_migrate_article_news_feeds_importer_default() {
             'xpathparser:4' => 0,
             'xpathparser:5' => 0,
             'xpathparser:6' => 0,
-            'xpathparser:7' => 0,
             'xpathparser:8' => 0,
             'xpathparser:9' => 0,
-            'xpathparser:10' => 0,
+            'xpathparser:11' => 0,
+            'xpathparser:12' => 0,
+            'xpathparser:13' => 0,
+            'xpathparser:14' => 0,
           ),
         ),
         'allow_override' => 1,
@@ -124,6 +130,31 @@ function slac_migrate_article_news_feeds_importer_default() {
             'target' => 'field_article_type',
             'term_search' => '0',
             'autocreate' => 1,
+          ),
+          8 => array(
+            'source' => 'xpathparser:9',
+            'target' => 'field_image:image_field_caption',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'xpathparser:11',
+            'target' => 'field_page_author',
+            'unique' => FALSE,
+          ),
+          10 => array(
+            'source' => 'xpathparser:12',
+            'target' => 'field_image:field_file_image_alt_text',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'xpathparser:13',
+            'target' => 'field_image:field_file_image_title_text',
+            'unique' => FALSE,
+          ),
+          12 => array(
+            'source' => 'xpathparser:14',
+            'target' => 'field_image:field_description',
+            'unique' => FALSE,
           ),
         ),
         'update_existing' => '0',
