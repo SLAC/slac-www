@@ -121,7 +121,7 @@ function slac_import_feeds_importer_default() {
             'source' => 'xpathparser:6',
             'target' => 'field_tags',
             'term_search' => '0',
-            'autocreate' => 1,
+            'autocreate' => 0,
           ),
           7 => array(
             'source' => 'xpathparser:8',
