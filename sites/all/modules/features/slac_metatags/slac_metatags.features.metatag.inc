@@ -47,7 +47,7 @@ function slac_metatags_metatag_export_default() {
     'instance' => 'node',
     'config' => array(
       'title' => array(
-        'value' => '[node:title] | [site:name]',
+        'value' => 'SLAC National Accelerator Laboratory -[node:title]',
       ),
       'page_author' => array(
         'value' => '[node:field_page_author]',
@@ -66,7 +66,7 @@ function slac_metatags_metatag_export_default() {
     'instance' => 'taxonomy_term',
     'config' => array(
       'title' => array(
-        'value' => '[term:name] | [site:name]',
+        'value' => 'SLAC National Accelerator Laboratory - [term:name]',
       ),
       'description' => array(
         'value' => '[term:description]',
@@ -79,7 +79,7 @@ function slac_metatags_metatag_export_default() {
     'instance' => 'user',
     'config' => array(
       'title' => array(
-        'value' => '[user:name] | [site:name]',
+        'value' => 'SLAC National Accelerator Laboratory - [user:name]',
       ),
     ),
   );
