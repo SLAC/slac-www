@@ -763,7 +763,7 @@ span.ext {
   p,
   .lectures-text{
     line-height: 20px;
-    font-size: 13px;
+    font-size: 12px;
     color: #474748;
     margin-bottom: 10px;
   }
@@ -830,12 +830,12 @@ span.ext {
   }
 
   .view-content {
-    color: #474748;
+    color: #474747;
     a img {
       border: 4px solid #dadadc;
     }
     .views-field-title{
-      font-size: 18px;
+      font-size: 19px;
       font-weight: bold;
     }
     .views-field-nothing-1{
@@ -914,127 +914,6 @@ span.ext {
     }
   }
 }
-
-
-/* Node type lecture */
-/*
-.node-type-lecture .three-col-middle{
-  position: relative;
-  margin-top: 0;
-  .lecture-past-link{
-    position: absolute;
-    top: -38px;
-    right:  0;
-  }
-  .lectures-subtitle{
-    margin:  -17px 0 50px;
-    color: #9B9B9B;
-    font-size:  14px;
-  }
-  .pane-next-lecture .view-header {
-    position: relative;
-    padding-bottom: 1px;
-  }
-  .past-lectures-wrapper{
-    position: relative;
-    .social-icon-block{
-      position: absolute;
-      bottom: 5px;
-      right: 0;
-      a{margin-left: 10px;}
-    }
-  }
-  .past-lectures-text{
-    width: 100%;
-    border-bottom: 2px solid #831425;
-    margin: 35px 0 0;
-    color: #7f6332;
-    text-transform: uppercase;
-  }
-
-  .three-col-middle-top-seccond{
-    .pane-node-title{
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .view{
-      font-size: 14px; 
-    }
-    .pane-node-field-lecture-date{
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    .pane-node-field-video{
-      clear:both;
-      width: 100%;
-      padding: 30px 0;
-      margin-bottom: 25px;
-      background: url("../images/dotted-border.png") repeat-x bottom;
-    }
-  }
-
-  .three-col-middle-bottom-right{
-    padding-top: 14px;
-  }
-
-  .three-col-middle-center{
-    .field-name-body .field-items .field-item p{
-      margin-top:  0;
-    }
-    .field-label{
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 3px;
-      display: block;
-    }
-  }
-
-  .three-col-middle-bottom{
-    .pane-node-field-speaker-image{
-      .field-label{
-        display: none;
-      }
-      img{
-        width:  95%;
-        height: auto;
-      }
-    }
-    .field-name-field-about-the-speaker p{
-      line-height: 20px;
-      font-size: 13px;
-      color: #474748;
-      margin-bottom: 10px;
-    }
-    .about-label{
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 3px;
-      display: block;
-    }
-    .speaker-name{
-      .field-item{
-        font-size: 11px;
-        padding-top: 3px;
-        font-style: italic;
-        float: left;
-        clear: both;
-      }
-    }
-  }
-  .pane-node-field-image{
-    width: auto;
-    background: transparent;
-  }
-}*/
-
-
-
-
-
-
-
-
 .node-type-lecture .three-col-middle{
   position: relative;
   margin-top: 0;
