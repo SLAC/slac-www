@@ -319,7 +319,10 @@ input:focus{
     height: auto;
     padding: 0 4%;
     background: #efefef;
-    border-top: none;
+    border-bottom: none;
+    &.last{
+      border-bottom: 1px solid #ccc;
+    }
     a {
       line-height: normal;
       height: auto;
@@ -334,6 +337,9 @@ input:focus{
     }
   }
 }
+  .menu-item-2 li.last{
+    border-top: 1px dashed #333;
+  }
 
 .pane-page-content > {
   .pane-title {
