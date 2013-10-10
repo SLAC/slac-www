@@ -47,7 +47,7 @@ function slac_metatags_metatag_export_default() {
     'instance' => 'node',
     'config' => array(
       'title' => array(
-        'value' => 'SLAC National Accelerator Laboratory -[node:title]',
+        'value' => 'SLAC National Accelerator Laboratory - [node:title]',
       ),
       'page_author' => array(
         'value' => '[node:field_page_author]',
