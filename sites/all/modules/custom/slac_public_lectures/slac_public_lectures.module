@@ -1,9 +1,13 @@
 <?php
 
 function slac_public_lectures_preprocess_views_view_table(&$vars) {
+  $css_class = '';
+  if(isset($_GET['sort'])){
+    $css_class = ' order-' . $_GET['sort'];
+  }
   foreach ($vars['header_classes'] as $key => $value) {
     if (strpos($value, 'active')) {
-      $vars['header_classes'][$key] = $value . ' order-' . $_GET['sort'];
+      $vars['header_classes'][$key] = $value . $css_class;
     }
   }
 }
