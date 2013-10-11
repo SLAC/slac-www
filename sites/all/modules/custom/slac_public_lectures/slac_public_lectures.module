@@ -1,5 +1,13 @@
 <?php
 
+function slac_public_lectures_preprocess_views_view_table(&$vars) {
+  foreach ($vars['header_classes'] as $key => $value) {
+    if (strpos($value, 'active')) {
+      $vars['header_classes'][$key] = $value . ' order-' . $_GET['sort'];
+    }
+  }
+}
+
 /**
  * Implements hook_form_alter()
  * @param type $form
@@ -27,7 +35,7 @@ function slac_public_lectures_block_submit($form, &$form_state) {
  */
 function slac_public_lectures_block_info() {
   $blocks['scheduled_lecture_block'] = array(
-    'info' => t('Scheduler Lecture'),
+    'info' => t('Scheduled Lecture'),
   );
 
   return $blocks;
