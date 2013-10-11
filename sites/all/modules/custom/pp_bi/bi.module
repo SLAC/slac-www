@@ -9,10 +9,6 @@
 function bi_menu() {
   $items = array();
 
-  $type = 'bi';
-  $types = bean_get_types();
-  $type = $types[$type];
-
   $items['bi/block/%'] = array(
     'title' => 'Form to add/edit a block',
     'page callback' => 'bi_block_page',
@@ -68,31 +64,31 @@ function bi_bean_types_api_info() {
 /**
  * Implements hook_bean_types().
  */
-function bi_bean_types() {
-  $plugins = array();
-  $plugin_path = drupal_get_path('module', 'bi') . '/plugins/bean';
-  $plugins['bi'] = array(
-    'label' => t('PP Block'),
-    'description' => t('Block created by PP Block Insert module.'),
-    'handler' => array(
-      'class' => 'BlockBean',
-      'parent' => 'bean',
-    ),
-    'path' => $plugin_path,
-    'file' => 'bi.block.inc',
-  );
-  $plugins['bi_2'] = array(
-    'label' => t('PP Block 2'),
-    'description' => t('Block created by Bean module.'),
-    'handler' => array(
-      'class' => 'BlockBean',
-      'parent' => 'bean',
-    ),
-    'path' => $plugin_path,
-    'file' => 'bi.block.inc',
-  );
-  return $plugins;
-}
+//function bi_bean_types() {
+//  $plugins = array();
+//  $plugin_path = drupal_get_path('module', 'bi') . '/plugins/bean';
+//  $plugins['bi'] = array(
+//    'label' => t('PP Block'),
+//    'description' => t('Block created by PP Block Insert module.'),
+//    'handler' => array(
+//      'class' => 'BlockBean',
+//      'parent' => 'bean',
+//    ),
+//    'path' => $plugin_path,
+//    'file' => 'bi.block.inc',
+//  );
+//  $plugins['bi_2'] = array(
+//    'label' => t('PP Block 2'),
+//    'description' => t('Block created by Bean module.'),
+//    'handler' => array(
+//      'class' => 'BlockBean',
+//      'parent' => 'bean',
+//    ),
+//    'path' => $plugin_path,
+//    'file' => 'bi.block.inc',
+//  );
+//  return $plugins;
+//}
 
 /**
  * Implements hook_theme().
@@ -145,8 +141,7 @@ function bi_browser_js() {
   $settings = array(
     'browserUrl' => url('bi/browser',
       array('query' => array('render' => 'block_types'))),
-    'styleSelectorUrl' => url('media/-media_id-/format-form',
-      array('query' => array('render' => 'media-popup'))),
+    'browserUpdateBlockUrl' => url('bi/block/'),
   );
 
   $js = array(
@@ -191,4 +186,91 @@ function bean_form_ajax_callback($form, $form_state) {
     array('bid' => $bean->bid, 'html' => drupal_render(bean_view($bean))),
   ));
   return array('#type' => 'ajax', '#commands' => $commands);
+}
+
+/**
+ * Implements hook_filter_info().
+ */
+function bi_filter_info() {
+  $filters['bi_filter'] = array(
+    'title' => t('Convert Block Insert tags to markup'),
+    'description' => t('This filter will convert [block_insert]...[/block_insert] tags into markup.'),
+    'process callback' => 'bi_filter_process',
+    'weight' => 2,
+  );
+
+  return $filters;
+}
+
+/**
+ * Finds all matches and run them through bi_token_to_markup().
+ */
+function bi_filter_process($text) {
+  $text = ' ' . $text . ' ';
+  $text = preg_replace_callback("/\[block_insert\].*?\[\/block_insert\]/s", 'bi_token_to_markup', $text);
+
+  return $text;
+}
+
+/**
+ * Convert tokens to markup.
+ */
+function bi_token_to_markup($match) {
+  $bean_bid = substr($match[0], strlen('[block_insert]'), strlen($match[0]) - strlen('[block_insert]') - strlen('[/block_insert]'));
+  $bean = bean_load($bean_bid);
+  $build = bean_view($bean);
+  return drupal_render($build);
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function bi_element_info_alter(&$types) {
+  $types['text_format']['#pre_render'][] = 'bi_pre_render_text_format';
+}
+
+function bi_pre_render_text_format($element) {
+  // filter_process_format() copies properties to the expanded 'value' child
+  // element.
+  if (!isset($element['format'])) {
+    return $element;
+  }
+
+  $field = &$element['value'];
+
+  $tagmap = _bi_generate_tagMap($field['#value']);
+
+  if (isset($tagmap)) {
+    drupal_add_js(array('bi_tagmap' => $tagmap), 'setting');
+  }
+  return $element;
+}
+
+function _bi_generate_tagMap($text) {
+  // Making $tagmap static as this function is called many times and
+  // adds duplicate markup for each tag code in Drupal.settings JS,
+  // so in media_process_form it adds something like tagCode:<markup>,
+  // <markup> and when we replace in attach see two duplicate images
+  // for one tagCode. Making static would make function remember value
+  // between function calls. Since media_process_form is multiple times
+  // with same form, this function is also called multiple times.
+  static $tagmap = array();
+  preg_match_all("/\[block_insert\].*?\[\/block_insert\]/s", $text, $matches, PREG_SET_ORDER);
+  foreach ($matches as $match) {
+    $bid = substr($match[0], strlen('[block_insert]'), strlen($match[0]) - strlen('[block_insert]') - strlen('[/block_insert]'));;
+    // We see if tagContent is already in $tagMap, if not we add it
+    // to $tagmap.  If we return an empty array, we break embeddings of the same
+    // media multiple times.
+    if (empty($tagmap[$match[0]])) {
+      if ($markup = bi_token_to_markup($match)) {
+        $markup = '<div class="block-insert" data-block_insert="' . $bid . '" contenteditable="false">' . $markup . '<!-- block-insert --></div>';
+        $tagmap[$match[0]] = $markup;
+      }
+      else {
+        $missing = file_create_url(drupal_get_path('module', 'media') . '/images/icons/default/image-x-generic.png');
+        $tagmap[$match[0]] = '<div><img src="' . $missing . '" width="100px" height="100px"/></div>';
+      }
+    }
+  }
+  return $tagmap;
 }

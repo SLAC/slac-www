@@ -51,7 +51,7 @@ function bi_block_page($block_id) {
   module_invoke('admin_menu', 'suppress');
 
   // $bean_id can be either id (edit operation) or bean type (create new block).
-  if (is_int($block_id)) {
+  if (is_numeric($block_id)) {
     $bean = bean_load($block_id);
   }
   else {
@@ -59,5 +59,5 @@ function bi_block_page($block_id) {
   }
 
   module_load_include('inc', 'bean', 'includes/bean.pages');
-  return drupal_get_form('bean_form', $bean, 'ajax');
+  return drupal_get_form('bean_form', $bean, $bean->type, 'ajax');
 }

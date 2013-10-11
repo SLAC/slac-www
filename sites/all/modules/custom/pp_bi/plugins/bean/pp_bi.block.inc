@@ -4,27 +4,7 @@
  */
 
 class BlockBean extends BeanPlugin {
-  /**
-   * Declares default block settings.
-   */
-  public function values() {
-    $values = array(
-      /*'settings' => array(
-        'node_view_mode' => FALSE,
-        'records_shown' => FALSE,
-      ),*/
-      'body' => '',
-      'file' => array(
-        'image' => '',
-      ),
-      'more_link' => array(
-        'text' => '',
-        'path' => '',
-      ),
-    );
 
-    return array_merge(parent::values(), $values);
-  }
   /**
    * Builds extra settings for the block edit form.
    */
