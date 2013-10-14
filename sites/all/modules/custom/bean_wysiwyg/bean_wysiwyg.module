@@ -62,27 +62,6 @@ function bean_wysiwyg_bean_types_api_info() {
 }
 
 /**
- * Implements hook_theme().
- */
-function bean_wysiwyg_theme() {
-  $items = array();
-  $items['bean_wysiwyg_settings'] = array(
-    'arguments' => array(
-      'records_shown' => NULL,
-    ),
-    'file' => 'bean_wysiwyg.theme.inc',
-  );
-  $items['bean_wysiwyg_more_link'] = array(
-    'arguments' => array(
-      'text' => NULL,
-      'path'  => NULL,
-    ),
-    'file' => 'bean_wysiwyg.theme.inc',
-  );
-  return $items;
-}
-
-/**
  * Implements hook_library().
  */
 function bean_wysiwyg_library() {

@@ -8,15 +8,15 @@ require_once drupal_get_path('module', 'bean') .'/includes/bean.pages.inc';
 /**
  * Page callback to select type of the block.
  */
-function bi_browser() {
+function bean_wysiwyg_browser() {
   module_invoke('admin_menu', 'suppress');
-  return drupal_get_form('bi_select_block_type_form');
+  return drupal_get_form('bean_wysiwyg_select_block_type_form');
 }
 
 /**
- * Returns a radios form with all pp-bi block types.
+ * Returns a radios form with all block types.
  */
-function bi_select_block_type_form($form, &$form_state) {
+function bean_wysiwyg_select_block_type_form($form, &$form_state) {
   $options = array();
   foreach (bean_get_types() as $bean_type) {
     $options[$bean_type->type] = $bean_type->getLabel();
@@ -31,7 +31,7 @@ function bi_select_block_type_form($form, &$form_state) {
   );
   $form['actions']['submit'] = array(
     '#type' => 'submit',
-    '#submit' => array('bi_select_block_type_form_submit'),
+    '#submit' => array('bean_wysiwyg_select_block_type_form_submit'),
     '#value' => t('Select')
   );
   $form['actions']['cancel'] = array(
@@ -40,14 +40,14 @@ function bi_select_block_type_form($form, &$form_state) {
   return $form;
 }
 
-function bi_select_block_type_form_submit($form, &$form_state) {
-  $form_state['redirect'] = 'bi/block/' . $form_state['values']['block_type'];
+function bean_wysiwyg_select_block_type_form_submit($form, &$form_state) {
+  $form_state['redirect'] = 'bean_wysiwyg/block/' . $form_state['values']['block_type'];
 }
 
 /**
  * Callback to create or edit block.
  */
-function bi_block_page($block_id) {
+function bean_wysiwyg_block_page($block_id) {
   module_invoke('admin_menu', 'suppress');
 
   // $bean_id can be either id (edit operation) or bean type (create new block).
