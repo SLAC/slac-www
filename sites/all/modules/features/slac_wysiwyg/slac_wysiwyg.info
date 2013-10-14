@@ -1,0 +1,12 @@
+name = SLAC WYSIWYG
+core = 7.x
+package = SLAC
+dependencies[] = filter
+features[features_api][] = api:2
+features[wysiwyg][] = full_html
+features_exclude[dependencies][bean_wysiwyg] = bean_wysiwyg
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][files_filter] = files_filter
+features_exclude[dependencies][media] = media
+features_exclude[dependencies][wysiwyg] = wysiwyg
+features_exclude[filter][full_html] = full_html
