@@ -1,18 +1,18 @@
 <?php
 /**
- * @file
+ * @file WYSIWYG plugin.
  */
 
 /**
  * Implements hook_wysiwyg_plugin().
  */
-function bi_bi_plugin() {
-  bi_include_browser_js();
+function bean_wysiwyg_wysiwyg_plugin() {
+  bean_wysiwyg_include_browser_js();
 
-  $plugins['bi'] = array(
-    'title' => t('PP Block Insert'),
-    'icon file' => 'bi_button.png',
-    'icon title' => t('PP Block Insert'),
+  $plugins['bean_wysiwyg'] = array(
+    'title' => t('Block Insert'),
+    'icon file' => 'bean_button.png',
+    'icon title' => t('Block Insert'),
     'settings' => array(),
   );
   return $plugins;
@@ -23,14 +23,13 @@ function bi_bi_plugin() {
  *
  * Defines default variables.
  */
-function bi_include_browser_js() {
+function bean_wysiwyg_include_browser_js() {
   static $included;
   if ($included) {
     return;
   }
   $included = TRUE;
-//  module_load_include('inc', 'media', 'includes/media.browser');
-  $javascript = bi_browser_js();
+  $javascript = bean_wysiwyg_browser_js();
   foreach ($javascript as $key => $definitions) {
     foreach ($definitions as $definition) {
       $function = 'drupal_add_' . $key;
@@ -41,7 +40,4 @@ function bi_include_browser_js() {
       call_user_func_array($function, $definition);
     }
   }
-  // Add wysiwyg-specific settings.
-//  $settings = array('wysiwyg_allowed_attributes' => media_variable_get('wysiwyg_allowed_attributes'));
-//  drupal_add_js(array('media' => $settings), 'setting');
 }

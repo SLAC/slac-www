@@ -6,27 +6,27 @@
 /**
  * Implementation of hook_menu().
  */
-function bi_menu() {
+function bean_wysiwyg_menu() {
   $items = array();
 
-  $items['bi/block/%'] = array(
+  $items['bean_wysiwyg/block/%'] = array(
     'title' => 'Form to add/edit a block',
-    'page callback' => 'bi_block_page',
+    'page callback' => 'bean_wysiwyg_block_page',
     'page arguments' => array(2),
     'access arguments' => array('use block insert'),
     'description' => 'Callback to create or edit a block',
     'theme callback' => 'media_dialog_get_theme_name',
-    'file' => 'bi.pages.inc',
+    'file' => 'bean_wysiwyg.pages.inc',
   );
 
-  $items['bi/browser'] = array(
+  $items['bean_wysiwyg/browser'] = array(
     'title' => 'Block insert browser',
     'description' => 'Browser to select the type of the block to insert',
-    'page callback' => 'bi_browser',
+    'page callback' => 'bean_wysiwyg_browser',
     'access arguments' => array('use block insert'),
     'type' => MENU_CALLBACK,
     'theme callback' => 'media_dialog_get_theme_name',
-    'file' => 'bi.pages.inc',
+    'file' => 'bean_wysiwyg.pages.inc',
   );
 
   return $items;
@@ -35,7 +35,7 @@ function bi_menu() {
 /**
  * Implements hook_permission().
  */
-function bi_permission() {
+function bean_wysiwyg_permission() {
   return array(
     'use block insert' => array(
       'title' => t('Use blocks insert functionality'),
@@ -47,7 +47,7 @@ function bi_permission() {
 /**
  * Implements hook_wysiwyg_include_directory().
  */
-function bi_wysiwyg_include_directory($type) {
+function bean_wysiwyg_wysiwyg_include_directory($type) {
   switch ($type) {
     case 'plugins':
       return $type;
@@ -57,56 +57,27 @@ function bi_wysiwyg_include_directory($type) {
 /**
  * Implements hook_bean_types_api_info().
  */
-function bi_bean_types_api_info() {
+function bean_wysiwyg_bean_types_api_info() {
   return array('api' => 4);
 }
 
 /**
- * Implements hook_bean_types().
- */
-//function bi_bean_types() {
-//  $plugins = array();
-//  $plugin_path = drupal_get_path('module', 'bi') . '/plugins/bean';
-//  $plugins['bi'] = array(
-//    'label' => t('PP Block'),
-//    'description' => t('Block created by PP Block Insert module.'),
-//    'handler' => array(
-//      'class' => 'BlockBean',
-//      'parent' => 'bean',
-//    ),
-//    'path' => $plugin_path,
-//    'file' => 'bi.block.inc',
-//  );
-//  $plugins['bi_2'] = array(
-//    'label' => t('PP Block 2'),
-//    'description' => t('Block created by Bean module.'),
-//    'handler' => array(
-//      'class' => 'BlockBean',
-//      'parent' => 'bean',
-//    ),
-//    'path' => $plugin_path,
-//    'file' => 'bi.block.inc',
-//  );
-//  return $plugins;
-//}
-
-/**
  * Implements hook_theme().
  */
-function bi_theme() {
+function bean_wysiwyg_theme() {
   $items = array();
-  $items['bi_settings'] = array(
+  $items['bean_wysiwyg_settings'] = array(
     'arguments' => array(
       'records_shown' => NULL,
     ),
-    'file' => 'bi.theme.inc',
+    'file' => 'bean_wysiwyg.theme.inc',
   );
-  $items['bi_more_link'] = array(
+  $items['bean_wysiwyg_more_link'] = array(
     'arguments' => array(
       'text' => NULL,
       'path'  => NULL,
     ),
-    'file' => 'bi.theme.inc',
+    'file' => 'bean_wysiwyg.theme.inc',
   );
   return $items;
 }
@@ -114,13 +85,13 @@ function bi_theme() {
 /**
  * Implements hook_library().
  */
-function bi_library() {
+function bean_wysiwyg_library() {
   $libraries = array();
 
-  $libraries['bi_browser'] = array(
+  $libraries['bean_wysiwyg_browser'] = array(
     'title' => 'Block Insert popup libraries',
     'js' => array(
-      drupal_get_path('module', 'bi') . '/js/bi.popups.js' => array('group' => JS_DEFAULT),
+      drupal_get_path('module', 'bean_wysiwyg') . '/js/bean_wysiwyg.popups.js' => array('group' => JS_DEFAULT),
     ),
     'dependencies' => array(
       array('media', 'media_base'),
@@ -137,20 +108,20 @@ function bi_library() {
 /**
  * Default settings of the javascripts.
  */
-function bi_browser_js() {
+function bean_wysiwyg_browser_js() {
   $settings = array(
-    'browserUrl' => url('bi/browser',
+    'browserUrl' => url('bean_wysiwyg/browser',
       array('query' => array('render' => 'block_types'))),
-    'browserUpdateBlockUrl' => url('bi/block/'),
+    'browserUpdateBlockUrl' => url('bean_wysiwyg/block/'),
   );
 
   $js = array(
     'library' => array(
-      array('bi', 'bi_browser'),
+      array('bean_wysiwyg', 'bean_wysiwyg_browser'),
     ),
     'js' => array(
       array(
-       'data' => array('bi' => $settings),
+       'data' => array('bean_wysiwyg' => $settings),
        'type' => 'setting',
       ),
     ),
@@ -161,21 +132,21 @@ function bi_browser_js() {
 /**
  * Implements hook_admin_paths().
  */
-function bi_admin_paths() {
-  $paths['bi/*'] = TRUE;
+function bean_wysiwyg_admin_paths() {
+  $paths['bean_wysiwyg/*'] = TRUE;
   return $paths;
 }
 
 /**
  * Alter bean_form form.
  */
-function bi_form_bean_form_alter(&$form, $form_state) {
-  // We pass 'ajax' argument in bi_block_page().
+function bean_wysiwyg_form_bean_form_alter(&$form, $form_state) {
+  // We pass 'ajax' argument in bean_wysiwyg_block_page().
   if (!in_array('ajax', $form_state['build_info']['args'])) {
     return;
   }
 
-  $form['#attached']['js'] = array(drupal_get_path('module', 'bi') . '/js/bi.iframe.js');
+  $form['#attached']['js'] = array(drupal_get_path('module', 'bean_wysiwyg') . '/js/bean_wysiwyg.iframe.js');
   $form['actions']['submit']['#ajax'] = array( 'callback' => 'bean_form_ajax_callback',);
 }
 
@@ -183,7 +154,7 @@ function bean_form_ajax_callback($form, $form_state) {
   $commands = array();
   $bean = $form_state['bean'];
   $build = bean_view($bean);
-  _bi_strip_contextual_links($build);
+  _bean_wysiwyg_strip_contextual_links($build);
   $commands[] = ajax_command_invoke('body', 'blockSelectDialogFinalizeSelection', array(
     array('bid' => $bean->bid, 'html' => drupal_render($build)),
   ));
@@ -193,11 +164,11 @@ function bean_form_ajax_callback($form, $form_state) {
 /**
  * Implements hook_filter_info().
  */
-function bi_filter_info() {
-  $filters['bi_filter'] = array(
+function bean_wysiwyg_filter_info() {
+  $filters['bean_wysiwyg_filter'] = array(
     'title' => t('Convert Block Insert tags to markup'),
     'description' => t('This filter will convert [block_insert]...[/block_insert] tags into markup.'),
-    'process callback' => 'bi_filter_process',
+    'process callback' => 'bean_wysiwyg_filter_process',
     'weight' => 2,
   );
 
@@ -205,11 +176,11 @@ function bi_filter_info() {
 }
 
 /**
- * Finds all matches and run them through bi_token_to_markup().
+ * Finds all matches and run them through bean_wysiwyg_token_to_markup().
  */
-function bi_filter_process($text) {
+function bean_wysiwyg_filter_process($text) {
   $text = ' ' . $text . ' ';
-  $text = preg_replace_callback("/\[block_insert\].*?\[\/block_insert\]/s", 'bi_token_to_markup', $text);
+  $text = preg_replace_callback("/\[block_insert\].*?\[\/block_insert\]/s", 'bean_wysiwyg_token_to_markup', $text);
 
   return $text;
 }
@@ -217,22 +188,22 @@ function bi_filter_process($text) {
 /**
  * Convert tokens to markup.
  */
-function bi_token_to_markup($match) {
+function bean_wysiwyg_token_to_markup($match) {
   $bean_bid = substr($match[0], strlen('[block_insert]'), strlen($match[0]) - strlen('[block_insert]') - strlen('[/block_insert]'));
   $bean = bean_load($bean_bid);
   $build = bean_view($bean);
-  _bi_strip_contextual_links($build);
+  _bean_wysiwyg_strip_contextual_links($build);
   return drupal_render($build);
 }
 
 /**
  * Implements hook_element_info_alter().
  */
-function bi_element_info_alter(&$types) {
-  $types['text_format']['#pre_render'][] = 'bi_pre_render_text_format';
+function bean_wysiwyg_element_info_alter(&$types) {
+  $types['text_format']['#pre_render'][] = 'bean_wysiwyg_pre_render_text_format';
 }
 
-function bi_pre_render_text_format($element) {
+function bean_wysiwyg_pre_render_text_format($element) {
   // filter_process_format() copies properties to the expanded 'value' child
   // element.
   if (!isset($element['format'])) {
@@ -241,15 +212,15 @@ function bi_pre_render_text_format($element) {
 
   $field = &$element['value'];
 
-  $tagmap = _bi_generate_tagMap($field['#value']);
+  $tagmap = _bean_wysiwyg_generate_tagMap($field['#value']);
 
   if (isset($tagmap)) {
-    drupal_add_js(array('bi_tagmap' => $tagmap), 'setting');
+    drupal_add_js(array('bean_wysiwyg_tagmap' => $tagmap), 'setting');
   }
   return $element;
 }
 
-function _bi_generate_tagMap($text) {
+function _bean_wysiwyg_generate_tagMap($text) {
   // Making $tagmap static as this function is called many times and
   // adds duplicate markup for each tag code in Drupal.settings JS,
   // so in media_process_form it adds something like tagCode:<markup>,
@@ -265,7 +236,7 @@ function _bi_generate_tagMap($text) {
     // to $tagmap.  If we return an empty array, we break embeddings of the same
     // media multiple times.
     if (empty($tagmap[$match[0]])) {
-      if ($markup = bi_token_to_markup($match)) {
+      if ($markup = bean_wysiwyg_token_to_markup($match)) {
         $markup = '<div class="block-insert" data-block_insert="' . $bid . '" contenteditable="false">' . $markup . '<!-- block-insert --></div>';
         $tagmap[$match[0]] = $markup;
       }
@@ -281,7 +252,7 @@ function _bi_generate_tagMap($text) {
 /**
  * Recursively strip all contextual links in the element.
  */
-function _bi_strip_contextual_links(&$element) {
+function _bean_wysiwyg_strip_contextual_links(&$element) {
   if (!is_array($element)) {
     return;
   }
@@ -291,6 +262,6 @@ function _bi_strip_contextual_links(&$element) {
   }
 
   foreach (element_children($element) as $key) {
-    _bi_strip_contextual_links($element[$key]);
+    _bean_wysiwyg_strip_contextual_links($element[$key]);
   }
 }

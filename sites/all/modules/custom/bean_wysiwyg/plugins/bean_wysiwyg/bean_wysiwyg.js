@@ -1,12 +1,12 @@
 (function($) {
-  Drupal.behaviors.biSettings = {
+  Drupal.behaviors.bean_wysiwygSettings = {
     attach: function(context, settings) {
       CKEDITOR.config.allowedContent = true;
       CKEDITOR.config.extraPlugins = 'widget';
     }
   }
 
-  Drupal.behaviors.bi = {
+  Drupal.behaviors.bean_wysiwyg = {
     attach: function(context, settings) {
 
       $('iframe').each(function(){
@@ -30,7 +30,7 @@
       });
 
       $('iframe.cke_wysiwyg_frame').contents().find('html').click(function(){
-          $(this).find('.cke_button__bi').addClass('cke_button_off').removeClass('cke_button_on');
+          $(this).find('.cke_button__bean_wysiwyg').addClass('cke_button_off').removeClass('cke_button_on');
       });
 
     }
@@ -41,15 +41,15 @@
       var insertBlockIsActive = $(this).contents().find('.block-insert-active').length;
 
       if (insertBlockIsActive) {
-        $(this).parents('.cke_inner').find('.cke_button__bi').addClass('cke_button_on').removeClass('cke_button_off');
+        $(this).parents('.cke_inner').find('.cke_button__bean_wysiwyg').addClass('cke_button_on').removeClass('cke_button_off');
       }
       else {
-        $(this).parents('.cke_inner').find('.cke_button__bi').addClass('cke_button_off').removeClass('cke_button_on');
+        $(this).parents('.cke_inner').find('.cke_button__bean_wysiwyg').addClass('cke_button_off').removeClass('cke_button_on');
       }
     });
   };
 
-  Drupal.wysiwyg.plugins.bi = {
+  Drupal.wysiwyg.plugins.bean_wysiwyg = {
 
     /**
      * Get the active block from the iframe.
@@ -87,17 +87,17 @@
    * that will show in the editor.
    */
     attach: function (content, settings, instanceId) {
-      bi_ensure_tagmap();
+      bean_wysiwyg_ensure_tagmap();
 
-      var bi_tagmap = Drupal.settings.bi_tagmap,
+      var bean_wysiwyg_tagmap = Drupal.settings.bean_wysiwyg_tagmap,
       matches = content.match(/\[block_insert\]\d*\[\/block_insert\]/g);
 
       if (matches) {
         for (var index in matches) {
           var macro = matches[index];
 
-          if (bi_tagmap[macro]) {
-            content = content.replace(macro, bi_tagmap[macro]);
+          if (bean_wysiwyg_tagmap[macro]) {
+            content = content.replace(macro, bean_wysiwyg_tagmap[macro]);
           }
           else {
             debug.debug("Could not find content for " + macro);
@@ -113,18 +113,18 @@
     * Detach function, called when a rich text editor detaches.
     */
     detach: function (content, settings, instanceId) {
-      bi_ensure_tagmap();
-      var bi_tagmap = Drupal.settings.bi_tagmap,
+      bean_wysiwyg_ensure_tagmap();
+      var bean_wysiwyg_tagmap = Drupal.settings.bean_wysiwyg_tagmap,
       i = 0,
       markup,
       macro;
 
-      var matches = content.match(/<div class="block-insert((?!<!-- block-insert).)*<!-- block-insert --><\/div>/gi);
+      var matches = content.match(/<div class="block-insert((?!<!-- block-insert)(.|[\r\n]))*<!-- block-insert --><\/div>/gi);
       if (matches) {
         for (i = 0; i < matches.length; i++) {
           markup = matches[i];
-          macro = bi_create_macro(markup);
-          bi_tagmap[macro] = markup;
+          macro = bean_wysiwyg_create_macro(markup);
+          bean_wysiwyg_tagmap[macro] = markup;
           content = content.replace(markup, macro);
         }
       }
@@ -143,67 +143,67 @@
      * Display popup to insert new block.
      */
     prompt: function (settings) {
-      Drupal.bi.popups.blockSelectDialog($.proxy(this, 'insert'), settings);
+      Drupal.bean_wysiwyg.popups.blockSelectDialog($.proxy(this, 'insert'), settings);
     },
 
   /**
    * On selection of a media item, display item's display configuration form.
    */
   onSelect: function (bean_bid, settings) {
-    Drupal.bi.popups.blockUpdateDialog($.proxy(this, 'update'), bean_bid, settings);
+    Drupal.bean_wysiwyg.popups.blockUpdateDialog($.proxy(this, 'update'), bean_bid, settings);
   },
 
     /**
    * Insert HTML to the WYSIWYG when block has been created. Set the macro.
    */
     insert: function (block) {
-      var markup = bi_create_markup(block);
-      macro = bi_create_macro(markup);
+      var markup = bean_wysiwyg_create_markup(block);
+      macro = bean_wysiwyg_create_macro(markup);
 
       // Insert placeholder markup into wysiwyg.
       Drupal.wysiwyg.instances[this.instanceId].insert(markup);
       Drupal.attachBehaviors();
 
-      // Store macro/markup pair in the bi_tagmap.
-      bi_ensure_tagmap();
-      Drupal.settings.bi_tagmap[macro] = markup;
+      // Store macro/markup pair in the bean_wysiwyg_tagmap.
+      bean_wysiwyg_ensure_tagmap();
+      Drupal.settings.bean_wysiwyg_tagmap[macro] = markup;
     },
 
     /**
      * Update already inserted block.
      */
     update: function (block) {
-      var markup = bi_create_markup(block);
-      var macro = bi_create_macro(markup);
+      var markup = bean_wysiwyg_create_markup(block);
+      var macro = bean_wysiwyg_create_macro(markup);
 
       // Replace block old markup with new one.
       $('#cke_' + this.instanceId).find('iframe').contents().find('.block-insert-active').html($(markup).html()).removeClass('block-insert-active');
       updateBlockInsertButtonState();
 
-      // Store macro/markup pair in the bi_tagmap.
-      bi_ensure_tagmap();
-      Drupal.settings.bi_tagmap[macro] = markup;
+      // Store macro/markup pair in the bean_wysiwyg_tagmap.
+      bean_wysiwyg_ensure_tagmap();
+      Drupal.settings.bean_wysiwyg_tagmap[macro] = markup;
     }
   };
 
   /**
    * Ensure that block insert tagmap initialized.
    */
-  function bi_ensure_tagmap () {
-    Drupal.settings.bi_tagmap = Drupal.settings.bi_tagmap || {};
+  function bean_wysiwyg_ensure_tagmap () {
+    Drupal.settings.bean_wysiwyg_tagmap = Drupal.settings.bean_wysiwyg_tagmap || {};
   }
 
   /**
    * Create a macro token from the block.
    */
-  function bi_create_macro(html) {
+  function bean_wysiwyg_create_macro(html) {
     return '[block_insert]' + $(html).data('block_insert') + '[/block_insert]';
   }
 
   /**
    * Create a markup from block object.
    */
-  function bi_create_markup(block) {
+  function bean_wysiwyg_create_markup(block) {
     return '<div class="block-insert" data-block_insert="' + block.bid + '" contenteditable="false">' + block.html + '<!-- block-insert --></div>';
   }
 

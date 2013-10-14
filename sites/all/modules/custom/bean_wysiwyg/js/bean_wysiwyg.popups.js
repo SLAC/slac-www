@@ -1,11 +1,11 @@
 (function($) {
-  namespace('Drupal.bi.popups');
+  namespace('Drupal.bean_wysiwyg.popups');
 
   /**
    * Create new block popup.
    */
-  Drupal.bi.popups.blockSelectDialog = function (insert, globalOptions, pluginOptions, widgetOptions) {
-    var options = Drupal.bi.popups.blockSelectDialog.getDefaults();
+  Drupal.bean_wysiwyg.popups.blockSelectDialog = function (insert, globalOptions, pluginOptions, widgetOptions) {
+    var options = Drupal.bean_wysiwyg.popups.blockSelectDialog.getDefaults();
     options.global = $.extend({}, options.global, globalOptions);
     options.plugins = pluginOptions;
     options.widget = $.extend({}, options.widget, widgetOptions);
@@ -21,8 +21,8 @@
     params.plugins = options.plugins;
 
     browserSrc += '&' + $.param(params);
-    var mediaIframe = Drupal.bi.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
-    Drupal.bi.popups.blockSelectDialog.mediaframe = mediaIframe;
+    var mediaIframe = Drupal.bean_wysiwyg.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
+    Drupal.bean_wysiwyg.popups.blockSelectDialog.mediaframe = mediaIframe;
     // Attach the onLoad event
     mediaIframe.bind('load', options, options.widget.onLoad);
     /**
@@ -43,7 +43,7 @@
     var dialogOptions = options.dialog;
 
     dialogOptions.buttons[ok] = function () {
-      var selected = Drupal.bi.popups.blockSelectDialog.selectedBlock;
+      var selected = Drupal.bean_wysiwyg.popups.blockSelectDialog.selectedBlock;
       if (selected.length < 1) {
         alert(notSelected);
         return;
@@ -66,7 +66,7 @@
     return mediaIframe;
   };
 
-  Drupal.bi.popups.blockSelectDialog.submit  = function () {
+  Drupal.bean_wysiwyg.popups.blockSelectDialog.submit  = function () {
     var buttons = $(parent.window.document.body).find('#blockInsertBrowser').parent('.ui-dialog').find('.ui-dialog-buttonpane button');
     if ($(this).hasClass('fake-cancel')) {
       buttons[1].click();
@@ -76,16 +76,16 @@
     return false;
   }
 
-  Drupal.bi.popups.blockSelectDialog.getDefaults = function () {
+  Drupal.bean_wysiwyg.popups.blockSelectDialog.getDefaults = function () {
     return {
       global: {
         types: [], // Types to allow, defaults to all.
         activePlugins: [] // If provided, a list of plugins which should be enabled.
       },
       widget: { // Settings for the actual iFrame which is launched.
-        src: Drupal.settings.bi.browserUrl, // Src of the media browser (if you want to totally override it)
-        updateSrc: Drupal.settings.bi.browserUpdateBlockUrl, // Src of the page to edit the block
-        onLoad: Drupal.bi.popups.blockSelectDialog.onLoad // Onload function when iFrame loads.
+        src: Drupal.settings.bean_wysiwyg.browserUrl, // Src of the media browser (if you want to totally override it)
+        updateSrc: Drupal.settings.bean_wysiwyg.browserUpdateBlockUrl, // Src of the page to edit the block
+        onLoad: Drupal.bean_wysiwyg.popups.blockSelectDialog.onLoad // Onload function when iFrame loads.
       },
       dialog: Drupal.media.popups.getDialogOptions()
     };
@@ -94,11 +94,11 @@
   /**
  * Get an iframe to serve as the dialog's contents. Common to both plugins.
  */
-Drupal.bi.popups.getPopupIframe = function (src, id, options) {
+Drupal.bean_wysiwyg.popups.getPopupIframe = function (src, id, options) {
   var defaults = {width: '800px', scrolling: 'auto'};
   var options = $.extend({}, defaults, options);
 
-  return $('<iframe class="bi-modal-frame"/>')
+  return $('<iframe class="bean_wysiwyg-modal-frame"/>')
   .attr('src', src)
   .attr('width', options.width)
   .attr('id', id)
@@ -108,19 +108,19 @@ Drupal.bi.popups.getPopupIframe = function (src, id, options) {
 /**
  * Called after iframe of selecting the block's type is loaded.
  */
-Drupal.bi.popups.blockSelectDialog.onLoad = function() {
+Drupal.bean_wysiwyg.popups.blockSelectDialog.onLoad = function() {
   $('#blockInsertBrowser').contents().find('#skip-link').remove();
   $('#blockInsertBrowser').contents().find('#branding').remove();
 
-  $('#blockInsertBrowser').contents().find('a.fake-cancel').bind('click', Drupal.bi.popups.blockSelectDialog.submit);
+  $('#blockInsertBrowser').contents().find('a.fake-cancel').bind('click', Drupal.bean_wysiwyg.popups.blockSelectDialog.submit);
 }
 
 /**
  * Popup to update existing block.
  */
-Drupal.bi.popups.blockUpdateDialog = function (update, bean_bid, globalOptions, pluginOptions, widgetOptions) {
+Drupal.bean_wysiwyg.popups.blockUpdateDialog = function (update, bean_bid, globalOptions, pluginOptions, widgetOptions) {
 
-    var options = Drupal.bi.popups.blockSelectDialog.getDefaults();
+    var options = Drupal.bean_wysiwyg.popups.blockSelectDialog.getDefaults();
     options.global = $.extend({}, options.global, globalOptions);
     options.plugins = pluginOptions;
     options.widget = $.extend({}, options.widget, widgetOptions);
@@ -136,8 +136,8 @@ Drupal.bi.popups.blockUpdateDialog = function (update, bean_bid, globalOptions, 
 //    params.plugins = options.plugins;
 //
 //    browserSrc += '&' + $.param(params);
-    var mediaIframe = Drupal.bi.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
-    Drupal.bi.popups.blockSelectDialog.mediaframe = mediaIframe;
+    var mediaIframe = Drupal.bean_wysiwyg.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
+    Drupal.bean_wysiwyg.popups.blockSelectDialog.mediaframe = mediaIframe;
     // Attach the onLoad event
     mediaIframe.bind('load', options, options.widget.onLoad);
     /**
@@ -158,7 +158,7 @@ Drupal.bi.popups.blockUpdateDialog = function (update, bean_bid, globalOptions, 
     var dialogOptions = options.dialog;
 
     dialogOptions.buttons[ok] = function () {
-      var selected = Drupal.bi.popups.blockSelectDialog.selectedBlock;
+      var selected = Drupal.bean_wysiwyg.popups.blockSelectDialog.selectedBlock;
       if (selected.length < 1) {
         alert(notSelected);
         return;
