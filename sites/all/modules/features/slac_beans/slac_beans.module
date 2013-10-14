@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file
+ * Code for the slac_beans feature.
+ */
+
+include_once 'slac_beans.features.inc';
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function slac_beans_entity_view_alter(&$build, $type) {
+  if ($type != 'bean') {
+    return;
+  }
+  if ($build['#bundle'] == 'image_text_link') {
+    $build['#theme'] = 'slac_beans_image_text_link';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function slac_beans_theme() {
+  return array(
+    'slac_beans_image_text_link' => array(
+      'render element' => 'entity',
+      'template' => 'slac_beans_image_text_link',
+    ),
+  );
+}
+
+/**
+ * Preprocess function for slac_beans_image_text_link.tpl.php template.
+ */
+function slac_beans_preprocess_slac_beans_image_text_link(& $vars) {
+
+  $item_values = array();
+  foreach (element_children($vars['entity']['field_block_itl_content']) as $key) {
+    foreach ($vars['entity']['field_block_itl_content'][$key]['entity']['field_collection_item'] as $item) {
+      $item_values[] = array(
+        'title' => $item['field_block_itl_title'][0]['#markup'],
+        'text' => $item['field_block_itl_text'][0]['#markup'],
+        'image' => drupal_render($item['field_block_itl_image'][0]['file']),
+        'link' => drupal_render($item['field_block_itl_link'][0]),
+        'url' => $item['field_block_itl_link']['#items'][0]['url'],
+      );
+    }
+  }
+
+  $vars['blocks'] = $item_values;
+
+  static $once;
+  if (!$once) {
+//    dpm($vars);
+    $once = TRUE;
+  }
+}
