@@ -29,24 +29,24 @@
         });
       });
 
-      function updateBlockInsertButtonState() {
-        $('iframe').each(function(){
-          var insertBlockIsActive = $(this).contents().find('.block-insert-active').length;
-
-          if (insertBlockIsActive) {
-            $(this).parents('.cke_inner').find('.cke_button__bi').addClass('cke_button_on').removeClass('cke_button_off');
-          }
-          else {
-            $(this).parents('.cke_inner').find('.cke_button__bi').addClass('cke_button_off').removeClass('cke_button_on');
-          }
-        });
-      };
-
       $('iframe.cke_wysiwyg_frame').contents().find('html').click(function(){
           $(this).find('.cke_button__bi').addClass('cke_button_off').removeClass('cke_button_on');
       });
 
     }
+  };
+
+  function updateBlockInsertButtonState() {
+    $('iframe').each(function(){
+      var insertBlockIsActive = $(this).contents().find('.block-insert-active').length;
+
+      if (insertBlockIsActive) {
+        $(this).parents('.cke_inner').find('.cke_button__bi').addClass('cke_button_on').removeClass('cke_button_off');
+      }
+      else {
+        $(this).parents('.cke_inner').find('.cke_button__bi').addClass('cke_button_off').removeClass('cke_button_on');
+      }
+    });
   };
 
   Drupal.wysiwyg.plugins.bi = {
@@ -119,7 +119,7 @@
       markup,
       macro;
 
-      var matches = content.match(/<div class="block-insert(.)*<!-- block-insert --><\/div>/gi);
+      var matches = content.match(/<div class="block-insert((?!<!-- block-insert).)*<!-- block-insert --><\/div>/gi);
       if (matches) {
         for (i = 0; i < matches.length; i++) {
           markup = matches[i];

@@ -182,8 +182,10 @@ function bi_form_bean_form_alter(&$form, $form_state) {
 function bean_form_ajax_callback($form, $form_state) {
   $commands = array();
   $bean = $form_state['bean'];
+  $build = bean_view($bean);
+  _bi_strip_contextual_links($build);
   $commands[] = ajax_command_invoke('body', 'blockSelectDialogFinalizeSelection', array(
-    array('bid' => $bean->bid, 'html' => drupal_render(bean_view($bean))),
+    array('bid' => $bean->bid, 'html' => drupal_render($build)),
   ));
   return array('#type' => 'ajax', '#commands' => $commands);
 }
@@ -219,6 +221,7 @@ function bi_token_to_markup($match) {
   $bean_bid = substr($match[0], strlen('[block_insert]'), strlen($match[0]) - strlen('[block_insert]') - strlen('[/block_insert]'));
   $bean = bean_load($bean_bid);
   $build = bean_view($bean);
+  _bi_strip_contextual_links($build);
   return drupal_render($build);
 }
 
@@ -273,4 +276,21 @@ function _bi_generate_tagMap($text) {
     }
   }
   return $tagmap;
+}
+
+/**
+ * Recursively strip all contextual links in the element.
+ */
+function _bi_strip_contextual_links(&$element) {
+  if (!is_array($element)) {
+    return;
+  }
+
+  if (isset($element['#contextual_links'])) {
+    unset($element['#contextual_links']);
+  }
+
+  foreach (element_children($element) as $key) {
+    _bi_strip_contextual_links($element[$key]);
+  }
 }

@@ -6,3 +6,7 @@
 .block-insert-active {
   background-color: yellow;
 }
+
+.element-invisible {
+  display: none;
+}

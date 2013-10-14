@@ -1,6 +1,9 @@
 (function($) {
   namespace('Drupal.bi.popups');
 
+  /**
+   * Create new block popup.
+   */
   Drupal.bi.popups.blockSelectDialog = function (insert, globalOptions, pluginOptions, widgetOptions) {
     var options = Drupal.bi.popups.blockSelectDialog.getDefaults();
     options.global = $.extend({}, options.global, globalOptions);
@@ -112,6 +115,9 @@ Drupal.bi.popups.blockSelectDialog.onLoad = function() {
   $('#blockInsertBrowser').contents().find('a.fake-cancel').bind('click', Drupal.bi.popups.blockSelectDialog.submit);
 }
 
+/**
+ * Popup to update existing block.
+ */
 Drupal.bi.popups.blockUpdateDialog = function (update, bean_bid, globalOptions, pluginOptions, widgetOptions) {
 
     var options = Drupal.bi.popups.blockSelectDialog.getDefaults();
