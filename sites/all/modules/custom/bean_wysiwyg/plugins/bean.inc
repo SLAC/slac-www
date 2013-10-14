@@ -4,14 +4,20 @@
  */
 
 /**
- * Implements hook_wysiwyg_plugin().
+ * Implements hook_INCLUDE_plugin().
  */
-function bean_wysiwyg_wysiwyg_plugin() {
+function bean_wysiwyg_bean_plugin() {
   bean_wysiwyg_include_browser_js();
 
   $plugins['bean_wysiwyg'] = array(
-    'title' => t('Block Insert'),
+    'title' => t('Block Insert111!'),
+    'icon path' => drupal_get_path('module', 'bean_wysiwyg') . '/plugins/bean/images',
     'icon file' => 'bean_button.png',
+    'icon title' => t('Block insert'),
+    'js path' => drupal_get_path('module', 'bean_wysiwyg') . '/plugins/bean',
+    'js file' => 'bean.js',
+    'css path' => drupal_get_path('module', 'bean_wysiwyg') . '/plugins/bean',
+    'css file' => 'bean.css',
     'icon title' => t('Block Insert'),
     'settings' => array(),
   );
