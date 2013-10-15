@@ -20,5 +20,4 @@ features[field_base][] = field_related_links
 features[field_instance][] = fieldable_panels_pane-related_links-field_related_link
 features[field_instance][] = node-page-field_related_links
 features[page_manager_handlers][] = node_view_panel_context
-features[page_manager_handlers][] = node_view_panel_context_8
 features[variable][] = field_bundle_settings_fieldable_panels_pane__related_links
