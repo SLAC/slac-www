@@ -28,5 +28,14 @@ function slac_beans_bean_admin_ui_types() {
   $bean_type->description = '';
   $export['image_text_link'] = $bean_type;
 
+  $bean_type = new stdClass();
+  $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
+  $bean_type->api_version = 5;
+  $bean_type->name = 'shaded_no_title_block';
+  $bean_type->label = 'Shaded (no title) Block';
+  $bean_type->options = '';
+  $bean_type->description = 'This block will have the title in the content.';
+  $export['shaded_no_title_block'] = $bean_type;
+
   return $export;
 }

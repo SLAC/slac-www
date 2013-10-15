@@ -34,7 +34,7 @@ function slac_beans_field_default_field_instances() {
     'entity_type' => 'bean',
     'field_name' => 'field_block_bb_content',
     'label' => 'Block content',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -43,7 +43,7 @@ function slac_beans_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 11,
+      'weight' => 2,
     ),
   );
 
@@ -71,6 +71,43 @@ function slac_beans_field_default_field_instances() {
     'entity_type' => 'bean',
     'field_name' => 'field_block_itl_content',
     'label' => 'Content',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'bean-shaded_no_title_block-field_block_no_title'
+  $field_instances['bean-shaded_no_title_block-field_block_no_title'] = array(
+    'bundle' => 'shaded_no_title_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_block_no_title',
+    'label' => 'block_no_title',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -529,8 +566,77 @@ function slac_beans_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_block_no_title-field_block_no_title_body'
+  $field_instances['field_collection_item-field_block_no_title-field_block_no_title_body'] = array(
+    'bundle' => 'field_block_no_title',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_block_no_title_body',
+    'label' => 'Block body',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_block_no_title-field_block_no_title_title'
+  $field_instances['field_collection_item-field_block_no_title-field_block_no_title_title'] = array(
+    'bundle' => 'field_block_no_title',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_block_no_title_title',
+    'label' => 'Block title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Block body');
   t('Block content');
   t('Block title');
   t('Brochure download link');
@@ -544,6 +650,7 @@ function slac_beans_field_default_field_instances() {
   t('Shaded background');
   t('Text');
   t('Title');
+  t('block_no_title');
 
   return $field_instances;
 }

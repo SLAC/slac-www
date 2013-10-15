@@ -19,6 +19,9 @@ function slac_beans_entity_view_alter(&$build, $type) {
   if ($build['#bundle'] == 'block_with_brochures') {
     $build['#theme'] = 'slac_beans_block_with_brochures';
   }
+  if ($build['#bundle'] == 'shaded_no_title_block') {
+    $build['#theme'] = 'slac_beans_shaded_no_title_block';
+  }
 }
 
 /**
@@ -33,6 +36,10 @@ function slac_beans_theme() {
     'slac_beans_block_with_brochures' => array(
       'render element' => 'entity',
       'template' => 'slac_beans_block_with_brochures',
+    ),
+    'slac_beans_shaded_no_title_block' => array(
+      'render element' => 'entity',
+      'template' => 'slac_beans_shaded_no_title_block',
     ),
   );
 }
@@ -102,6 +109,32 @@ function slac_beans_preprocess_slac_beans_image_text_link(&$vars) {
         'link' => drupal_render($item['field_block_itl_link'][0]),
         'url' => $url,
         'shaded_background' => $shaded_background,
+      );
+    }
+  }
+
+  $vars['blocks'] = $item_values;
+
+  static $once;
+  if (!$once) {
+    $once = TRUE;
+  }
+}
+
+/**
+ * Preprocess function for slac_beans_shaded_no_title_block.tpl.php template.
+ */
+function slac_beans_preprocess_slac_beans_shaded_no_title_block(&$vars) {
+  $item_values = array();
+  foreach (element_children($vars['entity']['field_block_no_title']) as $key) {
+    foreach ($vars['entity']['field_block_no_title'][$key]['entity']['field_collection_item'] as $item) {
+      $title = '';
+      if (isset($item['field_block_no_title_title'][0]['#markup'])) {
+        $title = $item['field_block_no_title_title'][0]['#markup'];
+        }
+      $item_values[] = array(
+        'title' => $title,
+        'text' => $item['field_block_no_title_body'][0]['#markup'],
       );
     }
   }
