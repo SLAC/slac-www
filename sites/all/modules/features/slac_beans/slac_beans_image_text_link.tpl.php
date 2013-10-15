@@ -8,7 +8,9 @@
     color: #7F6332;">
     <?php print $block['title']; ?>
   </div>
-  <div style="
+  <div
+    style="
+    <?php if($block['shaded_background']): ?>
       background: #f6f6f6;
       background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
@@ -17,16 +19,29 @@
       background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
       background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ebebeb',GradientType=0 );
+    <?php endif; ?>
       width: 94%;
       padding: 20px 3%;
       font-size: 13px;
       overflow: hidden;
       margin-top: 0;
        ">
-    <div style="
-        float: left;
-        width: 70%;
-        margin-right: 5%;">
+    <div style="">
+      <?php if(isset($block['image'])): ?>
+        <div style="
+        float: right;
+        width: 25%;
+        margin-left: 5%;
+         ">
+          <a style="
+              display: block;
+              padding: 2px;
+              border: 2px solid #DBDADB;
+              background-color: #fff;" href="<?php print $block['url']; ?>">
+            <?php print $block['image']; ?>
+          </a>
+        </div>
+      <?php endif; ?>
       <p>
           <?php print $block['text']; ?>
       </p>
@@ -34,19 +49,6 @@
         <?php print $block['link']; ?>
       </p>
     </div>
-    <div style="
-        float: right;
-        width: 25%;
-         ">
-         <a style="
-              display: block;
-              padding: 2px;
-              border: 2px solid #DBDADB;
-              background-color: #fff;" href="<?php print $block['url']; ?>">
-            <?php print $block['image']; ?>
-         </a>
-    </div>
-
   </div>
 </div>
 <?php } ?>

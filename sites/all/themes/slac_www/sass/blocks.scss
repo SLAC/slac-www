@@ -1105,6 +1105,11 @@ width: 100%;
     position:absolute;
     bottom: 22px;
     z-index: 99;
+    padding-bottom: 1px;
+    &:hover{
+      border-bottom: 1px dotted #881728;
+      padding-bottom:  0;
+    }
   }
 }
 
