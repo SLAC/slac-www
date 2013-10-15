@@ -311,6 +311,43 @@ function slac_beans_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_block_itl_content-field_block_itl_background'
+  $field_instances['field_collection_item-field_block_itl_content-field_block_itl_background'] = array(
+    'bundle' => 'field_block_itl_content',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'If checked, the block will have a shaded background.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_block_itl_background',
+    'label' => 'Shaded background',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_block_itl_content-field_block_itl_image'
   $field_instances['field_collection_item-field_block_itl_content-field_block_itl_image'] = array(
     'bundle' => 'field_block_itl_content',
@@ -501,8 +538,10 @@ function slac_beans_field_default_field_instances() {
   t('Brochure title');
   t('Brochures info');
   t('Content');
+  t('If checked, the block will have a shaded background.');
   t('Image');
   t('Link');
+  t('Shaded background');
   t('Text');
   t('Title');
 
