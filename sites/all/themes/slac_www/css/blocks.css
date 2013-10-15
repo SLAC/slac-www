@@ -1387,20 +1387,25 @@ div table.gadget {
   float: left;
   position: absolute;
   bottom: 22px;
-  z-index: 99; }
+  z-index: 99;
+  padding-bottom: 1px; }
+  /* line 1109, ../sass/blocks.scss */
+  #imageData #caption em a:hover {
+    border-bottom: 1px dotted #881728;
+    padding-bottom: 0; }
 
-/* line 1111, ../sass/blocks.scss */
+/* line 1116, ../sass/blocks.scss */
 .move-title-left .pane-title {
   margin-left: 0 !important; }
 
 /* general links underline adjustment */
-/* line 1120, ../sass/blocks.scss */
+/* line 1125, ../sass/blocks.scss */
 .three-col-middle a:hover,
 .two-col-leftsidebar .general-right a:hover,
 .general-two-col .general-left a:hover {
   border-bottom: 1px dotted #881728; }
 
-/* line 1128, ../sass/blocks.scss */
+/* line 1133, ../sass/blocks.scss */
 .three-col-middle .page-link .page-link:hover,
 .views-field-field-image a:hover,
 #orgwrapper a.highlight:hover,
@@ -1409,27 +1414,27 @@ a.imgclass:hover,
 a.lightbox-processed:hover {
   border-bottom: none; }
 
-/* line 1132, ../sass/blocks.scss */
+/* line 1137, ../sass/blocks.scss */
 .content-graphic-block a:hover {
   border: 2px solid #DBDADB; }
 
-/* line 1136, ../sass/blocks.scss */
+/* line 1141, ../sass/blocks.scss */
 .general-right .pane-node-terms-misc {
   background: #ebebeb;
   padding: 10px;
   margin-bottom: 50px; }
-  /* line 1140, ../sass/blocks.scss */
+  /* line 1145, ../sass/blocks.scss */
   .general-right .pane-node-terms-misc .pane-title {
     color: #373738;
     font-size: 12px;
     padding-bottom: 5px;
     font-weight: bold; }
-  /* line 1146, ../sass/blocks.scss */
+  /* line 1151, ../sass/blocks.scss */
   .general-right .pane-node-terms-misc a {
     line-height: 18px;
     color: #720c20;
     font-size: 11px; }
 
-/* line 1153, ../sass/blocks.scss */
+/* line 1158, ../sass/blocks.scss */
 .node-type-news-article .video-block .content {
   padding-top: 12px; }

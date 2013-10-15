@@ -209,15 +209,6 @@
             /* ie*/
             $("[placeholder]").textPlaceholder();
 
-
-
-
-            $description = $('.page-community-past-lectures .description').text();
-            $this = $('.page-community-past-lectures .view-filters input.form-text');
-            $this.attr("placeholder", $description);
-
-            $('.page-community-past-lectures .view-filters input.form-text[placeholder]').placeholder();
-
         }
     }
 
