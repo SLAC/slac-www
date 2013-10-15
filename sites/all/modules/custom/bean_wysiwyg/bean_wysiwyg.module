@@ -127,6 +127,15 @@ function bean_wysiwyg_form_bean_form_alter(&$form, $form_state) {
 
   $form['#attached']['js'] = array(drupal_get_path('module', 'bean_wysiwyg') . '/js/bean_wysiwyg.iframe.js');
   $form['actions']['submit']['#ajax'] = array( 'callback' => 'bean_form_ajax_callback',);
+  // @todo Add ajax call to Delete button and remove the block instead of hiding the button.
+  if (isset($form['actions']['delete'])) {
+    unset($form['actions']['delete']);
+  }
+
+  $form['actions']['cancel'] = array(
+    '#markup' => l(t('Cancel'), '', array('attributes' => array('class' => array('button', 'button-no', 'fake-cancel')))),
+    '#weight' => 210,
+  );
 }
 
 function bean_form_ajax_callback($form, $form_state) {
