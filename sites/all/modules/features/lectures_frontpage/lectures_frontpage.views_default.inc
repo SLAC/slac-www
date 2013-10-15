@@ -437,6 +437,7 @@ and you\'ll be kept up to date on all our public lectures activity.</p>
   $handler->display->display_options['fields']['nothing_2']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_2']['label'] = 'About the Speaker:';
+  $handler->display->display_options['fields']['nothing_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing_2']['alter']['text'] = '<div class="about-speaker-side">[field_speaker_image]
 <span>[field_speaker_name]</span></div>[field_about_the_speaker]';
   $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
