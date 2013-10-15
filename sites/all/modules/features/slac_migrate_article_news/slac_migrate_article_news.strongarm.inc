@@ -83,6 +83,18 @@ function slac_migrate_article_news_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'email_main_story' => array(
+        'custom_settings' => TRUE,
+      ),
+      'email_side_news' => array(
+        'custom_settings' => TRUE,
+      ),
+      'email_top_story' => array(
+        'custom_settings' => TRUE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

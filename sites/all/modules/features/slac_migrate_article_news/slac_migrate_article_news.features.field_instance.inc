@@ -158,9 +158,12 @@ function slac_migrate_article_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'slac_news_center',
-        'settings' => array(),
-        'type' => 'image_rss_enclosure',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
         'weight' => 3,
       ),
       'email_main_story' => array(
@@ -192,7 +195,9 @@ function slac_migrate_article_news_field_default_field_instances() {
       'rss' => array(
         'label' => 'hidden',
         'module' => 'slac_news_center',
-        'settings' => array(),
+        'settings' => array(
+          'image_style' => 'ecrop_igp',
+        ),
         'type' => 'image_rss_enclosure',
         'weight' => 4,
       ),
@@ -218,6 +223,7 @@ function slac_migrate_article_news_field_default_field_instances() {
           'ecrop_frontpage_carousel' => 0,
           'ecrop_frontpage_headlines' => 'ecrop_frontpage_headlines',
           'ecrop_frontpage_headlines_small' => 'ecrop_frontpage_headlines_small',
+          'ecrop_igp' => 'ecrop_igp',
           'ecrop_news-article_content' => 'ecrop_news-article_content',
           'ecrop_news_center' => 'ecrop_news_center',
           'lightbox_text_bottom' => 0,
@@ -249,8 +255,6 @@ function slac_migrate_article_news_field_default_field_instances() {
           'video' => 0,
         ),
         'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
           'media_internet' => 0,
           'upload' => 0,
           'youtube' => 0,
@@ -346,9 +350,7 @@ function slac_migrate_article_news_field_default_field_instances() {
           'video' => 'video',
         ),
         'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'media_internet' => 0,
+          'media_internet' => 'media_internet',
           'upload' => 0,
           'youtube' => 'youtube',
         ),

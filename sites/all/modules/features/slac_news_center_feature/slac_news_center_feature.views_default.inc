@@ -424,7 +424,7 @@ return $arg;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['type'] = 'pp_crop_lightbox2';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'ecrop_news-article_content',
+    'image_style' => 'article-news-node-page',
   );
   $handler->display->display_options['fields']['field_image']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_image']['delta_offset'] = '0';

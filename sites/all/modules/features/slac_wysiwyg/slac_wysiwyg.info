@@ -1,6 +1,7 @@
 name = SLAC WYSIWYG
 core = 7.x
 package = SLAC
+php = 5.2.4
 dependencies[] = filter
 features[features_api][] = api:2
 features[wysiwyg][] = full_html

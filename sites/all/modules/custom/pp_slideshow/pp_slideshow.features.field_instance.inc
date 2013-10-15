@@ -78,6 +78,7 @@ function pp_slideshow_field_default_field_instances() {
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -292,6 +293,7 @@ function pp_slideshow_field_default_field_instances() {
       ),
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
@@ -409,7 +411,11 @@ function pp_slideshow_field_default_field_instances() {
   // Exported field_instance: 'field_collection_item-field_slideshow_txtlr_slide-field_fcollection_txtposition'
   $field_instances['field_collection_item-field_slideshow_txtlr_slide-field_fcollection_txtposition'] = array(
     'bundle' => 'field_slideshow_txtlr_slide',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'left',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -539,7 +545,7 @@ function pp_slideshow_field_default_field_instances() {
           'slideshow_pause' => 0,
           'slideshow_speed' => 1000,
           'slideshow_start_on_hover' => 0,
-          'slideshow_timeout' => 4000,
+          'slideshow_timeout' => 40000,
         ),
         'type' => 'slideshow',
         'weight' => 0,
