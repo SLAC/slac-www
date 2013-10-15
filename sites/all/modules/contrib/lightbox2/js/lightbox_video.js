@@ -65,7 +65,7 @@ Lightvideo = {
     if (Lightvideo.checkYouTubeVideo(href) || Lightvideo.checkGoogleVideo(href) ||
       Lightvideo.checkMySpaceVideo(href) || Lightvideo.checkLiveVideo(href) ||
       Lightvideo.checkMetacafeVideo(href) ||
-      Lightvideo.checkIFilmSpikeVideo(href)
+      Lightvideo.checkIFilmSpikeVideo(href) || Lightvideo.checkVimeoVideo(href)
       ) {
       return true;
     }
@@ -93,6 +93,23 @@ Lightvideo = {
           href = href + '&' + variables;
         }
         Lightvideo.createEmbed(href, "flvvideo", "#ffffff", variables);
+        return true;
+      }
+    }
+    return false;
+  },
+
+  checkVimeoVideo: function(href) {
+    var patterns = [
+      'vimeo.com/([^/]*)'
+      ];
+
+    for (var i = 0; i < patterns.length; i++) {
+      var pattern = new RegExp(patterns[i], "i");
+      var results = pattern.exec(href);
+      if (results !== null) {
+        Lightbox.videoId = results[1];
+        Lightvideo.createEmbed("http://www.vimeo.com/moogaloop.swf?autoplay=1&clip_id="+Lightbox.videoId, "flvvideo", "#ffffff");
         return true;
       }
     }
