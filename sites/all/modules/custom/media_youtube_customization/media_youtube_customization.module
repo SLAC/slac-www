@@ -93,7 +93,7 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
       // Remove new lines from description.
       $video_description = trim(preg_replace('/\s+/', ' ', $video_description));
 
-      $caption = '<p>' . $video_title . '</p><p>' . $video_description . '</p><em>' . l(t('Visit SLAC on YouTube'), 'https://www.youtube.com/slac') . '</em>';
+      $caption = '<p>' . $video_title . '</p><p>' . $video_description . '</p><em>' . l(t('» Visit SLAC on YouTube'), 'https://www.youtube.com/slac') . '</em>';
 
       // Wrap the image in a link to trigger lightbox.
       $render_video = array(
