@@ -665,10 +665,19 @@ span.ext {
       a{
         color: #474748;
         font-size: 14px;
+        display: block;
+        background: url('../images/table-double-arrow.png') no-repeat right center;
+        &:hover{
+          border: none;
+        }
         img{
-          float: right;
+          display: none;
         }
       }
+      &.order-desc a{
+        background: url('../images/table-down-arrow.png') no-repeat right center;}
+      &.order-asc a{
+        background: url('../images/table-up-arrow.png') no-repeat right center;}
     }
     tr{
       border:none;
@@ -743,7 +752,6 @@ span.ext {
     clear: both;
   }
 }
-
 
 .item-list .pager{
   margin-top: 20px;
@@ -918,7 +926,7 @@ span.ext {
 /* Short scheduled */
 
 .scheduled-short{
-  p,
+  div p,
   .lectures-text{
     line-height: 20px;
     font-size: 12px;
