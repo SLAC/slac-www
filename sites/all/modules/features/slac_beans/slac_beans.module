@@ -98,9 +98,6 @@ function slac_beans_preprocess_slac_beans_block_with_brochures(&$vars) {
  * Preprocess function for slac_beans_image_text_link.tpl.php template.
  */
 function slac_beans_preprocess_slac_beans_image_text_link(&$vars) {
-
-  dpm($vars);
-
   $item_values = array();
   foreach (element_children($vars['entity']['field_block_itl_content']) as $key) {
     foreach ($vars['entity']['field_block_itl_content'][$key]['entity']['field_collection_item'] as $item) {
@@ -112,10 +109,20 @@ function slac_beans_preprocess_slac_beans_image_text_link(&$vars) {
       if (isset($item['field_block_itl_link']['#items'][0]['url'])) {
         $url = $item['field_block_itl_link']['#items'][0]['url'];
       }
+      $link_url = '';
+      if (isset($item['field_block_itl_link']['#items'][0]['url'])) {
+        $link_url = $item['field_block_itl_link']['#items'][0]['url'];
+      }
+      $link_title = '';
+      if (isset($item['field_block_itl_link']['#items'][0]['title'])) {
+        $link_title = $item['field_block_itl_link']['#items'][0]['title'];
+      }
       $item_values[] = array(
         'title' => $item['field_block_itl_title'][0]['#markup'],
         'text' => $item['field_block_itl_text'][0]['#markup'],
         'image' => drupal_render($item['field_block_itl_image'][0]['file']),
+        'link_url' => $link_url,
+        'link_title' => $link_title,
         'link' => drupal_render($item['field_block_itl_link'][0]),
         'url' => $url,
         'shaded_background' => $shaded_background,
@@ -172,10 +179,19 @@ function slac_beans_preprocess_slac_beans_summary_block(&$vars) {
       if (isset($item['field_block_itl_link']['#items'][0]['url'])) {
         $url = $item['field_block_itl_link']['#items'][0]['url'];
       }
+      $link_url = '';
+      if (isset($item['field_block_itl_link']['#items'][0]['url'])) {
+        $link_url = $item['field_block_itl_link']['#items'][0]['url'];
+      }
+      $link_title = '';
+      if (isset($item['field_block_itl_link']['#items'][0]['title'])) {
+        $link_title = $item['field_block_itl_link']['#items'][0]['title'];
+      }
       $item_values[] = array(
         'title' => $item['field_block_itl_title'][0]['#markup'],
         'text' => $item['field_block_itl_text'][0]['#markup'],
-        'image' => drupal_render($item['field_block_itl_image'][0]['file']),
+        'link_url' => $link_url,
+        'link_title' => $link_title,
         'link' => drupal_render($item['field_block_itl_link'][0]),
         'url' => $url,
         'shaded_background' => $shaded_background,

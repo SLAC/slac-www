@@ -46,9 +46,9 @@
       <p>
           <?php print $block['text']; ?>
       </p>
-      <p>
-        <?php print $block['link']; ?>
-      </p>
+      <?php if($block['link_url'] && $block['link_title']): ?>
+        <p><a href="<?php print $block['link_url']; ?>"><?php print $block['link_title']; ?>  »</a></p>
+      <?php endif; ?>
     </div>
   </div>
 </div>
