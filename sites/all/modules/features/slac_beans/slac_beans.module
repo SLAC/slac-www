@@ -22,6 +22,9 @@ function slac_beans_entity_view_alter(&$build, $type) {
   if ($build['#bundle'] == 'shaded_no_title_block') {
     $build['#theme'] = 'slac_beans_shaded_no_title_block';
   }
+  if ($build['#bundle'] == 'summary_block') {
+    $build['#theme'] = 'slac_beans_summary_block';
+  }
 }
 
 /**
@@ -40,6 +43,10 @@ function slac_beans_theme() {
     'slac_beans_shaded_no_title_block' => array(
       'render element' => 'entity',
       'template' => 'slac_beans_shaded_no_title_block',
+    ),
+    'slac_beans_summary_block' => array(
+      'render element' => 'entity',
+      'template' => 'slac_beans_summary_block',
     ),
   );
 }
@@ -135,6 +142,40 @@ function slac_beans_preprocess_slac_beans_shaded_no_title_block(&$vars) {
       $item_values[] = array(
         'title' => $title,
         'text' => $item['field_block_no_title_body'][0]['#markup'],
+      );
+    }
+  }
+
+  $vars['blocks'] = $item_values;
+
+  static $once;
+  if (!$once) {
+    $once = TRUE;
+  }
+}
+
+/**
+ * Preprocess function for slac_beans_image_text_link.tpl.php template.
+ */
+function slac_beans_preprocess_slac_beans_summary_block(&$vars) {
+  $item_values = array();
+  foreach (element_children($vars['entity']['field_block_itl_content']) as $key) {
+    foreach ($vars['entity']['field_block_itl_content'][$key]['entity']['field_collection_item'] as $item) {
+      $shaded_background = FALSE;
+      if (isset($item['field_block_itl_background']['#items'][0]['value'])) {
+        $shaded_background = $item['field_block_itl_background']['#items'][0]['value'];
+      }
+      $url = '';
+      if (isset($item['field_block_itl_link']['#items'][0]['url'])) {
+        $url = $item['field_block_itl_link']['#items'][0]['url'];
+      }
+      $item_values[] = array(
+        'title' => $item['field_block_itl_title'][0]['#markup'],
+        'text' => $item['field_block_itl_text'][0]['#markup'],
+        'image' => drupal_render($item['field_block_itl_image'][0]['file']),
+        'link' => drupal_render($item['field_block_itl_link'][0]),
+        'url' => $url,
+        'shaded_background' => $shaded_background,
       );
     }
   }

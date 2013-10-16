@@ -1,8 +1,10 @@
 <?php foreach ($blocks as $block) { ?>
-<div class="slac-beans-image-text-link" style="padding-top: 26px;">
+<div class="slac-beans-summary-block" style="padding-top: 26px;">
   <div style="
     border-bottom: 2px solid #881728;
-    padding: 6px 0 2px 7px;
+    clear: both;
+    margin-bottom: 10px;
+    padding: 6px 0 2px 10px;
     text-transform: uppercase;
     letter-spacing: .125em;
     color: #7F6332;">
@@ -20,8 +22,9 @@
       background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ebebeb',GradientType=0 );
     <?php endif; ?>
-      width: 94%;
-      padding: 20px 3%;
+      width: 100%;
+      /*padding: 20px 3%;*/
+      padding: 0;
       font-size: 13px;
       overflow: hidden;
       margin-top: 0;
@@ -29,9 +32,11 @@
     <div style="">
       <?php if(isset($block['image'])): ?>
         <div style="
-        float: right;
-        width: 25%;
-        margin-left: 5%;
+          float: right;
+          margin-left: 2.5%;
+          overflow: hidden;
+          width: 24.5%;
+          max-width: 143px;
          ">
           <a style="
               display: block;
@@ -43,12 +48,14 @@
           </a>
         </div>
       <?php endif; ?>
-      <p>
-          <?php print $block['text']; ?>
-      </p>
-      <p>
-        <?php print $block['link']; ?>
-      </p>
+      <div style="
+        margin: 0 0 0 3%;
+        padding: 8px 0;
+        width: 70%;
+      ">
+      <p><?php print $block['text']; ?></p>
+      <p><?php print $block['link']; ?> </p>
+      </div>
     </div>
   </div>
 </div>

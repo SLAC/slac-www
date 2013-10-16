@@ -46,7 +46,7 @@ function slac_beans_image_default_styles() {
   $styles['block_image_text_link_thumbnail'] = array(
     'name' => 'block_image_text_link_thumbnail',
     'effects' => array(
-      25 => array(
+      27 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -56,8 +56,8 @@ function slac_beans_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 130,
-          'height' => 119,
+          'width' => 135,
+          'height' => 124,
         ),
         'weight' => 1,
       ),

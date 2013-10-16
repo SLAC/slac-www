@@ -121,6 +121,43 @@ function slac_beans_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'bean-summary_block-field_block_itl_content'
+  $field_instances['bean-summary_block-field_block_itl_content'] = array(
+    'bundle' => 'summary_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_block_itl_content',
+    'label' => 'Content',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_block_bb_brochures-field_brochure_download_link'
   $field_instances['field_collection_item-field_block_bb_brochures-field_brochure_download_link'] = array(
     'bundle' => 'field_block_bb_brochures',

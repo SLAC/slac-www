@@ -37,5 +37,14 @@ function slac_beans_bean_admin_ui_types() {
   $bean_type->description = 'This block will have the title in the content.';
   $export['shaded_no_title_block'] = $bean_type;
 
+  $bean_type = new stdClass();
+  $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
+  $bean_type->api_version = 5;
+  $bean_type->name = 'summary_block';
+  $bean_type->label = 'Summary block';
+  $bean_type->options = '';
+  $bean_type->description = 'Block with image aligned to box edge.';
+  $export['summary_block'] = $bean_type;
+
   return $export;
 }
