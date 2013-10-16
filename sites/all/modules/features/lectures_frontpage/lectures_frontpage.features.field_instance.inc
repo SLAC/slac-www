@@ -47,6 +47,7 @@ function lectures_frontpage_field_default_field_instances() {
   // Exported field_instance: 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_date'
   $field_instances['fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_date'] = array(
     'bundle' => 'scheduled_lecture',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -79,7 +80,7 @@ function lectures_frontpage_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_popup',
+      'type' => 'date_select',
       'weight' => -3,
     ),
   );

@@ -28,7 +28,7 @@ function lectures_frontpage_default_page_manager_pages() {
   $handler->api_version = 1;
   $handler->name = 'page_lectures_frontpage_panel_context';
   $handler->task = 'page';
-  $handler->subtask = '_frontpage';
+  $handler->subtask = 'lectures_frontpage';
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
@@ -120,7 +120,7 @@ function lectures_frontpage_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'pane-node-field-image',
+      'css_class' => 'pane-node-field-image scheduled-short',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -146,7 +146,10 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'scheduled-short',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
@@ -174,7 +177,7 @@ function lectures_frontpage_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'scheduled-short pane-next-lecture ',
+      'css_class' => 'scheduled-short pane-next-lecture',
     );
     $pane->extras = array();
     $pane->position = 2;
@@ -185,7 +188,7 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'middle';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:5a59face-51e6-4329-882e-1ad52db25b70';
+    $pane->subtype = 'uuid:2003b75c-10eb-4be9-b3c8-be2f953b1f88';
     $pane->shown = TRUE;
     $pane->access = array(
       'plugins' => array(
@@ -203,7 +206,10 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'scheduled-short',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
