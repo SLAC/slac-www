@@ -965,7 +965,7 @@ div.pane-node-body{
     }
   }
   .pane-node-title{
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     h2{
       line-height: 25px;
       font-size: 1.3em;
@@ -983,7 +983,7 @@ div.pane-node-body{
     color: #666;
   }
   .pane-node-body{
-    margin-top: 30px;
+    margin-top: 24px;
     p{
       line-height: 18px;
     }
@@ -1076,8 +1076,8 @@ div.pane-node-body{
 }
 
 /* Forms. */
-@media (max-width: 800px) {
-  .form-text,
+@media (max-width: 800px) 
+{  .form-text,
   .form-select {
     max-width: 100%;
   }
