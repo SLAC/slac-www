@@ -98,6 +98,9 @@ function slac_beans_preprocess_slac_beans_block_with_brochures(&$vars) {
  * Preprocess function for slac_beans_image_text_link.tpl.php template.
  */
 function slac_beans_preprocess_slac_beans_image_text_link(&$vars) {
+
+  dpm($vars);
+
   $item_values = array();
   foreach (element_children($vars['entity']['field_block_itl_content']) as $key) {
     foreach ($vars['entity']['field_block_itl_content'][$key]['entity']['field_collection_item'] as $item) {
