@@ -5,11 +5,10 @@
  * be used by the system that includes the file.
  */
 $plugin = array(
-  'title' => t('Next public lecture'),
+  'title' => t('Next public lecture is available'),
   'description' => t('return TRUE if exist next public lecture node'),
   'callback' => 'slac_public_lecture_views_compare_ctools_access_check',
   'summary' => 'slac_public_lecture_views_compare_ctools_summary',
-  'required context' => new ctools_context_required(t('Node'), 'node'),
 );
 
 /**
@@ -18,18 +17,13 @@ $plugin = array(
  * Check for access.
  */
 function slac_public_lecture_views_compare_ctools_access_check($conf, $context) {
-  // If for some unknown reason that $context isn't set, we just want to be sure.
-  $view = views_get_view_result('next_lecture', 'block');
-  $result = count($view);
-  if ($result) {
-    return TRUE;
-  }
-  return FALSE;
+  $result = views_get_view_result('next_lecture');
+  return count($result) > 0;
 }
 
 /**
  * Provide a summary description.
  */
 function slac_public_lecture_views_compare_ctools_summary($conf, $context) {
-  return t('Check if exist next public lecture node.');
+  return t('Public lecture node is available.');
 }

@@ -15,7 +15,7 @@ function lectures_frontpage_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Lectures frontpage';
   $page->admin_description = '';
-  $page->path = 'lectures';
+  $page->path = 'community/public-lectures.aspx';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -28,13 +28,13 @@ function lectures_frontpage_default_page_manager_pages() {
   $handler->api_version = 1;
   $handler->name = 'page_lectures_frontpage_panel_context';
   $handler->task = 'page';
-  $handler->subtask = 'lectures_frontpage';
+  $handler->subtask = '_frontpage';
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
     'title' => 'Panel',
     'no_blocks' => 0,
-    'pipeline' => 'standard',
+    'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
     'css_id' => '',
@@ -43,76 +43,74 @@ function lectures_frontpage_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
-  $display->layout_settings = array(
-    'items' => array(
-      'canvas' => array(
-        'type' => 'row',
-        'contains' => 'column',
-        'children' => array(
-          0 => 'main',
-        ),
-        'parent' => NULL,
-      ),
-      'main' => array(
-        'type' => 'column',
-        'width' => 100,
-        'width_type' => '%',
-        'children' => array(
-          0 => 'main-row',
-        ),
-        'parent' => 'canvas',
-      ),
-      'main-row' => array(
-        'type' => 'row',
-        'contains' => 'region',
-        'children' => array(
-          0 => 'left_side',
-          1 => 'center',
-        ),
-        'parent' => 'main',
-      ),
-      'center' => array(
-        'type' => 'region',
-        'title' => 'Center',
-        'width' => '100',
-        'width_type' => '%',
-        'parent' => 'main-row',
-      ),
-      'left_side' => array(
-        'type' => 'region',
-        'title' => 'Left Side',
-        'width' => '196',
-        'width_type' => 'px',
-        'parent' => 'main-row',
-        'class' => '',
-      ),
-    ),
-  );
+  $display->layout = 'three_col';
+  $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'left' => NULL,
+      'mainmiddleright' => NULL,
+      'middle' => NULL,
       'right' => NULL,
-      'center' => NULL,
-      'left_side' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = 'SLAC Public Lecture Series';
+  $display->title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->panel = 'left';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'menu-top-nav-menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'menu_name' => 'menu-top-nav-menu',
+      'parent_mlid' => 'menu-top-nav-menu:0',
+      'title_link' => 1,
       'admin_title' => '',
-      'title' => '<none>',
-      'body' => '<a href="/publicLecturesRSS" class="rss-link">Subscribe via RSS</a>',
+      'level' => '2',
+      'follow' => 0,
+      'depth' => 0,
+      'expanded' => 1,
+      'sort' => 0,
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited left-menu',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['left'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'views_compare',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'admin_title' => 'lectures image',
+      'title' => '',
+      'body' => '<p>[[{"fid":"6665","view_mode":"crop_wysiwyg_original","type":"media","attributes":{"height":178,"width":500,"class":"media-element file-crop-wysiwyg-original"}}]]</p>
+',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -120,23 +118,26 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane-node-field-image',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['middle'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'center';
+    $pane->pid = 'new-3';
+    $pane->panel = 'middle';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'SLAC Public Lecture Series',
-      'body' => '<p>Ever wonder what goes on at the SLAC National Accelerator Laboratory? Here is your chance to find out! Every other month, SLAC opens its doors to the local community for a series of evening lectures highlighting the cutting-edge science underway at the laboratory. <a href="/past-lectures">Past lectures</a> have featured diamonds, dark energy, the making of molecular movies, and the hunt for the Higgs.</p>
+      'admin_title' => 'Lectures intro text',
+      'title' => '',
+      'body' => '<p><span style="color: rgb(71, 71, 72); font-family: Arial, sans-serif; font-size: 12px; line-height: 20px;">Ever wonder what goes on at SLAC National Accelerator Laboratory? The SLAC Public Lecture Series is your chance to find out! Every other month, SLAC opens its doors to the local community for an evening lecture highlighting the cutting-edge science happening at the laboratory. From the nanotechnology of diamonds to the latest Higgs Boson discoveries, SLAC public lectures provide non-scientists with a unique insight into the workings of our universe.</span></p>
 ',
       'format' => 'full_html',
       'substitute' => TRUE,
@@ -149,54 +150,54 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['middle'][1] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'center';
-    $pane->type = 'views';
-    $pane->subtype = 'next_lecture';
+    $pane->pid = 'new-4';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'next_lecture-panel_pane_1';
     $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '1',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block',
-      'override_title' => 0,
-      'override_title_text' => '',
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'views_compare',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
     );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'scheduled-short pane-next-lecture ',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['center'][2] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['middle'][2] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'left_side';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->pid = 'new-5';
+    $pane->panel = 'middle';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:5a59face-51e6-4329-882e-1ad52db25b70';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'views_compare',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '<none>',
-      'body' => '<img src="http://www2.slac.stanford.edu/lectures/images/mic_crowd.jpg" />',
-      'format' => 'full_html',
-      'substitute' => TRUE,
+      'view_mode' => 'full',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -204,18 +205,50 @@ function lectures_frontpage_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['left_side'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['middle'][3] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'left_side';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-slac-public-lecture-series';
+    $pane->pid = 'new-6';
+    $pane->panel = 'right';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'uuid:03a2e4d0-91e9-468e-b19c-311925af2b74';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links links-internal-external-icons',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['right'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'right';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'menu-slac-directorates';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'menu_name' => 'menu-slac-directorates',
+      'parent_mlid' => 'menu-slac-directorates:0',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '1',
+      'follow' => 0,
+      'depth' => 0,
+      'expanded' => 0,
+      'sort' => 0,
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -223,14 +256,17 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'highlited related-links',
+    );
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left_side'][1] = 'new-5';
-  $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-3';
+    $display->content['new-7'] = $pane;
+    $display->panels['right'][1] = 'new-7';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['lectures_frontpage'] = $page;

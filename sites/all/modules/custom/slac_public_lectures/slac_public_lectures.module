@@ -1,5 +1,23 @@
 <?php
 
+/**
+ * Implements hook_entity_info_alter().
+ */
+function slac_public_lectures_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['scheduled_lecture'] = array(
+    'label' => t('Scheduled lecture'),
+    'pane category' => t('SLAC'),
+    'pane top level' => FALSE, // set to true to make this show as a top level icon
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/scheduled-lecture',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
 function slac_public_lectures_preprocess_views_view_table(&$vars) {
   $css_class = '';
   if(isset($_GET['sort'])){
@@ -9,52 +27,6 @@ function slac_public_lectures_preprocess_views_view_table(&$vars) {
     if (strpos($value, 'active')) {
       $vars['header_classes'][$key] = $value . $css_class;
     }
-  }
-}
-
-/**
- * Implements hook_form_alter()
- * @param type $form
- * @param type $form_state
- * @param type $form_id 
- */
-function slac_public_lectures_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'block_admin_configure' && $form['delta']['#value'] == 'scheduled_lecture_block') {
-    $form['settings']['next_lecture_date'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Lecture date'),
-      '#default_value' => variable_get('public_lecture_date', ''),
-      '#description' => t('Input date of the next public lecture(example ' . date('F d, Y') . ').'),
-    );
-    $form['#submit'][] = 'slac_public_lectures_block_submit';
-  }
-}
-
-function slac_public_lectures_block_submit($form, &$form_state) {
-  variable_set('public_lecture_date', $form_state['values']['next_lecture_date']);
-}
-
-/**
- * Implements hook_block_info().
- */
-function slac_public_lectures_block_info() {
-  $blocks['scheduled_lecture_block'] = array(
-    'info' => t('Scheduled Lecture'),
-  );
-
-  return $blocks;
-}
-
-/**
- * Implements hook_block_view().
- */
-function slac_public_lectures_block_view($delta) {
-  switch ($delta) {
-    case 'scheduled_lecture_block':
-      $block['subject'] = '';
-      $block['content'] = slac_public_lectures_next_lecture_message(variable_get('public_lecture_date', ''));
-      return $block;
-      break;
   }
 }
 
@@ -70,21 +42,23 @@ function slac_public_lectures_ctools_plugin_directory($module, $plugin) {
   }
 }
 
-/**
- * next lecture message
- * @param type $date
- * @return type 
- */
-function slac_public_lectures_next_lecture_message($date = '') {
-  $date_message = ($date) ? '<p><strong>' . t('The next is scheduled for @date', array('@date' => $date)) . '</strong></p>' : '';
-  return '
-    <div class="sheduled-lectures-text">Scheduled Lecture</div>
-    <div class="lectures-event">
-      ' . $date_message . '
-      <p>We will post lecture details soon. Please check back to get specific lecture information.</p>
-      <p>To receive email alerts for upcoming public lectures, please join:
-      <p><a class="slac-connection-link" href="/slac-connections">&raquo;SLAC CONNECTIONS</a></p>
-      and you\'ll be kept up to date on all our public lectures activity.</p>
-      <p>Thank you for taking an interest in what we do at SLAC!</p>
-    </div>';
+function slac_public_lectures_entity_view_alter(&$build) {
+  if ($build['#entity_type'] != 'fieldable_panels_pane' || $build['#bundle'] != 'scheduled_lecture') {
+    return;
+  }
+
+  $fpp = $build['#fieldable_panels_pane'];
+
+  $date_timestamp = strtotime($fpp->field_fpp_sched_lect_date[LANGUAGE_NONE][0]['value']);
+
+  if ($date_timestamp > REQUEST_TIME) {
+    $next_lecture_phrase = $fpp->field_fpp_sched_lect_dateav_text[LANGUAGE_NONE][0]['safe_value'];
+    $next_lecture_phrase = str_replace('[lecture-date]', format_date($date_timestamp, 'custom', 'F j, Y'), $next_lecture_phrase);
+  }
+  else {
+    $next_lecture_phrase = $fpp->field_fpp_sched_lect_nodate_text[LANGUAGE_NONE][0]['safe_value'];
+  }
+
+  $markup = &$build['field_fpp_sched_lect_body'][0]['#markup'];
+  $markup = str_replace('[lecture-available-phrase]', $next_lecture_phrase, $markup);
 }
