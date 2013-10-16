@@ -927,6 +927,16 @@ span.ext {
 /* Short scheduled */
 
 .scheduled-short{
+  p span{
+    font-size: 13px;
+  }
+  &.pane-node-field-image p{
+    margin: 0;
+    overflow: hidden;
+    img{
+      float: left;
+    }
+  }
   div p,
   .lectures-text{
     line-height: 20px;
@@ -954,10 +964,15 @@ span.ext {
     background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
     background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
     line-height: normal;
+    p{
+      font-size:  14px;
+      color: #474748;
+    }
+  }
+  .slac-connection-link{
+    padding-left: 12px;
   }
 }
-
-
 
 .node-type-lecture .three-col-middle{
   position: relative;
