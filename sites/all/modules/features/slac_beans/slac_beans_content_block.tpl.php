@@ -36,25 +36,20 @@
 
 
       <?php if ($image): ?>
-        <div style="float: right;
-                          width: 25%;
-                          margin-left: 5%;">
+        <div style="float: right; margin-left: 5%;">
           <?php if ($link): ?>
             <a style="display: block;
-                            padding: 2px;
-                            border: 2px solid #DBDADB;
-                            line-height: 0;
-                            background-color: #fff;"
-                  href="<?php print $link_url; ?>">
-          <?php endif; ?>
-
-            <?php print $image; ?>
-
-          <?php if ($link): ?>
-            </a>
+                      padding: 2px;
+                      border: 2px solid #DBDADB;
+                      line-height: 0;
+                      background-color: #fff;"
+            href="<?php print $link_url; ?>">
+          <?php print $image; ?>
+          </a>
           <?php endif; ?>
         </div>
       <?php endif; // if ($image) ?>
+
       <p>
           <?php print $body; ?>
       </p>
