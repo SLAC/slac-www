@@ -1,0 +1,15 @@
+name = Update published date
+description = Update published date for news-article content type.
+core = 7.x
+package = SLAC
+version = 7.x-1.0
+project = update_publishe_date
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = feeds_tamper
+features[ctools][] = feeds:feeds_importer_default:1
+features[ctools][] = feeds_tamper:feeds_tamper_default:2
+features[features_api][] = api:2
+features[feeds_importer][] = update_published_date_
+features[feeds_tamper][] = update_published_date_-xpathparser_5-math
+features[feeds_tamper][] = update_published_date_-xpathparser_5-strtotime

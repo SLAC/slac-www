@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Update publishe date feature.
+ */
+
+include_once 'update_publishe_date.features.inc';
