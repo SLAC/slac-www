@@ -42,11 +42,11 @@ function slac_beans_image_default_styles() {
     ),
   );
 
-  // Exported image style: block_image_text_link_thumbnail.
-  $styles['block_image_text_link_thumbnail'] = array(
-    'name' => 'block_image_text_link_thumbnail',
+  // Exported image style: block_content_block_thumbnail.
+  $styles['block_content_block_thumbnail'] = array(
+    'name' => 'block_content_block_thumbnail',
     'effects' => array(
-      27 => array(
+      28 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -56,8 +56,8 @@ function slac_beans_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 135,
-          'height' => 124,
+          'width' => 143,
+          'height' => 132,
         ),
         'weight' => 1,
       ),
