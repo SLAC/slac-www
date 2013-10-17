@@ -56,8 +56,9 @@ function slac_beans_preprocess_slac_beans_content_block(&$vars) {
     $vars['title'] = check_plain($entity['#entity']->title);
   }
 
-  if (isset($entity['field_content_block_subtitle']) && !empty($entity['field_content_block_subtitle'])) {
-    $vars['subtitle'] = drupal_render($entity['field_content_block_subtitle']);
+  if (isset($entity['field_content_block_subtitle']['#items'][0]['value'])
+    && !empty($entity['field_content_block_subtitle']['#items'][0]['value'])) {
+    $vars['subtitle'] = $entity['field_content_block_subtitle']['#items'][0]['value'];
   }
 
   if (isset($entity['field_content_block_image']) && !empty($entity['field_content_block_image'])) {
