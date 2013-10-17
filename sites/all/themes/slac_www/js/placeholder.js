@@ -1,52 +1,44 @@
 /**
- * Example: inputPlaceholder( document.getElementById('my_input_element') )
- * @param {Element} input
- * @param {String} [color='#AAA']
- * @return {Element} input
+ * @see http://github.com/NV/placeholder.js
  */
-function inputPlaceholder (input, color) {
+jQuery.fn.textPlaceholder = function () {
 
-	if (!input) return null;
+	return this.each(function(){
 
-	// Do nothing if placeholder supported by the browser (Webkit, Firefox 3.7)
-	if (input.placeholder && 'placeholder' in document.createElement(input.tagName)) return input;
+		var that = this;
 
-	color = color || '#AAA';
-	var default_color = input.style.color;
-	var placeholder = input.getAttribute('placeholder');
+		if (that.placeholder && 'placeholder' in document.createElement(that.tagName)) return;
 
-	if (input.value === '' || input.value == placeholder) {
-		input.value = placeholder;
-		input.style.color = color;
-		input.setAttribute('data-placeholder-visible', 'true');
-	}
+		var placeholder = that.getAttribute('placeholder');
+		var input = jQuery(that);
 
-	var add_event = /*@cc_on'attachEvent'||@*/'addEventListener';
-
-	input[add_event](/*@cc_on'on'+@*/'focus', function(){
-	 input.style.color = default_color;
-	 if (input.getAttribute('data-placeholder-visible')) {
-		 input.setAttribute('data-placeholder-visible', '');
-		 input.value = '';
-	 }
-	}, false);
-
-	input[add_event](/*@cc_on'on'+@*/'blur', function(){
-		if (input.value === '') {
-			input.setAttribute('data-placeholder-visible', 'true');
-			input.value = placeholder;
-			input.style.color = color;
-		} else {
-			input.style.color = default_color;
-			input.setAttribute('data-placeholder-visible', '');
+		if (that.value === '' || that.value == placeholder) {
+			input.addClass('text-placeholder');
+			that.value = placeholder;
 		}
-	}, false);
 
-	input.form && input.form[add_event](/*@cc_on'on'+@*/'submit', function(){
-		if (input.getAttribute('data-placeholder-visible')) {
-			input.value = '';
-		}
-	}, false);
+		input.focus(function(){
+			if (input.hasClass('text-placeholder')) {
+				this.value = '';
+				input.removeClass('text-placeholder')
+			}
+		});
 
-	return input;
-}
+		input.blur(function(){
+			if (this.value === '') {
+				input.addClass('text-placeholder');
+				this.value = placeholder;
+			} else {
+				input.removeClass('text-placeholder');
+			}
+		});
+
+		that.form && jQuery(that.form).submit(function(){
+			if (input.hasClass('text-placeholder')) {
+				that.value = '';
+			}
+		});
+
+	});
+
+};
