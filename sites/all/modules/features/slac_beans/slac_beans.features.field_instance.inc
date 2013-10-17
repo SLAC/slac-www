@@ -97,7 +97,7 @@ function slac_beans_field_default_field_instances() {
     'label' => 'Body',
     'required' => 1,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -232,7 +232,7 @@ function slac_beans_field_default_field_instances() {
     'bundle' => 'content_block',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The Subtitle of the block.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -501,6 +501,7 @@ function slac_beans_field_default_field_instances() {
   t('Image');
   t('Link');
   t('Subtitle');
+  t('The Subtitle of the block.');
 
   return $field_instances;
 }
