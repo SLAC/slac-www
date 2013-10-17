@@ -121,6 +121,6 @@ function slac_beans_preprocess_slac_beans_block_with_brochures(&$vars) {
  * Implements hook_form_FORM_ID_alter().
  */
 function slac_beans_form_bean_form_alter(&$form, &$form_state) {
-  $form['view_mode']['#prefix'] = '<div style="display: none;">';
-  $form['view_mode']['#suffix'] = '</div>';
+//  $form['view_mode']['#prefix'] = '<div style="display: none;">';
+//  $form['view_mode']['#suffix'] = '</div>';
 }
