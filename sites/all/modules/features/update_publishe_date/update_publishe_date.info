@@ -2,6 +2,7 @@ name = Update published date
 description = Update published date for news-article content type.
 core = 7.x
 package = SLAC
+php = 5.2.4
 version = 7.x-1.0
 project = update_publishe_date
 dependencies[] = ctools
