@@ -206,14 +206,14 @@
                 $(this).attr('placeholder',$(this).data('holder'));
             });
 
-            /* ie*/
-            $("[placeholder]").textPlaceholder();
-
 
             var $description = $('.page-community-past-lectures .description').text();
             var $this = $('.page-community-past-lectures .view-filters input.form-text');
             $this.attr("placeholder", $description);
-            $this.textPlaceholder();
+
+            /* ie*/
+            $("[placeholder]").textPlaceholder();
+
         }
     }
 
