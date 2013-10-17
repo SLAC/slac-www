@@ -31,12 +31,20 @@
     <div>
 
       <?php if ($subtitle): ?>
-        <div class="subtitle"><?php print $subtitle; ?></div>
+        <div style="
+          color: #474747;
+          font-size: 12px;
+          font-weight: bold;
+        ">
+          <p>
+            <?php print $subtitle; ?>
+          </p>
+        </div>
       <?php endif; ?>
 
 
       <?php if ($image): ?>
-        <div style="float: right; margin-left: 5%;">
+        <div style="float: right; margin-left: 3%;">
           <?php if ($link): ?>
             <a style="display: block;
                       padding: 2px;
@@ -46,6 +54,14 @@
             href="<?php print $link_url; ?>">
           <?php print $image; ?>
           </a>
+          <?php else: ?>
+            <div style="display: block;
+                        padding: 2px;
+                        border: 2px solid #DBDADB;
+                        line-height: 0;
+                        background-color: #fff;">
+              <?php print $image; ?>
+            </div>
           <?php endif; ?>
         </div>
       <?php endif; // if ($image) ?>
