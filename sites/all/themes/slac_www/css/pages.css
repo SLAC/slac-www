@@ -1040,12 +1040,12 @@ span.ext {
       padding: 0;
       margin: 0;
       border: none;
-      height: 22px; }
-      /* line 726, ../sass/pages.scss */
-      .page-community-past-lectures .view-filters .views-widget input::-webkit-input-placeholder {
+      height: 22px;
+      /*&::-webkit-input-placeholder {
         color: #fff;
         color: transparent;
-        display: none; }
+        display: none;
+      }*/ }
   /* line 733, ../sass/pages.scss */
   .page-community-past-lectures .view-filters .form-submit {
     cursor: pointer; }
