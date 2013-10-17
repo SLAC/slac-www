@@ -1,16 +1,17 @@
-<?php foreach ($blocks as $block) { ?>
 <div class="slac-beans-image-text-link" style="padding-top: 26px;">
+  <?php if ($title): ?>
   <div style="
     border-bottom: 2px solid #881728;
     padding: 6px 0 2px 7px;
     text-transform: uppercase;
     letter-spacing: .125em;
     color: #7F6332;">
-    <?php print $block['title']; ?>
+    <?php print $title; ?>
   </div>
-  <div
-    style="
-    <?php if($block['shaded_background']): ?>
+  <? endif; ?>
+
+  <div style="
+    <?php if ($shaded): ?>
       background: #f6f6f6;
       background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
@@ -26,29 +27,37 @@
       overflow: hidden;
       margin-top: 0;
        ">
-    <div style="">
-      <?php if(isset($block['image'])): ?>
-        <div style="
-        float: right;
-        width: 25%;
-        margin-left: 5%;
-         ">
-          <a style="
-              display: block;
-              padding: 2px;
-              border: 2px solid #DBDADB;
-              background-color: #fff;" href="<?php print $block['url']; ?>">
-            <?php print $block['image']; ?>
-          </a>
-        </div>
+
+    <div>
+
+      <?php if ($subtitle): ?>
+        <div class="subtitle"><?php print $subtitle; ?></div>
       <?php endif; ?>
+
+
+      <?php if ($image): ?>
+        <div style="float: right; margin-left: 5%;">
+          <?php if ($link): ?>
+            <a style="display: block;
+                      padding: 2px;
+                      border: 2px solid #DBDADB;
+                      line-height: 0;
+                      background-color: #fff;"
+            href="<?php print $link_url; ?>">
+          <?php print $image; ?>
+          </a>
+          <?php endif; ?>
+        </div>
+      <?php endif; // if ($image) ?>
+
       <p>
-          <?php print $block['text']; ?>
+          <?php print $body; ?>
       </p>
-      <p>
-        <?php print $block['link']; ?>
-      </p>
+
+      <?php if ($link): ?>
+        <p><?php print $link; ?></p>
+      <?php endif; ?>
+
     </div>
   </div>
 </div>
-<?php } ?>

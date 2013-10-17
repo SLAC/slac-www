@@ -724,9 +724,7 @@ span.ext {
         border: none;
         height: 22px;
         &::-webkit-input-placeholder {
-          color: #fff;
-          color: transparent;
-          display: none;
+          color: #000;
         }
       }
     }
@@ -744,10 +742,7 @@ span.ext {
     overflow: hidden;
   }
   .description{
-    clear: both;
-    font-size: 12px;
-    line-height: normal;
-    height: 15px;
+    display: none;
   }
   .view-content{
     clear: both;
@@ -944,31 +939,36 @@ span.ext {
     color: #474748;
     margin-bottom: 10px;
   }
-  .sheduled-lectures-text{
-    width: 100%;
-    border-bottom: 2px solid #831425;
-    margin: 35px 0 0;
-    color: #7f6332;
-    text-transform: uppercase;
-  }
-  & .lectures-event{
-    width:  90%;
-    margin-top:  -1px;
-    padding: 20px 5% ;
-    margin: auto;
-    background: #f6f6f6;
-    background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
-    background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-    background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-    background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
-    background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
-    line-height: normal;
-    font-size:  14px;
-    color: #474748;
-    p{
+  &.pane-bundle-scheduled-lecture{
+    .pane-title{
+      width: 100%;
+      border-bottom: 2px solid #831425;
+      margin: 35px 0 0;
+      color: #7f6332;
+      text-transform: uppercase;
+    }
+    .sheduled-lectures-text{
+      margin-bottom:  20px;
+    }
+    .field-type-text-long{
+      width:  90%;
+      margin-top:  -1px;
+      padding: 20px 5% ;
+      margin: auto;
+      background: #f6f6f6;
+      background: -moz-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #ebebeb));
+      background: -webkit-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+      background: -o-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+      background: -ms-linear-gradient(top, #f6f6f6 0%, #ebebeb 100%);
+      background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
+      line-height: normal;
       font-size:  14px;
       color: #474748;
+      p{
+        font-size:  14px;
+        color: #474748;
+      }
     }
   }
   .slac-connection-link{

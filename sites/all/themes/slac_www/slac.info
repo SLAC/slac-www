@@ -17,6 +17,8 @@ stylesheets[all][] = css/pages.css
 
 scripts[] = js/script.js
 scripts[] = js/modernizr.js
+scripts[] = js/placeholder.js
+;scripts[] = js/jquery.textPlaceholder.js
 
 plugins[panels][styles] = plugins/styles
 plugins[panels][layouts] = plugins/layouts

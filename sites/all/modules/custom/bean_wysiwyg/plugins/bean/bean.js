@@ -2,7 +2,6 @@
   Drupal.behaviors.bean_wysiwygSettings = {
     attach: function(context, settings) {
       CKEDITOR.config.allowedContent = true;
-      CKEDITOR.config.extraPlugins = 'widget';
     }
   }
 
@@ -10,24 +9,34 @@
     attach: function(context, settings) {
 
       $('iframe').each(function(){
+        // We need to attach behavior twice as when page is loaded we need to react on load() event,
+        // but when the page is loaded (inserting new block) we need not to us load() event.
+        bean_wysiwyg_attach_behavior(this);
+
         $(this).load(function(){
-          $(this).contents().find('.block-insert').each(function() {
-            var block = this;
-
-            $(this).parents('html').once('block-insert').click(function(){
-              $(block).removeClass('block-insert-active');
-              updateBlockInsertButtonState();
-            });
-
-            $(this).once('block-insert').click(function(event){
-              event.stopPropagation();
-
-              $(block).addClass('block-insert-active');
-              updateBlockInsertButtonState();
-            });
-          });
+          bean_wysiwyg_attach_behavior(this);
         });
       });
+
+      /**
+       * Attach click events to iframe and inserted block.
+       */
+      function bean_wysiwyg_attach_behavior(iframe) {
+        $(iframe).contents().find('body').once('block-insert').click(function() {
+            $(this).find('.block-insert-active').removeClass('block-insert-active');
+            updateBlockInsertButtonState();
+          });
+
+        $(iframe).contents().find('.block-insert').each(function() {
+          $(this).once('block-insert').click(function(event){
+            event.stopPropagation();
+
+            $(this).parents('html').find('.block-insert-active').removeClass('block-insert-active');
+            $(this).addClass('block-insert-active');
+            updateBlockInsertButtonState();
+          });
+        });
+      }
 
       $('iframe.cke_wysiwyg_frame').contents().find('html').click(function(){
           $(this).find('.cke_button__bean_wysiwyg').addClass('cke_button_off').removeClass('cke_button_on');

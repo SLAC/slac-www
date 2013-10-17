@@ -496,9 +496,12 @@ $linkcolor: #990000;
   font-style: italic;
   .views-row {
     padding-bottom: 14px;
+    font-size:.9em;
+    line-height:1.2em;
   }
   a {
     font-style: normal;
+    font-size:.9em;
     &:hover{
       border-bottom: 1px dotted #881728;
     }
@@ -542,6 +545,9 @@ $linkcolor: #990000;
 }
 
 div.pane-node-body{
+  iframe{
+    width: 100%;
+  }
   p{
     line-height: 20px;
     font-size: 13px;  
