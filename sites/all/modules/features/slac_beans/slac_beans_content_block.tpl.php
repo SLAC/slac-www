@@ -55,12 +55,13 @@
           <?php print $image; ?>
           </a>
           <?php else: ?>
-            <a style="display: block;
+            <div style="display: block;
                         padding: 2px;
                         border: 2px solid #DBDADB;
                         line-height: 0;
                         background-color: #fff;">
               <?php print $image; ?>
+            </div>
           <?php endif; ?>
         </div>
       <?php endif; // if ($image) ?>
