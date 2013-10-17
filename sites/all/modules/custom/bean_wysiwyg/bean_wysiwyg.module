@@ -178,6 +178,9 @@ function bean_wysiwyg_filter_process($text) {
  */
 function bean_wysiwyg_token_to_markup($match) {
   $bean_bid = substr($match[0], strlen('[block_insert]'), strlen($match[0]) - strlen('[block_insert]') - strlen('[/block_insert]'));
+  if (!is_numeric($bean_bid)) {
+    return;
+  }
   $bean = bean_load($bean_bid);
   $build = bean_view($bean);
   _bean_wysiwyg_strip_contextual_links($build);

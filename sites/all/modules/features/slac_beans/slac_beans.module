@@ -45,7 +45,7 @@ function slac_beans_preprocess_slac_beans_content_block(&$vars) {
   $vars += array(
     'title' => '',
     'subtitle' => '',
-    'body' => drupal_render($entity['field_content_block_body']),
+    'body' => $entity['field_content_block_body'][0]['#markup'],
     'image' => '',
     'link' => '',
     'link_url' => '',
@@ -61,7 +61,7 @@ function slac_beans_preprocess_slac_beans_content_block(&$vars) {
   }
 
   if (isset($entity['field_content_block_image']) && !empty($entity['field_content_block_image'])) {
-    $vars['image'] = drupal_render($entity['field_content_block_image']);
+    $vars['image'] = drupal_render($entity['field_content_block_image'][0]['file']);
   }
 
   if (isset($entity['field_content_block_link']) && !empty($entity['field_content_block_link'])) {
@@ -70,8 +70,11 @@ function slac_beans_preprocess_slac_beans_content_block(&$vars) {
     $vars['link_url'] = $entity['field_content_block_link'][0]['#element']['display_url'];
   }
 
-  if (isset($entity['field_content_block_background']) && !empty($entity['field_content_block_background'])) {
-    $vars['shaded'] = TRUE;
+  if (isset($entity['#entity']->field_content_block_background[LANGUAGE_NONE][0]['value'])) {
+    $value = $entity['#entity']->field_content_block_background[LANGUAGE_NONE][0]['value'];
+    if ($value == 'shaded') {
+      $vars['shaded'] = TRUE;
+    }
   }
 }
 
@@ -111,4 +114,13 @@ function slac_beans_preprocess_slac_beans_block_with_brochures(&$vars) {
   }
 
   $vars['blocks'] = $item_values;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function slac_beans_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'bean_form') {
+    unset($form['view_mode']);
+  }
 }
