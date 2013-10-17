@@ -197,15 +197,15 @@
 
     Drupal.behaviors.placeholderIE = {
         attach: function (context, settings) {
-            var $this = $('#search-box .form-text, .page-community-past-lectures .view-filters input.form-text');
-            $this.data('holder',$this.attr('placeholder'));
-            $this.focusin(function(){
-                $(this).attr('placeholder','');
-            });
-            $this.focusout(function(){
-                $(this).attr('placeholder',$(this).data('holder'));
-            });
-
+            $('#search-box .form-text, .page-community-past-lectures .view-filters input.form-text').each(function(){
+                $this.data('holder',$this.attr('placeholder'));
+                $this.focusin(function(){
+                    $(this).attr('placeholder','');
+                });
+                $this.focusout(function(){
+                    $(this).attr('placeholder',$(this).data('holder'));
+                });
+            })
 
             var $description = $('.page-community-past-lectures .description').text();
             var $this = $('.page-community-past-lectures .view-filters input.form-text');
