@@ -203,22 +203,45 @@
             var $this = $('.page-community-past-lectures .view-filters input.form-text');
             $this.attr("placeholder", $description);
 
-            $('#search-box .form-text, .page-community-past-lectures .view-filters input.form-text').each(function(){
-                $this.data('holder',$this.attr('placeholder'));
-                $this.focusin(function(){
+            $('.form-text').each(function(){
+                $(this).data('holder',$(this).attr('placeholder'));
+                $(this).focusin(function(){
                     $(this).attr('placeholder','');
                 });
-                $this.focusout(function(){
+                $(this).focusout(function(){
                     $(this).attr('placeholder',$(this).data('holder'));
                 });
             })
-
 
             $("[placeholder]").textPlaceholder();
 
         }
     }
 
+
+
+
+
+    // Drupal.behaviors.placeholderIE = {
+    //     attach: function (context, settings) {
+
+    //         $('#search-box .form-text').data('holder',$('#search-box .form-text').attr('placeholder'));
+    //         $('#search-box .form-text').focusin(function(){
+    //             $(this).attr('placeholder','');
+    //         });
+    //         $('#search-box .form-text').focusout(function(){
+    //             $(this).attr('placeholder',$(this).data('holder'));
+    //         });
+
+
+    //         var $description = $('.page-community-past-lectures .description').text();
+    //         var $this = $('.page-community-past-lectures .view-filters input.form-text');
+    //         $this.attr("placeholder", $description);
+
+    //         $("[placeholder]").textPlaceholder();
+
+    //     }
+    // }
 
 
     Drupal.behaviors.columnsChecker = {
