@@ -771,6 +771,9 @@ span.ext {
     color: #474748;
     margin-bottom: 10px;
   }
+  .lectures-text{
+    margin-bottom: 0;
+  }
   .pane-content{
     background: transparent;
     margin: 0 auto;
@@ -919,6 +922,21 @@ span.ext {
   }
 }
 
+.html.node-type-lecture .pane-node-field-location{
+  float: left;
+  clear: both;
+  .field-item{
+    clear: both;
+    display: block;
+    font-size: 16px;
+    color: #881728;
+    font-weight: bold;
+    padding-top: 3px;
+    margin-bottom: 25px;
+  }
+}
+
+
 /* Short scheduled */
 
 .scheduled-short{
@@ -1020,14 +1038,13 @@ span.ext {
       font-weight: bold;
     }
     .view{
-      font-size: 14px; 
+      font-size: 14px;
     }
     .pane-node-field-lecture-date{
       font-size: 16px;
       font-weight: bold;
       margin-top: 10px;
       float: left;
-      padding-bottom: 30px;
     }
     .ical-link{
      margin: 10px 0 0 10px;
@@ -1083,6 +1100,7 @@ span.ext {
       img{
         width:  95%;
         height: auto;
+        float: left;
       }
     }
     .field-name-field-about-the-speaker p{
