@@ -247,3 +247,20 @@ function slac_www_preprocess_pane_header(&$vars) {
   $vars['search_box'] = (isset($search_form) ? drupal_render($search_form) : '');
   $vars['employee_portal_url'] = variable_get('employee_portal_url', '');
 }
+
+/**
+ * This function add more classes for the header of table
+ * 
+ * @param string $vars 
+ */
+function slac_www_preprocess_views_view_table(&$vars) {
+  $css_class = '';
+  if (isset($_GET['sort'])) {
+    $css_class = ' order-' . $_GET['sort'];
+  }
+  foreach ($vars['header_classes'] as $key => $value) {
+    if (strpos($value, 'active')) {
+      $vars['header_classes'][$key] = $value . $css_class;
+    }
+  }
+}

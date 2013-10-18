@@ -17,20 +17,15 @@ function slac_public_lectures_entity_info_alter(&$entity_info) {
     ),
   );
 }
-
 /**
- * This function add more classes for the header of table
- * 
- * @param string $vars 
+ * Implementation hook_views_pre_render
+ * @param type $view 
  */
-function slac_public_lectures_preprocess_views_view_table(&$vars) {
-  $css_class = '';
-  if (isset($_GET['sort'])) {
-    $css_class = ' order-' . $_GET['sort'];
-  }
-  foreach ($vars['header_classes'] as $key => $value) {
-    if (strpos($value, 'active')) {
-      $vars['header_classes'][$key] = $value . $css_class;
+function slac_public_lectures_views_pre_render(&$view) {
+  if ($view->name == 'next_lecture') {
+    $views_result = views_get_view_result('next_lecture', 'panel_pane_1');
+    if (empty($views_result[0]->field_field_about_the_speaker)) {
+      unset($view->field['nothing_2']);
     }
   }
 }

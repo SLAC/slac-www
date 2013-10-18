@@ -224,6 +224,7 @@ function slac_past_lectures_views_default_views() {
   $handler->display->display_options['fields']['field_speaker_name']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['field_speaker_name']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_speaker_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speaker_name']['hide_empty'] = TRUE;
   /* Field: Content: Affiliations */
   $handler->display->display_options['fields']['field_affiliations']['id'] = 'field_affiliations';
   $handler->display->display_options['fields']['field_affiliations']['table'] = 'field_data_field_affiliations';

@@ -134,8 +134,9 @@ function lectures_frontpage_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'field_speaker_name' => 'field_speaker_name',
-    'field_location' => 'field_location',
+    'field_affiliations' => 'field_affiliations',
   );
+  $handler->display->display_options['row_options']['separator'] = ',';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -151,23 +152,15 @@ function lectures_frontpage_views_default_views() {
   $handler->display->display_options['fields']['field_speaker_name']['table'] = 'field_data_field_speaker_name';
   $handler->display->display_options['fields']['field_speaker_name']['field'] = 'field_speaker_name';
   $handler->display->display_options['fields']['field_speaker_name']['label'] = '';
-  $handler->display->display_options['fields']['field_speaker_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_speaker_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speaker_name']['hide_empty'] = TRUE;
   /* Field: Content: Affiliations */
   $handler->display->display_options['fields']['field_affiliations']['id'] = 'field_affiliations';
   $handler->display->display_options['fields']['field_affiliations']['table'] = 'field_data_field_affiliations';
   $handler->display->display_options['fields']['field_affiliations']['field'] = 'field_affiliations';
   $handler->display->display_options['fields']['field_affiliations']['label'] = '';
-  $handler->display->display_options['fields']['field_affiliations']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_affiliations']['element_type'] = 'em';
   $handler->display->display_options['fields']['field_affiliations']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
-  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[field_speaker_name], [field_affiliations]';
-  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   /* Field: Content: Lecture Date */
   $handler->display->display_options['fields']['field_lecture_date']['id'] = 'field_lecture_date';
   $handler->display->display_options['fields']['field_lecture_date']['table'] = 'field_data_field_lecture_date';
