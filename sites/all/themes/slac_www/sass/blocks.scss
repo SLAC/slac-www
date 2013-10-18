@@ -513,6 +513,8 @@ $linkcolor: #990000;
     padding-bottom: 14px;
     font-size:.9em;
     line-height:1.2em;
+    width: 95%;
+    padding-left: 5%;
   }
   a {
     font-style: normal;
@@ -814,7 +816,7 @@ div.pane-node-body{
 
   .views-field-nothing{
     float:left;
-    width: 66%;
+    width: 56%;
   }
 
   .views-field-title a{
@@ -829,8 +831,8 @@ div.pane-node-body{
 
   .views-field-field-image{
     float: right;
-    width: 31%;
-    margin-left: 3%;
+    width: 39%;
+    margin: 0 2% 0 3%;
     img{
       width: 100%;
       height: auto;
@@ -874,12 +876,12 @@ div.pane-node-body{
 
   .views-field-nothing{
     float:left;
-    width: 66%;
+    width: 65%;
   }
 
   .views-field-field-image{
     float: right;
-    width: 31%;
+    width: 32%;
     margin-left: 3%;
     img{
       width: 100%;
