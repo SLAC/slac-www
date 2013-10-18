@@ -228,6 +228,16 @@ $linkcolor: #990000;
   }
 }
 
+.left-menu.hidden-third-level .depth-2{
+  padding: 0;
+  ul{
+    display: none;  
+  }
+  a{    
+  padding: 16px 8px;
+  }
+}
+
 /* */
 
 .frontpage-right-col .highlited .pane-title{
