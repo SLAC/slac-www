@@ -35,7 +35,7 @@ function multimedia_frontpage_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'crop_block_image_text_link_thumbnail' => array(
+      'crop_block_content_block_thumbnail' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

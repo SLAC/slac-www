@@ -118,10 +118,9 @@ function slac_beans_preprocess_slac_beans_block_with_brochures(&$vars) {
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
-function slac_beans_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'bean_form') {
-    unset($form['view_mode']);
-  }
+function slac_beans_form_bean_form_alter(&$form, &$form_state) {
+//  $form['view_mode']['#prefix'] = '<div style="display: none;">';
+//  $form['view_mode']['#suffix'] = '</div>';
 }

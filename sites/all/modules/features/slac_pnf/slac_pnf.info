@@ -1,0 +1,11 @@
+name = SLAC PNF
+description = SLAC Page Not Found - custom "Page not found" page.
+core = 7.x
+package = SLAC
+version = 7.x-1.0
+project = slac_pnf
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_pages][] = page_not_found
