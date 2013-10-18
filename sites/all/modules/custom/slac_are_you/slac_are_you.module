@@ -17,3 +17,45 @@ function slac_are_you_entity_info_alter(&$entity_info) {
     ),
   );
 }
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function slac_are_you_entity_view_alter(&$build, $type) {
+  if ($type != 'fieldable_panels_pane') {
+    return;
+  }
+  if ($build['#bundle'] == 'are_you_block') {
+    $build['#theme'] = 'slac_are_you_block';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function slac_are_you_theme() {
+  return array(
+    'slac_are_you_block' => array(
+      'render element' => 'entity',
+      'template' => 'slac_are_you_block',
+    ),
+  );
+}
+
+/**
+ * Preprocess function for slac_are_you_block.tpl.php template.
+ */
+function slac_are_you_preprocess_slac_are_you_block(&$vars) {
+  $item_values = array();
+
+  if (isset($vars['entity']['field_item_link']['#items'])) {
+    $items = $vars['entity']['field_item_link']['#items'];
+    foreach($items as $item) {
+      $item_values[] = array(
+        'url' => $item['url'],
+        'title' => $item['title'],
+      );
+    }
+  }
+  $vars['are_you_links'] = $item_values;
+}

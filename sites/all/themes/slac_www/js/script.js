@@ -263,12 +263,6 @@
         }
     }
 
-    Drupal.behaviors.areYouBlock = {
-        attach: function (context, settings) {
-            $('.pane-bundle-are-you-block .field-item a').wrapInner('<span></span>');
-        }
-    }
-
     Drupal.behaviors.verticalLine = {
         attach: function (context, settings) {
             $mainHeight = ($('.general-two-col').height())-14;
