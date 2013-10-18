@@ -231,10 +231,13 @@ $linkcolor: #990000;
 .left-menu.hidden-third-level .depth-2{
   padding: 0;
   ul{
-    display: none;  
+    display: none;
   }
-  a{    
+  a{
   padding: 16px 8px;
+  &:hover{
+    background-color: #f5f5f5;
+  }
   }
 }
 
