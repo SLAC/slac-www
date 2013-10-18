@@ -5,3 +5,9 @@
  */
 
 include_once 'slac_pnf.features.inc';
+
+function slac_pnf_ctools_render_alter(&$info, &$page, &$context) {
+  if (isset($context['subtask']['name']) && $context['subtask']['name'] == 'page_not_found') {
+    drupal_add_http_header('Refresh', '15; url=/home/');
+  }
+}
