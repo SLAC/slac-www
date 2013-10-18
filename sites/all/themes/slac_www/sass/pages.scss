@@ -754,6 +754,30 @@ span.ext {
   margin-top: 20px;
 }
 
+/* Page not found */
+
+.page-page-not-found{
+  .pane-title{
+    margin-left: 0;
+    padding:  0;
+    width: 100%;
+    color: #474747;
+  }
+  .pane-page-content{
+    color: #696969;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 1%;
+    ul{
+      margin: 20px 0 20px 40px;
+    }
+    li{
+      list-style-type: disc;
+      list-style-position: outside;
+    }
+  }
+}
+
 /* Lecture page */
 
 .pane-next-lecture{
