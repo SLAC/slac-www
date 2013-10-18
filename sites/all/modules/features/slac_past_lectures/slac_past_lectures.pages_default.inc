@@ -121,6 +121,8 @@ function slac_past_lectures_default_page_manager_handlers() {
       'middle-bottom-left' => NULL,
       'middle-bottom-right' => NULL,
       'middle-top-seccond' => NULL,
+      'middle-center' => NULL,
+      'middle-center-bottom' => NULL,
     ),
   );
   $display->cache = array();
@@ -153,64 +155,6 @@ function slac_past_lectures_default_page_manager_handlers() {
     $display->panels['left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'middle-bottom-left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'entity_field_value:node:lecture:field_about_the_speaker',
-          'settings' => array(
-            'field_about_the_speaker' => array(
-              'und' => array(
-                0 => array(
-                  'value' => '',
-                  'format' => 'full_html',
-                ),
-              ),
-            ),
-            'field_about_the_speaker_value' => array(
-              0 => array(
-                'value' => '',
-                'format' => 'full_html',
-              ),
-            ),
-            'field_about_the_speaker_format' => array(
-              0 => array(
-                'value' => '',
-                'format' => 'full_html',
-              ),
-            ),
-          ),
-          'context' => 'argument_entity_id:node_1',
-          'not' => FALSE,
-        ),
-      ),
-    );
-    $pane->configuration = array(
-      'admin_title' => 'About the speaker label',
-      'title' => '',
-      'body' => '<p>About the Speaker:</p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'about-label',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['middle-bottom-left'][0] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
     $pane->panel = 'middle-bottom-left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_speaker_image';
@@ -275,12 +219,12 @@ function slac_past_lectures_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['middle-bottom-left'][1] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['middle-bottom-left'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-3';
     $pane->panel = 'middle-bottom-left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_speaker_name';
@@ -336,12 +280,12 @@ function slac_past_lectures_default_page_manager_handlers() {
       'css_class' => 'speaker-name',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['middle-bottom-left'][2] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['middle-bottom-left'][1] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4';
     $pane->panel = 'middle-bottom-right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_about_the_speaker';
@@ -396,8 +340,66 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['middle-bottom-right'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'middle-center-bottom';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'entity_field_value:node:lecture:field_about_the_speaker',
+          'settings' => array(
+            'field_about_the_speaker' => array(
+              'und' => array(
+                0 => array(
+                  'value' => '',
+                  'format' => 'full_html',
+                ),
+              ),
+            ),
+            'field_about_the_speaker_value' => array(
+              0 => array(
+                'value' => '',
+                'format' => 'full_html',
+              ),
+            ),
+            'field_about_the_speaker_format' => array(
+              0 => array(
+                'value' => '',
+                'format' => 'full_html',
+              ),
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'admin_title' => 'About the speaker label',
+      'title' => '',
+      'body' => '<p>About the Speaker:</p>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'about-label',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['middle-bottom-right'][0] = 'new-5';
+    $display->panels['middle-center-bottom'][0] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'middle-center-left';
@@ -535,9 +537,9 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'Past lectures text and share icons',
       'title' => '',
-      'body' => '<div class="past-lectures-text">Scheduled lecture</div>
-
-<div class="social-icon-block"><a href="http://delicious.com/save" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/delicious.png" title="delicious" /></a> <a href="http://www.slashdot.org/submission" onclick="window.location = \'http://www.slashdot.org/submission?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/slashdot.png" title="slashdot" /></a> <a href="http://www.facebook.com/sharer" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/facebook.png" title="facebook" /></a> <a href="http://www.twitter.com/share" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false"> <img alt="" class="socialiconnews" src="/sites/default/files/twitter.png" title="twitter" /></a> <a href="http://www.digg.com/submit" onclick="window.location = \'http://www.digg.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/digg.png" title="digg" /></a> <a href="http://www.reddit.com/submit" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/reddit.png" title="reddit" /></a></div>
+      'body' => '<div class="past-lectures-text">Sheduled lecture</div>
+<div class="social-icon-block">
+<a href="http://delicious.com/save" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/delicious.png" title="delicious" /></a> <a href="http://www.slashdot.org/submission" onclick="window.location = \'http://www.slashdot.org/submission?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/slashdot.png" title="slashdot" /></a> <a href="http://www.facebook.com/sharer" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/facebook.png" title="facebook" /></a> <a href="http://www.twitter.com/share" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false"> <img alt="" class="socialiconnews" src="/sites/default/files/twitter.png" title="twitter" /></a> <a href="http://www.digg.com/submit" onclick="window.location = \'http://www.digg.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/digg.png" title="digg" /></a> <a href="http://www.reddit.com/submit" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/reddit.png" title="reddit" /></a></div>
 ',
       'format' => 'full_html',
       'substitute' => 1,
@@ -857,6 +859,7 @@ function slac_past_lectures_default_page_manager_handlers() {
       'middle-bottom-left' => NULL,
       'middle-bottom-right' => NULL,
       'middle-top-seccond' => NULL,
+      'middle-center-bottom' => NULL,
     ),
   );
   $display->cache = array();
@@ -889,64 +892,6 @@ function slac_past_lectures_default_page_manager_handlers() {
     $display->panels['left'][0] = 'new-18';
     $pane = new stdClass();
     $pane->pid = 'new-19';
-    $pane->panel = 'middle-bottom-left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'entity_field_value:node:lecture:field_about_the_speaker',
-          'settings' => array(
-            'field_about_the_speaker' => array(
-              'und' => array(
-                0 => array(
-                  'value' => '',
-                  'format' => 'full_html',
-                ),
-              ),
-            ),
-            'field_about_the_speaker_value' => array(
-              0 => array(
-                'value' => '',
-                'format' => 'full_html',
-              ),
-            ),
-            'field_about_the_speaker_format' => array(
-              0 => array(
-                'value' => '',
-                'format' => 'full_html',
-              ),
-            ),
-          ),
-          'context' => 'argument_entity_id:node_1',
-          'not' => FALSE,
-        ),
-      ),
-    );
-    $pane->configuration = array(
-      'admin_title' => 'About the speaker label',
-      'title' => '',
-      'body' => '<p>About the Speaker:</p>
-',
-      'format' => 'full_html',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'about-label',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['middle-bottom-left'][0] = 'new-19';
-    $pane = new stdClass();
-    $pane->pid = 'new-20';
     $pane->panel = 'middle-bottom-left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_speaker_image';
@@ -1011,12 +956,12 @@ function slac_past_lectures_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['middle-bottom-left'][1] = 'new-20';
+    $display->content['new-19'] = $pane;
+    $display->panels['middle-bottom-left'][0] = 'new-19';
     $pane = new stdClass();
-    $pane->pid = 'new-21';
+    $pane->pid = 'new-20';
     $pane->panel = 'middle-bottom-left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_speaker_name';
@@ -1072,12 +1017,12 @@ function slac_past_lectures_default_page_manager_handlers() {
       'css_class' => 'speaker-name',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['middle-bottom-left'][2] = 'new-21';
+    $display->content['new-20'] = $pane;
+    $display->panels['middle-bottom-left'][1] = 'new-20';
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-21';
     $pane->panel = 'middle-bottom-right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_about_the_speaker';
@@ -1132,8 +1077,66 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-21'] = $pane;
+    $display->panels['middle-bottom-right'][0] = 'new-21';
+    $pane = new stdClass();
+    $pane->pid = 'new-22';
+    $pane->panel = 'middle-center-bottom';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'entity_field_value:node:lecture:field_about_the_speaker',
+          'settings' => array(
+            'field_about_the_speaker' => array(
+              'und' => array(
+                0 => array(
+                  'value' => '',
+                  'format' => 'full_html',
+                ),
+              ),
+            ),
+            'field_about_the_speaker_value' => array(
+              0 => array(
+                'value' => '',
+                'format' => 'full_html',
+              ),
+            ),
+            'field_about_the_speaker_format' => array(
+              0 => array(
+                'value' => '',
+                'format' => 'full_html',
+              ),
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'admin_title' => 'About the speaker label',
+      'title' => '',
+      'body' => '<p>About the Speaker:</p>
+',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'about-label',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
     $display->content['new-22'] = $pane;
-    $display->panels['middle-bottom-right'][0] = 'new-22';
+    $display->panels['middle-center-bottom'][0] = 'new-22';
     $pane = new stdClass();
     $pane->pid = 'new-23';
     $pane->panel = 'middle-center-left';

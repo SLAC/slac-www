@@ -41,6 +41,11 @@
             </div>
           </div>
           <div class="panel-panel three-col-middle-bottom">
+            <div class="panel-panel three-col-middle-center-bottom">
+              <?php if ($content['middle-center-bottom']): ?>
+                <div class="inside"><?php print $content['middle-center-bottom']; ?></div>
+              <?php endif ?>
+            </div>
             <div class="panel-panel three-col-middle-bottom-left">
               <?php if ($content['middle-bottom-left']): ?>
                 <div class="inside"><?php print $content['middle-bottom-left']; ?></div>
