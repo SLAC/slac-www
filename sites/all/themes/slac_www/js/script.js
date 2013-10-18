@@ -221,7 +221,7 @@
     Drupal.behaviors.noThirdLevelClass = {
         attach: function (context, settings) {
 
-            if(!$('.active-trail .depth-3').hasClass('active')) { 
+            if(!$('.active-trail .depth-3').hasClass('active') && !$('body').hasClass('page-community-public-lecturesaspx')) { 
               $('.left-menu').addClass('hidden-third-level');
             }
 
