@@ -213,7 +213,8 @@
    * Create a markup from block object.
    */
   function bean_wysiwyg_create_markup(block) {
-    return '<div class="block-insert" data-block_insert="' + block.bid + '" contenteditable="false">' + block.html + '<!-- block-insert --></div>';
+    // Add empty paragraphs so user can click before and after the block.
+    return '<p>&nbsp;</p><div class="block-insert" data-block_insert="' + block.bid + '" contenteditable="false">' + block.html + '<!-- block-insert --></div><p>&nbsp;</p>';
   }
 
 })(jQuery);
