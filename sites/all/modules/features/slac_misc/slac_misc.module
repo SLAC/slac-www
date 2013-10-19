@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Misc feature.
+ */
+
+include_once 'slac_misc.features.inc';
