@@ -8,7 +8,7 @@
     color: #7F6332;">
     <?php print $title; ?>
   </div>
-  <? endif; ?>
+  <?php endif; ?>
 
   <div style="
     <?php if ($shaded): ?>
