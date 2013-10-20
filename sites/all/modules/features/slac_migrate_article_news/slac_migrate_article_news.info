@@ -31,6 +31,7 @@ features[field_instance][] = node-news_article-field_image
 features[field_instance][] = node-news_article-field_news_video
 features[field_instance][] = node-news_article-field_page_author
 features[field_instance][] = node-news_article-field_tags
+features[image][] = news_thumbnail_headlines_center
 features[node][] = news_article
 features[taxonomy][] = article_type
 features[taxonomy][] = news_article_source
