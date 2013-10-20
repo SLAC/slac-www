@@ -38,6 +38,17 @@ function pp_crop_menu() {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter file_entity_edit form.
+ */
+function pp_crop_form_file_entity_edit_alter(&$form, $form_state) {
+  if (isset($form['epsacrop'])) {
+    unset($form['epsacrop']);
+  }
+}
+
+/**
  * Form callback for image croping feature in wysiwyg.
  */
 function pp_crop_wysiwyg_settings_form($form, &$form_state) {
