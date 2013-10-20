@@ -109,7 +109,7 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'lectures image',
       'title' => '',
-      'body' => '<p>[[{"fid":"6665","view_mode":"crop_wysiwyg_original","type":"media","attributes":{"height":178,"width":500,"class":"media-element file-crop-wysiwyg-original"}}]]</p>
+      'body' => '<p>[[{"fid":"6647","view_mode":"crop_wysiwyg_original","type":"media","attributes":{"height":178,"width":500,"class":"media-element file-crop-wysiwyg-original"}}]]</p>
 ',
       'format' => 'full_html',
       'substitute' => TRUE,
@@ -188,17 +188,9 @@ function lectures_frontpage_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'middle';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:2003b75c-10eb-4be9-b3c8-be2f953b1f88';
+    $pane->subtype = 'uuid:041cc863-916e-4ab5-9b84-872621e79261';
     $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'views_compare',
-          'settings' => NULL,
-          'not' => TRUE,
-        ),
-      ),
-    );
+    $pane->access = array();
     $pane->configuration = array(
       'view_mode' => 'full',
     );

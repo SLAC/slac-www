@@ -28,7 +28,7 @@ function multimedia_frontpage_image_default_styles() {
   $styles['frontpage-media'] = array(
     'name' => 'frontpage-media',
     'effects' => array(
-      2 => array(
+      27 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -38,8 +38,8 @@ function multimedia_frontpage_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 128,
-          'height' => 72,
+          'width' => 140,
+          'height' => 79,
         ),
         'weight' => 1,
       ),

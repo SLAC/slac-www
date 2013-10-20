@@ -31,7 +31,7 @@ function lectures_poster_gallery_image_default_styles() {
   $styles['lecture_portrait'] = array(
     'name' => 'lecture_portrait',
     'effects' => array(
-      27 => array(
+      28 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',

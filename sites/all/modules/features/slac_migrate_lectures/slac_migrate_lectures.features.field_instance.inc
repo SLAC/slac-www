@@ -682,7 +682,6 @@ function slac_migrate_lectures_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
-          'vimeo' => 0,
           'youtube' => 0,
         ),
         'allowed_types' => array(
