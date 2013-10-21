@@ -630,7 +630,7 @@ input:focus {
   .main-menu .depth-1.active-trail > a,
   .main-menu .depth-1 > a.active,
   .main-menu .depth-1:hover > a {
-    height: 29px;
+    height: 28px;
     border-bottom: 2px solid #881728; }
   /* line 306, ../sass/pages.scss */
   .main-menu ul li.depth-1:hover, .main-menu ul li.depth-1.active-trail {
