@@ -893,14 +893,18 @@ span.ext {
         }
       }
     }
-    .views-field-field-location{
+    .views-field-field-location a{
       clear: both;
       display: block;
       font-size:  16px;
       color: #881728;
       font-weight: bold;
       padding-top:  3px;
-      margin-bottom: 25px;
+      margin: 0 0 25px 0;
+      line-height: normal;
+      &:hover{
+        border: none;
+      }
     }
     .views-label-body{
       font-size: 14px;
