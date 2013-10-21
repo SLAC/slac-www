@@ -206,6 +206,7 @@ $linkcolor: #990000;
       a{
       line-height: normal;
       padding: 8px 14px;
+      font-size: 12px;
     }
     a:hover,
     &.active a,
@@ -217,7 +218,6 @@ $linkcolor: #990000;
   .depth-2.has-subitems{
     padding-top: 8px;
     > a{
-      font-size: 12px;
       padding-top: 9px;
       padding-bottom: 9px;
       margin-bottom: 0;

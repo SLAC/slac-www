@@ -351,9 +351,9 @@
 /* line 12, ../sass/blocks.scss */
 .html .slider {
   margin-bottom: 20px;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
   /* line 17, ../sass/blocks.scss */
   .html .slider .field-slideshow-caption a {
     font-size: 30px;
@@ -524,17 +524,17 @@
   /* line 206, ../sass/blocks.scss */
   .left-menu li.depth-3 a {
     line-height: normal;
-    padding: 8px 14px; }
-  /* line 212, ../sass/blocks.scss */
+    padding: 8px 14px;
+    font-size: 12px; }
+  /* line 213, ../sass/blocks.scss */
   .left-menu li.depth-3 a:hover, .left-menu li.depth-3.active a,
   .left-menu li.depth-3 a.active-trail {
     background: #e7e7e7; }
-/* line 217, ../sass/blocks.scss */
+/* line 218, ../sass/blocks.scss */
 .left-menu .depth-2.has-subitems {
   padding-top: 8px; }
-  /* line 219, ../sass/blocks.scss */
+  /* line 220, ../sass/blocks.scss */
   .left-menu .depth-2.has-subitems > a {
-    font-size: 12px;
     padding-top: 9px;
     padding-bottom: 9px;
     margin-bottom: 0; }
