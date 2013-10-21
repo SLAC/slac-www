@@ -266,8 +266,7 @@
 
   Drupal.behaviors.aboutSpeakerCheck = {
 		attach: function (context, settings) {
-			$('.pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side,
-				.content .three-col-middle-bottom-left').each(function(){
+			$('.pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side, .content .three-col-middle-bottom-left').each(function(){
 				if ($(this).find('img').length == 0) {
 				  $(this).hide();
 				}
@@ -275,17 +274,4 @@
 		}
   }
 
-
-
-
-
-	$('.pane-next-lecture .view-content .views-field-nothing-2 .about-speaker-side, .content .three-col-middle-bottom-left').each(function(){
-		if ($(this).find('img').length == 0) {
-		  $(this).hide();
-		}
-	});
-
 })(jQuery, Drupal, this, this.document);
-
-
-
