@@ -271,6 +271,12 @@ function slac_migrate_lectures_field_default_field_instances() {
           'ecrop_frontpage_carousel' => 0,
           'ecrop_frontpage_headlines' => 0,
           'ecrop_frontpage_headlines_small' => 'ecrop_frontpage_headlines_small',
+          'ecrop_igp' => 0,
+          'ecrop_news-article_content' => 0,
+          'ecrop_news_center' => 0,
+          'lightbox_text_bottom' => 0,
+          'lightbox_text_left_right' => 0,
+          'news_thumbnail_headlines_center' => 0,
         ),
       ),
       'file_directory' => 'lectures_files',
@@ -288,6 +294,7 @@ function slac_migrate_lectures_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
+          'vimeo' => 0,
           'youtube' => 0,
         ),
         'allowed_types' => array(
@@ -297,10 +304,10 @@ function slac_migrate_lectures_field_default_field_instances() {
           'video' => 0,
         ),
         'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
           'media_internet' => 0,
-          'upload' => 0,
+          'upload' => 'upload',
           'youtube' => 0,
         ),
         'progress_indicator' => 'throbber',
@@ -682,6 +689,7 @@ function slac_migrate_lectures_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'public' => 'public',
+          'vimeo' => 0,
           'youtube' => 0,
         ),
         'allowed_types' => array(
