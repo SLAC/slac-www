@@ -1,0 +1,6 @@
+name = SLAC Admin Theme
+description = Admin theme based on seven
+base theme = seven
+core        = 7.x
+
+stylesheets[all][] = css/slac-admin.css
