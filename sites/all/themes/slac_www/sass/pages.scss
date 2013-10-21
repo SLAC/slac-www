@@ -293,18 +293,19 @@ input:focus{
     height: 30px;
     line-height: 30px;
     padding-top: 1px;
-    letter-spacing: 0.12em;
+    letter-spacing: 2px;
+    font-weight: bold;
   }
   .depth-1.active-trail > a,
   .depth-1 > a.active,
   .depth-1:hover > a {
     height: 29px;
-    border-bottom: 2px #881728 solid;
+    border-bottom: 2px solid #881728;
   }
   ul li.depth-1 {
     &:hover, &.active-trail {
       height: 30px;
-      border-bottom: 2px solid #93303f;
+      border-bottom: 2px solid #881728;
     }
   }
   .depth-1:hover > a, .active-trail a {
