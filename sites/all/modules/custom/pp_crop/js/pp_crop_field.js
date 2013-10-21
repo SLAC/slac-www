@@ -1,7 +1,5 @@
 (function ($) {
 
-  Drupal.EPSACrop = Drupal.EPSACrop || {};
-
   Drupal.behaviors.ppCropField = {
     attach: function(context) {
       /**
@@ -59,24 +57,29 @@
     }
   }
 
-  Drupal.EPSACropOld = jQuery.extend(true, {}, Drupal.EPSACrop);
-  Drupal.EPSACrop.dialog = function(type_name, field_name, bundle, delta, img, trueSize) {
-    Drupal.EPSACropOld.dialog(type_name, field_name, bundle, delta, img, trueSize);
+  Drupal.PPCrop = jQuery.extend(true, {}, Drupal.EPSACrop);
+  Drupal.PPCrop.dialog = function(type_name, field_name, bundle, delta, img, trueSize) {
+    Drupal.EPSACrop.dialog(type_name, field_name, bundle, delta, img, trueSize);
     $('#EPSACropDialog').bind('dialogclose', function(){
-//      $(document).ajaxComplete(function() {
-//        document.location.reload();
-//      });
       $('img.pp-crop-thumbnail').each(function(){
         var src = $(this).attr('src');
-        var rand = Math.floor((Math.random()*1000)+1)
-        if (src.indexOf('?')) {
-          src = src + '&';
-        }
-        else {
-          src = src + '?';
-        }
-        src = src + rand + '=' + rand;
-        $(this).attr('src', src);
+        var andMarkPosition = src.indexOf('&');
+        src = src.substr(0, andMarkPosition) + '&version=' + new Date().getTime();
+
+        /**
+         * We making sure that no ajax calls currently in progress because
+         * right before popup is closed we send new crops coordinates to server
+         * and if we do not wait for that call to finish we will get not changed
+         * images instead.
+         */
+        var image = this;
+        var interval = setInterval(function() {
+          if ($.active == 0) {
+            $(image).attr('src', src);
+            clearInterval(interval);
+          }
+        }, 100);
+
       });
     });
   }
