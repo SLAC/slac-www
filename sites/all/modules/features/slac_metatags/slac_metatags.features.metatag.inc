@@ -49,14 +49,8 @@ function slac_metatags_metatag_export_default() {
       'title' => array(
         'value' => '[site:name] - [node:title]',
       ),
-      'page_author' => array(
-        'value' => '[node:field_page_author]',
-      ),
       'description' => array(
         'value' => '[node:summary]',
-      ),
-      'keywords' => array(
-        'value' => '[node:field-tags] [node:field_page_keywords]',
       ),
     ),
   );
