@@ -55,16 +55,6 @@ function slac_metatags_metatag_export_default() {
     ),
   );
 
-  // Exported Metatag config instance: node:blog.
-  $config['node:blog'] = array(
-    'instance' => 'node:blog',
-    'config' => array(
-      'keywords' => array(
-        'value' => '[node:field_blog_tags]',
-      ),
-    ),
-  );
-
   // Exported Metatag config instance: node:news_article.
   $config['node:news_article'] = array(
     'instance' => 'node:news_article',

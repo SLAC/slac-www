@@ -9,7 +9,6 @@ features[features_api][] = api:2
 features[metatag][] = global
 features[metatag][] = global:frontpage
 features[metatag][] = node
-features[metatag][] = node:blog
 features[metatag][] = node:news_article
 features[metatag][] = node:page
 features[metatag][] = taxonomy_term
