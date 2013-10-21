@@ -290,8 +290,9 @@ input:focus{
     text-decoration: none;
     padding: 0 13px;
     display: block;
-    height: 31px;
-    line-height: 31px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 1px;
     letter-spacing: 0.12em;
   }
   .depth-1.active-trail > a,
@@ -1426,7 +1427,7 @@ a.imageLessButton {
 #search-box{
   float: right;
   position: relative;
-  margin-top: 20px;
+  margin-top: 11px;
   .form-item{
     margin: 0;
     outline: none;
