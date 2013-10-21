@@ -56,7 +56,7 @@ function slac_metatags_metatag_export_default() {
         'value' => '[node:summary]',
       ),
       'keywords' => array(
-        'value' => '[node:field_blog_tags] [node:field-tags] [node:field_page_keywords]',
+        'value' => '[node:field-tags] [node:field_page_keywords]',
       ),
     ),
   );
