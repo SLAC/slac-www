@@ -51,7 +51,7 @@ function slac_fieldset_tagging_widget_content_type_render($subtype, $conf, $pane
       unset($term_objects[$key]);
     }
     $parent_load = taxonomy_get_parents($value->tid);
-    if (count($parent_load) && current($parent_load)->tid == '845') {
+    if (count($parent_load) && current($parent_load)->tid == '846') {
       unset($term_objects[$key]);
     }
   }
