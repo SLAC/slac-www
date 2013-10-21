@@ -290,20 +290,22 @@ input:focus{
     text-decoration: none;
     padding: 0 13px;
     display: block;
-    height: 31px;
-    line-height: 31px;
-    letter-spacing: 0.12em;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 1px;
+    letter-spacing: 2px;
+    font-weight: bold;
   }
   .depth-1.active-trail > a,
   .depth-1 > a.active,
   .depth-1:hover > a {
-    height: 29px;
-    border-bottom: 2px #881728 solid;
+    height: 28px;
+    border-bottom: 2px solid #881728;
   }
   ul li.depth-1 {
     &:hover, &.active-trail {
       height: 30px;
-      border-bottom: 2px solid #93303f;
+      border-bottom: 2px solid #881728;
     }
   }
   .depth-1:hover > a, .active-trail a {
@@ -867,6 +869,9 @@ span.ext {
       font-size: 19px;
       font-weight: bold;
     }
+    .views-field-field-speaker-name span{
+      float: left;
+    }
     .views-field-nothing-1{
       font-size:  14px;
     }
@@ -890,14 +895,18 @@ span.ext {
         }
       }
     }
-    .views-field-field-location{
+    .views-field-field-location a{
       clear: both;
       display: block;
       font-size:  16px;
       color: #881728;
       font-weight: bold;
       padding-top:  3px;
-      margin-bottom: 25px;
+      margin: 0 0 25px 0;
+      line-height: normal;
+      &:hover{
+        border: none;
+      }
     }
     .views-label-body{
       font-size: 14px;
@@ -929,7 +938,6 @@ span.ext {
         margin: 0;
         float: left;
         img{
-          margin-right:  25px;
           float: left;
           }
         }
@@ -1063,10 +1071,13 @@ span.ext {
     .view{
       font-size: 14px;
     }
+    .views-field-field-speaker-name span{
+      float: left;
+    }
     .pane-node-field-lecture-date{
       font-size: 16px;
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 18px;
       float: left;
     }
     .ical-link{
@@ -1110,7 +1121,7 @@ span.ext {
   }
   .field-item{
     line-height: 20px;
-    font-size: 13px;
+    font-size: 16px;
     color: #474748;
     margin-bottom: 10px;
   }
@@ -1136,6 +1147,9 @@ span.ext {
       font-weight: bold;
       margin-bottom: 3px;
       display: block;
+      p{
+        color: #474747;
+      }
     }
     .speaker-name{
       .field-item{
@@ -1414,7 +1428,7 @@ a.imageLessButton {
 #search-box{
   float: right;
   position: relative;
-  margin-top: 20px;
+  margin-top: 11px;
   .form-item{
     margin: 0;
     outline: none;
@@ -1997,6 +2011,9 @@ a.imageLessButton {
     .three-col-middle-center{
       .field-label{
         padding-bottom: 10px;
+        p{
+          color: #474747;
+        }
       }
       .pane-node-field-image{
         padding-top: 0 !important;

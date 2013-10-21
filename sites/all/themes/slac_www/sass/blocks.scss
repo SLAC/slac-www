@@ -840,15 +840,21 @@ div.pane-node-body{
     }
   }
   .views-field-body{
+    /*margin-top: 5px;
     font-size: 12px;
+    line-height: 17px;*/
     margin-top: 5px;
-    line-height: 17px;
+    font-size: 12px;
+    line-height: 23px;
+    color: #474747;
   }
 }
 
 .frontpage-middle-left .views-field-body{
+  color:#474747;
   font-size: 11px;
   margin-top: 5px;
+  line-height: 20px;
 }
 
 .middleleft {
@@ -868,8 +874,10 @@ div.pane-node-body{
   }
 
   .views-field-title a{
-    font-size: 13px;
     margin-bottom: 5px;
+    font-size: 12px;
+    color: #881728;
+    line-height: 21px;
     &:hover{
       border-bottom: 1px dotted #881728;
     }
