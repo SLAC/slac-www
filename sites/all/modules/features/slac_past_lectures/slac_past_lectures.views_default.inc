@@ -243,6 +243,32 @@ function slac_past_lectures_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_category']['name'] = 'Lectures';
   $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: Location */
+  $handler = $view->new_display('panel_pane', 'Location', 'panel_pane_3');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Location */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['label'] = '';
+  $handler->display->display_options['fields']['field_location']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_location']['alter']['path'] = 'visiting-slac/maps-directions-meetingrooms.aspx';
+  $handler->display->display_options['fields']['field_location']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_location']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_category']['name'] = 'Lectures';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['slac_lectures'] = $view;
 
   return $export;
