@@ -80,6 +80,10 @@
  * @ingroup themeable
  */
 ?>
+<?php $link = $node_url; ?>
+<?php if (array_key_exists('field_news_link', $content)): ?>
+  <?php $link = strip_tags(render($content['field_news_link'])); ?>
+<?php endif; ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <?php
@@ -90,7 +94,7 @@
     ?>
     <?php print render($title_prefix); ?>
     <?php if (!$page): ?>
-      <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h4>
+      <h4<?php print $title_attributes; ?>><a href="<?php print $link; ?>"><?php print $title; ?></a></h4>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <?php
