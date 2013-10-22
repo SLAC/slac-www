@@ -56,4 +56,5 @@ function slac_admin_js_alter(&$javascript) {
     // Removes the js that hides the summary field in node add form.
     unset($javascript['modules/field/modules/text/text.js']);
   }
+  drupal_add_js(drupal_get_path('module', 'slac_admin') . '/js/slac_admin_ckeditor.js');
 }
