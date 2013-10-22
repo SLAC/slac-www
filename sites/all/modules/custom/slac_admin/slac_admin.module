@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * Implements hook_contextual_links_view_alter().
+ *
+ * Add "Edit slideshow content" for frontpage slideshow contextual links.
+ */
+function slac_admin_contextual_links_view_alter(&$element, $items) {
+  if (_slac_admin_is_contextual_link_a_view($element, 'slac_in_the_news')) {
+    $element['#links']['edit-content'] = array(
+      'title' => t('Edit listed content'),
+      'href' => 'admin/structure/in_the_news',
+    );
+  }
+}
+
+/**
+ * Helper function for contextual links.
+ */
+function _slac_admin_is_contextual_link_a_view($element, $view_id) {
+  return isset($element['#links']['views-ui-edit']['href']) && $element['#links']['views-ui-edit']['href'] == 'admin/structure/views/view/' . $view_id . '/edit';
+}
+
+/**
+ * Implementation of hook_views_api().
+ */
+function slac_admin_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'slac_admin'),
+  );
+}
+
+/**
+ * Implements hook_field_collection_is_empty_required_element().
+ */
+function slac_admin_field_collection_is_empty_required_element($element) {
+  switch ($element['#type']) {
+    case 'media':
+      return !isset($element['#value']['fid']) || empty($element['#value']['fid']);
+  }
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function slac_admin_js_alter(&$javascript) {
+  if (arg(0) == 'node' && is_numeric(arg(1)) && arg(2) == 'edit') {
+    $node = node_load(arg(1));
+    if ($node->type == 'news_article') {
+      // Removes the js that hides the summary field in node add form.
+      unset($javascript['modules/field/modules/text/text.js']);
+    }
+  }
+  elseif (arg(0) == 'node' && arg(1) == 'add' && arg(2) == 'news-article') {
+    // Removes the js that hides the summary field in node add form.
+    unset($javascript['modules/field/modules/text/text.js']);
+  }
+  drupal_add_js(drupal_get_path('module', 'slac_admin') . '/js/slac_admin_ckeditor.js');
+}
