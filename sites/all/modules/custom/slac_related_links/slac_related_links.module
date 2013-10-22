@@ -30,3 +30,22 @@ function slac_related_links_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 }
+
+
+/**
+ * Implements hook_contextual_links_view_alter().
+ */
+function slac_related_links_contextual_links_view_alter(&$element, $items) {
+  $links = array();
+  if (isset($element['#element']['#entity_type'])
+    && $element['#element']['#entity_type'] == 'fieldable_panels_pane'
+    && $element['#element']['#bundle'] == 'related_links') {
+    $links['edit-regex'] = array(
+      'title' => t('Edit Regex'),
+      'href' => 'admin/config/user-interface/int-ext-links',
+      'query' => drupal_get_destination(),
+    );
+    $links = $links + $element['#links'];
+    $element['#links'] = $links;
+  }
+}
