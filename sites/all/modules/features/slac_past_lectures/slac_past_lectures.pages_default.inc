@@ -1365,26 +1365,19 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-31';
     $pane->panel = 'middle-top-seccond';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_location';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'slac_lectures-panel_pane_3';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'lecture-location',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
@@ -1463,10 +1456,7 @@ function slac_past_lectures_default_page_manager_pages() {
   $page->admin_title = 'Past Lectures';
   $page->admin_description = 'SLAC Past Lectures page.';
   $page->path = 'community/past-lectures';
-  $page->access = array(
-    'type' => 'none',
-    'settings' => NULL,
-  );
+  $page->access = array();
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(

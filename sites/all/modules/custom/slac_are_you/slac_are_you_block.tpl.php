@@ -3,7 +3,7 @@
     <a href="<?php print $are_you_link['url'] ?>">
       <span>
         <?php print $are_you_link['title'] ?>
-      <span>
+      </span>
     </a>
   </div>
 <?php } ?>
