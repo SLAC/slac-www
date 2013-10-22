@@ -1093,6 +1093,25 @@ span.ext {
         background: url("../images/ical.png") no-repeat 0 0;
       }
     }
+    .views-field-field-location{
+      overflow: hidden;
+      float: left;
+      clear: both;
+      a{
+        clear: both;
+        display: block;
+        font-size:  16px;
+        color: #881728;
+        font-weight: bold;
+        padding-top:  3px;
+        margin: 0 0 25px 0;
+        line-height: normal;
+        &:hover{
+          border: none;
+        }
+      }
+    }
+
     .pane-node-field-video{
       clear:both;
       width: 100%;
@@ -1123,7 +1142,6 @@ span.ext {
     line-height: 20px;
     font-size: 16px;
     color: #474748;
-    margin-bottom: 10px;
   }
   .three-col-middle-bottom{
     .pane-node-field-speaker-image{
