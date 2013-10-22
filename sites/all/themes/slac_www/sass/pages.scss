@@ -964,14 +964,15 @@ span.ext {
       }
     }
   }
-  .three-col-middle .social-icon-block{
+}
+.page-community-public-lecturesaspx
+  .social-icon-block{
     float: right;
-    a{
-      margin-left: 10px;
-    }
+  }
+  .social-icon-block a{
+    margin-left: 10px;
   }
 }
-
 .html.node-type-lecture .pane-node-field-location{
   float: left;
   clear: both;
