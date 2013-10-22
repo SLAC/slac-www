@@ -7,6 +7,10 @@
  * @param type $form_id
  */
 function slac_forms_alter_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id = 'page_node_form' && isset($form['field_related_links'])) {
+    $form['field_related_links']['#suffix'] = '<div class="new-rl-block"><span>'
+      . l('Create new Related links block', 'admin/structure/fieldable-panels-panes/manage/related-links/add') . '</span></div>';
+  }
 
   if (strpos($form_id, 'webform_client_form') !== FALSE) {
     if (isset($form['#node']->field_form_page) && !empty($form['#node']->field_form_page) && $form['#node']->field_form_page[LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
