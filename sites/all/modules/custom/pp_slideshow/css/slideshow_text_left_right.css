@@ -12,7 +12,6 @@
     color: #fff;
     padding: 20px 4.5%;
     line-height: 23px;
-    /*width: 26%;*/
     width: 29%;
     height: 100%;
     letter-spacing: .03em;
@@ -32,7 +31,6 @@
 
 .field-name-field-slideshow-txtlr-slide .field-slideshow-image-caption {
     float: left;
-    /*width: 65%;*/
     width: 62%;
     height: 100%;
     overflow: hidden;

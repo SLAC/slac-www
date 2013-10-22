@@ -312,8 +312,6 @@ input:focus{
     color: #881728;
   }
 
-
-
   .depth-2 {
     width: 92%;
     margin: 0;
@@ -879,6 +877,7 @@ span.ext {
       font-size:  16px;
       font-weight:  bold;
       margin-top:  18px;
+      float: left;
     }
     .views-field-nothing{
       float: left;
@@ -1081,7 +1080,7 @@ span.ext {
       float: left;
     }
     .ical-link{
-     margin: 10px 0 0 10px;
+     margin: 20px 0 0 10px;
      float: left;
       a{
         line-height: 20px;
