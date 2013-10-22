@@ -482,7 +482,7 @@ $linkcolor: #990000;
   div{
     overflow:hidden;
   }
-  .contextual-links-processed{overflow: visible;}  
+  .contextual-links-processed{overflow: visible;}
   a{
     clear:both;
     line-height: 18px;
@@ -491,7 +491,6 @@ $linkcolor: #990000;
       padding-bottom: 0;
     }
   }
-    
   .external,
   .internal{
     padding-right: 13px;
@@ -512,7 +511,7 @@ $linkcolor: #990000;
   font-style: italic;
   .views-row {
     padding-bottom: 14px;
-    font-size:.9em;
+    font-size: 12px;
     line-height:1.2em;
     width: 95%;
     padding-left: 5%;
@@ -523,6 +522,11 @@ $linkcolor: #990000;
     &:hover{
       border-bottom: 1px dotted #881728;
     }
+  }
+  &.highlited .pane-title{
+    font-size: 12px;
+    line-height: 20px;
+    color: #881728;
   }
 }
 
