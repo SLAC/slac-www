@@ -901,11 +901,12 @@ span.ext {
       font-size:  16px;
       color: #881728;
       font-weight: bold;
-      padding-top:  3px;
+      padding: 3px 0 1px;
       margin: 0 0 25px 0;
       line-height: normal;
+      float: left;
       &:hover{
-        border: none;
+        padding-bottom: 1px;
       }
     }
     .views-label-body{
@@ -917,6 +918,9 @@ span.ext {
     .views-field-field-image{
       float: right;
       margin-left: 25px;
+    }
+    .views-field-body{
+      clear: left;
     }
     .views-field-nothing-2{
       padding-top:  25px;
