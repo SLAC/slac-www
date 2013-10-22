@@ -17,3 +17,16 @@ function slac_related_links_entity_info_alter(&$entity_info) {
     ),
   );
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function slac_related_links_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'fieldable_panels_panes_entity_edit_form'
+    && isset($form['#entity']->bundle)
+    && isset($form['reusable']['admin_title'])) {
+    if ($form['#entity']->bundle == 'related_links') {
+      $form['reusable']['admin_title']['#required'] = TRUE;
+    }
+  }
+}
