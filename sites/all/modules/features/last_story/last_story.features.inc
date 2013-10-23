@@ -53,8 +53,8 @@ function last_story_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 115,
-          'height' => 78,
+          'width' => 112,
+          'height' => 72,
         ),
         'weight' => 1,
       ),

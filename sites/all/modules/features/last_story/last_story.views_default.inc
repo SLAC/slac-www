@@ -78,7 +78,7 @@ function last_story_views_default_views() {
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['value'] = array(
-    845 => '845',
+    847 => '847',
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'tags';
@@ -141,7 +141,7 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'news_thumbnail_headlines_center',
+    'image_style' => 'frontpage-headline',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_image']['group_rows'] = FALSE;
@@ -198,13 +198,13 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_image']['alter']['text'] = '<img src="[field_image]" width=112; height=72 alt="[field_image-alt]" title="[field_image-title]"/>';
+  $handler->display->display_options['fields']['field_image']['alter']['text'] = '<div class="views-field-image"><a href="[path]"><img src="[field_image]" alt="[field_image-alt]" title="[field_image-title]"></a></div>';
   $handler->display->display_options['fields']['field_image']['alter']['path'] = '[path]';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'news_thumbnail_headlines_center',
+    'image_style' => 'frontpage-headline-secondary',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_image']['delta_limit'] = '1';
