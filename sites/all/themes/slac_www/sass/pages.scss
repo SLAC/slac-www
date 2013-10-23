@@ -966,6 +966,7 @@ span.ext {
     }
   }
 }
+
 .page-community-public-lecturesaspx{
   .social-icon-block{
     float: right;
@@ -1627,6 +1628,11 @@ a.imageLessButton {
   }
 }
 
+@media (min-width: 601px) and (max-width: 649px){
+  .pane-next-lecture .view-content .views-field-nothing .ical-link{
+    margin-bottom: 18px;
+  }
+}
 
 @media (min-width: 601px) and (max-width: 649px){
   .video-block .pane-title{
