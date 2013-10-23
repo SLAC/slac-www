@@ -1902,7 +1902,7 @@ a.imageLessButton {
 @media (max-width: 640px) {
   /* line 1632, ../sass/pages.scss */
   .pane-next-lecture .view-content .views-field-nothing .ical-link {
-    margin-bottom: 18px; } }
+    margin: 7px 0 18px; } }
 @media (min-width: 601px) and (max-width: 649px) {
   /* line 1638, ../sass/pages.scss */
   .video-block .pane-title {
