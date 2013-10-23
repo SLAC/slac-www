@@ -41,7 +41,7 @@ function slac_related_links_contextual_links_view_alter(&$element, $items) {
     && $element['#element']['#entity_type'] == 'fieldable_panels_pane'
     && $element['#element']['#bundle'] == 'related_links') {
     $links['edit-regex'] = array(
-      'title' => t('Edit Regex'),
+      'title' => t('Edit int/ext icons rules'),
       'href' => 'admin/config/user-interface/int-ext-links',
       'query' => drupal_get_destination(),
     );
