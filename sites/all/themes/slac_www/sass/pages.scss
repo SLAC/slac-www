@@ -622,7 +622,7 @@ span.ext {
   }
   .three-col-middle{
     .pane-title{
-      margin-top: -35px;
+      margin-top: -25px;
       margin-bottom: 19px;
       font-size: 1.2em;
       line-height: 1em;
@@ -973,7 +973,14 @@ span.ext {
   .social-icon-block a{
     margin-left: 10px;
   }
+  .scheduled-short div p{
+    margin-bottom: 37px;
+  }
+  .pane-next-lecture .view-content{
+    padding-top: 26px;
+  }
 }
+
 .html.node-type-lecture .pane-node-field-location{
   float: left;
   clear: both;
