@@ -22,9 +22,15 @@
         margin: 0 1% 20px;
         width: 23%; ">
         <div>
-          <a style="border: none;" href="<?php print $brochure['url']; ?>">
-            <?php print $brochure['image']; ?>
-          </a>
+          <?php if ($brochure['url']): ?>
+            <a style="border: none;" href="<?php print $brochure['url']; ?>">
+              <?php print $brochure['image']; ?>
+            </a>
+          <?php else: ?>
+            <div style="border: none;">
+              <?php print $brochure['image']; ?>
+            </div>
+          <?php endif; ?>
         </div>
         <div style="
           color: #333333;
