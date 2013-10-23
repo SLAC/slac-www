@@ -1899,7 +1899,7 @@ a.imageLessButton {
   /* line 1626, ../sass/pages.scss */
   .mobile-search-box {
     display: none !important; } }
-@media (min-width: 601px) and (max-width: 649px) {
+@media (max-width: 640px) {
   /* line 1632, ../sass/pages.scss */
   .pane-next-lecture .view-content .views-field-nothing .ical-link {
     margin-bottom: 18px; } }
