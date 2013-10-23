@@ -462,13 +462,12 @@ $linkcolor: #990000;
   .fieldable-panels-pane .field-item,
   .menu li,
   ul.news-archive-links li{
-    width: 96%;
-    padding: 2px 0 0 4%;
+    width: 92%;
+    padding: 2px 0 0 8%;
     margin: 0;
     line-height: 18px;
       background: url('../images/red-arrow.png') no-repeat 8px 11px;
     a{
-      padding-left: 10px;
       @include links();
       font-size: 11px;
       &:hover{
