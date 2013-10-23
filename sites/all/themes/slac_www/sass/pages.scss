@@ -1628,7 +1628,7 @@ a.imageLessButton {
   }
 }
 
-@media (max-width: 640px){
+@media (min-width: 601px) and (max-width: 649px){
   .pane-next-lecture .view-content .views-field-nothing .ical-link{
     margin-bottom: 18px;
   }
