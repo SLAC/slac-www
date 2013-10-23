@@ -87,23 +87,32 @@ function slac_beans_preprocess_slac_beans_block_with_brochures(&$vars) {
 
   foreach (element_children($vars['entity']['field_block_bb_content']) as $key) {
     foreach ($vars['entity']['field_block_bb_content'][$key]['entity']['field_collection_item'] as $item) {
+      $brochure_items = array();
       foreach (element_children($item['field_block_bb_brochures']) as $bb_key) {
         foreach ($item['field_block_bb_brochures'][$bb_key]['entity']['field_collection_item'] as $bb_item) {
-          $image_alt = '';
-          if (isset($bb_item['field_brochure_image'][0]['#item']['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'])) {
-            $image_alt = $bb_item['field_brochure_image'][0]['#item']['field_file_image_alt_text'][LANGUAGE_NONE][0]['value'];
+          $brochure_title = '';
+          if (isset($bb_item['field_brochure_title'][0]['#markup'])) {
+            $brochure_title = $bb_item['field_brochure_title'][0]['#markup'];
           }
-          $image_title = '';
-          if (isset($bb_item['field_brochure_image'][0]['#item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'])) {
-            $image_title = $bb_item['field_brochure_image'][0]['#item']['field_file_image_title_text'][LANGUAGE_NONE][0]['value'];
+          $download_link = '';
+          if (isset($bb_item['field_brochure_download_link'][0])) {
+            $download_link = $bb_item['field_brochure_download_link'][0];
+          }
+          $url = '';
+          if (isset($bb_item['field_brochure_download_link']['#items'][0]['url'])) {
+            $url = $bb_item['field_brochure_download_link']['#items'][0]['url'];
+          }
+          $url_title = '';
+          if (isset($bb_item['field_brochure_download_link']['#items'][0]['title'])) {
+            $url_title = $bb_item['field_brochure_download_link']['#items'][0]['title'];
+            $url_title = $url_title . ' »';
           }
           $brochure_items[] = array(
             'image' => drupal_render($bb_item['field_brochure_image'][0]),
-            'image_alt' => $image_alt,
-            'image_title' => $image_title,
-            'title' => $bb_item['field_brochure_title'][0]['#markup'],
-            'link' => drupal_render($bb_item['field_brochure_download_link'][0]),
-            'url' => $bb_item['field_brochure_download_link']['#items'][0]['url'],
+            'title' => $brochure_title,
+            'link' => drupal_render($download_link),
+            'url' => $url,
+            'url_title' => $url_title,
           );
         }
       }

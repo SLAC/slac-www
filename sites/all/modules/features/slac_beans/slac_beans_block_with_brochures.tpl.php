@@ -35,7 +35,11 @@
           <?php print $brochure['title']; ?>
         </div>
         <div>
-          <?php print $brochure['link']; ?>
+          <?php if ($brochure['url'] && $brochure['url_title']): ?>
+            <a href="<?php print $brochure['url']; ?>">
+              <?php print $brochure['url_title']; ?>
+            </a>
+          <?php endif; ?>
         </div>
       </div>
     <?php } ?>
