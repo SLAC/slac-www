@@ -1,9 +1,41 @@
 <?php
+DEFINE('NEWS_CT', 'news_article');
+DEFINE('NEWS_LINK_FIELD', 'field_news_link');
+
+/**
+ * Implements hook_init
+ * We are redirecting anything that has the news link values filled out
+ */
+function slac_news_center_init() {
+  $node = menu_get_object();
+  if (empty($node)) {
+    return;  
+  }  
+  // if the news link field is populated, we issue an redirect
+  if ($node->type === NEWS_CT) {
+    if (!property_exists($node, NEWS_LINK_FIELD)) {
+      return;  
+    }
+    if (empty($node->{NEWS_LINK_FIELD})) {
+      return;
+    }
+  }
+  $path = $_GET['q'];
+  $path_components = explode('/', $path);
+  // we don't redirect for path such as node/[nid]/edit
+  if (count($path_components) > 2) {
+    return;  
+  }
+  $url = $node->{NEWS_LINK_FIELD}[LANGUAGE_NONE][0]['url'];
+   drupal_goto($url, array(), 301);
+   drupal_exit();
+}
 
 /**
  * Implements hook_node_view
  */
 function slac_news_center_node_view($node, $view_mode) {
+
   // adding promoted into a rss category
   if ($view_mode === 'rss') {
     if ($node->promote == 1) {
