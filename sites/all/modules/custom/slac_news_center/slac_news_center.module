@@ -26,9 +26,11 @@ function slac_news_center_init() {
   if (count($path_components) > 2) {
     return;  
   }
-  $url = $node->{NEWS_LINK_FIELD}[LANGUAGE_NONE][0]['url'];
-   drupal_goto($url, array(), 301);
-   drupal_exit();
+  if (isset($node->{NEWS_LINK_FIELD}[LANGUAGE_NONE][0]['url'])) {
+    $url = $node->{NEWS_LINK_FIELD}[LANGUAGE_NONE][0]['url'];
+    drupal_goto($url, array(), 301);
+    drupal_exit();
+  }
 }
 
 /**
