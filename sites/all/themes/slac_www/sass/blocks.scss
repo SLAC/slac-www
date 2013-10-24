@@ -266,7 +266,7 @@ $linkcolor: #990000;
     color: #7f6332;
     padding-bottom: 2px;
     margin-bottom: 12px;
-    font-weight: bold;
+    font-weight: normal;
     line-height: normal;
     text-transform: uppercase;
     font-style: normal;
@@ -278,6 +278,10 @@ $linkcolor: #990000;
       color: #7f6332;
       text-decoration: none;
     }
+  }
+  .front & .field-label,
+  .front & .pane-title{
+    font-weight: bold;
   }
   &.news-list .pane-title{
     margin-bottom: 0;
