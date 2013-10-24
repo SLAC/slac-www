@@ -54,6 +54,13 @@
       });
 
       $('.fid').once('ppCropFieldTrigger').trigger('change');
+
+      // Remove "Manage thumbnails" button when "Remove media" button is clicked.
+      $('.media-widget', context).once(function () {
+        $('.remove', this).bind('click', function () {
+          $(this).parent().find('.manage-thumbnails').remove();
+        });
+      });
     }
   }
 
