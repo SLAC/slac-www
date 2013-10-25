@@ -264,3 +264,27 @@ function slac_www_preprocess_views_view_table(&$vars) {
     }
   }
 }
+
+/**
+ * Preprocess function for metatags
+ */
+function slac_www_preprocess_metatag(&$vars) {
+	// we are trying to remove the dashes in front of the keywords meta tags
+	// this is caused by taxonomy that are actually hierachical
+	$element = $vars['element'];
+	if ($element['#name'] == 'keywords' && $element['#tag'] == 'meta') {
+		$value = $element['#value'];
+		if ($value == '') {
+			return;	
+		}
+		$keywords = explode(',', $value);
+		$cleaned_keywords = array();
+		foreach ($keywords as $keyword) {
+				$keyword = ltrim($keyword);
+				$keyword = ltrim($keyword, '\-');
+				$cleaned_keywords[] = $keyword;
+		}
+		$element['#value'] = $cleaned_keywords;
+		$vars['element'] = $element;			
+	}
+}
