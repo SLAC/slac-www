@@ -986,9 +986,6 @@ span.ext {
   .pane-next-lecture .view-content{
     padding-top: 26px;
   }
-  .three-col-right .links-internal-external-icons{
-    margin-bottom:  20px;
-  }
 }
 
 .html.node-type-lecture .pane-node-field-location{
@@ -2015,6 +2012,10 @@ a.imageLessButton {
     clear: both;
     width: 100%;
     margin: 0;
+  }
+
+  .page-community-public-lecturesaspx .three-col-right .links-internal-external-icons{
+    margin-bottom:  20px;
   }
 
   /* Not front menus */
