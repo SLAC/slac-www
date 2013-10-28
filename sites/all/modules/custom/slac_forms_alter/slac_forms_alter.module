@@ -31,6 +31,12 @@ function slac_forms_alter_preprocess_node(&$variables) {
   if (isset($variables['field_form_page']) && !empty($variables['field_form_page']) && $variables['field_form_page'][LANGUAGE_NONE][0]['value'] == 'send_us_your_feedback') {
     $variables['content']['webform']['#form']['submitted']['topic_of_your_feedback___question']['#options'][''] = t('Please make a selection');
   }
+
+  if (isset($variables['content']['webform']['#form']['submitted']['topic_of_your_questions_comments_or_inquiries']['#options'])
+    && isset($variables['content']['webform']['#form']['actions']['submit']['#value'])) {
+    $variables['content']['webform']['#form']['submitted']['topic_of_your_questions_comments_or_inquiries']['#options'][''] = t('Please make a selection');
+    $variables['content']['webform']['#form']['actions']['submit']['#value'] = '» ' . t('send comments or questions');
+  }
 }
 
 /**
