@@ -940,7 +940,7 @@ span.ext {
       .views-label{
         font-size: 14px;
         font-weight: bold;
-        margin-bottom: 3px;
+        margin-bottom: 8px;
         display: block;
       }
       .about-speaker-side{
@@ -973,9 +973,6 @@ span.ext {
   }
   .social-icon-block a{
     margin-left: 10px;
-  }
-  .scheduled-short div p{
-    margin-bottom: 37px;
   }
   .pane-next-lecture .view-content{
     padding-top: 26px;
@@ -1092,8 +1089,9 @@ span.ext {
 
   .three-col-middle-top-seccond{
     overflow: hidden;
+    color: #747474;
     .pane-node-title{
-      font-size: 18px;
+      font-size: 19px;
       font-weight: bold;
     }
     .view{
