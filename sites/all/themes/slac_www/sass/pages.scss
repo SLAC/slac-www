@@ -1333,7 +1333,6 @@ table{
 }
 
 /* feedback page */
-.node-type-webform{
   &.page-node-1976{
     .content{
       .pane-title{
@@ -1353,8 +1352,8 @@ table{
       }
     }
   }
-  .content{
-    form{
+
+  .webform-client-form{
       max-width: 650px;
       padding: 0 30px 30px;
       margin-bottom: 30px;
@@ -1378,11 +1377,26 @@ table{
           background-color: #dfdfdf;
         }
       }
-    }
     .form-item,
     .form-actions{
       margin: 30px 0 0 0;
     }
+  }
+
+.page-general-contactaspx{
+  .pane-title{
+    width: 100%;
+    margin-left:  -15px;
+    margin-bottom:  15px;
+  }
+  .pane-page-content{
+    width:  90%;
+    margin: auto;
+  } 
+  .field-type-text-with-summary{
+    margin-bottom: 20px;
+    font-size: 0.8em;
+    color: #666;
   }
 }
 
