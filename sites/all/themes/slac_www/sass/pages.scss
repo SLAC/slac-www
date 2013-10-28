@@ -835,8 +835,12 @@ span.ext {
       bottom: -7px;
     }
   }
-  .views-field-field-speaker-name{
+  .views-field-field-speaker-name,
+  .views-field-field-affiliations{
     font-size: 14px;
+    em{
+      font-style: normal;
+    }
   }
   .view-content,
   &.next-lecture-display .lectures-event{
