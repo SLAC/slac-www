@@ -292,5 +292,107 @@ other|Other',
   'data' => 'a:1:{s:17:"mimemail_textonly";i:0;}',
   'date' => '2013-10-27 23:45:48 -0700',
 );
+  $nodes[] = array(
+  'uid' => 1,
+  'title' => 'Thank You!',
+  'log' => '',
+  'status' => 1,
+  'comment' => 1,
+  'promote' => 0,
+  'sticky' => 0,
+  'vuuid' => '5689ec0e-1123-4bf7-9884-317025558e27',
+  'type' => 'page',
+  'language' => 'und',
+  'created' => 1382944082,
+  'tnid' => 0,
+  'translate' => 0,
+  'uuid' => 'f105f3b9-4e95-4c17-b7be-d96b9effb54a',
+  'revision_uid' => 1,
+  'body' => array(
+    'und' => array(
+      0 => array(
+        'value' => '<p>Thank you for your comments or questions.</p>
+',
+        'summary' => '',
+        'format' => 'full_html',
+        'safe_value' => '  <p>Thank you for your comments or questions.</p>
+  ',
+        'safe_summary' => '    ',
+      ),
+    ),
+  ),
+  'field_image' => array(),
+  'field_page_keywords' => array(),
+  'field_related_links' => array(
+    'und' => array(
+      0 => array(
+        'target_id' => 74,
+      ),
+    ),
+  ),
+  'metatags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'cid' => 0,
+  'last_comment_name' => NULL,
+  'last_comment_uid' => 1,
+  'comment_count' => 0,
+  'name' => 'admin',
+  'picture' => 0,
+  'data' => 'a:1:{s:17:"mimemail_textonly";i:0;}',
+  'date' => '2013-10-28 00:08:02 -0700',
+);
   return $nodes;
 }
