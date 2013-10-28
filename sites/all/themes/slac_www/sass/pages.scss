@@ -978,7 +978,7 @@ span.ext {
   .social-icon-block{
     float: right;
     position: relative;
-    top: 17px
+    top: 17px;
   }
   .social-icon-block a{
     margin-left: 10px;
@@ -1027,6 +1027,7 @@ span.ext {
   }
   .pane-title {
     margin: 35px 0 0;
+  }
   &.pane-bundle-scheduled-lecture{
     .pane-title{
       width: 100%;
@@ -2380,25 +2381,4 @@ a.imageLessButton {
       width:  100%;
     }
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.scheduled-short .pane-title {
-  width: 100%;
-  border-bottom: 2px solid #831425;
-  margin: 35px 0 0;
-  color: #7f6332;
-  text-transform: uppercase;
-  padding-top: 0;
 }
