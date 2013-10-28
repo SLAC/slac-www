@@ -835,6 +835,9 @@ span.ext {
       bottom: -7px;
     }
   }
+  .views-field-field-speaker-name{
+    font-size: 14px;
+  }
   .view-content,
   &.next-lecture-display .lectures-event{
     width:  90%;
@@ -1089,7 +1092,7 @@ span.ext {
 
   .three-col-middle-top-seccond{
     overflow: hidden;
-    color: #747474;
+    color: #474747;
     .pane-node-title{
       font-size: 19px;
       font-weight: bold;
