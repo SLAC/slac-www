@@ -977,12 +977,17 @@ span.ext {
 .page-community-public-lecturesaspx{
   .social-icon-block{
     float: right;
+    position: relative;
+    top: 17px
   }
   .social-icon-block a{
     margin-left: 10px;
   }
   .pane-next-lecture .view-content{
     padding-top: 26px;
+  }
+  .three-col-right .links-internal-external-icons{
+    margin-bottom:  20px;
   }
 }
 
@@ -1020,11 +1025,12 @@ span.ext {
     color: #474748;
     margin-bottom: 10px;
   }
+  .pane-title {
+    margin: 35px 0 0;
   &.pane-bundle-scheduled-lecture{
     .pane-title{
       width: 100%;
       border-bottom: 2px solid #831425;
-      margin: 35px 0 0;
       color: #7f6332;
       text-transform: uppercase;
     }
@@ -2374,4 +2380,25 @@ a.imageLessButton {
       width:  100%;
     }
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scheduled-short .pane-title {
+  width: 100%;
+  border-bottom: 2px solid #831425;
+  margin: 35px 0 0;
+  color: #7f6332;
+  text-transform: uppercase;
+  padding-top: 0;
 }
