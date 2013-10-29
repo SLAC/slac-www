@@ -2555,62 +2555,66 @@ a.imageLessButton {
   .node-type-lecture .three-col-middle-bottom-right {
     width: 100%;
     float: none;
-    margin: auto; } }
+    margin: auto; }
+
+  /* line 2314, ../sass/pages.scss */
+  .page-community-public-lecturesaspx .social-icon-block {
+    top: 0; } }
 /* attending lecture page */
 @media (max-width: 900px) {
-  /* line 2320, ../sass/pages.scss */
+  /* line 2324, ../sass/pages.scss */
   .page-node-2568.section-community .three-col-middle > div {
     padding-right: 0;
     border-right: none; } }
-/* line 2330, ../sass/pages.scss */
+/* line 2334, ../sass/pages.scss */
 .section-content.page-node-2570 .content .three-col-middle-right {
   width: 100%;
   margin-left: 0; }
-  /* line 2333, ../sass/pages.scss */
+  /* line 2337, ../sass/pages.scss */
   .section-content.page-node-2570 .content .three-col-middle-right .three-col-middle {
     width: 100%;
     margin-right: 0; }
 
 /* Custom pages */
-/* line 2342, ../sass/pages.scss */
+/* line 2346, ../sass/pages.scss */
 .page-node-1242 .pane-page-content > .pane-title {
   margin-bottom: 10px; }
 
-/* line 2346, ../sass/pages.scss */
+/* line 2350, ../sass/pages.scss */
 .page-node-1233 .content-block .content-block-body > h3 {
   display: list-item;
   color: #696969;
   margin-left: 40px;
   margin-bottom: 6px; }
-  /* line 2351, ../sass/pages.scss */
+  /* line 2355, ../sass/pages.scss */
   .page-node-1233 .content-block .content-block-body > h3 + ul {
     margin-left: 25px; }
 
-/* line 2356, ../sass/pages.scss */
+/* line 2360, ../sass/pages.scss */
 .field-name-body .field-item > h5,
 .newsarticlebodyimagetext {
   font-size: 13px;
   color: #474748;
   margin-bottom: 10px; }
 
-/* line 2361, ../sass/pages.scss */
+/* line 2365, ../sass/pages.scss */
 .field-name-body .field-item > h5 {
   font-weight: bold; }
 
-/* line 2364, ../sass/pages.scss */
+/* line 2368, ../sass/pages.scss */
 .newsarticlebodyimagetext {
   margin-top: 10px;
   line-height: 18px; }
 
-/* line 2371, ../sass/pages.scss */
+/* line 2375, ../sass/pages.scss */
 .three-col-middle-right .empty-right {
   display: none; }
-/* line 2375, ../sass/pages.scss */
+/* line 2379, ../sass/pages.scss */
 .three-col-middle-right .with-empty-right {
   width: 90%;
   margin-right: 0; }
 
 @media (max-width: 800px) {
-  /* line 2383, ../sass/pages.scss */
+  /* line 2387, ../sass/pages.scss */
   .three-col-middle-right .with-empty-right {
     width: 100%; } }
