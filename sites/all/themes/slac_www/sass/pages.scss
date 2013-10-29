@@ -1476,12 +1476,16 @@ a.imageLessButton {
 .header-link{
   float: right;
   margin: 20px 28px 0 0;
+  color: #fff;
   a{
     color: #fff;
     font-size: 11px;
     margin-left: 10px;
-    a:hover{
+    &:hover{
       text-decoration:underline;
+    }
+    &:first-child{
+      margin-right: 10px;
     }
   }
   span.ext{
