@@ -49,7 +49,14 @@
     <?php if (!empty($search_box)): ?>
       <div id="search-box"><?php print $search_box; ?></div>
     <?php endif; ?>
-
-      <div class="header-link"><?php print l(t('Employee Portal'), $employee_portal_url, array('external' => TRUE)); ?></div>
+      <div class="header-link">
+        <?php if ($employee_portal_url && $research_resources_url): ?>
+          <?php print $employee_portal_url . ' | ' . $research_resources_url; ?>
+        <?php elseif ($employee_portal_url): ?>
+          <?php print $employee_portal_url; ?>
+        <?php elseif ($research_resources_url): ?>
+          <?php print $research_resources_url; ?>
+        <?php endif; ?>
+      </div>
   </div> <!-- /section -->
 </div> <!-- /header -->
