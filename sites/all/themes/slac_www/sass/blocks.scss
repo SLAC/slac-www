@@ -617,6 +617,15 @@ div.pane-node-body{
   }
 }
 
+.node-type-page .content-block-other{
+  overflow: hidden;
+  ul{
+    padding: 20px 0 0 25px;
+    float: left;
+    min-width: 50%;
+  }
+}
+
 .three-col-middle .field-name-body .field-item > p:first-child,
 .mapclass{
   margin-top: -6px;
