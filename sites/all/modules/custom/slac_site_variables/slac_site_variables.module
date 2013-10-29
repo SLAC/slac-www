@@ -12,13 +12,13 @@ function slac_site_variables_form_alter(&$form, &$form_state, $form_id) {
     $form['site_information']['employee_portal_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Employee Portal url'),
-      '#description' => t('This address is used in the header.'),
+      '#description' => t('This url is used in the header.'),
       '#default_value' => variable_get('employee_portal_url', ''),
     );
     $form['site_information']['research_resources_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Research Resources url'),
-      '#description' => t('This address is used in the header.'),
+      '#description' => t('This url is used in the header.'),
       '#default_value' => variable_get('research_resources_url', ''),
     );
     $form['#submit'][] = 'slac_site_variables_form_submit';
