@@ -5,7 +5,8 @@
     padding: 6px 0 2px 7px;
     text-transform: uppercase;
     letter-spacing: .125em;
-    color: #7F6332;">
+    color: #7F6332;
+    font-size: 13px; ">
     <?php print $title; ?>
   </div>
   <?php endif; ?>
