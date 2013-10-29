@@ -12,8 +12,14 @@ function slac_site_variables_form_alter(&$form, &$form_state, $form_id) {
     $form['site_information']['employee_portal_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Employee Portal url'),
-      '#description' => t('This address is used by link from header.'),
+      '#description' => t('This address is used in the header.'),
       '#default_value' => variable_get('employee_portal_url', ''),
+    );
+    $form['site_information']['research_resources_url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Research Resources url'),
+      '#description' => t('This address is used in the header.'),
+      '#default_value' => variable_get('research_resources_url', ''),
     );
     $form['#submit'][] = 'slac_site_variables_form_submit';
   }
@@ -26,6 +32,7 @@ function slac_site_variables_form_alter(&$form, &$form_state, $form_id) {
  */
 function slac_site_variables_form_submit(&$form, &$form_state) {
   variable_set('employee_portal_url', $form_state['values']['employee_portal_url']);
+  variable_set('research_resources_url', $form_state['values']['research_resources_url']);
 }
 
 /**
@@ -40,22 +47,10 @@ function slac_site_variables_form_system_theme_settings_alter(&$form, &$form_sta
     '#title' => t('Employee Portal url'),
     '#default_value' => theme_get_setting('employee_portal_url'),
   );
+  $form['theme_settings']['research_resources_url'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Employee Portal url'),
+    '#default_value' => theme_get_setting('research_resources_url'),
+  );
 }
 
-/**
- * Implements hook_ctools_plugin_directory().
- */
-function slac_site_variables_ctools_plugin_directory($owner, $plugin) {
-  if ($owner === 'ctools') {
-    return 'plugins/' . $plugin;
-  }
-}
-
-/**
- * Implements hook_ctools_plugin_api().
- */
-function slac_site_variables_ctools_plugin_api($module, $api) {
-  if ($module == 'slac_site_variables') {
-    return array('version' => 1);
-  }
-}

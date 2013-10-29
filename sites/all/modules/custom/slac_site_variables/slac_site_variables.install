@@ -5,6 +5,7 @@
  */
 function slac_site_variables_install() {
   variable_set('employee_portal_url', '');
+  variable_set('research_resources_url', '');
 }
 
 /**
@@ -12,4 +13,5 @@ function slac_site_variables_install() {
  */
 function slac_site_variables_uninstall() {
   variable_del('employee_portal_url');
+  variable_del('research_resources_url');
 }
