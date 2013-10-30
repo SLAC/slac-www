@@ -5,7 +5,7 @@
  */
 function slac_date_ical_entity_view_alter(&$build, $type) {
   if ($type == 'node' && $build['#view_mode'] == 'ical') {
-    $build['body'][0]['#markup'] .= '<p>' . url('node/' . $build['#entity_view_mode']['id'], array('absolute' => TRUE)) . '</p>';
+    $build['body'][0]['#markup'] .= '<p>' . url('community/public-lectures.aspx', array('absolute' => TRUE)) . '</p>';
     $build['field_speaker_name'][0]['#markup'] = '<p>' . $build['field_speaker_name'][0]['#markup'] . '</p>';
   }
 }
