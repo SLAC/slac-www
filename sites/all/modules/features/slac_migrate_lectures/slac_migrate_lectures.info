@@ -58,5 +58,4 @@ features[variable][] = menu_parent_lecture
 features[variable][] = node_options_lecture
 features[variable][] = node_preview_lecture
 features[variable][] = node_submitted_lecture
-features[variable][] = pathauto_node_lecture_pattern
 features_exclude[dependencies][slac_migrate_article_news] = slac_migrate_article_news
