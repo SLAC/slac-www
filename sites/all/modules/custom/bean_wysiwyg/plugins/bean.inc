@@ -25,7 +25,7 @@ function bean_wysiwyg_bean_plugin() {
 }
 
 /**
- * Prepares the page to be able to launch the media browser.
+ * Prepares the page to be able to launch the block insert browser.
  *
  * Defines default variables.
  */

@@ -15,7 +15,6 @@ function bean_wysiwyg_menu() {
     'page arguments' => array(2),
     'access arguments' => array('use block insert'),
     'description' => 'Callback to create or edit a block',
-    'theme callback' => 'media_dialog_get_theme_name',
     'file' => 'bean_wysiwyg.pages.inc',
   );
 
@@ -25,8 +24,16 @@ function bean_wysiwyg_menu() {
     'page callback' => 'bean_wysiwyg_browser',
     'access arguments' => array('use block insert'),
     'type' => MENU_CALLBACK,
-    'theme callback' => 'media_dialog_get_theme_name',
     'file' => 'bean_wysiwyg.pages.inc',
+  );
+
+  $items['admin/config/content/bean-wysiwyg'] = array(
+    'title' => 'Bean wysiwyg',
+    'description' => 'Configure the block types available in the Bean wysiwyg module.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('bean_wysiwyg_settings_form'),
+    'access arguments' => array('administer bean wysiwyg'),
+    'file' => 'bean_wysiwyg.admin.inc',
   );
 
   return $items;
@@ -41,25 +48,11 @@ function bean_wysiwyg_permission() {
       'title' => t('Use blocks insert functionality'),
       'description' => t('Use blocks insert functionality'),
     ),
+    'administer bean wysiwyg' => array(
+      'title' => t('Administer Bean wysiwyg'),
+      'description' => t('Access the configuration of the Bean wysiwyg module.'),
+    ),
   );
-}
-
-/**
- * Implements hook_wysiwyg_editor_settings_alter().
- */
-function bean_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
-  if ($context['profile']->editor != 'ckeditor' ) {
-    return;
-  }
-
-  // Iframe of the bean editing form. We prevernt inserting block withing the wysiwyg in the block form.
-  if (arg(0) == 'bean_wysiwyg') {
-    $settings['extraPlugins'] = trim(str_replace('bean_wysiwyg', '', $settings['extraPlugins']), ',');
-  }
-
-  // Remove "Insert paragraph here" plugin.
-  // @see http://ckeditor.com/forums/CKEditor/How-to-Remove-Insert-Paragraph-Here-Pointer
-  $settings['removePlugins'] = 'magicline';
 }
 
 /**
@@ -211,10 +204,11 @@ function bean_wysiwyg_token_to_markup($match) {
   if (!is_numeric($bean_bid)) {
     return;
   }
-  $bean = bean_load($bean_bid);
-  $build = bean_view($bean);
-  _bean_wysiwyg_strip_contextual_links($build);
-  return drupal_render($build);
+  if ($bean = bean_load($bean_bid)) {
+    $build = bean_view($bean);
+    _bean_wysiwyg_strip_contextual_links($build);
+    return drupal_render($build);
+  }
 }
 
 /**
@@ -257,14 +251,12 @@ function _bean_wysiwyg_generate_tagMap($text) {
     // to $tagmap.  If we return an empty array, we break embeddings of the same
     // media multiple times.
     if (empty($tagmap[$match[0]])) {
-      if ($markup = bean_wysiwyg_token_to_markup($match)) {
-        $markup = '<div class="block-insert" data-block_insert="' . $bid . '" contenteditable="false">' . $markup . '<!-- block-insert --></div>';
-        $tagmap[$match[0]] = $markup;
+      $markup = bean_wysiwyg_token_to_markup($match);
+      if (empty($markup)) {
+        $missing_image_url = file_create_url(drupal_get_path('module', 'media') . '/images/icons/default/image-x-generic.png');
+        $markup = '<img class="block-insert-placeholder" src="' . $missing_image_url . '" width="100px" height="100px"/>';
       }
-      else {
-        $missing = file_create_url(drupal_get_path('module', 'media') . '/images/icons/default/image-x-generic.png');
-        $tagmap[$match[0]] = '<div><img src="' . $missing . '" width="100px" height="100px"/></div>';
-      }
+      $tagmap[$match[0]] = '<div class="block-insert" data-block_insert="' . $bid . '" contenteditable="false">' . $markup . '<!-- block-insert --></div>';
     }
   }
   return $tagmap;
