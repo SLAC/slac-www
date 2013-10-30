@@ -85,11 +85,11 @@ function lectures_poster_gallery_views_default_views() {
   $handler->display->display_options['fields']['lightbox2']['custom_group'] = 'image_field';
   $handler->display->display_options['fields']['lightbox2']['height'] = '700px';
   $handler->display->display_options['fields']['lightbox2']['width'] = '453px';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Lecture Date (field_lecture_date) */
+  $handler->display->display_options['sorts']['field_lecture_date_value']['id'] = 'field_lecture_date_value';
+  $handler->display->display_options['sorts']['field_lecture_date_value']['table'] = 'field_data_field_lecture_date';
+  $handler->display->display_options['sorts']['field_lecture_date_value']['field'] = 'field_lecture_date_value';
+  $handler->display->display_options['sorts']['field_lecture_date_value']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -119,6 +119,34 @@ function lectures_poster_gallery_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '◄';
   $handler->display->display_options['pager']['options']['tags']['next'] = '►';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'lecture' => 'lecture',
+  );
+  /* Filter criterion: Field: Image (field_image:fid) */
+  $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
+  $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['operator'] = 'not empty';
+  /* Filter criterion: Content: Lecture Date (field_lecture_date) */
+  $handler->display->display_options['filters']['field_lecture_date_value']['id'] = 'field_lecture_date_value';
+  $handler->display->display_options['filters']['field_lecture_date_value']['table'] = 'field_data_field_lecture_date';
+  $handler->display->display_options['filters']['field_lecture_date_value']['field'] = 'field_lecture_date_value';
+  $handler->display->display_options['filters']['field_lecture_date_value']['operator'] = '<';
+  $handler->display->display_options['filters']['field_lecture_date_value']['granularity'] = 'second';
+  $handler->display->display_options['filters']['field_lecture_date_value']['default_date'] = 'now';
   $handler->display->display_options['pane_category']['name'] = 'Lectures';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $export['lectures_gallery'] = $view;
