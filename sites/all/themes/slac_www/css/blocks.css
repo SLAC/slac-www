@@ -939,17 +939,17 @@ div.pane-node-body img {
 
 /* line 620, ../sass/blocks.scss */
 .node-type-page .content-block-other {
-  overflow: hidden; }
+  overflow: hidden;
+  /*  .content-block-heading{
+      font-size: 13px;
+      font-weight: bold;
+      color: #474747; 
+    }*/ }
   /* line 622, ../sass/blocks.scss */
   .node-type-page .content-block-other ul {
     padding: 20px 0 0 25px;
     float: left;
     min-width: 50%; }
-  /* line 627, ../sass/blocks.scss */
-  .node-type-page .content-block-other .content-block-heading {
-    font-size: 13px;
-    font-weight: bold;
-    color: #474747; }
 
 /* line 635, ../sass/blocks.scss */
 .three-col-middle .field-name-body .field-item > p:first-child,
