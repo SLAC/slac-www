@@ -2,3 +2,18 @@
   left: 0 !important;
   width: 99% !important;
 }
+
+.page-bean-wysiwyg .media-modal-frame {
+  width: 100% !important;
+  height: 600px !important;
+}
+
+.page-media .ui-dialog {
+  left: 0px !important;
+  width: 99% !important;
+  height: 544px !important;
+}
+
+.page-media .ui-dialog #EPSACropDialog {
+  height: 440px !important;
+}

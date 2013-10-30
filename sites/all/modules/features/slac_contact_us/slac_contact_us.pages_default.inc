@@ -44,7 +44,7 @@ function slac_contact_us_default_page_manager_pages() {
         'identifier' => 'Node',
         'keyword' => 'node',
         'name' => 'entity:node',
-        'entity_id' => '3454',
+        'entity_id' => '3479',
         'id' => 1,
       ),
     ),
@@ -102,7 +102,7 @@ function slac_contact_us_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'right';
     $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:7216fa20-40f8-4a5e-a9d7-90b9e451e945';
+    $pane->subtype = 'uuid:88e87aac-3ed9-4a7a-a537-614690991a41';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

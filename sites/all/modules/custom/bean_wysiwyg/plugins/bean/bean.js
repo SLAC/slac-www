@@ -23,23 +23,28 @@
        */
       function bean_wysiwyg_attach_behavior(iframe) {
         $(iframe).contents().find('body').once('block-insert').click(function() {
-            $(this).find('.block-insert-active').removeClass('block-insert-active');
-            updateBlockInsertButtonState();
-          });
+          $(this).find('.block-insert-active').removeClass('block-insert-active');
+          updateBlockInsertButtonState();
+        });
 
         $(iframe).contents().find('.block-insert').each(function() {
           $(this).once('block-insert').click(function(event){
             event.stopPropagation();
 
-            $(this).parents('html').find('.block-insert-active').removeClass('block-insert-active');
-            $(this).addClass('block-insert-active');
-            updateBlockInsertButtonState();
+            // If block is placeholder do not make it active nor highlight toolbar button.
+            if ($(this).find('img.block-insert-placeholder').length == 0) {
+
+              $(this).parents('html').find('.block-insert-active').removeClass('block-insert-active');
+              $(this).addClass('block-insert-active');
+
+              updateBlockInsertButtonState();
+            }
           });
         });
       }
 
       $('iframe.cke_wysiwyg_frame').contents().find('html').click(function(){
-          $(this).find('.cke_button__bean_wysiwyg').addClass('cke_button_off').removeClass('cke_button_on');
+        $(this).find('.cke_button__bean_wysiwyg').addClass('cke_button_off').removeClass('cke_button_on');
       });
 
     }
@@ -155,18 +160,18 @@
       Drupal.bean_wysiwyg.popups.blockSelectDialog($.proxy(this, 'insert'), settings);
     },
 
-  /**
-   * On selection of a media item, display item's display configuration form.
+    /**
+   * On selection of a block, display block edit form.
    */
-  onSelect: function (bean_bid, settings) {
-    Drupal.bean_wysiwyg.popups.blockUpdateDialog($.proxy(this, 'update'), bean_bid, settings);
-  },
+    onSelect: function (bean_bid, settings) {
+      Drupal.bean_wysiwyg.popups.blockUpdateDialog($.proxy(this, 'update'), bean_bid, settings);
+    },
 
     /**
    * Insert HTML to the WYSIWYG when block has been created. Set the macro.
    */
     insert: function (block) {
-      var markup = bean_wysiwyg_create_markup(block);
+      var markup = '<p>&nbsp;</p>' + bean_wysiwyg_create_markup(block) + '<p>&nbsp;</p>';
       macro = bean_wysiwyg_create_macro(markup);
 
       // Insert placeholder markup into wysiwyg.
@@ -213,8 +218,7 @@
    * Create a markup from block object.
    */
   function bean_wysiwyg_create_markup(block) {
-    // Add empty paragraphs so user can click before and after the block.
-    return '<p>&nbsp;</p><div class="block-insert" data-block_insert="' + block.bid + '" contenteditable="false">' + block.html + '<!-- block-insert --></div><p>&nbsp;</p>';
+    return '<div class="block-insert" data-block_insert="' + block.bid + '" contenteditable="false">' + block.html + '<!-- block-insert --></div>';
   }
 
 })(jQuery);

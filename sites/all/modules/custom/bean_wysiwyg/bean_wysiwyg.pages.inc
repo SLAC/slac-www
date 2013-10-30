@@ -18,8 +18,11 @@ function bean_wysiwyg_browser() {
  */
 function bean_wysiwyg_select_block_type_form($form, &$form_state) {
   $options = array();
+  $enabled_types = variable_get('bean_wysiwyg_types_enabled', array());
   foreach (bean_get_types() as $bean_type) {
-    $options[$bean_type->type] = $bean_type->getLabel();
+    if (isset($enabled_types[$bean_type->type]) && !empty($enabled_types[$bean_type->type])) {
+      $options[$bean_type->type] = $bean_type->getLabel();
+    }
   }
   $form = array();
   $form['block_type'] = array(

@@ -41,8 +41,8 @@ function lectures_poster_gallery_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => 130,
-          'height' => 200,
+          'width' => 136,
+          'height' => 211,
           'upscale' => 0,
         ),
         'weight' => 2,

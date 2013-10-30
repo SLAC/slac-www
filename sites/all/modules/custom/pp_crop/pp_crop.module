@@ -103,7 +103,6 @@ function pp_crop_element_info_alter(&$type) {
   $type['managed_file']['#process'][] = 'pp_crop_element_process';
   if (module_exists('media')) {
     $type['media']['#process'][] = 'pp_crop_element_process';
-    $type['media']['#attached']['js'] = array(drupal_get_path('module', 'pp_crop') . '/js/pp_crop_media.js');
   }
 }
 

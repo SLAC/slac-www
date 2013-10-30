@@ -21,10 +21,10 @@
     params.plugins = options.plugins;
 
     browserSrc += '&' + $.param(params);
-    var mediaIframe = Drupal.bean_wysiwyg.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
-    Drupal.bean_wysiwyg.popups.blockSelectDialog.mediaframe = mediaIframe;
+    var blockInsertIframe = Drupal.bean_wysiwyg.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
+    Drupal.bean_wysiwyg.popups.blockSelectDialog.blockInsertIframe = blockInsertIframe;
     // Attach the onLoad event
-    mediaIframe.bind('load', options, options.widget.onLoad);
+    blockInsertIframe.bind('load', options, options.widget.onLoad);
     /**
      * Setting up the modal dialog
      */
@@ -58,22 +58,21 @@
       $(this).remove();
     };
 
-    Drupal.media.popups.setDialogPadding(mediaIframe.dialog(dialogOptions));
+    Drupal.media.popups.setDialogPadding(blockInsertIframe.dialog(dialogOptions));
     // Remove the title bar.
-    mediaIframe.parents(".ui-dialog").find(".ui-dialog-titlebar").remove();
-    Drupal.media.popups.overlayDisplace(mediaIframe.parents(".ui-dialog"));
+    blockInsertIframe.parents(".ui-dialog").find(".ui-dialog-titlebar").remove();
+    Drupal.media.popups.overlayDisplace(blockInsertIframe.parents(".ui-dialog"));
 
-    return mediaIframe;
+    return blockInsertIframe;
   };
 
   Drupal.bean_wysiwyg.popups.blockSelectDialog.submit  = function () {
-    var buttons = $(parent.window.document.body).find('#blockInsertBrowser').parent('.ui-dialog').find('.ui-dialog-buttonpane button');
+    var buttons = Drupal.bean_wysiwyg.popups.blockSelectDialog.blockInsertIframe.parent('.ui-dialog').find('.ui-dialog-buttonpane button');
     if ($(this).hasClass('fake-cancel')) {
       buttons[1].click();
     } else {
       buttons[0].click();
     }
-    return false;
   }
 
   Drupal.bean_wysiwyg.popups.blockSelectDialog.getDefaults = function () {
@@ -95,7 +94,7 @@
  * Get an iframe to serve as the dialog's contents. Common to both plugins.
  */
 Drupal.bean_wysiwyg.popups.getPopupIframe = function (src, id, options) {
-  var defaults = {width: '800px', scrolling: 'auto'};
+  var defaults = {width: '80%', scrolling: 'auto'};
   var options = $.extend({}, defaults, options);
 
   return $('<iframe class="bean_wysiwyg-modal-frame"/>')
@@ -136,10 +135,10 @@ Drupal.bean_wysiwyg.popups.blockUpdateDialog = function (update, bean_bid, globa
 //    params.plugins = options.plugins;
 //
 //    browserSrc += '&' + $.param(params);
-    var mediaIframe = Drupal.bean_wysiwyg.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
-    Drupal.bean_wysiwyg.popups.blockSelectDialog.mediaframe = mediaIframe;
+    var blockInsertIframe = Drupal.bean_wysiwyg.popups.getPopupIframe(browserSrc, 'blockInsertBrowser');
+    Drupal.bean_wysiwyg.popups.blockSelectDialog.blockInsertIframe = blockInsertIframe;
     // Attach the onLoad event
-    mediaIframe.bind('load', options, options.widget.onLoad);
+    blockInsertIframe.bind('load', options, options.widget.onLoad);
     /**
      * Setting up the modal dialog
      */
@@ -173,12 +172,12 @@ Drupal.bean_wysiwyg.popups.blockUpdateDialog = function (update, bean_bid, globa
       $(this).remove();
     };
 
-    Drupal.media.popups.setDialogPadding(mediaIframe.dialog(dialogOptions));
+    Drupal.media.popups.setDialogPadding(blockInsertIframe.dialog(dialogOptions));
     // Remove the title bar.
-    mediaIframe.parents(".ui-dialog").find(".ui-dialog-titlebar").remove();
-    Drupal.media.popups.overlayDisplace(mediaIframe.parents(".ui-dialog"));
+    blockInsertIframe.parents(".ui-dialog").find(".ui-dialog-titlebar").remove();
+    Drupal.media.popups.overlayDisplace(blockInsertIframe.parents(".ui-dialog"));
 
-    return mediaIframe;
+    return blockInsertIframe;
   };
 
 })(jQuery);
