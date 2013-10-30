@@ -96,6 +96,22 @@ function bean_wysiwyg_library() {
 }
 
 /**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function bean_wysiwyg_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor != 'ckeditor') {
+    return;
+  }
+
+  // Do not display Block Insert plugin inside of its iframe popup.
+  if (arg(0) == 'bean_wysiwyg') {
+    $extra_plugins = explode(',', $settings['extraPlugins']);
+    $extra_plugins = array_filter($extra_plugins, function($value) { return $value != 'bean_wysiwyg'; });
+    $settings['extraPlugins'] = implode(',', $extra_plugins);
+  }
+}
+
+/**
  * Default settings of the javascripts.
  */
 function bean_wysiwyg_browser_js() {
