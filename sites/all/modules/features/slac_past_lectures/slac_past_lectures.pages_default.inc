@@ -49,7 +49,7 @@ function slac_past_lectures_default_page_manager_handlers() {
       ),
       'logic' => 'and',
     ),
-    'panels_menu_active_trail' => 'menu-top-nav-menu:2380',
+    'panels_menu_active_trail' => 'menu-top-nav-menu:369',
   );
   $display = new panels_display();
   $display->layout = 'three_col_lectures';
@@ -538,8 +538,8 @@ function slac_past_lectures_default_page_manager_handlers() {
       'admin_title' => 'Past lectures text and share icons',
       'title' => '',
       'body' => '<div class="past-lectures-text">Sheduled lecture</div>
-<div class="social-icon-block">
-<a href="http://delicious.com/save" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/delicious.png" title="delicious" /></a> <a href="http://www.slashdot.org/submission" onclick="window.location = \'http://www.slashdot.org/submission?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/slashdot.png" title="slashdot" /></a> <a href="http://www.facebook.com/sharer" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/facebook.png" title="facebook" /></a> <a href="http://www.twitter.com/share" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false"> <img alt="" class="socialiconnews" src="/sites/default/files/twitter.png" title="twitter" /></a> <a href="http://www.digg.com/submit" onclick="window.location = \'http://www.digg.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/digg.png" title="digg" /></a> <a href="http://www.reddit.com/submit" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/default/files/reddit.png" title="reddit" /></a></div>
+
+<div class="social-icon-block"><a href="http://delicious.com/save" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/www6-stage.slac.stanford.edu/files/delicious.png" title="delicious" /></a> <a href="http://www.slashdot.org/submission" onclick="window.location = \'http://www.slashdot.org/submission?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/www6-stage.slac.stanford.edu/files/slashdot.png" title="slashdot" /></a> <a href="http://www.facebook.com/sharer" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/www6-stage.slac.stanford.edu/files/facebook.png" title="facebook" /></a> <a href="http://www.twitter.com/share" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false"> <img alt="" class="socialiconnews" src="/sites/www6-stage.slac.stanford.edu/files/twitter.png" title="twitter" /></a> <a href="http://www.digg.com/submit" onclick="window.location = \'http://www.digg.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/www6-stage.slac.stanford.edu/files/digg.png" title="digg" /></a> <a href="http://www.reddit.com/submit" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="/sites/www6-stage.slac.stanford.edu/files/reddit.png" title="reddit" /></a></div>
 ',
       'format' => 'full_html',
       'substitute' => 1,
@@ -665,9 +665,27 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-15';
     $pane->panel = 'middle-top-seccond';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'slac_lectures-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $display->content['new-15'] = $pane;
+    $display->panels['middle-top-seccond'][4] = 'new-15';
+    $pane = new stdClass();
+    $pane->pid = 'new-16';
+    $pane->panel = 'middle-top-seccond';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_location';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
@@ -686,12 +704,12 @@ function slac_past_lectures_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['middle-top-seccond'][4] = 'new-15';
+    $display->content['new-16'] = $pane;
+    $display->panels['middle-top-seccond'][5] = 'new-16';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-17';
     $pane->panel = 'middle-top-seccond';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_video';
@@ -716,12 +734,12 @@ function slac_past_lectures_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['middle-top-seccond'][5] = 'new-16';
+    $display->content['new-17'] = $pane;
+    $display->panels['middle-top-seccond'][6] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-18';
     $pane->panel = 'right';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'uuid:a9d568dd-8c5e-4bbb-b47f-0bc14b94580c';
@@ -741,8 +759,8 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['right'][0] = 'new-17';
+    $display->content['new-18'] = $pane;
+    $display->panels['right'][0] = 'new-18';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -867,7 +885,7 @@ function slac_past_lectures_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-19';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'menu_block-2';
@@ -888,10 +906,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['left'][0] = 'new-18';
+    $display->content['new-19'] = $pane;
+    $display->panels['left'][0] = 'new-19';
     $pane = new stdClass();
-    $pane->pid = 'new-19';
+    $pane->pid = 'new-20';
     $pane->panel = 'middle-bottom-left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_speaker_image';
@@ -958,10 +976,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['middle-bottom-left'][0] = 'new-19';
+    $display->content['new-20'] = $pane;
+    $display->panels['middle-bottom-left'][0] = 'new-20';
     $pane = new stdClass();
-    $pane->pid = 'new-20';
+    $pane->pid = 'new-21';
     $pane->panel = 'middle-bottom-left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_speaker_name';
@@ -1019,10 +1037,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['middle-bottom-left'][1] = 'new-20';
+    $display->content['new-21'] = $pane;
+    $display->panels['middle-bottom-left'][1] = 'new-21';
     $pane = new stdClass();
-    $pane->pid = 'new-21';
+    $pane->pid = 'new-22';
     $pane->panel = 'middle-bottom-right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_about_the_speaker';
@@ -1077,10 +1095,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['middle-bottom-right'][0] = 'new-21';
+    $display->content['new-22'] = $pane;
+    $display->panels['middle-bottom-right'][0] = 'new-22';
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-23';
     $pane->panel = 'middle-center-bottom';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1135,10 +1153,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['middle-center-bottom'][0] = 'new-22';
+    $display->content['new-23'] = $pane;
+    $display->panels['middle-center-bottom'][0] = 'new-23';
     $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-24';
     $pane->panel = 'middle-center-left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_image';
@@ -1169,10 +1187,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['middle-center-left'][0] = 'new-23';
+    $display->content['new-24'] = $pane;
+    $display->panels['middle-center-left'][0] = 'new-24';
     $pane = new stdClass();
-    $pane->pid = 'new-24';
+    $pane->pid = 'new-25';
     $pane->panel = 'middle-center-right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -1197,10 +1215,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-24'] = $pane;
-    $display->panels['middle-center-right'][0] = 'new-24';
+    $display->content['new-25'] = $pane;
+    $display->panels['middle-center-right'][0] = 'new-25';
     $pane = new stdClass();
-    $pane->pid = 'new-25';
+    $pane->pid = 'new-26';
     $pane->panel = 'middle-top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1225,10 +1243,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-25'] = $pane;
-    $display->panels['middle-top'][0] = 'new-25';
+    $display->content['new-26'] = $pane;
+    $display->panels['middle-top'][0] = 'new-26';
     $pane = new stdClass();
-    $pane->pid = 'new-26';
+    $pane->pid = 'new-27';
     $pane->panel = 'middle-top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1252,10 +1270,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-26'] = $pane;
-    $display->panels['middle-top'][1] = 'new-26';
+    $display->content['new-27'] = $pane;
+    $display->panels['middle-top'][1] = 'new-27';
     $pane = new stdClass();
-    $pane->pid = 'new-27';
+    $pane->pid = 'new-28';
     $pane->panel = 'middle-top';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -1282,10 +1300,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-27'] = $pane;
-    $display->panels['middle-top'][2] = 'new-27';
+    $display->content['new-28'] = $pane;
+    $display->panels['middle-top'][2] = 'new-28';
     $pane = new stdClass();
-    $pane->pid = 'new-28';
+    $pane->pid = 'new-29';
     $pane->panel = 'middle-top-seccond';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -1308,10 +1326,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-28'] = $pane;
-    $display->panels['middle-top-seccond'][0] = 'new-28';
+    $display->content['new-29'] = $pane;
+    $display->panels['middle-top-seccond'][0] = 'new-29';
     $pane = new stdClass();
-    $pane->pid = 'new-29';
+    $pane->pid = 'new-30';
     $pane->panel = 'middle-top-seccond';
     $pane->type = 'views_panes';
     $pane->subtype = 'slac_lectures-panel_pane_2';
@@ -1326,10 +1344,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-29'] = $pane;
-    $display->panels['middle-top-seccond'][1] = 'new-29';
+    $display->content['new-30'] = $pane;
+    $display->panels['middle-top-seccond'][1] = 'new-30';
     $pane = new stdClass();
-    $pane->pid = 'new-30';
+    $pane->pid = 'new-31';
     $pane->panel = 'middle-top-seccond';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_lecture_date';
@@ -1360,10 +1378,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-30'] = $pane;
-    $display->panels['middle-top-seccond'][2] = 'new-30';
+    $display->content['new-31'] = $pane;
+    $display->panels['middle-top-seccond'][2] = 'new-31';
     $pane = new stdClass();
-    $pane->pid = 'new-31';
+    $pane->pid = 'new-32';
     $pane->panel = 'middle-top-seccond';
     $pane->type = 'views_panes';
     $pane->subtype = 'slac_lectures-panel_pane_3';
@@ -1381,10 +1399,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-31'] = $pane;
-    $display->panels['middle-top-seccond'][3] = 'new-31';
+    $display->content['new-32'] = $pane;
+    $display->panels['middle-top-seccond'][3] = 'new-32';
     $pane = new stdClass();
-    $pane->pid = 'new-32';
+    $pane->pid = 'new-33';
     $pane->panel = 'middle-top-seccond';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_video';
@@ -1411,10 +1429,10 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-32'] = $pane;
-    $display->panels['middle-top-seccond'][4] = 'new-32';
+    $display->content['new-33'] = $pane;
+    $display->panels['middle-top-seccond'][4] = 'new-33';
     $pane = new stdClass();
-    $pane->pid = 'new-33';
+    $pane->pid = 'new-34';
     $pane->panel = 'right';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'uuid:a9d568dd-8c5e-4bbb-b47f-0bc14b94580c';
@@ -1434,8 +1452,8 @@ function slac_past_lectures_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-33'] = $pane;
-    $display->panels['right'][0] = 'new-33';
+    $display->content['new-34'] = $pane;
+    $display->panels['right'][0] = 'new-34';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
