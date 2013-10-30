@@ -10,7 +10,7 @@ function bean_wysiwyg_bean_plugin() {
   bean_wysiwyg_include_browser_js();
 
   $plugins['bean_wysiwyg'] = array(
-    'title' => t('Block Insert111!'),
+    'title' => t('Block Insert'),
     'icon path' => drupal_get_path('module', 'bean_wysiwyg') . '/plugins/bean/images',
     'icon file' => 'bean_button.png',
     'icon title' => t('Block insert'),
