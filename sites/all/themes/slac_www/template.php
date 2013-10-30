@@ -287,7 +287,7 @@ function slac_www_preprocess_metatag(&$vars) {
 				$keyword = ltrim($keyword, '\-');
 				$cleaned_keywords[] = $keyword;
 		}
-		$element['#value'] = $cleaned_keywords;
+		$element['#value'] = implode(',', $cleaned_keywords);
 		$vars['element'] = $element;			
 	}
 }
