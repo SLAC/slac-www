@@ -21,7 +21,7 @@ function last_story_image_default_styles() {
   $styles['frontpage-headline'] = array(
     'name' => 'frontpage-headline',
     'effects' => array(
-      3 => array(
+      29 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -31,8 +31,8 @@ function last_story_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 224,
-          'height' => 142,
+          'width' => 220,
+          'height' => 139,
         ),
         'weight' => 1,
       ),
