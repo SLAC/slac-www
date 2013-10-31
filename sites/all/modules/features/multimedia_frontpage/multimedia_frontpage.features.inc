@@ -38,8 +38,8 @@ function multimedia_frontpage_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 140,
-          'height' => 79,
+          'width' => 128,
+          'height' => 72,
         ),
         'weight' => 1,
       ),
