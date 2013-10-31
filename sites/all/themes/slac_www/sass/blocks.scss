@@ -818,6 +818,7 @@ div.pane-node-body{
 /* */
 
 .middletop{
+  font-size: 16px;
   .highlited{
     margin-bottom: 17px;
   }
@@ -855,28 +856,24 @@ div.pane-node-body{
     }
   }
   .views-field-body{
-    /*margin-top: 5px;
-    font-size: 12px;
-    line-height: 17px;*/
-    margin-top: 5px;
-    font-size: 12px;
-    line-height: 23px;
-    color: #474747;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+    line-height: 1.438em;
+    color:#474747;
   }
 }
 
 .frontpage-middle-left .views-field-body{
   color:#474747;
-  font-size: 11px;
-  margin-top: 5px;
-  line-height: 20px;
+  font-size: .7em;
+  line-height: 1.250em;
 }
 
 .middleleft {
   .views-row{
     width: 100%;
     border-bottom: 1px solid #bbbdbe;
-    font-size: 11px;
+    font-size: 16px;
     line-height: 15px;
     padding-bottom: 15px;
     margin-bottom: 20px;
