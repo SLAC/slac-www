@@ -20,12 +20,12 @@ function slac_external_email_strongarm() {
         'label' => 'Email main story',
         'custom settings' => 1,
       ),
-      'email_side_news' => array(
-        'label' => 'Email side news',
-        'custom settings' => 1,
-      ),
       'email_top_story' => array(
         'label' => 'Email top story',
+        'custom settings' => 1,
+      ),
+      'email_side_news' => array(
+        'label' => 'Email highlights',
         'custom settings' => 1,
       ),
     ),

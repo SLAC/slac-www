@@ -42,7 +42,7 @@ function slac_in_the_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_in_the_news';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['comment_in_the_news'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -58,6 +58,23 @@ function slac_in_the_news_strongarm() {
   $strongarm->name = 'comment_subject_field_in_the_news';
   $strongarm->value = 1;
   $export['comment_subject_field_in_the_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__in_the_news';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'email_side_news' => array(
+        'custom_settings' => TRUE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__in_the_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -76,7 +76,7 @@ function slac_pnf_default_page_manager_pages() {
 	<li>the site referring you to this address has outdated link information</li>
 </ul>
 
-<p>You can contact the webteam through our <a href="/general/feedback.aspx">Feedback Form</a> or click the &quot;report issue&quot; button below to report this issue.</p>
+<p>You can contact the webteam through our <a href="/general/feedback.aspx">Feedback Form</a>.</p>
 
 <p>You will be redirected to the home page if there is no action taken in 15 seconds.</p>
 ',

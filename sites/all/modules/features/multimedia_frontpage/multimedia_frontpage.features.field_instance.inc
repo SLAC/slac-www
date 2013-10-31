@@ -65,7 +65,25 @@ function multimedia_frontpage_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'crop_ecrop_frontpage_headlines' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_ecrop_frontpage_headlines_small' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_ecrop_igp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_ecrop_news_center' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

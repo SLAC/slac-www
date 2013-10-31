@@ -19,14 +19,15 @@ function slac_footer_menu_default_menu_custom() {
   // Exported menu: menu-footer-menu.
   $menus['menu-footer-menu'] = array(
     'menu_name' => 'menu-footer-menu',
-    'title' => 'Footer menu',
-    'description' => '',
+    'title' => 'Footer Secondary Links',
+    'description' => 'The Footer Secondary Links is used to show links from the bottom side of site',
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Footer menu');
+  t('Footer Secondary Links');
   t('Management');
   t('The <em>Management</em> menu contains links for administrative tasks.');
+  t('The Footer Secondary Links is used to show links from the bottom side of site');
 
 
   return $menus;
