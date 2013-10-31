@@ -127,10 +127,10 @@ function slac_contact_us_uuid_features_default_content() {
       1 => array(
         'nid' => 3479,
         'eid' => 1,
-        'email' => 'communications@slac.stanford.edu',
+        'email' => 'communications@slac.stanford.edu, webteam@slac.stanford.edu',
         'subject' => 'SLAC Website Contact Us Form',
-        'from_name' => 'default',
-        'from_address' => 'default',
+        'from_name' => 1,
+        'from_address' => 2,
         'template' => 'Contact Us Topic: [submission:values:topic_of_your_feedback___question]
 
 From: [submission:values:your_name]
