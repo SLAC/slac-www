@@ -271,9 +271,6 @@ $linkcolor: #990000;
     text-transform: uppercase;
     font-style: normal;
     letter-spacing: 2px;
-    span{
-      font-size: 0.75em;
-    }
     a{
       color: #7f6332;
       text-decoration: none;
@@ -1083,6 +1080,8 @@ div.pane-node-body{
     font-weight: 600;
     margin: 20px 0 10px;
     padding: 0;
+    color: #333;
+    line-height: normal;
   }
 }
 
