@@ -200,6 +200,9 @@
       $('#cke_' + this.instanceId).find('iframe').contents().find('.block-insert-active').html($(markup).html()).removeClass('block-insert-active');
       updateBlockInsertButtonState();
 
+      // Run attach behaviors as we might have replaced html of the block.
+      Drupal.attachBehaviors();
+
       // Store macro/markup pair in the bean_wysiwyg_tagmap.
       bean_wysiwyg_ensure_tagmap();
       Drupal.settings.bean_wysiwyg_tagmap[macro] = markup;
