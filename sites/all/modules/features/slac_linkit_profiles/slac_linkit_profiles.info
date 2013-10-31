@@ -1,0 +1,11 @@
+name = SLAC LinkIt Profiles
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = slac_linkit_profiles
+dependencies[] = ctools
+dependencies[] = linkit
+features[ctools][] = linkit:linkit_profiles:1
+features[features_api][] = api:2
+features[linkit_profiles][] = author
+features[linkit_profiles][] = author_for_field
