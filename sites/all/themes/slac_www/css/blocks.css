@@ -351,9 +351,9 @@
 /* line 12, ../sass/blocks.scss */
 .html .slider {
   margin-bottom: 20px;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
   /* line 17, ../sass/blocks.scss */
   .html .slider .field-slideshow-caption a {
     font-size: 30px;
@@ -898,7 +898,7 @@ div.pane-node-body li {
   color: #474748;
   font-size: 13px;
   list-style-type: disc;
-  list-style-position: inside;
+  list-style-position: outside;
   padding: 2px 0;
   line-height: 18px; }
   /* line 581, ../sass/blocks.scss */
