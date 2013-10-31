@@ -40,6 +40,7 @@ function bean_wysiwyg_select_block_type_form($form, &$form_state) {
   $form['actions']['cancel'] = array(
     '#markup' => l(t('Cancel'), '', array('attributes' => array('class' => array('button', 'button-no', 'fake-cancel')))),
   );
+  $form['#attached']['js'] = array(drupal_get_path('module', 'bean_wysiwyg') . '/js/bean_wysiwyg.iframe.js');
   return $form;
 }
 

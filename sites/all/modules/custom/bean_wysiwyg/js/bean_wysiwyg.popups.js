@@ -66,15 +66,6 @@
     return blockInsertIframe;
   };
 
-  Drupal.bean_wysiwyg.popups.blockSelectDialog.submit  = function () {
-    var buttons = Drupal.bean_wysiwyg.popups.blockSelectDialog.blockInsertIframe.parent('.ui-dialog').find('.ui-dialog-buttonpane button');
-    if ($(this).hasClass('fake-cancel')) {
-      buttons[1].click();
-    } else {
-      buttons[0].click();
-    }
-  }
-
   Drupal.bean_wysiwyg.popups.blockSelectDialog.getDefaults = function () {
     return {
       global: {
@@ -110,8 +101,6 @@ Drupal.bean_wysiwyg.popups.getPopupIframe = function (src, id, options) {
 Drupal.bean_wysiwyg.popups.blockSelectDialog.onLoad = function() {
   $('#blockInsertBrowser').contents().find('#skip-link').remove();
   $('#blockInsertBrowser').contents().find('#branding').remove();
-
-  $('#blockInsertBrowser').contents().find('a.fake-cancel').bind('click', Drupal.bean_wysiwyg.popups.blockSelectDialog.submit);
 }
 
 /**
