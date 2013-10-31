@@ -833,9 +833,9 @@ div.pane-node-body{
   }
 
   .views-field-title a{
-    font-size: 16px;
+    font-size: 1em;
+    line-height: 1.313em;
     font-weight: 100;
-    line-height: normal;
     margin-bottom: 10px;
     &:hover{
       border-bottom: 1px dotted #881728;
@@ -883,9 +883,9 @@ div.pane-node-body{
 
   .views-field-title a{
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: .75em;
     color: #881728;
-    line-height: 21px;
+    line-height: 1.313em;
     &:hover{
       border-bottom: 1px dotted #881728;
     }
