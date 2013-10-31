@@ -1474,7 +1474,10 @@ function slac_past_lectures_default_page_manager_pages() {
   $page->admin_title = 'Past Lectures';
   $page->admin_description = 'SLAC Past Lectures page.';
   $page->path = 'community/past-lectures';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(

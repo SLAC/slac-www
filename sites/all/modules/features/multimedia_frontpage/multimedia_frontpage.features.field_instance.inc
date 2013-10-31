@@ -149,6 +149,12 @@ function multimedia_frontpage_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'crop_large_retina' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_lecture_portrait' => array(
         'label' => 'above',
         'settings' => array(),
@@ -185,6 +191,12 @@ function multimedia_frontpage_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'crop_medium_retina' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_news_thumbnail_headlines_center' => array(
         'label' => 'above',
         'settings' => array(),
@@ -198,6 +210,12 @@ function multimedia_frontpage_field_default_field_instances() {
         'weight' => 0,
       ),
       'crop_thumbnail' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'crop_thumbnail_retina' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
