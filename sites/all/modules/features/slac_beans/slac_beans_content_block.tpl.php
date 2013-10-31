@@ -1,4 +1,9 @@
-<div class="slac-beans-image-text-link" style="padding-top: 26px;">
+<div class="slac-beans-image-text-link"
+  <?php if ($shaded || $title): ?>
+     style="padding-top: 26px;"
+  <?php endif; ?>
+  >
+
   <?php if ($title): ?>
   <div style="
     border-bottom: 2px solid #881728;
@@ -22,8 +27,10 @@
       background: linear-gradient(to bottom, #f6f6f6 0%, #ebebeb 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ebebeb',GradientType=0 );
     <?php endif; ?>
-      width: 94%;
+    <?php if ($shaded || $title): ?>
       padding: 20px 3%;
+      width: 94%;
+    <?php endif; ?>
       font-size: 13px;
       overflow: hidden;
       margin-top: 0;
