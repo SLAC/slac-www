@@ -34,7 +34,7 @@ function slac_beans_field_default_field_instances() {
     'entity_type' => 'bean',
     'field_name' => 'field_block_bb_content',
     'label' => 'Block content',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -342,7 +342,6 @@ function slac_beans_field_default_field_instances() {
           'ecrop_frontpage_headlines' => 0,
           'ecrop_frontpage_headlines_small' => 0,
           'ecrop_igp' => 0,
-          'ecrop_news-article_content' => 0,
           'ecrop_news_center' => 0,
           'lightbox_text_bottom' => 0,
           'lightbox_text_left_right' => 0,

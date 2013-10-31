@@ -132,4 +132,8 @@ function slac_beans_preprocess_slac_beans_block_with_brochures(&$vars) {
 function slac_beans_form_bean_form_alter(&$form, &$form_state) {
   $form['view_mode']['#access'] = FALSE;
   $form['revision']['#access'] = FALSE;
+
+  if (empty($_SESSION['messages']['error'])) {
+    unset ($_SESSION['messages']['error']);
+  }
 }
