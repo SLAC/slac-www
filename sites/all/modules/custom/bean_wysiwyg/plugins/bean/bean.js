@@ -28,6 +28,12 @@
         });
 
         $(iframe).contents().find('.block-insert').each(function() {
+
+          // Disable any actions clicking on links inside blocks.
+          $(this).once('block-insert').find('a').click(function(event) {
+            return false;
+          })
+
           $(this).once('block-insert').click(function(event){
             event.stopPropagation();
 
