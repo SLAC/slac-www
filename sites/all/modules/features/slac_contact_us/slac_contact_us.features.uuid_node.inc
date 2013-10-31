@@ -131,10 +131,10 @@ function slac_contact_us_uuid_features_default_content() {
         'subject' => 'SLAC Website Contact Us Form',
         'from_name' => 1,
         'from_address' => 2,
-        'template' => 'Contact Us Topic: [submission:values:topic_of_your_feedback___question]
+        'template' => 'Contact Us Topic: [submission:values:topic_of_your_questions_comments_or_inquiries]
 
 From: [submission:values:your_name]
-Message: [submission:values:your_feedback]
+Message: [submission:values:your_questions_comments_or_inquiries]
 
 The results of this submission may be viewed at:
 [submission:url]',
