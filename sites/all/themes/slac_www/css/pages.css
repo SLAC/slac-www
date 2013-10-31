@@ -623,14 +623,14 @@ input:focus {
     display: block;
     height: 30px;
     line-height: 30px;
-    padding-top: 1px;
+    padding-top: 2px;
     letter-spacing: 2px;
     font-weight: bold; }
   /* line 301, ../sass/pages.scss */
   .main-menu .depth-1.active-trail > a,
   .main-menu .depth-1 > a.active,
   .main-menu .depth-1:hover > a {
-    height: 28px;
+    height: 27px;
     border-bottom: 2px solid #881728; }
   /* line 306, ../sass/pages.scss */
   .main-menu ul li.depth-1:hover, .main-menu ul li.depth-1.active-trail {
@@ -2039,10 +2039,10 @@ a.imageLessButton {
     background: #ddd; }
     /* line 1776, ../sass/pages.scss */
     .page-basic > .panel-panel {
-      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
-      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
-      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0);
-      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0); }
+      -webkit-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      -moz-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      -ms-box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7);
+      box-shadow: -2px 0px 10px 2px rgba(223, 223, 223, 0.7); }
     /* line 1782, ../sass/pages.scss */
     .page-basic .sidebar-menu {
       position: absolute;
