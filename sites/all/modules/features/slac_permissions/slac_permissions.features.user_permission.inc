@@ -216,6 +216,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'add media from remote sources',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'media_internet',
   );
@@ -422,6 +424,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -759,6 +763,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'bypass file access',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -1609,6 +1615,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'import media',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'media',
   );
