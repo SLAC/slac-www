@@ -1172,6 +1172,10 @@ width: 100%;
   padding-bottom: 1px;
 }
 
+.view-lecture-link:hover{
+  padding-bottom: 0;
+}
+
 .move-title-left .pane-title{
   margin-left: 0 !important;
 }
@@ -1184,6 +1188,7 @@ width: 100%;
 .general-two-col .general-left a:hover{
   border-bottom: 1px dotted #881728;
 }
+
 .three-col-middle .page-link .page-link:hover,
 .views-field-field-image a:hover,
 #orgwrapper a.highlight:hover,
