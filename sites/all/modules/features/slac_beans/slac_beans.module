@@ -68,7 +68,7 @@ function slac_beans_preprocess_slac_beans_content_block(&$vars) {
   if (isset($entity['field_content_block_link']) && !empty($entity['field_content_block_link'])) {
     $entity['field_content_block_link'][0]['#element']['title'] .= ' »';
     $vars['link'] = drupal_render($entity['field_content_block_link'][0]);
-    $vars['link_url'] = $entity['field_content_block_link'][0]['#element']['display_url'];
+    $vars['link_url'] = $entity['field_content_block_link'][0]['#element']['url'];
   }
 
   if (isset($entity['#entity']->field_content_block_background[LANGUAGE_NONE][0]['value'])) {
