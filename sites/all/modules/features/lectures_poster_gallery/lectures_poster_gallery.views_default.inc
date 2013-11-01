@@ -119,67 +119,6 @@ function lectures_poster_gallery_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '◄';
   $handler->display->display_options['pager']['options']['tags']['next'] = '►';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Field: Image */
-  $handler->display->display_options['fields']['field_image_1']['id'] = 'field_image_1';
-  $handler->display->display_options['fields']['field_image_1']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image_1']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image_1']['label'] = '';
-  $handler->display->display_options['fields']['field_image_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_image_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image_1']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_image_1']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image_1']['settings'] = array(
-    'image_style' => 'lecture_portrait',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_image_1']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_image_1']['delta_offset'] = '0';
-  /* Field: Field: Image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'lectures_gallery_large',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_image']['delta_offset'] = '0';
-  /* Field: Content: Path */
-  $handler->display->display_options['fields']['path']['id'] = 'path';
-  $handler->display->display_options['fields']['path']['table'] = 'node';
-  $handler->display->display_options['fields']['path']['field'] = 'path';
-  $handler->display->display_options['fields']['path']['label'] = '';
-  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['text'] = '<a class="view-lecture-link" href="[path]">View lecture details</a>';
-  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
-  /* Field: Lightbox: Lightbox trigger */
-  $handler->display->display_options['fields']['lightbox2']['id'] = 'lightbox2';
-  $handler->display->display_options['fields']['lightbox2']['table'] = 'lightbox2';
-  $handler->display->display_options['fields']['lightbox2']['field'] = 'lightbox2';
-  $handler->display->display_options['fields']['lightbox2']['label'] = '';
-  $handler->display->display_options['fields']['lightbox2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['lightbox2']['trigger_field'] = 'field_image_1';
-  $handler->display->display_options['fields']['lightbox2']['popup'] = '[field_image]';
-  $handler->display->display_options['fields']['lightbox2']['caption'] = '[title][path]';
-  $handler->display->display_options['fields']['lightbox2']['rel_group'] = 1;
-  $handler->display->display_options['fields']['lightbox2']['custom_group'] = 'image_field';
-  $handler->display->display_options['fields']['lightbox2']['height'] = '700px';
-  $handler->display->display_options['fields']['lightbox2']['width'] = '453px';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
