@@ -50,5 +50,43 @@ function slac_news_center_feature_image_default_styles() {
     ),
   );
 
+  // Exported image style: article-news-node-page.
+  $styles['article-news-node-page'] = array(
+    'name' => 'article-news-node-page',
+    'effects' => array(
+      24 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'retina_images_image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'retina_images_image_scale_form',
+        'summary theme' => 'retina_images_image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 220,
+          'height' => '',
+          'upscale' => 0,
+          'retinafy' => 1,
+        ),
+        'weight' => 1,
+      ),
+      34 => array(
+        'label' => 'Sharpen',
+        'help' => 'Sharpen an image giving a parameter.',
+        'effect callback' => 'filtersie_sharpen_effect',
+        'form callback' => 'filtersie_sharpen_form',
+        'summary theme' => 'filtersie_sharpen_summary',
+        'dimensions passthrough' => TRUE,
+        'module' => 'filtersie',
+        'name' => 'filtersie_sharpen',
+        'data' => array(
+          'sharpenlevel' => 40,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   return $styles;
 }
