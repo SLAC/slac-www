@@ -290,6 +290,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer beans',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'manager' => 'manager',
     ),
     'module' => 'bean',
