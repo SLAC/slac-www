@@ -51,7 +51,7 @@ function slac_migrate_article_news_image_default_styles() {
             'fallback' => 1,
           ),
         ),
-        'weight' => 1,
+        'weight' => -10,
       ),
       33 => array(
         'label' => 'Scale and crop',
@@ -65,8 +65,23 @@ function slac_migrate_article_news_image_default_styles() {
         'data' => array(
           'width' => 224,
           'height' => 142,
+          'retinafy' => 1,
         ),
-        'weight' => 2,
+        'weight' => -9,
+      ),
+      35 => array(
+        'label' => 'Sharpen',
+        'help' => 'Sharpen an image giving a parameter.',
+        'effect callback' => 'filtersie_sharpen_effect',
+        'form callback' => 'filtersie_sharpen_form',
+        'summary theme' => 'filtersie_sharpen_summary',
+        'dimensions passthrough' => TRUE,
+        'module' => 'filtersie',
+        'name' => 'filtersie_sharpen',
+        'data' => array(
+          'sharpenlevel' => 40,
+        ),
+        'weight' => -8,
       ),
     ),
   );
