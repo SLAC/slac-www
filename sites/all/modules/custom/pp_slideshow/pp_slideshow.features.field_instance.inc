@@ -545,7 +545,7 @@ function pp_slideshow_field_default_field_instances() {
           'slideshow_pause' => 0,
           'slideshow_speed' => 1000,
           'slideshow_start_on_hover' => 0,
-          'slideshow_timeout' => 6000,
+          'slideshow_timeout' => 8000,
         ),
         'type' => 'slideshow',
         'weight' => 0,
