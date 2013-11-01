@@ -471,6 +471,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer mailchimp',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'mailchimp',
   );
@@ -480,6 +481,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer mailchimp campaigns',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'mailchimp_campaign',
   );
