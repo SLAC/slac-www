@@ -724,16 +724,6 @@ function slac_permissions_user_default_permissions() {
     'module' => 'views',
   );
 
-  // Exported permission: administer webauth.
-  $permissions['administer webauth'] = array(
-    'name' => 'administer webauth',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'webauth',
-  );
-
   // Exported permission: administer workbench.
   $permissions['administer workbench'] = array(
     'name' => 'administer workbench',
