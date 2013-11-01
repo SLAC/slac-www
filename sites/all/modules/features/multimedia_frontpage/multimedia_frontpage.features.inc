@@ -38,10 +38,25 @@ function multimedia_frontpage_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 140,
-          'height' => 79,
+          'width' => 128,
+          'height' => 72,
+          'retinafy' => 1,
         ),
         'weight' => 1,
+      ),
+      36 => array(
+        'label' => 'Sharpen',
+        'help' => 'Sharpen an image giving a parameter.',
+        'effect callback' => 'filtersie_sharpen_effect',
+        'form callback' => 'filtersie_sharpen_form',
+        'summary theme' => 'filtersie_sharpen_summary',
+        'dimensions passthrough' => TRUE,
+        'module' => 'filtersie',
+        'name' => 'filtersie_sharpen',
+        'data' => array(
+          'sharpenlevel' => 40,
+        ),
+        'weight' => 2,
       ),
     ),
   );
