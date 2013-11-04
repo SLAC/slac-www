@@ -351,9 +351,9 @@
 /* line 12, ../sass/blocks.scss */
 .html .slider {
   margin-bottom: 20px;
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0); }
   /* line 17, ../sass/blocks.scss */
   .html .slider .field-slideshow-caption a {
     font-size: 30px;
@@ -824,13 +824,13 @@
 
 /* line 501, ../sass/blocks.scss */
 .front-news {
-  font-size: 11px;
+  font-size: 12px;
   color: #828282;
   font-style: italic; }
   /* line 505, ../sass/blocks.scss */
   .front-news .views-row {
     padding-bottom: 14px;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.2em;
     width: 95%;
     padding-left: 5%; }
