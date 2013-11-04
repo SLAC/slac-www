@@ -1508,9 +1508,10 @@ a.lightbox-processed:hover {
 
 /* line 1226, ../sass/blocks.scss */
 .section-research .slac-beans-image-text-link:first-child {
-  margin-top: 8px !important; }
+  margin-top: 8px !important;
+  padding-top: 0 !important; }
 
-/* line 1230, ../sass/blocks.scss */
+/* line 1231, ../sass/blocks.scss */
 .section-content .slac-beans-image-text-link:first-child {
   padding-top: 0 !important;
   margin-top: -15px; }
