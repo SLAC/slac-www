@@ -222,16 +222,6 @@ function slac_permissions_user_default_permissions() {
     'module' => 'media_internet',
   );
 
-  // Exported permission: administer BOTCHA settings.
-  $permissions['administer BOTCHA settings'] = array(
-    'name' => 'administer BOTCHA settings',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'botcha',
-  );
-
   // Exported permission: administer JW Player presets.
   $permissions['administer JW Player presets'] = array(
     'name' => 'administer JW Player presets',
@@ -558,6 +548,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer og_tag_importer',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'og_tag_importer',
   );
@@ -1768,15 +1760,6 @@ function slac_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: skip BOTCHA.
-  $permissions['skip BOTCHA'] = array(
-    'name' => 'skip BOTCHA',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'botcha',
   );
 
   // Exported permission: skip comment approval.
