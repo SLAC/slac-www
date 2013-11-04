@@ -456,8 +456,9 @@ $linkcolor: #990000;
   .fieldable-panels-pane .field-item,
   .menu li,
   ul.news-archive-links li{
-    width: 92%;
-    padding: 2px 0 0 8%;
+    /*width: 92%;
+    padding: 2px 0 0 8%;*/
+    padding: 2px 0 0 25px;
     margin: 0;
     line-height: 18px;
       background: url('../images/red-arrow.png') no-repeat 8px 11px;
