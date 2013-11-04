@@ -118,7 +118,7 @@ function slac_news_center_feature_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'ecrop_news_center',
+    'image_style' => 'news_thumbnail_headlines_center',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_image']['delta_limit'] = '1';
@@ -215,7 +215,7 @@ function slac_news_center_feature_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'ecrop_news_center',
+    'image_style' => 'news_thumbnail_headlines_center',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_image']['delta_limit'] = '1';

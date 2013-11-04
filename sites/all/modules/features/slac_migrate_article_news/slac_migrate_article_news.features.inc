@@ -32,27 +32,6 @@ function slac_migrate_article_news_image_default_styles() {
   $styles['news_thumbnail_headlines_center'] = array(
     'name' => 'news_thumbnail_headlines_center',
     'effects' => array(
-      32 => array(
-        'label' => 'EPSA Image Crop',
-        'help' => '',
-        'dimensions callback' => 'epsacrop_crop_dimensions',
-        'effect callback' => 'epsacrop_crop_image',
-        'form callback' => 'epsacrop_crop_image_form',
-        'module' => 'epsacrop',
-        'name' => 'epsacrop_crop',
-        'data' => array(
-          'width' => 224,
-          'height' => 142,
-          'anchor' => 'center-center',
-          'jcrop_settings' => array(
-            'aspect_ratio' => '',
-            'bgcolor' => 'black',
-            'bgopacity' => 0.6,
-            'fallback' => 1,
-          ),
-        ),
-        'weight' => -10,
-      ),
       33 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
