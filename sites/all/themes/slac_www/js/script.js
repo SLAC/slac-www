@@ -195,28 +195,28 @@
 		}
 	}
 
-	// Drupal.behaviors.placeholderIE = {
-	// 	attach: function (context, settings) {
+	Drupal.behaviors.placeholderIE = {
+		attach: function (context, settings) {
 
 
-	// 		var $description = $('.page-community-past-lectures .description').text();
-	// 		var $this = $('.page-community-past-lectures .view-filters input.form-text');
-	// 		$this.attr("placeholder", $.trim($description));
+			var $description = $('.page-community-past-lectures .description').text();
+			var $this = $('.page-community-past-lectures .view-filters input.form-text');
+			$this.attr("placeholder", $.trim($description));
 
-	// 		$('.form-text').each(function(){
-	// 			$(this).data('holder',$(this).attr('placeholder'));
-	// 			$(this).focusin(function(){
-	// 				$(this).attr('placeholder','');
-	// 			});
-	// 			$(this).focusout(function(){
-	// 				$(this).attr('placeholder',$(this).data('holder'));
-	// 			});
-	// 		})
+			$('.form-text').each(function(){
+				$(this).data('holder',$(this).attr('placeholder'));
+				$(this).focusin(function(){
+					$(this).attr('placeholder','');
+				});
+				$(this).focusout(function(){
+					$(this).attr('placeholder',$(this).data('holder'));
+				});
+			})
 
-	// 		$("[placeholder]").textPlaceholder();
+			$("[placeholder]").textPlaceholder();
 
-	// 	}
-	// }
+		}
+	}
 
 	Drupal.behaviors.noThirdLevelClass = {
 		attach: function (context, settings) {
