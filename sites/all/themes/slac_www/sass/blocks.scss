@@ -456,8 +456,9 @@ $linkcolor: #990000;
   .fieldable-panels-pane .field-item,
   .menu li,
   ul.news-archive-links li{
-    width: 92%;
-    padding: 2px 0 0 8%;
+    /*width: 92%;
+    padding: 2px 0 0 8%;*/
+    padding: 2px 0 0 25px;
     margin: 0;
     line-height: 18px;
       background: url('../images/red-arrow.png') no-repeat 8px 11px;
@@ -1223,3 +1224,12 @@ font-size: 11px;
   padding-top:  12px;
 }
 
+.section-research .slac-beans-image-text-link:first-child{
+  margin-top: 8px !important;
+  padding-top: 0 !important;
+}
+
+.section-content .slac-beans-image-text-link:first-child{
+  padding-top: 0 !important;
+  margin-top: -15px;
+}
