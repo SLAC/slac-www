@@ -331,6 +331,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer crop styles',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'pp_crop',
   );
@@ -1535,6 +1537,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'epsacrop administer available crops',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'epsacrop',
   );
