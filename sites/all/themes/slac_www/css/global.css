@@ -2,3 +2,4 @@
 @include pages.scss
 @include blocks.scss
 @include mixins.scss
+@include ie8.scss
