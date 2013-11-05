@@ -1986,7 +1986,7 @@ a.imageLessButton {
   }
   .front .middletop .pane-title{
     background-image: url('../images/headliner-arrow.png');
-    background-position: right center; 
+    background-position: right center;
     background-repeat: no-repeat;
   }
 
@@ -1995,7 +1995,7 @@ a.imageLessButton {
     right: 18px;
   }
 
-  .video-block .field-item{  
+  .video-block .field-item{
     border-top: 2px solid #e1e0e0;
   }
 
@@ -2393,4 +2393,10 @@ a.imageLessButton {
       width:  100%;
     }
   }
+}
+
+.resources-page .content-block-heading{
+  font-weight: bold;
+  color: #777;
+  margin-top: 5px;
 }
