@@ -1277,7 +1277,9 @@ table{
     padding: 0;
   }
   tr,
-  tr td{
+  tr td,
+  tr th,
+  tbody{
     border: none;
   }
 
