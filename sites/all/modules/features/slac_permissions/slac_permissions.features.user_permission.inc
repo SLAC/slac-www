@@ -16,6 +16,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'admin_menu',
@@ -27,6 +28,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'system',
@@ -47,6 +49,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'webform',
@@ -57,7 +60,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'access backup and migrate',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'backup_migrate',
   );
@@ -108,6 +110,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -149,6 +152,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'access own webform results',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -158,6 +164,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'access own webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -206,6 +215,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'access workbench',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'workbench',
@@ -217,6 +228,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'media_internet',
@@ -272,7 +284,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer bean types',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -283,7 +294,6 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -293,8 +303,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'manager' => 'manager',
     ),
     'module' => 'block',
   );
@@ -322,6 +330,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer content types',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
     ),
     'module' => 'node',
   );
@@ -332,6 +341,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'pp_crop',
@@ -407,6 +417,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer file types',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'file_entity',
   );
@@ -436,6 +447,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer image styles',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'image',
   );
@@ -445,6 +457,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer int ext links',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'slac_int_ext_links',
   );
@@ -463,6 +477,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer mailchimp',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'manager' => 'manager',
     ),
     'module' => 'mailchimp',
@@ -473,6 +488,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer mailchimp campaigns',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'mailchimp_campaign',
@@ -503,6 +520,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer meta tags',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'metatag',
   );
@@ -551,7 +569,6 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
-      'manager' => 'manager',
     ),
     'module' => 'og_tag_importer',
   );
@@ -597,7 +614,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer permissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'user',
   );
@@ -616,6 +632,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer scheduler',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'scheduler',
   );
@@ -644,6 +662,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer site index',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'slac_site_index',
   );
@@ -653,7 +672,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer software updates',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'system',
   );
@@ -692,7 +710,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'user',
   );
@@ -720,6 +737,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer workbench',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'manager' => 'manager',
     ),
     'module' => 'workbench',
@@ -750,7 +768,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'bypass file access',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
       'manager' => 'manager',
     ),
     'module' => 'file_entity',
@@ -773,6 +790,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
@@ -808,14 +826,22 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: clear lectures_importer feeds.
   $permissions['clear lectures_importer feeds'] = array(
     'name' => 'clear lectures_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
   // Exported permission: clear news_article_importer_custom feeds.
   $permissions['clear news_article_importer_custom feeds'] = array(
     'name' => 'clear news_article_importer_custom feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
@@ -824,6 +850,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'clear node feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -831,7 +859,11 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: clear topic_details_importer feeds.
   $permissions['clear topic_details_importer feeds'] = array(
     'name' => 'clear topic_details_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
@@ -840,6 +872,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'clear user feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -865,14 +899,18 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: create fieldable are_you_block.
   $permissions['create fieldable are_you_block'] = array(
     'name' => 'create fieldable are_you_block',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: create fieldable events.
   $permissions['create fieldable events'] = array(
     'name' => 'create fieldable events',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
@@ -888,28 +926,36 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: create fieldable related_links.
   $permissions['create fieldable related_links'] = array(
     'name' => 'create fieldable related_links',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: create fieldable scheduled_lecture.
   $permissions['create fieldable scheduled_lecture'] = array(
     'name' => 'create fieldable scheduled_lecture',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: create fieldable slideshow_text_bottom.
   $permissions['create fieldable slideshow_text_bottom'] = array(
     'name' => 'create fieldable slideshow_text_bottom',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: create fieldable slideshow_text_left_right.
   $permissions['create fieldable slideshow_text_left_right'] = array(
     'name' => 'create fieldable slideshow_text_left_right',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
@@ -919,6 +965,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'file_entity',
@@ -927,21 +974,36 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: create grid_lightbox_gallery content.
   $permissions['create grid_lightbox_gallery content'] = array(
     'name' => 'create grid_lightbox_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: create in_the_news content.
   $permissions['create in_the_news content'] = array(
     'name' => 'create in_the_news content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: create lecture content.
   $permissions['create lecture content'] = array(
     'name' => 'create lecture content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -957,7 +1019,12 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: create news_article content.
   $permissions['create news_article content'] = array(
     'name' => 'create news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -966,6 +1033,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -976,6 +1046,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'path',
@@ -984,7 +1055,12 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: create webform content.
   $permissions['create webform content'] = array(
     'name' => 'create webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -993,6 +1069,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'delete all webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -1027,28 +1104,46 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: delete any grid_lightbox_gallery content.
   $permissions['delete any grid_lightbox_gallery content'] = array(
     'name' => 'delete any grid_lightbox_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any in_the_news content.
   $permissions['delete any in_the_news content'] = array(
     'name' => 'delete any in_the_news content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any lecture content.
   $permissions['delete any lecture content'] = array(
     'name' => 'delete any lecture content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete any news_article content.
   $permissions['delete any news_article content'] = array(
     'name' => 'delete any news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -1057,6 +1152,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'delete any page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1064,7 +1161,11 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: delete any webform content.
   $permissions['delete any webform content'] = array(
     'name' => 'delete any webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -1080,14 +1181,18 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: delete fieldable are_you_block.
   $permissions['delete fieldable are_you_block'] = array(
     'name' => 'delete fieldable are_you_block',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: delete fieldable events.
   $permissions['delete fieldable events'] = array(
     'name' => 'delete fieldable events',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
@@ -1103,28 +1208,36 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: delete fieldable related_links.
   $permissions['delete fieldable related_links'] = array(
     'name' => 'delete fieldable related_links',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: delete fieldable scheduled_lecture.
   $permissions['delete fieldable scheduled_lecture'] = array(
     'name' => 'delete fieldable scheduled_lecture',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: delete fieldable slideshow_text_bottom.
   $permissions['delete fieldable slideshow_text_bottom'] = array(
     'name' => 'delete fieldable slideshow_text_bottom',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: delete fieldable slideshow_text_left_right.
   $permissions['delete fieldable slideshow_text_left_right'] = array(
     'name' => 'delete fieldable slideshow_text_left_right',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
@@ -1134,6 +1247,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'file_entity',
@@ -1142,28 +1256,48 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: delete own grid_lightbox_gallery content.
   $permissions['delete own grid_lightbox_gallery content'] = array(
     'name' => 'delete own grid_lightbox_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own in_the_news content.
   $permissions['delete own in_the_news content'] = array(
     'name' => 'delete own in_the_news content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own lecture content.
   $permissions['delete own lecture content'] = array(
     'name' => 'delete own lecture content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: delete own news_article content.
   $permissions['delete own news_article content'] = array(
     'name' => 'delete own news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -1172,6 +1306,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'delete own page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1179,7 +1316,12 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: delete own webform content.
   $permissions['delete own webform content'] = array(
     'name' => 'delete own webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -1188,6 +1330,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'delete own webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -1197,6 +1341,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1204,35 +1349,50 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: delete terms in 2.
   $permissions['delete terms in 2'] = array(
     'name' => 'delete terms in 2',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 3.
   $permissions['delete terms in 3'] = array(
     'name' => 'delete terms in 3',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 4.
   $permissions['delete terms in 4'] = array(
     'name' => 'delete terms in 4',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 5.
   $permissions['delete terms in 5'] = array(
     'name' => 'delete terms in 5',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: delete terms in 6.
   $permissions['delete terms in 6'] = array(
     'name' => 'delete terms in 6',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1250,6 +1410,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'download original image',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'lightbox2',
   );
@@ -1259,6 +1421,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'edit all webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -1293,28 +1456,46 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: edit any grid_lightbox_gallery content.
   $permissions['edit any grid_lightbox_gallery content'] = array(
     'name' => 'edit any grid_lightbox_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any in_the_news content.
   $permissions['edit any in_the_news content'] = array(
     'name' => 'edit any in_the_news content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any lecture content.
   $permissions['edit any lecture content'] = array(
     'name' => 'edit any lecture content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit any news_article content.
   $permissions['edit any news_article content'] = array(
     'name' => 'edit any news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -1323,6 +1504,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'edit any page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1330,7 +1513,11 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: edit any webform content.
   $permissions['edit any webform content'] = array(
     'name' => 'edit any webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -1346,14 +1533,18 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: edit fieldable are_you_block.
   $permissions['edit fieldable are_you_block'] = array(
     'name' => 'edit fieldable are_you_block',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: edit fieldable events.
   $permissions['edit fieldable events'] = array(
     'name' => 'edit fieldable events',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
@@ -1369,28 +1560,36 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: edit fieldable related_links.
   $permissions['edit fieldable related_links'] = array(
     'name' => 'edit fieldable related_links',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: edit fieldable scheduled_lecture.
   $permissions['edit fieldable scheduled_lecture'] = array(
     'name' => 'edit fieldable scheduled_lecture',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: edit fieldable slideshow_text_bottom.
   $permissions['edit fieldable slideshow_text_bottom'] = array(
     'name' => 'edit fieldable slideshow_text_bottom',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: edit fieldable slideshow_text_left_right.
   $permissions['edit fieldable slideshow_text_left_right'] = array(
     'name' => 'edit fieldable slideshow_text_left_right',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'fieldable_panels_panes',
   );
 
@@ -1400,6 +1599,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'metatag',
@@ -1430,6 +1630,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'file_entity',
@@ -1438,28 +1639,48 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: edit own grid_lightbox_gallery content.
   $permissions['edit own grid_lightbox_gallery content'] = array(
     'name' => 'edit own grid_lightbox_gallery content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own in_the_news content.
   $permissions['edit own in_the_news content'] = array(
     'name' => 'edit own in_the_news content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own lecture content.
   $permissions['edit own lecture content'] = array(
     'name' => 'edit own lecture content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: edit own news_article content.
   $permissions['edit own news_article content'] = array(
     'name' => 'edit own news_article content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -1468,6 +1689,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1475,7 +1699,12 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: edit own webform content.
   $permissions['edit own webform content'] = array(
     'name' => 'edit own webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'node',
   );
 
@@ -1484,6 +1713,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'edit own webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'webform',
   );
@@ -1491,35 +1723,50 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: edit terms in 2.
   $permissions['edit terms in 2'] = array(
     'name' => 'edit terms in 2',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 3.
   $permissions['edit terms in 3'] = array(
     'name' => 'edit terms in 3',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 4.
   $permissions['edit terms in 4'] = array(
     'name' => 'edit terms in 4',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 5.
   $permissions['edit terms in 5'] = array(
     'name' => 'edit terms in 5',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
   // Exported permission: edit terms in 6.
   $permissions['edit terms in 6'] = array(
     'name' => 'edit terms in 6',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -1550,6 +1797,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'epsacrop delete all crops',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
     ),
     'module' => 'epsacrop',
   );
@@ -1570,6 +1819,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'export nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'node_export',
   );
@@ -1579,6 +1829,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'export own nodes',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'node_export',
   );
@@ -1595,7 +1846,11 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: import lectures_importer feeds.
   $permissions['import lectures_importer feeds'] = array(
     'name' => 'import lectures_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
@@ -1605,6 +1860,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'media',
@@ -1613,7 +1869,11 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: import news_article_importer_custom feeds.
   $permissions['import news_article_importer_custom feeds'] = array(
     'name' => 'import news_article_importer_custom feeds',
-    'roles' => array(),
+    'roles' => array(
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
@@ -1622,6 +1882,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'import node feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -1631,6 +1894,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'import og_tag_importer',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'og_tag_importer',
   );
@@ -1638,7 +1904,11 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: import topic_details_importer feeds.
   $permissions['import topic_details_importer feeds'] = array(
     'name' => 'import topic_details_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
@@ -1647,6 +1917,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'import user feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -1665,7 +1938,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'moderate content from draft to published',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
@@ -1715,6 +1988,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -1761,14 +2037,18 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: tamper lectures_importer.
   $permissions['tamper lectures_importer'] = array(
     'name' => 'tamper lectures_importer',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds_tamper',
   );
 
   // Exported permission: tamper news_article_importer_custom.
   $permissions['tamper news_article_importer_custom'] = array(
     'name' => 'tamper news_article_importer_custom',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds_tamper',
   );
 
@@ -1784,7 +2064,9 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: tamper topic_details_importer.
   $permissions['tamper topic_details_importer'] = array(
     'name' => 'tamper topic_details_importer',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'feeds_tamper',
   );
 
@@ -1800,14 +2082,22 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: unlock lectures_importer feeds.
   $permissions['unlock lectures_importer feeds'] = array(
     'name' => 'unlock lectures_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
   // Exported permission: unlock news_article_importer_custom feeds.
   $permissions['unlock news_article_importer_custom feeds'] = array(
     'name' => 'unlock news_article_importer_custom feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
@@ -1816,6 +2106,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'unlock node feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -1823,7 +2115,11 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: unlock topic_details_importer feeds.
   $permissions['unlock topic_details_importer feeds'] = array(
     'name' => 'unlock topic_details_importer feeds',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'feeds',
   );
 
@@ -1832,6 +2128,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'unlock user feeds',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
@@ -1860,6 +2158,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'bean_wysiwyg',
@@ -1897,8 +2196,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'use panels in place editing',
     'roles' => array(
       'administrator' => 'administrator',
-      'author' => 'author',
-      'manager' => 'manager',
     ),
     'module' => 'panels',
   );
@@ -1929,6 +2226,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'filter',
@@ -1940,6 +2238,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'filter',
@@ -1950,6 +2249,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
@@ -1960,6 +2261,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'use workbench_moderation needs review tab',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
@@ -1999,7 +2302,6 @@ function slac_permissions_user_default_permissions() {
     'name' => 'view bean page',
     'roles' => array(
       'administrator' => 'administrator',
-      'manager' => 'manager',
     ),
     'module' => 'bean',
   );
@@ -2030,6 +2332,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
@@ -2041,6 +2344,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
@@ -2052,6 +2356,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'file_entity',
@@ -2071,6 +2376,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -2090,6 +2398,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -2101,6 +2410,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'system',
