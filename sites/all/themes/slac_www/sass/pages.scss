@@ -2402,3 +2402,18 @@ a.imageLessButton {
   color: #777;
   margin-top: 5px;
 }
+
+
+
+
+.pane-bundle-slideshow-text-left-right .field-slideshow-text-left-right-wrapper {
+  height: 265px !important;
+}
+
+
+@media (max-width: 2000px){
+  .pane-bundle-slideshow-text-left-right .field-slideshow-text-left-right-wrapper {
+    height: auto !important;
+  }
+}
+
