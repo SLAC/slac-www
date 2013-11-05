@@ -592,15 +592,6 @@ function slac_permissions_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: administer pathauto.
-  $permissions['administer pathauto'] = array(
-    'name' => 'administer pathauto',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'pathauto',
-  );
-
   // Exported permission: administer permissions.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
@@ -1678,15 +1669,6 @@ function slac_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'workbench_moderation',
-  );
-
-  // Exported permission: notify of path changes.
-  $permissions['notify of path changes'] = array(
-    'name' => 'notify of path changes',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'pathauto',
   );
 
   // Exported permission: override default scheduler time.
