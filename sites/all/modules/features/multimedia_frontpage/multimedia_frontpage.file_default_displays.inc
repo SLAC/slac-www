@@ -56,9 +56,17 @@ function multimedia_frontpage_file_default_displays() {
   $file_display->api_version = 1;
   $file_display->name = 'video__default__file_field_media_youtube_video_popup';
   $file_display->weight = -44;
-  $file_display->status = TRUE;
+  $file_display->status = FALSE;
   $file_display->settings = '';
   $export['video__default__file_field_media_youtube_video_popup'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__default__file_field_media_youtube_video_popup_news';
+  $file_display->weight = -34;
+  $file_display->status = TRUE;
+  $file_display->settings = '';
+  $export['video__default__file_field_media_youtube_video_popup_news'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -189,6 +197,14 @@ function multimedia_frontpage_file_default_displays() {
     'origin' => '',
   );
   $export['video__preview__media_youtube_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__teaser__file_field_media_youtube_video_popup_news';
+  $file_display->weight = 0;
+  $file_display->status = FALSE;
+  $file_display->settings = '';
+  $export['video__teaser__file_field_media_youtube_video_popup_news'] = $file_display;
 
   return $export;
 }

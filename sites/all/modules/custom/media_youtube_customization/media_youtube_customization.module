@@ -31,6 +31,13 @@ function media_youtube_customization_field_formatter_info() {
         'file_view_mode' => 'default',
       ),
     ),
+    'media_youtube_video_popup_news' => array(
+      'label' => t('Youtube Video popup news'),
+      'field types' => array('file'),
+      'settings' => array(
+        'file_view_mode' => 'teaser',
+      ),
+    ),
   );
 }
 
@@ -50,98 +57,106 @@ function media_youtube_customization_form_alter(&$form, &$form_state, $form_id) 
  */
 function media_youtube_customization_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
   $element = array();
-  if ($display['type'] != 'media_youtube_video_popup') {
-    return $element;
-  }
-  // Spoof the file_rendered formatter.
-  $display['type'] = 'file_rendered';
-  foreach ($items as $delta => $item) {
-    if ($item['type'] == 'video') {
-      // Transform the stream wrapper into a path.
-      $path = drupal_realpath($item['uri']);
+  switch ($display['type']) {
+    case 'media_youtube_video_popup':
+    case 'media_youtube_video_popup_news':
+      // Spoof the file_rendered formatter.
+      $display['type'] = 'file_rendered';
+      foreach ($items as $delta => $item) {
+        if ($item['type'] == 'video') {
+          // Transform the stream wrapper into a path.
+          $path = drupal_realpath($item['uri']);
 
-      // Parse the URL into parts, in order to make it an embed URL.
-      // Make sure the correct include file is loaded
-      module_load_include('inc', 'media_youtube', '/includes/media_youtube.formatters.inc');
-      module_load_include('inc', 'media_vimeo', '/includes/media_vimeo.formatters.inc');
+          // Parse the URL into parts, in order to make it an embed URL.
+          // Make sure the correct include file is loaded
+          module_load_include('inc', 'media_youtube', '/includes/media_youtube.formatters.inc');
+          module_load_include('inc', 'media_vimeo', '/includes/media_vimeo.formatters.inc');
 
-      // Load the file
-      $file = file_load($item['fid']);
+          // Load the file
+          $file = file_load($item['fid']);
 
-      // Set up the settings array with your image style
-      $display['settings'] = array('image_style' => 'frontpage-media');
+          // Set up the settings array with your image style
+          if ($display['type'] == 'media_youtube_video_popup') {
+            $display['settings'] = array('image_style' => 'frontpage-media');
+          }
+          elseif ($display['type'] == 'media_youtube_video_popup_news') {
+            $display['settings'] = array('image_style' => 'article-news-node-page');
+          }
+          // Get the render array for the thumbnail image
+          switch ($item['filemime']) {
+            case 'video/youtube' :
+              $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
+              break;
+            case 'video/vimeo' :
+              $image_render_array = media_vimeo_file_formatter_image_view($file, $display, LANGUAGE_NONE);
+              break;
+          }
+          $video_title = '';
+          if (isset($item['field_title'][LANGUAGE_NONE][0]['value'])) {
+            $video_title = $item['field_title'][LANGUAGE_NONE][0]['value'];
+          }
 
-      // Get the render array for the thumbnail image
-      switch ($item['filemime']) {
-        case 'video/youtube' :
-          $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
-          break;
-        case 'video/vimeo' :
-          $image_render_array = media_vimeo_file_formatter_image_view($file, $display, LANGUAGE_NONE);
-          break;
-      }
-      $video_title = '';
-      if (isset($item['field_title'][LANGUAGE_NONE][0]['value'])) {
-        $video_title = $item['field_title'][LANGUAGE_NONE][0]['value'];
-      }
+          $video_description = '';
+          if (isset($item['field_video_description'][LANGUAGE_NONE][0]['value'])) {
+            $video_description = $item['field_video_description'][LANGUAGE_NONE][0]['value'];
+          }
 
-      $video_description = '';
-      if (isset($item['field_video_description'][LANGUAGE_NONE][0]['value'])) {
-        $video_description = $item['field_video_description'][LANGUAGE_NONE][0]['value'];
-      }
+          // Remove new lines from description.
+          $video_description = trim(preg_replace('/\s+/', ' ', $video_description));
 
-      // Remove new lines from description.
-      $video_description = trim(preg_replace('/\s+/', ' ', $video_description));
+          $caption = '<p>' . $video_title . '</p><p>' . $video_description . '</p><em>' . l(t('» Visit SLAC on YouTube'), 'https://www.youtube.com/slac') . '</em>';
 
-      $caption = '<p>' . $video_title . '</p><p>' . $video_description . '</p><em>' . l(t('» Visit SLAC on YouTube'), 'https://www.youtube.com/slac') . '</em>';
-
-      // Wrap the image in a link to trigger lightbox.
-      $render_video = array(
-        '#type' => 'link',
-        '#title' => render($image_render_array),
-        '#href' => $path,
-        '#options' => array(
-          'html' => TRUE,
-          'attributes' => array(
-            'class' => array(
-              'lightbox',
-              'youtube-thumbnail'
+          // Wrap the image in a link to trigger lightbox.
+          $render_video = array(
+            '#type' => 'link',
+            '#title' => render($image_render_array),
+            '#href' => $path,
+            '#options' => array(
+              'html' => TRUE,
+              'attributes' => array(
+                'class' => array(
+                  'lightbox',
+                  'youtube-thumbnail'
+                ),
+                'rel' => array('lightvideo[][' . $caption . ']'),
+              ),
             ),
-            'rel' => array('lightvideo[][' . $caption . ']'),
-          ),
-        ),
-      );
+          );
 
-      // Wrap the title in a link to trigger lightbox.
-      $title = array(
-        '#type' => 'link',
-        '#title' => $video_title,
-        '#href' => $path,
-        '#options' => array(
-          'html' => TRUE,
-          'attributes' => array(
-            'class' => array(
-              'lightbox',
-              'youtube-title'
+          // Wrap the title in a link to trigger lightbox.
+          $title = array(
+            '#type' => 'link',
+            '#title' => $video_title,
+            '#href' => $path,
+            '#options' => array(
+              'html' => TRUE,
+              'attributes' => array(
+                'class' => array(
+                  'lightbox',
+                  'youtube-title'
+                ),
+                'rel' => array('lightvideo[][' . $caption . ']'),
+              ),
             ),
-            'rel' => array('lightvideo[][' . $caption . ']'),
+          );
+        }
+
+        $render_element['video'] = $render_video;
+        $render_element['title'] = $title;
+
+        $element[$delta] = array(
+          '#type' => 'container',
+          '#attributes' => array(
+            'class' => array(
+              'youtube-video-popup',
+            ),
           ),
-        ),
-      );
-    }
-
-    $render_element['video'] = $render_video;
-    $render_element['title'] = $title;
-
-    $element[$delta] = array(
-      '#type' => 'container',
-      '#attributes' => array(
-        'class' => array(
-          'youtube-video-popup',
-        ),
-      ),
-      'item' => $render_element,
-    );
+          'item' => $render_element,
+        );
+      }
+      break;
+    default :
+      return $element;
   }
   return $element;
 }
