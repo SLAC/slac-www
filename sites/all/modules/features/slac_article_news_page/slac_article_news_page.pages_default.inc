@@ -287,11 +287,11 @@ function slac_article_news_page_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'file_view_mode' => 'teaser',
+        'file_view_mode' => 'default',
       ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => 'Video',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
