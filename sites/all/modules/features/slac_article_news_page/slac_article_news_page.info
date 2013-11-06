@@ -1,6 +1,6 @@
 name = SLAC Article-news page
 core = 7.x
-package = Features
+package = SLAC
 version = 7.x-1.0
 project = slac_article_news_page
 dependencies[] = ctools
