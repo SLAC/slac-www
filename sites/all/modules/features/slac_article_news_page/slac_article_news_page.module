@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC Article-news page feature.
+ */
+
+include_once 'slac_article_news_page.features.inc';
