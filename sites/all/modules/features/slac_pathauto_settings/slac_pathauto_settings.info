@@ -1,0 +1,13 @@
+name = SLAC Pathauto settings
+core = 7.x
+package = SLAC
+version = 7.x-1.0
+project = slac_pathauto_settings
+dependencies[] = ctools
+dependencies[] = pathauto
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = pathauto_max_component_length
+features[variable][] = pathauto_max_length
+features[variable][] = pathauto_update_action
