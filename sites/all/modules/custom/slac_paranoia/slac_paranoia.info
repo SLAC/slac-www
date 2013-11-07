@@ -1,0 +1,6 @@
+name = SLAC Paranoia
+description = "Hides update and php_filter modules."
+package = SLAC
+core = 7.x
+
+;dependencies[] = paranoia

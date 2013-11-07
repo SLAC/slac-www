@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function slac_paranoia_form_system_modules_alter(&$form, &$form_state) {
+  $hidden_modules = array('update', 'php');
+  foreach ($hidden_modules as $module ) {
+    // Unset instead of using #access because #access => FALSE shows an empty
+    // table row.
+    unset($form['modules'][$module]);
+  }
+}
