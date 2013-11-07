@@ -1,0 +1,11 @@
+name = SLAC staff resources redirect
+description = Redirect from /general/staff-resources.aspx to https://intranet.slac.stanford.edu/staff-resources.
+core = 7.x
+package = SLAC
+version = 7.x-1.0
+project = slac_staff_resources_redirect
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_pages][] = staff_resources

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SLAC staff resources redirect feature.
+ */
+
+include_once 'slac_staff_resources_redirect.features.inc';
