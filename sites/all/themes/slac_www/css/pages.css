@@ -363,7 +363,7 @@
   right: 40px;
   font-size: 14px;
   padding: 0 10px;
-  background: rgba(0, 0, 0, 0);
+  background: black;
   line-height: 1.6em;
   padding-top: 1px;
   color: #fff;
@@ -1965,7 +1965,7 @@ a.imageLessButton {
     right: 40px;
     font-size: 14px;
     padding: 0 10px;
-    background: rgba(0, 0, 0, 0);
+    background: black;
     line-height: 1.6em;
     padding-top: 1px;
     color: #fff;
