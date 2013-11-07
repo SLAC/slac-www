@@ -64,7 +64,7 @@ $linkcolor: #990000;
     display:none;
   }
   .field-name-field-slideshow-txtlr-slide .field-slideshow-body{
-    width: 23%;
+    width: 26%;
     padding: 20px 6% 0;
   }
   .html .slider .field-slideshow-caption a {
@@ -169,6 +169,7 @@ $linkcolor: #990000;
   }
   .menu{
     padding: 0;
+    margin: 0;
     li{
       border-bottom: 1px solid #d4d4d4;
       font-size: 12px;
@@ -439,6 +440,7 @@ $linkcolor: #990000;
 .related-links {
   ul{
     padding-left: 0;
+    margin: 0;
   }
   .field-label, 
   .pane-title {
