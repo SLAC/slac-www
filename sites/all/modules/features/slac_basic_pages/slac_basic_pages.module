@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SLAC Basic pages feature.
- */
-
-include_once 'slac_basic_pages.features.inc';
