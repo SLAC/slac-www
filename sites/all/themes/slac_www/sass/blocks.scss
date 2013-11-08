@@ -60,6 +60,13 @@ $linkcolor: #990000;
 }
 
 @media (max-width: 900px){
+  
+  .html .slider .field-slideshow-description,
+  .html .slider .field-slideshow-description a{
+    padding: 3px 0 0;
+    line-height: 16px;
+    font-size: 12px;
+  }
   .field-name-field-slideshow-txtlr-slide .field-slideshow-body{
     width: 26%;
     padding: 20px 6% 0;
@@ -77,11 +84,8 @@ $linkcolor: #990000;
 }
 
 @media (max-width: 710px){
-  .html .slider .field-slideshow-description,
-  .html .slider .field-slideshow-description a{
-    padding: 3px 0 0;
-    line-height: 16px;
-    font-size: 12px;
+  .html .slider .field-slideshow-description{
+    display: none;
   }
 }
 
