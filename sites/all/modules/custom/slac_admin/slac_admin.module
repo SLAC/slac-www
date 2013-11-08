@@ -57,4 +57,11 @@ function slac_admin_js_alter(&$javascript) {
     unset($javascript['modules/field/modules/text/text.js']);
   }
   drupal_add_js(drupal_get_path('module', 'slac_admin') . '/js/slac_admin_ckeditor.js');
+
+  // Add js file that enables url based seeking.
+  // Add array('preprocess' => FALSE) to avoid js aggregation.
+  drupal_add_js(
+    libraries_get_path('jwplayer') . '/jwplayer.js',
+    array('preprocess' => FALSE)
+  );
 }
