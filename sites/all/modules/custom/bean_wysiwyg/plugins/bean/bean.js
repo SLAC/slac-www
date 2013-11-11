@@ -8,15 +8,21 @@
   Drupal.behaviors.bean_wysiwyg = {
     attach: function(context, settings) {
 
-      $('iframe').each(function(){
-        // We need to attach behavior twice as when page is loaded we need to react on load() event,
-        // but when the page is loaded (inserting new block) we need not to us load() event.
-        bean_wysiwyg_attach_behavior(this);
+    // Using setTimeout is dirty bugfix for Firefox as it doesn't react on .load() event so existing blocks
+    // do not get click behavior.
+    setTimeout(
+      function() {
+          $('iframe').each(function(){
+            // We need to attach behavior twice as when page is loaded we need to react on load() event,
+            // as iframe might not loaded yet, but when the page has been loaded already (inserting new block)
+            // we need not to use load() event.
+            bean_wysiwyg_attach_behavior(this);
 
-        $(this).load(function(){
-          bean_wysiwyg_attach_behavior(this);
-        });
-      });
+            $(this).load(function(){
+              bean_wysiwyg_attach_behavior(this);
+            });
+          });
+      }, 1000);
 
       /**
        * Attach click events to iframe and inserted block.
