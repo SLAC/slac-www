@@ -158,5 +158,13 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
     default :
       return $element;
   }
+  // Switch all links to https.
+  if (isset($element[0]['item']['video']['#title'])) {
+    $element[0]['item']['video']['#title'] = str_replace('http://', 'https://', $element[0]['item']['video']['#title']);
+  }
+  if (isset($element[0]['item']['video']['#href'])) {
+    $element[0]['item']['video']['#href'] = str_replace('http://', 'https://', $element[0]['item']['video']['#href']);
+  }
+
   return $element;
 }
