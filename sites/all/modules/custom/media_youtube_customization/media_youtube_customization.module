@@ -168,5 +168,6 @@ function media_youtube_customization_field_formatter_view($entity_type, $entity,
   if (isset($element[0]['item']['title']['#href'])) {
     $element[0]['item']['title']['#href'] = str_replace('http://', 'https://', $element[0]['item']['title']['#href']);
   }
+  drupal_add_js(drupal_get_path('module', 'media_youtube_customization') . '/media_youtube_customization.js');
   return $element;
 }
