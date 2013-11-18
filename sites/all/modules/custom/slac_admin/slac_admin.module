@@ -65,3 +65,13 @@ function slac_admin_js_alter(&$javascript) {
     array('preprocess' => FALSE)
   );
 }
+
+/**
+ * Implements hook_ctools_task_handler_default_contextual_link().
+ */
+function slac_admin_ctools_task_handler_default_contextual_link_alter(&$links) {
+  $is_front_page = ($_GET['q'] == variable_get('site_frontpage', 'node'));
+  if ($is_front_page) {
+    $links = array();
+  }
+}

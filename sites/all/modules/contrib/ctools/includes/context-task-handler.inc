@@ -253,6 +253,7 @@ function ctools_task_handler_default_contextual_link($handler, $plugin, $context
     'query' => drupal_get_destination(),
   ));
 
+  drupal_alter('ctools_task_handler_default_contextual_link', $links);
   return $links;
 }
 

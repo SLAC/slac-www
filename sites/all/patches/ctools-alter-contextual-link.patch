@@ -1,0 +1,12 @@
+diff --git a/sites/all/modules/contrib/ctools/includes/context-task-handler.inc b/sites/all/modules/contrib/ctools/includes/context-task-handler.inc
+index 37aa6df..7d85760 100644
+--- a/sites/all/modules/contrib/ctools/includes/context-task-handler.inc
++++ b/sites/all/modules/contrib/ctools/includes/context-task-handler.inc
+@@ -253,6 +253,7 @@ function ctools_task_handler_default_contextual_link($handler, $plugin, $context
+     'query' => drupal_get_destination(),
+   ));
+ 
++  drupal_alter('ctools_task_handler_default_contextual_link', $links);
+   return $links;
+ }
+ 
