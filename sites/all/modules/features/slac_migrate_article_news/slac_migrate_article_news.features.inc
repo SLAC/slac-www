@@ -32,7 +32,7 @@ function slac_migrate_article_news_image_default_styles() {
   $styles['news_thumbnail_headlines_center'] = array(
     'name' => 'news_thumbnail_headlines_center',
     'effects' => array(
-      38 => array(
+      45 => array(
         'label' => 'EPSA Image Crop',
         'help' => '',
         'dimensions callback' => 'epsacrop_crop_dimensions',
@@ -53,7 +53,7 @@ function slac_migrate_article_news_image_default_styles() {
         ),
         'weight' => -10,
       ),
-      36 => array(
+      46 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'retina_images_image_scale_and_crop_effect',
@@ -65,11 +65,11 @@ function slac_migrate_article_news_image_default_styles() {
         'data' => array(
           'width' => 224,
           'height' => 142,
-          'retinafy' => 1,
+          'retinafy' => 0,
         ),
         'weight' => -9,
       ),
-      37 => array(
+      47 => array(
         'label' => 'Sharpen',
         'help' => 'Sharpen an image giving a parameter.',
         'effect callback' => 'filtersie_sharpen_effect',
