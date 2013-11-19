@@ -301,8 +301,8 @@ $linkcolor: #990000;
 }
 
 .page-news-news-center .pane-page-content > .pane-title {
-  margin-bottom: 35px;
-  top: 10px;
+  //margin-bottom: 35px; Bug #8525 fixes
+  //top: 10px; Bug #8525 fixes
 }
 
 .links{
