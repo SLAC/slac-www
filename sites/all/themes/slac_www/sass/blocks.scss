@@ -13,6 +13,10 @@ $linkcolor: #990000;
   @include box-sizing(border-box);
 }
 
+.field-name-field-slideshow-txtlr-slide .field-slideshow-image-caption {
+  float: right
+}
+
 
 .field-name-field-slideshow-txtlr-slide .field-slideshow-text-left-right-wrapper{
   height: auto;
