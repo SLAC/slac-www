@@ -141,7 +141,7 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'news_thumbnail_headlines_center',
+    'image_style' => 'frontpage-headline',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_image']['group_rows'] = FALSE;
@@ -204,7 +204,7 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'news_thumbnail_headlines_center',
+    'image_style' => 'frontpage-headline-secondary',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_image']['delta_limit'] = '1';
