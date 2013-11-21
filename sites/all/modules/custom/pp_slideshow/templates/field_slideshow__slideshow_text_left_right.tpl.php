@@ -43,7 +43,13 @@ if (!isset($pager_position)) {
             </div>
           <?php endif; ?>
         </div>
-        <div class="field-slideshow-image-caption">
+        <div class="field-slideshow-image-caption" 
+        <?php if (isset($item['field_fcollection_txtposition'][LANGUAGE_NONE])): ?> style="float:<?php 
+        	if (($item['field_fcollection_txtposition'][LANGUAGE_NONE][0]['value']) == 'left') {
+        		print "right";
+        	} else {
+        		print 'left';
+        	}?>"<?php endif;?>>
           <?php print $item['image']; ?>
         </div>
 
