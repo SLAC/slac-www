@@ -98,8 +98,14 @@ $linkcolor: #990000;
 
 @media (max-width: 710px){
   .html .slider .field-slideshow-description{
-    display: none;
+    //display: none;
   }
+  
+  .field-name-field-slideshow-txtlr-slide .field-slideshow-body {
+    padding: 17px
+  }
+  
+  
 }
 
 @media (max-width: 700px){
@@ -107,6 +113,26 @@ $linkcolor: #990000;
     font-size: 18px;
   }
 }
+
+
+
+
+
+@media (max-width: 680px){
+  .html .slider .field-slideshow-caption a {
+    font-size: 14px;
+    font-weight: bold
+    
+  }
+  .field-slideshow-caption {
+    line-height: 1;
+    margin-bottom: 5px
+  }
+  
+
+  
+}
+
 
 @media (max-width: 600px){
 
@@ -164,9 +190,16 @@ $linkcolor: #990000;
     }
 
     .field-slideshow-description{
-      display:none;
+      //display:none;
     }
   } 
+  
+  .html .slider .field-slideshow-description, 
+  .html .slider .field-slideshow-description a {
+    color: #000  
+  }  
+
+  
 }
 
 /* Pager items. */

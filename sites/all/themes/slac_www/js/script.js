@@ -153,7 +153,7 @@
 				} else{
 					slider.css({
 						'width':'100%',
-						'height':h+82
+						'height':h+110
 					})
 				//.find('.field-slideshow-image-caption').css({'height':'100%'});
 				}
