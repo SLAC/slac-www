@@ -260,11 +260,11 @@ function theme_image_style_lightbox($variables) {
 
   $style = 'lightbox_large_image';
   $new_image_url = '';
-  $derivative_url = image_style_url($style, $file->uri);
-  $success = file_exists($derivative_url) || image_style_create_derivative($style, $file->uri, $derivative_url);
+  $derivative_uri = image_style_path($style, $file->uri);
+  $success = file_exists($derivative_uri) || image_style_create_derivative($style, $file->uri, $derivative_uri);
 
   if (!$success) {
-    $new_image_url = file_create_url($derivative_url);
+    $new_image_url = file_create_url($derivative_uri);
   }
 
   // Download path is provided by Download File module.
