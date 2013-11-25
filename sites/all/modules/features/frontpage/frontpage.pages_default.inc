@@ -334,7 +334,11 @@ function frontpage_default_page_manager_pages() {
     $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'header_link_title' => 'Header link',
+        'header_link' => 'http://www.slac.loc/news/news-center.aspx',
+      ),
+      'style' => 'header_link',
     );
     $pane->css = array(
       'css_id' => '',
