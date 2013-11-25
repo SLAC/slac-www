@@ -1646,6 +1646,9 @@ a.imageLessButton {
   }
 }
 
+
+
+
 @media (min-width: 501px){
   .page-basic > .panel-panel{
     margin: 0 auto;
@@ -2412,5 +2415,26 @@ a.imageLessButton {
   .pane-bundle-slideshow-text-left-right .field-slideshow-text-left-right-wrapper {
     height: auto !important;
   }
+}
+
+
+//Responsive 480px
+//-------------------------------------------------------------------------
+@media (max-width: 480px) {
+  .page-basic{
+
+    .header img{
+      margin: 13px 0;
+      width: 100px;
+
+     }  
+     
+    .pane-pane-header {
+  
+      background-position: 150px center;
+  
+    }     
+     
+   }
 }
 
