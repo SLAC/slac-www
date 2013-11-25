@@ -346,38 +346,6 @@ return $arg;
   $handler->display->display_options['pane_category']['name'] = 'News Center';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
-  /* Display: Page author */
-  $handler = $view->new_display('panel_pane', 'Page author', 'panel_pane_4');
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Page author */
-  $handler->display->display_options['fields']['field_page_author']['id'] = 'field_page_author';
-  $handler->display->display_options['fields']['field_page_author']['table'] = 'field_data_field_page_author';
-  $handler->display->display_options['fields']['field_page_author']['field'] = 'field_page_author';
-  $handler->display->display_options['fields']['field_page_author']['label'] = '';
-  $handler->display->display_options['fields']['field_page_author']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_page_author']['alter']['text'] = 'By [field_page_author]';
-  $handler->display->display_options['fields']['field_page_author']['element_label_colon'] = FALSE;
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['pane_category']['name'] = 'News Center';
-  $handler->display->display_options['pane_category']['weight'] = '0';
-
   /* Display: Article-news images */
   $handler = $view->new_display('panel_pane', 'Article-news images', 'panel_pane_5');
   $handler->display->display_options['defaults']['query'] = FALSE;

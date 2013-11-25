@@ -134,11 +134,21 @@ function slac_article_news_page_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'news_center-panel_pane_4';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_page_author';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'news_author',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

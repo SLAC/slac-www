@@ -5,3 +5,32 @@
  */
 
 include_once 'slac_migrate_article_news.features.inc';
+
+/**
+ * Implements hook_article_news_field_formatter_info().
+ */
+function slac_migrate_article_news_field_formatter_info() {
+  return array(
+    'news_author' => array(
+      'label' => t('News Article Page Author'),
+      'field types' => array('text'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function slac_migrate_article_news_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  if ($display['type'] != 'news_author') {
+    return $element;
+  }
+
+  foreach ($items as $delta => $item) {
+    $element[$delta] = array('#markup' => '<div class="views-field-field-page-author">' . t('By @author', array('@author' => $item['value'])) . '</div>');
+  }
+
+  return $element;
+}
