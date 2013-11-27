@@ -1993,11 +1993,26 @@ a.imageLessButton {
   .page-node-1231 .section-navigation-block {
     display: none;
   }
-  .front .middletop .pane-title{
+  .front .middletop .pane-title {
     background-image: url('../images/headliner-arrow.png');
     background-position: right center;
     background-repeat: no-repeat;
   }
+
+  .front .middletop .pane-last-story-panel-pane-1 .pane-title {
+    background: none;
+
+    
+    a {
+      background:#999 url('../images/headliner-arrow.png') no-repeat right center;   
+      color: #fff;
+      margin: 0 -3.7% 20px;
+      padding: 6px 3.7% 5px;
+      width: 100%;      
+      display: block;
+    }
+  }
+
 
   .video-block .youtube-thumbnail:after{
     bottom: 7px;
