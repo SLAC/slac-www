@@ -31,7 +31,7 @@ function theme_panels_header_link_style_render_pane($vars) {
     }
     $header_link = array(
       '#type' => 'link',
-      '#title' => $link_title,
+      '#title' => $content->title,
       '#href' => $settings['header_link'],
       '#options' => array(
         'html' => TRUE,
@@ -46,8 +46,7 @@ function theme_panels_header_link_style_render_pane($vars) {
     return;
   }
 
-  // Add link after title.
-  $content->title = $content->title . drupal_render($header_link);
+  $content->title = drupal_render($header_link);
 
   $output = theme(
     'panels_pane',
