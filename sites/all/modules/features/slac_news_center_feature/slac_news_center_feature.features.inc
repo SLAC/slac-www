@@ -81,7 +81,7 @@ function slac_news_center_feature_image_default_styles() {
         'module' => 'filtersie',
         'name' => 'filtersie_sharpen',
         'data' => array(
-          'sharpenlevel' => 40,
+          'sharpenlevel' => 20,
         ),
         'weight' => 2,
       ),
