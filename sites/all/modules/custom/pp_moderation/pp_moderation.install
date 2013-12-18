@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function pp_moderation_schema() {
+
+  $schema['workbench_moderation_fpp_history'] = array(
+    'fields' => array(
+      'hid' => array(
+        'description' => 'FPP history entry key.',
+        'type' => 'serial',
+        'not null' => TRUE
+      ),
+      'vid' => array(
+        'description' => 'FPP revision id. Foreign key to {fieldable_panels_panes_revision}',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'disp-width' => '10',
+      ),
+      'fpid' => array(
+        'description' => 'FPP id. Foreign key to {fieldable_panels_panes}',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'disp-width' => '10',
+      ),
+      'from_state' => array(
+        'description' => 'The old moderation state of the FPP',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => FALSE,
+      ),
+      'state' => array(
+        'description' => 'The current moderation state of the FPP.',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => FALSE,
+      ),
+      'uid' => array(
+        'description' => 'The user id of the moderator who made the change. Foreign key to {users}.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'disp-width' => '10',
+      ),
+      'stamp' => array(
+        'description' => 'The timestamp of the change.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'disp-width' => '10',
+      ),
+      'published' => array(
+        'description' => 'Indicated the live revision of a node.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'disp-width' => '10',
+      ),
+      'current' => array(
+        'description' => 'Indicated the current revision of a node.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'disp-width' => '10',
+      ),
+    ),
+    'primary key' => array('hid'),
+    'indexes' => array(
+      'fpid' => array('fpid'),
+      'vid' => array('vid'),
+    ),
+//    'foreign_keys' => array(
+//      'nid' => array('node' => 'nid'),
+//      'vid' => array('node_revision' => 'vid'),
+//      'uid' => array('users' => 'uid'),
+//    ),
+  );
+
+  return $schema;
+}

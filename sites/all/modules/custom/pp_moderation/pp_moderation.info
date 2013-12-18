@@ -1,0 +1,7 @@
+name = PP Moderation
+description = Integration of panelizer and workbench moderation.
+package = Propeople
+core = 7.x
+configure = admin/config/workbench/settings
+dependencies[] = workbench_moderation
+dependencies[] = panelizer

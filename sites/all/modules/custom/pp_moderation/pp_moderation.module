@@ -1,0 +1,276 @@
+<?php
+
+/**
+ * Publish latest draft version of the FPP when node's draft is published
+ * Delete all history records on entity delete hook.
+ *
+ * Scenario: create page, publish, create node's draft, edit fpp, edit fpp, publish node's draft
+ */
+
+define('PP_MODERATION_ENTITY', 'fieldable_panels_pane');
+
+/**
+ * Implements hook_menu().
+ */
+function pp_moderation_menu() {
+  $items['node/%node/create-draft'] = array(
+    'title' => 'Create draft',
+    'description' => 'Create draft of the node',
+    'page callback' => 'pp_moderation_create_draft_page_callback',
+    'page arguments' => array(1),
+    'access callback' => 'pp_moderation_create_draft_access_callback',
+    'access arguments' => array(1),
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'pp_moderation.pages.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Access callback for Create Draft action.
+ */
+function pp_moderation_create_draft_access_callback($node) {
+  if (!node_access('update', $node)) {
+    return FALSE;
+  }
+  
+  return !_workbench_moderation_access_current_draft($node);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter form fieldable_panels_panes_entity_edit_form.
+ */
+function pp_moderation_form_fieldable_panels_panes_entity_edit_form_alter(&$form, &$form_state) {
+  if (!isset($form['revision'])) {
+    return;
+  }
+  $form['revision']['log']['#type'] = 'value';
+  $form['revision']['revision']['#type'] = 'value';
+}
+
+/**
+ * Implements hook_menu_contextual_links_alter().
+ *
+ * Do not allow editing FPP from Published node view page.
+ */
+function pp_moderation_menu_contextual_links_alter(&$links, $router_item, $root_path) {
+  if (strpos($root_path, 'admin/structure/fieldable-panels-panes/view') !== 0) {
+    return;
+  }
+
+  if (!_pp_moderation_is_current_path_draft()) {
+    $links = array();
+  }
+}
+
+/**
+ * Implements hook_entity_load().
+ */
+function pp_moderation_entity_load(&$entities, $entity_type) {
+  if ($entity_type != PP_MODERATION_ENTITY) {
+    return;
+  }
+
+  foreach ($entities as &$entity) {
+    // Substitute original entity with its latest draft version.
+    if (_pp_moderation_is_current_path_draft() || _pp_moderation_is_current_path_moderation_tab() || _pp_moderation_is_current_path_fpp_edit()) {
+      $vid = _pp_moderation_fpp_get_current_draft($entity);
+      if (!empty($vid) && $vid != $entity->vid) {
+        $entity_load_result = entity_load(PP_MODERATION_ENTITY, array($entity->fpid), array('vid' => $vid));
+        $entity = reset($entity_load_result);
+      }
+    }
+    // Add the fpp history
+    pp_moderation_add_default_history_record($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function pp_moderation_entity_insert($entity, $entity_type) {
+  if ($entity_type != PP_MODERATION_ENTITY) {
+    return;
+  }
+
+  $entity->workbench_moderation = array(
+    'published' => 1,
+    'current' => 1,
+  );
+
+  _pp_moderation_write_history_record($entity);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function pp_moderation_entity_update($entity, $entity_type) {
+  if ($entity_type != PP_MODERATION_ENTITY) {
+    return;
+  }
+
+  // As we update same entity because we need to keep previously published
+  // revision to be active we need to avoid recursive execution of the
+  // hook_entity_update for the same entity.
+  $static_entities = &drupal_static(__FUNCTION__, array());
+  if (isset($static_entities[$entity->fpid])) {
+    return;
+  }
+  $static_entities[$entity->fpid] = TRUE;
+
+//  if (_pp_moderation_is_no_history_records_exist($entity)) {
+//    $entity->workbench_moderation['published'] = 1;
+//  }
+
+  unset($entity->workbench_moderation);
+  pp_moderation_add_default_history_record($entity);
+
+  // @TODO Change the state and published flag in case Node got published.
+  $entity->workbench_moderation['state'] = workbench_moderation_state_none();
+
+  _pp_moderation_write_history_record($entity);
+}
+
+/**
+ * Implements hook_entity_delete()
+ */
+function pp_moderation_entity_delete($entity, $entity_type) {
+  if ($entity_type != PP_MODERATION_ENTITY) {
+    return;
+  }
+
+  db_query('DELETE FROM {workbench_moderation_fpp_history} WHERE fpid = :fpid', array(':fpid' => $entity->fpid));
+}
+
+/**
+ * Implements hook_workbench_moderation_transition().
+ */
+function pp_moderation_workbench_moderation_transition($node, $old_state, $new_state) {
+  // Skip not panelized nodes.
+  if (!isset($node->panelizer['default'])) {
+    return;
+  }
+
+  if ($new_state != workbench_moderation_state_published()) {
+    return;
+  }
+
+  foreach ($node->panelizer['default']->display->content as $pane) {
+    if ($pane->type == PP_MODERATION_ENTITY) {
+      list(, $fpid) = explode(':', $pane->subtype);
+      _pp_moderation_publish_fpp($fpid);
+    }
+  }
+}
+
+/**
+ * Publish current draft version of the FPP.
+ */
+function _pp_moderation_publish_fpp($fpid) {
+  $entity_load_result = entity_load(PP_MODERATION_ENTITY, array($fpid));
+  $entity = reset($entity_load_result);
+  _pp_moderation_write_history_record($entity);
+}
+
+/**
+ * Add workbench information to the entity.
+ */
+function pp_moderation_add_default_history_record($entity) {
+  if (!isset($entity->workbench_moderation)) {
+    $entity->workbench_moderation = array();
+  }
+
+  $entity->workbench_moderation += array(
+    'hid' => NULL,
+    'fpid' => $entity->fpid,
+    'vid' => $entity->vid,
+    'from_state' => workbench_moderation_state_none(),
+    'state' => workbench_moderation_state_published(),
+    'stamp' => REQUEST_TIME,
+    'current' => 1,
+    'published' => 0,
+  );
+}
+
+/**
+ * Return latest draft version of the entity.
+ */
+function _pp_moderation_fpp_get_current_draft($entity) {
+  return db_query('SELECT vid FROM {workbench_moderation_fpp_history} WHERE fpid = :fpid AND current = 1', array(':fpid' => $entity->fpid))->fetchField();
+}
+
+/**
+ * Update records about entity being saved.
+ */
+function _pp_moderation_write_history_record($entity) {
+  pp_moderation_add_default_history_record($entity);
+
+  $record = $entity->workbench_moderation;
+
+  if ($record['current']) {
+    db_query('UPDATE {workbench_moderation_fpp_history} SET current = 0 WHERE fpid = :fpid', array(':fpid' => $record['fpid']));
+  }
+
+  if ($record['published']) {
+    db_query('UPDATE {workbench_moderation_fpp_history} SET published = 0 WHERE fpid = :fpid', array(':fpid' => $record['fpid']));
+  }
+  drupal_write_record('workbench_moderation_fpp_history', $record);
+
+  $published_entity = _pp_moderation_get_published_fpp($entity->fpid);
+
+  // Borrowed from fieldable_panels_panes_entity_make_current_page($entity).
+  // Keep previously published revision to be active.
+  module_load_include('inc', 'fieldable_panels_pane', 'includes/admin');
+  fieldable_panels_panes_save($published_entity);
+}
+
+function _pp_moderation_get_published_fpp($fpid) {
+  $published_vid = db_query('SELECT vid FROM {workbench_moderation_fpp_history} WHERE fpid = :fpid AND published = 1', array(':fpid' => $fpid))->fetchField();
+  $published_entity_result = entity_load(PP_MODERATION_ENTITY, array($fpid), array('vid' => $published_vid));
+  $published_entity = reset($published_entity_result);
+
+  return $published_entity;
+}
+
+/**
+ * Is current path is draft of the node or not.
+ *
+ * @return boolean.
+ */
+function _pp_moderation_is_current_path_draft() {
+  return arg(0) == 'node' && arg(2) == 'draft';
+}
+
+/**
+ * Is current path is moderation tab of the node.
+ *
+ * @return boolean.
+ */
+function _pp_moderation_is_current_path_moderation_tab() {
+  return arg(0) == 'node' && arg(2) == 'moderation';
+}
+
+/**
+ * Is current path is FPP edit page.
+ *
+ * @return boolean
+ */
+function _pp_moderation_is_current_path_fpp_edit() {
+  $current_path = current_path();
+  $arg5 = arg(5);
+
+  return (strpos($current_path, 'admin/structure/fieldable-panels-panes/view') === 0) && (strpos($arg5, 'edit') === 0);
+}
+
+/**
+ * Check if no existing history records available.
+ *
+ * @return boolean
+ */
+function _pp_moderation_is_no_history_records_exist($entity) {
+  $result = db_query('SELECT vid FROM {workbench_moderation_fpp_history} WHERE fpid = :fpid LIMIT 0,1', array(':fpid' => $entity->fpid))->fetchField();
+  return empty($result);
+}
