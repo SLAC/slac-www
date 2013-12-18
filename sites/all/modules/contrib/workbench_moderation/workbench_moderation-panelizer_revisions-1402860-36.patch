@@ -1,0 +1,134 @@
+diff --git a/workbench_moderation.module b/workbench_moderation.module
+index 3370981..d2d68e0 100644
+--- a/workbench_moderation.module
++++ b/workbench_moderation.module
+@@ -210,6 +210,93 @@ function workbench_moderation_menu_alter(&$items) {
+ }
+ 
+ /**
++ * Implements hook_entity_load().
++ *
++ * Hack for working with panelizer. Replace the loaded node by it's current
++ * version, when on panelizer editing pages.
++ */
++function workbench_moderation_entity_load(&$entities, $type) {
++  // Used to prevent infinite loop via the node_load we call later.
++  static $running = FALSE;
++
++  if ($running || $type != 'node' || strpos($_GET['q'], 'panelizer') === FALSE || _workbench_moderation_in_shutdown_mode()) {
++    return;
++  }
++
++  $running = TRUE;
++
++  // This is a panels IPE specific workaround to make sure that we load the
++  // correct corresponding revision when using the IPE on previous revisions.
++  if (strpos($_GET['q'], 'panels/ajax/ipe') !== FALSE && $urlparts = parse_url($_SERVER['HTTP_REFERER'])) {
++    $path = drupal_get_normal_path(trim($urlparts['path'], '/'));
++
++    // We are definitely working with a specific revision so let's use it
++    // instead of the latest.
++    // entity_id => revision_id
++    if (!arg(2, $path)) { // node/###
++      $tmp_node = reset($entities);
++      $vids = array($tmp_node->nid => $tmp_node->vid);
++    }
++    elseif (arg(2, $path) == 'revisions') { // node/###/revisions/###
++      $vids = array(arg(1, $path) => arg(3, $path));
++    }
++  }
++
++  // Load the latest when we are not dealing with a specific revision.
++  if(empty($vids)) {
++    // Look up the latest vid for the loaded nodes.
++    $query = db_select('node_revision', 'r');
++    $query->condition('r.nid', array_keys($entities))
++      ->orderBy('r.vid', 'DESC')
++      ->groupBy('nid')
++      ->fields('r', array('nid'))
++      ->addExpression('MAX(vid)', 'vid');
++
++    $vids = $query->execute()->fetchAllKeyed();
++  }
++
++  foreach ($entities as $entity_id => $entity) {
++    // Reload the current or specific revision of the node so that we have
++    // access to the panelizer information for the specified revision.
++    $entities[$entity_id] = node_load($entity_id, $vids[$entity_id]);
++
++    // Register our shutdown functions as if we were running workbench_moderation_moderate
++    // because otherwise anytime we click save on the IPE the latest revision
++    // will always replace the published version.
++    // @todo: I am not completely sure why I must wrap this conditional around
++    //        the shutdown functions and I am a little tired to go digging now.
++    //        But, we really should figure out why if it's necessary.
++    if (isset($vids[$entity_id]) && ($entity->vid != $vids[$entity_id])) {
++      if (!empty($entities[$entity_id]->workbench_moderation['published'])) {
++        drupal_register_shutdown_function('_workbench_moderation_in_shutdown_mode', TRUE);
++        drupal_register_shutdown_function('workbench_moderation_store', $entities[$entity_id]);
++      }
++    }
++  }
++
++  $running = FALSE;
++}
++
++/**
++ * Implements hook_form_alter().
++ *
++ * Alter the panelizer forms to create new revision as appropriate.
++ */
++function workbench_moderation_form_alter(&$form, $form_state, $form_id) {
++  if (preg_match('/^panelizer_/', $form_id) &&
++    !empty($form['revision_information']) &&
++    !empty($form_state['entity']) &&
++    $form_state['entity']->panelizer['page_manager']->entity_type == 'node') {
++    $form['revision_information']['revision']['#default_value'] = FALSE;
++    if (isset($form_state['entity']->workbench_moderation['published'])) {
++      if ($form_state['entity']->workbench_moderation['published']->vid == $form_state['entity']->workbench_moderation['current']->vid) {
++        $form['revision_information']['revision']['#default_value'] = TRUE;
++      }
++    }
++  }
++}
++
++/**
+  * Redirects 'node/%node/revisions' to node/%node/moderation
+  *
+  * workbench_moderation_menu_alter() changes the page callback
+@@ -1526,6 +1613,7 @@ function workbench_moderation_moderate($node, $state) {
+   // We do this in a shutdown function to avoid race conditions when
+   // running node_save() from within a node submission.
+   if (!empty($node->workbench_moderation['published'])) {
++    drupal_register_shutdown_function('_workbench_moderation_in_shutdown_mode', TRUE);
+     drupal_register_shutdown_function('workbench_moderation_store', $node);
+   }
+ 
+@@ -1535,6 +1623,27 @@ function workbench_moderation_moderate($node, $state) {
+ }
+ 
+ /**
++ * Register that we are in shutdown mode.
++ *
++ * @param boolean $update_status
++ *  Set the shutdown status. TRUE if we are in shutdown mode.
++ *
++ * @return
++ *  Boolean indicating if the shutdown mode has been activated.
++ */
++function _workbench_moderation_in_shutdown_mode($update_status = NULL) {
++  static $shutdown_mode = FALSE;
++
++  // Register the shutdown mode, and only change if we have not told it, that
++  // it is in shutdown mode.
++  if (isset($update_status) || !$shutdown_mode) {
++    $shutdown_mode = $update_status;
++  }
++
++  return $shutdown_mode;
++}
++
++/**
+  * Shutdown callback for saving a node revision.
+  *
+  * This function is called by drupal_register_shutdown_function().
