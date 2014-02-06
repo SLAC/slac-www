@@ -252,6 +252,16 @@ function slac_www_preprocess_pane_header(&$vars) {
 }
 
 /**
+ * Implements hook_preprocess_panels_pane().
+ */
+function slac_www_preprocess_panels_pane(&$vars) {
+  // Do not display titles of Landing pages. Needed for frontpage.
+  if (isset($vars['content']['metatags']['node:landing_page'])) {
+    $vars['title'] = '';
+  }
+}
+
+/**
  * This function add more classes for the header of table
  * 
  * @param string $vars 
