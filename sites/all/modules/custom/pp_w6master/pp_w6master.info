@@ -1,6 +1,4 @@
-name = OG:Tag importer
-description = Easily pull external urls with open graph tags into Drupal
+name = SLAC Master
+description = Consits of updateX functions for database free development.
 core = 7.x
-package = Others
-version = 7.x-1.0
-configure = admin/config/content/og_tag_importer
+package = SLAC
