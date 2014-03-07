@@ -16,14 +16,14 @@ define('PP_MODERATION_ENTITY', 'fieldable_panels_pane');
  * Implements hook_menu().
  */
 function pp_moderation_menu() {
-  $items['node/%node/create-draft'] = array(
-    'title' => 'Create draft',
+  $items['node/%node/new-draft'] = array(
+    'title' => 'New draft',
     'description' => 'Create draft of the node',
     'page callback' => 'pp_moderation_create_draft_page_callback',
     'page arguments' => array(1),
     'access callback' => 'pp_moderation_create_draft_access_callback',
     'access arguments' => array(1),
-    'type' => MENU_LOCAL_ACTION,
+    'type' => MENU_LOCAL_TASK,
     'file' => 'pp_moderation.pages.inc',
   );
 
@@ -31,9 +31,35 @@ function pp_moderation_menu() {
 }
 
 /**
+ * Implements hook_menu_alter().
+ */
+function pp_moderation_menu_alter(&$items) {
+  // Override the node edit menu item title.
+  $items['node/%node/edit']['access callback'] = 'pp_moderation_edit_tab_access';
+}
+
+/**
+ * Access callback for node/%node/edit menu item.
+ *
+ * 'access callback' => 'node_access',
+    'access arguments' => array('update', 1),
+ *
+ */
+function pp_moderation_edit_tab_access($operation, $node) {
+  if (!workbench_moderation_node_type_moderated($node->type)) {
+    return node_access($operation, $node);
+  }
+
+  return !pp_moderation_create_draft_access_callback($node);
+}
+
+/**
  * Access callback for Create Draft action.
  */
 function pp_moderation_create_draft_access_callback($node) {
+  if (!workbench_moderation_node_type_moderated($node->type)) {
+    return FALSE;
+  }
   if (!node_access('update', $node)) {
     return FALSE;
   }
