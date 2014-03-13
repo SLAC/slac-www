@@ -46,8 +46,12 @@ function pp_moderation_menu_alter(&$items) {
  *
  */
 function pp_moderation_edit_tab_access($operation, $node) {
+  if (!node_access($operation, $node)) {
+    return FALSE;
+  }
+
   if (!workbench_moderation_node_type_moderated($node->type)) {
-    return node_access($operation, $node);
+    return FALSE;
   }
 
   return !pp_moderation_create_draft_access_callback($node);
