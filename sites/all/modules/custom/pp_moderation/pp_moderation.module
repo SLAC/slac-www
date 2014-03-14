@@ -51,7 +51,7 @@ function pp_moderation_edit_tab_access($operation, $node) {
   }
 
   if (!workbench_moderation_node_type_moderated($node->type)) {
-    return FALSE;
+    return TRUE;
   }
 
   return !pp_moderation_create_draft_access_callback($node);
