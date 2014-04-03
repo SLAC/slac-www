@@ -42,7 +42,7 @@ function pp_moderation_menu_alter(&$items) {
  * Access callback for node/%node/edit menu item.
  *
  * 'access callback' => 'node_access',
-    'access arguments' => array('update', 1),
+ * 'access arguments' => array('update', 1),
  *
  */
 function pp_moderation_edit_tab_access($operation, $node) {
@@ -54,7 +54,11 @@ function pp_moderation_edit_tab_access($operation, $node) {
     return TRUE;
   }
 
-  return !pp_moderation_create_draft_access_callback($node);
+  if (in_array($node->type, variable_get('pp_moderation_landing_page_content_type', array('landing_page')))) {
+    return FALSE;
+  }
+
+  return !_workbench_moderation_access_current_draft($node);
 }
 
 /**
@@ -64,7 +68,12 @@ function pp_moderation_create_draft_access_callback($node) {
   if (!workbench_moderation_node_type_moderated($node->type)) {
     return FALSE;
   }
+
   if (!node_access('update', $node)) {
+    return FALSE;
+  }
+
+  if (!in_array($node->type, variable_get('pp_moderation_landing_page_content_type', array('landing_page')))) {
     return FALSE;
   }
   
