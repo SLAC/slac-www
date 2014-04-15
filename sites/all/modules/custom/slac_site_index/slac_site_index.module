@@ -39,7 +39,7 @@ function slac_site_index_form($form, &$form_state) {
   }
   else {
     variable_del('site_index_file_fid');
-    variable_del('site_index_block_html');
+//    variable_del('site_index_block_html');
   }
 
   $form['file'] = array(
