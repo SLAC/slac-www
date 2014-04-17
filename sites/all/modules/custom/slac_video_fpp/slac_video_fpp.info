@@ -1,6 +1,0 @@
-name = SLAC Video FPP
-description = Provide new bundle for FPP
-package = Propeople
-core = 7.x
-
-dependencies[] = fieldable_panels_panes

@@ -1,5 +1,0 @@
-name = Features Annoyment
-description = An annoying module telling developers to keep features in default state.
-package = Features
-core = 7.x
-dependencies[] = features

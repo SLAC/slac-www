@@ -1,6 +1,0 @@
-name = SLAC Blog Test Content
-description = Test content for Blog
-package = Propeople
-core = 7.x
-
-dependencies[] = dblog
