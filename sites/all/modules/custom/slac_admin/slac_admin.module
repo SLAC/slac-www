@@ -75,3 +75,11 @@ function slac_admin_ctools_task_handler_default_contextual_link_alter(&$links) {
     $links = array();
   }
 }
+
+/**
+ * Implements hook_menu_alter().
+ */
+function slac_admin_menu_alter(&$items) {
+  $items['user/password']['access callback'] = FALSE;
+  $items['user/register']['access callback'] = FALSE;
+}
