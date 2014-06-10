@@ -58,6 +58,10 @@ function pp_moderation_edit_tab_access($operation, $node) {
     return FALSE;
   }
 
+  if (isset($node->workbench_moderation['current']->published) && !$node->workbench_moderation['current']->published) {
+    return _workbench_moderation_access_current_draft($node);
+  }
+
   return !_workbench_moderation_access_current_draft($node);
 }
 
