@@ -54,9 +54,9 @@ function pp_moderation_edit_tab_access($operation, $node) {
     return TRUE;
   }
 
-  if (in_array($node->type, variable_get('pp_moderation_landing_page_content_type', array('landing_page')))) {
-    return FALSE;
-  }
+//  if (in_array($node->type, variable_get('pp_moderation_landing_page_content_type', array('landing_page')))) {
+//    return FALSE;
+//  }
 
   if (isset($node->workbench_moderation['current']->published) && !$node->workbench_moderation['current']->published) {
     return _workbench_moderation_access_current_draft($node);
