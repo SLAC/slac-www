@@ -181,6 +181,18 @@ function pp_moderation_entity_update($entity, $entity_type) {
     return;
   }
 
+  // Add file usage for new added files.
+  if (isset($entity->field_image['und']['0']['fid'])) {
+    $fids = array_map('_get_file_fid', $entity->field_image['und']);
+    $files = file_load_multiple($fids);
+    foreach ($files as $file) {
+      $usage = file_usage_list($file);
+      if (!isset($usage['pp_moderation'][$entity_type][$entity->fpid])) {
+        file_usage_add($file, 'pp_moderation', $entity_type, $entity->fpid);
+      }
+    }
+  }
+
   // As we update same entity because we need to keep previously published
   // revision to be active we need to avoid recursive execution of the
   // hook_entity_update for the same entity.
@@ -205,6 +217,18 @@ function pp_moderation_entity_update($entity, $entity_type) {
 function pp_moderation_entity_delete($entity, $entity_type) {
   if ($entity_type != PP_MODERATION_ENTITY) {
     return;
+  }
+
+  // Delete file usage when the entity is deleted.
+  if (isset($entity->field_image['und']['0']['fid'])) {
+    $fids = array_map('_get_file_fid', $entity->field_image['und']);
+    $files = file_load_multiple($fids);
+    foreach ($files as $file) {
+      $usage = file_usage_list($file);
+      if (isset($usage['pp_moderation'][$entity_type][$entity->fpid])) {
+        file_usage_delete($file, 'pp_moderation', $entity_type, $entity->fpid);
+      }
+    }
   }
 
   db_query('DELETE FROM {workbench_moderation_fpp_history} WHERE fpid = :fpid', array(':fpid' => $entity->fpid));
@@ -386,4 +410,8 @@ function _pp_moderation_is_current_path_fpp_edit() {
 function _pp_moderation_is_no_history_records_exist($entity) {
   $result = db_query('SELECT vid FROM {workbench_moderation_fpp_history} WHERE fpid = :fpid LIMIT 0,1', array(':fpid' => $entity->fpid))->fetchField();
   return empty($result);
+}
+
+function _get_file_fid($a) {
+  return $a['fid'];
 }
