@@ -61,7 +61,7 @@ function pp_moderation_edit_tab_access($operation, $node) {
   }
 
   // There is no draft revision. Current one is the published one.
-  if ($workbench['current']->vid == $workbench['my_revision']->vid) {
+  if ($workbench['current']->vid == $workbench['my_revision']->vid && in_array($node->type, variable_get('pp_moderation_landing_page_content_type', array('landing_page')))) {
     if (arg(0) == 'node' && arg(2) == 'edit') {
       drupal_set_message(t('Please create draft revision of this node first. !link.',
         array('!link' => l(t('Create revision'), 'node/' . $workbench['current']->nid . '/new-draft'))), 'error');
