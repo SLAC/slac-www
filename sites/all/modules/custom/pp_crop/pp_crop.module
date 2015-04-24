@@ -270,7 +270,7 @@ function theme_image_style_lightbox($variables) {
   $image_download_href = 'download/file/fid/' . $file->fid;
   $image_download_link = array(
     '#type' => 'link',
-    '#title' => t('Download original image'),
+    '#title' => t('Download image'),
     '#href' => $image_download_href,
     '#options' => array(
       'html' => TRUE,
