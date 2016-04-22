@@ -19,6 +19,7 @@ function _webform_defaults_fieldset() {
       'collapsible' => 0,
       'collapsed' => 0,
       'description' => '',
+      'description_above' => FALSE,
       'private' => FALSE,
     ),
   );
@@ -51,7 +52,7 @@ function _webform_edit_fieldset($component) {
 /**
  * Implements _webform_render_component().
  */
-function _webform_render_fieldset($component, $value = NULL, $filter = TRUE) {
+function _webform_render_fieldset($component, $value = NULL, $filter = TRUE, $submission = NULL) {
   $node = isset($component['nid']) ? node_load($component['nid']) : NULL;
 
   $element = array(
@@ -71,17 +72,18 @@ function _webform_render_fieldset($component, $value = NULL, $filter = TRUE) {
 }
 
 /**
- * Pre-render function to set a fieldset ID.
+ * Pre-render function to set a unique fieldset class name.
  */
 function webform_fieldset_prerender($element) {
-  $element['#id'] = drupal_html_id('webform-component-' . str_replace('_', '-', implode('--', array_slice($element['#parents'], 1))));
+  $element['#id'] = NULL;
+  $element['#attributes']['class'][] = 'webform-component--' . str_replace('_', '-', implode('--', array_slice($element['#parents'], 1)));
   return $element;
 }
 
 /**
  * Implements _webform_display_component().
  */
-function _webform_display_fieldset($component, $value, $format = 'html') {
+function _webform_display_fieldset($component, $value, $format = 'html', $submission = array()) {
   if ($format == 'text') {
     $element = array(
       '#title' => $component['name'],
