@@ -65,6 +65,7 @@ function search_block_search_form($form, &$form_state) {
     '#prefix' => '<div id="slac-search-options">',
     '#suffix' => '</div></div>'
   );
+  $form['actions']['submit']['#validate'][] = 'search_block_search_form_validate';
   $form['#submit'] = array('search_block_search_form_submit');
 
   return $form;
@@ -84,4 +85,14 @@ function search_block_search_form_submit($form, &$form_state) {
   }
 
   $form_state['redirect'] = $redirect_url;
+}
+
+function search_block_search_form_validate($form, &$form_state) {
+  $term = $form_state['values']['keyword'];
+  if(empty($term)){
+    form_error($form, t('Search Term required'));
+  }
+  if(preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $term)){
+    form_error($form, t('Please enter a keyword or phrase that consists only of characters a-z or 0-9'));
+  }
 }
