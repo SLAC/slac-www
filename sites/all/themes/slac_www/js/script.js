@@ -24,7 +24,17 @@
 			$('#searchForm').submit(function(e) {
 				e.preventDefault();
 				var search_type = $('#searchForm input[name="searchType"]:checked').val();
-				var keyword = $('#searchForm #keyword').val();
+				var term = $('#searchForm #keyword').val();
+				var reg = /^[\w ]+$/;
+				if(!reg.test(term)) {
+					alert("Error: Input contains invalid characters!");
+					form.inputfield.focus();
+				} else {
+					var keyword = filter;
+				}
+
+				//var keyword = $('#searchForm #keyword').val();
+
 				// people search
 				if (search_type == 'people') {
 					var url = "http://www-public.slac.stanford.edu/phonebook/dirsearch.aspx?lf=1&url=&gone=active&NAME=" + keyword;
