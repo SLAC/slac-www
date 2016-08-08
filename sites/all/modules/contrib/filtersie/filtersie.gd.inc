@@ -68,7 +68,6 @@ function image_gd_filtersie_UnsharpMask(stdClass $image, $amount, $radius, $thre
   if ($radius == 0) {
     return $img;
     imagedestroy($img);
-    break;
   }
   $w = imagesx($img);
   $h = imagesy($img);

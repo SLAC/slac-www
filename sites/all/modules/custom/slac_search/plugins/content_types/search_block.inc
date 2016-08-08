@@ -92,7 +92,7 @@ function search_block_search_form_validate($form, &$form_state) {
   if(empty($term)){
     form_error($form, t('Search Term required'));
   }
-  if(preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $term)){
+  if(preg_match('/[\'^£$%&*()}{@#~?><>|=_+¬]/', $term)){
     form_error($form, t('Please enter a keyword or phrase that consists only of characters a-z or 0-9'));
   }
 }

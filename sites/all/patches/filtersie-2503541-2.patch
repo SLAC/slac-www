@@ -1,0 +1,12 @@
+diff --git a/filtersie.gd.inc b/filtersie.gd.inc
+index 27b20c7..8a5de27 100644
+--- a/filtersie.gd.inc
++++ b/filtersie.gd.inc
+@@ -68,7 +68,6 @@ function image_gd_filtersie_UnsharpMask(stdClass $image, $amount, $radius, $thre
+   if ($radius == 0) {
+     return $img;
+     imagedestroy($img);
+-    break;
+   }
+   $w = imagesx($img);
+   $h = imagesy($img);
