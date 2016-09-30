@@ -10,7 +10,8 @@
 function lectures_frontpage_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_body'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_body'.
   $field_instances['fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_body'] = array(
     'bundle' => 'scheduled_lecture',
     'default_value' => NULL,
@@ -44,7 +45,8 @@ function lectures_frontpage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_date'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_date'.
   $field_instances['fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_date'] = array(
     'bundle' => 'scheduled_lecture',
     'default_value' => NULL,
@@ -85,7 +87,8 @@ function lectures_frontpage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_dateav_text'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_dateav_text'.
   $field_instances['fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_dateav_text'] = array(
     'bundle' => 'scheduled_lecture',
     'default_value' => NULL,
@@ -118,7 +121,8 @@ function lectures_frontpage_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_nodate_text'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_nodate_text'.
   $field_instances['fieldable_panels_pane-scheduled_lecture-field_fpp_sched_lect_nodate_text'] = array(
     'bundle' => 'scheduled_lecture',
     'default_value' => NULL,

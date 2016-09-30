@@ -16,7 +16,10 @@ function slac_index_page_default_page_manager_pages() {
   $page->admin_title = 'Site Index';
   $page->admin_description = 'SLAC site index page.';
   $page->path = 'general/site-index.aspx';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -53,29 +56,33 @@ function slac_index_page_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Site Index';
+  $display->uuid = '25101d9d-1990-4d93-b6cb-f34dfb083b6b';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_slac_index_panel_context';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'middle';
-    $pane->type = 'index_block';
-    $pane->subtype = 'index_block';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'links-internal-external-icons',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+  $pane = new stdClass();
+  $pane->pid = 'new-98744506-f2fe-46ee-a119-08b608851572';
+  $pane->panel = 'middle';
+  $pane->type = 'index_block';
+  $pane->subtype = 'index_block';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'links-internal-external-icons',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '98744506-f2fe-46ee-a119-08b608851572';
+  $display->content['new-98744506-f2fe-46ee-a119-08b608851572'] = $pane;
+  $display->panels['middle'][0] = 'new-98744506-f2fe-46ee-a119-08b608851572';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

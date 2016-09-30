@@ -7,8 +7,7 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function lectures_poster_gallery_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function lectures_poster_gallery_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
@@ -17,7 +16,7 @@ function lectures_poster_gallery_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function lectures_poster_gallery_views_api() {
+function lectures_poster_gallery_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
@@ -29,16 +28,9 @@ function lectures_poster_gallery_image_default_styles() {
 
   // Exported image style: lecture_portrait.
   $styles['lecture_portrait'] = array(
-    'name' => 'lecture_portrait',
+    'label' => 'lecture_portrait',
     'effects' => array(
       28 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'retina_images_image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'retina_images_image_scale_form',
-        'summary theme' => 'retina_images_image_scale_summary',
-        'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
           'width' => 130,
@@ -52,16 +44,8 @@ function lectures_poster_gallery_image_default_styles() {
 
   // Exported image style: lectures_gallery_large.
   $styles['lectures_gallery_large'] = array(
-    'name' => 'lectures_gallery_large',
     'effects' => array(
       16 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 453,
@@ -70,6 +54,7 @@ function lectures_poster_gallery_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'lectures_gallery_large',
   );
 
   return $styles;

@@ -1,7 +1,6 @@
 name = SLAC misc configuration
 core = 7.x
 package = SLAC
-php = 5.2.4
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1

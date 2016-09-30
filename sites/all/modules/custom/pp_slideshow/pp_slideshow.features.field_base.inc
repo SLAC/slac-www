@@ -10,14 +10,13 @@
 function pp_slideshow_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_fcollection_bgcolor'
+  // Exported field_base: 'field_fcollection_bgcolor'.
   $field_bases['field_fcollection_bgcolor'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_bgcolor',
-    'foreign keys' => array(),
     'indexes' => array(
       'rgb' => array(
         0 => 'rgb',
@@ -39,21 +38,13 @@ function pp_slideshow_field_default_field_bases() {
     'type' => 'color_field_rgb',
   );
 
-  // Exported field_base: 'field_fcollection_description'
+  // Exported field_base: 'field_fcollection_description'.
   $field_bases['field_fcollection_description'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_description',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -66,21 +57,13 @@ function pp_slideshow_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_fcollection_image'
+  // Exported field_base: 'field_fcollection_image'.
   $field_bases['field_fcollection_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_image',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -96,14 +79,13 @@ function pp_slideshow_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_fcollection_link'
+  // Exported field_base: 'field_fcollection_link'.
   $field_bases['field_fcollection_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_link',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -126,21 +108,13 @@ function pp_slideshow_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_fcollection_title'
+  // Exported field_base: 'field_fcollection_title'.
   $field_bases['field_fcollection_title'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_title',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -155,14 +129,13 @@ function pp_slideshow_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_fcollection_txtposition'
+  // Exported field_base: 'field_fcollection_txtposition'.
   $field_bases['field_fcollection_txtposition'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fcollection_txtposition',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -181,14 +154,13 @@ function pp_slideshow_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_slideshow_btmtxt_slide'
+  // Exported field_base: 'field_slideshow_btmtxt_slide'.
   $field_bases['field_slideshow_btmtxt_slide'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slideshow_btmtxt_slide',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'field_collection',
@@ -200,14 +172,13 @@ function pp_slideshow_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_slideshow_txtlr_slide'
+  // Exported field_base: 'field_slideshow_txtlr_slide'.
   $field_bases['field_slideshow_txtlr_slide'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_slideshow_txtlr_slide',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'field_collection',

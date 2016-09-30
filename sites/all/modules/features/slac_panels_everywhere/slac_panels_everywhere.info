@@ -1,7 +1,6 @@
 name = SLAC panels everywhere
 core = 7.x
 package = SLAC
-php = 5.2.4
 version = 7.x-1.2
 project = slac_panels_everywhere
 dependencies[] = ctools

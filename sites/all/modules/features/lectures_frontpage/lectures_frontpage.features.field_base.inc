@@ -10,21 +10,13 @@
 function lectures_frontpage_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_fpp_sched_lect_body'
+  // Exported field_base: 'field_fpp_sched_lect_body'.
   $field_bases['field_fpp_sched_lect_body'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fpp_sched_lect_body',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -37,14 +29,13 @@ function lectures_frontpage_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_fpp_sched_lect_date'
+  // Exported field_base: 'field_fpp_sched_lect_date'.
   $field_bases['field_fpp_sched_lect_date'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fpp_sched_lect_date',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -67,21 +58,13 @@ function lectures_frontpage_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_fpp_sched_lect_dateav_text'
+  // Exported field_base: 'field_fpp_sched_lect_dateav_text'.
   $field_bases['field_fpp_sched_lect_dateav_text'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fpp_sched_lect_dateav_text',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -96,21 +79,13 @@ function lectures_frontpage_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_fpp_sched_lect_nodate_text'
+  // Exported field_base: 'field_fpp_sched_lect_nodate_text'.
   $field_bases['field_fpp_sched_lect_nodate_text'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fpp_sched_lect_nodate_text',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',

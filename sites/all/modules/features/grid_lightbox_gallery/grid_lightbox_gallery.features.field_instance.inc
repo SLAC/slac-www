@@ -10,7 +10,8 @@
 function grid_lightbox_gallery_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_media_collection-field_description'
+  // Exported field_instance:
+  // 'field_collection_item-field_media_collection-field_description'.
   $field_instances['field_collection_item-field_media_collection-field_description'] = array(
     'bundle' => 'field_media_collection',
     'default_value' => NULL,
@@ -50,7 +51,8 @@ function grid_lightbox_gallery_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_media_collection-field_image'
+  // Exported field_instance:
+  // 'field_collection_item-field_media_collection-field_image'.
   $field_instances['field_collection_item-field_media_collection-field_image'] = array(
     'bundle' => 'field_media_collection',
     'deleted' => 0,
@@ -103,7 +105,8 @@ function grid_lightbox_gallery_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_media_collection-field_title'
+  // Exported field_instance:
+  // 'field_collection_item-field_media_collection-field_title'.
   $field_instances['field_collection_item-field_media_collection-field_title'] = array(
     'bundle' => 'field_media_collection',
     'default_value' => NULL,
@@ -144,7 +147,8 @@ function grid_lightbox_gallery_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-grid_lightbox_gallery-field_media_collection'
+  // Exported field_instance:
+  // 'node-grid_lightbox_gallery-field_media_collection'.
   $field_instances['node-grid_lightbox_gallery-field_media_collection'] = array(
     'bundle' => 'grid_lightbox_gallery',
     'default_value' => NULL,

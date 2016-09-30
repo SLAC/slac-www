@@ -129,210 +129,219 @@ node/3480',
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->uuid = 'dcec3b92-4266-4699-8dab-3b932659e510';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view_panel_context';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Section navigation block',
-      'title' => '',
-      'body' => '<p>SECTION NAVIGATION</p>
+  $pane = new stdClass();
+  $pane->pid = 'new-fa4aae9e-7d3f-42ba-90d3-385e8ec22b0c';
+  $pane->panel = 'left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = FALSE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Section navigation block',
+    'title' => '',
+    'body' => '<p>SECTION NAVIGATION</p>
 ',
-      'format' => 'full_html',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'section-navigation-block',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'highlited left-menu',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'middle';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_image';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => '',
-        'image_link' => '',
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][0] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'middle';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:body';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['middle'][1] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_related_links';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'path_visibility',
-          'settings' => array(
-            'visibility_setting' => '0',
-            'paths' => 'node/1186',
-          ),
-          'context' => 'empty',
-          'not' => FALSE,
+    'format' => 'full_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'section-navigation-block',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'fa4aae9e-7d3f-42ba-90d3-385e8ec22b0c';
+  $display->content['new-fa4aae9e-7d3f-42ba-90d3-385e8ec22b0c'] = $pane;
+  $display->panels['left'][0] = 'new-fa4aae9e-7d3f-42ba-90d3-385e8ec22b0c';
+  $pane = new stdClass();
+  $pane->pid = 'new-6cb1c16b-ddee-46ae-8fe3-0c6ce07c7460';
+  $pane->panel = 'left';
+  $pane->type = 'block';
+  $pane->subtype = 'menu_block-2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'highlited left-menu',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '6cb1c16b-ddee-46ae-8fe3-0c6ce07c7460';
+  $display->content['new-6cb1c16b-ddee-46ae-8fe3-0c6ce07c7460'] = $pane;
+  $display->panels['left'][1] = 'new-6cb1c16b-ddee-46ae-8fe3-0c6ce07c7460';
+  $pane = new stdClass();
+  $pane->pid = 'new-08f63796-51bf-4c21-ba4f-b7e16b18572d';
+  $pane->panel = 'middle';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_image';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'image',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'image_style' => '',
+      'image_link' => '',
+    ),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '08f63796-51bf-4c21-ba4f-b7e16b18572d';
+  $display->content['new-08f63796-51bf-4c21-ba4f-b7e16b18572d'] = $pane;
+  $display->panels['middle'][0] = 'new-08f63796-51bf-4c21-ba4f-b7e16b18572d';
+  $pane = new stdClass();
+  $pane->pid = 'new-9d26cfd8-ed79-410a-a1ff-efbcdb6967a0';
+  $pane->panel = 'middle';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:body';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'text_default',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '9d26cfd8-ed79-410a-a1ff-efbcdb6967a0';
+  $display->content['new-9d26cfd8-ed79-410a-a1ff-efbcdb6967a0'] = $pane;
+  $display->panels['middle'][1] = 'new-9d26cfd8-ed79-410a-a1ff-efbcdb6967a0';
+  $pane = new stdClass();
+  $pane->pid = 'new-7994aa7b-0e68-4364-99cc-5d17d5b2c815';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_related_links';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '0',
+          'paths' => 'node/1186',
         ),
+        'context' => 'empty',
+        'not' => FALSE,
       ),
-    );
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'entityreference_entity_view',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'link' => 0,
-        'view_mode' => 'full',
-        'links' => 1,
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => 'Related links',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'highlited related-links links-internal-external-icons',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][0] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-10';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'path_visibility',
-          'settings' => array(
-            'visibility_setting' => '1',
-            'paths' => 'node/1204
+    ),
+  );
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'entityreference_entity_view',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'link' => 0,
+      'view_mode' => 'full',
+      'links' => 1,
+    ),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => 'Related links',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'highlited related-links links-internal-external-icons',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '7994aa7b-0e68-4364-99cc-5d17d5b2c815';
+  $display->content['new-7994aa7b-0e68-4364-99cc-5d17d5b2c815'] = $pane;
+  $display->panels['right'][0] = 'new-7994aa7b-0e68-4364-99cc-5d17d5b2c815';
+  $pane = new stdClass();
+  $pane->pid = 'new-933a619e-cb80-4162-a167-a9dfe4ea5572';
+  $pane->panel = 'right';
+  $pane->type = 'block';
+  $pane->subtype = 'menu_block-10';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'node/1204
 node/1186
 node/1215',
-          ),
-          'context' => 'empty',
-          'not' => FALSE,
         ),
+        'context' => 'empty',
+        'not' => FALSE,
       ),
-    );
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'highlited related-links',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['right'][1] = 'new-6';
+    ),
+  );
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'highlited related-links',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '933a619e-cb80-4162-a167-a9dfe4ea5572';
+  $display->content['new-933a619e-cb80-4162-a167-a9dfe4ea5572'] = $pane;
+  $display->panels['right'][1] = 'new-933a619e-cb80-4162-a167-a9dfe4ea5572';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

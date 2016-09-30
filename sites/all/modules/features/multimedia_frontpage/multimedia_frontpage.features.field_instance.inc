@@ -10,7 +10,7 @@
 function multimedia_frontpage_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'file-video-field_title'
+  // Exported field_instance: 'file-video-field_title'.
   $field_instances['file-video-field_title'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
@@ -125,12 +125,6 @@ function multimedia_frontpage_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'crop_frontpage-slideshow' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
       'crop_grid-lightbox-gallery-full-size' => array(
         'label' => 'above',
         'settings' => array(),
@@ -185,6 +179,12 @@ function multimedia_frontpage_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'crop_media_thumbnail' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_medium' => array(
         'label' => 'above',
         'settings' => array(),
@@ -198,12 +198,6 @@ function multimedia_frontpage_field_default_field_instances() {
         'weight' => 0,
       ),
       'crop_news_thumbnail_headlines_center' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'crop_square_thumbnail' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

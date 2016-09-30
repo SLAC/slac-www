@@ -10,7 +10,8 @@
 function slac_related_links_features_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-related_links-field_related_link'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-related_links-field_related_link'.
   $field_instances['fieldable_panels_pane-related_links-field_related_link'] = array(
     'bundle' => 'related_links',
     'default_value' => NULL,
@@ -30,6 +31,7 @@ function slac_related_links_features_field_default_field_instances() {
     'label' => 'Related Link',
     'required' => 1,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -43,6 +45,7 @@ function slac_related_links_features_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'required',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -58,7 +61,7 @@ function slac_related_links_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_related_links'
+  // Exported field_instance: 'node-page-field_related_links'.
   $field_instances['node-page-field_related_links'] = array(
     'bundle' => 'page',
     'default_value' => NULL,

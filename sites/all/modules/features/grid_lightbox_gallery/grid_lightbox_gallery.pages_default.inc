@@ -110,44 +110,48 @@ function grid_lightbox_gallery_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = 'e30809cb-c4df-49c2-9440-62ce2d6aa90d';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view_panel_context_2';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'center';
-    $pane->type = 'views';
-    $pane->subtype = 'Grid_Lightbox_Gallery_node';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 1,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block',
-      'context' => array(
-        0 => 'argument_entity_id:node_1.nid',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
+  $pane = new stdClass();
+  $pane->pid = 'new-a5940859-7609-4d31-a4d1-b61917feda67';
+  $pane->panel = 'center';
+  $pane->type = 'views';
+  $pane->subtype = 'Grid_Lightbox_Gallery_node';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '0',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 1,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'block',
+    'context' => array(
+      0 => 'argument_entity_id:node_1.nid',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'a5940859-7609-4d31-a4d1-b61917feda67';
+  $display->content['new-a5940859-7609-4d31-a4d1-b61917feda67'] = $pane;
+  $display->panels['center'][0] = 'new-a5940859-7609-4d31-a4d1-b61917feda67';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

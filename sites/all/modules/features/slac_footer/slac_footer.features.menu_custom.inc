@@ -29,6 +29,5 @@ function slac_footer_menu_default_menu_custom() {
   t('The <em>Management</em> menu contains links for administrative tasks.');
   t('The Footer Secondary Links is used to show links from the bottom side of site');
 
-
   return $menus;
 }

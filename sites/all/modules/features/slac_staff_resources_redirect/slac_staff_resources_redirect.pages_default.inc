@@ -15,7 +15,7 @@ function slac_staff_resources_redirect_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Staff-resources';
   $page->admin_description = '';
-  $page->path = 'general/staff-resources.aspx';
+  $page->path = 'general/obsolete-staff-resources.aspx';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();

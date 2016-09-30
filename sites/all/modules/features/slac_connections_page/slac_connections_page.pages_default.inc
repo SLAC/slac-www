@@ -70,126 +70,134 @@ function slac_connections_page_default_page_manager_handlers() {
   );
   $display->cache = array();
   $display->title = 'SLAC Public Lecture Series';
+  $display->uuid = 'c3566a99-d986-4a41-881c-e4e1682ad332';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view_panel_context_4';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'highlited left-menu',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'middle';
-    $pane->type = 'node_title';
-    $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 0,
-      'markup' => 'h1',
-      'id' => '',
-      'class' => '',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['middle'][0] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'middle';
-    $pane->type = 'node_body';
-    $pane->subtype = 'node_body';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][1] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'middle';
-    $pane->type = 'entity_field_extra';
-    $pane->subtype = 'node:webform';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['middle'][2] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'right';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'uuid:a9d568dd-8c5e-4bbb-b47f-0bc14b94580c';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'full',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'highlited related-links links-internal-external-icons',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][0] = 'new-5';
+  $pane = new stdClass();
+  $pane->pid = 'new-194d47f9-14e3-4aa1-8738-6a194eb07161';
+  $pane->panel = 'left';
+  $pane->type = 'block';
+  $pane->subtype = 'menu_block-2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'highlited left-menu',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '194d47f9-14e3-4aa1-8738-6a194eb07161';
+  $display->content['new-194d47f9-14e3-4aa1-8738-6a194eb07161'] = $pane;
+  $display->panels['left'][0] = 'new-194d47f9-14e3-4aa1-8738-6a194eb07161';
+  $pane = new stdClass();
+  $pane->pid = 'new-4a8b87aa-9d15-45cf-a228-a7b30e7eb090';
+  $pane->panel = 'middle';
+  $pane->type = 'node_title';
+  $pane->subtype = 'node_title';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'link' => 0,
+    'markup' => 'h1',
+    'id' => '',
+    'class' => '',
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '4a8b87aa-9d15-45cf-a228-a7b30e7eb090';
+  $display->content['new-4a8b87aa-9d15-45cf-a228-a7b30e7eb090'] = $pane;
+  $display->panels['middle'][0] = 'new-4a8b87aa-9d15-45cf-a228-a7b30e7eb090';
+  $pane = new stdClass();
+  $pane->pid = 'new-a115c7da-4e5a-406e-bb06-eda419e592d6';
+  $pane->panel = 'middle';
+  $pane->type = 'node_body';
+  $pane->subtype = 'node_body';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'a115c7da-4e5a-406e-bb06-eda419e592d6';
+  $display->content['new-a115c7da-4e5a-406e-bb06-eda419e592d6'] = $pane;
+  $display->panels['middle'][1] = 'new-a115c7da-4e5a-406e-bb06-eda419e592d6';
+  $pane = new stdClass();
+  $pane->pid = 'new-38df962d-111c-40ed-b66c-82350cece9af';
+  $pane->panel = 'middle';
+  $pane->type = 'entity_field_extra';
+  $pane->subtype = 'node:webform';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'view_mode' => 'full',
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '38df962d-111c-40ed-b66c-82350cece9af';
+  $display->content['new-38df962d-111c-40ed-b66c-82350cece9af'] = $pane;
+  $display->panels['middle'][2] = 'new-38df962d-111c-40ed-b66c-82350cece9af';
+  $pane = new stdClass();
+  $pane->pid = 'new-aa6bfd90-90d3-41cc-8713-72429be5fac7';
+  $pane->panel = 'right';
+  $pane->type = 'fieldable_panels_pane';
+  $pane->subtype = 'uuid:a9d568dd-8c5e-4bbb-b47f-0bc14b94580c';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'view_mode' => 'full',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'highlited related-links links-internal-external-icons',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'aa6bfd90-90d3-41cc-8713-72429be5fac7';
+  $display->content['new-aa6bfd90-90d3-41cc-8713-72429be5fac7'] = $pane;
+  $display->panels['right'][0] = 'new-aa6bfd90-90d3-41cc-8713-72429be5fac7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
