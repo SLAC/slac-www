@@ -71,31 +71,27 @@ function jw_player_requirements($phase) {
   $t = get_t();
 
   drupal_load('module', 'libraries');
-  $directory = libraries_get_path('jwplayer');
 
-  // Check the exisence of the JW Player Library
-  if ($phase == 'runtime') {
-    $errors = array();
-
-    $files = array('jwplayer.js');
-    if (variable_get('jw_player_version', 6) == 6) {
-      $files[] = 'jwplayer.html5.js';
-      $files[] = 'jwplayer.flash.swf';
+  $requirements['jw_player'] = array(
+    'title' => $t('JW Player'),
+    'severity' => REQUIREMENT_OK,
+  );
+  $info = libraries_detect('jwplayer');
+  if ($info['installed']) {
+    $requirements['jw_player']['value'] = t('Self-Hosted') . " (v{$info['version']})";
+    if (!($key = variable_get('jw_player_key', NULL))) {
+      $requirements['jw_player']['severity'] = REQUIREMENT_ERROR;
+      $requirements['jw_player']['description'] = t('Please configure your Self-Hosted Player License Key from the <a href="@url">JW Player settings page</a>.', array(
+        '@url' => url('admin/config/media/jw_player/settings'),
+      ));
     }
-    else {
-      $files[] = 'player.swf';
-    }
-    foreach ($files as $file) {
-      if (!file_exists($directory . '/' . $file)) {
-        $errors[] = $t('The file %file is not present in the directory %directory', array('%file' => $file, '%directory' => $directory));
-      }
-    }
-
-    $requirements['jw_player'] = array(
-      'title' => $t('JW Player'),
-      'value' => !empty($errors) ? theme('item_list', array('items' => $errors)) . $t('Please consult INSTALL.txt for installation instructions.') : $t('Installed correctly'),
-      'severity' => !empty($errors) ? REQUIREMENT_ERROR : REQUIREMENT_OK,
-    );
+  }
+  elseif ($account_token = variable_get('jw_player_account_token', false)) {
+    $requirements['jw_player']['value'] = t('Cloud-Hosted');
+  }
+  else {
+    $requirements['jw_player']['value'] = $t('Please consult README.txt for installation instructions.');
+    $requirements['jw_player']['severity'] = REQUIREMENT_ERROR;
   }
 
   return $requirements;

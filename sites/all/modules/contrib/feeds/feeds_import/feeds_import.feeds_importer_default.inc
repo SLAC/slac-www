@@ -91,8 +91,9 @@ function feeds_import_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsUserProcessor',
       'config' => array(
+        'bundle' => 'user',
         'roles' => array(),
-        'update_existing' => FALSE,
+        'update_existing' => 0,
         'status' => 1,
         'mappings' => array(
           0 => array(

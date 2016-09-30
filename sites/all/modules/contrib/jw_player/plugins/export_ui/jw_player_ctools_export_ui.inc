@@ -89,12 +89,20 @@ function jw_player_ctools_export_ui_form(&$form, &$form_state) {
     '#default_value' => isset($settings['mode']) ? $settings['mode'] : 'html5',
   );
 
+  $form['settings']['responsive'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Use a Responsive Design',
+    '#description' => 'Enable Responsive Design using a percentage based width and an aspect ratio.',
+    '#default_value' => $settings['responsive'],
+    '#weight' => 4.99,
+  );
+
   $form['settings']['width'] = array(
     '#type' => 'textfield',
     '#size' => 10,
     '#title' => t('Width'),
     '#description' => t('Enter the width for this player.'),
-    '#field_suffix' => ' ' . t('pixels'),
+    '#field_suffix' => ' ' . t('pixels or percentage'),
     '#default_value' => $settings['width'],
     '#required' => TRUE,
     '#weight' => 5,
@@ -109,6 +117,26 @@ function jw_player_ctools_export_ui_form(&$form, &$form_state) {
     '#default_value' => $settings['height'],
     '#required' => TRUE,
     '#weight' => 6,
+    '#states' => array(
+      'visible' => array(
+        ':input[name="settings[responsive]"]' => array('checked' => FALSE),
+      ),
+    ),
+  );
+
+  $form['settings']['aspectratio'] = array(
+    '#type' => 'textfield',
+    '#size' => 10,
+    '#title' => t('Aspect ratio'),
+    '#description' => t('Enter the aspect ratio for this player.'),
+    '#default_value' => isset($settings['aspectratio']) ? $settings['aspectratio'] : '16:9',
+    '#required' => TRUE,
+    '#weight' => 6,
+    '#states' => array(
+      'visible' => array(
+        ':input[name="settings[responsive]"]' => array('checked' => TRUE),
+      ),
+    ),
   );
 
   $form['settings']['controls'] = array(
@@ -238,7 +266,7 @@ function jw_player_ctools_export_ui_form(&$form, &$form_state) {
     '#title' => t('Autostart'),
     '#type' => 'checkbox',
     '#description' => t('Automatically start playing the video on page load. Can be true or false (default). Autostart does not work on mobile devices like iOS and Android.'),
-    '#default_value' => !empty($settings['autoplay']) ? $settings['autoplay']: FALSE,
+    '#default_value' => !empty($settings['autostart']) ? $settings['autostart']: FALSE,
     '#weight' => 4,
   );
 

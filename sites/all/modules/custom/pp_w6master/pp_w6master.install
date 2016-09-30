@@ -21,4 +21,18 @@ function pp_w6master_update_7001() {
   features_revert(array('pp_slideshow' => array('field_base', 'field_instance')));
   // Flush menu caches.
   menu_rebuild();
+
+}
+/**
+ * Delete {system} records for long-lost modules.
+ */
+function removed_modules_update_7100() {
+    $modules = array(
+        'metatag_facebook',
+        'frontpage',
+    );
+    db_delete('system')
+        ->condition('name', $modules, 'IN')
+        ->condition('type', 'module')
+        ->execute();
 }

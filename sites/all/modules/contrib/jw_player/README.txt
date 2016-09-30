@@ -17,18 +17,24 @@ Bug reports, feature suggestions and latest developments:
 
 -- INSTALLATION --
 
-* Download either the latest commercial or the latest non-commercial JW
-  Player at http://www.longtailvideo.com/players/jw-flv-player/.
-
-* Extract the zip file and put the contents of the extracted folder in
-  libraries/jwplayer. 
-  E.g.: sites/all/libraries/jwplayer or sites/<sitename>/libraries/jwplayer
-	
 * Install this module as described at http://drupal.org/node/895232.
+
+* For a Cloud-Hosted Player, visit admin/config/media/jw_player/settings and
+  configure your Cloud-Hosted Account Token.
+
+* For a Self-Hosted Player:
+
+  * Download the self-hosted version of JW Player from http://www.jwplayer.com/
+
+  * Extract the zip file and put the contents of the extracted folder in
+    libraries/jwplayer.
+    E.g.: sites/all/libraries/jwplayer or sites/<sitename>/libraries/jwplayer
+
+  * Visit admin/config/media/jw_player/settings and configure your Self-Hosted
+    Player License Key.
 
 * Go to Administration > Reports > Status reports (admin/reports/status) to
   check your configuration.
-
 
 -- BASIC USAGE --
 
