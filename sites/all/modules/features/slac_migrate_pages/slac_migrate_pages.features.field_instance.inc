@@ -10,7 +10,7 @@
 function slac_migrate_pages_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-body'
+  // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -73,7 +73,7 @@ function slac_migrate_pages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_image'
+  // Exported field_instance: 'node-page-field_image'.
   $field_instances['node-page-field_image'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -142,7 +142,7 @@ function slac_migrate_pages_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_page_keywords'
+  // Exported field_instance: 'node-page-field_page_keywords'.
   $field_instances['node-page-field_page_keywords'] = array(
     'bundle' => 'page',
     'default_value' => NULL,

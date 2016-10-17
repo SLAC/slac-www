@@ -7,16 +7,13 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function slac_migrate_article_news_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function slac_migrate_article_news_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "feeds" && $api == "feeds_importer_default") {
     return array("version" => "1");
   }
-  list($module, $api) = func_get_args();
   if ($module == "feeds_tamper" && $api == "feeds_tamper_default") {
     return array("version" => "2");
   }
-  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -30,15 +27,9 @@ function slac_migrate_article_news_image_default_styles() {
 
   // Exported image style: news_thumbnail_headlines_center.
   $styles['news_thumbnail_headlines_center'] = array(
-    'name' => 'news_thumbnail_headlines_center',
+    'label' => 'news_thumbnail_headlines_center',
     'effects' => array(
-      45 => array(
-        'label' => 'EPSA Image Crop',
-        'help' => '',
-        'dimensions callback' => 'epsacrop_crop_dimensions',
-        'effect callback' => 'epsacrop_crop_image',
-        'form callback' => 'epsacrop_crop_image_form',
-        'module' => 'epsacrop',
+      39 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 224,
@@ -53,14 +44,7 @@ function slac_migrate_article_news_image_default_styles() {
         ),
         'weight' => -10,
       ),
-      46 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'retina_images_image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'retina_images_image_resize_form',
-        'summary theme' => 'retina_images_image_resize_summary',
-        'module' => 'image',
+      40 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 224,
@@ -69,14 +53,7 @@ function slac_migrate_article_news_image_default_styles() {
         ),
         'weight' => -9,
       ),
-      47 => array(
-        'label' => 'Sharpen',
-        'help' => 'Sharpen an image giving a parameter.',
-        'effect callback' => 'filtersie_sharpen_effect',
-        'form callback' => 'filtersie_sharpen_form',
-        'summary theme' => 'filtersie_sharpen_summary',
-        'dimensions passthrough' => TRUE,
-        'module' => 'filtersie',
+      41 => array(
         'name' => 'filtersie_sharpen',
         'data' => array(
           'sharpenlevel' => 5,
@@ -103,5 +80,6 @@ function slac_migrate_article_news_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

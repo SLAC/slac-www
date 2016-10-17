@@ -10,14 +10,13 @@
 function slac_beans_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_block_bb_brochures'
+  // Exported field_base: 'field_block_bb_brochures'.
   $field_bases['field_block_bb_brochures'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_block_bb_brochures',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'field_collection',
@@ -29,14 +28,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_block_bb_content'
+  // Exported field_base: 'field_block_bb_content'.
   $field_bases['field_block_bb_content'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_block_bb_content',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'field_collection',
@@ -48,21 +46,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_block_bb_title'
+  // Exported field_base: 'field_block_bb_title'.
   $field_bases['field_block_bb_title'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_block_bb_title',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -77,14 +67,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_brochure_download_link'
+  // Exported field_base: 'field_brochure_download_link'.
   $field_bases['field_brochure_download_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_brochure_download_link',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -107,21 +96,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_brochure_image'
+  // Exported field_base: 'field_brochure_image'.
   $field_bases['field_brochure_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_brochure_image',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -137,21 +118,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_brochure_title'
+  // Exported field_base: 'field_brochure_title'.
   $field_bases['field_brochure_title'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_brochure_title',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -166,14 +139,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_content_block_background'
+  // Exported field_base: 'field_content_block_background'.
   $field_bases['field_content_block_background'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_content_block_background',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -191,21 +163,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_content_block_body'
+  // Exported field_base: 'field_content_block_body'.
   $field_bases['field_content_block_body'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_content_block_body',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -218,21 +182,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_content_block_image'
+  // Exported field_base: 'field_content_block_image'.
   $field_bases['field_content_block_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_content_block_image',
-    'foreign keys' => array(
-      'file_managed' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -245,14 +201,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'media',
   );
 
-  // Exported field_base: 'field_content_block_link'
+  // Exported field_base: 'field_content_block_link'.
   $field_bases['field_content_block_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_content_block_link',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -275,21 +230,13 @@ function slac_beans_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_content_block_subtitle'
+  // Exported field_base: 'field_content_block_subtitle'.
   $field_bases['field_content_block_subtitle'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_content_block_subtitle',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',

@@ -10,7 +10,7 @@
 function slac_feedback_webform_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-webform-field_form_page'
+  // Exported field_instance: 'node-webform-field_form_page'.
   $field_instances['node-webform-field_form_page'] = array(
     'bundle' => 'webform',
     'default_value' => NULL,

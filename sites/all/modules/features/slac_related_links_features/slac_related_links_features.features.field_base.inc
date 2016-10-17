@@ -10,14 +10,13 @@
 function slac_related_links_features_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_related_link'
+  // Exported field_base: 'field_related_link'.
   $field_bases['field_related_link'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_related_link',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -40,21 +39,13 @@ function slac_related_links_features_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_related_links'
+  // Exported field_base: 'field_related_links'.
   $field_bases['field_related_links'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_related_links',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',

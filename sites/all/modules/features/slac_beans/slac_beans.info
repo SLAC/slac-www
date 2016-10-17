@@ -1,7 +1,6 @@
 name = SLAC wysiwyg Blocks
 core = 7.x
 package = PP
-php = 5.2.4
 version = 7.x-1.2
 project = slac_beans
 dependencies[] = bean_admin_ui

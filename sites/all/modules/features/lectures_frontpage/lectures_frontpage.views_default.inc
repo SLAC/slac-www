@@ -262,8 +262,7 @@ function lectures_frontpage_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'date_ical';
   $handler->display->display_options['style_options']['uses_fields'] = TRUE;
   $handler->display->display_options['style_options']['cal_name'] = '';
-  $handler->display->display_options['style_options']['no_calname'] = 1;
-  $handler->display->display_options['style_options']['disable_webcal'] = 0;
+  $handler->display->display_options['style_options']['no_calname'] = TRUE;
   $handler->display->display_options['row_plugin'] = 'date_ical';
   $handler->display->display_options['row_options']['date_field'] = 'field_data_field_lecture_date.field_lecture_date_value';
   $handler->display->display_options['row_options']['summary_field'] = 'default_title';

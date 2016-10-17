@@ -14,9 +14,9 @@ project = "jw_player"
 datestamp = "1359162701"
 
 
-; Information added by drupal.org packaging script on 2013-04-23
-version = "7.x-2.x-dev"
+; Information added by Drupal.org packaging script on 2014-08-21
+version = "7.x-2.0-beta2"
 core = "7.x"
 project = "jw_player"
-datestamp = "1366723132"
+datestamp = "1408642729"
 

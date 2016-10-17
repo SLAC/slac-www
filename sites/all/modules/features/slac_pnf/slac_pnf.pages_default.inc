@@ -56,19 +56,22 @@ function slac_pnf_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'Page Not Found';
+  $display->uuid = '14c8b9b3-a873-4df5-bfd5-2d450a895aac';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_page_not_found_panel_context';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Page not found block',
-      'title' => '',
-      'body' => '<p>We&#39;re sorry, but the page you&#39;re looking for cannot be found. There may be several possible reasons:</p>
+  $pane = new stdClass();
+  $pane->pid = 'new-4607ac77-1da4-4b24-8bed-fb149c83b557';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Page not found block',
+    'title' => '',
+    'body' => '<p>We&#39;re sorry, but the page you&#39;re looking for cannot be found. There may be several possible reasons:</p>
 
 <ul class="regularul">
 	<li>the URL typed into the browser&#39;s address field is spelled incorrectly</li>
@@ -80,21 +83,22 @@ function slac_pnf_default_page_manager_pages() {
 
 <p>You will be redirected to the home page if there is no action taken in 15 seconds.</p>
 ',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '4607ac77-1da4-4b24-8bed-fb149c83b557';
+  $display->content['new-4607ac77-1da4-4b24-8bed-fb149c83b557'] = $pane;
+  $display->panels['middle'][0] = 'new-4607ac77-1da4-4b24-8bed-fb149c83b557';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-4607ac77-1da4-4b24-8bed-fb149c83b557';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['page_not_found'] = $page;

@@ -47,7 +47,7 @@ function slac_in_the_news_frontpage_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No In the News links available';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Field: Field: Link */
+  /* Field: Field: Source of link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -67,7 +67,7 @@ function slac_in_the_news_frontpage_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Field: Link */
+  /* Field: Field: Source of link */
   $handler->display->display_options['fields']['field_link_1']['id'] = 'field_link_1';
   $handler->display->display_options['fields']['field_link_1']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link_1']['field'] = 'field_link';
@@ -160,7 +160,7 @@ function slac_in_the_news_frontpage_views_default_views() {
 <a href="/admin/structure/in_the_news_archive">In the News Archive</a>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Link */
+  /* Field: Field: Source of link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -180,7 +180,7 @@ function slac_in_the_news_frontpage_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Field: Link */
+  /* Field: Field: Source of link */
   $handler->display->display_options['fields']['field_link_1']['id'] = 'field_link_1';
   $handler->display->display_options['fields']['field_link_1']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link_1']['field'] = 'field_link';
@@ -267,7 +267,7 @@ function slac_in_the_news_frontpage_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Link */
+  /* Field: Field: Source of link */
   $handler->display->display_options['fields']['field_link']['id'] = 'field_link';
   $handler->display->display_options['fields']['field_link']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link']['field'] = 'field_link';
@@ -287,7 +287,7 @@ function slac_in_the_news_frontpage_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Field: Link */
+  /* Field: Field: Source of link */
   $handler->display->display_options['fields']['field_link_1']['id'] = 'field_link_1';
   $handler->display->display_options['fields']['field_link_1']['table'] = 'field_data_field_link';
   $handler->display->display_options['fields']['field_link_1']['field'] = 'field_link';

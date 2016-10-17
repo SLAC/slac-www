@@ -77,82 +77,88 @@ function slac_footer_default_panels_mini() {
   );
   $display->cache = array();
   $display->title = '';
+  $display->uuid = 'be684907-bf4f-4ddf-a941-9dfd9dd73d81';
+  $display->storage_type = 'panels_mini';
+  $display->storage_id = 'footer';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'center';
-    $pane->type = 'block';
-    $pane->subtype = 'menu-menu-footer-menu';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '<none>',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'center';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Footer text',
-      'title' => '<none>',
-      'body' => '<p><span><b><a href="http://www.slac.stanford.edu">SLAC NATIONAL ACCELERATOR LABORATORY</a></b> 2575 Sand Hill Road, Menlo Park, CA 94025</span><br />
+  $pane = new stdClass();
+  $pane->pid = 'new-c55b37ec-0394-4f27-b210-4ad53a963675';
+  $pane->panel = 'center';
+  $pane->type = 'block';
+  $pane->subtype = 'menu-menu-footer-menu';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '<none>',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'c55b37ec-0394-4f27-b210-4ad53a963675';
+  $display->content['new-c55b37ec-0394-4f27-b210-4ad53a963675'] = $pane;
+  $display->panels['center'][0] = 'new-c55b37ec-0394-4f27-b210-4ad53a963675';
+  $pane = new stdClass();
+  $pane->pid = 'new-7412ec06-81ce-492d-852b-4f33f6e86e5a';
+  $pane->panel = 'center';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Footer text',
+    'title' => '<none>',
+    'body' => '<p><span><b><a href="http://www.slac.stanford.edu">SLAC NATIONAL ACCELERATOR LABORATORY</a></b> 2575 Sand Hill Road, Menlo Park, CA 94025</span><br />
 	<span>Operated by <a href="http://www.stanford.edu" target="_blank">Stanford University</a> for the <a href="http://science.energy.gov" target="_blank">U.S. Department of Energy Office of Science</a></span></p>
 ',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'footer_logo';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Footer logo',
-      'title' => '',
-      'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/all/themes/slac_www/images/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/all/themes/slac_www/images/doe-logo.png" /></a></p>
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '7412ec06-81ce-492d-852b-4f33f6e86e5a';
+  $display->content['new-7412ec06-81ce-492d-852b-4f33f6e86e5a'] = $pane;
+  $display->panels['center'][1] = 'new-7412ec06-81ce-492d-852b-4f33f6e86e5a';
+  $pane = new stdClass();
+  $pane->pid = 'new-874029d1-aee3-4bcc-a7b6-26067c9a735b';
+  $pane->panel = 'footer_logo';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Footer logo',
+    'title' => '',
+    'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/all/themes/slac_www/images/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/all/themes/slac_www/images/doe-logo.png" /></a></p>
 ',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['footer_logo'][0] = 'new-3';
+    'format' => 'full_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '874029d1-aee3-4bcc-a7b6-26067c9a735b';
+  $display->content['new-874029d1-aee3-4bcc-a7b6-26067c9a735b'] = $pane;
+  $display->panels['footer_logo'][0] = 'new-874029d1-aee3-4bcc-a7b6-26067c9a735b';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-c55b37ec-0394-4f27-b210-4ad53a963675';
   $mini->display = $display;
   $export['footer'] = $mini;
 

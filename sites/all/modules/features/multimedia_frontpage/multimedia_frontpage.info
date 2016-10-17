@@ -2,7 +2,6 @@ name = Multimedia frontpage
 description = FPP Multimedia from frontpage
 core = 7.x
 package = SLAC
-php = 5.2.4
 version = 7.x-1.4
 project = multimedia_frontpage
 dependencies[] = ctools

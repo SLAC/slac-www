@@ -10,7 +10,7 @@
 function slac_migrate_lectures_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-lecture-body'
+  // Exported field_instance: 'node-lecture-body'.
   $field_instances['node-lecture-body'] = array(
     'bundle' => 'lecture',
     'default_value' => NULL,
@@ -80,7 +80,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lecture-field_about_the_speaker'
+  // Exported field_instance: 'node-lecture-field_about_the_speaker'.
   $field_instances['node-lecture-field_about_the_speaker'] = array(
     'bundle' => 'lecture',
     'default_value' => NULL,
@@ -145,7 +145,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lecture-field_affiliations'
+  // Exported field_instance: 'node-lecture-field_affiliations'.
   $field_instances['node-lecture-field_affiliations'] = array(
     'bundle' => 'lecture',
     'default_value' => NULL,
@@ -209,7 +209,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lecture-field_image'
+  // Exported field_instance: 'node-lecture-field_image'.
   $field_instances['node-lecture-field_image'] = array(
     'bundle' => 'lecture',
     'deleted' => 0,
@@ -317,7 +317,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lecture-field_lecture_date'
+  // Exported field_instance: 'node-lecture-field_lecture_date'.
   $field_instances['node-lecture-field_lecture_date'] = array(
     'bundle' => 'lecture',
     'deleted' => 0,
@@ -332,6 +332,7 @@ function slac_migrate_lectures_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 2,
@@ -394,7 +395,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lecture-field_location'
+  // Exported field_instance: 'node-lecture-field_location'.
   $field_instances['node-lecture-field_location'] = array(
     'bundle' => 'lecture',
     'default_value' => NULL,
@@ -457,7 +458,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lecture-field_speaker_image'
+  // Exported field_instance: 'node-lecture-field_speaker_image'.
   $field_instances['node-lecture-field_speaker_image'] = array(
     'bundle' => 'lecture',
     'deleted' => 0,
@@ -561,7 +562,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lecture-field_speaker_name'
+  // Exported field_instance: 'node-lecture-field_speaker_name'.
   $field_instances['node-lecture-field_speaker_name'] = array(
     'bundle' => 'lecture',
     'default_value' => NULL,
@@ -626,7 +627,7 @@ function slac_migrate_lectures_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lecture-field_video'
+  // Exported field_instance: 'node-lecture-field_video'.
   $field_instances['node-lecture-field_video'] = array(
     'bundle' => 'lecture',
     'deleted' => 0,
@@ -636,6 +637,7 @@ function slac_migrate_lectures_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'jw_player',
         'settings' => array(
+          'check_support' => FALSE,
           'jwplayer_preset' => '528x400',
         ),
         'type' => 'jw_player',
