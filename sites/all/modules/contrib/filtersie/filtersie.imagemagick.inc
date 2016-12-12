@@ -32,7 +32,7 @@ function image_imagemagick_filtersie_convolution(stdClass $image, $matrix, $divi
  *
  * @param $img
  *   An image object. The $image->resource will be modified by this call.
- * @param $amount, $radius and $threshols
+ * @param $amount, $radius, $threshold, and $sigma
  *   @see http://en.wikipedia.org/wiki/Unsharp_masking#Digital_unsharp_masking
  * 
  * @return
@@ -44,8 +44,10 @@ function image_imagemagick_filtersie_convolution(stdClass $image, $matrix, $divi
  * @todo Figure out how to make gd and imagemagick implementations output the 
  * same result form the same inputs.
  */
-function image_imagemagick_filtersie_UnsharpMask(stdClass $image, $amount, $radius, $threshold) {
-  $sigma = 1;
+function image_imagemagick_filtersie_UnsharpMask(stdClass $image, $amount, $radius, $threshold, $sigma) {
+  if (image_get_toolkit() != 'imagemagick') {
+    $sigma = 1;
+  }
   $image->ops[] = '-unsharp ' . $radius . 'x' . $sigma . '+' . $amount / 100  . '+' . $threshold / 100;
   return TRUE;  
 }

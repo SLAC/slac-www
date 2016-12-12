@@ -16,14 +16,15 @@ function feeds_tamper_copy_form($importer, $element_key, $settings) {
   $form = $sources = array();
   $source_configs = $importer->parser->getMappingSources();
 
-  foreach ($importer->processor->config['mappings'] as $mapping) {
-    $source = $mapping['source'];
+  $normal = feeds_tamper_get_unique_source_list($importer, FALSE);
+  $lower = feeds_tamper_get_unique_source_list($importer, TRUE);
 
+  foreach (array_combine($normal, $lower) as $source => $mapsource) {
     if (isset($source_configs[$source]) && !empty($source_configs[$source]['name'])) {
-      $sources[$source] = $source_configs[$source]['name'];
+      $sources[$mapsource] = $source_configs[$source]['name'];
     }
     else {
-      $sources[$source] = $source;
+      $sources[$mapsource] = $source;
     }
   }
 

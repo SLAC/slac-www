@@ -46,5 +46,14 @@ function tablesorter_requirements($phase) {
  * Implements hook_uninstall().
  */
 function tablesorter_uninstall() {
-  variable_del('tablesorter_theme');
+
+  $variables = array(
+    'tablesorter_theme',
+    'tablesorter_zebra',
+    'tablesorter_zebra_odd_class',
+    'tablesorter_zebra_even_class',
+  );
+  foreach ($variables as $variable) {
+    variable_del($variable);
+  }
 }

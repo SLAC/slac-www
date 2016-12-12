@@ -7,9 +7,9 @@ dependencies[] = libraries
 
 scripts[] = tablesortervar.js
 
-; Information added by drupal.org packaging script on 2013-01-19
-version = "7.x-1.1"
+; Information added by Drupal.org packaging script on 2015-08-11
+version = "7.x-1.2"
 core = "7.x"
 project = "tablesorter"
-datestamp = "1358573881"
+datestamp = "1439279643"
 

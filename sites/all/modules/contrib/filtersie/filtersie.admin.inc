@@ -148,6 +148,18 @@ function filtersie_sharpenUSM_form($data) {
     '#element_validate' => array('filtersie_numericInput_validate'),
     '#allow_negative' => FALSE,
   );
+  if (image_get_toolkit() == 'imagemagick') {
+    $form['sigma'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Sigma'),
+      '#description' => t(''),
+      '#default_value' => isset($data['sigma']) ? $data['sigma'] : 1,
+      '#required' => TRUE,
+      '#size' => 3,
+      '#element_validate' => array('filtersie_numericInput_validate'),
+      '#allow_negative' => FALSE,
+    );
+  }
   return $form;
 }
 
