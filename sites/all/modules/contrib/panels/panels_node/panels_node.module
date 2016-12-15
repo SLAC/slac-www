@@ -423,7 +423,7 @@ function panels_node_panels_ipe_access($display) {
     // Only allow access to use the IPE if the user has 'update' access to
     // the underlying node.
     $node = $display->context['panel-node']->data;
-    return node_access('update', $node);
+    return node_access('update', $node); 
   }
 }
 

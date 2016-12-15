@@ -39,7 +39,7 @@ function image_gd_filtersie_convolution(stdClass $image, $matrix, $divisor, $off
  * @see http://en.wikipedia.org/wiki/Unsharp_masking 
  * @see http://vikjavev.no/computing/ump.php, author of this function.
  */
-function image_gd_filtersie_UnsharpMask(stdClass $image, $amount, $radius, $threshold) {
+function image_gd_filtersie_UnsharpMask(stdClass $image, $amount, $radius, $threshold, $sigma = NULL) {
 
   $img = $image->resource;
 

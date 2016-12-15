@@ -259,7 +259,7 @@ class panels_renderer_ipe extends panels_renderer_editor {
       // Break the lock.
       panels_edit_cache_break_lock($this->cache);
     }
-  }
+  } 
 
   function get_panels_storage_op_for_ajax($method) {
     switch ($method) {

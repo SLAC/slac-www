@@ -4,12 +4,11 @@ package = Media
 core = 7.x
 
 dependencies[] = image
+files[] = filtersie.test
 
-
-
-; Information added by drupal.org packaging script on 2012-01-04
-version = "7.x-1.0"
+; Information added by Drupal.org packaging script on 2016-03-20
+version = "7.x-1.2"
 core = "7.x"
 project = "filtersie"
-datestamp = "1325716840"
+datestamp = "1458470040"
 

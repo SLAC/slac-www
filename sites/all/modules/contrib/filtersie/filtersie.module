@@ -134,7 +134,8 @@ function filtersie_sharpen_effect(&$image, $data) {
  * @see filtersie_sharpen()
  */
 function filtersie_sharpenUSM_effect(&$image, $data) {
-  if (!filtersie_sharpenUSM($image, $data['amount'], $data['radius'], $data['threshold'])) {
+  $data = $data + array('sigma' => NULL);
+  if (!filtersie_sharpenUSM($image, $data['amount'], $data['radius'], $data['threshold'], $data['sigma'])) {
     watchdog('filtersie', 'Filters Image Effects sharpen USM technique failed using the %toolkit toolkit on %path (%mimetype, %dimensions)', array('%toolkit' => $image->toolkit, '%path' => $image->source, '%mimetype' => $image->info['mime_type'], '%dimensions' => $image->info['height'] . 'x' . $image->info['height']), WATCHDOG_ERROR);
     return FALSE;
   }
@@ -193,7 +194,7 @@ function filtersie_sharpen($image, $sharpenlevel) {
  *
  * @param $image
  *   An image object returned by image_load().
- * @param $amount, $radius and $threshols
+ * @param $amount, $radius, $threshold, and $sigma
  *   @see http://en.wikipedia.org/wiki/Unsharp_masking#Digital_unsharp_masking
  *
  * @return
@@ -202,8 +203,8 @@ function filtersie_sharpen($image, $sharpenlevel) {
  * @see image_load()
  * @see image_gd_filtersie_sharpen()
  */
-function filtersie_sharpenUSM($image, $amount, $radius, $threshold) {
-  return image_toolkit_invoke('filtersie_UnsharpMask', $image, array($amount, $radius, $threshold));
+function filtersie_sharpenUSM($image, $amount, $radius, $threshold, $sigma) {
+  return image_toolkit_invoke('filtersie_UnsharpMask', $image, array($amount, $radius, $threshold, $sigma));
 }
 
 /**
@@ -247,8 +248,12 @@ function theme_filtersie_sharpen_summary($variables) {
  */
 function theme_filtersie_sharpenUSM_summary($variables) {
   $data = $variables['data'];
+  $out = t('amount') . ': ' . check_plain($data['amount'])
+    . ' ' . t('radius') . ': ' . check_plain($data['radius'])
+    . ' ' . t('threshold') . ': ' . check_plain($data['threshold']);
+  if (image_get_toolkit() == 'imagemagick') {
+    $out .= ' ' . t('sigma') . ': ' . check_plain($data['sigma']);
+  }
 
-  return '(' . t('amount') . ': ' . check_plain($data['amount'])
-  . ' ' . t('radius') . ': ' . check_plain($data['radius'])
-  . ' ' . t('threshold') . ': ' . check_plain($data['threshold']) . ')';
+  return '(' . $out . ')';
 }

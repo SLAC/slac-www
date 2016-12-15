@@ -57,9 +57,29 @@ function tablesorter_form($form, &$form_state) {
       'blue' => t('Blue'),
       'green' => t('Green'),
     ),
-    '#default_value' => variable_get('tablesorter_theme', 'blue'),
+    '#default_value' => variable_get('tablesorter_theme', 'system'),
     '#description' => t('Set the theme for header.'),
     '#required' => TRUE,
+  );
+  $form['tablesorter_zebra'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Maintain zebra striping on tables'),
+    '#description' =>  t("Re-stripe table rows with 'odd', 'even' classes after sorting"),
+    '#default_value' => variable_get('tablesorter_zebra', 1),
+  );
+
+  $form['tablesorter_zebra_odd_class'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Odd row class'),
+    '#description' =>  t("Select the class added to odd rows.  Defaults to 'odd'"),
+    '#default_value' => variable_get('tablesorter_zebra_odd_class', 'odd'),
+  );
+
+  $form['tablesorter_zebra_even_class'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Even row class'),
+    '#description' =>  t("Select the class added to even rows.  Defaults to 'even'"),
+    '#default_value' => variable_get('tablesorter_zebra_even_class', 'even'),
   );
 
   return system_settings_form($form);
@@ -71,7 +91,17 @@ function tablesorter_form($form, &$form_state) {
 function tablesorter_init() {
   $path = libraries_get_path('tablesorter');
   drupal_add_js($path . '/jquery.tablesorter.min.js');
+  drupal_add_js($path . '/jquery.metadata.js');
+  drupal_add_js($path . '/addons/pager/jquery.tablesorter.pager.js');
   $theme = variable_get('tablesorter_theme', 'system');
+
+  // Set JS variables.
+  $zebra = variable_get('tablesorter_zebra', 1);
+  $odd_class = variable_get('tablesorter_zebra_odd_class', 'odd');
+  $even_class = variable_get('tablesorter_zebra_even_class', 'even');
+
+  drupal_add_js(array('tablesorter' => array('zebra' => $zebra, 'odd' => $odd_class, 'even' => $even_class)), 'setting');
+
   $options = array(
     'type' => 'file',
     'group' => CSS_DEFAULT,
