@@ -85,7 +85,7 @@
  * Get an iframe to serve as the dialog's contents. Common to both plugins.
  */
 Drupal.bean_wysiwyg.popups.getPopupIframe = function (src, id, options) {
-  var defaults = {width: '80%', scrolling: 'auto'};
+  var defaults = {width: '100%', scrolling: 'auto'};
   var options = $.extend({}, defaults, options);
 
   return $('<iframe class="bean_wysiwyg-modal-frame"/>')
