@@ -93,7 +93,7 @@ Drupal.bean_wysiwyg.popups.getPopupIframe = function (src, id, options) {
   .attr('width', options.width)
   .attr('id', id)
   .attr('scrolling', options.scrolling);
-  .attr('w')
+ 
 };
 
 /**
