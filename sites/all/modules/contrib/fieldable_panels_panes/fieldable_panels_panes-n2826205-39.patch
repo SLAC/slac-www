@@ -1,0 +1,16 @@
+diff --git a/fieldable_panels_panes.module b/fieldable_panels_panes.module
+index 8f190ad..90f64a2 100644
+--- a/fieldable_panels_panes.module
++++ b/fieldable_panels_panes.module
+@@ -611,6 +611,11 @@ function fieldable_panels_panes_panels_dashboard_blocks(&$vars) {
+  * Properly format the type from the URL version to the internal version.
+  */
+ function fieldable_panels_pane_type_load($type) {
++  // If the type is not set or equals 'view', return FALSE.
++  if (empty($type) || $type == 'view') {
++    return FALSE;
++  }
++
+   $type = str_replace('-', '_', $type);
+   $entity_info = entity_get_info('fieldable_panels_pane');
+ 
