@@ -361,7 +361,7 @@ function lectures_frontpage_views_default_views() {
   $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['label'] = '';
   $handler->display->display_options['fields']['field_location']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_location']['alter']['path'] = 'visiting-slac/maps-directions-meetingrooms.aspx';
+  $handler->display->display_options['fields']['field_location']['alter']['path'] = 'https://vue.slac.stanford.edu/maps-and-directions';
   $handler->display->display_options['fields']['field_location']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['field_location']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;

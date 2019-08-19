@@ -15,7 +15,7 @@ function lectures_frontpage_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Lectures frontpage';
   $page->admin_description = '';
-  $page->path = 'community/public-lectures.aspx';
+  $page->path = 'public-lectures';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -138,14 +138,39 @@ function lectures_frontpage_default_page_manager_pages() {
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'views_compare',
+        'settings' => NULL,
+        'not' => TRUE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'admin_title' => 'Lectures intro text',
     'title' => '',
-    'body' => '<p><span style="color: rgb(71, 71, 72); font-family: Arial, sans-serif; font-size: 12px; line-height: 20px;">Ever wonder what goes on at SLAC National Accelerator Laboratory? The SLAC Public Lecture Series is your chance to find out! Every other month, SLAC opens its doors to the local community for an evening lecture highlighting the cutting-edge science happening at the laboratory. From the nanotechnology of diamonds to the latest Higgs Boson discoveries, SLAC public lectures provide non-scientists with a unique insight into the workings of our universe.</span></p>
+    'body' => '<style type="text/css">.pane-bundle-scheduled-lecture {display:none;}
+</style>
+<p>Ever wonder what goes on at SLAC National Accelerator Laboratory? The SLAC Public Lecture Series is your chance to find out! Every other month, SLAC opens its doors to the local community for an evening lecture highlighting the cutting-edge science happening at the laboratory. From the nanotechnology of diamonds to the latest Higgs Boson discoveries, SLAC public lectures provide non-scientists with a unique insight into the workings of our universe.</p>
+
+<p><strong>Upcoming Lecture Dates&nbsp;</strong>(the list is subject to changes, please check back for updates from time to time):</p>
+
+<p><span style="font-size: 13.008px;">Tuesday, July 30, 2019</span></p>
+
+<p>Tuesday, October 1, 2019</p>
+
+<p>Tuesday, November 19, 2019</p>
+
+<p>&nbsp;</p>
+
+<p>To be notified about upcoming public lectures and other events, <a href="http://www6.slac.stanford.edu/node/3481">sign up for email alerts here</a>.</p>
+
+<p>Thank you for taking an interest in what we do at SLAC!</p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -167,14 +192,23 @@ function lectures_frontpage_default_page_manager_pages() {
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'views_compare',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'admin_title' => 'Past lectures text and share icons',
     'title' => '',
-    'body' => '<div class="social-icon-block"><a href="http://delicious.com/save" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///delicious.png" title="delicious" /></a> <a href="http://www.slashdot.org/submission" onclick="window.location = \'http://www.slashdot.org/submission?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///slashdot.png" title="slashdot" /></a> <a href="http://www.facebook.com/sharer" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///facebook.png" title="facebook" /></a> <a href="http://www.twitter.com/share" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false"> <img alt="" class="socialiconnews" src="public:///twitter.png" title="twitter" /></a> <a href="http://www.digg.com/submit" onclick="window.location = \'http://www.digg.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///digg.png" title="digg" /></a> <a href="http://www.reddit.com/submit" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///reddit.png" title="reddit" /></a></div>
+    'body' => '<div class="social-icon-block" style="top:-5px!important;"><a href="http://delicious.com/save" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///delicious.png" title="delicious"></a> <a href="http://www.slashdot.org/submission" onclick="window.location = \'http://www.slashdot.org/submission?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///slashdot.png" title="slashdot"></a> <a href="http://www.facebook.com/sharer" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///facebook.png" title="facebook"></a> <a href="http://www.twitter.com/share" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false"> <img alt="" class="socialiconnews" src="public:///twitter.png" title="twitter"></a> <a href="http://www.digg.com/submit" onclick="window.location = \'http://www.digg.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///digg.png" title="digg"></a> <a href="http://www.reddit.com/submit" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///reddit.png" title="reddit"></a></div>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -221,9 +255,17 @@ function lectures_frontpage_default_page_manager_pages() {
   $pane->pid = 'new-e97321d0-89e1-439b-b5b7-8ad0849ad54b';
   $pane->panel = 'middle';
   $pane->type = 'fieldable_panels_pane';
-  $pane->subtype = 'uuid:881930c9-526b-4747-a7d1-d557c1501e33';
+  $pane->subtype = 'current:78';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'views_compare',
+        'settings' => NULL,
+        'not' => TRUE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'view_mode' => 'full',
   );

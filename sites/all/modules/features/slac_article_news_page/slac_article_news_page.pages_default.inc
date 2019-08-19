@@ -25,7 +25,7 @@ function slac_article_news_page_default_page_manager_handlers() {
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
     'css_id' => '',
-    'css' => '',
+    'css' => '.panel-panel.content .panel-pane.pane-page-content .pane-title{ display: none !important;}',
     'contexts' => array(),
     'relationships' => array(),
     'access' => array(
@@ -63,13 +63,18 @@ function slac_article_news_page_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
+  $pane->pid = 'new-fdeb878f-ca95-4d69-9277-3618ff4324fc';
   $pane->panel = 'left';
-  $pane->type = 'back_links';
-  $pane->subtype = 'back_links';
+  $pane->type = 'node_created';
+  $pane->subtype = 'node_created';
   $pane->shown = TRUE;
   $pane->access = array();
-  $pane->configuration = array();
+  $pane->configuration = array(
+    'format' => 'f_j_y',
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
@@ -78,9 +83,9 @@ function slac_article_news_page_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'af53ca8c-6468-40cf-a770-371326c9e5d9';
-  $display->content['new-af53ca8c-6468-40cf-a770-371326c9e5d9'] = $pane;
-  $display->panels['left'][0] = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
+  $pane->uuid = 'fdeb878f-ca95-4d69-9277-3618ff4324fc';
+  $display->content['new-fdeb878f-ca95-4d69-9277-3618ff4324fc'] = $pane;
+  $display->panels['left'][0] = 'new-fdeb878f-ca95-4d69-9277-3618ff4324fc';
   $pane = new stdClass();
   $pane->pid = 'new-d4f9c3fb-71e2-412f-afbe-4be6d37f553f';
   $pane->panel = 'left';
@@ -95,7 +100,8 @@ function slac_article_news_page_default_page_manager_handlers() {
     'class' => '',
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
-    'override_title_text' => '',
+    'override_title_text' => '%node:title',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -108,6 +114,36 @@ function slac_article_news_page_default_page_manager_handlers() {
   $pane->uuid = 'd4f9c3fb-71e2-412f-afbe-4be6d37f553f';
   $display->content['new-d4f9c3fb-71e2-412f-afbe-4be6d37f553f'] = $pane;
   $display->panels['left'][1] = 'new-d4f9c3fb-71e2-412f-afbe-4be6d37f553f';
+  $pane = new stdClass();
+  $pane->pid = 'new-4a6b17a3-0a17-4e68-8db5-508e0c86a93d';
+  $pane->panel = 'left';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_teaser';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'text_default',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '4a6b17a3-0a17-4e68-8db5-508e0c86a93d';
+  $display->content['new-4a6b17a3-0a17-4e68-8db5-508e0c86a93d'] = $pane;
+  $display->panels['left'][2] = 'new-4a6b17a3-0a17-4e68-8db5-508e0c86a93d';
   $pane = new stdClass();
   $pane->pid = 'new-2bab7b28-dfc9-4256-8769-5752d8288e17';
   $pane->panel = 'left';
@@ -132,11 +168,11 @@ function slac_article_news_page_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = '2bab7b28-dfc9-4256-8769-5752d8288e17';
   $display->content['new-2bab7b28-dfc9-4256-8769-5752d8288e17'] = $pane;
-  $display->panels['left'][2] = 'new-2bab7b28-dfc9-4256-8769-5752d8288e17';
+  $display->panels['left'][3] = 'new-2bab7b28-dfc9-4256-8769-5752d8288e17';
   $pane = new stdClass();
   $pane->pid = 'new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
   $pane->panel = 'left';
@@ -161,35 +197,11 @@ function slac_article_news_page_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 4;
   $pane->locks = array();
   $pane->uuid = '2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
   $display->content['new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5'] = $pane;
-  $display->panels['left'][3] = 'new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
-  $pane = new stdClass();
-  $pane->pid = 'new-fdeb878f-ca95-4d69-9277-3618ff4324fc';
-  $pane->panel = 'left';
-  $pane->type = 'node_created';
-  $pane->subtype = 'node_created';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'format' => 'f_j_y',
-    'context' => 'argument_entity_id:node_1',
-    'override_title' => 1,
-    'override_title_text' => '',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 4;
-  $pane->locks = array();
-  $pane->uuid = 'fdeb878f-ca95-4d69-9277-3618ff4324fc';
-  $display->content['new-fdeb878f-ca95-4d69-9277-3618ff4324fc'] = $pane;
-  $display->panels['left'][4] = 'new-fdeb878f-ca95-4d69-9277-3618ff4324fc';
+  $display->panels['left'][4] = 'new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
   $pane = new stdClass();
   $pane->pid = 'new-7378957e-ab9a-4dc3-a46d-1aff2ddabd1e';
   $pane->panel = 'left';
@@ -214,6 +226,25 @@ function slac_article_news_page_default_page_manager_handlers() {
   $display->content['new-7378957e-ab9a-4dc3-a46d-1aff2ddabd1e'] = $pane;
   $display->panels['left'][5] = 'new-7378957e-ab9a-4dc3-a46d-1aff2ddabd1e';
   $pane = new stdClass();
+  $pane->pid = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
+  $pane->panel = 'left';
+  $pane->type = 'back_links';
+  $pane->subtype = 'back_links';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $pane->uuid = 'af53ca8c-6468-40cf-a770-371326c9e5d9';
+  $display->content['new-af53ca8c-6468-40cf-a770-371326c9e5d9'] = $pane;
+  $display->panels['left'][6] = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
+  $pane = new stdClass();
   $pane->pid = 'new-21c98a36-d3d0-437a-9ead-64a2ae60a9b5';
   $pane->panel = 'right';
   $pane->type = 'custom';
@@ -223,10 +254,49 @@ function slac_article_news_page_default_page_manager_handlers() {
   $pane->configuration = array(
     'admin_title' => 'Social share block',
     'title' => 'Share',
-    'body' => '<div class="social-icon-block"><a href="http://www.digg.com/submit" onclick="window.location = \'http://www.digg.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///digg.png" title="digg" /></a> <a href="http://www.slashdot.org/submission" onclick="window.location = \'http://www.slashdot.org/submission?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///slashdot.png" title="slashdot" /></a> <a href="http://delicious.com/save" onclick="window.location = \'http://www.delicious.com/save?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///delicious.png" title="delicious" /></a> <a href="http://www.reddit.com/submit" onclick="window.location = \'http://www.reddit.com/submit?url=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///reddit.png" title="reddit" /></a> <a href="http://www.facebook.com/sharer" onclick="window.location = \'http://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(window.location); return false"><img alt="" class="socialiconnews" src="public:///facebook.png" title="facebook" /></a> <a href="http://www.twitter.com/share" onclick="window.location = \'http://www.twitter.com/intent/tweet?source=\' + encodeURIComponent(window.location) + \'&amp;text=\' +  encodeURIComponent(window.location); return false"> <img alt="" class="socialiconnews" src="public:///twitter.png" title="twitter" /></a></div>
+    'body' => '<style type="text/css">ul.share-buttons{
+  list-style: none;
+  padding: 0;
+text-align:center;
+
+}
+
+ul.share-buttons li{
+  display: inline-block;
+margin:0 6px 8px;
+}
+
+ul.share-buttons .sr-only{
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+ul.share-buttons img{
+  width: 26px;
+}
+</style>
+<h4 style="margin-top: 80px; text-align: center;"><strong>Share This Article</strong></h4>
+
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww6.slac.stanford.edu%2F&amp;t=SLAC%20National%20Accelerator%20Laboratory" onclick="window.open(\'https://www.facebook.com/sharer/sharer.php?u=\' + encodeURIComponent(document.URL) + \'&amp;t=\' + encodeURIComponent(document.URL)); return false;" target="_blank" title="Share on Facebook"><img alt="Share on Facebook" src="https://www6.slac.stanford.edu/files/Facebook.svg"></a></li>
+	<li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww6.slac.stanford.edu%2F&amp;text=SLAC%20National%20Accelerator%20Laboratory:%20https%3A%2F%2Fwww6.slac.stanford.edu%2F" onclick="window.open(\'https://twitter.com/intent/tweet?text=\' + encodeURIComponent(document.title) + \':%20\'  + encodeURIComponent(document.URL)); return false;" target="_blank" title="Tweet"><img alt="Tweet" src="https://www6.slac.stanford.edu/files/Twitter.svg"></a></li>
+	<li><a href="http://www.reddit.com/submit?url=https%3A%2F%2Fwww6.slac.stanford.edu%2F&amp;title=SLAC%20National%20Accelerator%20Laboratory" onclick="window.open(\'http://www.reddit.com/submit?url=\' + encodeURIComponent(document.URL) + \'&amp;title=\' +  encodeURIComponent(document.title)); return false;" target="_blank" title="Submit to Reddit"><img alt="Submit to Reddit" src="https://www6.slac.stanford.edu/files/Reddit.svg"></a></li>
+	<li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww6.slac.stanford.edu%2F" onclick="window.open(\'https://plus.google.com/share?url=\' + encodeURIComponent(document.URL)); return false;" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="https://www6.slac.stanford.edu/files/Google.svg"></a></li>
+	<li><a href="http://www.tumblr.com/share?v=3&amp;u=https%3A%2F%2Fwww6.slac.stanford.edu%2F&amp;t=SLAC%20National%20Accelerator%20Laboratory&amp;s=" onclick="window.open(\'http://www.tumblr.com/share?v=3&amp;u=\' + encodeURIComponent(document.URL) + \'&amp;t=\' +  encodeURIComponent(document.title)); return false;" target="_blank" title="Post to Tumblr"><img alt="Post to Tumblr" src="https://www6.slac.stanford.edu/files/Tumblr.svg"></a></li>
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww6.slac.stanford.edu%2F&amp;description=Homepage%20for%20SLAC%20National%20Accelerator%20Laboratory" onclick="window.open(\'http://pinterest.com/pin/create/button/?url=\' + encodeURIComponent(document.URL) + \'&amp;description=\' +  encodeURIComponent(document.title)); return false;" target="_blank" title="Pin it"><img alt="Pin it" src="https://www6.slac.stanford.edu/files/Pinterest.svg"></a></li>
+	<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww6.slac.stanford.edu%2F&amp;title=SLAC%20National%20Accelerator%20Laboratory&amp;summary=Homepage%20for%20SLAC%20National%20Accelerator%20Laboratory&amp;source=https%3A%2F%2Fwww6.slac.stanford.edu%2F" onclick="window.open(\'http://www.linkedin.com/shareArticle?mini=true&amp;url=\' + encodeURIComponent(document.URL) + \'&amp;title=\' +  encodeURIComponent(document.title)); return false;" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="https://www6.slac.stanford.edu/files/LinkedIn.svg"></a></li>
+	<li><a href="mailto:?subject=SLAC%20National%20Accelerator%20Laboratory&amp;body=Homepage%20for%20SLAC%20National%20Accelerator%20Laboratory:%20https%3A%2F%2Fwww6.slac.stanford.edu%2F" onclick="window.open(\'mailto:?subject=\' + encodeURIComponent(document.title) + \'&amp;body=\' +  encodeURIComponent(document.URL)); return false;" title="Send email"><img alt="Send email" src="https://www6.slac.stanford.edu/files/Email.svg"></a></li>
+</ul>
 ',
     'format' => 'full_html',
     'substitute' => 1,
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -340,10 +410,11 @@ function slac_article_news_page_default_page_manager_handlers() {
     'vid' => '5',
     'term_format' => 'inline-delimited',
     'link' => 1,
-    'term_delimiter' => ', ',
+    'term_delimiter' => '',
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
     'override_title_text' => 'Tags',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(

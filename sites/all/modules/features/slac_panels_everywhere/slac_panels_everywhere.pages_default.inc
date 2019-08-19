@@ -115,7 +115,7 @@ function slac_panels_everywhere_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '<none>';
   $display->uuid = '59c9b5e2-e263-4e1e-83f2-628be3167420';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'site_template_panel_context';
@@ -149,8 +149,9 @@ function slac_panels_everywhere_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'context' => 'argument_page_content_1',
-    'override_title' => 0,
-    'override_title_text' => '',
+    'override_title' => 1,
+    'override_title_text' => '%title',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -168,7 +169,7 @@ function slac_panels_everywhere_default_page_manager_handlers() {
   $pane->panel = 'footer';
   $pane->type = 'panels_mini';
   $pane->subtype = 'footer';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 0,
@@ -185,6 +186,29 @@ function slac_panels_everywhere_default_page_manager_handlers() {
   $pane->uuid = '405a121d-d017-4828-b8cf-5e5c303d82cb';
   $display->content['new-405a121d-d017-4828-b8cf-5e5c303d82cb'] = $pane;
   $display->panels['footer'][0] = 'new-405a121d-d017-4828-b8cf-5e5c303d82cb';
+  $pane = new stdClass();
+  $pane->pid = 'new-9329af13-395a-4416-bddd-5ccc181bc8d9';
+  $pane->panel = 'footer';
+  $pane->type = 'panels_mini';
+  $pane->subtype = 'footer_2018';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '9329af13-395a-4416-bddd-5ccc181bc8d9';
+  $display->content['new-9329af13-395a-4416-bddd-5ccc181bc8d9'] = $pane;
+  $display->panels['footer'][1] = 'new-9329af13-395a-4416-bddd-5ccc181bc8d9';
   $pane = new stdClass();
   $pane->pid = 'new-53f21aba-4805-400d-804c-73634cb92ee5';
   $pane->panel = 'header';
