@@ -802,7 +802,7 @@ function slac_past_lectures_default_page_manager_handlers() {
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
     'css_id' => '',
-    'css' => '',
+    'css' => '.lightbox-processed {display:block !important; }',
     'contexts' => array(),
     'relationships' => array(),
     'access' => array(
@@ -1103,35 +1103,7 @@ function slac_past_lectures_default_page_manager_handlers() {
   $pane->subtype = 'node:field_about_the_speaker';
   $pane->shown = TRUE;
   $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'entity_field_value:node:lecture:field_about_the_speaker',
-        'settings' => array(
-          'field_about_the_speaker' => array(
-            'und' => array(
-              0 => array(
-                'value' => '',
-                'format' => 'full_html',
-              ),
-            ),
-          ),
-          'field_about_the_speaker_value' => array(
-            0 => array(
-              'value' => '',
-              'format' => 'full_html',
-            ),
-          ),
-          'field_about_the_speaker_format' => array(
-            0 => array(
-              'value' => '',
-              'format' => 'full_html',
-            ),
-          ),
-        ),
-        'context' => 'argument_entity_id:node_1',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
   );
   $pane->configuration = array(
     'label' => 'hidden',
@@ -1162,35 +1134,7 @@ function slac_past_lectures_default_page_manager_handlers() {
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'entity_field_value:node:lecture:field_about_the_speaker',
-        'settings' => array(
-          'field_about_the_speaker' => array(
-            'und' => array(
-              0 => array(
-                'value' => '',
-                'format' => 'full_html',
-              ),
-            ),
-          ),
-          'field_about_the_speaker_value' => array(
-            0 => array(
-              'value' => '',
-              'format' => 'full_html',
-            ),
-          ),
-          'field_about_the_speaker_format' => array(
-            0 => array(
-              'value' => '',
-              'format' => 'full_html',
-            ),
-          ),
-        ),
-        'context' => 'argument_entity_id:node_1',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
   );
   $pane->configuration = array(
     'admin_title' => 'About the speaker label',
@@ -1288,10 +1232,13 @@ function slac_past_lectures_default_page_manager_handlers() {
   $pane->configuration = array(
     'admin_title' => '',
     'title' => '',
-    'body' => '<p><a href="/community/past-lectures">&laquo; Past Lectures page</a></p>
+    'body' => '<style type="text/css">div.panel-panel.three-col-right > div > div > div > div > h2 {display:none;}
+</style>
+<p><a href="/community/past-lectures">« Past Lectures page</a></p>
 ',
     'format' => 'full_html',
     'substitute' => 1,
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -1317,9 +1264,10 @@ function slac_past_lectures_default_page_manager_handlers() {
   $pane->configuration = array(
     'admin_title' => 'title-2',
     'title' => '',
-    'body' => 'SLAC public Lecture Series',
+    'body' => 'SLAC Public Lecture Series',
     'format' => 'plain_text',
     'substitute' => 1,
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -1478,7 +1426,7 @@ function slac_past_lectures_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'jw_player',
+    'formatter' => 'media_youtube_video_popup_news',
     'delta_limit' => 0,
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
@@ -1487,7 +1435,8 @@ function slac_past_lectures_default_page_manager_handlers() {
     ),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
-    'override_title_text' => '',
+    'override_title_text' => '<none>',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -1504,7 +1453,7 @@ function slac_past_lectures_default_page_manager_handlers() {
   $pane->pid = 'new-0fddcf35-0a75-4883-8ddc-fda20997b397';
   $pane->panel = 'right';
   $pane->type = 'fieldable_panels_pane';
-  $pane->subtype = 'uuid:a9d568dd-8c5e-4bbb-b47f-0bc14b94580c';
+  $pane->subtype = 'current:6';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
