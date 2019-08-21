@@ -3162,4 +3162,6 @@ a.imageLessButton {
 /* line 2469, ../sass/pages.scss */
 .field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
   padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
 }
