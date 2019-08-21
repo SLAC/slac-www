@@ -2458,3 +2458,17 @@ a.imageLessButton {
    }
 }
 
+.field-collection-item-field-homepage-video .content {
+  position: relative;
+  .field-name-field-headline {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    .field-items {
+      padding: 15px;
+    }
+  }
+}
+

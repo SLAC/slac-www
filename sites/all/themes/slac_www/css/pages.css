@@ -205,11 +205,11 @@
   .two-col-basic .pane-page-content > .pane-title,
   .two-col-basic .pane-page-content > .pane-content {
     float: left;
-    width: 100%;
+    width: 62.5%;
     margin-left: 0%;
-    margin-right: -100%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    margin-right: -62.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -220,11 +220,11 @@
   /* line 114, ../sass/_mixins.scss */
   .frontpage-left-col {
     float: left;
-    width: 20%;
+    width: 12.5%;
     margin-left: 0%;
-    margin-right: -20%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    margin-right: -12.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -235,11 +235,11 @@
   /* line 118, ../sass/_mixins.scss */
   .middleright-wrapper {
     float: left;
-    width: 80%;
-    margin-left: 20%;
-    margin-right: -100%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    width: 50%;
+    margin-left: 12.5%;
+    margin-right: -62.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -250,11 +250,11 @@
   /* line 122, ../sass/_mixins.scss */
   .three-col .three-col-left {
     float: left;
-    width: 20%;
+    width: 12.5%;
     margin-left: 0%;
-    margin-right: -20%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    margin-right: -12.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -266,11 +266,11 @@
   .pane-page-content > .pane-title,
   .three-col .three-col-middle-right {
     float: left;
-    width: 80%;
-    margin-left: 20%;
-    margin-right: -100%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    width: 50%;
+    margin-left: 12.5%;
+    margin-right: -62.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -281,11 +281,11 @@
   /* line 131, ../sass/_mixins.scss */
   .general-two-col .general-left {
     float: left;
-    width: 66.66667%;
+    width: 41.66667%;
     margin-left: 0%;
-    margin-right: -66.66667%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    margin-right: -41.66667%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -296,11 +296,11 @@
   /* line 135, ../sass/_mixins.scss */
   .general-two-col .general-right {
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    width: 20.83333%;
+    margin-left: 41.66667%;
+    margin-right: -62.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -311,11 +311,11 @@
   /* line 139, ../sass/_mixins.scss */
   .two-col-leftsidebar .general-left {
     float: left;
-    width: 20%;
+    width: 12.5%;
     margin-left: 0%;
-    margin-right: -20%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    margin-right: -12.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -327,11 +327,11 @@
   .two-col-leftsidebar .general-right,
   .two-col-leftsidebar-layout .pane-page-content > .pane-title {
     float: left;
-    width: 80%;
-    margin-left: 20%;
-    margin-right: -100%;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    width: 50%;
+    margin-left: 12.5%;
+    margin-right: -62.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -356,11 +356,11 @@
   .two-col-leftsidebar-layout .pane-page-content > .pane-title,
   .node-type-news-article .general-two-col .general-right {
     float: left;
-    width: 100%;
+    width: 16.66667%;
     margin-left: 0%;
-    margin-right: -100%;
-    padding-left: 3.5%;
-    padding-right: 3.5%;
+    margin-right: -16.66667%;
+    padding-left: 1%;
+    padding-right: 1%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -944,7 +944,7 @@ a.lightbox-processed {
 }
 /* line 496, ../sass/pages.scss */
 .section-visiting-slac table .header {
-  background: #ada47d url("../images/bg.gif") no-repeat right center;
+  background: #ADA47D url("../images/bg.gif") no-repeat right center;
   color: #fff;
   font-weight: bold;
   padding: 8px 10px 8px;
@@ -2669,7 +2669,7 @@ a.imageLessButton {
   }
   /* line 2006, ../sass/pages.scss */
   .front .middletop .pane-last-story-panel-pane-1 .pane-title a {
-    background: #999999 url("../images/headliner-arrow.png") no-repeat right center;
+    background: #999 url("../images/headliner-arrow.png") no-repeat right center;
     color: #fff;
     margin: 0 -3.7% 20px;
     padding: 6px 3.7% 5px;
@@ -3146,4 +3146,20 @@ a.imageLessButton {
   .page-basic .pane-pane-header {
     background-position: 150px center;
   }
+}
+/* line 2461, ../sass/pages.scss */
+.field-collection-item-field-homepage-video .content {
+  position: relative;
+}
+/* line 2463, ../sass/pages.scss */
+.field-collection-item-field-homepage-video .content .field-name-field-headline {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 2469, ../sass/pages.scss */
+.field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
+  padding: 15px;
 }
