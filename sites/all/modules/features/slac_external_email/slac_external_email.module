@@ -82,7 +82,7 @@ function slac_external_email_node_view_alter(&$build) {
 /**
  * Implements hook_mailchimp_dc_content
  */
-/*
+
 function slac_external_email_mailchimp_dc_content($config, $template_sections = array()) {
   
   // declare contents in the daily digest  
@@ -93,12 +93,12 @@ function slac_external_email_mailchimp_dc_content($config, $template_sections = 
   );
   return $data;
 }
-*/
+
 
 /**
  * Output contents
  */
-/*
+
 function _slac_external_email_mailchimp_dc_content($config, $template_sections) {
   return array(
     'html_top_stories' => array(
@@ -107,4 +107,3 @@ function _slac_external_email_mailchimp_dc_content($config, $template_sections) 
     ),
   );  
 }
-*/
