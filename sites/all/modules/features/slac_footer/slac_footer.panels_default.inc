@@ -114,11 +114,17 @@ function slac_footer_default_panels_mini() {
   $pane->configuration = array(
     'admin_title' => 'Footer text',
     'title' => '<none>',
-    'body' => '<p><span><b><a href="http://www.slac.stanford.edu">SLAC NATIONAL ACCELERATOR LABORATORY</a></b> 2575 Sand Hill Road, Menlo Park, CA 94025</span><br />
+    'body' => '<style type="text/css">a.lightbox.youtube-title.lightbox-processed {
+	display: none!important;
+}
+.video-block a.lightbox.youtube-title.lightbox-processed {display:block!important;}
+</style>
+<p><span><b><a href="http://www.slac.stanford.edu">SLAC NATIONAL ACCELERATOR LABORATORY</a></b> 2575 Sand Hill Road, Menlo Park, CA 94025</span><br>
 	<span>Operated by <a href="http://www.stanford.edu" target="_blank">Stanford University</a> for the <a href="http://science.energy.gov" target="_blank">U.S. Department of Energy Office of Science</a></span></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -141,10 +147,16 @@ function slac_footer_default_panels_mini() {
   $pane->configuration = array(
     'admin_title' => 'Footer logo',
     'title' => '',
-    'body' => '<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/all/themes/slac_www/images/stanford-logo.png" /></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/all/themes/slac_www/images/doe-logo.png" /></a></p>
+    'body' => '<style type="text/css">
+.node-type-news-article .content {padding-top: 10px;}
+.menu-item-2 li.menu-357 {border-top:1px dashed #333;}
+.menu-item-2 li.last {border-top:1px solid #ccc;}
+</style>
+<p><a href="http://www.stanford.edu" target="_blank"><img alt="stanford-logo" src="/sites/all/themes/slac_www/images/stanford-logo.png"></a><a href="http://science.energy.gov" target="_blank"><img alt="doe-logo" src="/sites/all/themes/slac_www/images/doe-logo.png"></a></p>
 ',
     'format' => 'full_html',
     'substitute' => TRUE,
+    'title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(

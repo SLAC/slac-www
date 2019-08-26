@@ -39,6 +39,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'access all views',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'views',
   );
@@ -98,6 +100,8 @@ function slac_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -144,6 +148,7 @@ function slac_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'author' => 'author',
     ),
     'module' => 'download_file',
   );
@@ -259,6 +264,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer advanced pane settings',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'panels',
@@ -354,6 +360,9 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer download file',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'download_file',
   );
@@ -427,6 +436,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'file_entity',
@@ -506,6 +516,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'menu',
@@ -516,6 +527,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer meta tags',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'metatag',
   );
@@ -525,6 +537,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer mini panels',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'panels_mini',
   );
@@ -574,6 +588,7 @@ function slac_permissions_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'page_manager',
   );
@@ -583,6 +598,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer pane access',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'panels',
@@ -656,6 +672,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'administer site index',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'slac_site_index',
   );
@@ -701,9 +718,7 @@ function slac_permissions_user_default_permissions() {
   // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'user',
   );
 
@@ -757,6 +772,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'bypass file access',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'file_entity',
@@ -767,6 +783,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -938,6 +955,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'create fieldable slideshow_text_bottom',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -949,6 +967,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'create fieldable slideshow_text_left_right',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -1215,6 +1234,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'delete fieldable slideshow_text_bottom',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1224,6 +1245,8 @@ function slac_permissions_user_default_permissions() {
     'name' => 'delete fieldable slideshow_text_left_right',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1316,6 +1339,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'node',
@@ -1387,6 +1411,7 @@ function slac_permissions_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'author' => 'author',
     ),
     'module' => 'lightbox2',
   );
@@ -1550,6 +1575,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'edit fieldable slideshow_text_bottom',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -1561,6 +1587,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'edit fieldable slideshow_text_left_right',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
     ),
@@ -1765,6 +1792,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'epsacrop delete all crops',
     'roles' => array(
       'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'epsacrop',
   );
@@ -2283,9 +2311,12 @@ function slac_permissions_user_default_permissions() {
     'name' => 'view files',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
+      'site_member' => 'site_member',
     ),
     'module' => 'file_entity',
   );
@@ -2355,6 +2386,7 @@ function slac_permissions_user_default_permissions() {
     'name' => 'view pane admin links',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'panels',
