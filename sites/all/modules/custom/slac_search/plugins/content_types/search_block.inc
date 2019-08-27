@@ -81,7 +81,7 @@ function search_block_search_form_submit($form, &$form_state) {
   }
   elseif ($form_selection === 'people'){
     // URL for People.
-    $redirect_url = 'http://www-public.slac.stanford.edu/phonebook/dirsearch.aspx?lf=1&url=&gone=active&NAME=' . $form_state['values']['keyword'];
+    $redirect_url = 'https://www-public.slac.stanford.edu/phonebook/dirsearch.aspx?lf=1&url=&gone=active&NAME=' . $form_state['values']['keyword'];
   }
 
   $form_state['redirect'] = $redirect_url;
