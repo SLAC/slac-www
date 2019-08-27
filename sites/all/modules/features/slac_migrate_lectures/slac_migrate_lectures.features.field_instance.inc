@@ -91,7 +91,7 @@ function slac_migrate_lectures_field_default_field_instances() {
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 7,
       ),
       'email_main_story' => array(

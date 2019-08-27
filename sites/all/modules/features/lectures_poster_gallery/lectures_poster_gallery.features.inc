@@ -44,17 +44,19 @@ function lectures_poster_gallery_image_default_styles() {
 
   // Exported image style: lectures_gallery_large.
   $styles['lectures_gallery_large'] = array(
+    'label' => 'lectures_gallery_large',
     'effects' => array(
-      16 => array(
-        'name' => 'image_scale_and_crop',
+      48 => array(
+        'name' => 'image_scale',
         'data' => array(
-          'width' => 453,
-          'height' => 700,
+          'width' => '',
+          'height' => 800,
+          'upscale' => 0,
+          'retinafy' => 0,
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
-    'label' => 'lectures_gallery_large',
   );
 
   return $styles;

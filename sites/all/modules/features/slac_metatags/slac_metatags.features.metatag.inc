@@ -190,16 +190,13 @@ function slac_metatags_metatag_export_default() {
     'instance' => 'global:frontpage',
     'config' => array(
       'title' => array(
-        'value' => '[site:name]',
+        'value' => 'SLAC | Bold People. Visionary Science. Real Impact.',
       ),
       'canonical' => array(
         'value' => '[site:url]',
       ),
       'shortlink' => array(
         'value' => '[site:url]',
-      ),
-      'twitter:image' => array(
-        'value' => 'https://www6.slac.stanford.edu/sites/www6.slac.stanford.edu/files/logo.jpeg',
       ),
     ),
   );
@@ -224,6 +221,9 @@ function slac_metatags_metatag_export_default() {
       'keywords' => array(
         'value' => '[node:field-tags]',
       ),
+      'og:description' => array(
+        'value' => '[node:summary]',
+      ),
       'og:image' => array(
         'value' => '[node:field_image]',
       ),
@@ -237,11 +237,11 @@ function slac_metatags_metatag_export_default() {
   $config['node:page'] = array(
     'instance' => 'node:page',
     'config' => array(
-      'title' => array(
-        'value' => '[node:title] | [site:name]',
-      ),
       'keywords' => array(
         'value' => '[node:field_page_keywords]',
+      ),
+      'og:description' => array(
+        'value' => '[node:summary]',
       ),
     ),
   );
