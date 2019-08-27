@@ -55,7 +55,7 @@ function slac_index_page_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Site Index';
+  $display->title = 'A-Z Index';
   $display->uuid = '25101d9d-1990-4d93-b6cb-f34dfb083b6b';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'page_slac_index_panel_context';

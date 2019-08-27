@@ -102,10 +102,13 @@ function slac_migrate_article_news_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '10',
+        ),
+        'redirect' => array(
+          'weight' => '12',
         ),
       ),
       'display' => array(),

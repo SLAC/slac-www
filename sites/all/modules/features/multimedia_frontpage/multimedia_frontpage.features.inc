@@ -24,17 +24,18 @@ function multimedia_frontpage_image_default_styles() {
 
   // Exported image style: frontpage-media.
   $styles['frontpage-media'] = array(
+    'label' => 'frontpage-media',
     'effects' => array(
-      27 => array(
+      45 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 128,
-          'height' => 72,
+          'width' => 453,
+          'height' => 700,
           'retinafy' => 1,
         ),
         'weight' => 1,
       ),
-      36 => array(
+      46 => array(
         'name' => 'filtersie_sharpen',
         'data' => array(
           'sharpenlevel' => 40,
@@ -42,7 +43,6 @@ function multimedia_frontpage_image_default_styles() {
         'weight' => 2,
       ),
     ),
-    'label' => 'frontpage-media',
   );
 
   return $styles;
