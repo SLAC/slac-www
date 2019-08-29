@@ -5,6 +5,7 @@ package = SLAC
 version = 7.x-1.6
 project = last_story
 dependencies[] = image
+dependencies[] = nodequeue
 dependencies[] = views
 dependencies[] = views_content
 features[ctools][] = views:views_default:3.0
