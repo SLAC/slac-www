@@ -26,7 +26,7 @@ function news_archives_content_type_render($subtype, $conf, $panel_args, $contex
 
   $current_year = date('Y');
   $items = array();
-  for ($year = $current_year; $year >= 2011; $year--) {
+  for ($year = ($current_year - 1); $year >= 2011; $year--) {
     $link_title = $year . t(' News Archive');
     $link = 'news/news-feature-archive-' . $year;
     $items[$link_title] = l(t($link_title), $link);

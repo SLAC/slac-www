@@ -3165,3 +3165,57 @@ a.imageLessButton {
   font-weight: bold;
   font-size: 18px;
 }
+
+/* line 2477, ../sass/pages.scss */
+.article-news-center-view {
+  padding: 15px 2% 18px 2%;
+  width: auto;
+  background: url(/sites/all/themes/slac_www/images/dotted-border.png) repeat-x bottom;
+  overflow: hidden;
+}
+/* line 2482, ../sass/pages.scss */
+.article-news-center-view .date-type {
+  font-size: 15px;
+  color: #444;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px 0px 9px;
+}
+/* line 2489, ../sass/pages.scss */
+.article-news-center-view .date {
+  float: left;
+  margin-right: 20px;
+}
+/* line 2493, ../sass/pages.scss */
+.article-news-center-view .title a {
+  font-size: 19px;
+  color: #000;
+  font-family: "Source Serif Pro",serif;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+/* line 2500, ../sass/pages.scss */
+.article-news-center-view .body {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #474747;
+}
+/* line 2505, ../sass/pages.scss */
+.article-news-center-view .content {
+  float: left;
+  width: 76%;
+  color: #373738;
+  font-size: 12px;
+  line-height: normal;
+}
+/* line 2512, ../sass/pages.scss */
+.article-news-center-view .image {
+  float: right;
+  width: 20%;
+  margin-left: 4%;
+}
+/* line 2517, ../sass/pages.scss */
+.article-news-center-view img {
+  width: 100%;
+  height: auto;
+}

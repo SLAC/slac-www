@@ -301,3 +301,9 @@ function slac_www_preprocess_metatag(&$vars) {
 		$vars['element'] = $element;			
 	}
 }
+
+function slac_www_preprocess_node(&$vars) {
+  if ($vars['node']->type == 'news_article' && $vars['view_mode'] == 'news_center') {
+    $vars['theme_hook_suggestions'][] = 'node__article__news_center';
+  }
+}

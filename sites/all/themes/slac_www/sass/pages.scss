@@ -2474,3 +2474,48 @@ a.imageLessButton {
   }
 }
 
+.article-news-center-view {
+  padding: 15px 2% 18px 2%;
+  width: auto;
+  background: url(/sites/all/themes/slac_www/images/dotted-border.png) repeat-x bottom;
+  overflow: hidden;
+  .date-type {
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px 0px 9px;
+  }
+  .date {
+    float:left;
+    margin-right: 20px;
+  }
+  .title a {
+    font-size: 19px;
+    color: #000;
+    font-family: "Source Serif Pro",serif;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .body {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #474747;
+  }
+  .content {
+    float: left;
+    width: 76%;
+    color: #373738;
+    font-size: 12px;
+    line-height: normal;
+  }
+  .image {
+    float: right;
+    width: 20%;
+    margin-left: 4%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

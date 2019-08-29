@@ -172,3 +172,13 @@ function slac_news_center_views_pre_build(&$view) {
     drupal_set_title($title);
   }
 }
+
+/**
+* Implements hook_entity_info_alter().
+*/
+function slac_news_center_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['news_center'] = array(
+    'label' => t('News Center'),
+    'custom settings' => TRUE,
+  );
+}
