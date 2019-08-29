@@ -888,6 +888,20 @@ div.pane-node-body{
     overflow: hidden;
     padding-bottom: 22px;
   }
+  .views-row{
+    width: 100%;
+    border-bottom: 1px solid #bbbdbe;
+    font-size: 16px;
+    line-height: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .views-row-last{
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 
   .views-field-nothing{
     float:left;
