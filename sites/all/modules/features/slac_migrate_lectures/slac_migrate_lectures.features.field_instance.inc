@@ -49,6 +49,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -119,6 +125,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -182,6 +194,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -248,6 +266,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -361,6 +385,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -432,6 +462,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -497,6 +533,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -601,6 +643,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -666,6 +714,12 @@ function slac_migrate_lectures_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',

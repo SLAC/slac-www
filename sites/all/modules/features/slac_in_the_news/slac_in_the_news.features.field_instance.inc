@@ -42,6 +42,12 @@ function slac_in_the_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),

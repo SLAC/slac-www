@@ -152,6 +152,7 @@ news/press-release-archive-2*',
       'left' => NULL,
       'right' => NULL,
       'middle' => NULL,
+      'mainmiddleright' => NULL,
     ),
   );
   $display->cache = array();
@@ -227,28 +228,6 @@ news/press-release-archive-2*',
   $pane->uuid = '727b70b1-0242-4692-9f76-c3adecff68d8';
   $display->content['new-727b70b1-0242-4692-9f76-c3adecff68d8'] = $pane;
   $display->panels['right'][0] = 'new-727b70b1-0242-4692-9f76-c3adecff68d8';
-  $pane = new stdClass();
-  $pane->pid = 'new-31a157a1-aaea-4e76-af5d-a133a4d7db9c';
-  $pane->panel = 'right';
-  $pane->type = 'press_archives';
-  $pane->subtype = 'press_archives';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'highlited related-links',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '31a157a1-aaea-4e76-af5d-a133a4d7db9c';
-  $display->content['new-31a157a1-aaea-4e76-af5d-a133a4d7db9c'] = $pane;
-  $display->panels['right'][1] = 'new-31a157a1-aaea-4e76-af5d-a133a4d7db9c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -418,28 +397,6 @@ news/press-release-archive-2*',
   $display->content['new-b55c79ee-a46a-4617-a289-faf79e90bd20'] = $pane;
   $display->panels['middle'][0] = 'new-b55c79ee-a46a-4617-a289-faf79e90bd20';
   $pane = new stdClass();
-  $pane->pid = 'new-f39b3ddc-92d5-473a-8b99-51076936789d';
-  $pane->panel = 'middle';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'news_center-panel_pane_2';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'highlited news-list',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = 'f39b3ddc-92d5-473a-8b99-51076936789d';
-  $display->content['new-f39b3ddc-92d5-473a-8b99-51076936789d'] = $pane;
-  $display->panels['middle'][1] = 'new-f39b3ddc-92d5-473a-8b99-51076936789d';
-  $pane = new stdClass();
   $pane->pid = 'new-fdf8fd38-12a4-4cbb-907a-0e0d6b780535';
   $pane->panel = 'right';
   $pane->type = 'news_archives';
@@ -462,28 +419,6 @@ news/press-release-archive-2*',
   $display->content['new-fdf8fd38-12a4-4cbb-907a-0e0d6b780535'] = $pane;
   $display->panels['right'][0] = 'new-fdf8fd38-12a4-4cbb-907a-0e0d6b780535';
   $pane = new stdClass();
-  $pane->pid = 'new-e1ddd878-f408-4541-9789-3fddecdf5c37';
-  $pane->panel = 'right';
-  $pane->type = 'press_archives';
-  $pane->subtype = 'press_archives';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'highlited related-links',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = 'e1ddd878-f408-4541-9789-3fddecdf5c37';
-  $display->content['new-e1ddd878-f408-4541-9789-3fddecdf5c37'] = $pane;
-  $display->panels['right'][1] = 'new-e1ddd878-f408-4541-9789-3fddecdf5c37';
-  $pane = new stdClass();
   $pane->pid = 'new-8eef3e0e-a1e8-4453-b80e-77e3791b478f';
   $pane->panel = 'right';
   $pane->type = 'block';
@@ -503,11 +438,11 @@ news/press-release-archive-2*',
     'css_class' => 'highlited related-links links-internal-external-icons',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '8eef3e0e-a1e8-4453-b80e-77e3791b478f';
   $display->content['new-8eef3e0e-a1e8-4453-b80e-77e3791b478f'] = $pane;
-  $display->panels['right'][2] = 'new-8eef3e0e-a1e8-4453-b80e-77e3791b478f';
+  $display->panels['right'][1] = 'new-8eef3e0e-a1e8-4453-b80e-77e3791b478f';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

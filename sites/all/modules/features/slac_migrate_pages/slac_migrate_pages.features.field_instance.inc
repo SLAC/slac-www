@@ -42,6 +42,12 @@ function slac_migrate_pages_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -102,6 +108,12 @@ function slac_migrate_pages_field_default_field_instances() {
         'weight' => 0,
       ),
       'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news_center' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -169,6 +181,12 @@ function slac_migrate_pages_field_default_field_instances() {
         'weight' => 0,
       ),
       'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news_center' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',

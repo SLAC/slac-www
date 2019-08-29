@@ -50,6 +50,15 @@ function slac_migrate_article_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'news_center' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 150,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 1,
+      ),
       'rss' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -121,6 +130,13 @@ function slac_migrate_article_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
+      'news_center' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
@@ -190,6 +206,16 @@ function slac_migrate_article_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 3,
+      ),
+      'news_center' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'news_thumbnail_headlines_center',
+        ),
+        'type' => 'image',
+        'weight' => 2,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -301,6 +327,12 @@ function slac_migrate_article_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
@@ -381,6 +413,12 @@ function slac_migrate_article_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'rss' => array(
         'label' => 'above',
@@ -481,6 +519,12 @@ function slac_migrate_article_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 1,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
@@ -543,6 +587,12 @@ function slac_migrate_article_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'rss' => array(
         'label' => 'above',
@@ -608,6 +658,12 @@ function slac_migrate_article_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'rss' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -671,6 +727,12 @@ function slac_migrate_article_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'rss' => array(
         'label' => 'above',
