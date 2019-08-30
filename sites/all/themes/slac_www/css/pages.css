@@ -3167,13 +3167,18 @@ a.imageLessButton {
 }
 
 /* line 2477, ../sass/pages.scss */
+.view-taxonomy-term .article-news-center-view {
+  padding: 15px 0px 18px 0px !important;
+}
+
+/* line 2481, ../sass/pages.scss */
 .article-news-center-view {
   padding: 15px 2% 18px 2%;
   width: auto;
   background: url(/sites/all/themes/slac_www/images/dotted-border.png) repeat-x bottom;
   overflow: hidden;
 }
-/* line 2482, ../sass/pages.scss */
+/* line 2486, ../sass/pages.scss */
 .article-news-center-view .date-type {
   font-size: 15px;
   color: #444;
@@ -3181,12 +3186,12 @@ a.imageLessButton {
   line-height: normal;
   margin: 0px 0px 9px;
 }
-/* line 2489, ../sass/pages.scss */
+/* line 2493, ../sass/pages.scss */
 .article-news-center-view .date {
   float: left;
   margin-right: 20px;
 }
-/* line 2493, ../sass/pages.scss */
+/* line 2497, ../sass/pages.scss */
 .article-news-center-view .title a {
   font-size: 19px;
   color: #000;
@@ -3194,13 +3199,13 @@ a.imageLessButton {
   font-weight: bold;
   margin-bottom: 4px;
 }
-/* line 2500, ../sass/pages.scss */
+/* line 2504, ../sass/pages.scss */
 .article-news-center-view .body {
   font-size: 16px;
   line-height: 1.4;
   color: #474747;
 }
-/* line 2505, ../sass/pages.scss */
+/* line 2509, ../sass/pages.scss */
 .article-news-center-view .content {
   float: left;
   width: 76%;
@@ -3208,13 +3213,13 @@ a.imageLessButton {
   font-size: 12px;
   line-height: normal;
 }
-/* line 2512, ../sass/pages.scss */
+/* line 2516, ../sass/pages.scss */
 .article-news-center-view .image {
   float: right;
   width: 20%;
   margin-left: 4%;
 }
-/* line 2517, ../sass/pages.scss */
+/* line 2521, ../sass/pages.scss */
 .article-news-center-view img {
   width: 100%;
   height: auto;

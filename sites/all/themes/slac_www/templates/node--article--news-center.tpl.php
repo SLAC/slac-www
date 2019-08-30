@@ -86,7 +86,7 @@
     <div class="title"><a href="/<?php print $node->path['alias']; ?>"><?php print $title; ?></a></div>
     <div class="body"><?php print render($content['body']); ?></div> 
   </div>  
-  <div class="image"><?php print render($content['field_image']); ?></div>  
+  <div class="image"><?php print render($content['field_image']['0']); ?></div>  
 </div>
 
 
