@@ -1,0 +1,14 @@
+//
+// Paragraphs sass mixins
+//
+
+// @include zen-grid-item($column-span: 2, $column-position: 3);
+
+.paragraph-item.paragraph-type--image img {
+  width: 100%;
+  height: auto;
+}
+
+.paragraph-item.paragraph-type--image .medium {
+  @include zen-grid-item($column-span: 2, $column-position: 3);
+}

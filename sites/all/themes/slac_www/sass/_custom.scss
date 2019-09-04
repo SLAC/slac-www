@@ -57,3 +57,16 @@
     }
   }
 }
+
+.paragraph-item.paragraph-type--image img {
+  width: 100%;
+  height: auto;
+}
+
+.paragraph-item.paragraph-type--image.full,.paragraph-item.paragraph-type--simple.full,.paragraph-item.paragraph-type--video.full {
+  @media (min-width: 901px){
+    margin: 0.35em 0 1em -33%;
+    @include zen-grid-container();
+  }
+}
+
