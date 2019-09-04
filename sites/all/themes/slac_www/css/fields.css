@@ -10,6 +10,28 @@
  *
  * http://drupal.org/project/fences
  */
+/* line 61, ../sass/_custom.scss */
+.paragraph-item.paragraph-type--image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 901px) {
+  /* line 66, ../sass/_custom.scss */
+  .paragraph-item.paragraph-type--image.full, .paragraph-item.paragraph-type--simple.full, .paragraph-item.paragraph-type--video.full {
+    margin: 0.35em 0 1em -33%;
+  }
+  /* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .paragraph-item.paragraph-type--image.full:before, .paragraph-item.paragraph-type--image.full:after, .paragraph-item.paragraph-type--simple.full:before, .paragraph-item.paragraph-type--simple.full:after, .paragraph-item.paragraph-type--video.full:before, .paragraph-item.paragraph-type--video.full:after {
+    content: "";
+    display: table;
+  }
+  /* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .paragraph-item.paragraph-type--image.full:after, .paragraph-item.paragraph-type--simple.full:after, .paragraph-item.paragraph-type--video.full:after {
+    clear: both;
+  }
+}
+
 /*
  * Field wrappers when the Fences module is enabled.
  */

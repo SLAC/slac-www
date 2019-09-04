@@ -8,10 +8,32 @@
  *
  * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
  */
+/* line 61, ../../sass/_custom.scss */
+.paragraph-item.paragraph-type--image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 901px) {
+  /* line 66, ../../sass/_custom.scss */
+  .paragraph-item.paragraph-type--image.full, .paragraph-item.paragraph-type--simple.full, .paragraph-item.paragraph-type--video.full {
+    margin: 0.35em 0 1em -33%;
+  }
+  /* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .paragraph-item.paragraph-type--image.full:before, .paragraph-item.paragraph-type--image.full:after, .paragraph-item.paragraph-type--simple.full:before, .paragraph-item.paragraph-type--simple.full:after, .paragraph-item.paragraph-type--video.full:before, .paragraph-item.paragraph-type--video.full:after {
+    content: "";
+    display: table;
+  }
+  /* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .paragraph-item.paragraph-type--image.full:after, .paragraph-item.paragraph-type--simple.full:after, .paragraph-item.paragraph-type--video.full:after {
+    clear: both;
+  }
+}
+
 /*
  * Center the page.
  */
-/* line 42, ../../sass/layouts/fixed-width.scss */
+/* line 43, ../../sass/layouts/fixed-width.scss */
 #page,
 .region-bottom {
   /* If you want to make the page a fixed width and centered in the viewport,
@@ -24,7 +46,7 @@
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
  */
-/* line 56, ../../sass/layouts/fixed-width.scss */
+/* line 61, ../../sass/layouts/fixed-width.scss */
 #header,
 #content,
 #navigation,
@@ -40,7 +62,7 @@
 /*
  * Containers for grid items and flow items.
  */
-/* line 51, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
 #main:before,
 #main:after,

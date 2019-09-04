@@ -4,8 +4,30 @@
  *
  * We provide some sane print styling for Drupal using Zen's layout method.
  */
+/* line 61, ../sass/_custom.scss */
+.paragraph-item.paragraph-type--image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 901px) {
+  /* line 66, ../sass/_custom.scss */
+  .paragraph-item.paragraph-type--image.full, .paragraph-item.paragraph-type--simple.full, .paragraph-item.paragraph-type--video.full {
+    margin: 0.35em 0 1em -33%;
+  }
+  /* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .paragraph-item.paragraph-type--image.full:before, .paragraph-item.paragraph-type--image.full:after, .paragraph-item.paragraph-type--simple.full:before, .paragraph-item.paragraph-type--simple.full:after, .paragraph-item.paragraph-type--video.full:before, .paragraph-item.paragraph-type--video.full:after {
+    content: "";
+    display: table;
+  }
+  /* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  .paragraph-item.paragraph-type--image.full:after, .paragraph-item.paragraph-type--simple.full:after, .paragraph-item.paragraph-type--video.full:after {
+    clear: both;
+  }
+}
+
 @media print {
-  /* line 13, ../sass/print.scss */
+  /* line 14, ../sass/print.scss */
   a:link,
   a:visited {
     /* underline all links */
@@ -25,7 +47,7 @@
     font-weight: normal;
     font-size: 16px;
   }
-  /* line 29, ../sass/print.scss */
+  /* line 30, ../sass/print.scss */
   #content a[href^="javascript:"]:after,
   #content a[href^="#"]:after {
     /* Only display useful links. */
@@ -46,7 +68,7 @@
     padding: 0 !important;
   }
 
-  /* line 46, ../sass/print.scss */
+  /* line 49, ../sass/print.scss */
   body,
   #page,
   #main,
@@ -57,7 +79,7 @@
     background-image: none !important;
   }
 
-  /* line 55, ../sass/print.scss */
+  /* line 68, ../sass/print.scss */
   #skip-link,
   #toolbar,
   #navigation,
