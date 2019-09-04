@@ -26,7 +26,6 @@ features[field_instance][] = paragraphs_item-video-field_width
 features[paragraphs][] = image
 features[paragraphs][] = simple
 features[paragraphs][] = video
-features[user_permission][] = administer paragraphs bundles
 features[user_permission][] = bypass paragraphs bundle content access
 features[user_permission][] = create paragraph content image
 features[user_permission][] = create paragraph content simple

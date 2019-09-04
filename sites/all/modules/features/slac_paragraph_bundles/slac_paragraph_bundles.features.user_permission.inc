@@ -10,15 +10,6 @@
 function slac_paragraph_bundles_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'administer paragraphs bundles'.
-  $permissions['administer paragraphs bundles'] = array(
-    'name' => 'administer paragraphs bundles',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'paragraphs',
-  );
-
   // Exported permission: 'bypass paragraphs bundle content access'.
   $permissions['bypass paragraphs bundle content access'] = array(
     'name' => 'bypass paragraphs bundle content access',
