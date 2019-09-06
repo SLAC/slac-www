@@ -15,7 +15,7 @@
 /*
  * Center the page.
  */
-/* line 43, ../../sass/layouts/responsive-sidebars.scss */
+/* line 44, ../../sass/layouts/responsive-sidebars.scss */
 #page,
 .region-bottom {
   /* For screen sizes larger than 1200px, prevent excessively long lines of text
@@ -28,7 +28,7 @@
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
  */
-/* line 57, ../../sass/layouts/responsive-sidebars.scss */
+/* line 62, ../../sass/layouts/responsive-sidebars.scss */
 #header,
 #content,
 #navigation,
@@ -47,7 +47,7 @@
 /*
  * Containers for grid items and flow items.
  */
-/* line 51, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
 #main:before,
 #main:after,
@@ -94,17 +94,17 @@
   .sidebar-first #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: right;
-    width: 40%;
-    margin-right: 20%;
-    margin-left: -60%;
+    width: 66.66667%;
+    margin-right: 33.33333%;
+    margin-left: -100%;
   }
   /* line 108, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-first .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: right;
-    width: 20%;
+    width: 33.33333%;
     margin-right: 0%;
-    margin-left: -20%;
+    margin-left: -33.33333%;
   }
 
   /*
@@ -114,17 +114,17 @@
   .sidebar-second #content {
     /* Span 2 columns, starting in 1st column from left. */
     float: right;
-    width: 40%;
+    width: 66.66667%;
     margin-right: 0%;
-    margin-left: -40%;
+    margin-left: -66.66667%;
   }
   /* line 122, ../../sass/layouts/responsive-sidebars.scss */
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 3rd column from left. */
     float: right;
-    width: 20%;
-    margin-right: 40%;
-    margin-left: -60%;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
   }
 
   /*
@@ -134,25 +134,25 @@
   .two-sidebars #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: right;
-    width: 40%;
-    margin-right: 20%;
-    margin-left: -60%;
+    width: 66.66667%;
+    margin-right: 33.33333%;
+    margin-left: -100%;
   }
   /* line 136, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: right;
-    width: 20%;
+    width: 33.33333%;
     margin-right: 0%;
-    margin-left: -20%;
+    margin-left: -33.33333%;
   }
   /* line 140, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second {
     /* Start a new row and span all 3 columns. */
     float: right;
-    width: 60%;
+    width: 100%;
     margin-right: 0%;
-    margin-left: -60%;
+    margin-left: -100%;
     padding-left: 0;
     padding-right: 0;
     clear: right;
@@ -171,26 +171,26 @@
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     /* Span 1 column, starting in the 1st column from left. */
     float: right;
-    width: 20%;
+    width: 33.33333%;
     margin-right: 0%;
-    margin-left: -20%;
+    margin-left: -33.33333%;
     clear: right;
   }
   /* line 152, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     /* Span 1 column, starting in the 2nd column from left. */
     float: right;
-    width: 20%;
-    margin-right: 20%;
-    margin-left: -40%;
+    width: 33.33333%;
+    margin-right: 33.33333%;
+    margin-left: -66.66667%;
   }
   /* line 155, ../../sass/layouts/responsive-sidebars.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     /* Span 1 column, starting in the 3rd column from left. */
     float: right;
-    width: 20%;
-    margin-right: 40%;
-    margin-left: -60%;
+    width: 33.33333%;
+    margin-right: 66.66667%;
+    margin-left: -100%;
   }
 }
 @media all and (min-width: 960px) {
