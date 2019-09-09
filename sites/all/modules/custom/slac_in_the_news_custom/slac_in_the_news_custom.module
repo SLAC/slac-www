@@ -2,7 +2,7 @@
 
 /**
  *  Implementation of template_preprocess_panels_pane
- * @param string $vars 
+ * @param string $vars
  */
 function slac_in_the_news_preprocess_panels_pane(&$vars){
   if($vars['pane']->subtype == 'slac_in_the_news-panel_pane_1'){
