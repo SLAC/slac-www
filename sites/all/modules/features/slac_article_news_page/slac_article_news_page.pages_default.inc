@@ -101,6 +101,38 @@ function slac_article_news_page_default_page_manager_handlers() {
   $display->content['new-91e713e1-2c8c-48ff-9623-e28d9d5ecff0'] = $pane;
   $display->panels['header'][0] = 'new-91e713e1-2c8c-48ff-9623-e28d9d5ecff0';
   $pane = new stdClass();
+  $pane->pid = 'new-8487372d-9049-4742-b747-ada8d997a17d';
+  $pane->panel = 'header';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_header_video';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'title',
+    'formatter' => 'media',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'file_view_mode' => 'page_full',
+    ),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '<none>',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '8487372d-9049-4742-b747-ada8d997a17d';
+  $display->content['new-8487372d-9049-4742-b747-ada8d997a17d'] = $pane;
+  $display->panels['header'][1] = 'new-8487372d-9049-4742-b747-ada8d997a17d';
+  $pane = new stdClass();
   $pane->pid = 'new-21c98a36-d3d0-437a-9ead-64a2ae60a9b5';
   $pane->panel = 'left';
   $pane->type = 'custom';

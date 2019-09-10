@@ -1057,6 +1057,15 @@ div.pane-node-body{
 
 .node-type-news-article .content{
   padding-top: 30px;
+  position: relative;
+
+  .field.field-name-field-description.field-type-text-long.field-label-hidden,.field-name-field-video-description-article.field-type-text-long {
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-style: italic;
+    padding: 15px;
+  }
+
   .pane-back-links{
     padding: 10px 0 20px;
     font-size: 0.7em;
@@ -1315,14 +1324,14 @@ a.lightbox-processed:hover{
   .video-block .content{
     padding-top: 0;
   }
-  .field-name-field-header-image .field-name-field-description {
+  .field-name-field-header-image .field-name-field-description,.field.field-name-field-video-description.field-type-text-long {
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px;
 
     @media (min-width: 901px){
       position: absolute;
-      bottom: 0;
+      bottom: 2px;
     }
   }
 
@@ -1374,5 +1383,3 @@ a.lightbox-processed:hover{
   padding-top: 0 !important;
   margin-top: -15px;
 }
-
-
