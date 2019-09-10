@@ -6,6 +6,6 @@
  */
 function slac_in_the_news_preprocess_panels_pane(&$vars){
   if($vars['pane']->subtype == 'slac_in_the_news-panel_pane_1'){
-    $vars['title'] = "SLAC <span>IN THE</span> NEWS";
+    $vars['title'] = "MEDIA MENTIONS";
   }
 }
