@@ -99,16 +99,16 @@ function slac_migrate_article_news_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
         'path' => array(
-          'weight' => '9',
-        ),
-        'metatags' => array(
           'weight' => '11',
         ),
-        'redirect' => array(
+        'metatags' => array(
           'weight' => '13',
+        ),
+        'redirect' => array(
+          'weight' => '15',
         ),
       ),
       'display' => array(),

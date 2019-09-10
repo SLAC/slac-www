@@ -86,7 +86,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -146,7 +146,7 @@ function slac_migrate_article_news_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -253,7 +253,105 @@ function slac_migrate_article_news_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 14,
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'node-news_article-field_header_video'.
+  $field_instances['node-news_article-field_header_video'] = array(
+    'bundle' => 'news_article',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'media',
+        'weight' => 11,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_header_video',
+    'label' => 'Header Video',
+    'required' => 0,
+    'settings' => array(
+      'epsacrop' => array(
+        'styles' => array(
+          'crop_landscape' => 0,
+          'crop_portrait' => 0,
+          'crop_square' => 0,
+          'ecrop_frontpage_carousel' => 0,
+          'ecrop_frontpage_headlines' => 0,
+          'ecrop_frontpage_headlines_small' => 0,
+          'ecrop_igp' => 0,
+          'ecrop_news_center' => 0,
+          'frontpage-headline' => 0,
+          'lightbox_text_bottom' => 0,
+          'lightbox_text_left_right' => 0,
+          'news_thumbnail_headlines_center' => 0,
+        ),
+      ),
+      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm m3s zip eps',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+          'vimeo' => 'vimeo',
+          'youtube' => 'youtube',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
     ),
   );
 
@@ -265,11 +363,12 @@ function slac_migrate_article_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'slac_news_center',
+        'module' => 'image',
         'settings' => array(
+          'image_link' => '',
           'image_style' => '',
         ),
-        'type' => 'image_rss_enclosure',
+        'type' => 'image',
         'weight' => 3,
       ),
       'email_main_story' => array(
@@ -371,7 +470,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -452,7 +551,7 @@ function slac_migrate_article_news_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
@@ -551,7 +650,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -616,7 +715,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -696,7 +795,7 @@ function slac_migrate_article_news_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -759,7 +858,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -823,7 +922,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'type' => 60,
       ),
       'type' => 'fieldset_tags',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -887,7 +986,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 3,
     ),
   );
 
@@ -896,6 +995,7 @@ function slac_migrate_article_news_field_default_field_instances() {
   t('Article type');
   t('Body');
   t('Header Image');
+  t('Header Video');
   t('Image');
   t('Page author');
   t('Replaces "Subheadline"');

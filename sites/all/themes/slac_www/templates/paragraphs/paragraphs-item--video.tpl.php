@@ -16,7 +16,9 @@
 <div class="paragraph-item paragraph-type--video<?php print $width_field; ?>">
   <div>
     <div>
-      <div><?php print render($content['field_pvideo']); ?></div>
+      <div><?php print render($content['field_pvideo']); ?>
+        <?php print render($content['field_video_description_article']); ?>
+      </div>
     </div>
   </div>
 </div>

@@ -79,6 +79,25 @@ function slac_migrate_article_news_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_header_video'.
+  $field_bases['field_header_video'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_header_video',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'mediafield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'media',
+  );
+
   // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,
