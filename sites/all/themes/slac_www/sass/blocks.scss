@@ -1330,7 +1330,7 @@ a.lightbox-processed:hover{
   .video-block .content{
     padding-top: 0;
   }
-  .field-name-field-header-image .field-name-field-description,.field.field-name-field-video-description.field-type-text-long {
+  .hero-image .field-name-field-header-image .field-name-field-description,.field.field-name-field-video-description.field-type-text-long {
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px;
@@ -1341,7 +1341,7 @@ a.lightbox-processed:hover{
     }
   }
 
-  .field-name-field-header-image {
+  .hero-image .field-name-field-header-image {
     position: relative;
     margin-bottom: 30px;
   }
