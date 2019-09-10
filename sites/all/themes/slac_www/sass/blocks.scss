@@ -309,8 +309,14 @@ $linkcolor: #990000;
   margin-bottom: 0;
 }
 
-.node-type-news-article .bg-list .pane-title{
-  margin-top: 35px;
+.node-type-news-article {
+  .bg-list .pane-title{
+    margin-top: 35px;
+  }
+
+  p a {
+    font-size: inherit;
+  }
 }
 
 .highlited {
