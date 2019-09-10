@@ -169,7 +169,7 @@ function slac_news_center_feature_views_default_views() {
   $handler->display->display_options['filters']['created']['table'] = 'node';
   $handler->display->display_options['filters']['created']['field'] = 'created';
   $handler->display->display_options['filters']['created']['operator'] = '>=';
-  $handler->display->display_options['filters']['created']['value']['value'] = 'first day of january this year';
+  $handler->display->display_options['filters']['created']['value']['value'] = 'first day of december last year';
   $handler->display->display_options['filters']['created']['value']['type'] = 'offset';
   $handler->display->display_options['pane_category']['name'] = 'News Center';
   $handler->display->display_options['pane_category']['weight'] = '0';
