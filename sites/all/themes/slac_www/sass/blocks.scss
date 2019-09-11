@@ -1061,6 +1061,11 @@ div.pane-node-body{
   }
 }
 
+
+.pane-node-field-header-video{
+  margin-bottom: 30px;
+}
+
 .node-type-news-article .content{
   padding-top: 30px;
   position: relative;
@@ -1330,7 +1335,7 @@ a.lightbox-processed:hover{
   .video-block .content{
     padding-top: 0;
   }
-  .hero-image .field-name-field-header-image .field-name-field-description,.field.field-name-field-video-description.field-type-text-long {
+  .hero-image .field-name-field-header-image .field-name-field-description,.hero-image .field.field-name-field-video-description.field-type-text-long {
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px;
