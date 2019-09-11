@@ -9,12 +9,12 @@ DEFINE('NEWS_LINK_FIELD', 'field_news_link');
 function slac_news_center_init() {
   $node = menu_get_object();
   if (empty($node)) {
-    return;  
-  }  
+    return;
+  }
   // if the news link field is populated, we issue an redirect
   if ($node->type === NEWS_CT) {
     if (!property_exists($node, NEWS_LINK_FIELD)) {
-      return;  
+      return;
     }
     if (empty($node->{NEWS_LINK_FIELD})) {
       return;
@@ -24,7 +24,7 @@ function slac_news_center_init() {
   $path_components = explode('/', $path);
   // we don't redirect for path such as node/[nid]/edit
   if (count($path_components) > 2) {
-    return;  
+    return;
   }
   if (isset($node->{NEWS_LINK_FIELD}[LANGUAGE_NONE][0]['url'])) {
     $url = $node->{NEWS_LINK_FIELD}[LANGUAGE_NONE][0]['url'];
@@ -81,7 +81,7 @@ function slac_news_center_field_formatter_settings_form($field, $instance, $view
   );
 
   return $element;
-} 
+}
 
 /**
  * Implements hook_field_formatter_settings_summary().
@@ -103,7 +103,7 @@ function slac_news_center_field_formatter_settings_summary($field, $instance, $v
   else {
     $summary[] = t('Original image');
   }
-		
+
   return implode('<br />', $summary);
 }
 
@@ -124,7 +124,7 @@ function slac_news_center_field_formatter_view($entity_type, $entity, $field, $i
             'type' => (isset($item['filemime'])) ? $item['filemime'] : '',
             'length' => (isset($item['filesize'])) ? $item['filesize'] : 0,
           ),
-        );      
+        );
       }
     break;
   }
@@ -179,6 +179,13 @@ function slac_news_center_views_pre_build(&$view) {
 function slac_news_center_entity_info_alter(&$entity_info) {
   $entity_info['node']['view modes']['news_center'] = array(
     'label' => t('News Center'),
+  );
+  $entity_info['file']['view modes']['page_full'] = array(
+    'label' => t('Page Full'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['file']['view modes']['header_cropped'] = array(
+    'label' => t('Header Cropped'),
     'custom settings' => TRUE,
   );
 }
