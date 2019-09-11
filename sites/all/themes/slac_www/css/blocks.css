@@ -1553,7 +1553,7 @@ div.pane-node-body img {
   position: relative;
 }
 /* line 1073, ../sass/blocks.scss */
-.node-type-news-article .content .field.field-name-field-description.field-type-text-long.field-label-hidden, .node-type-news-article .content .field-name-field-video-description-article.field-type-text-long {
+.node-type-news-article .content .field.field-name-field-description.field-type-text-long.field-label-hidden, .node-type-news-article .content .field-name-field-video-description-article.field-type-text-long, .node-type-news-article .content .field-name-field-video-description.field-type-text-long {
   font-family: "Source Sans Pro";
   font-size: 16px;
   font-style: italic;
