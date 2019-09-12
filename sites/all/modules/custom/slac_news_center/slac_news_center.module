@@ -179,6 +179,7 @@ function slac_news_center_views_pre_build(&$view) {
 function slac_news_center_entity_info_alter(&$entity_info) {
   $entity_info['node']['view modes']['news_center'] = array(
     'label' => t('News Center'),
+    'custom settings' => TRUE,
   );
   $entity_info['file']['view modes']['page_full'] = array(
     'label' => t('Page Full'),
