@@ -76,6 +76,52 @@
   }
 }
 
+/* line 120, ../sass/_custom.scss */
+.node-type-news-article .field-name-field-image.field-type-image .field-items {
+  padding: 0;
+}
+/* line 124, ../sass/_custom.scss */
+.node-type-news-article .field-name-field-image.field-type-image .field-item {
+  float: left;
+  text-align: center;
+  list-style: none;
+  padding: 8px;
+}
+@media (min-width: 769px) {
+  /* line 119, ../sass/_custom.scss */
+  .node-type-news-article .field-name-field-image.field-type-image {
+    /* one item */
+    /* two items */
+    /* three items */
+    /* four items */
+    /* five items */
+  }
+  /* line 132, ../sass/_custom.scss */
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(1) {
+    width: 98%;
+  }
+  /* line 138, ../sass/_custom.scss */
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(2),
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(2) ~ .field-item {
+    width: 47.5%;
+  }
+  /* line 144, ../sass/_custom.scss */
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(3),
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(3) ~ .field-item {
+    width: 31%;
+  }
+  /* line 150, ../sass/_custom.scss */
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(4),
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(4) ~ .field-item {
+    width: 22.5%;
+  }
+  /* line 156, ../sass/_custom.scss */
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(5),
+  .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(5) ~ .field-item {
+    width: 15%;
+  }
+}
+
 /* line 9, ../sass/forms.scss */
 .form-item {
   /* Wrapper for a form element (or group of form elements) and its label */
