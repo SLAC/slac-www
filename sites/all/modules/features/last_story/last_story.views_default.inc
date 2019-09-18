@@ -137,22 +137,21 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Field: Image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_image']['alter']['text'] = '<div class="views-field-body"><a href="[path]"><img src="[field_image]" alt="[field_image-alt]" title="[field_image-title]"></a></div>';
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['type'] = 'image_url';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
+  /* Field: Content: Header Image */
+  $handler->display->display_options['fields']['field_header_image']['id'] = 'field_header_image';
+  $handler->display->display_options['fields']['field_header_image']['table'] = 'field_data_field_header_image';
+  $handler->display->display_options['fields']['field_header_image']['field'] = 'field_header_image';
+  $handler->display->display_options['fields']['field_header_image']['label'] = '';
+  $handler->display->display_options['fields']['field_header_image']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_header_image']['alter']['text'] = '<div class="views-field-body"><a href="[path]"><img src="[field_header_image]" alt="[field_header_image-alt]" title="[field_header_image-title]"></a></div>';
+  $handler->display->display_options['fields']['field_header_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_header_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_header_image']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_header_image']['settings'] = array(
+    'url_type' => '0',
     'image_style' => 'news_thumbnail_headlines_center',
     'image_link' => '',
   );
-  $handler->display->display_options['fields']['field_image']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -230,23 +229,21 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Field: Image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_image']['alter']['text'] = '<div class="views-field-image"><a href="[path]"><img src="[field_image]" alt="[field_image-alt]" title="[field_image-title]"></a></div>';
-  $handler->display->display_options['fields']['field_image']['alter']['path'] = '[path]';
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['type'] = 'image_url';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
+  /* Field: Content: Header Image */
+  $handler->display->display_options['fields']['field_header_image']['id'] = 'field_header_image';
+  $handler->display->display_options['fields']['field_header_image']['table'] = 'field_data_field_header_image';
+  $handler->display->display_options['fields']['field_header_image']['field'] = 'field_header_image';
+  $handler->display->display_options['fields']['field_header_image']['label'] = '';
+  $handler->display->display_options['fields']['field_header_image']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_header_image']['alter']['text'] = '<div class="views-field-image"><a href="[path]"><img src="[field_header_image]" alt="[field_header_image-alt]" title="[field_header_image-title]"></a></div>';
+  $handler->display->display_options['fields']['field_header_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_header_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_header_image']['type'] = 'image_url';
+  $handler->display->display_options['fields']['field_header_image']['settings'] = array(
+    'url_type' => '0',
     'image_style' => 'news_thumbnail_headlines_center',
     'image_link' => '',
   );
-  $handler->display->display_options['fields']['field_image']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_image']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

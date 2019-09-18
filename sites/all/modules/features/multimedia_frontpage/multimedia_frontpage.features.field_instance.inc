@@ -137,6 +137,12 @@ function multimedia_frontpage_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'crop_header_news_image_cropped' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'crop_large' => array(
         'label' => 'above',
         'settings' => array(),
@@ -232,6 +238,18 @@ function multimedia_frontpage_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 2,
+      ),
+      'header_cropped' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'page_full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'preview' => array(
         'label' => 'above',

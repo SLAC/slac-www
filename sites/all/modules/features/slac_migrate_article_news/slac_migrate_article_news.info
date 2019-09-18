@@ -6,6 +6,7 @@ project = slac_migrate_article_news
 dependencies[] = active_tags
 dependencies[] = ctools
 dependencies[] = features
+dependencies[] = field_slideshow
 dependencies[] = fieldset_tags
 dependencies[] = image
 dependencies[] = link
