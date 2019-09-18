@@ -928,7 +928,8 @@ div.pane-node-body{
     }
   }
 
-  .views-field-field-image{
+  .views-field-field-image,
+  .views-field-field-header-image {
     float: right;
     width: 39%;
     margin: 0 2% 0 3%;
@@ -982,7 +983,8 @@ div.pane-node-body{
     width: 65%;
   }
 
-  .views-field-field-image{
+  .views-field-field-image,
+  .views-field-field-header-image {
     float: right;
     width: 32%;
     margin-left: 3%;
@@ -1025,7 +1027,8 @@ div.pane-node-body{
     line-height: normal;
   }
 
-  .views-field-field-image{
+  .views-field-field-image,
+  .views-field-field-header-image {
     float: right;
     width: 20%;
     margin-left: 4%;
@@ -1161,7 +1164,8 @@ div.pane-node-body{
     .views-row-first{
       border-top: none;
     }
-    .views-field-field-image{
+    .views-field-field-image,
+    .views-field-field-header-image {
       width: 100%;
       padding-bottom: 10px;
       a{
