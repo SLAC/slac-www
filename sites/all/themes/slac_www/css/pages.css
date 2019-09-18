@@ -3167,19 +3167,19 @@ a.imageLessButton {
 }
 
 /* line 2477, ../sass/pages.scss */
-.view-slac-taxonomy-term {
+.view-slac-taxonomy-term .article-news-center-view {
   padding: 15px 0px 18px 0px !important;
 }
 /* line 2479, ../sass/pages.scss */
-.view-slac-taxonomy-term .title a {
+.view-slac-taxonomy-term .article-news-center-view .title a {
   font-size: 21px !important;
 }
 /* line 2482, ../sass/pages.scss */
-.view-slac-taxonomy-term .views-row {
+.view-slac-taxonomy-term .article-news-center-view .views-row {
   background: url(/sites/all/themes/slac_www/images/dotted-border.png) repeat-x bottom;
 }
 /* line 2485, ../sass/pages.scss */
-.view-slac-taxonomy-term .body {
+.view-slac-taxonomy-term .article-news-center-view .body {
   font_size: 18px !important;
 }
 
