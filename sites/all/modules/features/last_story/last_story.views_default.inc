@@ -113,6 +113,10 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['field_teaser']['label'] = '';
   $handler->display->display_options['fields']['field_teaser']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_teaser']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_teaser']['settings'] = array(
+    'trim_length' => '800',
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -200,6 +204,10 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['field_teaser']['label'] = '';
   $handler->display->display_options['fields']['field_teaser']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_teaser']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_teaser']['settings'] = array(
+    'trim_length' => '100',
+  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
