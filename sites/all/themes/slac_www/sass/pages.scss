@@ -2474,15 +2474,17 @@ a.imageLessButton {
   }
 }
 
-.view-slac-taxonomy-term .article-news-center-view {
-  padding: 15px 0px 18px 0px !important;
+.view-slac-taxonomy-term {
+  .article-news-center-view {
+    padding: 15px 0px 18px 0px !important;
+  }
   .title a {
     font-size: 21px !important;
   }
   .views-row {
     background: url(/sites/all/themes/slac_www/images/dotted-border.png) repeat-x bottom;
   }
-  .body {
+  .field-name-field-teaser {
     font_size: 18px !important;
   }
 }

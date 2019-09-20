@@ -95,6 +95,9 @@ function slac_migrate_article_news_strongarm() {
       'ical' => array(
         'custom_settings' => FALSE,
       ),
+      'news_center' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -102,13 +105,13 @@ function slac_migrate_article_news_strongarm() {
           'weight' => '2',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '10',
         ),
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '12',
         ),
         'redirect' => array(
-          'weight' => '15',
+          'weight' => '14',
         ),
       ),
       'display' => array(),
