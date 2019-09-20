@@ -45,7 +45,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -55,11 +55,8 @@ function slac_migrate_article_news_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
@@ -201,7 +198,7 @@ function slac_migrate_article_news_field_default_field_instances() {
           'image_style' => 'news_thumbnail_headlines_center',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -313,10 +310,13 @@ function slac_migrate_article_news_field_default_field_instances() {
         'weight' => 0,
       ),
       'news_center' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'label' => 'hidden',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'teaser',
+        ),
+        'type' => 'media',
+        'weight' => 3,
       ),
       'rss' => array(
         'label' => 'above',
@@ -421,7 +421,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -619,12 +619,9 @@ function slac_migrate_article_news_field_default_field_instances() {
       ),
       'news_center' => array(
         'label' => 'hidden',
-        'module' => 'mediafield',
-        'settings' => array(
-          'file_view_mode' => 'default',
-        ),
-        'type' => 'media',
-        'weight' => 4,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'rss' => array(
         'label' => 'above',
@@ -810,7 +807,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'weight' => 6,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
           'view_mode' => 'full',

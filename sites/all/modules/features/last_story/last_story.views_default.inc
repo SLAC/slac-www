@@ -151,6 +151,16 @@ function last_story_views_default_views() {
     'image_style' => 'news_thumbnail_headlines_center',
     'image_link' => '',
   );
+  /* Field: Content: Header Video */
+  $handler->display->display_options['fields']['field_header_video']['id'] = 'field_header_video';
+  $handler->display->display_options['fields']['field_header_video']['table'] = 'field_data_field_header_video';
+  $handler->display->display_options['fields']['field_header_video']['field'] = 'field_header_video';
+  $handler->display->display_options['fields']['field_header_video']['label'] = '';
+  $handler->display->display_options['fields']['field_header_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_header_video']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_header_video']['settings'] = array(
+    'file_view_mode' => 'teaser',
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -243,6 +253,16 @@ function last_story_views_default_views() {
     'url_type' => '0',
     'image_style' => 'news_thumbnail_headlines_center',
     'image_link' => '',
+  );
+  /* Field: Content: Header Video */
+  $handler->display->display_options['fields']['field_header_video']['id'] = 'field_header_video';
+  $handler->display->display_options['fields']['field_header_video']['table'] = 'field_data_field_header_video';
+  $handler->display->display_options['fields']['field_header_video']['field'] = 'field_header_video';
+  $handler->display->display_options['fields']['field_header_video']['label'] = '';
+  $handler->display->display_options['fields']['field_header_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_header_video']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_header_video']['settings'] = array(
+    'file_view_mode' => 'teaser',
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
