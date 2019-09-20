@@ -218,6 +218,9 @@ function slac_metatags_metatag_export_default() {
   $config['node:news_article'] = array(
     'instance' => 'node:news_article',
     'config' => array(
+      'description' => array(
+        'value' => '[node:field-teaser]',
+      ),
       'keywords' => array(
         'value' => '[node:field-tags]',
       ),
