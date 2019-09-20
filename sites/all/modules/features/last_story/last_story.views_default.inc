@@ -112,8 +112,11 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['field_teaser']['field'] = 'field_teaser';
   $handler->display->display_options['fields']['field_teaser']['label'] = '';
   $handler->display->display_options['fields']['field_teaser']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_teaser']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_teaser']['alter']['max_length'] = '800';
+  $handler->display->display_options['fields']['field_teaser']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_teaser']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_teaser']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['field_teaser']['settings'] = array(
     'trim_length' => '800',
   );
@@ -203,8 +206,11 @@ function last_story_views_default_views() {
   $handler->display->display_options['fields']['field_teaser']['field'] = 'field_teaser';
   $handler->display->display_options['fields']['field_teaser']['label'] = '';
   $handler->display->display_options['fields']['field_teaser']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_teaser']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_teaser']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['field_teaser']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_teaser']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_teaser']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_teaser']['type'] = 'text_trimmed';
   $handler->display->display_options['fields']['field_teaser']['settings'] = array(
     'trim_length' => '100',
   );
