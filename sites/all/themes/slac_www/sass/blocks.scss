@@ -320,6 +320,7 @@ $linkcolor: #990000;
 
   p a {
     font-size: inherit;
+    text-decoration: underline;
   }
 }
 
@@ -1417,4 +1418,13 @@ a.lightbox-processed:hover{
 .section-content .slac-beans-image-text-link:first-child{
   padding-top: 0 !important;
   margin-top: -15px;
+}
+
+.media.media-element-container.media-default .content img {
+  width: 100%;
+  height: auto;
+}
+
+.article-news-center-view .image .content {
+  width: 100%;
 }
