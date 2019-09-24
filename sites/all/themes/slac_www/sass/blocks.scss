@@ -320,7 +320,8 @@ $linkcolor: #990000;
 
   p a {
     font-size: inherit;
-    text-decoration: underline;
+    border-bottom: #ccc solid 1px;
+    font-weight: 600;
   }
 }
 
