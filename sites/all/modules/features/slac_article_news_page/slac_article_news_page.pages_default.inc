@@ -376,29 +376,6 @@ ul.share-buttons img{
   $display->content['new-714a1850-f60e-40c5-a25e-146ac65576a3'] = $pane;
   $display->panels['right'][5] = 'new-714a1850-f60e-40c5-a25e-146ac65576a3';
   $pane = new stdClass();
-  $pane->pid = 'new-7378957e-ab9a-4dc3-a46d-1aff2ddabd1e';
-  $pane->panel = 'right';
-  $pane->type = 'node_body';
-  $pane->subtype = 'node_body';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'context' => 'argument_entity_id:node_1',
-    'override_title' => 1,
-    'override_title_text' => '',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 6;
-  $pane->locks = array();
-  $pane->uuid = '7378957e-ab9a-4dc3-a46d-1aff2ddabd1e';
-  $display->content['new-7378957e-ab9a-4dc3-a46d-1aff2ddabd1e'] = $pane;
-  $display->panels['right'][6] = 'new-7378957e-ab9a-4dc3-a46d-1aff2ddabd1e';
-  $pane = new stdClass();
   $pane->pid = 'new-804a50a7-7994-42cd-9609-0120f82634ce';
   $pane->panel = 'right';
   $pane->type = 'node_terms_misc';
@@ -421,11 +398,11 @@ ul.share-buttons img{
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 7;
+  $pane->position = 6;
   $pane->locks = array();
   $pane->uuid = '804a50a7-7994-42cd-9609-0120f82634ce';
   $display->content['new-804a50a7-7994-42cd-9609-0120f82634ce'] = $pane;
-  $display->panels['right'][7] = 'new-804a50a7-7994-42cd-9609-0120f82634ce';
+  $display->panels['right'][6] = 'new-804a50a7-7994-42cd-9609-0120f82634ce';
   $pane = new stdClass();
   $pane->pid = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
   $pane->panel = 'right';
@@ -440,11 +417,11 @@ ul.share-buttons img{
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 8;
+  $pane->position = 7;
   $pane->locks = array();
   $pane->uuid = 'af53ca8c-6468-40cf-a770-371326c9e5d9';
   $display->content['new-af53ca8c-6468-40cf-a770-371326c9e5d9'] = $pane;
-  $display->panels['right'][8] = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
+  $display->panels['right'][7] = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
   $pane = new stdClass();
   $pane->pid = 'new-250d9a0d-a925-442e-ab51-e657b5ac1e6a';
   $pane->panel = 'right';
@@ -474,11 +451,11 @@ ul.share-buttons img{
     'css_class' => 'highlited video-block',
   );
   $pane->extras = array();
-  $pane->position = 9;
+  $pane->position = 8;
   $pane->locks = array();
   $pane->uuid = '250d9a0d-a925-442e-ab51-e657b5ac1e6a';
   $display->content['new-250d9a0d-a925-442e-ab51-e657b5ac1e6a'] = $pane;
-  $display->panels['right'][9] = 'new-250d9a0d-a925-442e-ab51-e657b5ac1e6a';
+  $display->panels['right'][8] = 'new-250d9a0d-a925-442e-ab51-e657b5ac1e6a';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
