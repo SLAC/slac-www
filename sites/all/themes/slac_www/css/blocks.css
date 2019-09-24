@@ -1946,12 +1946,13 @@ a.lightbox-processed:hover {
 }
 
 /* line 1423, ../sass/blocks.scss */
-.media.media-element-container.media-default .content img {
+.node-type-news-article .paragraphs-items-field-structured-content .media img {
   width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
-/* line 1428, ../sass/blocks.scss */
+/* line 1429, ../sass/blocks.scss */
 .article-news-center-view .image .content {
   width: 100%;
 }

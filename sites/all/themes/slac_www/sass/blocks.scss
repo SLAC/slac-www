@@ -1420,9 +1420,10 @@ a.lightbox-processed:hover{
   margin-top: -15px;
 }
 
-.media.media-element-container.media-default .content img {
+.node-type-news-article .paragraphs-items-field-structured-content .media img {
   width: 100%;
   height: auto;
+  max-width:100%;
 }
 
 .article-news-center-view .image .content {
