@@ -589,7 +589,7 @@ function slac_migrate_article_news_field_default_field_instances() {
     'bundle' => 'news_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please select the news source for external news. If you do not see it in the options, please add it as a tern to \'News Source\' taxonomy.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1142,6 +1142,7 @@ function slac_migrate_article_news_field_default_field_instances() {
   t('Image');
   t('News Source');
   t('Page author');
+  t('Please select the news source for external news. If you do not see it in the options, please add it as a tern to \'News Source\' taxonomy.');
   t('Replaces "Subheadline"');
   t('Source Link');
   t('Specify if this news article has an external url. This is useful for external emails.');
