@@ -82,7 +82,7 @@
 ?>
 <div class="article-news-center-view">
   <div class="content">        
-    <div class="date-type"><span class="date"><?php print date(('F j, Y'), $created); ?></span><span class="type"><?php print render($content['field_article_type']); ?></span></div>
+    <div class="date-type"><span class="date"><?php print date(('F j, Y'), $created); ?></span><span class="type"><?php print render($content['field_article_type']); ?></span><span class="source"><?php print render($content['field_news_source']); ?></span></div>
     <div class="title"><a href="/<?php print $node->path['alias']; ?>"><?php print $title; ?></a></div>
     <div class="body"><?php print render($content['field_teaser']); ?></div> 
   </div>  

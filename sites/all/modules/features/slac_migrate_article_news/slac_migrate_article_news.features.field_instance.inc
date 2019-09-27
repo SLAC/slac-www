@@ -45,7 +45,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -77,7 +77,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -198,7 +198,7 @@ function slac_migrate_article_news_field_default_field_instances() {
           'image_style' => 'news_thumbnail_headlines_center',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -316,7 +316,7 @@ function slac_migrate_article_news_field_default_field_instances() {
           'file_view_mode' => 'teaser',
         ),
         'type' => 'media',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'rss' => array(
         'label' => 'above',
@@ -421,7 +421,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -534,7 +534,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'rss' => array(
         'label' => 'above',
@@ -584,6 +584,80 @@ function slac_migrate_article_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news_article-field_news_source'.
+  $field_instances['node-news_article-field_news_source'] = array(
+    'bundle' => 'news_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news_center' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_news_source',
+    'label' => 'News Source',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 14,
+    ),
+  );
+
   // Exported field_instance: 'node-news_article-field_news_video'.
   $field_instances['node-news_article-field_news_video'] = array(
     'bundle' => 'news_article',
@@ -621,7 +695,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'rss' => array(
         'label' => 'above',
@@ -726,7 +800,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'rss' => array(
         'label' => 'above',
@@ -798,7 +872,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'rss' => array(
         'label' => 'above',
@@ -881,7 +955,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'rss' => array(
         'label' => 'above',
@@ -951,7 +1025,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'rss' => array(
         'label' => 'above',
@@ -1024,7 +1098,7 @@ function slac_migrate_article_news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -1066,6 +1140,7 @@ function slac_migrate_article_news_field_default_field_instances() {
   t('Header Image');
   t('Header Video');
   t('Image');
+  t('News Source');
   t('Page author');
   t('Replaces "Subheadline"');
   t('Source Link');
