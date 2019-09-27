@@ -307,3 +307,13 @@ function slac_www_preprocess_node(&$vars) {
     $vars['theme_hook_suggestions'][] = 'node__article__news_center';
   }
 }
+
+function slac_www_preprocess_html(&$variables) {
+  if(arg(0)=='node' && is_numeric(arg(1))) {
+    $node = node_load(arg(1));  
+    if (!empty($node->field_header_image_width)) {
+      $header_width = $node->field_header_image_width['und']['0']['value'];
+      $variables['classes_array'][] = 'header-width-' . $header_width;
+    }
+  }
+}

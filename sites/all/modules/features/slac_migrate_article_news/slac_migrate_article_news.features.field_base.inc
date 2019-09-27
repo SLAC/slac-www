@@ -79,6 +79,31 @@ function slac_migrate_article_news_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_header_image_width'.
+  $field_bases['field_header_image_width'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_header_image_width',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'default' => 'default',
+        'full' => 'full',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_header_video'.
   $field_bases['field_header_video'] = array(
     'active' => 1,
