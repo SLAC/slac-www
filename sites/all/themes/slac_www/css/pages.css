@@ -3244,9 +3244,9 @@ a.imageLessButton {
 }
 /* line 2544, ../sass/pages.scss */
 .node-type-news-article .page-basic .content > .inside {
-  max-width: 100%;
+  max-width: 100% !important;
   margin: 0;
-  width: 100%;
+  width: 100% !important;
   padding: 0;
 }
 
@@ -3255,4 +3255,11 @@ a.imageLessButton {
   margin-left: -5%;
   margin-right: -5%;
   padding: 0;
+}
+
+@media (max-width: 480px) {
+  /* line 2561, ../sass/pages.scss */
+  .node-type-news-article .two-col-leftsidebar .general-right {
+    width: 100%;
+  }
 }
