@@ -101,7 +101,11 @@ function slac_paragraph_bundles_field_default_field_instances() {
   // Exported field_instance: 'paragraphs_item-image-field_width'.
   $field_instances['paragraphs_item-image-field_width'] = array(
     'bundle' => 'image',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -190,7 +194,11 @@ function slac_paragraph_bundles_field_default_field_instances() {
   // Exported field_instance: 'paragraphs_item-simple-field_width'.
   $field_instances['paragraphs_item-simple-field_width'] = array(
     'bundle' => 'simple',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -360,7 +368,11 @@ function slac_paragraph_bundles_field_default_field_instances() {
   // Exported field_instance: 'paragraphs_item-video-field_width'.
   $field_instances['paragraphs_item-video-field_width'] = array(
     'bundle' => 'video',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(

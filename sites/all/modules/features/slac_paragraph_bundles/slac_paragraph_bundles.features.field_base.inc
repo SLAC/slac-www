@@ -105,6 +105,8 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        'default' => 'Default',
+        'large' => 'Large Width',
         'full' => 'Full Width',
       ),
       'allowed_values_function' => '',
