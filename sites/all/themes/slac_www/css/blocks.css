@@ -2139,8 +2139,9 @@ ul.share-buttons .email img:hover {
   position: relative;
   margin: 0;
   padding: .5rem;
+  margin-left: 10px;
 }
-/* line 1581, ../sass/blocks.scss */
+/* line 1582, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote blockquote:before {
   position: absolute;
   color: #000 !important;
@@ -2148,33 +2149,35 @@ ul.share-buttons .email img:hover {
   width: 2rem;
   height: 2rem;
 }
-/* line 1589, ../sass/blocks.scss */
+/* line 1590, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote blockquote:before {
   content: '“';
   left: -1rem;
   top: 0rem;
 }
-/* line 1595, ../sass/blocks.scss */
+/* line 1596, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote cite .field-item.even::before {
   content: "--";
   display: inline-block;
 }
-/* line 1600, ../sass/blocks.scss */
+/* line 1601, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote cite {
   line-height: 3;
   text-align: left;
   margin-left: 20px;
   display: inline-block;
   font-style: italic;
+  margin-top: -10px;
+  margin-bottom: 20px;
 }
 
-/* line 1609, ../sass/blocks.scss */
+/* line 1612, ../sass/blocks.scss */
 .limitedheader-image {
   height: 600px;
   overflow: hidden;
   position: relative;
 }
-/* line 1615, ../sass/blocks.scss */
+/* line 1618, ../sass/blocks.scss */
 .limitedheader-image img {
   top: 50%;
   left: 50%;
@@ -2183,16 +2186,25 @@ ul.share-buttons .email img:hover {
   transform: translate(-50%, -50%);
 }
 
-/* line 1625, ../sass/blocks.scss */
+/* line 1628, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container {
   border-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
-/* line 1629, ../sass/blocks.scss */
+/* line 1632, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container .field-items .field-item {
   margin-bottom: 0;
 }
-/* line 1634, ../sass/blocks.scss */
+/* line 1637, ../sass/blocks.scss */
+.front .inside.slider .field-collection-container {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+/* line 1642, ../sass/blocks.scss */
+.front .inside.slider .field-collection-container .field-item.even {
+  margin-bottom: 0;
+}
+/* line 1646, ../sass/blocks.scss */
 .front .field-collection-view {
   padding: 0 !important;
   margin: 0 !important;

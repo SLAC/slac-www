@@ -1576,6 +1576,7 @@ ul.share-buttons .email img:hover {
     position: relative;
     margin: 0;
     padding: .5rem;
+    margin-left: 10px;
   }
 
   blockquote:before {
@@ -1603,6 +1604,8 @@ ul.share-buttons .email img:hover {
     margin-left: 20px;
     display: inline-block;
     font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1629,6 +1632,15 @@ ul.share-buttons .email img:hover {
     .field-items .field-item {
      margin-bottom: 0;
     }
+  }
+
+  .inside.slider .field-collection-container {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .inside.slider .field-collection-container .field-item.even {
+    margin-bottom: 0;
   }
 
   .field-collection-view {
