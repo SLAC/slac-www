@@ -15,6 +15,9 @@ function slac_paragraph_bundles_user_default_permissions() {
     'name' => 'bypass paragraphs bundle content access',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'paragraphs_bundle_permissions',
   );
