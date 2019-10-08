@@ -148,6 +148,77 @@ function slac_migrate_article_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news_article-field_full_width_header'.
+  $field_instances['node-news_article-field_full_width_header'] = array(
+    'bundle' => 'news_article',
+    'default_value' => array(
+      0 => array(
+        'value' => 'no',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 1,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_full_width_header',
+    'label' => 'Full Width Header',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-news_article-field_header_image'.
   $field_instances['node-news_article-field_header_image'] = array(
     'bundle' => 'news_article',
@@ -967,11 +1038,13 @@ function slac_migrate_article_news_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
+        'blockquote' => 'blockquote',
         'image' => 'image',
         'simple' => 'simple',
         'video' => 'video',
       ),
       'bundle_weights' => array(
+        'blockquote' => 2,
         'image' => -5,
         'simple' => -6,
         'video' => -4,
@@ -1203,10 +1276,132 @@ function slac_migrate_article_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-blockquote-field_quote'.
+  $field_instances['paragraphs_item-blockquote-field_quote'] = array(
+    'bundle' => 'blockquote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_quote',
+    'label' => 'Quote',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-blockquote-field_quote_width'.
+  $field_instances['paragraphs_item-blockquote-field_quote_width'] = array(
+    'bundle' => 'blockquote',
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_quote_width',
+    'label' => 'Quote Width',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-blockquote-field_quotee'.
+  $field_instances['paragraphs_item-blockquote-field_quotee'] = array(
+    'bundle' => 'blockquote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_quotee',
+    'label' => 'Quotee',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Article type');
   t('Body');
+  t('Full Width Header');
   t('Header Image');
   t('Header Image Width');
   t('Header Video');
@@ -1214,6 +1409,9 @@ function slac_migrate_article_news_field_default_field_instances() {
   t('News Source');
   t('Page author');
   t('Please select the news source for external news. If you do not see it in the options, please add it as a tern to \'News Source\' taxonomy.');
+  t('Quote');
+  t('Quote Width');
+  t('Quotee');
   t('Replaces "Subheadline"');
   t('Source Link');
   t('Specify if this news article has an external url. This is useful for external emails.');

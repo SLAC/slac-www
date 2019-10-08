@@ -9,6 +9,11 @@
  */
 function slac_paragraph_bundles_paragraphs_info() {
   $items = array(
+    'blockquote' => array(
+      'name' => 'Blockquote',
+      'bundle' => 'blockquote',
+      'locked' => '1',
+    ),
     'image' => array(
       'name' => 'Image',
       'bundle' => 'image',
