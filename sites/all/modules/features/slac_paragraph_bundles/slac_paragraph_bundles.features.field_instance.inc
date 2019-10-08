@@ -101,11 +101,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
   // Exported field_instance: 'paragraphs_item-image-field_width'.
   $field_instances['paragraphs_item-image-field_width'] = array(
     'bundle' => 'image',
-    'default_value' => array(
-      0 => array(
-        'value' => 'default',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(

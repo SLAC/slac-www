@@ -148,77 +148,6 @@ function slac_migrate_article_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news_article-field_full_width_header'.
-  $field_instances['node-news_article-field_full_width_header'] = array(
-    'bundle' => 'news_article',
-    'default_value' => array(
-      0 => array(
-        'value' => 'no',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_key',
-        'weight' => 1,
-      ),
-      'email_main_story' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'email_side_news' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'email_top_story' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'news_center' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'rss' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_full_width_header',
-    'label' => 'Full Width Header',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'node-news_article-field_header_image'.
   $field_instances['node-news_article-field_header_image'] = array(
     'bundle' => 'news_article',
@@ -1319,11 +1248,7 @@ function slac_migrate_article_news_field_default_field_instances() {
   // Exported field_instance: 'paragraphs_item-blockquote-field_quote_width'.
   $field_instances['paragraphs_item-blockquote-field_quote_width'] = array(
     'bundle' => 'blockquote',
-    'default_value' => array(
-      0 => array(
-        'value' => 'default',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1401,7 +1326,6 @@ function slac_migrate_article_news_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Article type');
   t('Body');
-  t('Full Width Header');
   t('Header Image');
   t('Header Image Width');
   t('Header Video');
