@@ -477,14 +477,14 @@ ul.share-buttons .email img:hover {
   transform: translate(-50%, -50%);
 }
 
-/* line 255, ../sass/nodes.scss */
+/* line 256, ../sass/nodes.scss */
 .front .panels-ipe-portlet-content .field-collection-container {
-  border-bottom: 0;
-  margin-bottom: 0;
+  border-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
-/* line 259, ../sass/nodes.scss */
-.front .panels-ipe-portlet-content .field-collection-container .field-collection-view {
-  padding: 0;
-  margin: 0;
+/* line 261, ../sass/nodes.scss */
+.front .field-collection-view {
+  padding: 0 !important;
+  margin: 0 !important;
   border-bottom: 0;
 }
