@@ -120,7 +120,6 @@ function slac_migrate_article_news_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'default' => 'default',
         'full' => 'full',
       ),
       'allowed_values_function' => '',
