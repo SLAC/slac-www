@@ -2498,7 +2498,11 @@ a.imageLessButton {
     color: #444;
     font-weight: 400;
     line-height: normal;
-    margin: 0px 0px 9px;
+    margin: 0;
+  }
+  .title{
+    display: inline-block;
+    margin-top: 10px;
   }
   .date,
   .type {
