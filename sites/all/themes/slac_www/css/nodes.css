@@ -252,3 +252,10 @@ ul.share-buttons .email img:hover {
   text-align: center;
   word-wrap: break-word;
 }
+
+/* line 66, ../sass/nodes.scss */
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
