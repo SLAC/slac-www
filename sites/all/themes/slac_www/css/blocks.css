@@ -2011,20 +2011,24 @@ a.lightbox-processed:hover {
   color: #474748;
   font-family: "Source Sans Pro" !important;
 }
+/* line 1467, ../sass/blocks.scss */
+.paragraph-type--simple span {
+  font-size: 18px !important;
+}
 
-/* line 1469, ../sass/blocks.scss */
+/* line 1472, ../sass/blocks.scss */
 .hero-image img {
   width: 100%;
   height: auto;
   max-height: 660px;
 }
 
-/* line 1476, ../sass/blocks.scss */
+/* line 1479, ../sass/blocks.scss */
 .do-not-limit-header-height .hero-image img {
   max-height: none !important;
 }
 
-/* line 1481, ../sass/blocks.scss */
+/* line 1484, ../sass/blocks.scss */
 .media-vimeo-video, .media-youtube-video {
   position: relative;
   padding-bottom: 56.25%;
@@ -2033,7 +2037,7 @@ a.lightbox-processed:hover {
   overflow: hidden;
 }
 
-/* line 1492, ../sass/blocks.scss */
+/* line 1495, ../sass/blocks.scss */
 .media-vimeo-video iframe,
 .media-vimeo-video object,
 .media-vimeo-video embed,
@@ -2048,21 +2052,21 @@ a.lightbox-processed:hover {
 }
 
 @media (max-width: 900px) {
-  /* line 1500, ../sass/blocks.scss */
+  /* line 1503, ../sass/blocks.scss */
   ul.share-buttons {
     margin-top: 30px;
   }
-  /* line 1504, ../sass/blocks.scss */
+  /* line 1507, ../sass/blocks.scss */
   ul.share-buttons li {
     display: inline !important;
   }
 }
 
-/* line 1511, ../sass/blocks.scss */
+/* line 1514, ../sass/blocks.scss */
 .node-type-news-article .field-name-field-image.field-type-image .field-items {
   padding: 0;
 }
-/* line 1515, ../sass/blocks.scss */
+/* line 1518, ../sass/blocks.scss */
 .node-type-news-article .field-name-field-image.field-type-image .field-item {
   float: left;
   text-align: center;
@@ -2070,7 +2074,7 @@ a.lightbox-processed:hover {
   padding: 8px;
 }
 @media (min-width: 769px) {
-  /* line 1510, ../sass/blocks.scss */
+  /* line 1513, ../sass/blocks.scss */
   .node-type-news-article .field-name-field-image.field-type-image {
     /* one item */
     /* two items */
@@ -2078,33 +2082,33 @@ a.lightbox-processed:hover {
     /* four items */
     /* five items */
   }
-  /* line 1523, ../sass/blocks.scss */
+  /* line 1526, ../sass/blocks.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(1) {
     width: 98%;
   }
-  /* line 1529, ../sass/blocks.scss */
+  /* line 1532, ../sass/blocks.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(2),
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(2) ~ .field-item {
     width: 47.5%;
   }
-  /* line 1535, ../sass/blocks.scss */
+  /* line 1538, ../sass/blocks.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(3),
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(3) ~ .field-item {
     width: 31%;
   }
-  /* line 1541, ../sass/blocks.scss */
+  /* line 1544, ../sass/blocks.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(4),
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(4) ~ .field-item {
     width: 22.5%;
   }
-  /* line 1547, ../sass/blocks.scss */
+  /* line 1550, ../sass/blocks.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(5),
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(5) ~ .field-item {
     width: 15%;
   }
 }
 
-/* line 1553, ../sass/blocks.scss */
+/* line 1556, ../sass/blocks.scss */
 ul.share-buttons img {
   height: 30px !important;
   width: 30px !important;
@@ -2113,27 +2117,27 @@ ul.share-buttons img {
   border-radius: 8px;
 }
 
-/* line 1561, ../sass/blocks.scss */
+/* line 1564, ../sass/blocks.scss */
 ul.share-buttons .facebook img:hover {
   background: #3b5998;
 }
 
-/* line 1564, ../sass/blocks.scss */
+/* line 1567, ../sass/blocks.scss */
 ul.share-buttons .twitter img:hover {
   background: #00aced;
 }
 
-/* line 1567, ../sass/blocks.scss */
+/* line 1570, ../sass/blocks.scss */
 ul.share-buttons .linkedin img:hover {
   background: #0077B5;
 }
 
-/* line 1570, ../sass/blocks.scss */
+/* line 1573, ../sass/blocks.scss */
 ul.share-buttons .email img:hover {
   background: #8c1515;
 }
 
-/* line 1575, ../sass/blocks.scss */
+/* line 1578, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote blockquote {
   font-weight: 100;
   font-size: 1.2rem !important;
@@ -2144,7 +2148,7 @@ ul.share-buttons .email img:hover {
   padding: .5rem;
   margin-left: 10px;
 }
-/* line 1586, ../sass/blocks.scss */
+/* line 1589, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote blockquote:before {
   position: absolute;
   color: #000 !important;
@@ -2152,18 +2156,18 @@ ul.share-buttons .email img:hover {
   width: 2rem;
   height: 2rem;
 }
-/* line 1594, ../sass/blocks.scss */
+/* line 1597, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote blockquote:before {
   content: '“';
   left: -1rem;
   top: 0rem;
 }
-/* line 1600, ../sass/blocks.scss */
+/* line 1603, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote cite .field-item.even::before {
   content: "--";
   display: inline-block;
 }
-/* line 1605, ../sass/blocks.scss */
+/* line 1608, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--quote cite {
   line-height: 3;
   text-align: left;
@@ -2174,13 +2178,13 @@ ul.share-buttons .email img:hover {
   margin-bottom: 20px;
 }
 
-/* line 1616, ../sass/blocks.scss */
+/* line 1619, ../sass/blocks.scss */
 .limitedheader-image {
   height: 600px;
   overflow: hidden;
   position: relative;
 }
-/* line 1622, ../sass/blocks.scss */
+/* line 1625, ../sass/blocks.scss */
 .limitedheader-image img {
   top: 50%;
   left: 50%;
@@ -2189,38 +2193,38 @@ ul.share-buttons .email img:hover {
   transform: translate(-50%, -50%);
 }
 
-/* line 1632, ../sass/blocks.scss */
+/* line 1635, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container {
   border-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
-/* line 1636, ../sass/blocks.scss */
+/* line 1639, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container .field-items .field-item {
   margin-bottom: 0;
 }
-/* line 1641, ../sass/blocks.scss */
+/* line 1644, ../sass/blocks.scss */
 .front .inside.slider .field-collection-container {
   margin-bottom: 0;
   border-bottom: none;
 }
-/* line 1646, ../sass/blocks.scss */
+/* line 1649, ../sass/blocks.scss */
 .front .inside.slider .field-collection-container .field-item.even {
   margin-bottom: 0;
 }
-/* line 1650, ../sass/blocks.scss */
+/* line 1653, ../sass/blocks.scss */
 .front .field-collection-view {
   padding: 0 !important;
   margin: 0 !important;
   border-bottom: 0;
 }
 
-/* line 1657, ../sass/blocks.scss */
+/* line 1660, ../sass/blocks.scss */
 .iframe-container {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
 }
-/* line 1661, ../sass/blocks.scss */
+/* line 1664, ../sass/blocks.scss */
 .iframe-container iframe {
   position: absolute;
   top: 0;
