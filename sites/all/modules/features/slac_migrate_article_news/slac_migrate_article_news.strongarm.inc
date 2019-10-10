@@ -102,16 +102,16 @@ function slac_migrate_article_news_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '13',
         ),
         'metatags' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'redirect' => array(
-          'weight' => '17',
+          'weight' => '18',
         ),
       ),
       'display' => array(),
