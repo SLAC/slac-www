@@ -2179,13 +2179,13 @@ ul.share-buttons .email img:hover {
 }
 
 /* line 1619, ../sass/blocks.scss */
-.limitedheader-image {
+.limitedheader-image .hero-image .content {
   height: 600px;
   overflow: hidden;
   position: relative;
 }
 /* line 1625, ../sass/blocks.scss */
-.limitedheader-image img {
+.limitedheader-image .hero-image .content img {
   top: 50%;
   left: 50%;
   position: relative;
