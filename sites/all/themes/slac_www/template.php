@@ -317,6 +317,21 @@ function slac_www_preprocess_html(&$variables) {
     }
     if ($node->field_do_not_limit_header_image_['und']['0']['value'] == 1) {
       $variables['classes_array'][] = 'do-not-limit-header-height';
+    } else {
+      $variables['classes_array'][] = 'limitedheader-image';
+    }
+    //Handle the draft
+    if (arg(2) == 'draft') {
+      $node = workbench_moderation_node_current_load($node);
+      if (!empty($node->field_header_image_width)) {
+        $header_width = $node->field_header_image_width['und']['0']['value'];
+        $variables['classes_array'][] = 'header-width-' . $header_width;
+      }
+      if ($node->field_do_not_limit_header_image_['und']['0']['value'] == 1) {
+        $variables['classes_array'][] = 'do-not-limit-header-height';
+      }  else {
+        $variables['classes_array'][] = 'limitedheader-image';
+      }
     }
   }
 }
