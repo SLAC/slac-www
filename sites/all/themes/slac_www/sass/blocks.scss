@@ -1469,8 +1469,14 @@ a.lightbox-processed:hover{
 .hero-image img {
   width: 100%;
   height: auto;
+  max-height: 660px;
 }
 
+.do-not-limit-header-height {
+  .hero-image img {
+    max-height: none !important;
+  }
+}
 
 .media-vimeo-video,.media-youtube-video {
   position: relative;

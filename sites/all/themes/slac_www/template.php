@@ -315,5 +315,8 @@ function slac_www_preprocess_html(&$variables) {
       $header_width = $node->field_header_image_width['und']['0']['value'];
       $variables['classes_array'][] = 'header-width-' . $header_width;
     }
+    if ($node->field_do_not_limit_header_image_['und']['0']['value'] == 1) {
+      $variables['classes_array'][] = 'do-not-limit-header-height';
+    }
   }
 }
