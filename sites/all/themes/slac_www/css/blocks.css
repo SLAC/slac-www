@@ -2179,52 +2179,49 @@ ul.share-buttons .email img:hover {
 }
 
 /* line 1619, ../sass/blocks.scss */
-.limitedheader-image .hero-image .content {
+.header-image-as-background {
   height: 600px;
-  overflow: hidden;
-  position: relative;
+  background-size: cover;
 }
-/* line 1625, ../sass/blocks.scss */
-.limitedheader-image .hero-image .content img {
-  top: 50%;
-  left: 50%;
-  position: relative;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+@media (max-width: 768px) {
+  /* line 1619, ../sass/blocks.scss */
+  .header-image-as-background {
+    height: 300px;
+  }
 }
 
-/* line 1635, ../sass/blocks.scss */
+/* line 1629, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container {
   border-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
-/* line 1639, ../sass/blocks.scss */
+/* line 1633, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container .field-items .field-item {
   margin-bottom: 0;
 }
-/* line 1644, ../sass/blocks.scss */
+/* line 1638, ../sass/blocks.scss */
 .front .inside.slider .field-collection-container {
   margin-bottom: 0;
   border-bottom: none;
 }
-/* line 1649, ../sass/blocks.scss */
+/* line 1643, ../sass/blocks.scss */
 .front .inside.slider .field-collection-container .field-item.even {
   margin-bottom: 0;
 }
-/* line 1653, ../sass/blocks.scss */
+/* line 1647, ../sass/blocks.scss */
 .front .field-collection-view {
   padding: 0 !important;
   margin: 0 !important;
   border-bottom: 0;
 }
 
-/* line 1660, ../sass/blocks.scss */
+/* line 1654, ../sass/blocks.scss */
 .iframe-container {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
 }
-/* line 1664, ../sass/blocks.scss */
+/* line 1658, ../sass/blocks.scss */
 .iframe-container iframe {
   position: absolute;
   top: 0;

@@ -1616,19 +1616,13 @@ ul.share-buttons .email img:hover {
   }
 }
 
-.limitedheader-image .hero-image .content {
+.header-image-as-background {
     height: 600px;
-    overflow: hidden;
-    position: relative;
+    background-size: cover;
 
-
-    img {
-      top: 50%;
-      left: 50%;
-      position: relative;
-      -webkit-transform: translate(-50%,-50%);
-      transform: translate(-50%,-50%);
-  }
+    @media (max-width: 768px){
+      height: 300px;
+    }
 }
 
 .front {
