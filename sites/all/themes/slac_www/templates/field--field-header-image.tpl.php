@@ -53,14 +53,19 @@ After copying this file to your theme's folder and customizing it, remove this
 HTML comment.
 -->
 <?php if ($element['#object']->field_do_not_display_hero_image['und']['0']['value'] != 1): ?>
-<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php if (!$label_hidden): ?>
-    <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
-  <?php endif; ?>
-  <div class="field-items"<?php print $content_attributes; ?>>
-    <?php foreach ($items as $delta => $item): ?>
-      <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></div>
-    <?php endforeach; ?>
-  </div>
-</div>
+
+	<?php if ($element['#object']->field_do_not_limit_header_image_['und']['0']['value'] != 1): ?>
+		<div class="header-image-as-background"></div>
+	<?php else: ?>
+		<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+  			<?php if (!$label_hidden): ?>
+    			<div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
+  			<?php endif; ?>
+  			<div class="field-items"<?php print $content_attributes; ?>>
+    			<?php foreach ($items as $delta => $item): ?>
+      				<div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></div>
+    			<?php endforeach; ?>
+  			</div>
+		</div>
+	<?php endif; ?>
 <?php endif; ?>
