@@ -1619,10 +1619,22 @@ ul.share-buttons .email img:hover {
 .header-image-as-background {
     height: 600px;
     background-size: cover;
+    position: relative;
 
     @media (max-width: 768px){
       height: 300px;
     }
+
+    .header-image-bg-caption {
+      position: absolute;
+      bottom: 0;
+      background: black;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      padding: 10px;
+      /* width: 100%; */
+      margin: 0 auto;
+  }
 }
 
 .front {

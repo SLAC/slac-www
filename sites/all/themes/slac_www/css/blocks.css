@@ -2182,6 +2182,7 @@ ul.share-buttons .email img:hover {
 .header-image-as-background {
   height: 600px;
   background-size: cover;
+  position: relative;
 }
 @media (max-width: 768px) {
   /* line 1619, ../sass/blocks.scss */
@@ -2189,39 +2190,50 @@ ul.share-buttons .email img:hover {
     height: 300px;
   }
 }
+/* line 1628, ../sass/blocks.scss */
+.header-image-as-background .header-image-bg-caption {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  /* width: 100%; */
+  margin: 0 auto;
+}
 
-/* line 1629, ../sass/blocks.scss */
+/* line 1641, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container {
   border-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
-/* line 1633, ../sass/blocks.scss */
+/* line 1645, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container .field-items .field-item {
   margin-bottom: 0;
 }
-/* line 1638, ../sass/blocks.scss */
+/* line 1650, ../sass/blocks.scss */
 .front .inside.slider .field-collection-container {
   margin-bottom: 0;
   border-bottom: none;
 }
-/* line 1643, ../sass/blocks.scss */
+/* line 1655, ../sass/blocks.scss */
 .front .inside.slider .field-collection-container .field-item.even {
   margin-bottom: 0;
 }
-/* line 1647, ../sass/blocks.scss */
+/* line 1659, ../sass/blocks.scss */
 .front .field-collection-view {
   padding: 0 !important;
   margin: 0 !important;
   border-bottom: 0;
 }
 
-/* line 1654, ../sass/blocks.scss */
+/* line 1666, ../sass/blocks.scss */
 .iframe-container {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
 }
-/* line 1658, ../sass/blocks.scss */
+/* line 1670, ../sass/blocks.scss */
 .iframe-container iframe {
   position: absolute;
   top: 0;
