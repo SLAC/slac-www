@@ -45,6 +45,7 @@
  *
  * @ingroup themeable
  */
+$image_url = file_create_url($items['0']['file']['#path']);
 ?>
 <!--
 This file is not used by Drupal core, which uses theme functions instead.
@@ -55,7 +56,7 @@ HTML comment.
 <?php if ($element['#object']->field_do_not_display_hero_image['und']['0']['value'] != 1): ?>
 
 	<?php if ($element['#object']->field_do_not_limit_header_image_['und']['0']['value'] != 1): ?>
-		<div class="header-image-as-background"></div>
+		<div class="header-image-as-background" style="background-image:url('<?php print $image_url; ?>');"></div>
 	<?php else: ?>
 		<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   			<?php if (!$label_hidden): ?>
