@@ -288,9 +288,7 @@
 
   Drupal.behaviors.imageAlignment = {
 		attach: function (context, settings) {
-			alert('here');
 			$("img").each(function () {
-				alert('ysys');
         		if ($(this).css("float") == "left") { $(this).addClass("left"); }
         		if ($(this).css("float") == "right") { $(this).addClass("right"); }
     		});
