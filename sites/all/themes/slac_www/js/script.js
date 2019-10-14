@@ -286,4 +286,13 @@
 		}
   }
 
+  Drupal.behaviors.imageAlignment = {
+		attach: function (context, settings) {
+			$("img").each(function () {
+        		if ($(this).css("float") == "left") { $(this).addClass("left"); }
+        		if ($(this).css("float") == "right") { $(this).addClass("right"); }
+    		});
+		}
+  }
+
 })(jQuery, Drupal, this, this.document);
