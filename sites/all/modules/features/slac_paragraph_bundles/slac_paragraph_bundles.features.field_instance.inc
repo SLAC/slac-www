@@ -10,6 +10,83 @@
 function slac_paragraph_bundles_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'paragraphs_item-block-field_content'.
+  $field_instances['paragraphs_item-block-field_content'] = array(
+    'bundle' => 'block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_content',
+    'label' => 'Content',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-block-field_width'.
+  $field_instances['paragraphs_item-block-field_width'] = array(
+    'bundle' => 'block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_width',
+    'label' => 'Width',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 34,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-image-field_pimage'.
   $field_instances['paragraphs_item-image-field_pimage'] = array(
     'bundle' => 'image',

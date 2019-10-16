@@ -2544,6 +2544,10 @@ a.imageLessButton {
   .pane-page-content > .pane-content {
     padding-left: 0;
     padding-right: 0;
+
+    @media (min-width: 769px) {
+      width: 78%;
+    }
   }
 
   .page-basic .content > .inside {

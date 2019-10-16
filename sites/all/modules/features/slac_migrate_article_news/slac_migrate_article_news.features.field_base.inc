@@ -335,6 +335,12 @@ function slac_migrate_article_news_field_default_field_bases() {
       'allowed_values' => array(
         'small' => 'Small Width',
         'large' => 'Large Width',
+        'pull-left pull-left-portrait' => 'Pull Left Portrait',
+        'pull-right pull-right-portrait' => 'Pull Right Portrait',
+        'pull-left pull-left-narrow' => 'Pull Left Narrow',
+        'pull-right pull-right-narrow' => 'Pull Right Narrow',
+        'pull-left pull-left-wide' => 'Pull Left Wide',
+        'pull-right pull-right-wide' => 'Pull Right Wide',
       ),
       'allowed_values_function' => '',
     ),

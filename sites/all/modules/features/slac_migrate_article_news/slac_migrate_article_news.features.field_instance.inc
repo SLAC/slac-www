@@ -1113,12 +1113,14 @@ function slac_migrate_article_news_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
+        'block' => 'block',
         'blockquote' => 'blockquote',
         'image' => 'image',
         'simple' => 'simple',
         'video' => 'video',
       ),
       'bundle_weights' => array(
+        'block' => 4,
         'blockquote' => 2,
         'image' => -5,
         'simple' => -6,
