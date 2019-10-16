@@ -2554,8 +2554,8 @@ a.imageLessButton {
   }
 }
 
-@media (max-width: 900px) and (min-width: 601px) {
-  .node-type-news-article .two-col-leftsidebar .general-right {
+.node-type-news-article .two-col-leftsidebar .general-right {
+  @media (max-width: 900px) and (min-width: 601px) {
     width: 90%;
   }
 }
@@ -2567,9 +2567,11 @@ a.imageLessButton {
     padding: 0;
   }
 }
-@media (max-width: 600px) {
+
 .two-col-leftsidebar .general-left, .two-col-leftsidebar .general-right {
-  width: 100% !important;
+  @media (max-width: 600px) {
+    width: 100% !important;
+  }
 }
 
 // @media (max-width: 600px) {
