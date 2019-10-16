@@ -3248,13 +3248,7 @@ a.imageLessButton {
   padding-left: 0;
   padding-right: 0;
 }
-@media (min-width: 769px) {
-  /* line 2544, ../sass/pages.scss */
-  .node-type-news-article .pane-page-content > .pane-content {
-    width: 78%;
-  }
-}
-/* line 2553, ../sass/pages.scss */
+/* line 2549, ../sass/pages.scss */
 .node-type-news-article .page-basic .content > .inside {
   max-width: 100% !important;
   margin: 0;
@@ -3262,7 +3256,7 @@ a.imageLessButton {
   padding: 0;
 }
 
-/* line 2562, ../sass/pages.scss */
+/* line 2558, ../sass/pages.scss */
 .header-width-full .panel-panel.hero-image {
   margin-left: -5%;
   margin-right: -5%;
