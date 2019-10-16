@@ -1909,7 +1909,7 @@ a.lightbox-processed:hover {
   }
   /* line 1384, ../sass/blocks.scss */
   .node-type-news-article .two-col-leftsidebar .general-right {
-    width: 85%;
+    width: 75%;
     margin-left: 15%;
   }
 }
