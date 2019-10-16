@@ -1429,9 +1429,19 @@ a.lightbox-processed:hover{
   width: 100%;
 }
 
-.paragraph-item.paragraph-type--image img {
+.paragraph-item.paragraph-type--video {
   width: 100%;
-  height: auto;
+  float: left;
+}
+
+.paragraph-item.paragraph-type--image {
+  width: 100%;
+  float: left;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .paragraph-item.paragraph-type--image.large,.paragraph-item.paragraph-type--simple.large,.paragraph-item.paragraph-type--video.large,.paragraph-item.paragraph-type--quote.large {
@@ -1463,12 +1473,16 @@ a.lightbox-processed:hover{
   line-height: 1.6!important;
   color: #474748;
   font-family: "Source Sans Pro"!important;
+  width: 100%;
+  float: left;
   span {
     font-size: 18px !important;
   }
 }
 
 .paragraph-type--block{
+  width: 100%;
+  float: left;
   min-height: auto;
   border-top: #8C1515 solid 4px;
   background: #fff;
@@ -1710,22 +1724,22 @@ img.right {
   }
 
   .pull-left-wide, .pull-right-wide {
-      width: 70%;
+      width: 70% !important;
   }
   .pull-right {
       float: right !important;
   }
 
   .pull-left-narrow, .pull-right-narrow {
-      width: 50%;
+      width: 50% !important;
   }
 
   .pull-left {
-      float: left;
+      float: left !important;
   }
 
   .pull-left-portrait, .pull-right-portrait {
-    width: 25%;
+    width: 25% !important;
   }
 
   .pull-left-wide, .pull-left-narrow, .pull-left-portrait {
