@@ -1480,14 +1480,17 @@ a.lightbox-processed:hover{
 }
 
 .paragraph-type--block{
-  width: 100%;
-  float: left;
   min-height: auto;
   border-top: #8C1515 solid 4px;
   background: #fff;
   padding: 20px;
   position: relative;
   box-shadow: 0 0 8px #D5D0C0;
+
+  @media (min-width: 769px){
+    width: 100%;
+    float: left;
+  }
 }
 
 .hero-image img {
