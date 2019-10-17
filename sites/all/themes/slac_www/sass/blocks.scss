@@ -1429,11 +1429,6 @@ a.lightbox-processed:hover{
   width: 100%;
 }
 
-.paragraph-item.paragraph-type--video {
-  width: 100%;
-  float: left;
-}
-
 .paragraph-item.paragraph-type--image {
   width: 100%;
   float: left;
@@ -1458,10 +1453,10 @@ a.lightbox-processed:hover{
   }
 }
 
-.paragraph-item.paragraph-type--image.full,.paragraph-item.paragraph-type--simple.full,.paragraph-item.paragraph-type--video.full,.paragraph-item.paragraph-type--quote.full {
-  margin: 0 -8% 0 -25%;
+.paragraph-item.paragraph-type--image.full,.paragraph-item.paragraph-type--video.full,.paragraph-item.paragraph-type--quote.full {
+  margin: 0 -22% 0 -29%;
   @media (min-width: 601px) and (max-width: 900px){
-    margin: 0 -8.25% 0 -5.5%;
+    margin: 0 -10% 0 -14%;
   }
   @media (max-width: 600px){
     margin: 0;
