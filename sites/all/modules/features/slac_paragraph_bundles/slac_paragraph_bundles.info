@@ -25,7 +25,6 @@ features[field_instance][] = paragraphs_item-block-field_width
 features[field_instance][] = paragraphs_item-image-field_pimage
 features[field_instance][] = paragraphs_item-image-field_width
 features[field_instance][] = paragraphs_item-simple-field_content
-features[field_instance][] = paragraphs_item-simple-field_width
 features[field_instance][] = paragraphs_item-video-field_pvideo
 features[field_instance][] = paragraphs_item-video-field_video_description_article
 features[field_instance][] = paragraphs_item-video-field_width

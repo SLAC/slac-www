@@ -5,15 +5,7 @@
  * Paragraphs item simple template.
  */
 ?>
-<?php
-  hide($content);
-
-  $width_field = '';
-  if (!empty($content['field_width'])) {
-    $width_field = ' ' . trim(strip_tags(render($content['field_width'])));
-  }
-?>
-<div class="paragraph-item paragraph-type--simple<?php print $width_field; ?>">
+<div class="paragraph-item paragraph-type--simple">
   <div>
     <div>
       <div><?php print render($content['field_content']); ?></div>

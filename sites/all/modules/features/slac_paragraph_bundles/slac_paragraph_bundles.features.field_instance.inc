@@ -264,53 +264,6 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-simple-field_width'.
-  $field_instances['paragraphs_item-simple-field_width'] = array(
-    'bundle' => 'simple',
-    'default_value' => array(
-      0 => array(
-        'value' => 'default',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_key',
-        'weight' => 0,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_width',
-    'label' => 'Width',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 31,
-    ),
-  );
-
   // Exported field_instance: 'paragraphs_item-video-field_pvideo'.
   $field_instances['paragraphs_item-video-field_pvideo'] = array(
     'bundle' => 'video',
