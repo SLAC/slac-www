@@ -20,14 +20,16 @@
         <div class="hero-image"><?php print $content['header']; ?></div>
       <?php endif ?>
   </div>
-  <div class="panel-panel general-left">
-     <?php if ($content['left']): ?>
-        <div class="inside"><?php print $content['left']; ?></div>
-      <?php endif ?>
-  </div>
-  <div class="panel-panel general-right">
-     <?php if ($content['right']): ?>
-        <div class="inside"><?php print $content['right']; ?></div>
-      <?php endif ?>
-  </div>
+  <div class="main-content">
+    <div class="panel-panel general-left">
+       <?php if ($content['left']): ?>
+          <div class="inside"><?php print $content['left']; ?></div>
+        <?php endif ?>
+    </div>
+    <div class="panel-panel general-right">
+       <?php if ($content['right']): ?>
+          <div class="inside"><?php print $content['right']; ?></div>
+        <?php endif ?>
+    </div>
+    </div>
 </div>
