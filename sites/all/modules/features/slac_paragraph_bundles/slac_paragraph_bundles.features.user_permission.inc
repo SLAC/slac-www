@@ -10,9 +10,37 @@
 function slac_paragraph_bundles_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'administer paragraphs bundles'.
+  $permissions['administer paragraphs bundles'] = array(
+    'name' => 'administer paragraphs bundles',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'paragraphs',
+  );
+
   // Exported permission: 'bypass paragraphs bundle content access'.
   $permissions['bypass paragraphs bundle content access'] = array(
     'name' => 'bypass paragraphs bundle content access',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content block'.
+  $permissions['create paragraph content block'] = array(
+    'name' => 'create paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content blockquote'.
+  $permissions['create paragraph content blockquote'] = array(
+    'name' => 'create paragraph content blockquote',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -58,6 +86,25 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'delete paragraph content block'.
+  $permissions['delete paragraph content block'] = array(
+    'name' => 'delete paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content blockquote'.
+  $permissions['delete paragraph content blockquote'] = array(
+    'name' => 'delete paragraph content blockquote',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'delete paragraph content image'.
   $permissions['delete paragraph content image'] = array(
     'name' => 'delete paragraph content image',
@@ -85,6 +132,25 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'delete paragraph content video'.
   $permissions['delete paragraph content video'] = array(
     'name' => 'delete paragraph content video',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content block'.
+  $permissions['update paragraph content block'] = array(
+    'name' => 'update paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content blockquote'.
+  $permissions['update paragraph content blockquote'] = array(
+    'name' => 'update paragraph content blockquote',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -123,6 +189,27 @@ function slac_paragraph_bundles_user_default_permissions() {
     'name' => 'update paragraph content video',
     'roles' => array(
       'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content block'.
+  $permissions['view paragraph content block'] = array(
+    'name' => 'view paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content blockquote'.
+  $permissions['view paragraph content blockquote'] = array(
+    'name' => 'view paragraph content blockquote',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
       'author' => 'author',
       'editor' => 'editor',
       'manager' => 'manager',
