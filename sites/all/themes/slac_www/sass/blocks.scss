@@ -1452,12 +1452,26 @@ a.lightbox-processed:hover{
 }
 
 .paragraph-item.paragraph-type--image.full,.paragraph-item.paragraph-type--video.full,.paragraph-item.paragraph-type--quote.full {
-  margin: 0 -22% 0 -29%;
+  width: 101vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -52.5vw;
+  margin-right: -50vw;
+
   @media (min-width: 601px) and (max-width: 900px){
-    margin: 0 -10% 0 -14%;
+    width: 102vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -45vw;
+    margin-right: -45vw;
   }
   @media (max-width: 600px){
     margin: 0;
+    width: auto;
+    left: auto;
+    right: auto;
   }
 }
 
