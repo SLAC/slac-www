@@ -34,7 +34,12 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'create paragraph content block'.
   $permissions['create paragraph content block'] = array(
     'name' => 'create paragraph content block',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -89,7 +94,12 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'delete paragraph content block'.
   $permissions['delete paragraph content block'] = array(
     'name' => 'delete paragraph content block',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -144,7 +154,12 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'update paragraph content block'.
   $permissions['update paragraph content block'] = array(
     'name' => 'update paragraph content block',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -199,7 +214,10 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'view paragraph content block'.
   $permissions['view paragraph content block'] = array(
     'name' => 'view paragraph content block',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
