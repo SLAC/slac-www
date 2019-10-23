@@ -622,6 +622,15 @@ function slac_permissions_user_default_permissions() {
     'module' => 'panels',
   );
 
+  // Exported permission: 'administer paragraphs bundles'.
+  $permissions['administer paragraphs bundles'] = array(
+    'name' => 'administer paragraphs bundles',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'paragraphs',
+  );
+
   // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
@@ -1057,6 +1066,25 @@ function slac_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create paragraph content block'.
+  $permissions['create paragraph content block'] = array(
+    'name' => 'create paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content blockquote'.
+  $permissions['create paragraph content blockquote'] = array(
+    'name' => 'create paragraph content blockquote',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create url aliases'.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
@@ -1332,6 +1360,25 @@ function slac_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: 'delete paragraph content block'.
+  $permissions['delete paragraph content block'] = array(
+    'name' => 'delete paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content blockquote'.
+  $permissions['delete paragraph content blockquote'] = array(
+    'name' => 'delete paragraph content blockquote',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
   );
 
   // Exported permission: 'delete revisions'.
@@ -2109,6 +2156,25 @@ function slac_permissions_user_default_permissions() {
     'module' => 'feeds',
   );
 
+  // Exported permission: 'update paragraph content block'.
+  $permissions['update paragraph content block'] = array(
+    'name' => 'update paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content blockquote'.
+  $permissions['update paragraph content blockquote'] = array(
+    'name' => 'update paragraph content blockquote',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'use PHP to import nodes'.
   $permissions['use PHP to import nodes'] = array(
     'name' => 'use PHP to import nodes',
@@ -2390,6 +2456,27 @@ function slac_permissions_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'panels',
+  );
+
+  // Exported permission: 'view paragraph content block'.
+  $permissions['view paragraph content block'] = array(
+    'name' => 'view paragraph content block',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content blockquote'.
+  $permissions['view paragraph content blockquote'] = array(
+    'name' => 'view paragraph content blockquote',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
   );
 
   // Exported permission: 'view revisions'.
