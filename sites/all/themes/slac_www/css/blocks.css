@@ -2343,3 +2343,8 @@ img.right {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+/* line 1766, ../sass/blocks.scss */
+.paragraph-item.paragraph-type--block {
+  line-height: 1.6em;
+}
