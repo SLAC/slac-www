@@ -282,12 +282,12 @@ ul.share-buttons img{
   $pane->pid = 'new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
   $pane->panel = 'right';
   $pane->type = 'entity_field';
-  $pane->subtype = 'node:field_page_author';
+  $pane->subtype = 'node:field_subheadline';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'label' => 'title',
-    'formatter' => 'news_author',
+    'label' => 'hidden',
+    'formatter' => 'text_default',
     'delta_limit' => 0,
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
