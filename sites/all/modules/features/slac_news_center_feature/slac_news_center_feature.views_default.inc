@@ -283,7 +283,7 @@ if (isset($arguments[\'1\'])) {
 $arg = substr($arguments[\'1\'], 0, 12);
 }
   if ($arg == \'news-feature\') {
-return \'5+17\';
+return \'5+17+958\';
 }else{
 return \'17\';
 }';
