@@ -275,8 +275,18 @@ function slac_news_center_feature_views_default_views() {
   $handler->display->display_options['arguments']['field_article_type_tid']['table'] = 'field_data_field_article_type';
   $handler->display->display_options['arguments']['field_article_type_tid']['field'] = 'field_article_type_tid';
   $handler->display->display_options['arguments']['field_article_type_tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_article_type_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_article_type_tid']['default_argument_options']['argument'] = '5+17';
+  $handler->display->display_options['arguments']['field_article_type_tid']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['field_article_type_tid']['default_argument_options']['code'] = '$path =  current_path();
+$arguments = explode(\'/\', $path);
+
+if (isset($arguments[\'1\'])) {
+$arg = substr($arguments[\'1\'], 0, 12);
+}
+  if ($arg == \'news-feature\') {
+return \'5+17\';
+}else{
+return \'17\';
+}';
   $handler->display->display_options['arguments']['field_article_type_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_article_type_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_article_type_tid']['summary_options']['items_per_page'] = '25';
