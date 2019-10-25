@@ -1661,10 +1661,14 @@ cite {
       background: rgba(0,0,0,0.5);
       color: #fff;
       padding: 10px;
-      /* width: 100%; */
       margin: 0 auto;
-      width: 100%;
+      width: 95%;
       padding-left: 30px;
+      padding-right: 30px;
+      /* display: inline-flex; */
+      margin-right: 5%;
+      /* overflow: hidden; */
+      margin-left: 0;
   }
 }
 

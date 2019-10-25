@@ -2231,44 +2231,48 @@ cite {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 10px;
-  /* width: 100%; */
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
   padding-left: 30px;
+  padding-right: 30px;
+  /* display: inline-flex; */
+  margin-right: 5%;
+  /* overflow: hidden; */
+  margin-left: 0;
 }
 
-/* line 1672, ../sass/blocks.scss */
+/* line 1676, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container {
   border-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
-/* line 1676, ../sass/blocks.scss */
+/* line 1680, ../sass/blocks.scss */
 .front .panels-ipe-portlet-content .field-collection-container .field-items .field-item {
   margin-bottom: 0;
 }
-/* line 1681, ../sass/blocks.scss */
+/* line 1685, ../sass/blocks.scss */
 .front .inside.slider .field-collection-container {
   margin-bottom: 0;
   border-bottom: none;
 }
-/* line 1686, ../sass/blocks.scss */
+/* line 1690, ../sass/blocks.scss */
 .front .inside.slider .field-collection-container .field-item.even {
   margin-bottom: 0;
 }
-/* line 1690, ../sass/blocks.scss */
+/* line 1694, ../sass/blocks.scss */
 .front .field-collection-view {
   padding: 0 !important;
   margin: 0 !important;
   border-bottom: 0;
 }
 
-/* line 1697, ../sass/blocks.scss */
+/* line 1701, ../sass/blocks.scss */
 .iframe-container {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
 }
-/* line 1701, ../sass/blocks.scss */
+/* line 1705, ../sass/blocks.scss */
 .iframe-container iframe {
   position: absolute;
   top: 0;
@@ -2278,24 +2282,24 @@ cite {
   border: 0;
 }
 
-/* line 1713, ../sass/blocks.scss */
+/* line 1717, ../sass/blocks.scss */
 img.left {
   padding-right: 20px;
 }
 @media (max-width: 500px) {
-  /* line 1713, ../sass/blocks.scss */
+  /* line 1717, ../sass/blocks.scss */
   img.left {
     width: 100% !important;
     height: auto !important;
   }
 }
 
-/* line 1722, ../sass/blocks.scss */
+/* line 1726, ../sass/blocks.scss */
 img.right {
   padding-left: 20px;
 }
 @media (max-width: 500px) {
-  /* line 1722, ../sass/blocks.scss */
+  /* line 1726, ../sass/blocks.scss */
   img.right {
     width: 100% !important;
     height: auto !important;
@@ -2303,48 +2307,48 @@ img.right {
 }
 
 @media (min-width: 769px) {
-  /* line 1733, ../sass/blocks.scss */
+  /* line 1737, ../sass/blocks.scss */
   .pull-right-wide, .pull-right-narrow, .pull-right-portrait {
     margin: 0.35em -10% 1em 2em;
   }
 
-  /* line 1737, ../sass/blocks.scss */
+  /* line 1741, ../sass/blocks.scss */
   .pull-left-wide, .pull-right-wide {
     width: 70% !important;
   }
 
-  /* line 1740, ../sass/blocks.scss */
+  /* line 1744, ../sass/blocks.scss */
   .pull-right {
     float: right !important;
   }
 
-  /* line 1744, ../sass/blocks.scss */
+  /* line 1748, ../sass/blocks.scss */
   .pull-left-narrow, .pull-right-narrow {
     width: 50% !important;
   }
 
-  /* line 1748, ../sass/blocks.scss */
+  /* line 1752, ../sass/blocks.scss */
   .pull-left {
     float: left !important;
   }
 
-  /* line 1752, ../sass/blocks.scss */
+  /* line 1756, ../sass/blocks.scss */
   .pull-left-portrait, .pull-right-portrait {
     width: 25% !important;
   }
 
-  /* line 1756, ../sass/blocks.scss */
+  /* line 1760, ../sass/blocks.scss */
   .pull-left-wide, .pull-left-narrow, .pull-left-portrait {
     margin: 0.35em 2em 1em -11%;
   }
 }
-/* line 1761, ../sass/blocks.scss */
+/* line 1765, ../sass/blocks.scss */
 .main-content {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* line 1766, ../sass/blocks.scss */
+/* line 1770, ../sass/blocks.scss */
 .paragraph-item.paragraph-type--block {
   line-height: 1.6em;
 }
