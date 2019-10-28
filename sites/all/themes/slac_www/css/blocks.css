@@ -2390,7 +2390,7 @@ img.right {
 
 /* line 1801, ../sass/blocks.scss */
 .field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
-  padding: 45px;
+  padding: 15px;
   font-weight: bold;
   font-size: 30px;
 }
@@ -2398,14 +2398,13 @@ img.right {
   /* line 1801, ../sass/blocks.scss */
   .field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
     font-size: 18px;
-    padding: 15px;
   }
 }
 
-/* line 1812, ../sass/blocks.scss */
+/* line 1811, ../sass/blocks.scss */
 .field-collection-item-field-homepage-video .content .field-name-field-headline {
   position: absolute;
-  top: 20px;
+  top: 0;
   color: #656668;
   width: 100%;
   font-size: 36px !important;
