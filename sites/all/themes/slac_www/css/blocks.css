@@ -2390,10 +2390,11 @@ img.right {
 
 /* line 1801, ../sass/blocks.scss */
 .field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
-  padding: 15px;
+  padding: 20px;
   font-weight: bold;
-  font-size: 30px;
-  padding-left: 30px;
+  font-size: 24px;
+  padding-left: 36px;
+  font-family: "Source Serif Pro",serif;
 }
 @media (max-width: 500px) {
   /* line 1801, ../sass/blocks.scss */
@@ -2403,7 +2404,7 @@ img.right {
   }
 }
 
-/* line 1813, ../sass/blocks.scss */
+/* line 1814, ../sass/blocks.scss */
 .field-collection-item-field-homepage-video .content .field-name-field-headline {
   position: absolute;
   top: 0;
