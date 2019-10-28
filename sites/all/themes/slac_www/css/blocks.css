@@ -2390,10 +2390,10 @@ img.right {
 
 /* line 1801, ../sass/blocks.scss */
 .field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
-  padding: 20px;
+  padding: 30px;
   font-weight: bold;
-  font-size: 24px;
-  padding-left: 36px;
+  font-size: 20px;
+  padding-left: 46px;
   font-family: "Source Serif Pro",serif;
 }
 @media (max-width: 500px) {
