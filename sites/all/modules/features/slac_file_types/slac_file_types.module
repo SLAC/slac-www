@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slac File Types feature.
+ */
+
+include_once 'slac_file_types.features.inc';
