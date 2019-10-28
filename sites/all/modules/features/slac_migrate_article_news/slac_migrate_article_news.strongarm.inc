@@ -95,20 +95,23 @@ function slac_migrate_article_news_strongarm() {
       'ical' => array(
         'custom_settings' => FALSE,
       ),
+      'news_center' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '5',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '13',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '15',
         ),
         'redirect' => array(
-          'weight' => '12',
+          'weight' => '18',
         ),
       ),
       'display' => array(),

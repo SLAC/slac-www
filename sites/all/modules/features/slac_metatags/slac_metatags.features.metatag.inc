@@ -218,17 +218,29 @@ function slac_metatags_metatag_export_default() {
   $config['node:news_article'] = array(
     'instance' => 'node:news_article',
     'config' => array(
+      'description' => array(
+        'value' => '[node:field-teaser]',
+      ),
       'keywords' => array(
         'value' => '[node:field-tags]',
       ),
       'og:description' => array(
-        'value' => '[node:summary]',
+        'value' => '[node:field-teaser]',
       ),
       'og:image' => array(
-        'value' => '[node:field_image]',
+        'value' => '[node:field_header_image]',
+      ),
+      'og:latitude' => array(
+        'value' => 37.4147,
+      ),
+      'og:longitude' => array(
+        'value' => 122.2217,
+      ),
+      'og:postal-code' => array(
+        'value' => 94025,
       ),
       'twitter:image' => array(
-        'value' => '[node:field_image]',
+        'value' => '[node:field_header_image]',
       ),
     ),
   );

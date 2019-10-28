@@ -149,6 +149,7 @@
 			// fix slider width/height on screen resize
 			var slider = $('.slider'),
 			resizer = function( event ){
+				if (slider.find('.field-slideshow-image-caption:visible img').height()) {
 				var h = slider.find('.field-slideshow-image-caption:visible img').height(),
 				w = $(window).width(),
 				r = w/h;
@@ -166,6 +167,7 @@
 						'height':h+110
 					})
 				//.find('.field-slideshow-image-caption').css({'height':'100%'});
+				}
 				}
 				if( h != slider.find('.field-slideshow-image-caption:visible img').height() ){
 					resizer()
@@ -281,6 +283,15 @@
 				  $(this).hide();
 				}
 			});
+		}
+  }
+
+  Drupal.behaviors.imageAlignment = {
+		attach: function (context, settings) {
+			$("img").each(function () {
+        		if ($(this).css("float") == "left") { $(this).addClass("left"); }
+        		if ($(this).css("float") == "right") { $(this).addClass("right"); }
+    		});
 		}
   }
 

@@ -342,6 +342,28 @@ node/1215',
   $pane->uuid = '933a619e-cb80-4162-a167-a9dfe4ea5572';
   $display->content['new-933a619e-cb80-4162-a167-a9dfe4ea5572'] = $pane;
   $display->panels['right'][1] = 'new-933a619e-cb80-4162-a167-a9dfe4ea5572';
+  $pane = new stdClass();
+  $pane->pid = 'new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
+  $pane->panel = 'right';
+  $pane->type = 'press_archives';
+  $pane->subtype = 'press_archives';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'related-links',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = 'b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
+  $display->content['new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0'] = $pane;
+  $display->panels['right'][2] = 'new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

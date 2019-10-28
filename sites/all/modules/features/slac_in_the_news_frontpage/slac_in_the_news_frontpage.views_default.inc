@@ -98,7 +98,7 @@ function slac_in_the_news_frontpage_views_default_views() {
   /* Display: Frontpage pane */
   $handler = $view->new_display('panel_pane', 'Frontpage pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'SLAC IN THE NEWS';
+  $handler->display->display_options['title'] = 'MEDIA MENTIONS';
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
 

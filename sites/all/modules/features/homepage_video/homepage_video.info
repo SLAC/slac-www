@@ -1,0 +1,17 @@
+name = Homepage Video
+core = 7.x
+package = SLAC
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = field_collection
+dependencies[] = fieldable_panels_panes
+dependencies[] = text
+features[ctools][] = fieldable_panels_panes:fieldable_panels_pane_type:1
+features[features_api][] = api:2
+features[field_base][] = field_embed_code
+features[field_base][] = field_headline
+features[field_base][] = field_homepage_video
+features[field_instance][] = field_collection_item-field_homepage_video-field_embed_code
+features[field_instance][] = field_collection_item-field_homepage_video-field_headline
+features[field_instance][] = fieldable_panels_pane-homepage_video-field_homepage_video
+features[fieldable_panels_pane_type][] = homepage_video

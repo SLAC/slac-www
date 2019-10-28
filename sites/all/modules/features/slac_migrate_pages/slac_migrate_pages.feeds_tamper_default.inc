@@ -514,7 +514,7 @@ function slac_migrate_pages_feeds_tamper_default() {
   $feeds_tamper->importer = 'topic_details_importer';
   $feeds_tamper->source = 'xpathparser:4';
   $feeds_tamper->plugin_id = 'html_entity_decode';
-  $feeds_tamper->settings = '';
+  $feeds_tamper->settings = array();
   $feeds_tamper->weight = 23;
   $feeds_tamper->description = 'HTML entity decode';
   $export['topic_details_importer-xpathparser_4-html_entity_decode'] = $feeds_tamper;
