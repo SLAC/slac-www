@@ -1802,9 +1802,11 @@ img.right {
     padding: 15px;
     font-weight: bold;
     font-size: 30px;
+    padding-left: 30px;
 
     @media (max-width: 500px){
       font-size: 18px;
+      padding-left: 15px;
     }
 }
 
