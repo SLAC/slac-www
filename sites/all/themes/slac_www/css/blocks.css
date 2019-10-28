@@ -2352,3 +2352,62 @@ img.right {
 .paragraph-item.paragraph-type--block {
   line-height: 1.6em;
 }
+
+/* line 1774, ../sass/blocks.scss */
+.fade-out {
+  -webkit-animation: fade-out 2s ease-out 5s both;
+  animation: fade-out 2s ease-out 5s both;
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-out
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-out {
+  /* line 1785, ../sass/blocks.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 1788, ../sass/blocks.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  /* line 1793, ../sass/blocks.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 1796, ../sass/blocks.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 1801, ../sass/blocks.scss */
+.field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
+  padding: 45px;
+  font-weight: bold;
+  font-size: 30px;
+}
+@media (max-width: 500px) {
+  /* line 1801, ../sass/blocks.scss */
+  .field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
+/* line 1812, ../sass/blocks.scss */
+.field-collection-item-field-homepage-video .content .field-name-field-headline {
+  position: absolute;
+  top: 20px;
+  color: #656668;
+  width: 100%;
+  font-size: 36px !important;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}

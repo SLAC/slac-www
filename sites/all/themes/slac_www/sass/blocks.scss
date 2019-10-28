@@ -1771,4 +1771,49 @@ img.right {
   line-height: 1.6em;
 }
 
+.fade-out {
+  -webkit-animation: fade-out 2s ease-out 5s both;
+  animation: fade-out 2s ease-out 5s both;
+}
 
+/**
+ * ----------------------------------------
+ * animation fade-out
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
+    padding: 45px;
+    font-weight: bold;
+    font-size: 30px;
+
+    @media (max-width: 500px){
+      font-size: 18px;
+      padding: 15px;
+    }
+}
+
+.field-collection-item-field-homepage-video .content .field-name-field-headline {
+    position: absolute;
+    top: 20px;
+    color: #656668;
+    width: 100%;
+    font-size: 36px !important;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}

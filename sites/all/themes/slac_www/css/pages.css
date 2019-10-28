@@ -3147,25 +3147,6 @@ a.imageLessButton {
     background-position: 150px center;
   }
 }
-/* line 2460, ../sass/pages.scss */
-.field-collection-item-field-homepage-video .content {
-  position: relative;
-}
-/* line 2462, ../sass/pages.scss */
-.field-collection-item-field-homepage-video .content .field-name-field-headline {
-  position: absolute;
-  bottom: 0;
-  color: #fff;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-/* line 2468, ../sass/pages.scss */
-.field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
-  padding: 15px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
 /* line 2477, ../sass/pages.scss */
 .view-slac-taxonomy-term .article-news-center-view {
   padding: 15px 0px 18px 0px !important;
