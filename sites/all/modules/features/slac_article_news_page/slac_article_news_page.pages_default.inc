@@ -434,7 +434,7 @@ ul.share-buttons img{
     'delta_offset' => '0',
     'delta_reversed' => 0,
     'formatter_settings' => array(
-      'image_style' => 'article-news-node-page',
+      'image_style' => 'large',
       'type' => 'lightbox',
       'lightbox_style' => '0',
       'caption' => 'field_file_image_title_text',
