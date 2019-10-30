@@ -539,10 +539,6 @@ input:focus {
 .page-basic .footer a:hover {
   text-decoration: underline;
 }
-/* line 152, ../sass/pages.scss */
-.page-basic .footer a:first-child img {
-  width: 27%;
-}
 /* line 155, ../sass/pages.scss */
 .page-basic .footer a img {
   width: 73%;

@@ -279,6 +279,36 @@ ul.share-buttons img{
   $display->content['new-4a6b17a3-0a17-4e68-8db5-508e0c86a93d'] = $pane;
   $display->panels['right'][2] = 'new-4a6b17a3-0a17-4e68-8db5-508e0c86a93d';
   $pane = new stdClass();
+  $pane->pid = 'new-9b9e22e0-e3cc-4697-bbd4-c1c54d7717ec';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_page_author';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'news_author',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '9b9e22e0-e3cc-4697-bbd4-c1c54d7717ec';
+  $display->content['new-9b9e22e0-e3cc-4697-bbd4-c1c54d7717ec'] = $pane;
+  $display->panels['right'][3] = 'new-9b9e22e0-e3cc-4697-bbd4-c1c54d7717ec';
+  $pane = new stdClass();
   $pane->pid = 'new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
   $pane->panel = 'right';
   $pane->type = 'entity_field';
@@ -302,11 +332,11 @@ ul.share-buttons img{
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 4;
   $pane->locks = array();
   $pane->uuid = '2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
   $display->content['new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5'] = $pane;
-  $display->panels['right'][3] = 'new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
+  $display->panels['right'][4] = 'new-2cec49dd-1e2a-4ed0-b8a7-5eca4e594fa5';
   $pane = new stdClass();
   $pane->pid = 'new-714a1850-f60e-40c5-a25e-146ac65576a3';
   $pane->panel = 'right';
@@ -334,11 +364,11 @@ ul.share-buttons img{
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 4;
+  $pane->position = 5;
   $pane->locks = array();
   $pane->uuid = '714a1850-f60e-40c5-a25e-146ac65576a3';
   $display->content['new-714a1850-f60e-40c5-a25e-146ac65576a3'] = $pane;
-  $display->panels['right'][4] = 'new-714a1850-f60e-40c5-a25e-146ac65576a3';
+  $display->panels['right'][5] = 'new-714a1850-f60e-40c5-a25e-146ac65576a3';
   $pane = new stdClass();
   $pane->pid = 'new-804a50a7-7994-42cd-9609-0120f82634ce';
   $pane->panel = 'right';
@@ -362,30 +392,11 @@ ul.share-buttons img{
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 5;
+  $pane->position = 6;
   $pane->locks = array();
   $pane->uuid = '804a50a7-7994-42cd-9609-0120f82634ce';
   $display->content['new-804a50a7-7994-42cd-9609-0120f82634ce'] = $pane;
-  $display->panels['right'][5] = 'new-804a50a7-7994-42cd-9609-0120f82634ce';
-  $pane = new stdClass();
-  $pane->pid = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
-  $pane->panel = 'right';
-  $pane->type = 'back_links';
-  $pane->subtype = 'back_links';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 6;
-  $pane->locks = array();
-  $pane->uuid = 'af53ca8c-6468-40cf-a770-371326c9e5d9';
-  $display->content['new-af53ca8c-6468-40cf-a770-371326c9e5d9'] = $pane;
-  $display->panels['right'][6] = 'new-af53ca8c-6468-40cf-a770-371326c9e5d9';
+  $display->panels['right'][6] = 'new-804a50a7-7994-42cd-9609-0120f82634ce';
   $pane = new stdClass();
   $pane->pid = 'new-250d9a0d-a925-442e-ab51-e657b5ac1e6a';
   $pane->panel = 'right';
@@ -434,7 +445,7 @@ ul.share-buttons img{
     'delta_offset' => '0',
     'delta_reversed' => 0,
     'formatter_settings' => array(
-      'image_style' => 'article-news-node-page',
+      'image_style' => 'large',
       'type' => 'lightbox',
       'lightbox_style' => '0',
       'caption' => 'field_file_image_title_text',
