@@ -2391,11 +2391,11 @@ img.right {
 /* line 1801, ../sass/blocks.scss */
 .field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
   padding: 30px;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: .08em;
   padding-left: 80px;
   padding-top: 45px;
-  font-family: "Source Serif Pro",serif;
 }
 @media (max-width: 768px) {
   /* line 1801, ../sass/blocks.scss */
