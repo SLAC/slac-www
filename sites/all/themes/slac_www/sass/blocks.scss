@@ -1800,11 +1800,11 @@ img.right {
 
 .field-collection-item-field-homepage-video .content .field-name-field-headline .field-items {
     padding: 30px;
-    font-size: 1.5em;
-    font-weight: 700;
-    letter-spacing: .08em;
+    font-weight: bold;
+    font-size: 22px;
     padding-left: 80px;
     padding-top: 45px;
+    letter-spacing: 2px;
 
     @media (max-width: 768px){
       font-size: 18px;
