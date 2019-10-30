@@ -256,6 +256,40 @@ node/3480',
   $display->content['new-9d26cfd8-ed79-410a-a1ff-efbcdb6967a0'] = $pane;
   $display->panels['middle'][1] = 'new-9d26cfd8-ed79-410a-a1ff-efbcdb6967a0';
   $pane = new stdClass();
+  $pane->pid = 'new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
+  $pane->panel = 'right';
+  $pane->type = 'press_archives';
+  $pane->subtype = 'press_archives';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'media-resources',
+        ),
+        'context' => 'empty',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'related-links',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
+  $display->content['new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0'] = $pane;
+  $display->panels['right'][0] = 'new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
+  $pane = new stdClass();
   $pane->pid = 'new-7994aa7b-0e68-4364-99cc-5d17d5b2c815';
   $pane->panel = 'right';
   $pane->type = 'entity_field';
@@ -298,11 +332,11 @@ node/3480',
     'css_class' => 'highlited related-links links-internal-external-icons',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '7994aa7b-0e68-4364-99cc-5d17d5b2c815';
   $display->content['new-7994aa7b-0e68-4364-99cc-5d17d5b2c815'] = $pane;
-  $display->panels['right'][0] = 'new-7994aa7b-0e68-4364-99cc-5d17d5b2c815';
+  $display->panels['right'][1] = 'new-7994aa7b-0e68-4364-99cc-5d17d5b2c815';
   $pane = new stdClass();
   $pane->pid = 'new-933a619e-cb80-4162-a167-a9dfe4ea5572';
   $pane->panel = 'right';
@@ -337,33 +371,42 @@ node/1215',
     'css_class' => 'highlited related-links',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '933a619e-cb80-4162-a167-a9dfe4ea5572';
   $display->content['new-933a619e-cb80-4162-a167-a9dfe4ea5572'] = $pane;
-  $display->panels['right'][1] = 'new-933a619e-cb80-4162-a167-a9dfe4ea5572';
+  $display->panels['right'][2] = 'new-933a619e-cb80-4162-a167-a9dfe4ea5572';
   $pane = new stdClass();
-  $pane->pid = 'new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
+  $pane->pid = 'new-39892c35-6e6d-4025-8ffe-082e2e57073d';
   $pane->panel = 'right';
   $pane->type = 'press_archives';
   $pane->subtype = 'press_archives';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'connect',
+        ),
+        'context' => 'empty',
+        'not' => FALSE,
+      ),
+    ),
+  );
   $pane->configuration = array();
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'related-links',
-  );
+  $pane->css = array();
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
-  $pane->uuid = 'b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
-  $display->content['new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0'] = $pane;
-  $display->panels['right'][2] = 'new-b38e81d9-0439-4de7-aaef-6cdc2b786ab0';
+  $pane->uuid = '39892c35-6e6d-4025-8ffe-082e2e57073d';
+  $display->content['new-39892c35-6e6d-4025-8ffe-082e2e57073d'] = $pane;
+  $display->panels['right'][3] = 'new-39892c35-6e6d-4025-8ffe-082e2e57073d';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
