@@ -80,11 +80,20 @@
   }
 }
 
+.paragraph-item.paragraph-type--simple p img {
+    max-width: 100% !important;
+    height: auto;
+}
+
 .paragraph-type--simple{
   font-size: 18px!important;
   line-height: 1.6!important;
   color: #474748;
   font-family: "Source Sans Pro"!important;
+
+  a {
+    font-size: 18px!important;
+  }
 }
 
 .hero-image img {
@@ -164,6 +173,7 @@ ul.share-buttons {
     }
   }
 }
+
 
 ul.share-buttons img {
   height: 30px !important;
