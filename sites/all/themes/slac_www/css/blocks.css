@@ -2428,7 +2428,7 @@ img.right {
   /* line 1833, ../sass/blocks.scss */
   .page-basic .header img {
     margin: 13px 0;
-    width: 100px;
+    width: 100px !important;
   }
 }
 

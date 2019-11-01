@@ -1833,7 +1833,7 @@ img.right {
 .page-basic .header img {
     @media (max-width: 480px) {
     margin: 13px 0;
-    width: 100px;
+    width: 100px !important;
   }
 }
 @media (max-width: 800px) {
