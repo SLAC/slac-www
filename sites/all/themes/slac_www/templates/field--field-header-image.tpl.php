@@ -57,7 +57,10 @@ HTML comment.
 
 	<?php if ($element['#object']->field_do_not_limit_header_image_['und']['0']['value'] != 1): ?>
 		<div class="header-image-as-background" style="background-image:url('<?php print $image_url; ?>');">
-      <div class="header-image-bg-caption"><?php print $items['0']['field_description']['#items']['0']['value'] ?></div>  
+
+      <?php if ( !empty( $items['0']['field_description']['#items']['0']['value'])) :?>
+      <div class="header-image-bg-caption"><?php print $items['0']['field_description']['#items']['0']['value'] ?></div>
+    <?php endif; ?>
     </div>
 	<?php else: ?>
 		<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
