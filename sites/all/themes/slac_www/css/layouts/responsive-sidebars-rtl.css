@@ -52,20 +52,30 @@
 }
 
 /* line 83, ../../sass/_custom.scss */
+.paragraph-item.paragraph-type--simple p img {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* line 88, ../../sass/_custom.scss */
 .paragraph-type--simple {
   font-size: 18px !important;
   line-height: 1.6 !important;
   color: #474748;
   font-family: "Source Sans Pro" !important;
 }
+/* line 94, ../../sass/_custom.scss */
+.paragraph-type--simple a {
+  font-size: 18px !important;
+}
 
-/* line 90, ../../sass/_custom.scss */
+/* line 99, ../../sass/_custom.scss */
 .hero-image img {
   width: 100%;
   height: auto;
 }
 
-/* line 96, ../../sass/_custom.scss */
+/* line 105, ../../sass/_custom.scss */
 .media-vimeo-video, .media-youtube-video {
   position: relative;
   padding-bottom: 56.25%;
@@ -74,7 +84,7 @@
   overflow: hidden;
 }
 
-/* line 107, ../../sass/_custom.scss */
+/* line 116, ../../sass/_custom.scss */
 .media-vimeo-video iframe,
 .media-vimeo-video object,
 .media-vimeo-video embed,
@@ -89,21 +99,21 @@
 }
 
 @media (max-width: 900px) {
-  /* line 115, ../../sass/_custom.scss */
+  /* line 124, ../../sass/_custom.scss */
   ul.share-buttons {
     margin-top: 30px;
   }
-  /* line 119, ../../sass/_custom.scss */
+  /* line 128, ../../sass/_custom.scss */
   ul.share-buttons li {
     display: inline !important;
   }
 }
 
-/* line 126, ../../sass/_custom.scss */
+/* line 135, ../../sass/_custom.scss */
 .node-type-news-article .field-name-field-image.field-type-image .field-items {
   padding: 0;
 }
-/* line 130, ../../sass/_custom.scss */
+/* line 139, ../../sass/_custom.scss */
 .node-type-news-article .field-name-field-image.field-type-image .field-item {
   float: left;
   text-align: center;
@@ -111,7 +121,7 @@
   padding: 8px;
 }
 @media (min-width: 769px) {
-  /* line 125, ../../sass/_custom.scss */
+  /* line 134, ../../sass/_custom.scss */
   .node-type-news-article .field-name-field-image.field-type-image {
     /* one item */
     /* two items */
@@ -119,33 +129,33 @@
     /* four items */
     /* five items */
   }
-  /* line 138, ../../sass/_custom.scss */
+  /* line 147, ../../sass/_custom.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(1) {
     width: 98%;
   }
-  /* line 144, ../../sass/_custom.scss */
+  /* line 153, ../../sass/_custom.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(2),
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(2) ~ .field-item {
     width: 47.5%;
   }
-  /* line 150, ../../sass/_custom.scss */
+  /* line 159, ../../sass/_custom.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(3),
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(3) ~ .field-item {
     width: 31%;
   }
-  /* line 156, ../../sass/_custom.scss */
+  /* line 165, ../../sass/_custom.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(4),
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(4) ~ .field-item {
     width: 22.5%;
   }
-  /* line 162, ../../sass/_custom.scss */
+  /* line 171, ../../sass/_custom.scss */
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(5),
   .node-type-news-article .field-name-field-image.field-type-image .field-item:first-child:nth-last-child(5) ~ .field-item {
     width: 15%;
   }
 }
 
-/* line 168, ../../sass/_custom.scss */
+/* line 178, ../../sass/_custom.scss */
 ul.share-buttons img {
   height: 30px !important;
   width: 30px !important;
@@ -154,22 +164,22 @@ ul.share-buttons img {
   border-radius: 8px;
 }
 
-/* line 176, ../../sass/_custom.scss */
+/* line 186, ../../sass/_custom.scss */
 ul.share-buttons .facebook img:hover {
   background: #3b5998;
 }
 
-/* line 179, ../../sass/_custom.scss */
+/* line 189, ../../sass/_custom.scss */
 ul.share-buttons .twitter img:hover {
   background: #00aced;
 }
 
-/* line 182, ../../sass/_custom.scss */
+/* line 192, ../../sass/_custom.scss */
 ul.share-buttons .linkedin img:hover {
   background: #0077B5;
 }
 
-/* line 185, ../../sass/_custom.scss */
+/* line 195, ../../sass/_custom.scss */
 ul.share-buttons .email img:hover {
   background: #8c1515;
 }

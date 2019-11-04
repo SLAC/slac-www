@@ -3189,18 +3189,17 @@ a.imageLessButton {
 /* line 2512, ../sass/pages.scss */
 .article-news-center-view .title a {
   font-size: 19px;
-  color: #000;
   font-family: "Source Serif Pro",serif;
   font-weight: bold;
   margin-bottom: 4px;
 }
-/* line 2519, ../sass/pages.scss */
+/* line 2518, ../sass/pages.scss */
 .article-news-center-view .body {
   font-size: 16px;
   line-height: 1.4;
   color: #474747;
 }
-/* line 2524, ../sass/pages.scss */
+/* line 2523, ../sass/pages.scss */
 .article-news-center-view .content {
   float: left;
   width: 76%;
@@ -3208,24 +3207,24 @@ a.imageLessButton {
   font-size: 12px;
   line-height: normal;
 }
-/* line 2531, ../sass/pages.scss */
+/* line 2530, ../sass/pages.scss */
 .article-news-center-view .image {
   float: right;
   width: 20%;
   margin-left: 4%;
 }
-/* line 2536, ../sass/pages.scss */
+/* line 2535, ../sass/pages.scss */
 .article-news-center-view img {
   width: 100%;
   height: auto;
 }
 
-/* line 2543, ../sass/pages.scss */
+/* line 2542, ../sass/pages.scss */
 .node-type-news-article .pane-page-content > .pane-content {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 2548, ../sass/pages.scss */
+/* line 2547, ../sass/pages.scss */
 .node-type-news-article .page-basic .content > .inside {
   max-width: 100% !important;
   margin: 0;
@@ -3234,13 +3233,13 @@ a.imageLessButton {
 }
 
 @media (max-width: 900px) and (min-width: 601px) {
-  /* line 2556, ../sass/pages.scss */
+  /* line 2555, ../sass/pages.scss */
   .node-type-news-article .two-col-leftsidebar .general-right {
     width: 90%;
   }
 }
 
-/* line 2563, ../sass/pages.scss */
+/* line 2562, ../sass/pages.scss */
 .header-width-full .panel-panel.hero-image {
   margin-left: -5%;
   margin-right: -5%;
@@ -3248,7 +3247,7 @@ a.imageLessButton {
 }
 
 @media (max-width: 600px) {
-  /* line 2570, ../sass/pages.scss */
+  /* line 2569, ../sass/pages.scss */
   .two-col-leftsidebar .general-left, .two-col-leftsidebar .general-right {
     width: 100% !important;
   }
