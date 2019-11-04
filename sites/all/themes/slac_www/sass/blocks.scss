@@ -1811,7 +1811,7 @@ p img.right {
 
     @media (max-width: 768px){
       font-size: 18px;
-      padding-left: 15px;
+      padding-left: 15px !important;
       padding-top: 15px;
     }
 }
