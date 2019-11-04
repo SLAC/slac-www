@@ -42,7 +42,6 @@ features[field_base][] = field_structured_content
 features[field_base][] = field_subheadline
 features[field_base][] = field_tags
 features[field_base][] = field_teaser
-features[field_instance][] = node-news_article-body
 features[field_instance][] = node-news_article-field_article_type
 features[field_instance][] = node-news_article-field_do_not_display_hero_image
 features[field_instance][] = node-news_article-field_do_not_limit_header_image_
