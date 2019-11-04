@@ -1368,6 +1368,7 @@ a.lightbox-processed:hover{
     @media (min-width: 901px){
       position: absolute;
       bottom: 2px;
+      width: 97.5%;
     }
   }
 
@@ -1716,7 +1717,7 @@ cite {
 
 // Inline styling for paragraphs
 
-img.left {
+p img.left {
     padding-right: 20px;
 
     @media (max-width: 500px){
@@ -1725,7 +1726,7 @@ img.left {
     }
 }
 
-img.right {
+p img.right {
     padding-left: 20px;
 
     @media (max-width: 500px){
