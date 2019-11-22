@@ -313,7 +313,7 @@ ul.share-buttons img{
   $pane->panel = 'right';
   $pane->type = 'entity_field';
   $pane->subtype = 'node:field_subheadline';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
