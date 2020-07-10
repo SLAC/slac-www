@@ -29,6 +29,11 @@ function slac_paragraph_bundles_paragraphs_info() {
       'bundle' => 'simple',
       'locked' => '1',
     ),
+    'simple_bootstrap' => array(
+      'name' => 'Simple Bootstrap',
+      'bundle' => 'simple_bootstrap',
+      'locked' => '1',
+    ),
     'video' => array(
       'name' => 'Video',
       'bundle' => 'video',

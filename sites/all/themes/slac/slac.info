@@ -1,0 +1,22 @@
+name = SLAC Virtual
+description = 'A Drupal Bootstrap4 based custom theme for SLAC Virtual.'
+core = 7.x
+base theme = bootstrap4
+php = 5.0.0
+
+; Regions.
+regions[header] = 'Header'
+regions[nav_branding] = 'Navigation branding region'
+regions[nav_main] = 'Main navigation region'
+regions[nav_additional] = 'Additional navigation region (eg search form, social icons, etc)'
+regions[breadcrumb] = 'Breadcrumbs'
+regions[content] = 'Main content'
+regions[sidebar_first] = 'Sidebar first'
+regions[sidebar_second] = 'Sidebar second'
+regions[footer_left] = 'Footer Left'
+regions[footer_copyright] = 'Footer Copyright'
+regions[footer_social] = 'Footer Social'
+regions[footer_right] = 'Footer Right'
+
+; Add local css.
+stylesheets[all][] = css/style.css
