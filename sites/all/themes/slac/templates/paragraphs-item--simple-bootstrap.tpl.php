@@ -22,7 +22,7 @@ if (!empty($content['field_padding_top'])) {
     $padding_top = trim(strip_tags(render($content['field_padding_top'])));
 }
 if (!empty($content['field_padding_bottom'])) {
-    $padding_top = trim(strip_tags(render($content['field_padding_bottom'])));
+    $padding_bottom = trim(strip_tags(render($content['field_padding_bottom'])));
 }
 if (!empty($content['field_animation'])) {
     $animation = trim(strip_tags(render($content['field_animation'])));
