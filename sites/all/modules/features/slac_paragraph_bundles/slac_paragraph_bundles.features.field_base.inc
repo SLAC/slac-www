@@ -146,6 +146,116 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_background_image'.
+  $field_bases['field_background_image'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_background_image',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
+
+  // Exported field_base: 'field_card_body'.
+  $field_bases['field_card_body'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_card_body',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_card_image'.
+  $field_bases['field_card_image'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_card_image',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
+
+  // Exported field_base: 'field_card_layout'.
+  $field_bases['field_card_layout'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_card_layout',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'card-deck' => 'A set of equal width and height cards that aren’t attached to one another',
+        'card-columns' => 'Cards that are organized into Masonry-like columns',
+        'card-group' => 'Use card groups to render cards as a single, attached element with equal width and height columns',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_card_title'.
+  $field_bases['field_card_title'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_card_title',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_column_content'.
   $field_bases['field_column_content'] = array(
     'active' => 1,
@@ -236,6 +346,84 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_icon'.
+  $field_bases['field_icon'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_icon',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
+
+  // Exported field_base: 'field_invert'.
+  $field_bases['field_invert'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_invert',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'invert' => 'Invert',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_overlay'.
+  $field_bases['field_overlay'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_overlay',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        9 => '9 - Darkest',
+        8 => 8,
+        7 => 7,
+        6 => 6,
+        5 => 5,
+        4 => 4,
+        3 => 3,
+        2 => 2,
+        1 => '1 - Lightest',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_padding_bottom'.
   $field_bases['field_padding_bottom'] = array(
     'active' => 1,
@@ -311,6 +499,35 @@ function slac_paragraph_bundles_field_default_field_bases() {
         'paragraph--width--medium' => 'Medium',
         'paragraph--width--wide' => 'Wide',
         'paragraph--width--full' => 'Full Screen',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_parallax'.
+  $field_bases['field_parallax'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_parallax',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        6 => 'Slowest',
+        5 => 'Slower',
+        4 => 'Slow',
+        3 => 'Fast',
+        2 => 'Faster',
+        1 => 'Fastest',
       ),
       'allowed_values_function' => '',
     ),
@@ -427,6 +644,73 @@ function slac_paragraph_bundles_field_default_field_bases() {
         'pull-right pull-right-narrow' => 'Pull Right Narrow',
         'pull-left pull-left-wide' => 'Pull Left Wide',
         'pull-right pull-right-wide' => 'Pull Right Wide',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_xeno_content'.
+  $field_bases['field_xeno_content'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_xeno_content',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'columns' => 'columns',
+          'image_bootstrap' => 'image_bootstrap',
+          'simple' => 'simple',
+          'view' => 'view',
+        ),
+      ),
+      'target_type' => 'paragraphs_item',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_zoom'.
+  $field_bases['field_zoom'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_zoom',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        6 => 'Slowest',
+        5 => 'Slower',
+        4 => 'Slow',
+        3 => 'Fast',
+        2 => 'Faster',
+        1 => 'Fastest',
       ),
       'allowed_values_function' => '',
     ),

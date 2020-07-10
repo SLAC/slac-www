@@ -19,9 +19,24 @@ function slac_paragraph_bundles_paragraphs_info() {
       'bundle' => 'blockquote',
       'locked' => '1',
     ),
+    'card' => array(
+      'name' => 'Card',
+      'bundle' => 'card',
+      'locked' => '1',
+    ),
+    'card_wrapper' => array(
+      'name' => 'Card Wrapper',
+      'bundle' => 'card_wrapper',
+      'locked' => '1',
+    ),
     'columns' => array(
       'name' => 'Columns',
       'bundle' => 'columns',
+      'locked' => '1',
+    ),
+    'hero' => array(
+      'name' => 'Hero',
+      'bundle' => 'hero',
       'locked' => '1',
     ),
     'image' => array(
@@ -47,6 +62,11 @@ function slac_paragraph_bundles_paragraphs_info() {
     'video' => array(
       'name' => 'Video',
       'bundle' => 'video',
+      'locked' => '1',
+    ),
+    'view' => array(
+      'name' => 'View',
+      'bundle' => 'view',
       'locked' => '1',
     ),
   );
