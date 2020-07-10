@@ -50,8 +50,6 @@ $paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_botto
 
 <div class="<?php print $classes; ?>">
 <div class="<?php print $paragraphclass; ?>">
-    <div class="col-md">
-        <?php print render($content['field_column_content']); ?>
-    </div>
+    <?php print render($content['field_column_content']); ?>
 </div>
 </div>
