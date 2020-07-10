@@ -10,6 +10,32 @@
 function slac_paragraph_bundles_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_align_columns'.
+  $field_bases['field_align_columns'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_align_columns',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'columns-center' => 'Center',
+        'columns-start' => 'Start',
+        'columns-end' => 'End',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_animation'.
   $field_bases['field_animation'] = array(
     'active' => 1,
@@ -113,6 +139,77 @@ function slac_paragraph_bundles_field_default_field_bases() {
         'paragraph--color paragraph--color--dark-grey' => 'Dark Grey',
         'paragraph--color paragraph--color--black' => 'Black',
         'paragraph--color paragraph--color--white' => 'White',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_column_content'.
+  $field_bases['field_column_content'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_column_content',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'block' => 'block',
+          'blockquote' => 'blockquote',
+          'simple_bootstrap' => 'simple_bootstrap',
+          'video' => 'video',
+        ),
+      ),
+      'target_type' => 'paragraphs_item',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_column_style'.
+  $field_bases['field_column_style'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_column_style',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'paragraph--style--75-25' => '75% - 25%',
+        'paragraph--style--66-33' => '66% - 33%',
+        'paragraph--style--25-75' => '25% - 75%',
+        'paragraph--style--33-66' => '33% - 66%',
+        'paragraph--style--25-50-25' => '25% - 50% - 25%',
+        'paragraph--style--50-25-25' => '50% - 25% - 25%',
+        'paragraph--style--25-25-50' => '25% - 25% - 50%',
+        'paragraph--style--16-66-16' => '1/6 - 2/3 - 1/6',
+        'paragraph--style--66-16-16' => '2/3 - 1/6 - 1/6',
+        'paragraph--style--16-16-66' => '1/6 - 1/6 - 2/3',
       ),
       'allowed_values_function' => '',
     ),
@@ -260,6 +357,31 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'media',
+  );
+
+  // Exported field_base: 'field_reverse_order_on_mobile'.
+  $field_bases['field_reverse_order_on_mobile'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_reverse_order_on_mobile',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'mobile-reverse' => 'Yes',
+        'no-mobile-reverse' => 'No',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_text'.

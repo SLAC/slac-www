@@ -19,9 +19,19 @@ function slac_paragraph_bundles_paragraphs_info() {
       'bundle' => 'blockquote',
       'locked' => '1',
     ),
+    'columns' => array(
+      'name' => 'Columns',
+      'bundle' => 'columns',
+      'locked' => '1',
+    ),
     'image' => array(
       'name' => 'Image',
       'bundle' => 'image',
+      'locked' => '1',
+    ),
+    'image_bootstrap' => array(
+      'name' => 'Image Bootstrap',
+      'bundle' => 'image_bootstrap',
       'locked' => '1',
     ),
     'simple' => array(
