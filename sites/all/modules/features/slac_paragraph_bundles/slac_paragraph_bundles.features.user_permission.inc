@@ -55,6 +55,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content columns'.
+  $permissions['create paragraph content columns'] = array(
+    'name' => 'create paragraph content columns',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content image'.
   $permissions['create paragraph content image'] = array(
     'name' => 'create paragraph content image',
@@ -67,6 +74,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content image_bootstrap'.
+  $permissions['create paragraph content image_bootstrap'] = array(
+    'name' => 'create paragraph content image_bootstrap',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content simple'.
   $permissions['create paragraph content simple'] = array(
     'name' => 'create paragraph content simple',
@@ -76,6 +90,13 @@ function slac_paragraph_bundles_user_default_permissions() {
       'editor' => 'editor',
       'manager' => 'manager',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content simple_bootstrap'.
+  $permissions['create paragraph content simple_bootstrap'] = array(
+    'name' => 'create paragraph content simple_bootstrap',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -115,6 +136,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'delete paragraph content columns'.
+  $permissions['delete paragraph content columns'] = array(
+    'name' => 'delete paragraph content columns',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'delete paragraph content image'.
   $permissions['delete paragraph content image'] = array(
     'name' => 'delete paragraph content image',
@@ -127,6 +155,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'delete paragraph content image_bootstrap'.
+  $permissions['delete paragraph content image_bootstrap'] = array(
+    'name' => 'delete paragraph content image_bootstrap',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'delete paragraph content simple'.
   $permissions['delete paragraph content simple'] = array(
     'name' => 'delete paragraph content simple',
@@ -136,6 +171,13 @@ function slac_paragraph_bundles_user_default_permissions() {
       'editor' => 'editor',
       'manager' => 'manager',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content simple_bootstrap'.
+  $permissions['delete paragraph content simple_bootstrap'] = array(
+    'name' => 'delete paragraph content simple_bootstrap',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -175,6 +217,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content columns'.
+  $permissions['update paragraph content columns'] = array(
+    'name' => 'update paragraph content columns',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content image'.
   $permissions['update paragraph content image'] = array(
     'name' => 'update paragraph content image',
@@ -187,6 +236,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content image_bootstrap'.
+  $permissions['update paragraph content image_bootstrap'] = array(
+    'name' => 'update paragraph content image_bootstrap',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content simple'.
   $permissions['update paragraph content simple'] = array(
     'name' => 'update paragraph content simple',
@@ -196,6 +252,13 @@ function slac_paragraph_bundles_user_default_permissions() {
       'editor' => 'editor',
       'manager' => 'manager',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content simple_bootstrap'.
+  $permissions['update paragraph content simple_bootstrap'] = array(
+    'name' => 'update paragraph content simple_bootstrap',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -235,6 +298,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'view paragraph content columns'.
+  $permissions['view paragraph content columns'] = array(
+    'name' => 'view paragraph content columns',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'view paragraph content image'.
   $permissions['view paragraph content image'] = array(
     'name' => 'view paragraph content image',
@@ -250,6 +320,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'view paragraph content image_bootstrap'.
+  $permissions['view paragraph content image_bootstrap'] = array(
+    'name' => 'view paragraph content image_bootstrap',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'view paragraph content simple'.
   $permissions['view paragraph content simple'] = array(
     'name' => 'view paragraph content simple',
@@ -262,6 +339,13 @@ function slac_paragraph_bundles_user_default_permissions() {
       'manager' => 'manager',
       'site_member' => 'site_member',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content simple_bootstrap'.
+  $permissions['view paragraph content simple_bootstrap'] = array(
+    'name' => 'view paragraph content simple_bootstrap',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 
