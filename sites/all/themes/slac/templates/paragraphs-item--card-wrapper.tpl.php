@@ -11,9 +11,7 @@ $padding_top = '';
 $padding_bottom = '';
 $animation = '';
 $animation_setting = '';
-$column_style = '';
-$reverse_class = '';
-$align_columns = '';
+$card_layout = '';
 
 if (!empty($content['field_paragraph_width'])) {
     $width = trim(strip_tags(render($content['field_paragraph_width'])));
@@ -33,23 +31,17 @@ if (!empty($content['field_animation'])) {
 if (!empty($content['field_animation_setting'])) {
     $animation_setting = trim(strip_tags(render($content['field_animation_setting'])));
 }
-if (!empty($content['field_column_style'])) {
-    $column_style = trim(strip_tags(render($content['field_column_style'])));
-}
-if (!empty($content['field_reverse_order_on_mobile'])) {
-    $reverse_class = trim(strip_tags(render($content['field_reverse_order_on_mobile'])));
-}
-if (!empty($content['field_align_columns'])) {
-    $align_columns = trim(strip_tags(render($content['field_align_columns'])));
+if (!empty($content['field_card_layout'])) {
+    $card_layout = trim(strip_tags(render($content['field_card_layout'])));
 }
 
-$classes = 'paragraph paragraph--type--columns paragraph--view-mode--default ' . $background . ' ' . $width;
-$paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_bottom . ' ' . $animation . ' ' . $animation_setting . ' ' . $column_style . ' ' . $reverse_class . ' ' . $align_columns;
+$classes = 'paragraph paragraph--type--card-wrapper paragraph--view-mode--default ' . $background . ' ' . $width;
+$paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_bottom . ' ' . $animation . ' ' . $animation_setting . ' ' . $card_layout;
 
 ?>
 
 <div class="<?php print $classes; ?>">
-<div class="<?php print $paragraphclass; ?>">
-    <?php print render($content['field_column_content']); ?>
+<div class="paragraph__column <?php print $paragraphclass; ?>">
+    <?php print render($content['field_text']); ?>
 </div>
 </div>
