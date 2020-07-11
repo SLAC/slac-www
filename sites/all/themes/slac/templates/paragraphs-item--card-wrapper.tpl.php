@@ -42,6 +42,6 @@ $paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_botto
 
 <div class="<?php print $classes; ?>">
 <div class="paragraph__column <?php print $paragraphclass; ?>">
-    <?php print render($content); ?>
+    <?php print render($content['field_card']); ?>
 </div>
 </div>

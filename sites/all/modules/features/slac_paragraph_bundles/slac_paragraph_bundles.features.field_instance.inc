@@ -445,6 +445,77 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-card_wrapper-field_card'.
+  $field_instances['paragraphs_item-card_wrapper-field_card'] = array(
+    'bundle' => 'card_wrapper',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 7,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_card',
+    'label' => 'Card',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'button',
+      'allowed_bundles' => array(
+        'block' => -1,
+        'blockquote' => -1,
+        'card' => 'card',
+        'card_wrapper' => -1,
+        'columns' => -1,
+        'hero' => -1,
+        'image' => -1,
+        'image_bootstrap' => -1,
+        'simple' => -1,
+        'simple_bootstrap' => -1,
+        'video' => -1,
+        'view' => -1,
+      ),
+      'bundle_weights' => array(
+        'block' => 2,
+        'blockquote' => 3,
+        'card' => 4,
+        'card_wrapper' => 5,
+        'columns' => 6,
+        'hero' => 7,
+        'image' => 8,
+        'image_bootstrap' => 9,
+        'simple' => 10,
+        'simple_bootstrap' => 11,
+        'video' => 12,
+        'view' => 13,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 44,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-card_wrapper-field_card_layout'.
   $field_instances['paragraphs_item-card_wrapper-field_card_layout'] = array(
     'bundle' => 'card_wrapper',
@@ -2106,6 +2177,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
   t('Animation Setting');
   t('Background');
   t('Background Image');
+  t('Card');
   t('Card Body');
   t('Card Layout');
   t('Card Title');

@@ -27,10 +27,10 @@ if (!empty($content['field_card_title'])) {
 
 <div class="card">
     <?php if ($icon) : ?>
-        <div><?php print $icon; ?>></div>
+        <div><?php print $icon; ?></div>
     <?php endif; ?>
     <?php if ($image) : ?>
-        <div><?php print $image; ?>></div>
+        <div><?php print $image; ?></div>
     <?php endif; ?>
     <div class="card-body">
         <h5 class="card-title"><?php print $title; ?></h5>
