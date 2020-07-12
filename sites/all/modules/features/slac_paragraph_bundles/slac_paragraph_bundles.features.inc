@@ -29,6 +29,11 @@ function slac_paragraph_bundles_paragraphs_info() {
       'bundle' => 'card_wrapper',
       'locked' => '1',
     ),
+    'column_wrapper' => array(
+      'name' => 'Column Wrapper',
+      'bundle' => 'column_wrapper',
+      'locked' => '1',
+    ),
     'columns' => array(
       'name' => 'Columns',
       'bundle' => 'columns',

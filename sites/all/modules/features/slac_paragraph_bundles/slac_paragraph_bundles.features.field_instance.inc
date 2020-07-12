@@ -666,6 +666,167 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-column_wrapper-field_background'.
+  $field_instances['paragraphs_item-column_wrapper-field_background'] = array(
+    'bundle' => 'column_wrapper',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_background',
+    'label' => 'Background',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 37,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-column_wrapper-field_column_wrapper_content'.
+  $field_instances['paragraphs_item-column_wrapper-field_column_wrapper_content'] = array(
+    'bundle' => 'column_wrapper',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_column_wrapper_content',
+    'label' => 'Column Wrapper Content',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-column_wrapper-field_padding_bottom'.
+  $field_instances['paragraphs_item-column_wrapper-field_padding_bottom'] = array(
+    'bundle' => 'column_wrapper',
+    'default_value' => array(
+      0 => array(
+        'value' => 'padding-top--sm',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_padding_bottom',
+    'label' => 'Padding Bottom',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-column_wrapper-field_padding_top'.
+  $field_instances['paragraphs_item-column_wrapper-field_padding_top'] = array(
+    'bundle' => 'column_wrapper',
+    'default_value' => array(
+      0 => array(
+        'value' => 'padding-top--sm',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_padding_top',
+    'label' => 'Padding Top',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-columns-field_align_columns'.
   $field_instances['paragraphs_item-columns-field_align_columns'] = array(
     'bundle' => 'columns',
@@ -2183,6 +2344,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
   t('Card Title');
   t('Column Content');
   t('Column Style');
+  t('Column Wrapper Content');
   t('Columns will automatically be equal width unless changed.');
   t('Content');
   t('Icon');

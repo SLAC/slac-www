@@ -69,6 +69,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content column_wrapper'.
+  $permissions['create paragraph content column_wrapper'] = array(
+    'name' => 'create paragraph content column_wrapper',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content columns'.
   $permissions['create paragraph content columns'] = array(
     'name' => 'create paragraph content columns',
@@ -174,6 +181,13 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'delete paragraph content card_wrapper'.
   $permissions['delete paragraph content card_wrapper'] = array(
     'name' => 'delete paragraph content card_wrapper',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content column_wrapper'.
+  $permissions['delete paragraph content column_wrapper'] = array(
+    'name' => 'delete paragraph content column_wrapper',
     'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
@@ -287,6 +301,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content column_wrapper'.
+  $permissions['update paragraph content column_wrapper'] = array(
+    'name' => 'update paragraph content column_wrapper',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content columns'.
   $permissions['update paragraph content columns'] = array(
     'name' => 'update paragraph content columns',
@@ -392,6 +413,13 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'view paragraph content card_wrapper'.
   $permissions['view paragraph content card_wrapper'] = array(
     'name' => 'view paragraph content card_wrapper',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content column_wrapper'.
+  $permissions['view paragraph content column_wrapper'] = array(
+    'name' => 'view paragraph content column_wrapper',
     'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );

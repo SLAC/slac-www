@@ -62,14 +62,70 @@
   text-decoration: underline;
 }
 /* line 155, ../sass/pages.scss */
-.page-basic .footer a img {
-  width: 73%;
-  float: left;
-  filter: none;
-}
-/* line 159, ../sass/pages.scss */
-.page-basic .footer a img:hover {
-  filter: none;
+.page-basic .footer-logos a img {
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 80%;
 }
 
+.page-basic .footer {
+    background: #4d4f53;
+    padding: 20px 0 28px;
+    color: #fff;
+}
+
+.page-basic .footer a {
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 0;
+    color: #fff;
+}
+
+.page-basic .footer #social-channels a {
+  margin: 14px 0 6px 16px;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  float: right;
+}
+
+.pane-menu-menu-footer-menu .menu li.first, .pane-menu-menu-footer-menu .menu li.last {
+  width: auto;
+}
+
+.pane-menu-menu-footer-menu ul.nav {
+
+  li  {
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+    background: url(../../slac_www/images/footer-menu-arrow.png) no-repeat left 15px;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.page-basic .footer-logos a:last-child img {
+    width: 100% !important;
+}
+
+.footer-logos p {
+  display: flex;
+  float: left;
+
+  a {
+    width: 50%;
+  }
+}
+
+.pane-menu-menu-footer-menu {
+  width: 100%;
+  border-bottom: 1px solid #aeaeae;
+  padding-bottom: 6px;
+}
 

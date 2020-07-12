@@ -1,5 +1,111 @@
 // Define header styles.
-.container-fluid.header {
+.page-basic .header {
   background: $red;
+}
+
+@media (max-width: 700px) {
+  .left-menu-trigger {
+      display: block;
+  }
+}
+
+.left-menu-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  background: #bebebe url(../images/mobile-menu.png) no-repeat center center;
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: 700px) {
+     display: block;
+  }
+}
+
+.header-link a {
+  color: #fff;
+  font-size: 11px;
+  margin-left: 10px;
+}
+
+.header-link a:first-child {
+    margin-right: 10px;
+}
+
+#search-box {
+  float: right;
+  position: relative;
+  margin-top: 11px;
+
+  .form-item {
+    margin: 0;
+    outline: none;
+    padding: 1px 0 1px 10px;
+    height: 22px;
+    width: 160px;
+    background: #fff;
+  }
+
+  .form-text {
+    width: 130px;
+    font-size: .7em;
+    color: #666;
+  }
+
+  input {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
+
+#slac-search-options > .form-item {
+  width: auto;
+  max-width: 200px;
+  background-color: #EFEFEF;
+  color: #990000;
+  font-size: 11px;
+  z-index: 120;
+  -moz-box-shadow: 1px 1px 3px #555;
+  -webkit-box-shadow: 1px 1px 3px #555;
+  -ms-box-shadow: 1px 1px 3px #555;
+  box-shadow: 1px 1px 3px #555;
+  float: none;
+}
+.page-basic .pane-pane-header {
+    background: #8c1515;
+    overflow: hidden;
+
+  @media only screen and (min-width: 700px) {
+    background: #8c1515 url(https://www6.slac.stanford.edu/sites/www6.slac.stanford.edu/files/header-connectors_clean.png) no-repeat 230px 0;
+  }
+}
+
+.pane-nice-menus-1.main-menu {
+  float: left;
+  width: 100%;
+}
+
+.panel-pane.pane-pane-messages {
+  width: 100%;
+  float: left;
+}
+
+.main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
+  background: url(../images/menu-del.png) no-repeat left center;
+  width: 16.66%;
+  height: 31px;
+  border: none;
+
+  @media only screen and (min-width: 700px)  {
+    margin-right: 22px;
+    width: auto;
+    background: none;
+  }
 }
 

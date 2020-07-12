@@ -8007,8 +8007,118 @@ label {
   display: inline-block;
   margin: 0.5rem 0 0 0; }
 
-.container-fluid.header, .header.container-sm, .header.container-md, .header.container-lg, .header.container-xl {
+.page-basic .header {
   background: #8C191C; }
+
+@media (max-width: 700px) {
+  .left-menu-trigger {
+    display: block; } }
+.left-menu-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  background: #bebebe url(../images/mobile-menu.png) no-repeat center center;
+  cursor: pointer;
+  display: none; }
+  @media (max-width: 700px) {
+    .left-menu-trigger {
+      display: block; } }
+
+.header-link a {
+  color: #fff;
+  font-size: 11px;
+  margin-left: 10px; }
+
+.header-link a:first-child {
+  margin-right: 10px; }
+
+#search-box {
+  float: right;
+  position: relative;
+  margin-top: 11px; }
+  #search-box .form-item {
+    margin: 0;
+    outline: none;
+    padding: 1px 0 1px 10px;
+    height: 22px;
+    width: 160px;
+    background: #fff; }
+  #search-box .form-text {
+    width: 130px;
+    font-size: .7em;
+    color: #666; }
+  #search-box input {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    border: none; }
+
+#slac-search-options > .form-item {
+  width: auto;
+  max-width: 200px;
+  background-color: #EFEFEF;
+  color: #990000;
+  font-size: 11px;
+  z-index: 120;
+  -moz-box-shadow: 1px 1px 3px #555;
+  -webkit-box-shadow: 1px 1px 3px #555;
+  -ms-box-shadow: 1px 1px 3px #555;
+  box-shadow: 1px 1px 3px #555;
+  float: none; }
+
+.page-basic .pane-pane-header {
+  background: #8c1515;
+  overflow: hidden; }
+  @media only screen and (min-width: 700px) {
+    .page-basic .pane-pane-header {
+      background: #8c1515 url(https://www6.slac.stanford.edu/sites/www6.slac.stanford.edu/files/header-connectors_clean.png) no-repeat 230px 0; } }
+
+.pane-nice-menus-1.main-menu {
+  float: left;
+  width: 100%; }
+
+.panel-pane.pane-pane-messages {
+  width: 100%;
+  float: left; }
+
+.main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
+  background: url(../images/menu-del.png) no-repeat left center;
+  width: 16.66%;
+  height: 31px;
+  border: none; }
+  @media only screen and (min-width: 700px) {
+    .main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
+      margin-right: 22px;
+      width: auto;
+      background: none; } }
+
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif; }
+
+.page-basic .inside {
+  max-width: 1200px;
+  margin: 0 auto 20px; }
+
+.page-basic .panels-flexible-region-first {
+  width: 70%;
+  max-width: none; }
+
+.page-basic .panels-flexible-region-last {
+  width: 28%; }
+
+a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:after, a[href^="https://www-internal"]:active:after, a[href^="https://www-internal"]:visited:after, a[href^="https://intranet"]:after, a[href^="https://intranet"]:hover:after, a[href^="https://intranet"]:visited:after, a[href^="https://intranet"]:active:after, a.lock:after, a.lock:hover:after, a.lock:visited:after, a.lock:active:after, a[href^="https://internal"]:after, a[href^="https://internal"]:hover:after, a[href^="https://internal"]:visited:after, a[href^="https://internal"]:active:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f023";
+  padding-left: .2rem;
+  font-size: .8em;
+  font-weight: 900; }
+
+.page-basic .sidebar-menu {
+  display: none; }
 
 .container-fluid.footer, .footer.container-sm, .footer.container-md, .footer.container-lg, .footer.container-xl {
   background: #4D4F53;
@@ -8016,6 +8126,9 @@ label {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px; }
+  .container-fluid.footer .row, .footer.container-sm .row, .footer.container-md .row, .footer.container-lg .row, .footer.container-xl .row {
+    display: flex;
+    align-items: center; }
   .container-fluid.footer a, .footer.container-sm a, .footer.container-md a, .footer.container-lg a, .footer.container-xl a {
     color: #fff; }
 
@@ -8042,5 +8155,63 @@ label {
       background-image: url(../img/linkedin.svg); }
     #block-menu-menu-social-links ul li a.youtube {
       background-image: url(../img/youtube.svg); }
+
+/* line 149, ../sass/pages.scss */
+.page-basic .footer a:hover {
+  text-decoration: underline; }
+
+/* line 155, ../sass/pages.scss */
+.page-basic .footer-logos a img {
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 80%; }
+
+.page-basic .footer {
+  background: #4d4f53;
+  padding: 20px 0 28px;
+  color: #fff; }
+
+.page-basic .footer a {
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom: 0;
+  color: #fff; }
+
+.page-basic .footer #social-channels a {
+  margin: 14px 0 6px 16px;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  float: right; }
+
+.pane-menu-menu-footer-menu .menu li.first, .pane-menu-menu-footer-menu .menu li.last {
+  width: auto; }
+
+.pane-menu-menu-footer-menu ul.nav li {
+  color: #fff;
+  text-decoration: none;
+  list-style-type: none;
+  background: url(../../slac_www/images/footer-menu-arrow.png) no-repeat left 15px;
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.page-basic .footer-logos a:last-child img {
+  width: 100% !important; }
+
+.footer-logos p {
+  display: flex;
+  float: left; }
+  .footer-logos p a {
+    width: 50%; }
+
+.pane-menu-menu-footer-menu {
+  width: 100%;
+  border-bottom: 1px solid #aeaeae;
+  padding-bottom: 6px; }
 
 /*# sourceMappingURL=style.css.map */
