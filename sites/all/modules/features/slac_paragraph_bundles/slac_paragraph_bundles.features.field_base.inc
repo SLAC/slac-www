@@ -271,42 +271,19 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_column_content'.
-  $field_bases['field_column_content'] = array(
+  // Exported field_base: 'field_column_contentp'.
+  $field_bases['field_column_contentp'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_column_content',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
+    'field_name' => 'field_column_contentp',
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'block' => 'block',
-          'blockquote' => 'blockquote',
-          'simple_bootstrap' => 'simple_bootstrap',
-          'video' => 'video',
-        ),
-      ),
-      'target_type' => 'paragraphs_item',
-    ),
+    'module' => 'paragraphs',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'entityreference',
+    'type' => 'paragraphs',
   );
 
   // Exported field_base: 'field_column_style'.
@@ -342,42 +319,19 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_column_wrapper_content'.
-  $field_bases['field_column_wrapper_content'] = array(
+  // Exported field_base: 'field_column_wrapper_contentp'.
+  $field_bases['field_column_wrapper_contentp'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_column_wrapper_content',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
+    'field_name' => 'field_column_wrapper_contentp',
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'columns' => 'columns',
-          'image_bootstrap' => 'image_bootstrap',
-          'simple_bootstrap' => 'simple_bootstrap',
-          'view' => 'view',
-        ),
-      ),
-      'target_type' => 'paragraphs_item',
-    ),
+    'module' => 'paragraphs',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'entityreference',
+    'type' => 'paragraphs',
   );
 
   // Exported field_base: 'field_content'.
@@ -859,35 +813,12 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_xeno_content',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'columns' => 'columns',
-          'image_bootstrap' => 'image_bootstrap',
-          'simple' => 'simple',
-          'view' => 'view',
-        ),
-      ),
-      'target_type' => 'paragraphs_item',
-    ),
+    'module' => 'paragraphs',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'entityreference',
+    'type' => 'paragraphs',
   );
 
   // Exported field_base: 'field_zoom'.
