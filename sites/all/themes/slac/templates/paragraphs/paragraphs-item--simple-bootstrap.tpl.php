@@ -28,7 +28,7 @@ if (!empty($content['field_animation'])) {
     $animation = trim(strip_tags(render($content['field_animation'])));
 }
 if (!empty($content['field_animation_setting'])) {
-    $animation_setting = trim(strip_tags(render($content['field_animation_setting'])));
+    $animation_setting = 'wow animated ' . trim(strip_tags(render($content['field_animation_setting'])));
 }
 
 $classes = 'paragraph paragraph--type--simple-bootstrap paragraph--view-mode--default ' . $background . ' ' . $width;

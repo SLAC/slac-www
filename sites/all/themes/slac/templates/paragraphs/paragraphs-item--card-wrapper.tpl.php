@@ -26,7 +26,7 @@ if (!empty($content['field_padding_bottom'])) {
     $padding_bottom = trim(strip_tags(render($content['field_padding_bottom'])));
 }
 if (!empty($content['field_animation'])) {
-    $animation = trim(strip_tags(render($content['field_animation'])));
+    $animation = 'wow animated' . trim(strip_tags(render($content['field_animation'])));
 }
 if (!empty($content['field_animation_setting'])) {
     $animation_setting = trim(strip_tags(render($content['field_animation_setting'])));
