@@ -20,3 +20,5 @@ regions[footer_right] = 'Footer Right'
 
 ; Add local css.
 stylesheets[all][] = css/style.css
+
+scripts[] = js/hero.js
