@@ -1243,13 +1243,11 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image_url_formatter',
+        'module' => 'file_entity',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-          'url_type' => '',
+          'file_view_mode' => 'default',
         ),
-        'type' => 'image_url',
+        'type' => 'file_rendered',
         'weight' => 0,
       ),
       'paragraphs_editor_preview' => array(

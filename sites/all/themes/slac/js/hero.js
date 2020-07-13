@@ -1,19 +1,17 @@
 (function ($, Drupal) {
 
-  "use strict";
-
+"use strict";
 
   // Makes the parallax function.
   function parallaxIt() {
 
     // Create variables.
-    var $fwindow = $(window);
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     // Adds on window scroll event.
-    $fwindow.on('scroll resize', function() {
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    });
+    //$(window).on('scroll resize', function() {
+      //scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //});
 
     // For each of background parallax elements.
     $('.paragraph--type--xeno-hero .paragraph--type--xeno-hero__image').each(function(){
@@ -24,7 +22,7 @@
 
       $backgroundObj.css('background-image', 'url(' + $backgroundObj.find('img').attr('src') + ')');
 
-      $fwindow.on('scroll resize', function() {
+      $(window).on('scroll resize', function() {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
         var offset = $backgroundObj.parent().attr('data-offset');
@@ -45,7 +43,7 @@
     });
 
     // Triggers the window scroll for refresh.
-    $fwindow.trigger('scroll');
+    $(window).trigger('scroll');
   };
 
   parallaxIt();
