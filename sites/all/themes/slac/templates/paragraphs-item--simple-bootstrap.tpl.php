@@ -38,7 +38,7 @@ $paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_botto
 
 <div class="<?php print $classes; ?>">
 <div class="<?php print $paragraphclass; ?>">
-    <div class="col-md">
+    <div class="col">
         <?php print render($content['field_text']); ?>
     </div>
 </div>

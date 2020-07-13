@@ -54,5 +54,5 @@ HTML comment.
 -->
 
     <?php foreach ($items as $delta => $item): ?>
-      <div><?php print render($item); ?></div>
+      <div class="col-md"><?php print render($item); ?></div>
     <?php endforeach; ?>
