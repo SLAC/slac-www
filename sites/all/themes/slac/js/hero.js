@@ -7,7 +7,6 @@
 
     // Create variables.
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    alert('in parallax');
 
     // Adds on window scroll event.
     $(window).live('scroll resize', function() {
@@ -16,7 +15,6 @@
 
     // For each of background parallax elements.
     $('.paragraph--type--xeno-hero .paragraph--type--xeno-hero__image').each(function(){
-      alert('in each');
       var $backgroundObj = $(this);
       var yPos;
       var coords;
@@ -25,7 +23,6 @@
       $backgroundObj.css('background-image', 'url(' + $backgroundObj.find('img').attr('src') + ')');
 
       $(window).live('scroll resize', function() {
-        alert('somewhere');
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
         var offset = $backgroundObj.parent().attr('data-offset');
