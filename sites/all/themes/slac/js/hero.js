@@ -2,7 +2,6 @@
 
   "use strict";
 
-  alert('Senem');
 
   // Makes the parallax function.
   function parallaxIt() {
