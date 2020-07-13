@@ -2,6 +2,8 @@
 
 .header-section {
   background: $red;
+  float: left;
+  width: 100%;
 }
 
 .left-menu-trigger {
@@ -174,9 +176,9 @@ form#search-block-search-form:hover #slac-search-options {
 }
 
 .header-link {
-    float: right;
-    margin: 20px 28px 0 0;
-    color: #fff;
+  float: right;
+  margin: 20px 28px 0 0;
+  color: #fff;
 }
 
 .page-basic .sidebar-menu {
@@ -190,6 +192,14 @@ form#search-block-search-form:hover #slac-search-options {
       width: 30%;
       display: block;
     }
+  }
+}
+
+.main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
+  @media only screen and (min-width: 700px) {
+    margin-right: 22px;
+    width: auto;
+    background: none;
   }
 }
 

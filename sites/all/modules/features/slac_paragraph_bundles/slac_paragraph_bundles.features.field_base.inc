@@ -274,7 +274,7 @@ function slac_paragraph_bundles_field_default_field_bases() {
   // Exported field_base: 'field_column_contentp'.
   $field_bases['field_column_contentp'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => 6,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_column_contentp',

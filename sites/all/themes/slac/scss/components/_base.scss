@@ -23,3 +23,8 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   font-size: .8em;
   font-weight: 900;
 }
+
+.panel-pane.pane-pane-messages {
+  width: 100%;
+  float: left;
+}

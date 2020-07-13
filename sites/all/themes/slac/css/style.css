@@ -8008,7 +8008,9 @@ label {
   margin: 0.5rem 0 0 0; }
 
 .header-section {
-  background: #8C191C; }
+  background: #8C191C;
+  float: left;
+  width: 100%; }
 
 .left-menu-trigger {
   position: absolute;
@@ -8154,6 +8156,12 @@ form#search-block-search-form:hover #slac-search-options {
       top: 0;
       width: 30%;
       display: block; } }
+
+@media only screen and (min-width: 700px) {
+  .main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
+    margin-right: 22px;
+    width: auto;
+    background: none; } }
 
 /*!
  * animate.css -https://daneden.github.io/animate.css/
@@ -10606,6 +10614,10 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   padding-left: .2rem;
   font-size: .8em;
   font-weight: 900; }
+
+.panel-pane.pane-pane-messages {
+  width: 100%;
+  float: left; }
 
 .paragraph--color.paragraph--color--dark-grey {
   background: #4D4F53; }

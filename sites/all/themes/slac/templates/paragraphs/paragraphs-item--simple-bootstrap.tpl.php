@@ -32,7 +32,7 @@ if (!empty($content['field_animation_setting'])) {
 }
 
 $classes = 'paragraph paragraph--type--simple-bootstrap paragraph--view-mode--default ' . $background . ' ' . $width;
-$paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_bottom . ' ' . $animation . ' ' . $animation_setting;
+$paragraphclass = 'paragraph__column  ' . $padding_top . ' ' . $padding_bottom . ' ' . $animation . ' ' . $animation_setting;
 
 ?>
 

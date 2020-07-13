@@ -21,7 +21,7 @@
       <?php print $content['menu']; ?>
     <?php endif ?>
   </div>
-  <div class="header-section">
+<!--   <div class="header-section">
     <div class="panel-panel header container">
       <div class="row">
         <div class="col-md-9">
@@ -36,33 +36,28 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="mainnav">
-    <div class="container">
-      <div clas="row">
-        <?php if ($content['mainnav']): ?>
-          <?php print $content['mainnav']; ?>
-        <?php endif ?>
-      </div>
+  <div class="mainnav container-fluid">
+    <div clas="row">
+      <?php if ($content['mainnav']): ?>
+        <?php print $content['mainnav']; ?>
+      <?php endif ?>
     </div>
   </div>
 
+  <?php if ($content['secondnav']): ?>
   <div class="panel-panel header-secondary-nav container-fluid">
     <div class="row">
-     <?php if ($content['secondnav']): ?>
-        <div class="inside"><?php print $content['secondnav']; ?></div>
-      <?php endif ?>
+        <?php print $content['secondnav']; ?>
     </div>
   </div>
+   <?php endif ?>
 
-  <div class="panel-panel content container">
-    <div class="row">
-     <?php if ($content['content']): ?>
-        <?php print $content['content']; ?>
-      <?php endif ?>
-      </div>
-  </div>
+   <?php if ($content['content']): ?>
+      <?php print $content['content']; ?>
+    <?php endif ?>
+
   <div class="footer">
     <div class="panel-panel footer container">
       <div class="row">
@@ -71,4 +66,5 @@
       <?php endif ?>
     </div>
   </div>
+</div>
 </div>
