@@ -59,6 +59,23 @@
   }
 }
 
+.mainnav {
+  float: left;
+  width: 100%;
+}
+
+#slac-search-options {
+    display: none;
+    opacity: 0;
+    transition:opacity 0.8s
+}
+
+form#search-block-search-form:hover #slac-search-options {
+    display: block;
+    opacity:100%;
+    transition:opacity 0.5s
+}
+
 #slac-search-options > .form-item {
   width: auto;
   max-width: 200px;
@@ -86,7 +103,6 @@
 }
 
 #mobile-search-box {
-  float: right;
   position: relative;
   margin-top: 11px;
 }
@@ -95,6 +111,18 @@
   width: 130px;
   font-size: .7em;
   color: #666;
+}
+
+#slac-search {
+  float: left;
+}
+
+#edit-search-options {
+  display: flex;
+
+  > div {
+    padding-left: 10px;
+  }
 }
 
 #slac-search .form-item {
@@ -112,15 +140,15 @@
   }
 }
 
-.pane-nice-menus-1.main-menu {
-  float: left;
-  width: 100%;
-}
+// .pane-nice-menus-1.main-menu {
+//   float: left;
+//   width: 100%;
+// }
 
-.panel-pane.pane-pane-messages {
-  width: 100%;
-  float: left;
-}
+// .panel-pane.pane-pane-messages {
+//   width: 100%;
+//   float: left;
+// }
 
 .main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
   background: url(../img/menu-del.png) no-repeat left center;

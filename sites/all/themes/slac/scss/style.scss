@@ -9,10 +9,12 @@
 // Include custom sub theme.
 @import 'custom/variables';
 @import 'components/header';
+@import 'components/animate';
 @import 'components/base';
 @import 'components/colors';
 @import 'components/footer';
 @import 'components/paragraphs';
+@import 'components/paragraph-padding';
 
 // Include custom sub theme.
 //@import 'custom/mixins/misc';

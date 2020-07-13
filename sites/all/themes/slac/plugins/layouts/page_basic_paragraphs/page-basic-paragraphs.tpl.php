@@ -41,11 +41,9 @@
   <div class="mainnav">
     <div class="container">
       <div clas="row">
-        <div class="col-md-12">
-          <?php if ($content['mainnav']): ?>
-            <?php print $content['mainnav']; ?>
-          <?php endif ?>
-        </div>
+        <?php if ($content['mainnav']): ?>
+          <?php print $content['mainnav']; ?>
+        <?php endif ?>
       </div>
     </div>
   </div>
