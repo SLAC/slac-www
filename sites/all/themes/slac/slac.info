@@ -22,3 +22,6 @@ regions[footer_right] = 'Footer Right'
 stylesheets[all][] = css/style.css
 
 scripts[] = js/hero.js
+
+plugins[panels][styles] = plugins/styles
+plugins[panels][layouts] = plugins/layouts
