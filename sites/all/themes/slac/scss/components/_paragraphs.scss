@@ -1,0 +1,157 @@
+/* Paragraph Columns */
+.paragraph--type--bp-columns .paragraph__column {
+
+  .paragraph--type--bp-columns__2col,
+  .paragraph--type--bp-columns__3col,
+  .paragraph--type--bp-columns__4col,
+  .paragraph--type--bp-columns__5col,
+  .paragraph--type--bp-columns__6col {
+
+    @media(max-width: 991px) {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.paragraph.paragraph--type--bp-column-wrapper>.paragraph__column {
+  padding: 0;
+}
+
+@media (min-width: 769px) {
+  .mobile-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 769px) {
+  .paragraph--style--75-25 {
+    .col-md {
+      @include make-col(9)
+    }
+    .col-md:nth-child(2n+0) {
+      @include make-col(3);
+    }
+  }
+
+  .paragraph--style--66-33 {
+    .col-md {
+      @include make-col(8)
+    }
+    .col-md:nth-child(2n+0) {
+      @include make-col(4);
+    }
+  }
+
+  .paragraph--style--25-75 {
+    .col-md {
+      @include make-col(3)
+    }
+    .col-md:nth-child(2n+0) {
+      @include make-col(9);
+    }
+  }
+
+  .paragraph--style--33-66 {
+    .col-md {
+      @include make-col(4)
+    }
+    .col-md:nth-child(2n+0) {
+      @include make-col(8);
+    }
+  }
+
+  .paragraph--style--25-50-25 {
+    .col-md {
+      @include make-col(3)
+    }
+    .col-md:nth-of-type(2) {
+      @include make-col(6);
+    }
+    .col-md:nth-of-type(5) {
+      @include make-col(6);
+    }
+  }
+
+  .paragraph--style--50-25-25 {
+    .col-md {
+      @include make-col(3)
+    }
+    .col-md:nth-of-type(4) {
+      @include make-col(6);
+    }
+    .col-md:nth-of-type(1) {
+      @include make-col(6);
+    }
+  }
+
+  .paragraph--style--25-25-50 {
+    .col-md {
+      @include make-col(3)
+    }
+    .col-md:nth-of-type(3) {
+      @include make-col(6);
+    }
+    .col-md:nth-of-type(3) {
+      @include make-col(6);
+    }
+  }
+
+  .paragraph--style--16-66-16 {
+    .col-md {
+      @include make-col(2)
+    }
+    .col-md:nth-of-type(2) {
+      @include make-col(8);
+    }
+    .col-md:nth-of-type(5) {
+      @include make-col(8);
+    }
+  }
+
+  .paragraph--style--66-16-16 {
+    .col-md {
+      @include make-col(2)
+    }
+    .col-md:nth-of-type(1) {
+      @include make-col(8);
+    }
+    .col-md:nth-of-type(4) {
+      @include make-col(8);
+    }
+  }
+
+  .paragraph--style--16-16-66 {
+    .col-md {
+      @include make-col(2)
+    }
+    .col-md:nth-of-type(3) {
+      @include make-col(8);
+    }
+    .col-md:nth-of-type(6) {
+      @include make-col(8);
+    }
+  }
+}
+
+.columns-center {
+  align-items: center;
+}
+
+.columns-end {
+  align-items: flex-end;
+}
+
+.columns-start {
+  align-items: flex-start;
+}
+
+.paragraph--width--wide>.paragraph__column {
+  @media (min-width: 768px) {
+    width: 83.33333333%;
+    margin-left: 8.33333333%;
+  }
+}

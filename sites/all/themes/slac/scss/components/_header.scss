@@ -1,12 +1,7 @@
 // Define header styles.
-.page-basic .header {
-  background: $red;
-}
 
-@media (max-width: 700px) {
-  .left-menu-trigger {
-      display: block;
-  }
+.header-section {
+  background: $red;
 }
 
 .left-menu-trigger {
@@ -77,12 +72,43 @@
   box-shadow: 1px 1px 3px #555;
   float: none;
 }
+
+#slac-search-button input {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: url(../img/search-button.png) no-repeat center;
+  text-indent: -100px;
+  cursor: pointer;
+}
+
+#mobile-search-box {
+  float: right;
+  position: relative;
+  margin-top: 11px;
+}
+
+#slac-search .form-item input {
+  width: 130px;
+  font-size: .7em;
+  color: #666;
+}
+
+#slac-search .form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .page-basic .pane-pane-header {
     background: #8c1515;
     overflow: hidden;
+    height: 80px;
 
   @media only screen and (min-width: 700px) {
-    background: #8c1515 url(https://www6.slac.stanford.edu/sites/www6.slac.stanford.edu/files/header-connectors_clean.png) no-repeat 230px 0;
+    background: #8c1515 url(../img/header-connectors_clean.png) no-repeat 230px 0;
   }
 }
 
@@ -97,7 +123,7 @@
 }
 
 .main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
-  background: url(../images/menu-del.png) no-repeat left center;
+  background: url(../img/menu-del.png) no-repeat left center;
   width: 16.66%;
   height: 31px;
   border: none;
@@ -106,6 +132,36 @@
     margin-right: 22px;
     width: auto;
     background: none;
+  }
+}
+
+.page-basic .header img {
+  display: block;
+  float: left;
+  margin-top: 24px;
+}
+
+.header-link {
+    margin: 12px 28px 0 0;
+}
+
+.header-link {
+    float: right;
+    margin: 20px 28px 0 0;
+    color: #fff;
+}
+
+.page-basic .sidebar-menu {
+  display: none;
+
+  @media (max-width: 700px) {
+    .page-basic .sidebar-menu {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30%;
+      display: block;
+    }
   }
 }
 
