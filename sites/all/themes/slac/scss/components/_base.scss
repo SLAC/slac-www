@@ -85,17 +85,28 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
 }
 
 .page-basic .panels-flexible-region-first {
+  @include make-col-ready;
   @include make-col(12);
   @include media-breakpoint-up(md) {
-    @include make-col(9);
+    @include make-col(8);
   }
 }
 
 .panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
+  @include make-col-ready;
   @include make-col(12);
   @include media-breakpoint-up(md) {
-    @include make-col(3);
+    @include make-col(4);
   }
+}
+
+.panel-flexible-inside.panels-flexible-138-inside {
+  @include make-row;
+}
+
+#mini-panel-clone_of_footer_2018 {
+  @include make-container();
+  max-width: 1200px;
 }
 
 /**

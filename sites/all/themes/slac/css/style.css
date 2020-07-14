@@ -10655,20 +10655,42 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   max-width: 100%; }
 
 .page-basic .panels-flexible-region-first {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
   flex: 0 0 100%;
   max-width: 100%; }
   @media (min-width: 768px) {
     .page-basic .panels-flexible-region-first {
-      flex: 0 0 75%;
-      max-width: 75%; } }
+      flex: 0 0 66.6666666667%;
+      max-width: 66.6666666667%; } }
 
 .panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
   flex: 0 0 100%;
   max-width: 100%; }
   @media (min-width: 768px) {
     .panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
-      flex: 0 0 25%;
-      max-width: 25%; } }
+      flex: 0 0 33.3333333333%;
+      max-width: 33.3333333333%; } }
+
+.panel-flexible-inside.panels-flexible-138-inside {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+#mini-panel-clone_of_footer_2018 {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px; }
 
 /**
  * Nesting Paragraphs.

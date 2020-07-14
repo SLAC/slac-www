@@ -22,7 +22,7 @@
     <?php endif ?>
   </div>
   <div class="header-section">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-9">
          <?php if ($content['header']): ?>
@@ -52,11 +52,9 @@
     <?php endif ?>
 
   <div class="footer">
-    <div class="panel-panel footer container">
-      <div class="row">
-       <?php if ($content['footer']): ?>
-        <?php print $content['footer']; ?>
-      <?php endif ?>
-    </div>
+  <div class="panel-panel footer">
+     <?php if ($content['footer']): ?>
+      <?php print $content['footer']; ?>
+    <?php endif ?>
   </div>
 </div>
