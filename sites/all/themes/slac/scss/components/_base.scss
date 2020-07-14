@@ -2,18 +2,15 @@ body {
   font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
 .page-basic .inside {
   max-width: 1200px;
   margin: 0 auto 20px;
-}
-
-.page-basic .panels-flexible-region-first {
-  width: 70%;
-  max-width: none;
-}
-
-.page-basic .panels-flexible-region-last {
-    width: 28%;
 }
 
 a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:after, a[href^="https://www-internal"]:active:after, a[href^="https://www-internal"]:visited:after, a[href^="https://intranet"]:after, a[href^="https://intranet"]:hover:after, a[href^="https://intranet"]:visited:after, a[href^="https://intranet"]:active:after, a.lock:after, a.lock:hover:after, a.lock:visited:after, a.lock:active:after, a[href^="https://internal"]:after, a[href^="https://internal"]:hover:after, a[href^="https://internal"]:visited:after, a[href^="https://internal"]:active:after {
@@ -27,4 +24,100 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
 .panel-pane.pane-pane-messages {
   width: 100%;
   float: left;
+}
+
+.paragraph {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    table-layout: fixed;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  display: table;
+  margin-left: 0;
+  margin-right: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.paragraph > .paragraph__column {
+  @include make-col(12);
+  padding-bottom: 30px;
+}
+
+/**
+ * Widths.
+ *
+ * Here we style the widths for each paragraph.
+ */
+/* Adds Width Element -- Tiny. */
+.paragraph.paragraph--width--tiny > .paragraph__column {
+  @include make-col(4);
+  @include make-col-offset(4);
+}
+
+/* Adds Width Element -- Narrow. */
+.paragraph.paragraph--width--narrow > .paragraph__column {
+  @include make-col(6);
+  @include make-col-offset(3);
+}
+
+/* Adds Width Element -- Medium. */
+.paragraph.paragraph--width--medium > .paragraph__column {
+  @include make-col(8);
+  @include make-col-offset(2);
+}
+
+/* Adds Width Element -- Wide. */
+.paragraph.paragraph--width--wide > .paragraph__column {
+  @include make-col(10);
+  @include make-col-offset(1);
+}
+
+/* Adds Width Element -- Full. */
+.paragraph.paragraph--width--full > .paragraph__column {
+   @include make-col(12);
+}
+
+.page-basic .panels-flexible-region-first {
+  @include make-col(12);
+  @include media-breakpoint-up(md) {
+    @include make-col(9);
+  }
+}
+
+.panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
+  @include make-col(12);
+  @include media-breakpoint-up(md) {
+    @include make-col(3);
+  }
+}
+
+/**
+ * Nesting Paragraphs.
+ *
+ * Here are some helpers for temove margin/padding when nesting bundles.
+ */
+/* Resets Base Paragraph Styling for Nested Paragraphs. */
+.paragraph .paragraph,
+.paragraph .paragraph .paragraph {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.paragraph > .paragraph__column .paragraph > .paragraph__column,
+.paragraph
+  > .paragraph__column .paragraph
+  > .paragraph__column .paragraph
+  > .paragraph__column {
+  float: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
 }

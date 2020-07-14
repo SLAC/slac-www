@@ -10583,16 +10583,13 @@ label {
 body {
   font-family: "Source Sans Pro", Arial, sans-serif; }
 
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1200px; } }
+
 .page-basic .inside {
   max-width: 1200px;
   margin: 0 auto 20px; }
-
-.page-basic .panels-flexible-region-first {
-  width: 70%;
-  max-width: none; }
-
-.page-basic .panels-flexible-region-last {
-  width: 28%; }
 
 a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:after, a[href^="https://www-internal"]:active:after, a[href^="https://www-internal"]:visited:after, a[href^="https://intranet"]:after, a[href^="https://intranet"]:hover:after, a[href^="https://intranet"]:visited:after, a[href^="https://intranet"]:active:after, a.lock:after, a.lock:hover:after, a.lock:visited:after, a.lock:active:after, a[href^="https://internal"]:after, a[href^="https://internal"]:hover:after, a[href^="https://internal"]:visited:after, a[href^="https://internal"]:active:after {
   font-family: "Font Awesome 5 Free";
@@ -10604,6 +10601,96 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
 .panel-pane.pane-pane-messages {
   width: 100%;
   float: left; }
+
+.paragraph {
+  display: table;
+  margin-left: 0;
+  margin-right: 0;
+  table-layout: fixed;
+  width: 100%; }
+  .paragraph:before, .paragraph:after {
+    content: " ";
+    display: table;
+    table-layout: fixed; }
+  .paragraph:after {
+    clear: both; }
+
+.paragraph > .paragraph__column {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-bottom: 30px; }
+
+/**
+ * Widths.
+ *
+ * Here we style the widths for each paragraph.
+ */
+/* Adds Width Element -- Tiny. */
+.paragraph.paragraph--width--tiny > .paragraph__column {
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+  margin-left: 33.3333333333%; }
+
+/* Adds Width Element -- Narrow. */
+.paragraph.paragraph--width--narrow > .paragraph__column {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-left: 25%; }
+
+/* Adds Width Element -- Medium. */
+.paragraph.paragraph--width--medium > .paragraph__column {
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+  margin-left: 16.6666666667%; }
+
+/* Adds Width Element -- Wide. */
+.paragraph.paragraph--width--wide > .paragraph__column {
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+  margin-left: 8.3333333333%; }
+
+/* Adds Width Element -- Full. */
+.paragraph.paragraph--width--full > .paragraph__column {
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+.page-basic .panels-flexible-region-first {
+  flex: 0 0 100%;
+  max-width: 100%; }
+  @media (min-width: 768px) {
+    .page-basic .panels-flexible-region-first {
+      flex: 0 0 75%;
+      max-width: 75%; } }
+
+.panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
+  flex: 0 0 100%;
+  max-width: 100%; }
+  @media (min-width: 768px) {
+    .panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
+      flex: 0 0 25%;
+      max-width: 25%; } }
+
+/**
+ * Nesting Paragraphs.
+ *
+ * Here are some helpers for temove margin/padding when nesting bundles.
+ */
+/* Resets Base Paragraph Styling for Nested Paragraphs. */
+.paragraph .paragraph,
+.paragraph .paragraph .paragraph {
+  margin-left: 0;
+  margin-right: 0; }
+
+.paragraph > .paragraph__column .paragraph > .paragraph__column,
+.paragraph
+> .paragraph__column .paragraph
+> .paragraph__column .paragraph
+> .paragraph__column {
+  float: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto; }
 
 .paragraph--color.paragraph--color--dark-grey {
   background: #4D4F53; }
@@ -10716,6 +10803,10 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   width: 100%;
   border-bottom: 1px solid #aeaeae;
   padding-bottom: 6px; }
+
+#social-channels img {
+  max-width: 15px;
+  height: auto; }
 
 ul.nice-menu li {
   border: none;
