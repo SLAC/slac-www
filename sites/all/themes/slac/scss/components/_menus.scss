@@ -1,0 +1,22 @@
+ul.nice-menu li {
+  border: none;
+  border-top: 0;
+  float: left;
+  background-color: transparent;
+  font-size: 15px;
+  text-transform: uppercase;
+
+  a {
+    color: #fff;
+  }
+
+  &.menuparent {
+    background: #8c1515 url(../img/arrow-down.png) right center no-repeat;
+  }
+
+  &.depth-1 {
+    margin-right: 22px;
+    width: auto;
+    background: none;
+  }
+}

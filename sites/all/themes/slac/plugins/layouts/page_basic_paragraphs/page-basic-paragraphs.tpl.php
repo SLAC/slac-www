@@ -22,6 +22,7 @@
     <?php endif ?>
   </div>
   <div class="header-section">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-9">
          <?php if ($content['header']): ?>
@@ -33,25 +34,18 @@
            <?php print $content['search']; ?>
           <?php endif ?>
         </div>
+        <div class="col-md-12">
+          <?php if ($content['mainnav']): ?>
+            <?php print $content['mainnav']; ?>
+          <?php endif ?></div>
+        <?php if ($content['secondnav']): ?>
+          <div class="col-md-12">
+            <?php print $content['secondnav']; ?>
+          </div>
+        <?php endif ?>
       </div>
     </div>
   </div>
-
-  <div class="mainnav container-fluid">
-    <div clas="row">
-      <?php if ($content['mainnav']): ?>
-        <?php print $content['mainnav']; ?>
-      <?php endif ?>
-    </div>
-  </div>
-
-  <?php if ($content['secondnav']): ?>
-  <div class="panel-panel header-secondary-nav container-fluid">
-    <div class="row">
-        <?php print $content['secondnav']; ?>
-    </div>
-  </div>
-   <?php endif ?>
 
    <?php if ($content['content']): ?>
       <?php print $content['content']; ?>
@@ -65,5 +59,4 @@
       <?php endif ?>
     </div>
   </div>
-</div>
 </div>
