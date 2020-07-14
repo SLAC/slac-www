@@ -21,8 +21,7 @@
       <?php print $content['menu']; ?>
     <?php endif ?>
   </div>
-<!--   <div class="header-section">
-    <div class="panel-panel header container">
+  <div class="header-section">
       <div class="row">
         <div class="col-md-9">
          <?php if ($content['header']): ?>
@@ -36,7 +35,7 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <div class="mainnav container-fluid">
     <div clas="row">
