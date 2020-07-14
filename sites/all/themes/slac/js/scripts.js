@@ -14,7 +14,7 @@
         new WOW().init();
       }
     });
-	 
+
 	Drupal.behaviors.search = {
 		attach: function (context, settings) {
 			$('#searchForm').submit(function(e) {
@@ -46,9 +46,9 @@
 	Drupal.behaviors.responsiveMenuAndSearch = {
 		attach: function (context, settings) {
 			var mobileSearchTrigger = $('.mobile-search-trigger');
-	  
+
 			if( mobileSearchTrigger.length == 0 ){
-				$('<div class="mobile-search-trigger"><span></span></div>').insertBefore('.pane-search-block .pane-content');
+				$('<div class="mobile-search-trigger"><span></span></div>').insertBefore('#search-box');
 				mobileSearchTrigger = $('.mobile-search-trigger');
 			}
 
@@ -95,7 +95,7 @@
 
 	Drupal.behaviors.slacSearch = {
 		attach: function(context) {
-			$('.pane-search-block .pane-content').each(function(){
+			$('#search-box').each(function(){
 				$this= $(this);
 				$this.find("#slac-search-options").hide();
 				$this.hover(function(){

@@ -23,4 +23,13 @@
   return $output;
 
   }
+
+  function slac_preprocess_pane_header(&$vars) {
+  $search_form = drupal_get_form('search_block_search_form');
+  $vars['search_box'] = (isset($search_form) ? drupal_render($search_form) : '');
+  $employee_portal_url = variable_get('employee_portal_url', '');
+  $vars['employee_portal_url'] = $employee_portal_url ? l(t('Employee Portal'), $employee_portal_url, array('external' => TRUE)) : '';
+  $research_resources_url = variable_get('research_resources_url', '');
+  $vars['research_resources_url'] = $research_resources_url ? l(t('Research Resources'), $research_resources_url) : '';
+}
 ?>

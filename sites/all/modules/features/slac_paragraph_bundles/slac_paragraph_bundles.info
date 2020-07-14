@@ -73,6 +73,7 @@ features[field_instance][] = paragraphs_item-columns-field_column_contentp
 features[field_instance][] = paragraphs_item-columns-field_column_style
 features[field_instance][] = paragraphs_item-columns-field_padding_bottom
 features[field_instance][] = paragraphs_item-columns-field_padding_top
+features[field_instance][] = paragraphs_item-columns-field_paragraph_width
 features[field_instance][] = paragraphs_item-columns-field_reverse_order_on_mobile
 features[field_instance][] = paragraphs_item-hero-field_background_image
 features[field_instance][] = paragraphs_item-hero-field_invert

@@ -1193,6 +1193,43 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-columns-field_paragraph_width'.
+  $field_instances['paragraphs_item-columns-field_paragraph_width'] = array(
+    'bundle' => 'columns',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 10,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_width',
+    'label' => 'Paragraph Width',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 47,
+    ),
+  );
+
   // Exported field_instance:
   // 'paragraphs_item-columns-field_reverse_order_on_mobile'.
   $field_instances['paragraphs_item-columns-field_reverse_order_on_mobile'] = array(
