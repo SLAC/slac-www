@@ -10830,6 +10830,9 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   max-width: 15px;
   height: auto; }
 
+.panel-flexible .panel-separator {
+  margin: 0 0 1em 0; }
+
 ul.nice-menu li {
   border: none;
   border-top: 0;
