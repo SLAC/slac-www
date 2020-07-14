@@ -15,3 +15,4 @@ features[variable][] = panels_everywhere_provide_sample
 features[variable][] = panels_everywhere_site_template_enabled
 features[variable][] = panels_everywhere_site_template_enabled_admin
 features[variable][] = panels_everywhere_site_template_per_theme
+project path = sites/all/modules/features

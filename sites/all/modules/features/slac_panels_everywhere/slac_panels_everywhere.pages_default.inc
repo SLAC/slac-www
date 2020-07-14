@@ -28,6 +28,21 @@ function slac_panels_everywhere_default_page_manager_handlers() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'paragraph_layout_page' => 'paragraph_layout_page',
+            ),
+          ),
+          'context' => 'node',
+          'not' => TRUE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'page_basic';
