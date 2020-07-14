@@ -48,7 +48,7 @@
 			var mobileSearchTrigger = $('.mobile-search-trigger');
 	  
 			if( mobileSearchTrigger.length == 0 ){
-				$('<div class="mobile-search-trigger"><span></span></div>').insertBefore('.pane-pane-header #search-box');
+				$('<div class="mobile-search-trigger"><span></span></div>').insertBefore('.pane-search-block .pane-content');
 				mobileSearchTrigger = $('.mobile-search-trigger');
 			}
 
@@ -95,8 +95,9 @@
 
 	Drupal.behaviors.slacSearch = {
 		attach: function(context) {
-			$('#search-box').each(function(){
+			$('.pane-search-block .pane-content').each(function(){
 				$this= $(this);
+				$this.find("#slac-search-options").hide();
 				$this.hover(function(){
 					$this.find("#slac-search-options").fadeIn("slow");
 				},

@@ -285,8 +285,8 @@ function slac_virtual_default_page_manager_handlers() {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'mobile-search-box',
-    'css_class' => 'mobile-search-box',
+    'css_id' => '',
+    'css_class' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
