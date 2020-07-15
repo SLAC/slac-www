@@ -18,7 +18,8 @@
  */
  ?>
 <div id="header">
-  <div class="section clearfix">
+  <div class="section clearfix row">
+    <div class="col-md-9">
     <div id="logo-title">
 
       <?php if (!empty($logo)): ?>
@@ -45,18 +46,20 @@
         <?php endif; ?>
       </div> <!-- /name-and-slogan -->
     </div> <!-- /logo-title -->
-
+    <div class="header-link">
+      <?php if ($employee_portal_url && $research_resources_url): ?>
+        <?php print $employee_portal_url . ' | ' . $research_resources_url; ?>
+      <?php elseif ($employee_portal_url): ?>
+        <?php print $employee_portal_url; ?>
+      <?php elseif ($research_resources_url): ?>
+        <?php print $research_resources_url; ?>
+      <?php endif; ?>
+    </div>
+  </div>
+    <div class="col-md-3">
     <?php if (!empty($search_box)): ?>
       <div id="search-box"><?php print $search_box; ?></div>
     <?php endif; ?>
-      <div class="header-link">
-        <?php if ($employee_portal_url && $research_resources_url): ?>
-          <?php print $employee_portal_url . ' | ' . $research_resources_url; ?>
-        <?php elseif ($employee_portal_url): ?>
-          <?php print $employee_portal_url; ?>
-        <?php elseif ($research_resources_url): ?>
-          <?php print $research_resources_url; ?>
-        <?php endif; ?>
-      </div>
+  </div>
   </div> <!-- /section -->
 </div> <!-- /header -->

@@ -20,3 +20,24 @@ ul.nice-menu li {
     background: none;
   }
 }
+
+.mobile-search-trigger span {
+  @media (max-width: 500px) {
+    background: url(../img/mobile-search.png) no-repeat top right;
+    width: 52px;
+    height: 42px;
+    display: block;
+  }
+}
+
+ul.nice-menu-down li.menuparent:hover {
+  background: #8c1515 url(../img/arrow-down.png) right center no-repeat;
+}
+
+ul.nice-menu ul,ul.nice-menu li.menuparent ul {
+  background: #8c1515;
+}
+
+ul#nice-menu-1 > li {
+    margin-right: 22px;
+}

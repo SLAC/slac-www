@@ -21,101 +21,23 @@
   }
 }
 
-.header-link a {
-  color: #fff;
-  font-size: 11px;
-  margin-left: 10px;
-}
-
-.header-link a:first-child {
-    margin-right: 10px;
-}
-
-#search-box {
+.header-link {
   float: right;
-  position: relative;
-  margin-top: 11px;
+  margin: 20px 28px 0 0;
+  color: #fff;
 
-  .form-item {
-    margin: 0;
-    outline: none;
-    padding: 1px 0 1px 10px;
-    height: 22px;
-    width: 160px;
-    background: #fff;
-  }
+  a {
+    color: #fff;
+    font-size: 11px;
+    margin-left: 10px;
 
-  .form-text {
-    width: 130px;
-    font-size: .7em;
-    color: #666;
-  }
-
-  input {
-    width: 22px;
-    height: 22px;
-    line-height: 22px;
-    padding: 0;
-    margin: 0;
-    border: none;
+    &:first-child {
+      margin-right: 10px;
+    }
   }
 }
 
-#slac-search-options > .form-item {
-  width: auto;
-  max-width: 200px;
-  background-color: #EFEFEF;
-  color: #990000;
-  font-size: 11px;
-  z-index: 120;
-  -moz-box-shadow: 1px 1px 3px #555;
-  -webkit-box-shadow: 1px 1px 3px #555;
-  -ms-box-shadow: 1px 1px 3px #555;
-  box-shadow: 1px 1px 3px #555;
-  float: none;
-}
-
-#slac-search-button input {
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: url(../img/search-button.png) no-repeat center;
-  text-indent: -100px;
-  cursor: pointer;
-}
-
-#mobile-search-box {
-  position: relative;
-  margin-top: 11px;
-}
-
-#slac-search .form-item input {
-  width: 130px;
-  font-size: .7em;
-  color: #666;
-}
-
-#slac-search {
-  float: left;
-}
-
-#edit-search-options {
-  display: flex;
-
-  > div {
-    padding-left: 10px;
-  }
-}
-
-#slac-search .form-item {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.page-basic .pane-pane-header {
+.page-basic .pane-pane-header .col-md-9 {
     background: #8c1515;
     overflow: hidden;
     height: 80px;
@@ -124,16 +46,6 @@
     background: #8c1515 url(../img/header-connectors_clean.png) no-repeat 230px 0;
   }
 }
-
-// .pane-nice-menus-1.main-menu {
-//   float: left;
-//   width: 100%;
-// }
-
-// .panel-pane.pane-pane-messages {
-//   width: 100%;
-//   float: left;
-// }
 
 .main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
   background: url(../img/menu-del.png) no-repeat left center;
@@ -148,20 +60,15 @@
   }
 }
 
-.page-basic .header img {
-  display: block;
-  float: left;
+div#logo-title img {
   margin-top: 24px;
-}
-
-.header-link {
-    margin: 12px 28px 0 0;
 }
 
 .header-link {
   float: right;
   margin: 20px 28px 0 0;
   color: #fff;
+  margin-top: -50px;
 }
 
 .page-basic .sidebar-menu {

@@ -1,0 +1,111 @@
+// Define search styles.
+
+#search-box {
+  float: right;
+  position: relative;
+  margin-top: 11px;
+
+  .form-item {
+    margin: 0;
+    outline: none;
+    padding: 1px 0 1px 10px;
+    height: 22px;
+    width: 160px;
+    background: #fff;
+  }
+
+  .form-text {
+    width: 100%;
+    font-size: .7em;
+    color: #666;
+  }
+
+  input {
+    width: 22px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: .7em;
+  }
+}
+
+#slac-search-button {
+  float: left;
+  margin-top: -3px;
+}
+
+#slac-search-button input {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: url(../img/search-button.png) no-repeat center;
+  text-indent: -100px;
+  cursor: pointer;
+}
+
+#slac-search {
+  float: left;
+}
+
+#edit-search-options {
+  display: flex;
+
+  > div {
+    padding-left: 10px;
+  }
+}
+
+#slac-search .form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mobile-search-trigger {
+  display: none;
+
+  @media (max-width: 500px) {
+    margin: 0;
+    width: 52px;
+    height: 42px;
+    margin: 9px 0;
+    overflow: hidden;
+    float: right;
+    margin: 0;
+    background: url(../images/header-bg.jpg) repeat-x top;
+    cursor: pointer;
+    display: block;
+  }
+}
+
+#slac-search-options > .form-item {
+  width: auto;
+  max-width: 200px;
+  background-color: #EFEFEF;
+  color: #990000;
+  font-size: 11px;
+  z-index: 120;
+  -moz-box-shadow: 1px 1px 3px #555;
+  -webkit-box-shadow: 1px 1px 3px #555;
+  -ms-box-shadow: 1px 1px 3px #555;
+  box-shadow: 1px 1px 3px #555;
+  float: none;
+}
+
+#slac-search-options .form-item .form-type-radio {
+  float: left;
+  width: auto;
+  width: 40%;
+  height: 14px;
+  margin: 4px 0 4px 10px;
+}
+
+//not sure about this
+
+div#mobile-search-box {
+  display: none;
+}

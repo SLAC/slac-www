@@ -13,12 +13,13 @@ body {
   margin: 0 auto 20px;
 }
 
+.page-basic .header img {
+  margin-top: 24px;
+}
+
 a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:after, a[href^="https://www-internal"]:active:after, a[href^="https://www-internal"]:visited:after, a[href^="https://intranet"]:after, a[href^="https://intranet"]:hover:after, a[href^="https://intranet"]:visited:after, a[href^="https://intranet"]:active:after, a.lock:after, a.lock:hover:after, a.lock:visited:after, a.lock:active:after, a[href^="https://internal"]:after, a[href^="https://internal"]:hover:after, a[href^="https://internal"]:visited:after, a[href^="https://internal"]:active:after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f023";
+  content: url(../img/lock.svg);
   padding-left: .2rem;
-  font-size: .8em;
-  font-weight: 900;
 }
 
 .panel-pane.pane-pane-messages {

@@ -16,47 +16,6 @@
   }
 }
 
-#block-menu-menu-social-links ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  justify-content: center;
-
-  li.leaf {
-    list-style: none;
-  }
-
-  li {
-    a {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      text-indent: -9999px;
-      background-repeat: no-repeat;
-
-      &.facebook {
-        background-image: url(../img/fb.svg);
-      }
-
-      &.instagram {
-        background-image: url(../img/instagram.svg);
-      }
-
-      &.twitter {
-        background-image: url(../img/twitter.svg);
-      }
-
-      &.linkedin {
-        background-image: url(../img/linkedin.svg);
-      }
-
-      &.youtube {
-        background-image: url(../img/youtube.svg);
-      }
-    }
-  }
-}
-
 /* line 149, ../sass/pages.scss */
 .page-basic .footer a:hover {
   text-decoration: underline;
