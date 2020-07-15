@@ -167,3 +167,4 @@ features[user_permission][] = view paragraph content simple
 features[user_permission][] = view paragraph content simple_bootstrap
 features[user_permission][] = view paragraph content video
 features[user_permission][] = view paragraph content view
+project path = sites/all/modules/features

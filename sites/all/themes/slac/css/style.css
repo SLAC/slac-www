@@ -10645,6 +10645,10 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   padding-right: 0;
   width: auto; }
 
+.card img {
+  width: 100%;
+  height: auto; }
+
 .paragraph--color.paragraph--color--dark-grey {
   background: #4D4F53; }
 
@@ -10766,7 +10770,7 @@ ul.nice-menu li {
 ul.nice-menu-down li.menuparent:hover {
   background: #8c1515 url(../img/arrow-down.png) right center no-repeat; }
 
-ul.nice-menu ul, ul.nice-menu li.menuparent ul {
+ul.nice-menu ul, ul.nice-menu li.menuparent ul, ul.nice-menu-down li li.menuparent {
   background: #8c1515; }
 
 ul#nice-menu-1 > li {

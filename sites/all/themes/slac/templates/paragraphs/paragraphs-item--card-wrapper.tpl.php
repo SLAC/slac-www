@@ -36,7 +36,7 @@ if (!empty($content['field_card_layout'])) {
 }
 
 $classes = 'paragraph paragraph--type--card-wrapper paragraph--view-mode--default ' . $background . ' ' . $width;
-$paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_bottom . ' ' . $animation . ' ' . $animation_setting . ' ' . $card_layout;
+$paragraphclass = 'paragraph__column ' . $padding_top . ' ' . $padding_bottom . ' ' . $animation . ' ' . $animation_setting . ' ' . $card_layout;
 
 ?>
 
