@@ -9,7 +9,7 @@
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     // Adds on window scroll event.
-    $(window).live('scroll resize', function() {
+    $(window).scroll(function() {
       scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     });
 
@@ -21,12 +21,11 @@
       var speed = $backgroundObj.parent().attr('data-speed');
 
       $backgroundObj.css('background-image', 'url(' + $backgroundObj.find('img').attr('src') + ')');
-
-      $(window).live('scroll resize', function() {
+      $(window).scroll(function() {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
         var offset = $backgroundObj.parent().attr('data-offset');
-        if (offset === undefined) {
+        if (!offset || offset === 'undefined') {
           offset = 0;
         }
         else {
@@ -37,7 +36,7 @@
           yPos = -((docViewTop / speed) + offset);
           coords = '50% '+ yPos + 'px';
 
-          $backgroundObj.css({ backgroundPosition: coords });
+          $backgroundObj.css('background-position', coords );
         }
       });
     });
