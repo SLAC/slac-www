@@ -20,7 +20,7 @@
       var coords;
       var speed = $backgroundObj.parent().attr('data-speed');
 
-      $('.paragraph--type--xeno-hero').css('background-image', 'url(' + $backgroundObj.find('img').attr('src') + ')');
+      $backgroundObj.css('background-image', 'url(' + $backgroundObj.find('img').attr('src') + ')');
 
       $(window).live('scroll resize', function() {
         var docViewTop = $(window).scrollTop();
