@@ -9,6 +9,7 @@ $overlay = '';
 $parallax = '';
 $invert = '';
 $zoom = '';
+$offset = '';
 
 if (!empty($content['field_overlay'])) {
     $overlay = trim(strip_tags(render($content['field_overlay'])));
@@ -22,11 +23,14 @@ if (!empty($content['field_invert'])) {
 if (!empty($content['field_zoom'])) {
     $zoom = trim(strip_tags(render($content['field_zoom'])));
 }
+if (!empty($content['field_offset'])) {
+    $offset = trim(strip_tags(render($content['field_offset'])));
+}
 $classes = 'paragraph paragraph--type--xeno-hero paragraph--view-mode--default ' . $invert . ' ' . $zoom;
 
 ?>
 
-<div class="<?php print $classes; ?>" data-overlay="<?php print $overlay; ?>" data-speed="<?php print $parallax; ?>">
+<div class="<?php print $classes; ?>" data-overlay="<?php print $overlay; ?>" data-speed="<?php print $parallax; ?>" data-offset="<?php print $offset; ?>">
     <?php
     if (!empty($content['field_background_image'])) {
         echo '<div class="paragraph--type--xeno-hero__image">';
