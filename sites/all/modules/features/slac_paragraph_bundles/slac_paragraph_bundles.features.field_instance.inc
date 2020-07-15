@@ -1390,6 +1390,46 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-hero-field_offset'.
+  $field_instances['paragraphs_item-hero-field_offset'] = array(
+    'bundle' => 'hero',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter a positive number to modify the position of the background image.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_offset',
+    'label' => 'Offset',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 38,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-hero-field_overlay'.
   $field_instances['paragraphs_item-hero-field_overlay'] = array(
     'bundle' => 'hero',
@@ -2481,10 +2521,12 @@ function slac_paragraph_bundles_field_default_field_instances() {
   t('Column Wrapper Content');
   t('Columns will automatically be equal width unless changed.');
   t('Content');
+  t('Enter a positive number to modify the position of the background image.');
   t('Icon');
   t('If this is "on", the layout options will also need to be reversed. Example: For mobile we want an image in Column 1 to be first (top), with text in Column 2 last (bottom). We then want a two-third/one-third layout for desktop, with text first (left), image second (right). Turn "Reverse" to "on", but then choose the "Layout 33/67%" to achieve the desired result.');
   t('Image');
   t('Invert');
+  t('Offset');
   t('Overlay');
   t('Padding Bottom');
   t('Padding Top');
