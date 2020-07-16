@@ -18,7 +18,7 @@
  */
  ?>
 <div id="header">
-  <div class="section clearfix row">
+  <div class="section clearfix row page-basic header inside">
     <div class="col-md-9">
     <div id="logo-title">
 

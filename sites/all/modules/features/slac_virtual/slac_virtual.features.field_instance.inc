@@ -11,6 +11,110 @@ function slac_virtual_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
+  // 'node-paragraph_layout_page-field_image_for_gallery'.
+  $field_instances['node-paragraph_layout_page-field_image_for_gallery'] = array(
+    'bundle' => 'paragraph_layout_page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'email_main_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_side_news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'email_top_story' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news_center' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image_for_gallery',
+    'label' => 'Image for Gallery',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'crop_landscape' => 0,
+          'crop_portrait' => 0,
+          'crop_square' => 0,
+          'ecrop_frontpage_carousel' => 0,
+          'ecrop_frontpage_headlines' => 0,
+          'ecrop_frontpage_headlines_small' => 0,
+          'ecrop_igp' => 0,
+          'ecrop_news_center' => 0,
+          'frontpage-headline' => 0,
+          'lightbox_text_bottom' => 0,
+          'lightbox_text_left_right' => 0,
+          'news_thumbnail_headlines_center' => 0,
+        ),
+      ),
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 1,
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-paragraph_layout_page-field_structured_content'.
   $field_instances['node-paragraph_layout_page-field_structured_content'] = array(
     'bundle' => 'paragraph_layout_page',
@@ -25,7 +129,7 @@ function slac_virtual_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'email_main_story' => array(
         'label' => 'above',
@@ -110,6 +214,7 @@ function slac_virtual_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Image for Gallery');
   t('Structured Content');
 
   return $field_instances;

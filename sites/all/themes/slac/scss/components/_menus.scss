@@ -41,3 +41,61 @@ ul.nice-menu ul,ul.nice-menu li.menuparent ul,ul.nice-menu-down li li.menuparent
 ul#nice-menu-1 > li {
     margin-right: 22px;
 }
+
+.left-menu-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    background: #bebebe url(../img/mobile-menu.png) no-repeat center center;
+    cursor: pointer;
+    display: none;
+
+  @media (max-width: 700px) {
+    display: block;
+  }
+}
+
+ul#nice-menu-1 {
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
+.page-basic .sidebar-menu {
+  display: none;
+
+  @media (max-width: 700px) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    display: block;
+  }
+}
+
+.sidebar-menu .menu li {
+  background: #fff;
+  border-bottom: 2px solid #b4b3b3;
+}
+
+.sidebar-menu .menu a {
+  height: auto;
+}
+.sidebar-menu .menu a {
+  width: 90%;
+  padding: 12px 5%;
+  height: 16px;
+  display: block;
+  text-transform: uppercase;
+  color: #444;
+}
+
+.page-basic {
+  @media (max-width: 700px) {
+    overflow: hidden;
+    position: relative;
+    background: #ddd;
+  }
+}

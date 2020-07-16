@@ -1,0 +1,16 @@
+ul.lightgallery {
+  @include make-row;
+  @include make-col-ready;
+
+  li {
+    @include make-col(3);
+      img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.lightgallery-wrapper {
+  @include make-container();
+}

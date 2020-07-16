@@ -226,6 +226,28 @@ function slac_virtual_default_page_manager_handlers() {
   $display->content['new-53f21aba-4805-400d-804c-73634cb92ee5'] = $pane;
   $display->panels['header'][0] = 'new-53f21aba-4805-400d-804c-73634cb92ee5';
   $pane = new stdClass();
+  $pane->pid = 'new-951b6de8-2f17-4d01-ac88-5e514d6303e9';
+  $pane->panel = 'header';
+  $pane->type = 'search_block';
+  $pane->subtype = 'search_block';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'mobile-search-box',
+    'css_class' => 'mobile-search-box',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '951b6de8-2f17-4d01-ac88-5e514d6303e9';
+  $display->content['new-951b6de8-2f17-4d01-ac88-5e514d6303e9'] = $pane;
+  $display->panels['header'][1] = 'new-951b6de8-2f17-4d01-ac88-5e514d6303e9';
+  $pane = new stdClass();
   $pane->pid = 'new-20fb470d-85f3-4943-a417-b11eeff1a058';
   $pane->panel = 'mainnav';
   $pane->type = 'block';

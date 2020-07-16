@@ -57,29 +57,31 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
  * Here we style the widths for each paragraph.
  */
 /* Adds Width Element -- Tiny. */
-.paragraph.paragraph--width--tiny > .paragraph__column {
-  @include make-col(4);
-  @include make-col-offset(4);
-}
 
-/* Adds Width Element -- Narrow. */
-.paragraph.paragraph--width--narrow > .paragraph__column {
-  @include make-col(6);
-  @include make-col-offset(3);
-}
+@media (min-width: 769px) {
+  .paragraph.paragraph--width--tiny > .paragraph__column {
+    @include make-col(4);
+    @include make-col-offset(4);
+  }
 
-/* Adds Width Element -- Medium. */
-.paragraph.paragraph--width--medium > .paragraph__column {
-  @include make-col(8);
-  @include make-col-offset(2);
-}
+  /* Adds Width Element -- Narrow. */
+  .paragraph.paragraph--width--narrow > .paragraph__column {
+    @include make-col(6);
+    @include make-col-offset(3);
+  }
 
-/* Adds Width Element -- Wide. */
-.paragraph.paragraph--width--wide > .paragraph__column {
-  @include make-col(10);
-  @include make-col-offset(1);
-}
+  /* Adds Width Element -- Medium. */
+  .paragraph.paragraph--width--medium > .paragraph__column {
+    @include make-col(8);
+    @include make-col-offset(2);
+  }
 
+  /* Adds Width Element -- Wide. */
+  .paragraph.paragraph--width--wide > .paragraph__column {
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
+}
 /* Adds Width Element -- Full. */
 .paragraph.paragraph--width--full > .paragraph__column {
    @include make-col(12);

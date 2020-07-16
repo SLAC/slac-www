@@ -8057,22 +8057,17 @@ label {
 
 div#logo-title img {
   margin-top: 24px; }
+  @media only screen and (max-width: 700px) {
+    div#logo-title img {
+      margin: 7px 0;
+      width: 170px;
+      height: auto; } }
 
 .header-link {
   float: right;
   margin: 20px 28px 0 0;
   color: #fff;
   margin-top: -50px; }
-
-.page-basic .sidebar-menu {
-  display: none; }
-  @media (max-width: 700px) {
-    .page-basic .sidebar-menu .page-basic .sidebar-menu {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 30%;
-      display: block; } }
 
 @media only screen and (min-width: 700px) {
   .main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
@@ -10557,29 +10552,29 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
  * Here we style the widths for each paragraph.
  */
 /* Adds Width Element -- Tiny. */
-.paragraph.paragraph--width--tiny > .paragraph__column {
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
-  margin-left: 33.3333333333%; }
+@media (min-width: 769px) {
+  .paragraph.paragraph--width--tiny > .paragraph__column {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    margin-left: 33.3333333333%; }
 
-/* Adds Width Element -- Narrow. */
-.paragraph.paragraph--width--narrow > .paragraph__column {
-  flex: 0 0 50%;
-  max-width: 50%;
-  margin-left: 25%; }
+  /* Adds Width Element -- Narrow. */
+  .paragraph.paragraph--width--narrow > .paragraph__column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: 25%; }
 
-/* Adds Width Element -- Medium. */
-.paragraph.paragraph--width--medium > .paragraph__column {
-  flex: 0 0 66.6666666667%;
-  max-width: 66.6666666667%;
-  margin-left: 16.6666666667%; }
+  /* Adds Width Element -- Medium. */
+  .paragraph.paragraph--width--medium > .paragraph__column {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+    margin-left: 16.6666666667%; }
 
-/* Adds Width Element -- Wide. */
-.paragraph.paragraph--width--wide > .paragraph__column {
-  flex: 0 0 83.3333333333%;
-  max-width: 83.3333333333%;
-  margin-left: 8.3333333333%; }
-
+  /* Adds Width Element -- Wide. */
+  .paragraph.paragraph--width--wide > .paragraph__column {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+    margin-left: 8.3333333333%; } }
 /* Adds Width Element -- Full. */
 .paragraph.paragraph--width--full > .paragraph__column {
   flex: 0 0 100%;
@@ -10744,6 +10739,29 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
 .panel-flexible .panel-separator {
   margin: 0 0 1em 0; }
 
+ul.lightgallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px; }
+  ul.lightgallery li {
+    flex: 0 0 25%;
+    max-width: 25%; }
+    ul.lightgallery li img {
+      width: 100%;
+      height: auto; }
+
+.lightgallery-wrapper {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
 ul.nice-menu li {
   border: none;
   border-top: 0;
@@ -10775,6 +10793,54 @@ ul.nice-menu ul, ul.nice-menu li.menuparent ul, ul.nice-menu-down li li.menupare
 
 ul#nice-menu-1 > li {
   margin-right: 22px; }
+
+.left-menu-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  background: #bebebe url(../img/mobile-menu.png) no-repeat center center;
+  cursor: pointer;
+  display: none; }
+  @media (max-width: 700px) {
+    .left-menu-trigger {
+      display: block; } }
+
+@media (max-width: 700px) {
+  ul#nice-menu-1 {
+    display: none; } }
+
+.page-basic .sidebar-menu {
+  display: none; }
+  @media (max-width: 700px) {
+    .page-basic .sidebar-menu {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30%;
+      display: block; } }
+
+.sidebar-menu .menu li {
+  background: #fff;
+  border-bottom: 2px solid #b4b3b3; }
+
+.sidebar-menu .menu a {
+  height: auto; }
+
+.sidebar-menu .menu a {
+  width: 90%;
+  padding: 12px 5%;
+  height: 16px;
+  display: block;
+  text-transform: uppercase;
+  color: #444; }
+
+@media (max-width: 700px) {
+  .page-basic {
+    overflow: hidden;
+    position: relative;
+    background: #ddd; } }
 
 /* Paragraph Columns */
 @media (max-width: 991px) {
@@ -11016,6 +11082,18 @@ ul#nice-menu-1 > li {
 
 div#mobile-search-box {
   display: none; }
+
+.card-header {
+  background: #D8D8D8;
+  text-align: center;
+  padding: 30px;
+  font-size: 32px; }
+  .card-header img {
+    max-height: 56px;
+    width: auto;
+    margin-bottom: 15px; }
+  .card-header h5.card-title {
+    font-size: 32px; }
 
 /* Paragraph specific. */
 .paragraph {

@@ -64,7 +64,7 @@
 				});
 
 				if( $('.left-menu-trigger').length == 0 ){
-					$('<div class="left-menu-trigger"></div>').insertBefore('.page-basic .header .inside');
+					$('<div class="left-menu-trigger"></div>').insertBefore('.page-basic.header.inside');
 				}
 
 				$('.left-menu-trigger').click(function() {
