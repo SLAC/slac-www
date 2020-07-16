@@ -131,6 +131,7 @@ function slac_virtual_default_page_manager_handlers() {
       'search' => NULL,
       'mainnav' => NULL,
       'secondnav' => NULL,
+      'icon' => NULL,
     ),
   );
   $display->cache = array();
@@ -248,6 +249,29 @@ function slac_virtual_default_page_manager_handlers() {
   $display->content['new-951b6de8-2f17-4d01-ac88-5e514d6303e9'] = $pane;
   $display->panels['header'][1] = 'new-951b6de8-2f17-4d01-ac88-5e514d6303e9';
   $pane = new stdClass();
+  $pane->pid = 'new-833c33bb-381a-4419-8961-8bea5b63c9d0';
+  $pane->panel = 'icon';
+  $pane->type = 'block';
+  $pane->subtype = 'block-9';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '<none>',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '833c33bb-381a-4419-8961-8bea5b63c9d0';
+  $display->content['new-833c33bb-381a-4419-8961-8bea5b63c9d0'] = $pane;
+  $display->panels['icon'][0] = 'new-833c33bb-381a-4419-8961-8bea5b63c9d0';
+  $pane = new stdClass();
   $pane->pid = 'new-20fb470d-85f3-4943-a417-b11eeff1a058';
   $pane->panel = 'mainnav';
   $pane->type = 'block';
@@ -316,6 +340,29 @@ function slac_virtual_default_page_manager_handlers() {
   $pane->uuid = '8a2845ce-15f1-4d10-92bb-5696b75cefaa';
   $display->content['new-8a2845ce-15f1-4d10-92bb-5696b75cefaa'] = $pane;
   $display->panels['search'][0] = 'new-8a2845ce-15f1-4d10-92bb-5696b75cefaa';
+  $pane = new stdClass();
+  $pane->pid = 'new-c171e0b5-f9ea-4e25-aa7d-d79ea2eae613';
+  $pane->panel = 'secondnav';
+  $pane->type = 'block';
+  $pane->subtype = 'nice_menus-3';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '<none>',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'c171e0b5-f9ea-4e25-aa7d-d79ea2eae613';
+  $display->content['new-c171e0b5-f9ea-4e25-aa7d-d79ea2eae613'] = $pane;
+  $display->panels['secondnav'][0] = 'new-c171e0b5-f9ea-4e25-aa7d-d79ea2eae613';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

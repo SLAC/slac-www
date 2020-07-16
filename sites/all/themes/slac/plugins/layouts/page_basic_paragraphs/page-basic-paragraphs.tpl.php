@@ -27,18 +27,28 @@
          <?php print $content['header']; ?>
         <?php endif ?>
       <div class="row">
-      <div class="col-md-12">
+        <div class="col-md-12">
           <?php if ($content['mainnav']): ?>
             <?php print $content['mainnav']; ?>
-          <?php endif ?></div>
-        <?php if ($content['secondnav']): ?>
-        <div class="col-md-12">
-          <?php print $content['secondnav']; ?>
+          <?php endif ?>
         </div>
-      <?php endif ?>
       </div>
+    </div>
+    <?php if ($content['secondnav']): ?>
+    <div class="secondary-nav">
+      <div class="container">
+         <div class="row">
+          <div class="col-md-2 site-icon">
+            <?php print $content['icon']; ?>
+          </div>
+          <div class="col-md-10">
+            <?php print $content['secondnav']; ?>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
+    <?php endif ?>
+
 
    <?php if ($content['content']): ?>
       <?php print $content['content']; ?>

@@ -26,7 +26,8 @@ if (!empty($content['field_card_title'])) {
 ?>
 
 <div class="card">
-        <div class="card-header"><?php if ($icon) : ?><?php print $icon; ?><?php endif; ?><?php if ($title) : ?><h5 class="card-title"><?php print $title; ?></h5><?php endif; ?></div>
+    <?php if ($icon || $title): ?>
+        <div class="card-header"><?php if ($icon) : ?><?php print $icon; ?><?php endif; ?><?php if ($title) : ?><h5 class="card-title"><?php print $title; ?></h5><?php endif; ?></div><?php endif; ?>
     <?php if ($image) : ?>
         <div><?php print $image; ?></div>
     <?php endif; ?>

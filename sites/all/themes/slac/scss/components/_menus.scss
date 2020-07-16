@@ -99,3 +99,20 @@ ul#nice-menu-1 {
     background: #ddd;
   }
 }
+
+.secondary-nav p {
+  margin-bottom: 0;
+}
+
+.col-md-2.site-icon {
+  padding: 10px 0;
+
+  img {
+    height: auto;
+    max-height: 71px;
+  }
+}
+
+.secondary-nav {
+  background: $grey;
+}

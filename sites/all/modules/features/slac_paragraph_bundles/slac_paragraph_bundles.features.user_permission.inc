@@ -31,6 +31,13 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content blank'.
+  $permissions['create paragraph content blank'] = array(
+    'name' => 'create paragraph content blank',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content block'.
   $permissions['create paragraph content block'] = array(
     'name' => 'create paragraph content block',
@@ -175,9 +182,23 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content video_bootstrap'.
+  $permissions['create paragraph content video_bootstrap'] = array(
+    'name' => 'create paragraph content video_bootstrap',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content view'.
   $permissions['create paragraph content view'] = array(
     'name' => 'create paragraph content view',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content blank'.
+  $permissions['delete paragraph content blank'] = array(
+    'name' => 'delete paragraph content blank',
     'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
@@ -326,9 +347,23 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'delete paragraph content video_bootstrap'.
+  $permissions['delete paragraph content video_bootstrap'] = array(
+    'name' => 'delete paragraph content video_bootstrap',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'delete paragraph content view'.
   $permissions['delete paragraph content view'] = array(
     'name' => 'delete paragraph content view',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content blank'.
+  $permissions['update paragraph content blank'] = array(
+    'name' => 'update paragraph content blank',
     'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
@@ -477,9 +512,23 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content video_bootstrap'.
+  $permissions['update paragraph content video_bootstrap'] = array(
+    'name' => 'update paragraph content video_bootstrap',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content view'.
   $permissions['update paragraph content view'] = array(
     'name' => 'update paragraph content view',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content blank'.
+  $permissions['view paragraph content blank'] = array(
+    'name' => 'view paragraph content blank',
     'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
@@ -632,6 +681,13 @@ function slac_paragraph_bundles_user_default_permissions() {
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content video_bootstrap'.
+  $permissions['view paragraph content video_bootstrap'] = array(
+    'name' => 'view paragraph content video_bootstrap',
+    'roles' => array(),
     'module' => 'paragraphs_bundle_permissions',
   );
 

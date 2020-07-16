@@ -5,10 +5,24 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function slac_paragraph_bundles_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
+}
+
+/**
  * Implements hook_paragraphs_info().
  */
 function slac_paragraph_bundles_paragraphs_info() {
   $items = array(
+    'blank' => array(
+      'name' => 'Blank',
+      'bundle' => 'blank',
+      'locked' => '1',
+    ),
     'block' => array(
       'name' => 'Block',
       'bundle' => 'block',
@@ -67,6 +81,11 @@ function slac_paragraph_bundles_paragraphs_info() {
     'video' => array(
       'name' => 'Video',
       'bundle' => 'video',
+      'locked' => '1',
+    ),
+    'video_bootstrap' => array(
+      'name' => 'Video Bootstrap',
+      'bundle' => 'video_bootstrap',
       'locked' => '1',
     ),
     'view' => array(

@@ -10,6 +10,206 @@
 function slac_paragraph_bundles_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'paragraphs_item-blank-field_background'.
+  $field_instances['paragraphs_item-blank-field_background'] = array(
+    'bundle' => 'blank',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_background',
+    'label' => 'Background',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 38,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-blank-field_content_blank'.
+  $field_instances['paragraphs_item-blank-field_content_blank'] = array(
+    'bundle' => 'blank',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_content_blank',
+    'label' => 'Content',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 39,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-blank-field_padding_bottom'.
+  $field_instances['paragraphs_item-blank-field_padding_bottom'] = array(
+    'bundle' => 'blank',
+    'default_value' => array(
+      0 => array(
+        'value' => 'padding-top--sm',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_padding_bottom',
+    'label' => 'Padding Bottom',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-blank-field_padding_top'.
+  $field_instances['paragraphs_item-blank-field_padding_top'] = array(
+    'bundle' => 'blank',
+    'default_value' => array(
+      0 => array(
+        'value' => 'padding-top--sm',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_padding_top',
+    'label' => 'Padding Top',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-blank-field_paragraph_width'.
+  $field_instances['paragraphs_item-blank-field_paragraph_width'] = array(
+    'bundle' => 'blank',
+    'default_value' => array(
+      0 => array(
+        'value' => 'paragraph--width--wide',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_width',
+    'label' => 'Paragraph Width',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 36,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-block-field_content'.
   $field_instances['paragraphs_item-block-field_content'] = array(
     'bundle' => 'block',
@@ -366,7 +566,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 32,
+      'weight' => 11,
     ),
   );
 
@@ -404,7 +604,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 40,
+      'weight' => 12,
     ),
   );
 
@@ -441,7 +641,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 34,
+      'weight' => 7,
     ),
   );
 
@@ -475,10 +675,12 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'button',
       'allowed_bundles' => array(
+        'blank' => -1,
         'block' => -1,
         'blockquote' => -1,
         'card' => 'card',
         'card_wrapper' => -1,
+        'column_wrapper' => -1,
         'columns' => -1,
         'hero' => -1,
         'image' => -1,
@@ -486,13 +688,16 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'simple' => -1,
         'simple_bootstrap' => -1,
         'video' => -1,
+        'video_bootstrap' => -1,
         'view' => -1,
       ),
       'bundle_weights' => array(
+        'blank' => 15,
         'block' => 2,
         'blockquote' => 3,
         'card' => 4,
         'card_wrapper' => 5,
+        'column_wrapper' => 21,
         'columns' => 6,
         'hero' => 7,
         'image' => 8,
@@ -500,9 +705,10 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'simple' => 10,
         'simple_bootstrap' => 11,
         'video' => 12,
+        'video_bootstrap' => 28,
         'view' => 13,
       ),
-      'default_edit_mode' => 'open',
+      'default_edit_mode' => 'closed',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -512,7 +718,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 44,
+      'weight' => 6,
     ),
   );
 
@@ -549,7 +755,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 43,
+      'weight' => 5,
     ),
   );
 
@@ -587,7 +793,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 42,
+      'weight' => 10,
     ),
   );
 
@@ -624,7 +830,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 38,
+      'weight' => 9,
     ),
   );
 
@@ -632,7 +838,11 @@ function slac_paragraph_bundles_field_default_field_instances() {
   // 'paragraphs_item-card_wrapper-field_paragraph_width'.
   $field_instances['paragraphs_item-card_wrapper-field_paragraph_width'] = array(
     'bundle' => 'card_wrapper',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'paragraph--width--wide',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -662,7 +872,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 36,
+      'weight' => 8,
     ),
   );
 
@@ -894,7 +1104,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 10,
     ),
   );
 
@@ -931,7 +1141,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 11,
     ),
   );
 
@@ -968,7 +1178,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 12,
     ),
   );
 
@@ -1005,7 +1215,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -1039,6 +1249,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
+        'blank' => -1,
         'block' => 'block',
         'blockquote' => 'blockquote',
         'card' => -1,
@@ -1047,13 +1258,15 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'columns' => -1,
         'hero' => -1,
         'image' => -1,
-        'image_bootstrap' => -1,
+        'image_bootstrap' => 'image_bootstrap',
         'simple' => -1,
         'simple_bootstrap' => 'simple_bootstrap',
-        'video' => 'video',
-        'view' => -1,
+        'video' => -1,
+        'video_bootstrap' => 'video_bootstrap',
+        'view' => 'view',
       ),
       'bundle_weights' => array(
+        'blank' => 30,
         'block' => 2,
         'blockquote' => 3,
         'card' => 4,
@@ -1066,9 +1279,10 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'simple' => 11,
         'simple_bootstrap' => 12,
         'video' => 13,
+        'video_bootstrap' => 28,
         'view' => 14,
       ),
-      'default_edit_mode' => 'open',
+      'default_edit_mode' => 'closed',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -1078,7 +1292,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 10,
+      'weight' => 7,
     ),
   );
 
@@ -1115,7 +1329,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -1152,7 +1366,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -1189,7 +1403,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -1226,7 +1440,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 6,
     ),
   );
 
@@ -1268,7 +1482,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 13,
     ),
   );
 
@@ -2101,7 +2315,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 36,
+      'weight' => 6,
     ),
   );
 
@@ -2138,7 +2352,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 37,
+      'weight' => 7,
     ),
   );
 
@@ -2176,7 +2390,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 33,
+      'weight' => 3,
     ),
   );
 
@@ -2218,7 +2432,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 35,
+      'weight' => 5,
     ),
   );
 
@@ -2260,7 +2474,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 34,
+      'weight' => 4,
     ),
   );
 
@@ -2298,7 +2512,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 32,
+      'weight' => 2,
     ),
   );
 
@@ -2338,7 +2552,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 31,
+      'weight' => 5,
     ),
   );
 
@@ -2469,6 +2683,233 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'paragraphs_item-video_bootstrap-field_background'.
+  $field_instances['paragraphs_item-video_bootstrap-field_background'] = array(
+    'bundle' => 'video_bootstrap',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_background',
+    'label' => 'Background',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-video_bootstrap-field_padding_bottom'.
+  $field_instances['paragraphs_item-video_bootstrap-field_padding_bottom'] = array(
+    'bundle' => 'video_bootstrap',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_padding_bottom',
+    'label' => 'Padding Bottom',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-video_bootstrap-field_padding_top'.
+  $field_instances['paragraphs_item-video_bootstrap-field_padding_top'] = array(
+    'bundle' => 'video_bootstrap',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_padding_top',
+    'label' => 'Padding Top',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-video_bootstrap-field_paragraph_width'.
+  $field_instances['paragraphs_item-video_bootstrap-field_paragraph_width'] = array(
+    'bundle' => 'video_bootstrap',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_width',
+    'label' => 'Paragraph Width',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-video_bootstrap-field_video_paragraph'.
+  $field_instances['paragraphs_item-video_bootstrap-field_video_paragraph'] = array(
+    'bundle' => 'video_bootstrap',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'page_full',
+        ),
+        'type' => 'media',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_video_paragraph',
+    'label' => 'Video',
+    'required' => 0,
+    'settings' => array(
+      'epsacrop' => array(
+        'styles' => array(
+          'crop_landscape' => 0,
+          'crop_portrait' => 0,
+          'crop_square' => 0,
+          'ecrop_frontpage_carousel' => 0,
+          'ecrop_frontpage_headlines' => 0,
+          'ecrop_frontpage_headlines_small' => 0,
+          'ecrop_igp' => 0,
+          'ecrop_news_center' => 0,
+          'frontpage-headline' => 0,
+          'lightbox_text_bottom' => 0,
+          'lightbox_text_left_right' => 0,
+          'news_thumbnail_headlines_center' => 0,
+        ),
+      ),
+      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm m3s zip eps',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+          'vimeo' => 'vimeo',
+          'youtube' => 'youtube',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-view-field_background'.
   $field_instances['paragraphs_item-view-field_background'] = array(
     'bundle' => 'view',
@@ -2502,7 +2943,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -2539,7 +2980,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -2580,7 +3021,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -2621,7 +3062,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -2657,7 +3098,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'viewreference',
       'settings' => array(),
       'type' => 'viewreference_select',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 

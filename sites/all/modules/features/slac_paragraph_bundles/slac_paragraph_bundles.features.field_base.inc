@@ -353,6 +353,25 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_content_blank'.
+  $field_bases['field_content_blank'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_content_blank',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_icon'.
   $field_bases['field_icon'] = array(
     'active' => 1,
@@ -646,6 +665,25 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_video_paragraph'.
+  $field_bases['field_video_paragraph'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_video_paragraph',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'mediafield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'media',
   );
 
   // Exported field_base: 'field_view'.

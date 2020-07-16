@@ -1,16 +1,19 @@
 ul.lightgallery {
-  @include make-row;
-  @include make-col-ready;
+  display: flex;
+  padding-left: 0;
 
   li {
-    @include make-col(3);
-      img {
+    img {
       width: 100%;
       height: auto;
+    }
+
+    &:not(:last-of-type) {
+      padding-right: 15px;
     }
   }
 }
 
-.lightgallery-wrapper {
-  @include make-container();
-}
+// .lightgallery-wrapper {
+//   @include make-container();
+// }

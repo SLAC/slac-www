@@ -110,7 +110,7 @@ function slac_virtual_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 43,
+      'weight' => 6,
     ),
   );
 
@@ -180,7 +180,8 @@ function slac_virtual_field_default_field_instances() {
         'image_bootstrap' => 'image_bootstrap',
         'simple' => -1,
         'simple_bootstrap' => 'simple_bootstrap',
-        'video' => 'video',
+        'video' => -1,
+        'video_bootstrap' => 'video_bootstrap',
         'view' => 'view',
       ),
       'bundle_weights' => array(
@@ -196,6 +197,7 @@ function slac_virtual_field_default_field_instances() {
         'simple' => 7,
         'simple_bootstrap' => 8,
         'video' => 9,
+        'video_bootstrap' => -28,
         'view' => 23,
       ),
       'default_edit_mode' => 'open',
@@ -208,7 +210,7 @@ function slac_virtual_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 42,
+      'weight' => 5,
     ),
   );
 

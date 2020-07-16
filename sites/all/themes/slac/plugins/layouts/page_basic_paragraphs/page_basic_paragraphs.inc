@@ -16,6 +16,7 @@ $plugin = array(
     'header' => t('Header'),
     'search' => t('Search'),
     'mainnav' => t('Main Nav'),
+    'icon' => t('Icon'),
     'secondnav' => t('Secondary Nav'),
     'content' => t('Content'),
     'footer' => t('Footer')
