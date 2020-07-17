@@ -42,7 +42,7 @@
 }
 
 .page-basic .footer #social-channels a {
-  margin: 14px 0 6px 16px;
+  margin: 0 0 6px 16px;
   width: 36px;
   height: 36px;
   display: inline-block;
@@ -69,16 +69,21 @@
   }
 }
 
-.page-basic .footer-logos a:last-child img {
-    width: 100% !important;
-}
+.footer-logos {
+  padding-top: 30px;
+  display: inline-block;
 
-.footer-logos p {
-  display: flex;
-  float: left;
+  p {
+    display: flex;
+    float: left;
+  }
 
   a {
     width: 50%;
+
+    &:last-child img {
+      width: 100% !important;
+    }
   }
 }
 

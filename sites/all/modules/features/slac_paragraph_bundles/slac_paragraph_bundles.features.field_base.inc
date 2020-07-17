@@ -134,6 +134,7 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'paragraph--color--transparent' => 'Transparent',
+        'paragraph--color--transparent-black' => 'Transparent Black',
         'paragraph--color paragraph--color--red' => 'Red',
         'paragraph--color paragraph--color--light-grey' => 'LIght Grey',
         'paragraph--color paragraph--color--dark-grey' => 'Dark Grey',

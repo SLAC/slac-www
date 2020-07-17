@@ -185,14 +185,24 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'create paragraph content video_bootstrap'.
   $permissions['create paragraph content video_bootstrap'] = array(
     'name' => 'create paragraph content video_bootstrap',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
   // Exported permission: 'create paragraph content view'.
   $permissions['create paragraph content view'] = array(
     'name' => 'create paragraph content view',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -350,14 +360,24 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'delete paragraph content video_bootstrap'.
   $permissions['delete paragraph content video_bootstrap'] = array(
     'name' => 'delete paragraph content video_bootstrap',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
   // Exported permission: 'delete paragraph content view'.
   $permissions['delete paragraph content view'] = array(
     'name' => 'delete paragraph content view',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -515,14 +535,24 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'update paragraph content video_bootstrap'.
   $permissions['update paragraph content video_bootstrap'] = array(
     'name' => 'update paragraph content video_bootstrap',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
   // Exported permission: 'update paragraph content view'.
   $permissions['update paragraph content view'] = array(
     'name' => 'update paragraph content view',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
@@ -687,14 +717,20 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'view paragraph content video_bootstrap'.
   $permissions['view paragraph content video_bootstrap'] = array(
     'name' => 'view paragraph content video_bootstrap',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 
   // Exported permission: 'view paragraph content view'.
   $permissions['view paragraph content view'] = array(
     'name' => 'view paragraph content view',
-    'roles' => array(),
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
     'module' => 'paragraphs_bundle_permissions',
   );
 

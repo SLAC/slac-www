@@ -21,22 +21,6 @@
   }
 }
 
-.header-link {
-  float: right;
-  margin: 20px 28px 0 0;
-  color: #fff;
-
-  a {
-    color: #fff;
-    font-size: 11px;
-    margin-left: 10px;
-
-    &:first-child {
-      margin-right: 10px;
-    }
-  }
-}
-
 .page-basic .pane-pane-header .col-md-9 {
     background: #8c1515;
     overflow: hidden;
@@ -74,6 +58,20 @@ div#logo-title img {
   margin: 20px 28px 0 0;
   color: #fff;
   margin-top: -50px;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+
+  a {
+    color: $white !important;
+    font-size: 11px;
+    margin-left: 10px;
+
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
 }
 
 .main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
@@ -82,5 +80,16 @@ div#logo-title img {
     width: auto;
     background: none;
   }
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.cta {
+  margin-left: auto;
 }
 

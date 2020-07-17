@@ -132,6 +132,7 @@ function slac_virtual_default_page_manager_handlers() {
       'mainnav' => NULL,
       'secondnav' => NULL,
       'icon' => NULL,
+      'cta' => NULL,
     ),
   );
   $display->cache = array();
@@ -184,6 +185,32 @@ function slac_virtual_default_page_manager_handlers() {
   $pane->uuid = 'f15e611a-9595-4aab-ad11-4af5a0f02edf';
   $display->content['new-f15e611a-9595-4aab-ad11-4af5a0f02edf'] = $pane;
   $display->panels['content'][1] = 'new-f15e611a-9595-4aab-ad11-4af5a0f02edf';
+  $pane = new stdClass();
+  $pane->pid = 'new-97341c98-e838-4578-8cd2-0ab1f46f906d';
+  $pane->panel = 'cta';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<a href="#" class="btn btn-cta">Launch Interactive Tour</a>',
+    'format' => 'full_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '97341c98-e838-4578-8cd2-0ab1f46f906d';
+  $display->content['new-97341c98-e838-4578-8cd2-0ab1f46f906d'] = $pane;
+  $display->panels['cta'][0] = 'new-97341c98-e838-4578-8cd2-0ab1f46f906d';
   $pane = new stdClass();
   $pane->pid = 'new-f55a45ca-8cec-4b78-b2e5-1d23cc8eb4db';
   $pane->panel = 'footer';
@@ -341,6 +368,32 @@ function slac_virtual_default_page_manager_handlers() {
   $display->content['new-8a2845ce-15f1-4d10-92bb-5696b75cefaa'] = $pane;
   $display->panels['search'][0] = 'new-8a2845ce-15f1-4d10-92bb-5696b75cefaa';
   $pane = new stdClass();
+  $pane->pid = 'new-ce83bab2-b8dc-460a-ba6d-74786cc912d4';
+  $pane->panel = 'secondnav';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Section Title',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<div class="section-title">SLAC Virtual Tour</div>',
+    'format' => 'full_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'ce83bab2-b8dc-460a-ba6d-74786cc912d4';
+  $display->content['new-ce83bab2-b8dc-460a-ba6d-74786cc912d4'] = $pane;
+  $display->panels['secondnav'][0] = 'new-ce83bab2-b8dc-460a-ba6d-74786cc912d4';
+  $pane = new stdClass();
   $pane->pid = 'new-c171e0b5-f9ea-4e25-aa7d-d79ea2eae613';
   $pane->panel = 'secondnav';
   $pane->type = 'block';
@@ -358,11 +411,11 @@ function slac_virtual_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'c171e0b5-f9ea-4e25-aa7d-d79ea2eae613';
   $display->content['new-c171e0b5-f9ea-4e25-aa7d-d79ea2eae613'] = $pane;
-  $display->panels['secondnav'][0] = 'new-c171e0b5-f9ea-4e25-aa7d-d79ea2eae613';
+  $display->panels['secondnav'][1] = 'new-c171e0b5-f9ea-4e25-aa7d-d79ea2eae613';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

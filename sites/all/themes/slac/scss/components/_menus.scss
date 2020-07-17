@@ -10,14 +10,22 @@ ul.nice-menu li {
     color: #fff;
   }
 
-  &.menuparent {
-    background: #8c1515 url(../img/arrow-down.png) right center no-repeat;
-  }
-
   &.depth-1 {
     margin-right: 22px;
     width: auto;
     background: none;
+  }
+}
+
+ul#nice-menu-1 li {
+  &.menuparent {
+    background: $red url(../img/arrow-down.png) right center no-repeat;
+  }
+}
+
+ul#nice-menu-3 li {
+  &.menuparent {
+    background: $grey url(../img/arrow-down.png) right center no-repeat;
   }
 }
 
@@ -30,16 +38,16 @@ ul.nice-menu li {
   }
 }
 
-ul.nice-menu-down li.menuparent:hover {
-  background: #8c1515 url(../img/arrow-down.png) right center no-repeat;
+ul#nice-menu-1 li.menuparent:hover {
+  background: $red url(../img/arrow-down.png) right center no-repeat;
 }
 
-ul.nice-menu ul,ul.nice-menu li.menuparent ul,ul.nice-menu-down li li.menuparent {
-  background: #8c1515;
+ul#nice-menu-1 ul,ul.nice-menu li.menuparent ul,ul.nice-menu-down li li.menuparent {
+  background: $red;
 }
 
 ul#nice-menu-1 > li {
-    margin-right: 22px;
+  margin-right: 22px;
 }
 
 .left-menu-trigger {
@@ -97,6 +105,15 @@ ul#nice-menu-1 {
     overflow: hidden;
     position: relative;
     background: #ddd;
+
+    .sidebar-menu ul {
+      margin: 0;
+      padding: 0;
+
+      .menu ul {
+        display: none;
+      }
+    }
   }
 }
 
@@ -104,8 +121,14 @@ ul#nice-menu-1 {
   margin-bottom: 0;
 }
 
-.col-md-2.site-icon {
+.site-icon {
   padding: 10px 0;
+  text-align: center;
+  margin-left: 50px;
+
+  @include media-breakpoint-down(md) {
+    margin-left: 10px;
+  }
 
   img {
     height: auto;
@@ -115,4 +138,38 @@ ul#nice-menu-1 {
 
 .secondary-nav {
   background: $grey;
+  float: left;
+  width: 100%;
+
+  .container .row {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-basic .sidebar-menu ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.sidebar-menu .menu ul {
+  display: none;
+}
+
+li.menu-1839.menu-path-front.first.odd.menu-item-0 {
+  display: none;
+}
+
+ul.nice-menu-down {
+  padding-left: 10px;
+}
+
+.nav-secondary {
+  margin-left: 15px;
+}
+
+ul#nice-menu-3 li {
+  margin-right: 22px;
 }

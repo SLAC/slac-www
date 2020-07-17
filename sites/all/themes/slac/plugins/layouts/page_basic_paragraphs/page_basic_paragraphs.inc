@@ -18,6 +18,7 @@ $plugin = array(
     'mainnav' => t('Main Nav'),
     'icon' => t('Icon'),
     'secondnav' => t('Secondary Nav'),
+    'cta' => t('Call to Action'),
     'content' => t('Content'),
     'footer' => t('Footer')
   ),

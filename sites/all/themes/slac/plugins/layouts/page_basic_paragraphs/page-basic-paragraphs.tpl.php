@@ -34,16 +34,20 @@
         </div>
       </div>
     </div>
+  </div>
     <?php if ($content['secondnav']): ?>
     <div class="secondary-nav">
       <div class="container">
          <div class="row">
-          <div class="col-md-2 site-icon">
+          <div class="site-icon">
             <?php print $content['icon']; ?>
           </div>
-          <div class="col-md-10">
+          <div class="nav-secondary">
             <?php print $content['secondnav']; ?>
           </div>
+           <?php if ($content['cta']): ?>
+            <div class="cta"><?php print $content['cta']; ?></div>
+            <?php endif ?>
         </div>
       </div>
     </div>
@@ -54,7 +58,7 @@
       <?php print $content['content']; ?>
     <?php endif ?>
 
-  <div class="footer">
+  <div class="footer-section">
   <div class="panel-panel footer">
      <?php if ($content['footer']): ?>
       <?php print $content['footer']; ?>

@@ -16,3 +16,6 @@
 .paragraph--color.paragraph--color--white {
   background: $white;
 }
+.paragraph--color.paragraph--color--transparent-black {
+  background: rgba(0, 0, 0, 0.5);
+}

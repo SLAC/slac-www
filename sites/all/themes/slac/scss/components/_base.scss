@@ -8,6 +8,52 @@ body {
   }
 }
 
+h1 {
+  font-size: 60px;
+
+  @media (max-width: 960px) {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-size: 52px;
+
+  @media (max-width: 960px) {
+    font-size: 28px;
+  }
+
+  &:before {
+    margin: 0 auto;
+    content: '';
+    border-bottom: 1px solid #fb3449;
+    width: 200px;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+h3 {
+  font-size: 36px;
+  color: $grey;
+
+  @media (max-width: 960px) {
+    font-size: 24px;
+  }
+}
+
+div[class*='paragraph--color--']{
+  h2{
+    &:before {
+      content: none;
+    }
+  }
+}
+
+.pane-content a {
+  color: $red;
+}
+
 .page-basic .inside {
   max-width: 1200px;
   margin: 0 auto 20px;
@@ -134,4 +180,10 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   padding-left: 0;
   padding-right: 0;
   width: auto;
+}
+
+@include media-breakpoint-down(md) {
+  .container, .container-sm, .container-md {
+      max-width: 100%;
+  }
 }
