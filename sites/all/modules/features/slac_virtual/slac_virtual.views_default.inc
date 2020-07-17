@@ -43,7 +43,7 @@ function slac_virtual_views_default_views() {
     'key_press' => 1,
     'controls' => 1,
     'mouse_wheel' => 1,
-    'download' => 0,
+    'download' => 1,
     'counter' => 1,
     'drag' => 1,
     'touch' => 1,
