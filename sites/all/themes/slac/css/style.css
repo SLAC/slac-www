@@ -10828,6 +10828,9 @@ ul.nice-menu li {
     margin-right: 22px;
     width: auto;
     background: none; }
+    @media (max-width: 991.98px) {
+      ul.nice-menu li.depth-1 {
+        margin-right: 10px; } }
 
 ul#nice-menu-1 li.menuparent {
   background: #8C191C url(../img/arrow-down.png) right center no-repeat; }
@@ -10850,6 +10853,9 @@ ul#nice-menu-1 ul, ul.nice-menu li.menuparent ul, ul.nice-menu-down li li.menupa
 
 ul#nice-menu-1 > li {
   margin-right: 22px; }
+  @media (max-width: 991.98px) {
+    ul#nice-menu-1 > li {
+      margin-right: 10px; } }
 
 .left-menu-trigger {
   position: absolute;
@@ -10885,7 +10891,7 @@ ul#nice-menu-1 > li {
 
 @media (max-width: 700px) {
   #logo-title {
-    margin-left: 5px; } }
+    margin-left: 54px; } }
 
 @media (max-width: 700px) {
   .sidebar-menu {
@@ -10972,6 +10978,9 @@ li.menu-1839.menu-path-front.first.odd.menu-item-0 {
 
 ul#nice-menu-3 li {
   margin-right: 22px; }
+  @media (max-width: 991.98px) {
+    ul#nice-menu-3 li {
+      margin-right: 10px; } }
 
 .header-menu {
   width: 80%; }
