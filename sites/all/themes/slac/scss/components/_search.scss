@@ -113,3 +113,63 @@
 div#mobile-search-box {
   display: none;
 }
+
+@media (max-width: 500px) {
+  .mobile-search-box .pane-content {
+      padding: 5px 0 12px;
+      background: #8e001a;
+      border-top: 1px solid #fff;
+      overflow: hidden;
+  }
+
+  .mobile-search-box .form-text {
+    height: 35px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #aaa;
+    width: 100%;
+  }
+
+  .mobile-search-box #slac-search-button {
+    float: right;
+    width: 30%;
+    max-width: 70px;
+  }
+
+  .mobile-search-box #slac-search-options {
+    display: block;
+    overflow: hidden;
+    float: left;
+    clear: both;
+    width: 59%;
+    padding: 0 3%;
+    border: 2px solid #f2f2f2;
+    background: #f2f2f2;
+    height: 28px;
+    position: static;
+  }
+
+  .mobile-search-box .form-submit {
+    background: #8c8b8b;
+    border: none;
+    height: 39px;
+    padding: 0;
+    color: #fff;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.header-search {
+  width: 20%;
+}
+
+.header-section .container {
+  @media (max-width: 700px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+

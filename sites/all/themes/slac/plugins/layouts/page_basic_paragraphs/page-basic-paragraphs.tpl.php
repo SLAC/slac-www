@@ -21,6 +21,11 @@
       <?php print $content['menu']; ?>
     <?php endif ?>
   </div>
+  <?php if ($content['menu-responsive']): ?>
+  <div class="sidebar-menu-right">
+      <?php print $content['menu-responsive']; ?>
+  </div>
+  <?php endif ?>
   <div class="page-content">
     <div class="header-section">
       <div class="container">

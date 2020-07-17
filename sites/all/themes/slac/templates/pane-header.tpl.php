@@ -19,7 +19,7 @@
  ?>
 <div id="header">
   <div class="section clearfix row page-basic header inside">
-    <div class="col-md-9">
+    <div class="header-menu">
     <div id="logo-title">
 
       <?php if (!empty($logo)): ?>
@@ -56,7 +56,7 @@
       <?php endif; ?>
     </div>
   </div>
-    <div class="col-md-3">
+    <div class="header-search">
     <?php if (!empty($search_box)): ?>
       <div id="search-box"><?php print $search_box; ?></div>
     <?php endif; ?>

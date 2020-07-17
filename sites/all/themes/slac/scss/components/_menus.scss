@@ -66,65 +66,101 @@ ul#nice-menu-1 > li {
   }
 }
 
+.right-menu-trigger {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    background: #bebebe url(../img/mobile-menu.png) no-repeat center center;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+
+  @media (max-width: 700px) {
+    display: block;
+  }
+}
+
 ul#nice-menu-1 {
   @media (max-width: 700px) {
     display: none;
   }
 }
 
-div#logo-title {
+#logo-title {
   @media (max-width: 700px) {
-    margin-left: 20px;
+    margin-left: 5px;
   }
 }
 
-.page-basic .sidebar-menu {
-  display: none;
-
+.sidebar-menu {
   @media (max-width: 700px) {
     position: absolute;
     left: 0;
     top: 0;
     width: 30%;
-    display: block;
+    display: block !important;
   }
 }
 
-.sidebar-menu ul li {
-  background: #fff;
-  border-bottom: 2px solid #b4b3b3;
-  width: 100%;
+.sidebar-menu-right {
+  @media (max-width: 700px) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    display: block !important;
+  }
 }
 
-.sidebar-menu ul ul {
+.sidebar-menu,.sidebar-menu-right {
+  display: none;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    background: #fff;
+    border-bottom: 2px solid #b4b3b3;
+    width: 100%;
+  }
+
+  ul ul {
     display: none;
+  }
+
+  a {
+    width: 90%;
+    padding: 12px 5%;
+    height: 16px;
+    display: block;
+    text-transform: uppercase;
+    color: #444;
+    height: auto;
+    font-size: 12px;
+  }
 }
 
-.sidebar-menu a {
-  width: 90%;
-  padding: 12px 5%;
-  height: 16px;
-  display: block;
-  text-transform: uppercase;
-  color: #444;
-  height: auto;
-  font-size: 12px;
+.cta {
+  @media (max-width: 700px) {
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
 }
 
 .page-basic {
   @media (max-width: 700px) {
     overflow: hidden;
     position: relative;
-    background: #ddd;
+  }
+}
 
-    .sidebar-menu ul {
-      margin: 0;
-      padding: 0;
-
-      .menu ul {
-        display: none;
-      }
-    }
+.pane-nice-menus-3 {
+  @media (max-width: 700px) {
+    display: none;
   }
 }
 
@@ -135,7 +171,7 @@ div#logo-title {
 .site-icon {
   padding: 10px 0;
   text-align: center;
-  margin-left: 50px;
+  margin-left: 40px;
 
   @include media-breakpoint-down(md) {
     margin-left: 10px;
@@ -169,14 +205,14 @@ li.menu-1839.menu-path-front.first.odd.menu-item-0 {
   display: none;
 }
 
-ul.nice-menu-down {
-  padding-left: 10px;
-}
-
 .nav-secondary {
   margin-left: 15px;
 }
 
 ul#nice-menu-3 li {
   margin-right: 22px;
+}
+
+.header-menu {
+  width: 80%;
 }

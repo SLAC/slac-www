@@ -133,6 +133,7 @@ function slac_virtual_default_page_manager_handlers() {
       'secondnav' => NULL,
       'icon' => NULL,
       'cta' => NULL,
+      'menu-responsive' => NULL,
     ),
   );
   $display->cache = array();
@@ -345,6 +346,29 @@ function slac_virtual_default_page_manager_handlers() {
   $pane->uuid = 'bbcfea11-0937-4ace-96ed-1b7315011ec4';
   $display->content['new-bbcfea11-0937-4ace-96ed-1b7315011ec4'] = $pane;
   $display->panels['menu'][0] = 'new-bbcfea11-0937-4ace-96ed-1b7315011ec4';
+  $pane = new stdClass();
+  $pane->pid = 'new-68924196-0d08-426f-9b2f-2e35cfb14f3a';
+  $pane->panel = 'menu-responsive';
+  $pane->type = 'block';
+  $pane->subtype = 'menu-menu-virtual-tour';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '<none>',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '68924196-0d08-426f-9b2f-2e35cfb14f3a';
+  $display->content['new-68924196-0d08-426f-9b2f-2e35cfb14f3a'] = $pane;
+  $display->panels['menu-responsive'][0] = 'new-68924196-0d08-426f-9b2f-2e35cfb14f3a';
   $pane = new stdClass();
   $pane->pid = 'new-8a2845ce-15f1-4d10-92bb-5696b75cefaa';
   $pane->panel = 'search';

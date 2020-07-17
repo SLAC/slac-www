@@ -21,10 +21,15 @@
   }
 }
 
-.page-basic .pane-pane-header .col-md-9 {
+#header {
     background: #8c1515;
     overflow: hidden;
     height: 80px;
+
+  @media only screen and (max-width: 700px) {
+    background-position: 230px center;
+    height: 42px;
+  }
 
   @media only screen and (min-width: 700px) {
     background: #8c1515 url(../img/header-connectors_clean.png) no-repeat 230px 0;

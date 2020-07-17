@@ -13,6 +13,7 @@ $plugin = array(
   'css' => 'page_basic_paragraphs.css',
   'regions' => array(
     'menu' => t('Responsive menu'),
+    'menu-responsive' => t('Secondary Responsive menu'),
     'header' => t('Header'),
     'search' => t('Search'),
     'mainnav' => t('Main Nav'),
