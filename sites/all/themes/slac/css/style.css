@@ -11102,6 +11102,9 @@ ul#nice-menu-3 li {
   float: right;
   position: relative;
   margin-top: 11px; }
+  @media (max-width: 500px) {
+    #search-box {
+      display: none; } }
   #search-box .form-item {
     margin: 0;
     outline: none;

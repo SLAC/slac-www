@@ -5,6 +5,10 @@
   position: relative;
   margin-top: 11px;
 
+  @media (max-width: 500px) {
+    display: none;
+  }
+
   .form-item {
     margin: 0;
     outline: none;
