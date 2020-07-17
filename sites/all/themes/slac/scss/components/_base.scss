@@ -30,7 +30,7 @@ h2 {
   &:before {
     margin: 0 auto;
     content: '';
-    border-bottom: 1px solid #fb3449;
+    border-bottom: 1px solid $red;
     width: 200px;
     display: block;
     margin-bottom: 30px;
@@ -190,4 +190,10 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   .container, .container-sm, .container-md {
       max-width: 100%;
   }
+}
+
+.page-content {
+  position: relative;
+  z-index: 99;
+  background: $white;
 }

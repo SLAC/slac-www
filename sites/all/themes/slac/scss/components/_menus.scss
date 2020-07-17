@@ -59,6 +59,7 @@ ul#nice-menu-1 > li {
     background: #bebebe url(../img/mobile-menu.png) no-repeat center center;
     cursor: pointer;
     display: none;
+    z-index: 1;
 
   @media (max-width: 700px) {
     display: block;
@@ -68,6 +69,12 @@ ul#nice-menu-1 > li {
 ul#nice-menu-1 {
   @media (max-width: 700px) {
     display: none;
+  }
+}
+
+div#logo-title {
+  @media (max-width: 700px) {
+    margin-left: 20px;
   }
 }
 
@@ -83,21 +90,25 @@ ul#nice-menu-1 {
   }
 }
 
-.sidebar-menu .menu li {
+.sidebar-menu ul li {
   background: #fff;
   border-bottom: 2px solid #b4b3b3;
+  width: 100%;
 }
 
-.sidebar-menu .menu a {
-  height: auto;
+.sidebar-menu ul ul {
+    display: none;
 }
-.sidebar-menu .menu a {
+
+.sidebar-menu a {
   width: 90%;
   padding: 12px 5%;
   height: 16px;
   display: block;
   text-transform: uppercase;
   color: #444;
+  height: auto;
+  font-size: 12px;
 }
 
 .page-basic {
@@ -152,10 +163,6 @@ ul#nice-menu-1 {
     margin: 0;
     padding: 0;
   }
-}
-
-.sidebar-menu .menu ul {
-  display: none;
 }
 
 li.menu-1839.menu-path-front.first.odd.menu-item-0 {
