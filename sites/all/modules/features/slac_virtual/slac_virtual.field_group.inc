@@ -24,6 +24,7 @@ function slac_virtual_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_structured_content',
+      1 => 'field_header_image',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

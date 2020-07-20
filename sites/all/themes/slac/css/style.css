@@ -8086,6 +8086,10 @@ div#logo-title img {
 .cta {
   margin-left: auto; }
 
+.header-image img {
+  width: 100%;
+  height: auto; }
+
 /*!
  * animate.css -https://daneden.github.io/animate.css/
  * Version - 3.7.2
