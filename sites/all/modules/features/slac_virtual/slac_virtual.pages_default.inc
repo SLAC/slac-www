@@ -277,16 +277,20 @@ function slac_virtual_default_page_manager_handlers() {
   $display->content['new-951b6de8-2f17-4d01-ac88-5e514d6303e9'] = $pane;
   $display->panels['header'][1] = 'new-951b6de8-2f17-4d01-ac88-5e514d6303e9';
   $pane = new stdClass();
-  $pane->pid = 'new-833c33bb-381a-4419-8961-8bea5b63c9d0';
+  $pane->pid = 'new-f7b60321-72e6-48bb-b5a6-7fc04be7f02c';
   $pane->panel = 'icon';
-  $pane->type = 'block';
-  $pane->subtype = 'block-9';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '<none>',
-    'override_title_heading' => 'h2',
+    'admin_title' => 'Site Icon',
+    'title' => '<none>',
+    'title_heading' => 'h2',
+    'body' => '<p><img src="/sites/all/themes/slac/img/slac_laser_icon.png"></p>
+',
+    'format' => 'full_html',
+    'substitute' => 1,
   );
   $pane->cache = array();
   $pane->style = array(
@@ -296,9 +300,9 @@ function slac_virtual_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '833c33bb-381a-4419-8961-8bea5b63c9d0';
-  $display->content['new-833c33bb-381a-4419-8961-8bea5b63c9d0'] = $pane;
-  $display->panels['icon'][0] = 'new-833c33bb-381a-4419-8961-8bea5b63c9d0';
+  $pane->uuid = 'f7b60321-72e6-48bb-b5a6-7fc04be7f02c';
+  $display->content['new-f7b60321-72e6-48bb-b5a6-7fc04be7f02c'] = $pane;
+  $display->panels['icon'][0] = 'new-f7b60321-72e6-48bb-b5a6-7fc04be7f02c';
   $pane = new stdClass();
   $pane->pid = 'new-20fb470d-85f3-4943-a417-b11eeff1a058';
   $pane->panel = 'mainnav';

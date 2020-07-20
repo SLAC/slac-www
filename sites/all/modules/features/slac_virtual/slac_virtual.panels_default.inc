@@ -166,16 +166,20 @@ function slac_virtual_default_panels_mini() {
   $display->content['new-7412ec06-81ce-492d-852b-4f33f6e86e5a'] = $pane;
   $display->panels['center'][2] = 'new-7412ec06-81ce-492d-852b-4f33f6e86e5a';
   $pane = new stdClass();
-  $pane->pid = 'new-9a7ec135-29ef-49eb-8890-3d2fc7de3b98';
+  $pane->pid = 'new-8a18e29b-fccf-43b6-8d85-3347014d9109';
   $pane->panel = 'footer_logo';
-  $pane->type = 'block';
-  $pane->subtype = 'block-8';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '<none>',
-    'override_title_heading' => 'h2',
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<div id="social-channels"><a href="https://www.linkedin.com/company/slac-national-accelerator-laboratory" rel="noopener" style="background:#0077b5;" target="_blank" title="SLAC on Linkedin"><img src="/sites/all/themes/slac/img/linkedin.svg"></a><a href="https://www.youtube.com/user/SLAC" rel="noopener" style="background:#cd201f;" target="_blank" title="SLAC\'s YouTube Channel"><img src="/sites/all/themes/slac/img/youtube.svg"></a><a href="https://www.flickr.com/photos/slaclab" rel="noopener" style="background:#0063dc;" target="_blank" title="SLAC\'s Flickr Album"><img src="/sites/all/themes/slac/img/flickr.svg"></a><a href="https://www.instagram.com/slac_lab/" rel="noopener" style="background: linear-gradient( #400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);" target="_blank" title="SLAC on Instagram"><img src="/sites/all/themes/slac/img/instagram.svg"></a><a href="https://twitter.com/slaclab" rel="noopener" style="background:#55acee;" target="_blank" title="SLAC\'s Twitter Feed"><img src="/sites/all/themes/slac/img/twitter.svg"></a><a href="https://www.facebook.com/SLAC.National.Lab" rel="noopener" style="background:#3b5998;" target="_blank" title="SLAC on Facebook"><img src="/sites/all/themes/slac/img/fb.svg"></a></div>
+',
+    'format' => 'full_html',
+    'substitute' => TRUE,
   );
   $pane->cache = array();
   $pane->style = array(
@@ -185,9 +189,9 @@ function slac_virtual_default_panels_mini() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '9a7ec135-29ef-49eb-8890-3d2fc7de3b98';
-  $display->content['new-9a7ec135-29ef-49eb-8890-3d2fc7de3b98'] = $pane;
-  $display->panels['footer_logo'][0] = 'new-9a7ec135-29ef-49eb-8890-3d2fc7de3b98';
+  $pane->uuid = '8a18e29b-fccf-43b6-8d85-3347014d9109';
+  $display->content['new-8a18e29b-fccf-43b6-8d85-3347014d9109'] = $pane;
+  $display->panels['footer_logo'][0] = 'new-8a18e29b-fccf-43b6-8d85-3347014d9109';
   $pane = new stdClass();
   $pane->pid = 'new-874029d1-aee3-4bcc-a7b6-26067c9a735b';
   $pane->panel = 'footer_logo';
