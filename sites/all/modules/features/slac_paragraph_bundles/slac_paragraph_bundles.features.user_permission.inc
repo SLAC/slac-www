@@ -170,6 +170,30 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content timeline'.
+  $permissions['create paragraph content timeline'] = array(
+    'name' => 'create paragraph content timeline',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content timeline_bundler'.
+  $permissions['create paragraph content timeline_bundler'] = array(
+    'name' => 'create paragraph content timeline_bundler',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content video'.
   $permissions['create paragraph content video'] = array(
     'name' => 'create paragraph content video',
@@ -336,6 +360,30 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'delete paragraph content simple_bootstrap'.
   $permissions['delete paragraph content simple_bootstrap'] = array(
     'name' => 'delete paragraph content simple_bootstrap',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content timeline'.
+  $permissions['delete paragraph content timeline'] = array(
+    'name' => 'delete paragraph content timeline',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content timeline_bundler'.
+  $permissions['delete paragraph content timeline_bundler'] = array(
+    'name' => 'delete paragraph content timeline_bundler',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -520,6 +568,29 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content timeline'.
+  $permissions['update paragraph content timeline'] = array(
+    'name' => 'update paragraph content timeline',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content timeline_bundler'.
+  $permissions['update paragraph content timeline_bundler'] = array(
+    'name' => 'update paragraph content timeline_bundler',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content video'.
   $permissions['update paragraph content video'] = array(
     'name' => 'update paragraph content video',
@@ -697,6 +768,26 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'view paragraph content simple_bootstrap'.
   $permissions['view paragraph content simple_bootstrap'] = array(
     'name' => 'view paragraph content simple_bootstrap',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content timeline'.
+  $permissions['view paragraph content timeline'] = array(
+    'name' => 'view paragraph content timeline',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content timeline_bundler'.
+  $permissions['view paragraph content timeline_bundler'] = array(
+    'name' => 'view paragraph content timeline_bundler',
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',

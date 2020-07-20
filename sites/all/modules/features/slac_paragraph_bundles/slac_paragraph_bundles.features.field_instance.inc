@@ -884,7 +884,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -922,7 +922,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
           'view_mode' => 'full',
@@ -944,6 +944,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
+        'blank' => -1,
         'block' => -1,
         'blockquote' => -1,
         'card' => -1,
@@ -956,9 +957,11 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'simple' => -1,
         'simple_bootstrap' => 'simple_bootstrap',
         'video' => -1,
+        'video_bootstrap' => -1,
         'view' => 'view',
       ),
       'bundle_weights' => array(
+        'blank' => 16,
         'block' => 2,
         'blockquote' => 3,
         'card' => 4,
@@ -971,9 +974,10 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'simple' => 11,
         'simple_bootstrap' => 12,
         'video' => 13,
+        'video_bootstrap' => 29,
         'view' => 14,
       ),
-      'default_edit_mode' => 'open',
+      'default_edit_mode' => 'closed',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -1000,7 +1004,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -1042,7 +1046,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -1748,6 +1752,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
+        'blank' => -1,
         'block' => -1,
         'blockquote' => -1,
         'card' => -1,
@@ -1759,10 +1764,14 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'image_bootstrap' => 'image_bootstrap',
         'simple' => -1,
         'simple_bootstrap' => 'simple_bootstrap',
+        'timeline' => -1,
+        'timeline_bundler' => -1,
         'video' => 'video',
+        'video_bootstrap' => -1,
         'view' => 'view',
       ),
       'bundle_weights' => array(
+        'blank' => 16,
         'block' => 2,
         'blockquote' => 3,
         'card' => 4,
@@ -1774,7 +1783,10 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'image_bootstrap' => 10,
         'simple' => 11,
         'simple_bootstrap' => 12,
+        'timeline' => -34,
+        'timeline_bundler' => -34,
         'video' => 13,
+        'video_bootstrap' => 29,
         'view' => 14,
       ),
       'default_edit_mode' => 'open',
@@ -2556,6 +2568,212 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-timeline-field_background_image'.
+  $field_instances['paragraphs_item-timeline-field_background_image'] = array(
+    'bundle' => 'timeline',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image_url_formatter',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+          'url_type' => '',
+        ),
+        'type' => 'image_url',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_background_image',
+    'label' => 'Background Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'crop_landscape' => 0,
+          'crop_portrait' => 0,
+          'crop_square' => 0,
+          'ecrop_frontpage_carousel' => 0,
+          'ecrop_frontpage_headlines' => 0,
+          'ecrop_frontpage_headlines_small' => 0,
+          'ecrop_igp' => 0,
+          'ecrop_news_center' => 0,
+          'frontpage-headline' => 0,
+          'lightbox_text_bottom' => 0,
+          'lightbox_text_left_right' => 0,
+          'news_thumbnail_headlines_center' => 0,
+        ),
+      ),
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'image_field_caption' => 0,
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 0,
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-timeline-field_text'.
+  $field_instances['paragraphs_item-timeline-field_text'] = array(
+    'bundle' => 'timeline',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_text',
+    'label' => 'Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-timeline_bundler-field_structured_content'.
+  $field_instances['paragraphs_item-timeline_bundler-field_structured_content'] = array(
+    'bundle' => 'timeline_bundler',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_structured_content',
+    'label' => 'Structured Content',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'blank' => -1,
+        'block' => -1,
+        'blockquote' => -1,
+        'card' => -1,
+        'card_wrapper' => -1,
+        'column_wrapper' => -1,
+        'columns' => -1,
+        'hero' => -1,
+        'image' => -1,
+        'image_bootstrap' => -1,
+        'simple' => -1,
+        'simple_bootstrap' => -1,
+        'timeline' => 'timeline',
+        'timeline_bundler' => -1,
+        'video' => -1,
+        'video_bootstrap' => -1,
+        'view' => -1,
+      ),
+      'bundle_weights' => array(
+        'blank' => 2,
+        'block' => 3,
+        'blockquote' => 4,
+        'card' => 5,
+        'card_wrapper' => 6,
+        'column_wrapper' => 8,
+        'columns' => 7,
+        'hero' => 9,
+        'image' => 10,
+        'image_bootstrap' => 11,
+        'simple' => 12,
+        'simple_bootstrap' => 13,
+        'timeline' => 14,
+        'timeline_bundler' => 15,
+        'video' => 16,
+        'video_bootstrap' => 17,
+        'view' => 18,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-video-field_pvideo'.
   $field_instances['paragraphs_item-video-field_pvideo'] = array(
     'bundle' => 'video',
@@ -3130,6 +3348,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
   t('Paragraph Width');
   t('Parallax');
   t('Reverse order on Mobile');
+  t('Structured Content');
   t('Text');
   t('Video');
   t('View');

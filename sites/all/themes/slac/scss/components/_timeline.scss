@@ -1,0 +1,20 @@
+ul.time-line {
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+    max-width: 760px;
+
+    li.item.timeline {
+    background: #4D4F53;
+    color: #fff;
+    margin: 0 5%;
+    width: 40%;
+    float: left;
+    padding: 30px;
+    border-radius: 8px;
+  }
+}
+
+li.item.timeline:nth-of-type(even) {
+  margin-top: 40px !important;
+}

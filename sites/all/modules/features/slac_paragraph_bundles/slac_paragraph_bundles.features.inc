@@ -78,6 +78,16 @@ function slac_paragraph_bundles_paragraphs_info() {
       'bundle' => 'simple_bootstrap',
       'locked' => '1',
     ),
+    'timeline' => array(
+      'name' => 'Timeline',
+      'bundle' => 'timeline',
+      'locked' => '1',
+    ),
+    'timeline_bundler' => array(
+      'name' => 'Timeline Bundler',
+      'bundle' => 'timeline_bundler',
+      'locked' => '1',
+    ),
     'video' => array(
       'name' => 'Video',
       'bundle' => 'video',

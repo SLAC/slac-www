@@ -276,6 +276,7 @@ function slac_virtual_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
+        'blank' => -1,
         'block' => -1,
         'blockquote' => -1,
         'card' => -1,
@@ -287,11 +288,14 @@ function slac_virtual_field_default_field_instances() {
         'image_bootstrap' => 'image_bootstrap',
         'simple' => -1,
         'simple_bootstrap' => 'simple_bootstrap',
+        'timeline' => -1,
+        'timeline_bundler' => 'timeline_bundler',
         'video' => -1,
         'video_bootstrap' => 'video_bootstrap',
         'view' => 'view',
       ),
       'bundle_weights' => array(
+        'blank' => 25,
         'block' => 2,
         'blockquote' => 3,
         'card' => 13,
@@ -303,6 +307,8 @@ function slac_virtual_field_default_field_instances() {
         'image_bootstrap' => 6,
         'simple' => 7,
         'simple_bootstrap' => 8,
+        'timeline' => -34,
+        'timeline_bundler' => -34,
         'video' => 9,
         'video_bootstrap' => -28,
         'view' => 23,
