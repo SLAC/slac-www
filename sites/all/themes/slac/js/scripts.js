@@ -99,12 +99,14 @@
 						.parents('.page-basic').find('> div:not(.sidebar-menu-right)').stop(true,true).animate({
 							'marginRight': '0'
 						})
+						$this.css('top', '42px');
 					} else{
 						$this
 						.addClass('right-menu-active')
 						.parents('.page-basic').find('> div:not(.sidebar-menu-right)').stop(true,true).animate({
 							'marginRight': '30%'
 						})
+						$this.css('top', '123px');
 					}
 				});
 
