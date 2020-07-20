@@ -36,7 +36,11 @@
           yPos = -((docViewTop / speed) + offset);
           coords = '50% '+ yPos + 'px';
 
-          $backgroundObj.css('background-position', coords );
+          if($(window).width() > 992) {
+            $backgroundObj.css('background-position', coords);
+          } else {
+            $backgroundObj.css('background-position', '');
+          }
         }
       });
     });

@@ -13,9 +13,6 @@
         // Check if class exists, then initialize WOW object.
         new WOW().init();
       }
-      if($(window).width() > 992){
-      	$('.paragraph--type--xeno-hero').removeAttr('data-speed');
-      }
     });
 
 	Drupal.behaviors.search = {
@@ -61,8 +58,10 @@
 					var $this = $('#mobile-search-box');
 					if( $this.is(':visible') ){
 						$this.slideUp('fast');
+						$('.right-menu-trigger').css('top', '42px');
 					} else{
 						$this.slideDown('fast');
+						$('.right-menu-trigger').css('top', '123px');
 					}
 				});
 
@@ -99,14 +98,12 @@
 						.parents('.page-basic').find('> div:not(.sidebar-menu-right)').stop(true,true).animate({
 							'marginRight': '0'
 						})
-						$this.css('top', '42px');
 					} else{
 						$this
 						.addClass('right-menu-active')
 						.parents('.page-basic').find('> div:not(.sidebar-menu-right)').stop(true,true).animate({
 							'marginRight': '30%'
 						})
-						$this.css('top', '123px');
 					}
 				});
 
