@@ -13,6 +13,9 @@
         // Check if class exists, then initialize WOW object.
         new WOW().init();
       }
+      if($(window).width() > 992){
+      	$('.paragraph--type--xeno-hero').removeAttr('data-speed');
+      }
     });
 
 	Drupal.behaviors.search = {
