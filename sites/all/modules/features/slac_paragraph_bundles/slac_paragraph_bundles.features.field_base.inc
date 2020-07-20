@@ -488,10 +488,10 @@ function slac_paragraph_bundles_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'padding-top--off' => 'Off',
-        'padding-top--sm' => 'Normal',
-        'padding-top--md' => 'Medium',
-        'padding-top--lg' => 'Large',
+        'padding-bottom--off' => 'Off',
+        'padding-bottom--sm' => 'Normal',
+        'padding-bottom--md' => 'Medium',
+        'padding-bottom--lg' => 'Large',
       ),
       'allowed_values_function' => '',
     ),
