@@ -5,6 +5,8 @@
  * Paragraphs item template.
  */
 ?>
-<ul class="time-line">
-  <?php print render($content); ?>
-</ul>
+<div class="time-line-container">
+  <ul class="time-line">
+    <?php print render($content); ?>
+  </ul>
+</div>
