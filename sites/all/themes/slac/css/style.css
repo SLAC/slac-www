@@ -11298,6 +11298,14 @@ ul.time-line {
 li.item.timeline:nth-of-type(even) {
   margin-top: 40px !important; }
 
+.time-line-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
 .card-header {
   background: #D8D8D8;
   text-align: center;

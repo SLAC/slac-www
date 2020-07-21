@@ -2568,90 +2568,6 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-timeline-field_background_image'.
-  $field_instances['paragraphs_item-timeline-field_background_image'] = array(
-    'bundle' => 'timeline',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image_url_formatter',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-          'url_type' => '',
-        ),
-        'type' => 'image_url',
-        'weight' => 1,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_background_image',
-    'label' => 'Background Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'epsacrop' => array(
-        'styles' => array(
-          'crop_landscape' => 0,
-          'crop_portrait' => 0,
-          'crop_square' => 0,
-          'ecrop_frontpage_carousel' => 0,
-          'ecrop_frontpage_headlines' => 0,
-          'ecrop_frontpage_headlines_small' => 0,
-          'ecrop_igp' => 0,
-          'ecrop_news_center' => 0,
-          'frontpage-headline' => 0,
-          'lightbox_text_bottom' => 0,
-          'lightbox_text_left_right' => 0,
-          'news_thumbnail_headlines_center' => 0,
-        ),
-      ),
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'image_field_caption' => 0,
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'private' => 0,
-          'public' => 'public',
-          'vimeo' => 0,
-          'youtube' => 0,
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 0,
-          'upload' => 'upload',
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => 34,
-    ),
-  );
-
   // Exported field_instance: 'paragraphs_item-timeline-field_text'.
   $field_instances['paragraphs_item-timeline-field_text'] = array(
     'bundle' => 'timeline',
@@ -2678,7 +2594,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
     'label' => 'Text',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

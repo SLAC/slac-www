@@ -1,8 +1,8 @@
 ul.time-line {
-    margin: 0 auto;
-    list-style: none;
-    padding-left: 0;
-    max-width: 760px;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  max-width: 760px;
 
     li.item.timeline {
     background: #4D4F53;
@@ -17,4 +17,13 @@ ul.time-line {
 
 li.item.timeline:nth-of-type(even) {
   margin-top: 40px !important;
+}
+
+.time-line-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

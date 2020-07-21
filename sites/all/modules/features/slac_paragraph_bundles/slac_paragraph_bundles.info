@@ -123,7 +123,6 @@ features[field_instance][] = paragraphs_item-simple_bootstrap-field_padding_bott
 features[field_instance][] = paragraphs_item-simple_bootstrap-field_padding_top
 features[field_instance][] = paragraphs_item-simple_bootstrap-field_paragraph_width
 features[field_instance][] = paragraphs_item-simple_bootstrap-field_text
-features[field_instance][] = paragraphs_item-timeline-field_background_image
 features[field_instance][] = paragraphs_item-timeline-field_text
 features[field_instance][] = paragraphs_item-timeline_bundler-field_background_image
 features[field_instance][] = paragraphs_item-timeline_bundler-field_structured_content
