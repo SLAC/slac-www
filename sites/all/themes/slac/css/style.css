@@ -10855,6 +10855,11 @@ ul#nice-menu-1 li.menuparent:hover {
 ul#nice-menu-1 ul, ul.nice-menu li.menuparent ul, ul.nice-menu-down li li.menuparent {
   background: #8C191C; }
 
+ul#nice-menu-3 {
+  padding-left: 8px; }
+  ul#nice-menu-3 li {
+    text-transform: none; }
+
 ul#nice-menu-1 > li {
   margin-right: 22px; }
   @media (max-width: 991.98px) {

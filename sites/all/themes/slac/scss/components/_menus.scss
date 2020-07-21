@@ -50,6 +50,14 @@ ul#nice-menu-1 ul,ul.nice-menu li.menuparent ul,ul.nice-menu-down li li.menupare
   background: $red;
 }
 
+ul#nice-menu-3 {
+  padding-left: 8px;
+
+  li {
+    text-transform: none;
+  }
+}
+
 ul#nice-menu-1 > li {
   margin-right: 22px;
 
