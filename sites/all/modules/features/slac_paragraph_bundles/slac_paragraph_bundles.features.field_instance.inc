@@ -533,6 +533,63 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-card-field_paragraph_link'.
+  $field_instances['paragraphs_item-card-field_paragraph_link'] = array(
+    'bundle' => 'card',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_plain',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_link',
+    'label' => 'Link',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 36,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-card_wrapper-field_animation'.
   $field_instances['paragraphs_item-card_wrapper-field_animation'] = array(
     'bundle' => 'card_wrapper',
@@ -2210,6 +2267,64 @@ function slac_paragraph_bundles_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-image_bootstrap-field_paragraph_link'.
+  $field_instances['paragraphs_item-image_bootstrap-field_paragraph_link'] = array(
+    'bundle' => 'image_bootstrap',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_plain',
+        'weight' => 6,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_link',
+    'label' => 'Link',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-image_bootstrap-field_paragraph_width'.
   $field_instances['paragraphs_item-image_bootstrap-field_paragraph_width'] = array(
     'bundle' => 'image_bootstrap',
@@ -3342,6 +3457,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
   t('If this is "on", the layout options will also need to be reversed. Example: For mobile we want an image in Column 1 to be first (top), with text in Column 2 last (bottom). We then want a two-third/one-third layout for desktop, with text first (left), image second (right). Turn "Reverse" to "on", but then choose the "Layout 33/67%" to achieve the desired result.');
   t('Image');
   t('Invert');
+  t('Link');
   t('Offset');
   t('Overlay');
   t('Padding Bottom');

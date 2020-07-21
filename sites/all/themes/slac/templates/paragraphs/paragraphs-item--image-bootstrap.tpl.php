@@ -11,6 +11,7 @@ $padding_top = '';
 $padding_bottom = '';
 $animation = '';
 $animation_setting = '';
+$link = '';
 
 if (!empty($content['field_paragraph_width'])) {
     $width = trim(strip_tags(render($content['field_paragraph_width'])));
@@ -30,6 +31,9 @@ if (!empty($content['field_animation'])) {
 if (!empty($content['field_animation_setting'])) {
     $animation_setting = trim(strip_tags(render($content['field_animation_setting'])));
 }
+if (!empty($content['field_paragraph_link'])) {
+    $link = trim(strip_tags(render($content['field_paragraph_link'])));
+}
 
 $classes = 'paragraph paragraph--type--image paragraph--view-mode--default ' . $background . ' ' . $width;
 $paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_bottom . ' ' . $animation . ' ' . $animation_setting;
@@ -38,6 +42,10 @@ $paragraphclass = 'paragraph__column row ' . $padding_top . ' ' . $padding_botto
 
 <div class="<?php print $classes; ?>">
 <div class="<?php print $paragraphclass; ?>">
-    <?php print render($content['field_image']); ?>
+    <?php if ($link) : ?>
+        <a href="<?php print $link; ?>"><?php print render($content['field_image']); ?></a>
+    <?php else: ?>
+        <?php print render($content['field_image']); ?>
+    <?php endif; ?>
 </div>
 </div>
