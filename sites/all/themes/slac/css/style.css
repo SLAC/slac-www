@@ -10662,8 +10662,7 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
       flex: 0 0 33.3333333333%;
       max-width: 33.3333333333%; } }
 
-.panels-flexible-region.panels-flexible-region-new-footer_logo.panels-flexible-region-last
-.panel-flexible-inside.panels-flexible-138-inside {
+.panel-flexible-inside.panels-flexible-new-inside {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -11288,7 +11287,7 @@ ul.time-line {
   padding-left: 0;
   max-width: 760px; }
   ul.time-line li.item.timeline {
-    background: #4D4F53;
+    background: rgba(77, 79, 83, 0.75);
     color: #fff;
     margin: 0 5%;
     width: 40%;
