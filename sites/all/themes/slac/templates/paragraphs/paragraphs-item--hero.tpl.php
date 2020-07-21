@@ -30,7 +30,7 @@ $classes = 'paragraph paragraph--type--xeno-hero paragraph--view-mode--default '
 
 ?>
 
-<div class="<?php print $classes; ?>" data-overlay="<?php print $overlay; ?>" data-speed="<?php print $parallax; ?>" data-offset="<?php print $offset; ?>">
+<div class="<?php print $classes; ?>" <?php if ($overlay) print 'data-overlay="' . $overlay . '"'; ?> data-speed="<?php print $parallax; ?>" data-offset="<?php print $offset; ?>">
     <?php
     if (!empty($content['field_background_image'])) {
         echo '<div class="paragraph--type--xeno-hero__image">';
