@@ -32,6 +32,7 @@ features[field_group][] = group_photos|node|paragraph_layout_page|form
 features[field_instance][] = node-paragraph_layout_page-field_header_image
 features[field_instance][] = node-paragraph_layout_page-field_image_for_gallery
 features[field_instance][] = node-paragraph_layout_page-field_structured_content
+features[image][] = photo_gallery_cropped
 features[menu_custom][] = menu-virtual-tour
 features[node][] = paragraph_layout_page
 features[page_manager_handlers][] = site_template__virtual

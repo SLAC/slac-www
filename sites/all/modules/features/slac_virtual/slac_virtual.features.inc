@@ -30,6 +30,31 @@ function slac_virtual_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function slac_virtual_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: photo_gallery_cropped.
+  $styles['photo_gallery_cropped'] = array(
+    'label' => 'Photo Gallery Cropped',
+    'effects' => array(
+      51 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 800,
+          'height' => 600,
+          'retinafy' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function slac_virtual_node_info() {
