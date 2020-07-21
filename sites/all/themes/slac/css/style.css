@@ -10856,7 +10856,8 @@ ul#nice-menu-1 ul, ul.nice-menu li.menuparent ul, ul.nice-menu-down li li.menupa
   background: #8C191C; }
 
 ul#nice-menu-3 {
-  padding-left: 8px; }
+  padding-left: 8px;
+  z-index: 0; }
   ul#nice-menu-3 li {
     text-transform: none; }
 
