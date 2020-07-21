@@ -11368,8 +11368,8 @@ li.item.timeline:nth-of-type(even) {
   background-repeat: no-repeat;
   float: left;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
 
 .card-header {
   background: #D8D8D8;
