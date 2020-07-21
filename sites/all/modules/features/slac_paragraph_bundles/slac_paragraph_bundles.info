@@ -125,6 +125,7 @@ features[field_instance][] = paragraphs_item-simple_bootstrap-field_paragraph_wi
 features[field_instance][] = paragraphs_item-simple_bootstrap-field_text
 features[field_instance][] = paragraphs_item-timeline-field_background_image
 features[field_instance][] = paragraphs_item-timeline-field_text
+features[field_instance][] = paragraphs_item-timeline_bundler-field_background_image
 features[field_instance][] = paragraphs_item-timeline_bundler-field_structured_content
 features[field_instance][] = paragraphs_item-video-field_pvideo
 features[field_instance][] = paragraphs_item-video-field_width
