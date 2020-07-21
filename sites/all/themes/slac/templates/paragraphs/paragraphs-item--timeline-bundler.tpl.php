@@ -4,7 +4,7 @@
  * @file
  * Paragraphs item template.
  */
-$bg_image = render($content['field_background_image']);
+$bg_image = trim(strip_tags(render($content['field_background_image'])));
 ?>
 <div class="time-line-container">
   <ul class="time-line" style="background-image:url('<?php print $bg_image; ?>');">
