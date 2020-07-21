@@ -10650,7 +10650,7 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
       flex: 0 0 66.6666666667%;
       max-width: 66.6666666667%; } }
 
-.panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
+.panels-flexible-region.panels-flexible-region-new-footer_logo.panels-flexible-region-last {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -10658,10 +10658,11 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   flex: 0 0 100%;
   max-width: 100%; }
   @media (min-width: 768px) {
-    .panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
+    .panels-flexible-region.panels-flexible-region-new-footer_logo.panels-flexible-region-last {
       flex: 0 0 33.3333333333%;
       max-width: 33.3333333333%; } }
 
+.panels-flexible-region.panels-flexible-region-new-footer_logo.panels-flexible-region-last
 .panel-flexible-inside.panels-flexible-138-inside {
   display: flex;
   flex-wrap: wrap;

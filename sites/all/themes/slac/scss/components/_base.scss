@@ -145,13 +145,15 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   }
 }
 
-.panels-flexible-region.panels-flexible-region-138-footer_logo.panels-flexible-region-last {
+.panels-flexible-region.panels-flexible-region-new-footer_logo.panels-flexible-region-last {
   @include make-col-ready;
   @include make-col(12);
   @include media-breakpoint-up(md) {
     @include make-col(4);
   }
 }
+
+.panels-flexible-region.panels-flexible-region-new-footer_logo.panels-flexible-region-last
 
 .panel-flexible-inside.panels-flexible-138-inside {
   @include make-row;
