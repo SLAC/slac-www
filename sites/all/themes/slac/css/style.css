@@ -11148,6 +11148,13 @@ ul#nice-menu-3 li {
   @media (max-width: 500px) {
     #search-box {
       display: none; } }
+  #search-box .form-submit {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    background: url(../img/search-button.png) no-repeat center;
+    text-indent: -100px;
+    cursor: pointer; }
   #search-box .form-item {
     margin: 0;
     outline: none;
@@ -11156,7 +11163,7 @@ ul#nice-menu-3 li {
     width: 160px;
     background: #fff; }
   #search-box .form-text {
-    width: 100%;
+    width: 130px;
     font-size: .7em;
     color: #666; }
   #search-box input {
@@ -11172,16 +11179,17 @@ ul#nice-menu-3 li {
   float: left;
   margin-top: -3px; }
 
-#slac-search-button input {
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: url(../img/search-button.png) no-repeat center;
-  text-indent: -100px;
-  cursor: pointer; }
+@media (min-width: 501px) {
+  #slac-search-button input {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: url(../img/search-button.png) no-repeat center;
+    text-indent: -100px;
+    cursor: pointer; } }
 
 #slac-search {
   float: left; }
@@ -11229,6 +11237,18 @@ ul#nice-menu-3 li {
   width: 40%;
   height: 14px;
   margin: 4px 0 4px 10px; }
+  #slac-search-options .form-item .form-type-radio input {
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-right: 5px; }
+  #slac-search-options .form-item .form-type-radio label {
+    line-height: 14px;
+    cursor: pointer; }
+
+.form-item label.option {
+  display: inline;
+  font-weight: normal; }
 
 div#mobile-search-box {
   display: none; }
@@ -11272,7 +11292,38 @@ div#mobile-search-box {
     padding: 0;
     color: #fff;
     margin: 0;
-    width: 100%; } }
+    width: 100%; }
+
+  .mobile-search-box #slac-search {
+    line-height: 35px;
+    border: 2px solid #8c8b8b;
+    background: #fff;
+    color: #aaa;
+    padding: 0 3%;
+    width: 59%;
+    float: left; } }
+#slac-search-options {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 170px;
+  background: #EFEFEF; }
+  #slac-search-options > .form-item {
+    width: auto;
+    max-width: 200px;
+    background-color: #EFEFEF;
+    color: #990000;
+    font-size: 11px;
+    z-index: 120;
+    -moz-box-shadow: 1px 1px 3px #555;
+    -webkit-box-shadow: 1px 1px 3px #555;
+    -ms-box-shadow: 1px 1px 3px #555;
+    box-shadow: 1px 1px 3px #555;
+    float: none; }
+  #slac-search-options .form-item {
+    background: transparent;
+    padding: 0; }
+
 .header-search {
   width: 20%; }
 
