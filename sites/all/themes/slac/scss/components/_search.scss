@@ -67,14 +67,6 @@
   float: left;
 }
 
-#edit-search-options {
-  display: flex;
-
-  > div {
-    padding-left: 10px;
-  }
-}
-
 #slac-search .form-item {
     margin-top: 0;
     margin-bottom: 0;
@@ -143,59 +135,89 @@ div#mobile-search-box {
 }
 
 @media (max-width: 500px) {
-  .mobile-search-box .pane-content {
+
+  .mobile-search-box {
+    width: 100%;
+    clear: both;
+
+    .form-type-radio input {
+      margin-top: 0;
+      padding: 0;
+    }
+
+    .form-item, .form-actions {
+      margin-top: 0;
+    }
+
+    .pane-content {
       padding: 5px 0 12px;
       background: #8e001a;
       border-top: 1px solid #fff;
       overflow: hidden;
-  }
+    }
 
-  .mobile-search-box .form-text {
-    height: 35px;
-    background: none;
-    border: none;
-    padding: 0;
-    color: #aaa;
-    width: 100%;
-  }
+    form {
+      width: 96%;
+      margin: 0 2%;
+    }
 
-  .mobile-search-box #slac-search-button {
-    float: right;
-    width: 30%;
-    max-width: 70px;
-  }
+    .form-text {
+      height: 35px;
+      background: none;
+      border: none;
+      padding: 0;
+      color: #aaa;
+      width: 100%;
+    }
 
-  .mobile-search-box #slac-search-options {
-    display: block;
-    overflow: hidden;
-    float: left;
-    clear: both;
-    width: 59%;
-    padding: 0 3%;
-    border: 2px solid #f2f2f2;
-    background: #f2f2f2;
-    height: 28px;
-    position: static;
-  }
+    #slac-search-button {
+      float: right;
+      width: 20%;
+      max-width: 70px;
+    }
 
-  .mobile-search-box .form-submit {
-    background: #8c8b8b;
-    border: none;
-    height: 39px;
-    padding: 0;
-    color: #fff;
-    margin: 0;
-    width: 100%;
-  }
+    #slac-search-options {
+      display: block;
+      overflow: hidden;
+      float: left;
+      clear: both;
+      width: 59%;
+      padding: 0 3%;
+      border: 2px solid #f2f2f2;
+      background: #f2f2f2;
+      height: 28px;
+      position: static;
 
-  .mobile-search-box #slac-search {
-    line-height: 35px;
-    border: 2px solid #8c8b8b;
-    background: #fff;
-    color: #aaa;
-    padding: 0 3%;
-    width: 59%;
-    float: left;
+      .form-item .form-type-radio:first-child {
+        margin-left: 0;
+      }
+
+      .form-item .form-type-radio {
+          margin: 7px 0 4px 10%;
+          color: #000;
+          width: 45%;
+      }
+    }
+
+    .form-submit {
+      background: #8c8b8b;
+      border: none;
+      height: 39px;
+      padding: 0;
+      color: #fff;
+      margin: 0;
+      width: 100%;
+    }
+
+    #slac-search {
+      line-height: 35px;
+      border: 2px solid #8c8b8b;
+      background: #fff;
+      color: #aaa;
+      padding: 0 3%;
+      width: 59%;
+      float: left;
+    }
   }
 }
 
