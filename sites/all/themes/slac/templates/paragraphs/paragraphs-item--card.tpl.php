@@ -39,9 +39,11 @@ if (!empty($content['field_paragraph_link'])) {
             <div><?php print $image; ?></div>
         <?php endif; ?>
     <?php endif; ?>
-    <div class="card-body">
-        <div class="card-text">
-            <?php print $body; ?>
+    <?php if ($body) : ?>
+        <div class="card-body">
+            <div class="card-text">
+                <?php print $body; ?>
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
 </div>
