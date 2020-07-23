@@ -11374,14 +11374,13 @@ li.item.timeline:nth-of-type(even) {
 .card-header {
   background: #D8D8D8;
   text-align: center;
-  padding: 30px;
-  font-size: 32px; }
+  padding: 30px; }
   .card-header img {
     max-height: 56px;
     width: auto;
     margin-bottom: 15px; }
   .card-header h5.card-title {
-    font-size: 32px; }
+    font-size: 24px; }
 
 /* Paragraph specific. */
 .paragraph {
