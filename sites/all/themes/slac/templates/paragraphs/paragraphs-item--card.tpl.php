@@ -23,6 +23,9 @@ if (!empty($content['field_card_image'])) {
 if (!empty($content['field_card_title'])) {
     $title = render($content['field_card_title']);
 }
+if (!empty($content['field_card_subtitle'])) {
+    $subtitle = render($content['field_card_subtitle']);
+}
 if (!empty($content['field_paragraph_link'])) {
     $link = trim(strip_tags(render($content['field_paragraph_link'])));
 }
@@ -30,8 +33,9 @@ if (!empty($content['field_paragraph_link'])) {
 ?>
 
 <div class="card">
-    <?php if ($icon || $title): ?>
-        <div class="card-header"><?php if ($icon) : ?><?php print $icon; ?><?php endif; ?><?php if ($title) : ?><h5 class="card-title"><?php print $title; ?></h5><?php endif; ?></div><?php endif; ?>
+    <?php if ($icon || $title || $subtitle): ?>
+        <div class="card-header"><?php if ($icon) : ?><?php print $icon; ?><?php endif; ?><?php if ($title) : ?><h5 class="card-title"><?php print $title; ?></h5><?php endif; ?>
+        <?php if ($subtitle) : ?><div class="card-subtitle"><?php print $subtitle; ?></div><?php endif; ?></div><?php endif; ?>
     <?php if ($image) : ?>
         <?php if ($link) : ?>
             <a href="<?php print $link; ?>"><div><?php print $image; ?></div></a>

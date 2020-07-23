@@ -299,7 +299,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -323,7 +323,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 32,
+      'weight' => 2,
     ),
   );
 
@@ -341,7 +341,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -406,7 +406,47 @@ function slac_paragraph_bundles_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 33,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-card-field_card_subtitle'.
+  $field_instances['paragraphs_item-card-field_card_subtitle'] = array(
+    'bundle' => 'card',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_card_subtitle',
+    'label' => 'Card Subtitle',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
     ),
   );
 
@@ -446,7 +486,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 34,
+      'weight' => 4,
     ),
   );
 
@@ -529,7 +569,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 31,
+      'weight' => 1,
     ),
   );
 
@@ -545,7 +585,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_plain',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -586,7 +626,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 36,
+      'weight' => 6,
     ),
   );
 
@@ -3446,6 +3486,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
   t('Card');
   t('Card Body');
   t('Card Layout');
+  t('Card Subtitle');
   t('Card Title');
   t('Column Content');
   t('Column Style');
