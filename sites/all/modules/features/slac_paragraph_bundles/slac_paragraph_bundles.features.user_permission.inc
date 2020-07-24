@@ -50,6 +50,18 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content block_cards'.
+  $permissions['create paragraph content block_cards'] = array(
+    'name' => 'create paragraph content block_cards',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content blockquote'.
   $permissions['create paragraph content blockquote'] = array(
     'name' => 'create paragraph content blockquote',
@@ -240,6 +252,18 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'delete paragraph content block'.
   $permissions['delete paragraph content block'] = array(
     'name' => 'delete paragraph content block',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content block_cards'.
+  $permissions['delete paragraph content block_cards'] = array(
+    'name' => 'delete paragraph content block_cards',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -448,6 +472,18 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content block_cards'.
+  $permissions['update paragraph content block_cards'] = array(
+    'name' => 'update paragraph content block_cards',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content blockquote'.
   $permissions['update paragraph content blockquote'] = array(
     'name' => 'update paragraph content blockquote',
@@ -637,6 +673,16 @@ function slac_paragraph_bundles_user_default_permissions() {
   // Exported permission: 'view paragraph content block'.
   $permissions['view paragraph content block'] = array(
     'name' => 'view paragraph content block',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content block_cards'.
+  $permissions['view paragraph content block_cards'] = array(
+    'name' => 'view paragraph content block_cards',
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
