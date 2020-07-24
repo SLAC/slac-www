@@ -1886,7 +1886,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
         'video_bootstrap' => 29,
         'view' => 14,
       ),
-      'default_edit_mode' => 'open',
+      'default_edit_mode' => 'closed',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -2716,7 +2716,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 3,
       ),
       'type' => 'text_textarea',
       'weight' => 5,
