@@ -28,6 +28,11 @@ function slac_paragraph_bundles_paragraphs_info() {
       'bundle' => 'block',
       'locked' => '1',
     ),
+    'block_cards' => array(
+      'name' => 'Block Cards',
+      'bundle' => 'block_cards',
+      'locked' => '1',
+    ),
     'blockquote' => array(
       'name' => 'Blockquote',
       'bundle' => 'blockquote',

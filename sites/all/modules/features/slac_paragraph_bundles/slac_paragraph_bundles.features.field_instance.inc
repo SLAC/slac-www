@@ -287,6 +287,47 @@ function slac_paragraph_bundles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-block_cards-field_block'.
+  $field_instances['paragraphs_item-block_cards-field_block'] = array(
+    'bundle' => 'block_cards',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => TRUE,
+          'use_content_language' => TRUE,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_block',
+    'label' => 'Block',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-card-field_card_body'.
   $field_instances['paragraphs_item-card-field_card_body'] = array(
     'bundle' => 'card',
@@ -3483,6 +3524,7 @@ function slac_paragraph_bundles_field_default_field_instances() {
   t('Animation Setting');
   t('Background');
   t('Background Image');
+  t('Block');
   t('Card');
   t('Card Body');
   t('Card Layout');
