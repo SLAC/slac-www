@@ -11391,10 +11391,6 @@ li.item.timeline:nth-of-type(even) {
   .card-header h5.card-title {
     font-size: 24px; }
 
-@media (min-width: 576px) {
-  .card-deck {
-    margin-right: 0 !important;
-    margin-left: 0 !important; } }
 /* Paragraph specific. */
 .paragraph {
   clear: both; }
