@@ -11171,7 +11171,7 @@ ul#nice-menu-3 li {
     right: 1px;
     top: 1px;
     background: url(../img/search-button.png) no-repeat center;
-    text-indent: -100px;
+    text-indent: 1000px;
     cursor: pointer; }
   #search-box .form-item {
     margin: 0;
@@ -11393,6 +11393,9 @@ li.item.timeline:nth-of-type(even) {
     margin-bottom: 15px; }
   .card-header h5.card-title {
     font-size: 24px; }
+
+.card-deck.card {
+  display: block; }
 
 /* Paragraph specific. */
 .paragraph {
