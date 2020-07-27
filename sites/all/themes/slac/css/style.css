@@ -11156,6 +11156,9 @@ ul#nice-menu-3 li {
     margin-left: 0;
     margin-right: 0; } }
 
+.paragraph.paragraph--width--full > .paragraph__column {
+  margin: 0 auto; }
+
 #search-box {
   float: right;
   position: relative;
