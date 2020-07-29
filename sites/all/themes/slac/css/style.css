@@ -11386,7 +11386,8 @@ li.item.timeline:nth-of-type(even) {
 .card-header {
   background: #D8D8D8;
   text-align: center;
-  padding: 30px 10px; }
+  padding: 30px 10px;
+  height: 100%; }
   .card-header img {
     max-height: 56px;
     width: auto;
