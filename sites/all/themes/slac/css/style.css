@@ -10710,6 +10710,14 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   width: 100%;
   height: auto; }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-deck .card {
+    margin-bottom: 15px;
+    flex: 0 0 29.333333%;
+    margin-bottom: 15px;
+    margin-right: 2%;
+    margin-left: 2%; } }
+
 .paragraph--color.paragraph--color--dark-grey {
   background: #4D4F53; }
 

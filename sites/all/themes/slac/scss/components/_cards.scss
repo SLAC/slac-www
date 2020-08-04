@@ -2,3 +2,13 @@
   width: 100%;
   height: auto;
 }
+
+.card-deck .card {
+  @include media-breakpoint-only(sm) {
+    margin-bottom: 15px;
+    flex: 0 0 29.333333%;
+    margin-bottom: 15px;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+}
