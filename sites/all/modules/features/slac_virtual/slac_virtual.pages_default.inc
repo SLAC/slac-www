@@ -197,7 +197,8 @@ function slac_virtual_default_page_manager_handlers() {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<a href="#" class="btn btn-cta">Launch Interactive Tour</a>',
+    'body' => '<p><a class="btn btn-cta" href="https://media.slac.stanford.edu/web/stage/tour/" target="blank">Launch Interactive Tour</a></p>
+',
     'format' => 'full_html',
     'substitute' => 1,
   );
@@ -287,7 +288,7 @@ function slac_virtual_default_page_manager_handlers() {
     'admin_title' => 'Site Icon',
     'title' => '<none>',
     'title_heading' => 'h2',
-    'body' => '<p><img src="/sites/all/themes/slac/img/slac_laser_icon.png"></p>
+    'body' => '<p><a href="/virtual-tour"><img src="/sites/all/themes/slac/img/slac_laser_icon.png"></a></p>
 ',
     'format' => 'full_html',
     'substitute' => 1,
