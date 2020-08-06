@@ -8023,19 +8023,19 @@ label {
   display: none; }
   @media (max-width: 700px) {
     .left-menu-trigger {
-      display: block; } }
+      display: none; } }
 
 #header {
   background: #8c1515;
   overflow: hidden;
-  height: 80px; }
+  height: 60px; }
   @media only screen and (max-width: 700px) {
     #header {
       background-position: 230px center;
       height: 42px; } }
   @media only screen and (min-width: 700px) {
     #header {
-      background: #8c1515 url(../img/header-connectors_clean.png) no-repeat 230px 0; } }
+      background: #8c1515; } }
 
 .main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
   background: url(../img/menu-del.png) no-repeat left center;
@@ -8049,7 +8049,7 @@ label {
       background: none; } }
 
 div#logo-title img {
-  margin-top: 24px; }
+  margin-top: 14px; }
   @media only screen and (max-width: 700px) {
     div#logo-title img {
       margin: 7px 0;
@@ -8060,7 +8060,8 @@ div#logo-title img {
   float: right;
   margin: 20px 28px 0 0;
   color: #fff;
-  margin-top: -50px; }
+  margin-top: -50px;
+  display: none; }
   @media only screen and (max-width: 700px) {
     .header-link {
       display: none; } }
@@ -10855,7 +10856,7 @@ ul#nice-menu-3 li.menuparent {
     background: url(../img/mobile-search.png) no-repeat top right;
     width: 52px;
     height: 42px;
-    display: block; } }
+    display: none; } }
 
 ul#nice-menu-1 li.menuparent:hover {
   background: #8C191C url(../img/arrow-down.png) right center no-repeat; }
@@ -10887,7 +10888,7 @@ ul#nice-menu-1 > li {
   z-index: 1; }
   @media (max-width: 700px) {
     .left-menu-trigger {
-      display: block; } }
+      display: none; } }
 
 .right-menu-trigger {
   position: absolute;
@@ -11170,7 +11171,8 @@ ul#nice-menu-3 li {
 #search-box {
   float: right;
   position: relative;
-  margin-top: 11px; }
+  margin-top: 11px;
+  display: none; }
   @media (max-width: 500px) {
     #search-box {
       display: none; } }

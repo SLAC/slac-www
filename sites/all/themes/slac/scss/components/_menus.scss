@@ -38,7 +38,8 @@ ul#nice-menu-3 li {
     background: url(../img/mobile-search.png) no-repeat top right;
     width: 52px;
     height: 42px;
-    display: block;
+    // display: block;
+    display: none;
   }
 }
 
@@ -79,7 +80,8 @@ ul#nice-menu-1 > li {
     z-index: 1;
 
   @media (max-width: 700px) {
-    display: block;
+    // display: block;
+    display: none;
   }
 }
 

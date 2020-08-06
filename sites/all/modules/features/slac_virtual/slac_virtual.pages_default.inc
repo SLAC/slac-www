@@ -260,7 +260,7 @@ function slac_virtual_default_page_manager_handlers() {
   $pane->panel = 'header';
   $pane->type = 'search_block';
   $pane->subtype = 'search_block';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array();
   $pane->cache = array();
@@ -309,7 +309,7 @@ function slac_virtual_default_page_manager_handlers() {
   $pane->panel = 'mainnav';
   $pane->type = 'block';
   $pane->subtype = 'nice_menus-1';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
@@ -334,7 +334,7 @@ function slac_virtual_default_page_manager_handlers() {
   $pane->panel = 'menu';
   $pane->type = 'block';
   $pane->subtype = 'menu-menu-top-nav-menu';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
