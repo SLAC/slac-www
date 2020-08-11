@@ -1552,7 +1552,11 @@ function slac_paragraph_bundles_field_default_field_instances() {
   // Exported field_instance: 'paragraphs_item-columns-field_paragraph_width'.
   $field_instances['paragraphs_item-columns-field_paragraph_width'] = array(
     'bundle' => 'columns',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'paragraph--width--wide',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(

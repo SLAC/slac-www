@@ -11403,7 +11403,10 @@ li.item.timeline:nth-of-type(even) {
     width: auto;
     margin-bottom: 15px; }
   .card-header h5.card-title {
-    font-size: 24px; }
+    font-size: 24px;
+    color: #212529; }
+  .card-header .card-subtitle {
+    color: #212529; }
 
 .card-deck.card {
   display: block; }
