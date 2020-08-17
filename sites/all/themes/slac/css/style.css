@@ -10711,7 +10711,7 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
   width: 100%;
   height: auto; }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media screen and (min-device-width: 576px) and (max-device-width: 768px) {
   .card-deck .card {
     margin-bottom: 15px;
     flex: 0 0 29.333333%;
@@ -11025,6 +11025,10 @@ ul#nice-menu-3 li {
 @media (min-width: 769px) {
   .mobile-reverse {
     flex-direction: row-reverse; } }
+@media (max-width: 768px) {
+  .paragraph--type--xeno-hero__image {
+    background-size: cover; } }
+
 @media (min-width: 769px) {
   .paragraph--style--75-25 .col-md {
     flex: 0 0 75%;
@@ -11163,7 +11167,8 @@ ul#nice-menu-3 li {
 @media (max-width: 768px) {
   .paragraph--type--columns .paragraph__column.row {
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0;
+    margin: 0 auto; } }
 
 .paragraph.paragraph--width--full > .paragraph__column {
   margin: 0 auto; }

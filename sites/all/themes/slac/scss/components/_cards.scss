@@ -4,7 +4,7 @@
 }
 
 .card-deck .card {
-  @include media-breakpoint-only(sm) {
+  @media screen and (min-device-width: 576px) and (max-device-width: 768px) {
     margin-bottom: 15px;
     flex: 0 0 29.333333%;
     margin-bottom: 15px;

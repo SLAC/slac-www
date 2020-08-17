@@ -27,6 +27,12 @@
   }
 }
 
+.paragraph--type--xeno-hero__image {
+  @media (max-width: 768px) {
+    background-size: cover;
+  }
+}
+
 @media (min-width: 769px) {
   .paragraph--style--75-25 {
     .col-md {
@@ -196,6 +202,7 @@
   @media (max-width: 768px) {
     margin-left: 0;
     margin-right: 0;
+    margin: 0 auto;
   }
 }
 
