@@ -1,0 +1,41 @@
+name = Bootstrap4
+description = Theme with Bootstrap 4 css library.
+core = 7.x
+php = 7.0.0
+engine = phptemplate
+
+; Exclude css.
+exclude[css][] = 'modules/system/system.menus.css'
+
+; Add bootstrap 4 css.
+stylesheets[all][] = css/style.css
+
+; Add bootstrap 4 js.
+;scripts[] = dist/bootstrap/4.4.1/js/dist/index.js
+
+; Regions.
+regions[header] = 'Header'
+regions[nav_branding] = 'Navigation branding region'
+regions[nav_main] = 'Main navigation region'
+regions[nav_additional] = 'Additional navigation region (eg search form, social icons, etc)'
+regions[breadcrumb] = 'Breadcrumbs'
+regions[content] = 'Main content'
+regions[sidebar_first] = 'Sidebar first'
+regions[sidebar_second] = 'Sidebar second'
+regions[footer] = 'Footer'
+
+; Breakpoints.
+breakpoints[screen-xs-max] = (max-width: 575.98px)
+breakpoints[screen-sm-min] = (min-width: 767px)
+breakpoints[screen-sm-max] = (max-width: 767.98px)
+breakpoints[screen-md-min] = (min-width: 768px)
+breakpoints[screen-md-max] = (max-width: 991.98px)
+breakpoints[screen-lg-min] = (min-width: 992px)
+breakpoints[screen-lg-max] = (max-width: 1199.98px)
+breakpoints[screen-xl-min] = (min-width: 1200px)
+
+; Information added by Drupal.org packaging script on 2020-04-06
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "bootstrap4"
+datestamp = "1586177362"

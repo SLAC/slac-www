@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Slac Virtual feature.
+ */
+
+include_once 'slac_virtual.features.inc';

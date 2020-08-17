@@ -1,0 +1,199 @@
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+p {
+  font-family: Arial, sans-serif;
+}
+
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+h1 {
+  font-size: 60px;
+
+  @media (max-width: 960px) {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-size: 52px;
+
+  @media (max-width: 960px) {
+    font-size: 28px;
+  }
+
+  &:before {
+    margin: 0 auto;
+    content: '';
+    border-bottom: 1px solid $red;
+    width: 200px;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+h3 {
+  font-size: 36px;
+  color: $grey;
+
+  @media (max-width: 960px) {
+    font-size: 24px;
+  }
+}
+
+div[class*='paragraph--color--']{
+  h2{
+    &:before {
+      content: none;
+    }
+  }
+}
+
+.pane-content a {
+  color: $red;
+}
+
+.page-basic .inside {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+}
+
+.page-basic .header img {
+  margin-top: 24px;
+}
+
+a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:after, a[href^="https://www-internal"]:active:after, a[href^="https://www-internal"]:visited:after, a[href^="https://intranet"]:after, a[href^="https://intranet"]:hover:after, a[href^="https://intranet"]:visited:after, a[href^="https://intranet"]:active:after, a.lock:after, a.lock:hover:after, a.lock:visited:after, a.lock:active:after, a[href^="https://internal"]:after, a[href^="https://internal"]:hover:after, a[href^="https://internal"]:visited:after, a[href^="https://internal"]:active:after {
+  content: url(../img/lock.svg);
+  padding-left: .2rem;
+}
+
+.panel-pane.pane-pane-messages {
+  width: 100%;
+  float: left;
+}
+
+.paragraph {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    table-layout: fixed;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  display: table;
+  margin-left: 0;
+  margin-right: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.paragraph > .paragraph__column {
+  @include make-col(12);
+  padding-bottom: 30px;
+}
+
+/**
+ * Widths.
+ *
+ * Here we style the widths for each paragraph.
+ */
+/* Adds Width Element -- Tiny. */
+
+@media (min-width: 769px) {
+  .paragraph.paragraph--width--tiny > .paragraph__column {
+    @include make-col(4);
+    @include make-col-offset(4);
+  }
+
+  /* Adds Width Element -- Narrow. */
+  .paragraph.paragraph--width--narrow > .paragraph__column {
+    @include make-col(6);
+    @include make-col-offset(3);
+  }
+
+  /* Adds Width Element -- Medium. */
+  .paragraph.paragraph--width--medium > .paragraph__column {
+    @include make-col(8);
+    @include make-col-offset(2);
+  }
+
+  /* Adds Width Element -- Wide. */
+  .paragraph.paragraph--width--wide > .paragraph__column {
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
+}
+/* Adds Width Element -- Full. */
+.paragraph.paragraph--width--full > .paragraph__column {
+   @include make-col(12);
+}
+
+.page-basic .panels-flexible-region-first {
+  @include make-col-ready;
+  @include make-col(12);
+  @include media-breakpoint-up(md) {
+    @include make-col(8);
+  }
+}
+
+.panels-flexible-region.panels-flexible-region-new-footer_logo.panels-flexible-region-last {
+  @include make-col-ready;
+  @include make-col(12);
+  @include media-breakpoint-up(md) {
+    @include make-col(4);
+  }
+}
+
+.panel-flexible-inside.panels-flexible-new-inside {
+  @include make-row;
+}
+
+#mini-panel-clone_of_footer_2018 {
+  @include make-container();
+  max-width: 1200px;
+}
+
+/**
+ * Nesting Paragraphs.
+ *
+ * Here are some helpers for temove margin/padding when nesting bundles.
+ */
+/* Resets Base Paragraph Styling for Nested Paragraphs. */
+.paragraph .paragraph,
+.paragraph .paragraph .paragraph {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.paragraph > .paragraph__column .paragraph > .paragraph__column,
+.paragraph
+  > .paragraph__column .paragraph
+  > .paragraph__column .paragraph
+  > .paragraph__column {
+  float: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+}
+
+@include media-breakpoint-down(md) {
+  .container, .container-sm, .container-md {
+      max-width: 100%;
+  }
+}
+
+.page-content {
+  position: relative;
+  z-index: 99;
+  background: $white;
+}

@@ -1,0 +1,104 @@
+// Define header styles.
+.container-fluid.footer {
+  background: $grey;
+  color: $white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+/* line 149, ../sass/pages.scss */
+.page-basic .footer a:hover {
+  text-decoration: underline;
+}
+/* line 155, ../sass/pages.scss */
+.page-basic .footer-logos a img {
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 80%;
+}
+
+.page-basic .footer {
+    background: #4d4f53;
+    padding: 20px 0 28px;
+    color: #fff;
+}
+
+.page-basic .footer a {
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 0;
+    color: #fff;
+}
+
+.page-basic .footer #social-channels a {
+  margin: 0 0 6px 16px;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  float: right;
+}
+
+.pane-menu-menu-footer-menu .menu li.first, .pane-menu-menu-footer-menu .menu li.last {
+  width: auto;
+}
+
+.pane-menu-menu-footer-menu ul.nav {
+
+  li  {
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+    background: url(../../slac_www/images/footer-menu-arrow.png) no-repeat left 15px;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.footer-logos {
+  padding-top: 30px;
+  display: inline-block;
+
+  p {
+    display: flex;
+    float: left;
+  }
+
+  a {
+    width: 50%;
+
+    &:last-child img {
+      width: 100% !important;
+    }
+  }
+}
+
+.pane-menu-menu-footer-menu {
+  width: 100%;
+  border-bottom: 1px solid #aeaeae;
+  padding-bottom: 6px;
+}
+
+#social-channels img {
+  max-width: 15px;
+  height: auto;
+}
+
+.panel-flexible .panel-separator {
+  margin: 0 0 1em 0;
+}
+

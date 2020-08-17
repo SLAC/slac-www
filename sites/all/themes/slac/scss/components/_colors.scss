@@ -1,0 +1,21 @@
+.paragraph--color.paragraph--color--dark-grey {
+  background: $grey;
+}
+.paragraph--color--transparent {
+  background: none;
+}
+.paragraph--color.paragraph--color--red {
+  background: $red;
+}
+.paragraph--color.paragraph--color--light-grey{
+  background: $lightgrey;
+}
+.paragraph--color.paragraph--color--black {
+  background: $black;
+}
+.paragraph--color.paragraph--color--white {
+  background: $white;
+}
+.paragraph--color.paragraph--color--transparent-black {
+  background: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,31 @@
+.card-header {
+  background: $lightestgrey;
+  text-align: center;
+  padding: 30px 10px;
+  height: 100%;
+
+  img {
+    max-height: 56px;
+    width: auto;
+    margin-bottom: 15px;
+  }
+
+  h5.card-title {
+    font-size: 24px;
+    color: #212529;
+  }
+
+  .card-subtitle {
+    color: #212529;
+  }
+}
+
+// @media (min-width: 576px) {
+//   .card-deck {
+//     margin-right: 0 !important;
+//     margin-left: 0 !important;
+//   }
+// }
+.card-deck.card {
+  display: block;
+}

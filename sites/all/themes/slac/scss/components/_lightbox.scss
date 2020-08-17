@@ -1,0 +1,19 @@
+ul.lightgallery {
+  display: flex;
+  padding-left: 0;
+
+  li {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &:not(:last-of-type) {
+      padding-right: 15px;
+    }
+  }
+}
+
+// .lightgallery-wrapper {
+//   @include make-container();
+// }

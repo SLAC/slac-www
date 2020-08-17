@@ -1,0 +1,107 @@
+// Define header styles.
+
+.header-section {
+  background: $red;
+  float: left;
+  width: 100%;
+}
+
+.left-menu-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  background: #bebebe url(../images/mobile-menu.png) no-repeat center center;
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: 700px) {
+     // display: block;
+     display: none;
+  }
+}
+
+#header {
+    background: #8c1515;
+    overflow: hidden;
+    height: 60px;
+
+  @media only screen and (max-width: 700px) {
+    background-position: 230px center;
+    height: 42px;
+  }
+
+  @media only screen and (min-width: 700px) {
+    // background: #8c1515 url(../img/header-connectors_clean.png) no-repeat 230px 0;
+    background: #8c1515;
+  }
+}
+
+.main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
+  background: url(../img/menu-del.png) no-repeat left center;
+  width: 16.66%;
+  height: 31px;
+  border: none;
+
+  @media only screen and (min-width: 700px)  {
+    margin-right: 22px;
+    width: auto;
+    background: none;
+  }
+}
+
+div#logo-title img {
+  margin-top: 14px;
+  @media only screen and (max-width: 700px) {
+    margin: 7px 0;
+    width: 170px;
+    height: auto;
+  }
+}
+
+.header-link {
+  float: right;
+  margin: 20px 28px 0 0;
+  color: #fff;
+  margin-top: -50px;
+  display: none;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+
+  a {
+    color: $white !important;
+    font-size: 11px;
+    margin-left: 10px;
+
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+.main-menu .nice-menu-menu-top-nav-menu.nice-menu li.depth-1 {
+  @media only screen and (min-width: 700px) {
+    margin-right: 22px;
+    width: auto;
+    background: none;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.cta {
+  margin-left: auto;
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+}

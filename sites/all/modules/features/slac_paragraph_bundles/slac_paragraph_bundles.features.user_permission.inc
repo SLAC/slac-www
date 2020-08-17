@@ -31,9 +31,28 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content blank'.
+  $permissions['create paragraph content blank'] = array(
+    'name' => 'create paragraph content blank',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content block'.
   $permissions['create paragraph content block'] = array(
     'name' => 'create paragraph content block',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content block_cards'.
+  $permissions['create paragraph content block_cards'] = array(
+    'name' => 'create paragraph content block_cards',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -55,9 +74,81 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content card'.
+  $permissions['create paragraph content card'] = array(
+    'name' => 'create paragraph content card',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content card_wrapper'.
+  $permissions['create paragraph content card_wrapper'] = array(
+    'name' => 'create paragraph content card_wrapper',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content column_wrapper'.
+  $permissions['create paragraph content column_wrapper'] = array(
+    'name' => 'create paragraph content column_wrapper',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content columns'.
+  $permissions['create paragraph content columns'] = array(
+    'name' => 'create paragraph content columns',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content hero'.
+  $permissions['create paragraph content hero'] = array(
+    'name' => 'create paragraph content hero',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content image'.
   $permissions['create paragraph content image'] = array(
     'name' => 'create paragraph content image',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content image_bootstrap'.
+  $permissions['create paragraph content image_bootstrap'] = array(
+    'name' => 'create paragraph content image_bootstrap',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -79,6 +170,42 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content simple_bootstrap'.
+  $permissions['create paragraph content simple_bootstrap'] = array(
+    'name' => 'create paragraph content simple_bootstrap',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content timeline'.
+  $permissions['create paragraph content timeline'] = array(
+    'name' => 'create paragraph content timeline',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content timeline_bundler'.
+  $permissions['create paragraph content timeline_bundler'] = array(
+    'name' => 'create paragraph content timeline_bundler',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'create paragraph content video'.
   $permissions['create paragraph content video'] = array(
     'name' => 'create paragraph content video',
@@ -91,9 +218,52 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'create paragraph content video_bootstrap'.
+  $permissions['create paragraph content video_bootstrap'] = array(
+    'name' => 'create paragraph content video_bootstrap',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'create paragraph content view'.
+  $permissions['create paragraph content view'] = array(
+    'name' => 'create paragraph content view',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content blank'.
+  $permissions['delete paragraph content blank'] = array(
+    'name' => 'delete paragraph content blank',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'delete paragraph content block'.
   $permissions['delete paragraph content block'] = array(
     'name' => 'delete paragraph content block',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content block_cards'.
+  $permissions['delete paragraph content block_cards'] = array(
+    'name' => 'delete paragraph content block_cards',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -115,9 +285,81 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'delete paragraph content card'.
+  $permissions['delete paragraph content card'] = array(
+    'name' => 'delete paragraph content card',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content card_wrapper'.
+  $permissions['delete paragraph content card_wrapper'] = array(
+    'name' => 'delete paragraph content card_wrapper',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content column_wrapper'.
+  $permissions['delete paragraph content column_wrapper'] = array(
+    'name' => 'delete paragraph content column_wrapper',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content columns'.
+  $permissions['delete paragraph content columns'] = array(
+    'name' => 'delete paragraph content columns',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content hero'.
+  $permissions['delete paragraph content hero'] = array(
+    'name' => 'delete paragraph content hero',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'delete paragraph content image'.
   $permissions['delete paragraph content image'] = array(
     'name' => 'delete paragraph content image',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content image_bootstrap'.
+  $permissions['delete paragraph content image_bootstrap'] = array(
+    'name' => 'delete paragraph content image_bootstrap',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -139,6 +381,42 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'delete paragraph content simple_bootstrap'.
+  $permissions['delete paragraph content simple_bootstrap'] = array(
+    'name' => 'delete paragraph content simple_bootstrap',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content timeline'.
+  $permissions['delete paragraph content timeline'] = array(
+    'name' => 'delete paragraph content timeline',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content timeline_bundler'.
+  $permissions['delete paragraph content timeline_bundler'] = array(
+    'name' => 'delete paragraph content timeline_bundler',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'delete paragraph content video'.
   $permissions['delete paragraph content video'] = array(
     'name' => 'delete paragraph content video',
@@ -151,9 +429,52 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'delete paragraph content video_bootstrap'.
+  $permissions['delete paragraph content video_bootstrap'] = array(
+    'name' => 'delete paragraph content video_bootstrap',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'delete paragraph content view'.
+  $permissions['delete paragraph content view'] = array(
+    'name' => 'delete paragraph content view',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content blank'.
+  $permissions['update paragraph content blank'] = array(
+    'name' => 'update paragraph content blank',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content block'.
   $permissions['update paragraph content block'] = array(
     'name' => 'update paragraph content block',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content block_cards'.
+  $permissions['update paragraph content block_cards'] = array(
+    'name' => 'update paragraph content block_cards',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -175,9 +496,81 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content card'.
+  $permissions['update paragraph content card'] = array(
+    'name' => 'update paragraph content card',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content card_wrapper'.
+  $permissions['update paragraph content card_wrapper'] = array(
+    'name' => 'update paragraph content card_wrapper',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content column_wrapper'.
+  $permissions['update paragraph content column_wrapper'] = array(
+    'name' => 'update paragraph content column_wrapper',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content columns'.
+  $permissions['update paragraph content columns'] = array(
+    'name' => 'update paragraph content columns',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content hero'.
+  $permissions['update paragraph content hero'] = array(
+    'name' => 'update paragraph content hero',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content image'.
   $permissions['update paragraph content image'] = array(
     'name' => 'update paragraph content image',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content image_bootstrap'.
+  $permissions['update paragraph content image_bootstrap'] = array(
+    'name' => 'update paragraph content image_bootstrap',
     'roles' => array(
       'administrator' => 'administrator',
       'author' => 'author',
@@ -199,6 +592,41 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content simple_bootstrap'.
+  $permissions['update paragraph content simple_bootstrap'] = array(
+    'name' => 'update paragraph content simple_bootstrap',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content timeline'.
+  $permissions['update paragraph content timeline'] = array(
+    'name' => 'update paragraph content timeline',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content timeline_bundler'.
+  $permissions['update paragraph content timeline_bundler'] = array(
+    'name' => 'update paragraph content timeline_bundler',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'update paragraph content video'.
   $permissions['update paragraph content video'] = array(
     'name' => 'update paragraph content video',
@@ -211,9 +639,50 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'update paragraph content video_bootstrap'.
+  $permissions['update paragraph content video_bootstrap'] = array(
+    'name' => 'update paragraph content video_bootstrap',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'update paragraph content view'.
+  $permissions['update paragraph content view'] = array(
+    'name' => 'update paragraph content view',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content blank'.
+  $permissions['view paragraph content blank'] = array(
+    'name' => 'view paragraph content blank',
+    'roles' => array(),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'view paragraph content block'.
   $permissions['view paragraph content block'] = array(
     'name' => 'view paragraph content block',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content block_cards'.
+  $permissions['view paragraph content block_cards'] = array(
+    'name' => 'view paragraph content block_cards',
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
@@ -235,6 +704,73 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'view paragraph content card'.
+  $permissions['view paragraph content card'] = array(
+    'name' => 'view paragraph content card',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content card_wrapper'.
+  $permissions['view paragraph content card_wrapper'] = array(
+    'name' => 'view paragraph content card_wrapper',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content column_wrapper'.
+  $permissions['view paragraph content column_wrapper'] = array(
+    'name' => 'view paragraph content column_wrapper',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content columns'.
+  $permissions['view paragraph content columns'] = array(
+    'name' => 'view paragraph content columns',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'author' => 'author',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content hero'.
+  $permissions['view paragraph content hero'] = array(
+    'name' => 'view paragraph content hero',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'author' => 'author',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'view paragraph content image'.
   $permissions['view paragraph content image'] = array(
     'name' => 'view paragraph content image',
@@ -246,6 +782,16 @@ function slac_paragraph_bundles_user_default_permissions() {
       'editor' => 'editor',
       'manager' => 'manager',
       'site_member' => 'site_member',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content image_bootstrap'.
+  $permissions['view paragraph content image_bootstrap'] = array(
+    'name' => 'view paragraph content image_bootstrap',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'paragraphs_bundle_permissions',
   );
@@ -265,9 +811,59 @@ function slac_paragraph_bundles_user_default_permissions() {
     'module' => 'paragraphs_bundle_permissions',
   );
 
+  // Exported permission: 'view paragraph content simple_bootstrap'.
+  $permissions['view paragraph content simple_bootstrap'] = array(
+    'name' => 'view paragraph content simple_bootstrap',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content timeline'.
+  $permissions['view paragraph content timeline'] = array(
+    'name' => 'view paragraph content timeline',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content timeline_bundler'.
+  $permissions['view paragraph content timeline_bundler'] = array(
+    'name' => 'view paragraph content timeline_bundler',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
   // Exported permission: 'view paragraph content video'.
   $permissions['view paragraph content video'] = array(
     'name' => 'view paragraph content video',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content video_bootstrap'.
+  $permissions['view paragraph content video_bootstrap'] = array(
+    'name' => 'view paragraph content video_bootstrap',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'paragraphs_bundle_permissions',
+  );
+
+  // Exported permission: 'view paragraph content view'.
+  $permissions['view paragraph content view'] = array(
+    'name' => 'view paragraph content view',
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
