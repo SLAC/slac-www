@@ -10,8 +10,8 @@
     margin-bottom: 15px;
     /* margin-right: 2%; */
     /* margin-left: 2%; */
-    min-width: 21.8rem;
-    max-width: 21.8rem;
+    min-width: 15.8rem;
+    max-width: 15.8rem;
   }
 }
 
@@ -36,7 +36,7 @@
 }
 
 .card-deck {
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     margin: 0 auto;
   }
 }
