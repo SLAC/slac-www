@@ -8083,6 +8083,9 @@ div#logo-title img {
   font-weight: bold;
   color: #fff;
   padding-left: 10px; }
+  @media only screen and (max-width: 700px) {
+    .section-title {
+      font-size: 24px; } }
 
 .cta {
   margin-left: auto; }
