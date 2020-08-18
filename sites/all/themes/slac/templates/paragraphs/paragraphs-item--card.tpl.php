@@ -34,11 +34,33 @@ if (!empty($content['field_paragraph_link'])) {
 
 <div class="card">
     <?php if ($icon || $title || $subtitle): ?>
-        <div class="card-header"><?php if ($link) : ?><a href="<?php print $link; ?>"><?php endif; ?><?php if ($icon) : ?><?php print $icon; ?><?php endif; ?><?php if ($title) : ?><h5 class="card-title"><?php print $title; ?></h5><?php endif; ?>
-        <?php if ($subtitle) : ?><div class="card-subtitle"><?php print $subtitle; ?></div><?php endif; ?></div><?php endif; ?>
+        <div class="card-header">
+            <?php if ($link) : ?>
+                <a href="<?php print $link; ?>">
+            <?php endif; ?>
+            <?php if ($icon) : ?>
+                <?php print $icon; ?>
+            <?php endif; ?>
+            <?php if ($title) : ?>
+                <h5 class="card-title"><?php print $title; ?></h5>
+            <?php endif; ?>
+            <?php if ($subtitle) : ?>
+                <div class="card-subtitle"><?php print $subtitle; ?></div>
+            <?php endif; ?>
+            <?php if ($link) : ?>
+                </a>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
     <?php if ($image) : ?>
-            <div><?php print $image; ?></div>
-        <?php endif; ?><?php if ($link) : ?></a><?php endif; ?>
+        <div class="card-img">
+            <?php if ($link) : ?>
+                <a href="<?php print $link; ?>"><?php print $image; ?></a>
+            <?php else: ?>
+                <?php print $image; ?>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
     <?php if ($body) : ?>
         <div class="card-body">
             <div class="card-text">
