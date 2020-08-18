@@ -11387,15 +11387,19 @@ ul.time-line {
   ul.time-line li.item.timeline {
     background: rgba(77, 79, 83, 0.75);
     color: #fff;
-    margin: 0 5%;
-    width: 40%;
-    float: left;
+    margin: 5%;
     padding: 30px;
-    border-radius: 8px;
-    min-height: 180px; }
+    border-radius: 8px; }
+    @media (min-width: 768px) {
+      ul.time-line li.item.timeline {
+        min-height: 180px;
+        width: 40%;
+        float: left;
+        margin: 0 5%; } }
 
-li.item.timeline:nth-of-type(even) {
-  margin-top: 40px !important; }
+@media (min-width: 768px) {
+  li.item.timeline:nth-of-type(even) {
+    margin-top: 40px !important; } }
 
 .time-line-container {
   background-size: cover;
