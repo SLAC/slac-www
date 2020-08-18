@@ -10713,18 +10713,25 @@ a[href^="https://www-internal"]:after, a[href^="https://www-internal"]:hover:aft
 
 @media only screen and (max-width: 768px) and (min-width: 576px) {
   .card-deck .card {
+    /* margin-bottom: 15px; */
+    /* flex: 0 0 29.333333%; */
     margin-bottom: 15px;
-    flex: 0 0 29.333333%;
-    margin-bottom: 15px;
-    margin-right: 2%;
-    margin-left: 2%; } }
+    /* margin-right: 2%; */
+    /* margin-left: 2%; */
+    min-width: 21.8rem;
+    max-width: 21.8rem; } }
 
 @media (min-width: 769px) {
   .card-deck .card {
     flex: 1 0 0%;
     margin-right: 15px;
     margin-bottom: 0;
-    margin-left: 15px; } }
+    margin-left: 15px;
+    margin: 0 auto; } }
+
+@media (min-width: 576px) {
+  .card-deck {
+    margin: 0 auto; } }
 
 .paragraph--color.paragraph--color--dark-grey {
   background: #4D4F53; }
