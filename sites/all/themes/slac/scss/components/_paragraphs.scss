@@ -29,7 +29,7 @@
 
 .paragraph--type--xeno-hero__image {
   @media (max-width: 768px) {
-    background-size: cover;
+    background-size: cover !important;
   }
 }
 

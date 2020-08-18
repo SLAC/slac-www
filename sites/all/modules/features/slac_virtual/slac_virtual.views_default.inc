@@ -48,7 +48,7 @@ function slac_virtual_views_default_views() {
     'drag' => 1,
     'touch' => 1,
     'thumbnails' => 1,
-    'animate_thumb' => 1,
+    'animate_thumb' => 0,
     'current_pager_position' => 'middle',
     'thumb_width' => '100',
     'thumb_cont_height' => '100',
@@ -81,6 +81,8 @@ function slac_virtual_views_default_views() {
   $handler->display->display_options['fields']['field_image_for_gallery']['table'] = 'field_data_field_image_for_gallery';
   $handler->display->display_options['fields']['field_image_for_gallery']['field'] = 'field_image_for_gallery';
   $handler->display->display_options['fields']['field_image_for_gallery']['label'] = '';
+  $handler->display->display_options['fields']['field_image_for_gallery']['alter']['text'] = '[field_image_for_gallery]
+<div class="lg-sub-html">[caption] </div>';
   $handler->display->display_options['fields']['field_image_for_gallery']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image_for_gallery']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image_for_gallery']['settings'] = array(
