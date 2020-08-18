@@ -11441,6 +11441,9 @@ ul.time-line {
 .card-deck.card {
   display: block; }
 
+.card-img {
+  min-height: 1px; }
+
 /* Paragraph specific. */
 .paragraph {
   clear: both; }
