@@ -11043,6 +11043,9 @@ ul#nice-menu-3 li {
     .paragraph--type--bp-columns .paragraph__column .paragraph--type--bp-columns__6col:last-child {
       margin-bottom: 0; } }
 
+.paragraph.paragraph--view-mode--default > .paragraph__column {
+  margin: 0 auto; }
+
 .paragraph.paragraph--type--bp-column-wrapper > .paragraph__column {
   padding: 0; }
 
@@ -11163,7 +11166,8 @@ ul#nice-menu-3 li {
   width: 100%; }
 
 .paragraph__column img {
-  width: 100%; }
+  width: 100%;
+  height: auto; }
 
 .media-vimeo-video, .media-youtube-video {
   position: relative;

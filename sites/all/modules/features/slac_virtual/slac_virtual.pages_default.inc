@@ -197,7 +197,7 @@ function slac_virtual_default_page_manager_handlers() {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p><a class="btn btn-cta d-none d-lg-block" href="https://www-public.slac.stanford.edu/tour/" target="blank">Launch Interactive Tour</a></p>
+    'body' => '<p><a class="btn btn-cta d-none d-lg-block" href="https://slactour.slac.stanford.edu/" target="blank">Launch Interactive Tour</a></p>
 ',
     'format' => 'full_html',
     'substitute' => 1,

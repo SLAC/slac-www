@@ -17,6 +17,10 @@
   }
 }
 
+.paragraph.paragraph--view-mode--default > .paragraph__column {
+  margin: 0 auto;
+}
+
 .paragraph.paragraph--type--bp-column-wrapper>.paragraph__column {
   padding: 0;
 }
@@ -172,6 +176,7 @@
 
 .paragraph__column img {
   width: 100%;
+  height: auto;
 }
 
 .media-vimeo-video,.media-youtube-video {
